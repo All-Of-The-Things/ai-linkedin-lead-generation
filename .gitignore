@@ -1,5 +1,6 @@
-# State files — contain personal LinkedIn data, never commit
-state/
+# State files — tracked so remote CCR agents have persistent deduplication across runs.
+# These files grow over time with LinkedIn profile data — treat the repo as private.
+# state/
 
 # Criteria files are safe to commit — they contain no PII, only search patterns
 # config/criteria/ is intentionally tracked
