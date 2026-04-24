@@ -2,9 +2,30 @@
 
 ## Purpose
 
-This repo is a daily automated pipeline that discovers new LinkedIn leads, classifies them by fit, surfaces them for approval, sends connection requests, and follows up at the right time. It runs as a scheduled Claude Code Routine on weekday mornings.
+This repo is a three-phase LinkedIn lead generation pipeline for AOTT. Each phase is gated by human approval and triggers an email notification via Resend when it completes.
 
 The LinkedIn skill lives at `.claude/skills/linkedin/SKILL.md`. Read it before running any `linkedin` CLI command.
+The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sending any email.
+
+---
+
+## Three-Phase Flow
+
+```
+[Phase 1 — Search]  routines/daily-search.md  (scheduled, weekdays 9am)
+    Steps 0–5: re-entry check → criteria refresh → search → enrich → classify → surface approvals
+    → Email: "N leads ready for your review"
+    → Human: edits pending_approvals.json connection_approvals, sets decision fields
+
+[Phase 2 — Generate]  /generate-messages  (manual slash command)
+    Steps 6–8: process connection approvals → send requests → detect accepted → compose follow-ups
+    → Email: "N messages ready for your review"
+    → Human: edits pending_approvals.json followup_approvals, sets decision fields
+
+[Phase 3 — Deliver]  /deliver-messages  (manual slash command)
+    Step 9: send approved follow-up messages via LinkedIn
+    → Email: delivery summary
+```
 
 ---
 
@@ -12,15 +33,17 @@ The LinkedIn skill lives at `.claude/skills/linkedin/SKILL.md`. Read it before r
 
 | Path | Purpose |
 |------|---------|
-| `config/pipeline.json` | Operator config: limits, timing, active criteria pointer |
+| `config/pipeline.json` | Operator config: limits, timing, active criteria pointer, notification settings |
 | `config/criteria/` | Named criteria files; each is a self-contained search profile |
 | `state/leads.json` | Master lead ledger, keyed by normalized LinkedIn URL |
 | `state/seen.json` | Dedupe index — append-only, never remove a URL |
 | `state/pending_approvals.json` | Human interface: user fills `decision` fields here |
 | `state/run_log.json` | Audit log of every pipeline run |
-| `templates/` | Message templates with `{{token}}` placeholders |
+| `templates/` | Message style guides used by `agents/message-composer.md` |
 | `agents/` | Subagent prompt files for focused subtasks |
-| `routines/` | Routine definition consumed by the `schedule` skill |
+| `routines/daily-search.md` | Phase 1 scheduled routine |
+| `.claude/commands/generate-messages.md` | Phase 2 slash command (`/generate-messages`) |
+| `.claude/commands/deliver-messages.md` | Phase 3 slash command (`/deliver-messages`) |
 
 ---
 
@@ -134,7 +157,14 @@ Mark step complete in run_log.
 
 **All classifications (hot, warm, cold) are surfaced.** The user decides everything.
 
-Mark step complete in run_log.
+5. **Send email notification** — invoke `agents/email-notifier.md` as a subagent with:
+   - `phase: "search_complete"`
+   - `run_id`: current run ID from `run_log.json`
+   - `criteria_used`: resolved criteria name
+   - `counts`: `{ total_new: N, hot: N, warm: N, cold: N }`
+   - `leads_snapshot`: all entries just appended to `connection_approvals`
+
+Mark step complete in run_log. **Phase 1 ends here.** Do not proceed to Step 6 — that is Phase 2 (`/generate-messages`).
 
 ### Step 6 — Process Connection Approvals
 
@@ -190,8 +220,13 @@ Mark step complete in run_log.
      "edited_message": null
    }
    ```
+5. **Send email notification** — invoke `agents/email-notifier.md` as a subagent with:
+   - `phase: "messages_ready"`
+   - `run_id`: current run ID
+   - `counts`: `{ followups_drafted: N }`
+   - `leads_snapshot`: all entries just appended to `followup_approvals`
 
-Mark step complete in run_log.
+Mark step complete in run_log. **Phase 2 ends here.** Do not proceed to Step 9 — that is Phase 3 (`/deliver-messages`).
 
 ### Step 9 — Send Approved Follow-Ups
 
@@ -210,7 +245,13 @@ Mark step complete in run_log.
 **Safety check**: `require_approval_before_send` must be `true`. Refuse to send if false.
 **Double-send guard**: Before sending, verify `followup_sent_at` is null on the lead record.
 
-Mark step complete in run_log.
+4. **Send email notification** — invoke `agents/email-notifier.md` as a subagent with:
+   - `phase: "delivery_summary"`
+   - `run_id`: current run ID
+   - `counts`: `{ sent: N, failed: N }`
+   - `leads_snapshot`: all leads processed in this step (both sent and failed)
+
+Mark step complete in run_log. **Phase 3 ends here.**
 
 ### Step 10 — Finalize Run
 

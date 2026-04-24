@@ -30,5 +30,11 @@
   "criteria_refresh": {
     "auto_refresh_every_n_runs": 7
   },
-  "run_log": "state/run_log.json"
+  "run_log": "state/run_log.json",
+
+  "notifications": {
+    "from": "AOTT Pipeline <hello@allofthethings.dev>",
+    "to": "martin@allofthethings.dev",
+    "subject_prefix": "[AOTT LinkedIn]"
+  }
 }

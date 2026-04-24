@@ -4,6 +4,10 @@ state/
 # Criteria files are safe to commit — they contain no PII, only search patterns
 # config/criteria/ is intentionally tracked
 
+# Local secrets — never commit
+.claude/settings.local.json
+.env
+
 # OS / editor noise
 .DS_Store
 *.swp

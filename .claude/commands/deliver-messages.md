@@ -1,0 +1,34 @@
+# /deliver-messages
+
+**Phase 3 of the LinkedIn pipeline.** Run this after you have reviewed `state/pending_approvals.json → followup_approvals` and filled in your `decision` fields (and optionally edited `edited_message`).
+
+## What this does
+
+1. Reads `CLAUDE.md` and the LinkedIn skill (`.claude/skills/linkedin/SKILL.md`)
+2. Reads `config/pipeline.json`
+3. Executes pipeline **Step 9**:
+   - Reads `state/pending_approvals.json → followup_approvals` for entries with `decision: "approved"`
+   - Uses `edited_message` if filled in, otherwise uses `followup_draft`
+   - Sends each approved message via `linkedin message send`
+   - Updates `leads.json`: status → `"followup_sent"`, increments `followup_sequence`, resets `followup_eligible_after` if another follow-up in the sequence is due
+   - Respects `followup.max_followups_per_run` limit from `config/pipeline.json`
+4. Invokes `agents/email-notifier.md` with `phase: "delivery_summary"` to send a confirmation email
+5. Updates `state/run_log.json`
+
+## Safety checks (both must pass before any message is sent)
+
+- Lead must have `decision: "approved"` in `pending_approvals.json → followup_approvals`
+- Lead must have `status: "followup_queued"` in `leads.json`
+- `followup_sent_at` must be `null` (double-send guard)
+
+## Before running
+
+- Review `state/pending_approvals.json → followup_approvals`. For any entry, you can:
+  - Set `decision: "approved"` to send as-is
+  - Set `edited_message` to a custom message before approving
+  - Set `decision: "rejected"` to skip
+- `RESEND_API_KEY` must be set in the environment for the delivery confirmation email.
+
+## After running
+
+Check your email for the delivery summary. Leads with `status: "followup_sent"` and `followup_sequence < max_sequence` will surface again for a second follow-up after their next timing window elapses — you'll get an email when they're ready.
