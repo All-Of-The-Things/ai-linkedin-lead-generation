@@ -1,0 +1,10 @@
+# State files — contain personal LinkedIn data, never commit
+state/
+
+# Criteria files are safe to commit — they contain no PII, only search patterns
+# config/criteria/ is intentionally tracked
+
+# OS / editor noise
+.DS_Store
+*.swp
+*.swo
