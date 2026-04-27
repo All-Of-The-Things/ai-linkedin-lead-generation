@@ -49,7 +49,8 @@
         2,
         3,
         4,
-        5
+        5,
+        "6a"
       ],
       "search_cursor": 3,
       "counts": {
@@ -61,7 +62,9 @@
         "cold": 2,
         "surfaced_for_approval": 8,
         "email_sent": true,
-        "email_id": "8b5be96d-1afb-49e4-b7f1-69ccc9c91e40"
+        "email_id": "8b5be96d-1afb-49e4-b7f1-69ccc9c91e40",
+        "notes_drafted": 4,
+        "notes_email_id": "58416989-f564-40c6-8357-41e8f4d2c5d4"
       },
       "errors": [],
       "completed_at": "2026-04-27T00:00:00.000Z"

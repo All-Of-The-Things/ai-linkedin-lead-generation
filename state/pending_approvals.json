@@ -140,10 +140,10 @@
       "score": 88,
       "score_rationale": "CEO/CTO at StratusGreen, an Oracle NetSuite Solution Provider Partner. Decision-maker at a NetSuite SI with clear need for Shopify-side delivery capacity. US-based. Strong role+industry+seniority match.",
       "surfaced_at": "2026-04-27T00:00:00.000Z",
-      "decision": null,
-      "note": null,
+      "decision": "rejected",
+      "note": "already a connection",
       "note_draft": null,
-      "note_decision": null,
+      "note_decision": "Already a contact",
       "edited_note": null
     },
     {
@@ -156,10 +156,10 @@
       "score": 96,
       "score_rationale": "Founder of SuiteCommerce (acquired by NetSuite), current CEO of Hairball.IO (Celigo/NetSuite/Shopify agency) and Director at UnlockCommerce (SuiteCommerce Agency). Extraordinary alignment \u2014 runs exactly the partner profile AOTT complements on Shopify delivery.",
       "surfaced_at": "2026-04-27T00:00:00.000Z",
-      "decision": null,
-      "note": null,
+      "decision": "rejected",
+      "note": "already a connection",
       "note_draft": null,
-      "note_decision": null,
+      "note_decision": "Already a contact",
       "edited_note": null
     },
     {
@@ -172,9 +172,9 @@
       "score": 70,
       "score_rationale": "Founder of an Australian Shopify Plus Partner Agency. Good eCommerce pedigree and decision-maker level, but no NetSuite/ERP angle in current work \u2014 augmentation pitch requires a different framing (Shopify dev capacity vs. ERP extension).",
       "surfaced_at": "2026-04-27T00:00:00.000Z",
-      "decision": null,
+      "decision": "approved",
       "note": null,
-      "note_draft": null,
+      "note_draft": "Hi Darren. Shopify Plus agencies often face capacity gaps on dev and customisation when client demand spikes. My Team works white-label to extend your delivery. Worth a quick chat?",
       "note_decision": null,
       "edited_note": null
     },
@@ -188,8 +188,8 @@
       "score": 42,
       "score_rationale": "Solo fractional CTO and coach \u2014 advises NetSuite teams but runs no agency or delivery practice. Not a buyer for AOTT augmentation; could refer clients but is not a direct subcontracting partner.",
       "surfaced_at": "2026-04-27T00:00:00.000Z",
-      "decision": null,
-      "note": null,
+      "decision": "rejected",
+      "note": "cold \u2014 solo practitioner, not agency",
       "note_draft": null,
       "note_decision": null,
       "edited_note": null
@@ -204,8 +204,8 @@
       "score": 38,
       "score_rationale": "NetSuite corporate (not a partner agency). He manages the partner ecosystem rather than being a buyer for AOTT capacity. Connection could open doors to partners but is not a direct augmentation target.",
       "surfaced_at": "2026-04-27T00:00:00.000Z",
-      "decision": null,
-      "note": null,
+      "decision": "rejected",
+      "note": "cold \u2014 NetSuite corporate, not a partner",
       "note_draft": null,
       "note_decision": null,
       "edited_note": null
@@ -220,9 +220,9 @@
       "score": 91,
       "score_rationale": "Sr. Director at Cumula 3 Group, a NetSuite Solution Provider that has already started a Shopify practice. He built that Shopify practice internally \u2014 exactly the scenario where AOTT can extend delivery capacity. Strong seniority, NetSuite SI context, US-based.",
       "surfaced_at": "2026-04-27T00:00:00.000Z",
-      "decision": null,
+      "decision": "approved",
       "note": null,
-      "note_draft": null,
+      "note_draft": "Hi Tony. NetSuite SIs building out a Shopify practice often need dedicated eComm delivery capacity. My Team works white-label on Shopify builds and customisations for partners. Available to chat this week?",
       "note_decision": null,
       "edited_note": null
     },
@@ -236,9 +236,9 @@
       "score": 77,
       "score_rationale": "Founder of a boutique ecommerce/retail tech agency in Australia using both Shopify and NetSuite/Celigo. Strong alignment on tech stack. Decision-maker level. Could use AOTT for Shopify development capacity on client projects.",
       "surfaced_at": "2026-04-27T00:00:00.000Z",
-      "decision": null,
+      "decision": "approved",
       "note": null,
-      "note_draft": null,
+      "note_draft": "Hi Daniel. Digital agencies running Shopify and NetSuite for clients often need to scale eComm delivery without adding headcount. My Team works white-label to fill that gap. Worth a quick chat?",
       "note_decision": null,
       "edited_note": null
     },
@@ -252,9 +252,9 @@
       "score": 45,
       "score_rationale": "Ex-VP at NetSuite who built the entire partner ecosystem for 18+ years. Extraordinary network of NetSuite SIs. Not a direct buyer for AOTT augmentation, but connecting with him could unlock warm introductions to many relevant partners.",
       "surfaced_at": "2026-04-27T00:00:00.000Z",
-      "decision": null,
+      "decision": "approved",
       "note": null,
-      "note_draft": null,
+      "note_draft": "Hi Raghu. You built the NetSuite partner ecosystem for nearly two decades. My Team provides Shopify and SuiteCommerce delivery to NetSuite SIs on a white-label basis. Open to a quick exchange this week?",
       "note_decision": null,
       "edited_note": null
     }
