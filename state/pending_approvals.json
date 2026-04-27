@@ -10,7 +10,7 @@
       "score": 100,
       "score_rationale": "CEO/Founder of UnlockCommerce \u2014 a dedicated SuiteCommerce + Shopify Plus agency built by ex-Oracle/NetSuite employees. Exact agency-partner profile: does NetSuite ERP + Shopify B2B/B2C work and explicitly offers staff-like engagement. US-based. Perfect fit for AOTT augmentation.",
       "surfaced_at": "2026-04-25T00:35:00.000Z",
-      "decision": null,
+      "decision": "rejected",
       "note": null
     },
     {
@@ -23,7 +23,7 @@
       "score": 97,
       "score_rationale": "MD of a specialist NetSuite SI (EGS), ex-director at Upaya (5-Star Oracle NetSuite Partner acquired by Crowe) and ex-NetSuite directly. Deep SaaS/retail/manufacturing NetSuite practice. Ideal partner for AOTT's Shopify-side dev augmentation.",
       "surfaced_at": "2026-04-25T00:35:00.000Z",
-      "decision": null,
+      "decision": "approved",
       "note": null
     },
     {
@@ -36,7 +36,7 @@
       "score": 96,
       "score_rationale": "MD of Digital Advisory at Citrin Cooperman (major national accounting/advisory firm). Deep NetSuite + SuiteCommerce background at RSM US and Explore Consulting. Has led eCommerce + ERP implementations. Well-positioned to refer or subcontract AOTT for Shopify dev.",
       "surfaced_at": "2026-04-25T00:35:00.000Z",
-      "decision": null,
+      "decision": "approved",
       "note": null
     },
     {
@@ -49,7 +49,7 @@
       "score": 84,
       "score_rationale": "CEO of Unity Consulting Firm \u2014 implements NetSuite, Shopify, SAP, Cin7 for scaling brands. Runs ERP + Shopify implementations for beauty/apparel/CPG clients. Natural augmentation partner for AOTT's Shopify dev capacity.",
       "surfaced_at": "2026-04-25T00:35:00.000Z",
-      "decision": null,
+      "decision": "approved",
       "note": null
     },
     {
@@ -62,7 +62,7 @@
       "score": 78,
       "score_rationale": "CEO of Axceleris, a boutique Shopify Plus + Magento/Adobe Commerce agency. 16+ years, previously co-founded GoMage (1000+ Magento projects). No explicit NetSuite angle but Shopify Plus agency at decision-maker level is a strong augmentation partner candidate.",
       "surfaced_at": "2026-04-25T00:35:00.000Z",
-      "decision": null,
+      "decision": "approved",
       "note": null
     },
     {
@@ -75,7 +75,7 @@
       "score": 72,
       "score_rationale": "Founder/advisor specializing in B2B Shopify Plus + ERP integrations (NetSuite, SAP, Dynamics) for manufacturers/distributors. Independent consultant with a strong network. Less agency-headcount, more advisory, but actively leads Shopify builds and could subcontract AOTT.",
       "surfaced_at": "2026-04-25T00:35:00.000Z",
-      "decision": null,
+      "decision": "approved",
       "note": null
     },
     {
@@ -88,7 +88,7 @@
       "score": 65,
       "score_rationale": "MD at CapNexus (merger of Capstone/RPE/Makira) \u2014 retail tech consulting focused on project management and data integration for retail IT implementations. Deep retail-tech background but Shopify/NetSuite overlap is indirect. Worth a conversation about Shopify touchpoints.",
       "surfaced_at": "2026-04-25T00:35:00.000Z",
-      "decision": null,
+      "decision": "approved",
       "note": null
     },
     {
@@ -101,7 +101,7 @@
       "score": 58,
       "score_rationale": "Co-Founder of Le1101, an early-stage NetSuite + SuiteCommerce consulting firm. Strong technical background (SuiteScript, Celigo integrations) but primarily a developer/technician rather than a decision-making buyer. Warm for future pipeline growth of the firm.",
       "surfaced_at": "2026-04-25T00:35:00.000Z",
-      "decision": null,
+      "decision": "approved",
       "note": null
     },
     {
@@ -114,7 +114,7 @@
       "score": 55,
       "score_rationale": "MD at Aptus Business Solutions, one of the largest Sage partners in Australia. ERP consulting background (20+ years) but focused on Sage, not NetSuite/Shopify Plus. Peripheral fit \u2014 ERP consulting MD in a target location, but platform mismatch reduces relevance.",
       "surfaced_at": "2026-04-25T00:35:00.000Z",
-      "decision": null,
+      "decision": "approved",
       "note": null
     },
     {
@@ -127,8 +127,136 @@
       "score": 52,
       "score_rationale": "Founder of Consult 2 Manage \u2014 primarily a Zoho partner with some NetSuite/Salesforce touchpoints. Current primary role is on a wellness clinic board (unrelated), suggesting the consulting practice may be secondary. Warm: has the right network but alignment is indirect.",
       "surfaced_at": "2026-04-25T00:35:00.000Z",
-      "decision": null,
+      "decision": "approved",
       "note": null
+    },
+    {
+      "url": "https://www.linkedin.com/in/josh-green-901597187",
+      "name": "Josh Green",
+      "headline": "CEO | CTO at StratusGreen | Oracle NetSuite Partner",
+      "current_title": "CEO | CTO",
+      "current_company": "StratusGreen | Oracle NetSuite Solution Provider Partner",
+      "classification": "hot",
+      "score": 88,
+      "score_rationale": "CEO/CTO at StratusGreen, an Oracle NetSuite Solution Provider Partner. Decision-maker at a NetSuite SI with clear need for Shopify-side delivery capacity. US-based. Strong role+industry+seniority match.",
+      "surfaced_at": "2026-04-27T00:00:00.000Z",
+      "decision": null,
+      "note": null,
+      "note_draft": null,
+      "note_decision": null,
+      "edited_note": null
+    },
+    {
+      "url": "https://www.linkedin.com/in/diegoterra",
+      "name": "Diego Terra",
+      "headline": "Helping Celigo and NetSuite powered brands scale with Connected Intelligence - Top Celigo, NetSuite & Shopify Partner.",
+      "current_title": "Founder and CEO",
+      "current_company": "Hairball.IO",
+      "classification": "hot",
+      "score": 96,
+      "score_rationale": "Founder of SuiteCommerce (acquired by NetSuite), current CEO of Hairball.IO (Celigo/NetSuite/Shopify agency) and Director at UnlockCommerce (SuiteCommerce Agency). Extraordinary alignment \u2014 runs exactly the partner profile AOTT complements on Shopify delivery.",
+      "surfaced_at": "2026-04-27T00:00:00.000Z",
+      "decision": null,
+      "note": null,
+      "note_draft": null,
+      "note_decision": null,
+      "edited_note": null
+    },
+    {
+      "url": "https://www.linkedin.com/in/darren-bell-commercial-director",
+      "name": "Darren Bell",
+      "headline": "Australian Shopify Plus Partner Agency - Founder",
+      "current_title": "Director - Shopify Plus Partner Agency",
+      "current_company": "beCommerce",
+      "classification": "warm",
+      "score": 70,
+      "score_rationale": "Founder of an Australian Shopify Plus Partner Agency. Good eCommerce pedigree and decision-maker level, but no NetSuite/ERP angle in current work \u2014 augmentation pitch requires a different framing (Shopify dev capacity vs. ERP extension).",
+      "surfaced_at": "2026-04-27T00:00:00.000Z",
+      "decision": null,
+      "note": null,
+      "note_draft": null,
+      "note_decision": null,
+      "edited_note": null
+    },
+    {
+      "url": "https://www.linkedin.com/in/michaeljmahony",
+      "name": "Mike Mahony",
+      "headline": "I fix decision bottlenecks in tech teams and NetSuite-driven operations | Fractional CTO | Creator of The Decentralized A-Team Method (DCAT)",
+      "current_title": "Founder / Fractional CTO",
+      "current_company": "Your Virtual CTO / Top Tier Coaching Services",
+      "classification": "cold",
+      "score": 42,
+      "score_rationale": "Solo fractional CTO and coach \u2014 advises NetSuite teams but runs no agency or delivery practice. Not a buyer for AOTT augmentation; could refer clients but is not a direct subcontracting partner.",
+      "surfaced_at": "2026-04-27T00:00:00.000Z",
+      "decision": null,
+      "note": null,
+      "note_draft": null,
+      "note_decision": null,
+      "edited_note": null
+    },
+    {
+      "url": "https://www.linkedin.com/in/ironscott",
+      "name": "Scott Derksen",
+      "headline": "Vice President Partnerships and Business Development at Oracle NetSuite",
+      "current_title": "Vice President Partnerships and Business Development",
+      "current_company": "NetSuite",
+      "classification": "cold",
+      "score": 38,
+      "score_rationale": "NetSuite corporate (not a partner agency). He manages the partner ecosystem rather than being a buyer for AOTT capacity. Connection could open doors to partners but is not a direct augmentation target.",
+      "surfaced_at": "2026-04-27T00:00:00.000Z",
+      "decision": null,
+      "note": null,
+      "note_draft": null,
+      "note_decision": null,
+      "edited_note": null
+    },
+    {
+      "url": "https://www.linkedin.com/in/tony-caporal",
+      "name": "Tony Caporal",
+      "headline": "Sr. Director | NetSuite Portfolio Solutions",
+      "current_title": "Senior Director | NetSuite Portfolio Solutions",
+      "current_company": "Cumula 3 Group | Official NetSuite Solution Provider Partner",
+      "classification": "hot",
+      "score": 91,
+      "score_rationale": "Sr. Director at Cumula 3 Group, a NetSuite Solution Provider that has already started a Shopify practice. He built that Shopify practice internally \u2014 exactly the scenario where AOTT can extend delivery capacity. Strong seniority, NetSuite SI context, US-based.",
+      "surfaced_at": "2026-04-27T00:00:00.000Z",
+      "decision": null,
+      "note": null,
+      "note_draft": null,
+      "note_decision": null,
+      "edited_note": null
+    },
+    {
+      "url": "https://www.linkedin.com/in/dan-rutherford",
+      "name": "Daniel Rutherford",
+      "headline": "Blank Canvas Digital | Founder, Tinkerer, Analyst, Architect, Integrator",
+      "current_title": "Founder & Director",
+      "current_company": "Blank Canvas Digital",
+      "classification": "hot",
+      "score": 77,
+      "score_rationale": "Founder of a boutique ecommerce/retail tech agency in Australia using both Shopify and NetSuite/Celigo. Strong alignment on tech stack. Decision-maker level. Could use AOTT for Shopify development capacity on client projects.",
+      "surfaced_at": "2026-04-27T00:00:00.000Z",
+      "decision": null,
+      "note": null,
+      "note_draft": null,
+      "note_decision": null,
+      "edited_note": null
+    },
+    {
+      "url": "https://www.linkedin.com/in/raghu-gnanasekaran-98b7141",
+      "name": "Raghu Gnanasekaran",
+      "headline": "Ex-Vice President Global SaaS Partnerships NetSuite",
+      "current_title": "Ex-Vice President Global Partnerships",
+      "current_company": "NetSuite Inc",
+      "classification": "warm",
+      "score": 45,
+      "score_rationale": "Ex-VP at NetSuite who built the entire partner ecosystem for 18+ years. Extraordinary network of NetSuite SIs. Not a direct buyer for AOTT augmentation, but connecting with him could unlock warm introductions to many relevant partners.",
+      "surfaced_at": "2026-04-27T00:00:00.000Z",
+      "decision": null,
+      "note": null,
+      "note_draft": null,
+      "note_decision": null,
+      "edited_note": null
     }
   ],
   "followup_approvals": []

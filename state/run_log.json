@@ -37,6 +37,34 @@
         "phase2_completed_at": "2026-04-27T14:45:00.000Z"
       },
       "errors": []
+    },
+    {
+      "run_id": "2026-04-27-b3e91c4a",
+      "started_at": "2026-04-27T00:00:00.000Z",
+      "status": "phase1_complete",
+      "criteria_used": "agency-partners",
+      "resume_from_step": 6,
+      "steps_completed": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "search_cursor": 3,
+      "counts": {
+        "new_leads_discovered": 66,
+        "enriched": 8,
+        "classified": 8,
+        "hot": 4,
+        "warm": 2,
+        "cold": 2,
+        "surfaced_for_approval": 8,
+        "email_sent": true,
+        "email_id": "8b5be96d-1afb-49e4-b7f1-69ccc9c91e40"
+      },
+      "errors": [],
+      "completed_at": "2026-04-27T00:00:00.000Z"
     }
   ]
 }
