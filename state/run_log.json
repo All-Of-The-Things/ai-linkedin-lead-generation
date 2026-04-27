@@ -1,3 +1,26 @@
 {
-  "runs": []
+  "runs": [
+    {
+      "run_id": "2026-04-25-f66719f8",
+      "started_at": "2026-04-25T00:15:00.000Z",
+      "completed_at": "2026-04-25T00:40:00.000Z",
+      "status": "phase1_complete",
+      "criteria_used": "agency-partners",
+      "resume_from_step": 6,
+      "steps_completed": [0, 1, 2, 3, 4, 5],
+      "search_cursor": 3,
+      "counts": {
+        "new_leads_discovered": 74,
+        "enriched": 10,
+        "classified": 10,
+        "hot": 5,
+        "warm": 5,
+        "cold": 0,
+        "surfaced_for_approval": 10,
+        "email_sent": true,
+        "email_id": "5dc20a62-bc03-4dd7-b621-cdadee26defd"
+      },
+      "errors": []
+    }
+  ]
 }
