@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This repo is a three-phase LinkedIn lead generation pipeline for AOTT. Each phase is gated by human approval and triggers an email notification via Resend when it completes.
+This repo is a four-phase LinkedIn lead generation pipeline for AOTT. Each phase is gated by human approval and triggers an email notification via Resend when it completes.
 
 The LinkedIn skill lives at `.claude/skills/linkedin/SKILL.md`. Read it before running any `linkedin` CLI command.
 The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sending any email.
@@ -12,17 +12,22 @@ The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sendi
 ## Three-Phase Flow
 
 ```
-[Phase 1 — Search]  routines/daily-search.md  (scheduled, weekdays 9am)
+[Phase 1 — Search]     routines/daily-search.md  (scheduled, weekdays 9am)
     Steps 0–5: re-entry check → criteria refresh → search → enrich → classify → surface approvals
     → Email: "N leads ready for your review"
     → Human: edits pending_approvals.json connection_approvals, sets decision fields
 
-[Phase 2 — Generate]  /generate-messages  (manual slash command)
-    Steps 6–8: process connection approvals → send requests → detect accepted → compose follow-ups
-    → Email: "N messages ready for your review"
-    → Human: edits pending_approvals.json followup_approvals, sets decision fields
+[Phase 2 — Draft]      /generate-messages  (manual slash command)
+    Step 6a: compose connection note drafts for approved leads
+    → Email: "N connection notes ready for your review"
+    → Human: reviews note_draft, optionally fills edited_note, sets note_decision fields
 
-[Phase 3 — Deliver]  /deliver-messages  (manual slash command)
+[Phase 3 — Send]       /send-connections  (manual slash command)
+    Steps 6b–8: send approved notes → detect accepted connections → draft follow-up messages
+    → Email: "N follow-up drafts ready" (if eligible) or "N connection requests sent"
+    → Human: reviews followup_draft, sets decision fields in followup_approvals
+
+[Phase 4 — Deliver]    /deliver-messages  (manual slash command)
     Step 9: send approved follow-up messages via LinkedIn
     → Email: delivery summary
 ```
@@ -43,7 +48,8 @@ The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sendi
 | `agents/` | Subagent prompt files for focused subtasks |
 | `routines/daily-search.md` | Phase 1 scheduled routine |
 | `.claude/commands/generate-messages.md` | Phase 2 slash command (`/generate-messages`) |
-| `.claude/commands/deliver-messages.md` | Phase 3 slash command (`/deliver-messages`) |
+| `.claude/commands/send-connections.md` | Phase 3 slash command (`/send-connections`) |
+| `.claude/commands/deliver-messages.md` | Phase 4 slash command (`/deliver-messages`) |
 
 ---
 
@@ -96,6 +102,8 @@ Mark step complete in run_log before moving on.
 
 ### Step 2 — Search for New Leads
 
+**Before building queries:** Run `linkedin connection list --json -q` and build an in-memory exclusion set of all normalized connection URLs. A search result is skipped if its URL appears in `state/seen.json` OR in this exclusion set. Do NOT write existing connections into `seen.json` — the exclusion set is in-memory per run only.
+
 1. Load `config/criteria/<criteria_used>.json` (resolved in Step 1) and `config/pipeline.json`.
 2. Build up to `search.max_search_queries_per_run` queries by rotating through combinations of `target_roles`, `target_industries`, and `target_locations`. Track the rotation cursor in the current run_log entry (`search_cursor`).
 3. For each query, run:
@@ -104,7 +112,7 @@ Mark step complete in run_log before moving on.
    ```
 4. For each returned person URL:
    - Normalize: lowercase, strip trailing slash, use the canonical `/in/` form.
-   - Check `state/seen.json`. If present, skip.
+   - Check `state/seen.json` AND the in-memory exclusion set. If present in either, skip.
    - Add to `seen.json` immediately (write-through).
    - Add a stub record to `leads.json` with `status: "new"`, `first_seen_run: <today>`.
 5. On exit code 6: wait `rate_limit.retry_delay_seconds`, retry up to `rate_limit.max_retries`. If still failing, log, skip that query, continue to next.
@@ -164,23 +172,46 @@ Mark step complete in run_log.
    - `counts`: `{ total_new: N, hot: N, warm: N, cold: N }`
    - `leads_snapshot`: all entries just appended to `connection_approvals`
 
-Mark step complete in run_log. **Phase 1 ends here.** Do not proceed to Step 6 — that is Phase 2 (`/generate-messages`).
+Mark step complete in run_log. **Phase 1 ends here.** Do not proceed to Step 6a — that is Phase 2 (`/generate-messages`).
 
-### Step 6 — Process Connection Approvals
+### Step 6a — Compose Connection Note Drafts
+
+Runs in **`/generate-messages`** (Phase 2).
 
 1. Read `state/pending_approvals.json → connection_approvals`.
-2. Find entries where `decision` is `"approved"` or `"rejected"` and the corresponding lead in `leads.json` still has `status: "classified"`.
-3. Auto-reject entries older than `approval.approval_timeout_days` days with `decision: null`.
-4. For each **approved** lead (up to `outreach.max_connection_requests_per_run` per run):
+2. Find entries where `decision: "approved"` and `note_draft` is null.
+3. Auto-reject entries older than `approval.approval_timeout_days` days with `decision: null` (set `note_decision: "rejected"` on these).
+4. For each eligible lead:
    - Invoke `agents/message-composer.md` as a subagent with the lead record, `message_type: "connection_note"`, and `criteria_used`. Receive back the drafted note string.
-   - Run: `linkedin connection send <url> --note '<rendered_note>' --json -q`
-   - On success: `status → "request_sent"`, set `connection_requested_at`, set `connection_note`.
-   - On exit code 6: retry per rate_limit config. If still failing: log error, leave at `"approved"` for next run.
-   - On other failure: `status → "request_failed"`, log error.
-5. For each **rejected** lead: `status → "rejected"`, set `approval_decided_at`, `approval_decision`.
-6. Update `approval_decided_at` and `approval_decision` on all processed leads.
+   - Write `note_draft: "<drafted note>"` and `note_decision: null` back to that entry in `pending_approvals.json`.
+5. For each **rejected** lead (decision: "rejected"): `status → "rejected"`, set `approval_decided_at`, `approval_decision`.
+6. **Send email notification** — invoke `agents/email-notifier.md` as a subagent with:
+   - `phase: "notes_ready"`
+   - `run_id`: current run ID
+   - `criteria_used`: resolved criteria name
+   - `counts`: `{ notes_drafted: N }`
+   - `leads_snapshot`: all entries that had `note_draft` just written (include `name`, `headline`, `current_title`, `current_company`, `classification`, `note_draft`)
 
-**Safety check**: `require_approval_before_connect` must be `true` in `pipeline.json`. If it is `false`, log a warning and refuse to send.
+Mark step complete in run_log. **Phase 2 ends here.** Do not proceed to Step 6b — that is Phase 3 (`/send-connections`).
+
+### Step 6b — Send Connection Requests
+
+Runs in **`/send-connections`** (Phase 3).
+
+1. Read `state/pending_approvals.json → connection_approvals`.
+2. Find entries where `note_decision: "approved"` and the lead in `leads.json` still has `status: "classified"`.
+3. For each (up to `outreach.max_connection_requests_per_run` per run):
+   - Use `edited_note` if non-null, otherwise use `note_draft`. The message must be non-null — do not send without a note.
+   - Run: `linkedin connection send <url> --note '<note>' --json -q`
+   - On success: `status → "request_sent"`, set `connection_requested_at`, set `connection_note`.
+   - On exit code 6: retry per rate_limit config. If still failing: log error, leave at `"classified"` for next run.
+   - On other failure: `status → "request_failed"`, log error.
+4. For entries with `note_decision: "rejected"`: `status → "rejected"`, set `approval_decided_at`, `approval_decision`.
+5. Update `approval_decided_at` and `approval_decision` on all processed leads.
+
+**Safety checks:**
+- `note_decision` must be `"approved"` AND `note_draft` (or `edited_note`) must be non-null. Both must pass.
+- `require_approval_before_connect` must be `true` in `pipeline.json`. If it is `false`, log a warning and refuse to send.
 
 Mark step complete in run_log.
 
@@ -226,7 +257,7 @@ Mark step complete in run_log.
    - `counts`: `{ followups_drafted: N }`
    - `leads_snapshot`: all entries just appended to `followup_approvals`
 
-Mark step complete in run_log. **Phase 2 ends here.** Do not proceed to Step 9 — that is Phase 3 (`/deliver-messages`).
+Mark step complete in run_log. **Phase 3 ends here.** Do not proceed to Step 9 — that is Phase 4 (`/deliver-messages`).
 
 ### Step 9 — Send Approved Follow-Ups
 
@@ -251,7 +282,7 @@ Mark step complete in run_log. **Phase 2 ends here.** Do not proceed to Step 9 �
    - `counts`: `{ sent: N, failed: N }`
    - `leads_snapshot`: all leads processed in this step (both sent and failed)
 
-Mark step complete in run_log. **Phase 3 ends here.**
+Mark step complete in run_log. **Phase 4 ends here.**
 
 ### Step 10 — Finalize Run
 
@@ -279,11 +310,18 @@ Other exit codes:
 
 ## Approval Contract
 
-**Never send a connection request or follow-up message unless:**
-1. `state/pending_approvals.json` has an entry for that URL with `decision: "approved"`.
-2. `leads.json` shows the lead at the expected status (`"approved"` for connections, `"followup_queued"` for messages).
+**Never send a connection request unless:**
+1. `state/pending_approvals.json → connection_approvals` has an entry for that URL with `decision: "approved"`.
+2. That same entry has `note_decision: "approved"` AND `note_draft` (or `edited_note`) is non-null.
+3. `leads.json` shows the lead at `status: "classified"`.
 
-These two checks are independent. Both must pass.
+All three checks are independent. All must pass.
+
+**Never send a follow-up message unless:**
+1. `state/pending_approvals.json → followup_approvals` has an entry for that URL with `decision: "approved"`.
+2. `leads.json` shows the lead at `status: "followup_queued"`.
+
+Both checks must pass.
 
 ---
 

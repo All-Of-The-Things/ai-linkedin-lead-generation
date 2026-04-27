@@ -28,9 +28,9 @@
 
 ## Example messages (use as voice reference)
 
-"Hi {{first_name}}, something we keep seeing: brands running Shopify + NetSuite often hit friction at the order routing layer when scaling wholesale. Happy to share how a few teams solved it — let me know if that's useful."
+"Hi {{first_name}}, something we keep seeing: brands running Shopify and NetSuite often hit friction at the order routing layer when scaling wholesale. Happy to share how a few teams solved it. Let me know if that's useful."
 
-"Hey {{first_name}}, one thing NetSuite partners often overlook: scoping Shopify customization separately from SuiteCommerce config saves real margin on delivery. Happy to go deeper if it's relevant to {{current_company}}'s projects."
+"Hi {{first_name}}, one thing NetSuite partners often overlook: scoping Shopify customization separately from SuiteCommerce config saves real margin on delivery. Happy to go deeper if it's relevant to {{current_company}}'s projects."
 
 ## What to personalize
 

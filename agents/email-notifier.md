@@ -5,7 +5,7 @@ You are a subagent in the LinkedIn lead generation pipeline. Your job is to send
 ## Context You Will Receive
 
 The calling pipeline will pass you:
-- `phase`: `"search_complete"` | `"messages_ready"` | `"delivery_summary"`
+- `phase`: `"search_complete"` | `"notes_ready"` | `"messages_ready"` | `"delivery_summary"`
 - `run_id`: string (e.g. `"2026-04-24-abc123"`)
 - `criteria_used`: string (e.g. `"agency-partners"`)
 - `counts`: object — varies by phase (see below)
@@ -33,6 +33,16 @@ The calling pipeline will pass you:
 - Table of ALL leads sorted hot → warm → cold:
   | Name | Title | Company | Score | Classification |
 - Footer instruction: "Edit `state/pending_approvals.json` → `connection_approvals`. Set `decision` to `approved` or `rejected` for each entry. Then run `/generate-messages`."
+
+### `notes_ready`
+
+**Subject:** `{subject_prefix} {count} connection notes ready for your review`
+
+**Body (HTML):**
+- Header: "Connection note drafts — {criteria_used} — {date}"
+- Table showing each lead and its draft note side-by-side:
+  | Name | Title | Company | Classification | Draft note |
+- Footer instruction: "Open `state/pending_approvals.json` → `connection_approvals`. For each entry: review `note_draft`, optionally overwrite it in `edited_note`, and set `note_decision` to `approved` or `rejected`. Then run `/send-connections`."
 
 ### `messages_ready`
 

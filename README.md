@@ -1,6 +1,6 @@
 # AOTT LinkedIn Lead Generation Pipeline
 
-Automated LinkedIn outreach pipeline for AOTT. Searches for leads daily, surfaces them for approval, and sends personalized connection requests and follow-up messages — with email notifications between each step.
+Automated LinkedIn outreach pipeline for AOTT. Searches for leads daily, surfaces them for approval, drafts and reviews connection notes before sending, then follows up — with email notifications and human approval gates between each phase.
 
 ---
 
@@ -15,16 +15,25 @@ Automated LinkedIn outreach pipeline for AOTT. Searches for leads daily, surface
   You: open state/pending_approvals.json → connection_approvals
        set decision: "approved" or "rejected" for each lead
 
-[Phase 2 — Generate]  Run /generate-messages
-  Sends connection requests to approved leads, detects accepted
+[Phase 2 — Draft]  Run /generate-messages
+  Composes a personalized connection note for each approved lead.
+  → Sends email: "N connection notes ready for your review"
+
+  You: open state/pending_approvals.json → connection_approvals
+       review note_draft for each entry
+       optionally fill edited_note to override the draft
+       set note_decision: "approved" or "rejected"
+
+[Phase 3 — Send]  Run /send-connections
+  Sends approved connection notes via LinkedIn, detects accepted
   connections, and drafts personalized follow-up messages.
-  → Sends email: "N messages ready for your review"
+  → Sends email: "N follow-up drafts ready" (or "N requests sent")
 
   You: open state/pending_approvals.json → followup_approvals
        review each followup_draft, optionally fill edited_message
        set decision: "approved" or "rejected"
 
-[Phase 3 — Deliver]  Run /deliver-messages
+[Phase 4 — Deliver]  Run /deliver-messages
   Sends approved follow-up messages via LinkedIn.
   → Sends email: delivery summary
 ```
@@ -114,13 +123,19 @@ Or specify a criteria:
 Run the LinkedIn daily search with retail-brands criteria
 ```
 
-### Phase 2 — Generate messages
+### Phase 2 — Draft connection notes
 
 ```
 /generate-messages
 ```
 
-### Phase 3 — Deliver messages
+### Phase 3 — Send connection requests
+
+```
+/send-connections
+```
+
+### Phase 4 — Deliver follow-up messages
 
 ```
 /deliver-messages
@@ -157,8 +172,9 @@ Run the search with retail-brands criteria
 
 Both approval queues live in `state/pending_approvals.json`.
 
-**Connection approvals** (`connection_approvals` array):
+**Connection approvals** (`connection_approvals` array) — two gates:
 
+Gate 1 — Lead approval (after Phase 1):
 ```json
 {
   "url": "https://www.linkedin.com/in/example",
@@ -167,11 +183,18 @@ Both approval queues live in `state/pending_approvals.json`.
   "classification": "hot",
   "score": 88,
   "score_rationale": "...",
-  "decision": null
+  "decision": null,
+  "note_draft": null,
+  "note_decision": null,
+  "edited_note": null
 }
 ```
 
-Set `decision` to `"approved"` or `"rejected"`. Leave `null` to decide later (auto-rejected after 3 days).
+Set `decision` to `"approved"` or `"rejected"`, then run `/generate-messages`.
+
+Gate 2 — Note approval (after Phase 2, filled in by `/generate-messages`):
+
+Set `note_decision` to `"approved"` or `"rejected"`. Optionally fill `edited_note` to override the draft. Leave `null` to decide later (auto-rejected after 3 days). Then run `/send-connections`.
 
 **Follow-up approvals** (`followup_approvals` array):
 
@@ -212,11 +235,11 @@ All pipeline behaviour is controlled by `config/pipeline.json`:
 | `active_criteria` | `"agency-partners"` | Default criteria file to use |
 | `search.max_results_per_run` | `25` | Max leads fetched per search run |
 | `search.max_search_queries_per_run` | `3` | How many criteria combinations to rotate through |
-| `outreach.max_connection_requests_per_run` | `10` | Max connection requests sent per Phase 2 run |
+| `outreach.max_connection_requests_per_run` | `10` | Max connection requests sent per Phase 3 run |
 | `followup.delay_days_min` | `2` | Minimum days after connection accepted before follow-up |
 | `followup.delay_days_max` | `4` | Maximum days (randomly chosen in range) |
 | `followup.max_sequence` | `2` | Total follow-up messages per lead (1 = meeting ask, 2 = resource/insight) |
-| `followup.max_followups_per_run` | `5` | Max messages sent per Phase 3 run |
+| `followup.max_followups_per_run` | `5` | Max messages sent per Phase 4 run |
 | `approval.approval_timeout_days` | `3` | Days before a null-decision lead is auto-rejected |
 | `rate_limit.retry_delay_seconds` | `120` | Seconds to wait after LinkedIn rate limit (exit code 6) |
 | `rate_limit.max_retries` | `2` | Max retries per operation before skipping |

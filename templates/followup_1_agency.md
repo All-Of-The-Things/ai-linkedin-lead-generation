@@ -17,9 +17,9 @@
 
 ## Example messages (use as voice reference)
 
-"Hi {{first_name}}, great to connect. I see {{current_company}}'s offering includes eCommerce integrations. My Team handles the Shopify side — config, customization, and ongoing dev. Think we could be a solid complement to your NetSuite practice. Keen to chat and explore?"
+"Hi {{first_name}}, great to connect. I see {{current_company}}'s offering includes eCommerce integrations. My Team handles the Shopify side: config, customization, and ongoing dev. Think we could be a solid complement to your NetSuite practice. Keen to chat and explore?"
 
-"Hey {{first_name}}. Glad to connect. My Team works with NetSuite partners as their eComm squad — Shopify & SuiteCommerce development and implementation. Keen to explore if we can complement your ERP capabilities?"
+"Hi {{first_name}}. Glad to connect. My Team works with NetSuite partners as their eComm squad, covering Shopify and SuiteCommerce development and implementation. Keen to explore if we can complement your ERP capabilities?"
 
 ## What to personalize
 
