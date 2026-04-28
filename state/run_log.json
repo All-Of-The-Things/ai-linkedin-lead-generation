@@ -41,16 +41,19 @@
     {
       "run_id": "2026-04-27-b3e91c4a",
       "started_at": "2026-04-27T00:00:00.000Z",
-      "status": "phase1_complete",
+      "status": "phase3_complete",
       "criteria_used": "agency-partners",
-      "resume_from_step": 6,
+      "resume_from_step": 9,
       "steps_completed": [
         0,
         2,
         3,
         4,
         5,
-        "6a"
+        "6a",
+        "6b",
+        7,
+        8
       ],
       "search_cursor": 3,
       "counts": {
@@ -64,10 +67,105 @@
         "email_sent": true,
         "email_id": "8b5be96d-1afb-49e4-b7f1-69ccc9c91e40",
         "notes_drafted": 4,
-        "notes_email_id": "58416989-f564-40c6-8357-41e8f4d2c5d4"
+        "notes_email_id": "58416989-f564-40c6-8357-41e8f4d2c5d4",
+        "connections_sent": 2,
+        "connections_deferred": 2,
+        "accepted_connections_detected": 2,
+        "followups_drafted": 0,
+        "connections_email_id": "0405c45f-bbf6-4e28-a7ff-649527f1218e"
       },
-      "errors": [],
+      "errors": [
+        {
+          "step": "6b",
+          "url": "https://www.linkedin.com/in/dan-rutherford",
+          "error": "limitExceeded — LinkedIn platform connection request limit hit",
+          "at": "2026-04-27T00:00:00.000Z"
+        },
+        {
+          "step": "6b",
+          "url": "https://www.linkedin.com/in/raghu-gnanasekaran-98b7141",
+          "error": "limitExceeded — LinkedIn platform connection request limit hit",
+          "at": "2026-04-27T00:00:00.000Z"
+        }
+      ],
       "completed_at": "2026-04-27T00:00:00.000Z"
+    }
+  ,
+    {
+      "run_id": "2026-04-27-c1e82d5f",
+      "started_at": "2026-04-27T00:00:00.000Z",
+      "completed_at": "2026-04-27T00:00:00.000Z",
+      "status": "phase2_complete",
+      "criteria_used": "retail-brands",
+      "resume_from_step": "6b",
+      "steps_completed": [0, 1, 2, 3, 4, 5, "6a"],
+      "search_cursor": 3,
+      "counts": {
+        "new_leads_discovered": 46,
+        "enriched": 10,
+        "classified": 10,
+        "hot": 9,
+        "warm": 1,
+        "cold": 0,
+        "surfaced_for_approval": 10,
+        "unenriched_deferred": 36,
+        "email_sent": true,
+        "email_id": "d2847bcf-2d9a-41df-ab06-c1e389ce996d",
+        "notes_drafted": 9,
+        "notes_email_id": "d6cc34f3-ad0a-413e-a10d-11566c4b329f"
+      },
+      "errors": []
+    }
+  ],
+    {
+      "run_id": "2026-04-27-a7c04e2b",
+      "started_at": "2026-04-27T15:00:00.000Z",
+      "completed_at": "2026-04-27T15:05:00.000Z",
+      "status": "phase3_complete",
+      "criteria_used": "agency-partners",
+      "resume_from_step": 9,
+      "steps_completed": ["6b", 7, 8],
+      "counts": {
+        "connections_sent": 2,
+        "connections_failed": 0,
+        "accepted_connections_detected": 0,
+        "followups_drafted": 0,
+        "connections_email_id": "16951bf1-21f3-46e9-a9fe-a80eff79ba35"
+      },
+      "errors": []
+    }
+  ],
+    {
+      "run_id": "2026-04-28-b1d73f9e",
+      "started_at": "2026-04-28T20:44:00.000Z",
+      "completed_at": "2026-04-28T20:50:00.000Z",
+      "status": "phase3_complete",
+      "criteria_used": "agency-partners",
+      "steps_completed": [7, 8],
+      "counts": {
+        "connections_sent": 0,
+        "accepted_connections_detected": 1,
+        "followups_drafted": 0,
+        "connections_email_id": "1dfbda5a-c6bd-473e-9e95-7657a13a3210"
+      },
+      "errors": []
+    }
+  ],
+  "retries": [
+    {
+      "run_id": "2026-04-27-retry-6b",
+      "triggered_at": "2026-04-27T00:00:00.000Z",
+      "phase": "send-connections retry",
+      "targets": [
+        "https://www.linkedin.com/in/dan-rutherford",
+        "https://www.linkedin.com/in/raghu-gnanasekaran-98b7141"
+      ],
+      "results": {
+        "dan-rutherford": "failed — unexpectedError (LinkedIn API error, exit code 1)",
+        "raghu-gnanasekaran-98b7141": "failed — unexpectedError (LinkedIn API error, exit code 1)"
+      },
+      "step7_connections_detected": ["https://www.linkedin.com/in/colbert-gendreau-600167255"],
+      "note": "Both sends failed with unexpectedError. Likely daily connection request limit still active. Colbert Gendreau detected as newly accepted."
     }
   ]
 }
