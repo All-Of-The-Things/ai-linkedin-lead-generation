@@ -1,0 +1,131 @@
+{
+  "name": "agency-partners",
+  "label": "Agency & SI Partners",
+  "description": "Targets decision-makers at NetSuite, Oracle, Shopify Plus, and digital commerce consulting/implementation agencies. AOTT's primary criteria for staff augmentation deals.",
+
+  "generated_at": "2026-04-24T00:00:00.000Z",
+  "generated_from_connections": 200,
+
+  "_note": "AOTT's sweet spot is staff augmentation with consulting/implementation agencies, not direct retail clients. Target: decision-makers at NetSuite SIs, Oracle partners, Shopify Plus agencies, and digital commerce consultancies.",
+
+  "reference_companies": [
+    "Plative",
+    "Esonus",
+    "Foretopia",
+    "N2Lab",
+    "Techfino",
+    "Aztech Digital"
+  ],
+
+  "company_type_signals": [
+    "Partner",
+    "Consulting",
+    "Consultancy",
+    "Solutions",
+    "Agency",
+    "Implementation",
+    "Integrator",
+    "Services",
+    "Digital",
+    "Advisory",
+    "NetSuite",
+    "Oracle",
+    "Shopify Plus",
+    "SuiteCommerce",
+    "ERP"
+  ],
+
+  "target_roles": [
+    "CEO",
+    "Founder",
+    "Co-Founder",
+    "Managing Director",
+    "General Manager",
+    "CTO",
+    "VP of Delivery",
+    "Head of Delivery",
+    "VP of Professional Services",
+    "Director of Professional Services",
+    "Practice Director",
+    "Practice Lead",
+    "VP of Partnerships",
+    "Director of Partnerships",
+    "VP of Sales",
+    "Chief Revenue Officer",
+    "Head of Talent",
+    "Head of Operations"
+  ],
+
+  "target_industries": [
+    "Information Technology and Services",
+    "Computer Software",
+    "Management Consulting",
+    "Internet",
+    "Financial Services"
+  ],
+
+  "target_locations": [
+    "United States",
+    "Canada",
+    "United Kingdom",
+    "Australia"
+  ],
+
+  "seniority_signals": [
+    "CEO",
+    "Founder",
+    "Co-Founder",
+    "CTO",
+    "COO",
+    "CRO",
+    "Managing Director",
+    "Managing Partner",
+    "General Manager",
+    "VP",
+    "Vice President",
+    "SVP",
+    "Head of",
+    "Director",
+    "Principal",
+    "Partner",
+    "Practice Lead",
+    "President"
+  ],
+
+  "anti_patterns": [
+    "Recruiter",
+    "Recruitment",
+    "Staffing",
+    "Student",
+    "Intern",
+    "QA Analyst",
+    "Junior",
+    "Developer",
+    "Engineer",
+    "Administrator",
+    "Analyst",
+    "Demand Generation",
+    "Bachelor of Science"
+  ],
+
+  "search_terms": [
+    "NetSuite partner CEO",
+    "Oracle consulting managing director",
+    "ERP implementation director",
+    "Shopify Plus agency founder",
+    "digital commerce consulting"
+  ],
+
+  "scoring_weights": {
+    "role_match": 0.30,
+    "industry_match": 0.30,
+    "seniority_match": 0.25,
+    "location_match": 0.10,
+    "company_size_match": 0.05
+  },
+
+  "classification_thresholds": {
+    "hot": 75,
+    "warm": 45
+  }
+}
