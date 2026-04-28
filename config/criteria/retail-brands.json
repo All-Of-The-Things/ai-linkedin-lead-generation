@@ -1,0 +1,96 @@
+{
+  "name": "retail-brands",
+  "label": "Retail & eCommerce Brands",
+  "description": "Targets VP/Director/Head of eCommerce, Digital, and Merchandising leaders at retail and consumer brand companies. Secondary criteria — useful for expanding into direct client relationships.",
+
+  "generated_at": "2026-04-24T00:00:00.000Z",
+  "generated_from_connections": 200,
+
+  "target_roles": [
+    "VP of eCommerce",
+    "Vice President eCommerce",
+    "Head of eCommerce",
+    "Director of eCommerce",
+    "VP Digital",
+    "Head of Digital",
+    "Chief Merchandising Officer",
+    "VP Marketing eCommerce",
+    "VP Digital Commerce",
+    "VP of Digital Experience",
+    "Chief Digital Officer",
+    "CIO",
+    "CTO"
+  ],
+
+  "target_industries": [
+    "Retail",
+    "Consumer Goods",
+    "Apparel & Fashion",
+    "Food and Beverages",
+    "Sporting Goods",
+    "Internet",
+    "Information Technology and Services"
+  ],
+
+  "target_locations": [
+    "United States",
+    "Canada",
+    "United Kingdom",
+    "Australia"
+  ],
+
+  "seniority_signals": [
+    "VP",
+    "Vice President",
+    "SVP",
+    "Senior Vice President",
+    "Head of",
+    "Director",
+    "Chief",
+    "CTO",
+    "CIO",
+    "CMO",
+    "CDO",
+    "CEO",
+    "Founder",
+    "President",
+    "Managing Director",
+    "Partner",
+    "Global"
+  ],
+
+  "anti_patterns": [
+    "Recruiter",
+    "Recruitment",
+    "Staffing",
+    "Student",
+    "Intern",
+    "QA Analyst",
+    "Junior",
+    "Demand Generation",
+    "Bachelor of Science",
+    "Consultant",
+    "Partner",
+    "Implementation"
+  ],
+
+  "search_terms": [
+    "VP ecommerce retail",
+    "Head of digital commerce",
+    "ecommerce director DTC",
+    "omnichannel digital leader"
+  ],
+
+  "scoring_weights": {
+    "role_match": 0.35,
+    "industry_match": 0.25,
+    "location_match": 0.15,
+    "seniority_match": 0.20,
+    "company_size_match": 0.05
+  },
+
+  "classification_thresholds": {
+    "hot": 75,
+    "warm": 45
+  }
+}
