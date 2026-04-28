@@ -9,10 +9,11 @@ The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sendi
 
 ---
 
-## Three-Phase Flow
+## Four-Phase Flow
 
 ```
-[Phase 1 — Search]     routines/daily-search.md  (scheduled, weekdays 9am)
+[Phase 1 — Search]     /search-connections  (manual slash command)
+                        routines/daily-search.md  (scheduled, weekdays 9am)
     Steps 0–5: re-entry check → criteria refresh → search → enrich → classify → surface approvals
     → Email: "N leads ready for your review"
     → Human: edits pending_approvals.json connection_approvals, sets decision fields
@@ -46,7 +47,8 @@ The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sendi
 | `state/run_log.json` | Audit log of every pipeline run |
 | `templates/` | Message style guides used by `agents/message-composer.md` |
 | `agents/` | Subagent prompt files for focused subtasks |
-| `routines/daily-search.md` | Phase 1 scheduled routine |
+| `routines/daily-search.md` | Phase 1 scheduled routine (weekdays 9am) |
+| `.claude/commands/search-connections.md` | Phase 1 slash command (`/search-connections`) |
 | `.claude/commands/generate-messages.md` | Phase 2 slash command (`/generate-messages`) |
 | `.claude/commands/send-connections.md` | Phase 3 slash command (`/send-connections`) |
 | `.claude/commands/deliver-messages.md` | Phase 4 slash command (`/deliver-messages`) |
