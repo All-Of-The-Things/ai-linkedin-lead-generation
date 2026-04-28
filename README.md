@@ -7,7 +7,7 @@ Automated LinkedIn outreach pipeline for AOTT. Searches for leads daily, surface
 ## How it works
 
 ```
-[Phase 1 — Search]  Runs daily at 9am weekdays (scheduled routine)
+[Phase 1 — Search]  Run /search-connections  (or runs automatically daily at 9am weekdays)
   Searches LinkedIn using your active criteria, enriches profiles,
   classifies leads as hot / warm / cold, and surfaces them for review.
   → Sends email: "N leads ready for your review"
@@ -114,13 +114,13 @@ Then describe: *"Run the LinkedIn daily search every weekday at 9am."*
 ### Phase 1 — Search
 
 ```
-Run the LinkedIn daily search pipeline manually
+/search-connections
 ```
 
 Or specify a criteria:
 
 ```
-Run the LinkedIn daily search with retail-brands criteria
+/search-connections criteria=retail-brands
 ```
 
 ### Phase 2 — Draft connection notes
