@@ -78,19 +78,18 @@
         {
           "step": "6b",
           "url": "https://www.linkedin.com/in/dan-rutherford",
-          "error": "limitExceeded — LinkedIn platform connection request limit hit",
+          "error": "limitExceeded \u2014 LinkedIn platform connection request limit hit",
           "at": "2026-04-27T00:00:00.000Z"
         },
         {
           "step": "6b",
           "url": "https://www.linkedin.com/in/raghu-gnanasekaran-98b7141",
-          "error": "limitExceeded — LinkedIn platform connection request limit hit",
+          "error": "limitExceeded \u2014 LinkedIn platform connection request limit hit",
           "at": "2026-04-27T00:00:00.000Z"
         }
       ],
       "completed_at": "2026-04-27T00:00:00.000Z"
-    }
-  ,
+    },
     {
       "run_id": "2026-04-27-c1e82d5f",
       "started_at": "2026-04-27T00:00:00.000Z",
@@ -98,7 +97,15 @@
       "status": "phase2_complete",
       "criteria_used": "retail-brands",
       "resume_from_step": "6b",
-      "steps_completed": [0, 1, 2, 3, 4, 5, "6a"],
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        "6a"
+      ],
       "search_cursor": 3,
       "counts": {
         "new_leads_discovered": 46,
@@ -115,8 +122,7 @@
         "notes_email_id": "d6cc34f3-ad0a-413e-a10d-11566c4b329f"
       },
       "errors": []
-    }
-  ],
+    },
     {
       "run_id": "2026-04-27-a7c04e2b",
       "started_at": "2026-04-27T15:00:00.000Z",
@@ -124,7 +130,11 @@
       "status": "phase3_complete",
       "criteria_used": "agency-partners",
       "resume_from_step": 9,
-      "steps_completed": ["6b", 7, 8],
+      "steps_completed": [
+        "6b",
+        7,
+        8
+      ],
       "counts": {
         "connections_sent": 2,
         "connections_failed": 0,
@@ -133,15 +143,17 @@
         "connections_email_id": "16951bf1-21f3-46e9-a9fe-a80eff79ba35"
       },
       "errors": []
-    }
-  ],
+    },
     {
       "run_id": "2026-04-28-b1d73f9e",
       "started_at": "2026-04-28T20:44:00.000Z",
       "completed_at": "2026-04-28T20:50:00.000Z",
       "status": "phase3_complete",
       "criteria_used": "agency-partners",
-      "steps_completed": [7, 8],
+      "steps_completed": [
+        7,
+        8
+      ],
       "counts": {
         "connections_sent": 0,
         "accepted_connections_detected": 1,
@@ -149,6 +161,98 @@
         "connections_email_id": "1dfbda5a-c6bd-473e-9e95-7657a13a3210"
       },
       "errors": []
+    },
+    {
+      "run_id": "2026-04-28-d7b42e1f",
+      "started_at": "2026-04-28T21:00:00.000Z",
+      "status": "phase3_complete",
+      "criteria_used": "mvp-factory",
+      "resume_from_step": 9,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        "6a",
+        "6b",
+        7,
+        8
+      ],
+      "search_cursor": 3,
+      "counts": {
+        "new_leads_discovered": 56,
+        "enriched": 30,
+        "unenriched_deferred": 26,
+        "classified": 30,
+        "hot": 29,
+        "warm": 1,
+        "cold": 0,
+        "surfaced_for_approval": 30,
+        "email_sent": true,
+        "email_id": "19e453df-4fd7-43da-b652-347f93673d25",
+        "notes_drafted": 30,
+        "notes_email_id": "1bafba60-a205-4c9d-8edd-28746d7992b3",
+        "connections_sent": 10,
+        "connections_detected": 1,
+        "followups_drafted": 1,
+        "messages_email_id": "370ce863-81a2-4154-8d24-b3fa9c9c85fe"
+      },
+      "errors": [],
+      "completed_at": "2026-04-29T00:00:00.000Z"
+    },
+    {
+      "run_id": "2026-04-29-4447e54f",
+      "started_at": "2026-04-29T12:00:00.000Z",
+      "status": "phase3_complete",
+      "criteria_used": "mvp-factory",
+      "resume_from_step": 9,
+      "steps_completed": [
+        0,
+        "6b",
+        7,
+        8
+      ],
+      "counts": {
+        "connections_sent": 10,
+        "connections_detected": 1,
+        "followups_drafted": 0,
+        "email_sent": true,
+        "email_id": "d877909e-5f0b-46e1-823e-0ad3de588c3c"
+      },
+      "errors": [
+        {
+          "step": "6b",
+          "note": "All 10 sends returned exit code 6 (rate limit) but were confirmed submitted via alreadyPending check on retry and pending list verification (1398 pending entries confirmed all 10 present)"
+        }
+      ]
+    },
+    {
+      "run_id": "2026-04-29-604b611a",
+      "started_at": "2026-04-29T17:00:00.000Z",
+      "status": "phase3_complete",
+      "criteria_used": "mvp-factory",
+      "resume_from_step": 9,
+      "steps_completed": [
+        0,
+        "6b",
+        7,
+        8
+      ],
+      "counts": {
+        "connections_sent": 10,
+        "connections_detected": 0,
+        "followups_drafted": 2,
+        "email_sent": true,
+        "email_id": "7c899f32-48ad-4a12-9697-6a0d9ae0e5e6"
+      },
+      "errors": [
+        {
+          "step": "6b",
+          "note": "First 5 sends returned exit code 7 (network error); retried successfully. Second 5 returned success on first attempt."
+        }
+      ]
     }
   ],
   "retries": [
@@ -161,10 +265,12 @@
         "https://www.linkedin.com/in/raghu-gnanasekaran-98b7141"
       ],
       "results": {
-        "dan-rutherford": "failed — unexpectedError (LinkedIn API error, exit code 1)",
-        "raghu-gnanasekaran-98b7141": "failed — unexpectedError (LinkedIn API error, exit code 1)"
+        "dan-rutherford": "failed \u2014 unexpectedError (LinkedIn API error, exit code 1)",
+        "raghu-gnanasekaran-98b7141": "failed \u2014 unexpectedError (LinkedIn API error, exit code 1)"
       },
-      "step7_connections_detected": ["https://www.linkedin.com/in/colbert-gendreau-600167255"],
+      "step7_connections_detected": [
+        "https://www.linkedin.com/in/colbert-gendreau-600167255"
+      ],
       "note": "Both sends failed with unexpectedError. Likely daily connection request limit still active. Colbert Gendreau detected as newly accepted."
     }
   ]
