@@ -1,0 +1,189 @@
+{
+  "name": "mvp-factory",
+  "label": "MVP Factory — Founders & Product Builders",
+  "description": "Targets two buyer segments for AOTT's MVP Factory service: (1) founders and entrepreneurs at early-stage companies who have a commercial product idea and need a technical build partner; (2) technical or operational decision-makers at growing companies (10–200 people) who have a repeating manual process they know should be a product but lack the in-house capacity to build it quickly. The classic entry signal is someone doing repetitive work and asking why it is not automated yet. AOTT's proof-of-work is Scorestack, StoreSync, and Bridge — commercial-grade products built with Spec-Driven Development via Claude Code. The pitch is speed-to-market and predictability: from Spec to working product in weeks, not months, with scope defined upfront so there is no drift. This is NOT a staff augmentation pitch — it is a build-partner pitch.",
+
+  "generated_at": "2026-04-28T00:00:00.000Z",
+
+  "_note": "The buyer is always the person who owns the 'build vs buy' decision and has budget authority. Key positive signals: founding a company, leading product or engineering at a lean org (under ~200 people), running operations limited by manual processes or missing tooling, building or planning to build a SaaS product, any mention of repetitive work or manual workarounds that should be automated. The prototypical buyer has seen this pattern in their own work: a repeating process that costs time every week, no internal team to productise it, and a clear sense that 'someone should build a tool for this.' That someone is AOTT. Key negative signals: individual technical contributor (they build it themselves), pure enterprise (internal dev capacity), pure sales/marketing role without build authority, recruiter/staffing (wrong service entirely). Company stage matters more than industry: a Founder at a 5-person company with a clear problem beats a VP at a 5,000-person company every time.",
+
+  "_classifier_note": "Do NOT apply an end-client penalty for this criteria. MVP Factory targets both direct product builds (commercial SaaS) and internal tool builds — the buyer is always an end-client, never a subcontracting partner. Score founders at early-stage companies highly even when industry signals are weak. Penalise large-enterprise signals (Fortune 500, publicly traded company with thousands of employees) since they typically have internal dev teams. Reward explicit product-building language in headlines ('building', 'launching', 'co-founder of', 'building [tool]') and ops-limiting language ('manual', 'spreadsheets', 'no system for').",
+
+  "reference_products": [
+    "Scorestack — LinkedIn enrichment, AI scoring, and outreach automation for sales and RevOps teams",
+    "StoreSync — Shopify environment promotion tool for agencies managing dev/staging/production store pairs",
+    "Bridge — NetSuite-to-Shopify configuration alignment and migration tool for consultants and merchants"
+  ],
+
+  "ideal_buyer_profiles": [
+    "Founder at a pre-seed or seed-stage SaaS company who has a spec or wireframe but no engineering team",
+    "CTO or VP Engineering at a 15–100-person company running manual ops workflows that need to be productised",
+    "Head of Product at a startup that is outgrowing its no-code stack and needs a custom build",
+    "COO or Head of Operations at a services business that needs an internal tool to replace spreadsheets",
+    "Solo founder in the Shopify or NetSuite ecosystem building a niche vertical tool"
+  ],
+
+  "company_type_signals": [
+    "startup",
+    "early-stage",
+    "bootstrapped",
+    "SaaS",
+    "ventures",
+    "labs",
+    "studio",
+    "digital",
+    "platform",
+    "solutions",
+    "innovation",
+    "technology",
+    "software"
+  ],
+
+  "target_roles": [
+    "Founder",
+    "Co-Founder",
+    "CEO",
+    "CTO",
+    "Chief Technology Officer",
+    "Chief Product Officer",
+    "CPO",
+    "VP of Engineering",
+    "Head of Engineering",
+    "VP of Product",
+    "Head of Product",
+    "VP of Innovation",
+    "Head of Innovation",
+    "Chief Digital Officer",
+    "CDO",
+    "Director of Digital Transformation",
+    "VP of Operations",
+    "Head of Operations",
+    "COO",
+    "Director of Technology",
+    "General Manager",
+    "Managing Director"
+  ],
+
+  "target_industries": [
+    "Information Technology and Services",
+    "Computer Software",
+    "Internet",
+    "Financial Services",
+    "Marketing and Advertising",
+    "Management Consulting",
+    "Real Estate",
+    "Retail",
+    "Transportation and Logistics",
+    "Professional Services",
+    "Human Resources",
+    "Health, Wellness and Fitness"
+  ],
+
+  "target_locations": [
+    "United States",
+    "Canada",
+    "United Kingdom",
+    "Australia"
+  ],
+
+  "seniority_signals": [
+    "Founder",
+    "Co-Founder",
+    "CEO",
+    "CTO",
+    "CPO",
+    "COO",
+    "CDO",
+    "Chief",
+    "VP",
+    "Vice President",
+    "SVP",
+    "Head of",
+    "Director",
+    "Managing Partner",
+    "Managing Director",
+    "General Manager",
+    "President",
+    "Partner",
+    "Owner"
+  ],
+
+  "headline_positive_signals": [
+    "building",
+    "launching",
+    "founder",
+    "co-founder",
+    "bootstrapped",
+    "early-stage",
+    "stealth",
+    "pre-launch",
+    "SaaS",
+    "platform",
+    "automating",
+    "automation",
+    "replacing spreadsheets",
+    "no-code",
+    "Shopify",
+    "NetSuite",
+    "ops tooling",
+    "workflow",
+    "process",
+    "operations",
+    "scaling",
+    "internal tools",
+    "productising",
+    "productizing",
+    "efficiency",
+    "manual"
+  ],
+
+  "anti_patterns": [
+    "Software Engineer",
+    "Developer",
+    "Frontend",
+    "Backend",
+    "Full Stack",
+    "Freelance Developer",
+    "Freelancer",
+    "Recruiter",
+    "Talent Acquisition",
+    "Recruitment",
+    "Staffing",
+    "Student",
+    "Intern",
+    "Junior",
+    "QA",
+    "Analyst",
+    "Demand Generation",
+    "Account Executive",
+    "Account Manager",
+    "Sales Representative",
+    "Bachelor of Science"
+  ],
+
+  "search_terms": [
+    "founder SaaS startup",
+    "CTO early stage startup",
+    "head of product lean team",
+    "VP engineering bootstrapped",
+    "chief digital officer innovation build",
+    "COO operations manual process",
+    "head of operations workflow automation",
+    "founder internal tool build",
+    "CEO SaaS product idea",
+    "VP operations efficiency tooling"
+  ],
+
+  "scoring_weights": {
+    "role_match": 0.35,
+    "seniority_match": 0.30,
+    "industry_match": 0.20,
+    "location_match": 0.10,
+    "company_size_match": 0.05
+  },
+
+  "classification_thresholds": {
+    "hot": 75,
+    "warm": 45
+  }
+}

@@ -63,6 +63,8 @@ Each run uses exactly one criteria file from `config/criteria/`. The file to use
    - "run with agency-partners criteria" → `config/criteria/agency-partners.json`
    - "use the retail criteria" → `config/criteria/retail-brands.json`
    - "run the agency one" → `config/criteria/agency-partners.json`
+   - "run with mvp-factory criteria" → `config/criteria/mvp-factory.json`
+   - "use the MVP Factory one" → `config/criteria/mvp-factory.json`
    - Match is case-insensitive. Check `name`, `label`, and keywords in `description` across all files in `config/criteria/`.
    - If the phrase matches 2+ criteria files, stop and ask for clarification before proceeding.
 2. **`pipeline.json → active_criteria`** — the persistent default (e.g. `"agency-partners"`). Load `config/criteria/<active_criteria>.json`.
@@ -104,7 +106,7 @@ Mark step complete in run_log before moving on.
 
 ### Step 2 — Search for New Leads
 
-**Before building queries — build the exclusion set:** Run `linkedin connection list --json -q` **three times in a row** and union all returned URLs into a single in-memory exclusion set. The API returns a non-deterministic subset of connections on each call; running three calls substantially increases coverage. A search result is skipped if its URL appears in `state/seen.json` OR in this exclusion set. Do NOT write existing connections into `seen.json` — the exclusion set is in-memory per run only.
+**Before building queries — build the exclusion set:** Run `linkedin connection list --limit 3000 --json -q` **three times in a row** and union all returned URLs into a single in-memory exclusion set. The API returns a non-deterministic subset of connections on each call; running three calls substantially increases coverage. A search result is skipped if its URL appears in `state/seen.json` OR in this exclusion set. Do NOT write existing connections into `seen.json` — the exclusion set is in-memory per run only.
 
 1. Load `config/criteria/<criteria_used>.json` (resolved in Step 1) and `config/pipeline.json`.
 2. Build up to `search.max_search_queries_per_run` queries by rotating through combinations of `target_roles`, `target_industries`, and `target_locations`. Track the rotation cursor in the current run_log entry (`search_cursor`).
@@ -220,7 +222,7 @@ Mark step complete in run_log.
 ### Step 7 — Detect Accepted Connections
 
 1. Get the timestamp of the previous run's `completed_at` from `run_log.json`.
-2. Run `linkedin connection list --json -q` **three times** and union all returned URLs to maximize coverage before matching against `request_sent` leads.
+2. Run `linkedin connection list --limit 3000 --json -q` **three times** and union all returned URLs to maximize coverage before matching against `request_sent` leads.
 3. Normalize all returned URLs.
 4. For each lead in `leads.json` with `status: "request_sent"`: check if their URL appears in the connection list.
 5. If found:
@@ -356,6 +358,7 @@ Templates live in `templates/` and are selected by `agents/message-composer.md` 
 |--------------|---------|
 | `connection_note_agency.md` | Connection note, agency-partners criteria |
 | `connection_note_retail.md` | Connection note, retail-brands criteria |
+| `connection_note_mvp.md` | Connection note, mvp-factory criteria |
 | `followup_1_agency.md` | First follow-up, agency-partners criteria |
 | `followup_1_retail.md` | First follow-up, retail-brands criteria |
 | `followup_2_resource.md` | Second follow-up, both criteria |
