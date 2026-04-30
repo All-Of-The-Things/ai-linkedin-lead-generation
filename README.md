@@ -151,6 +151,7 @@ Search criteria live in `config/criteria/`. Each file is a self-contained search
 |------|--------|
 | `agency-partners.json` | Decision-makers at NetSuite SIs, Oracle partners, Shopify Plus agencies *(default)* |
 | `retail-brands.json` | VP/Director/Head of eCommerce at retail and consumer brand companies |
+| `mvp-factory.json` | Founders building commercial products + ops leaders with internal tool needs |
 
 **Switch the default** — edit `config/pipeline.json`:
 
