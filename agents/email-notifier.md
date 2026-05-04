@@ -32,7 +32,7 @@ The calling pipeline will pass you:
 - Counts summary: total found, hot/warm/cold breakdown
 - Table of ALL leads sorted hot → warm → cold:
   | Name | Title | Company | Score | Classification |
-- Footer instruction: "Edit `state/pending_approvals.json` → `connection_approvals`. Set `decision` to `approved` or `rejected` for each entry. Then run `/generate-messages`."
+- Footer instruction: "Edit the latest `state/pending_approvals/*-connection.json` file. Set `decision` to `approved` or `rejected` for each entry. Then run `/generate-messages`."
 
 ### `notes_ready`
 
@@ -42,7 +42,7 @@ The calling pipeline will pass you:
 - Header: "Connection note drafts — {criteria_used} — {date}"
 - Table showing each lead and its draft note side-by-side:
   | Name | Title | Company | Classification | Draft note |
-- Footer instruction: "Open `state/pending_approvals.json` → `connection_approvals`. For each entry: review `note_draft`, optionally overwrite it in `edited_note`, and set `note_decision` to `approved` or `rejected`. Then run `/send-connections`."
+- Footer instruction: "Open the relevant `state/pending_approvals/*-connection.json` file(s). For each entry: review `note_draft`, optionally overwrite it in `edited_note`, and set `note_decision` to `approved` or `rejected`. Then run `/send-connections`."
 
 ### `messages_ready`
 
@@ -52,7 +52,7 @@ The calling pipeline will pass you:
 - Header: "Follow-up drafts ready — {date}"
 - Table of drafted messages:
   | Name | Company | Sequence | Message preview (first 80 chars) |
-- Footer instruction: "Edit `state/pending_approvals.json` → `followup_approvals`. Set `decision` to `approved` (or fill `edited_message` to override the draft). Then run `/deliver-messages`."
+- Footer instruction: "Edit the latest `state/pending_approvals/*-followup.json` file. Set `decision` to `approved` (or fill `edited_message` to override the draft). Then run `/deliver-messages`."
 
 ### `delivery_summary`
 
