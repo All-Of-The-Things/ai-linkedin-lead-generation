@@ -7,7 +7,7 @@
 1. Reads `CLAUDE.md` and the LinkedIn skill (`.claude/skills/linkedin/SKILL.md`)
 2. Reads `config/pipeline.json`
 3. Executes pipeline **Step 9**:
-   - Reads `state/pending_approvals.json → followup_approvals` for entries with `decision: "approved"`
+   - Scans all `state/pending_approvals/*-followup.json` files for entries with `decision: "approved"`
    - Uses `edited_message` if filled in, otherwise uses `followup_draft`
    - Sends each approved message via `linkedin message send`
    - Updates `leads.json`: status → `"followup_sent"`, increments `followup_sequence`, resets `followup_eligible_after` if another follow-up in the sequence is due
@@ -17,13 +17,13 @@
 
 ## Safety checks (both must pass before any message is sent)
 
-- Lead must have `decision: "approved"` in `pending_approvals.json → followup_approvals`
+- Lead must have `decision: "approved"` in some `state/pending_approvals/*-followup.json` file
 - Lead must have `status: "followup_queued"` in `leads.json`
 - `followup_sent_at` must be `null` (double-send guard)
 
 ## Before running
 
-- Review `state/pending_approvals.json → followup_approvals`. For any entry, you can:
+- Review all `state/pending_approvals/*-followup.json` files. For any entry, you can:
   - Set `decision: "approved"` to send as-is
   - Set `edited_message` to a custom message before approving
   - Set `decision: "rejected"` to skip

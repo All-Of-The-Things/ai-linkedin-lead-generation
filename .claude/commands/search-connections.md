@@ -12,7 +12,7 @@
    - **Step 2** — Search for new leads: builds exclusion set (3× `linkedin connection list` union + `seen.json`), runs search queries, writes stubs to `leads.json` and `seen.json`.
    - **Step 3** — Profile enrichment: fetches full profiles for all `status: "new"` leads.
    - **Step 4** — Classification: invokes `agents/lead-classifier.md` to score and classify enriched leads.
-   - **Step 5** — Surface approvals: writes all classified leads to `pending_approvals.json → connection_approvals` and sends an email notification.
+   - **Step 5** — Surface approvals: writes all classified leads to a new `state/pending_approvals/<timestamp>-connection.json` file and sends an email notification.
 4. Sends an email via `agents/email-notifier.md` with `phase: "search_complete"`.
 5. Updates `state/run_log.json` with `status: "phase1_complete"`.
 
@@ -24,7 +24,7 @@
 
 ## After running
 
-Check your email — it shows a table of all discovered leads sorted hot → warm → cold. Open `state/pending_approvals.json → connection_approvals` and for each entry:
+Check your email — it shows a table of all discovered leads sorted hot → warm → cold. Open the newly created `state/pending_approvals/<timestamp>-connection.json` file and for each entry:
 - Set `decision` to `"approved"` or `"rejected"`.
 
 Then run `/generate-messages` to compose connection notes for approved leads.

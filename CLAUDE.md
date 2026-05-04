@@ -16,7 +16,7 @@ The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sendi
                         routines/daily-search.md  (scheduled, weekdays 9am)
     Steps 0–5: re-entry check → criteria refresh → search → enrich → classify → surface approvals
     → Email: "N leads ready for your review"
-    → Human: edits pending_approvals.json connection_approvals, sets decision fields
+    → Human: edits the latest `state/pending_approvals/*-connection.json`, sets decision fields
 
 [Phase 2 — Draft]      /generate-messages  (manual slash command)
     Step 6a: compose connection note drafts for approved leads
@@ -26,7 +26,7 @@ The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sendi
 [Phase 3 — Send]       /send-connections  (manual slash command)
     Steps 6b–8: send approved notes → detect accepted connections → draft follow-up messages
     → Email: "N follow-up drafts ready" (if eligible) or "N connection requests sent"
-    → Human: reviews followup_draft, sets decision fields in followup_approvals
+    → Human: reviews followup_draft, sets decision fields in the latest `state/pending_approvals/*-followup.json`
 
 [Phase 4 — Deliver]    /deliver-messages  (manual slash command)
     Step 9: send approved follow-up messages via LinkedIn
@@ -43,7 +43,7 @@ The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sendi
 | `config/criteria/` | Named criteria files; each is a self-contained search profile |
 | `state/leads.json` | Master lead ledger, keyed by normalized LinkedIn URL |
 | `state/seen.json` | Dedupe index — append-only, never remove a URL |
-| `state/pending_approvals.json` | Human interface: user fills `decision` fields here |
+| `state/pending_approvals/` | Human interface: one timestamped file per run (`<timestamp>-connection.json`, `<timestamp>-followup.json`) |
 | `state/run_log.json` | Audit log of every pipeline run |
 | `templates/` | Message style guides used by `agents/message-composer.md` |
 | `agents/` | Subagent prompt files for focused subtasks |
@@ -147,8 +147,11 @@ Mark step complete in run_log.
 
 ### Step 5 — Surface Connection Approvals
 
-1. Read all leads with `status: "classified"` that do NOT already have an entry in `state/pending_approvals.json → connection_approvals`.
-2. For each, build an approval entry:
+**Approval file naming:** Each run writes its connection approvals to a new file: `state/pending_approvals/<timestamp>-connection.json`, where `<timestamp>` is the run's `started_at` in compact ISO form (e.g. `2026-04-30T143025Z`). Use the same timestamp format consistently.
+
+1. Build the set of URLs already in any `state/pending_approvals/*-connection.json` file across all existing files.
+2. Read all leads with `status: "classified"` that are NOT in that set.
+3. For each, build an approval entry:
    ```json
    {
      "url": "...",
@@ -164,8 +167,8 @@ Mark step complete in run_log.
      "note": null
    }
    ```
-3. Append all entries to `pending_approvals.json → connection_approvals`.
-4. Set `approval_surfaced_at` on each lead in `leads.json`.
+4. Write all entries as a JSON array to `state/pending_approvals/<run-timestamp>-connection.json` (new file, not appended to any existing file).
+5. Set `approval_surfaced_at` on each lead in `leads.json`.
 
 **All classifications (hot, warm, cold) are surfaced.** The user decides everything.
 
@@ -174,7 +177,7 @@ Mark step complete in run_log.
    - `run_id`: current run ID from `run_log.json`
    - `criteria_used`: resolved criteria name
    - `counts`: `{ total_new: N, hot: N, warm: N, cold: N }`
-   - `leads_snapshot`: all entries just appended to `connection_approvals`
+   - `leads_snapshot`: all entries written to the new connection file
 
 Mark step complete in run_log. **Phase 1 ends here.** Do not proceed to Step 6a — that is Phase 2 (`/generate-messages`).
 
@@ -182,12 +185,12 @@ Mark step complete in run_log. **Phase 1 ends here.** Do not proceed to Step 6a 
 
 Runs in **`/generate-messages`** (Phase 2).
 
-1. Read `state/pending_approvals.json → connection_approvals`.
+1. Scan all `state/pending_approvals/*-connection.json` files. Load every entry from every file, tracking which file each entry came from.
 2. Find entries where `decision: "approved"` and `note_draft` is null.
 3. Auto-reject entries older than `approval.approval_timeout_days` days with `decision: null` (set `note_decision: "rejected"` on these).
 4. For each eligible lead:
    - Invoke `agents/message-composer.md` as a subagent with the lead record, `message_type: "connection_note"`, and `criteria_used`. Receive back the drafted note string.
-   - Write `note_draft: "<drafted note>"` and `note_decision: null` back to that entry in `pending_approvals.json`.
+   - Write `note_draft: "<drafted note>"` and `note_decision: null` back to that entry **in the same file it was read from**.
 5. For each **rejected** lead (decision: "rejected"): `status → "rejected"`, set `approval_decided_at`, `approval_decision`.
 6. **Send email notification** — invoke `agents/email-notifier.md` as a subagent with:
    - `phase: "notes_ready"`
@@ -202,7 +205,7 @@ Mark step complete in run_log. **Phase 2 ends here.** Do not proceed to Step 6b 
 
 Runs in **`/send-connections`** (Phase 3).
 
-1. Read `state/pending_approvals.json → connection_approvals`.
+1. Scan all `state/pending_approvals/*-connection.json` files and load every entry, tracking which file each came from.
 2. Find entries where `note_decision: "approved"` and the lead in `leads.json` still has `status: "classified"`.
 3. For each (up to `outreach.max_connection_requests_per_run` per run):
    - Use `edited_note` if non-null, otherwise use `note_draft`. The message must be non-null — do not send without a note.
@@ -234,38 +237,43 @@ Mark step complete in run_log.
 
 ### Step 8 — Surface Follow-Up Queue
 
-1. Find leads in `leads.json` with `status: "connected"` where:
+**Approval file naming:** Each run writes its follow-up approvals to a new file: `state/pending_approvals/<run-timestamp>-followup.json` (same timestamp format as Step 5).
+
+1. Build the set of URLs already pending across all `state/pending_approvals/*-followup.json` files (entries with `decision: null`).
+2. Find leads in `leads.json` with `status: "connected"` where:
    - `followup_eligible_after <= now`
    - `followup_sequence < followup.max_sequence`
-   - No existing pending `followup_approvals` entry for this URL with `decision: null`
-2. For each eligible lead:
+   - URL is NOT in the pending set from step 1
+3. For each eligible lead:
    - Invoke `agents/message-composer.md` as a subagent with the lead record, `message_type: "followup"`, `followup_sequence`, and `criteria_used`. The composer selects the correct template internally.
    - Receive back the drafted message string.
-3. Set `followup_draft` and `status → "followup_queued"` on the lead.
-4. Append to `pending_approvals.json → followup_approvals`:
+4. Set `followup_draft` and `status → "followup_queued"` on the lead.
+5. Write all entries as a JSON array to `state/pending_approvals/<run-timestamp>-followup.json` (new file):
    ```json
-   {
-     "url": "...",
-     "name": "...",
-     "followup_sequence": 0,
-     "followup_draft": "...",
-     "connection_accepted_at": "...",
-     "surfaced_at": "<now>",
-     "decision": null,
-     "edited_message": null
-   }
+   [
+     {
+       "url": "...",
+       "name": "...",
+       "followup_sequence": 0,
+       "followup_draft": "...",
+       "connection_accepted_at": "...",
+       "surfaced_at": "<now>",
+       "decision": null,
+       "edited_message": null
+     }
+   ]
    ```
-5. **Send email notification** — invoke `agents/email-notifier.md` as a subagent with:
+6. **Send email notification** — invoke `agents/email-notifier.md` as a subagent with:
    - `phase: "messages_ready"`
    - `run_id`: current run ID
    - `counts`: `{ followups_drafted: N }`
-   - `leads_snapshot`: all entries just appended to `followup_approvals`
+   - `leads_snapshot`: all entries written to the new followup file
 
 Mark step complete in run_log. **Phase 3 ends here.** Do not proceed to Step 9 — that is Phase 4 (`/deliver-messages`).
 
 ### Step 9 — Send Approved Follow-Ups
 
-1. Read `pending_approvals.json → followup_approvals`.
+1. Scan all `state/pending_approvals/*-followup.json` files and load every entry, tracking which file each came from.
 2. Find entries with `decision: "approved"` where the lead's `status` is still `"followup_queued"`.
 3. For each (up to `followup.max_followups_per_run` per run):
    - Use `edited_message` if non-null, otherwise use `followup_draft`.
@@ -315,14 +323,14 @@ Other exit codes:
 ## Approval Contract
 
 **Never send a connection request unless:**
-1. `state/pending_approvals.json → connection_approvals` has an entry for that URL with `decision: "approved"`.
+1. Some file in `state/pending_approvals/*-connection.json` has an entry for that URL with `decision: "approved"`.
 2. That same entry has `note_decision: "approved"` AND `note_draft` (or `edited_note`) is non-null.
 3. `leads.json` shows the lead at `status: "classified"`.
 
 All three checks are independent. All must pass.
 
 **Never send a follow-up message unless:**
-1. `state/pending_approvals.json → followup_approvals` has an entry for that URL with `decision: "approved"`.
+1. Some file in `state/pending_approvals/*-followup.json` has an entry for that URL with `decision: "approved"`.
 2. `leads.json` shows the lead at `status: "followup_queued"`.
 
 Both checks must pass.
@@ -333,7 +341,7 @@ Both checks must pass.
 
 - **`seen.json`**: append-only. Never remove a URL once written. A URL added here means "this person has been discovered and will never be re-proposed."
 - **`leads.json`**: keyed by normalized URL. Each pipeline step only writes to its own fields. Do not overwrite fields owned by other steps.
-- **`pending_approvals.json`**: entries are never deleted — only `decision` fields are filled in. The file grows over time. Entries older than `approval_timeout_days` with null decisions are treated as auto-rejected by Step 6 but remain in the file.
+- **`pending_approvals/`**: one timestamped file is created per run — never deleted, never merged into other files. Within each file, entries are never removed — only `decision` fields are filled in. Entries older than `approval_timeout_days` with null decisions are treated as auto-rejected by Step 6 but remain in the file. File naming: `<YYYYMMDDTHHMMSSZ>-connection.json` or `<YYYYMMDDTHHMMSSZ>-followup.json`.
 - **`run_log.json`**: append-only to the `runs` array. Each run gets its own entry.
 
 ---

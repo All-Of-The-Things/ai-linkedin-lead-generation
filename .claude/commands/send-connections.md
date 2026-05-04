@@ -6,20 +6,20 @@
 
 1. Reads `CLAUDE.md`, `.claude/skills/linkedin/SKILL.md`, `config/pipeline.json`, and resolves the active criteria.
 2. Executes pipeline **Step 6b** — Send Connection Requests:
-   - For each `connection_approvals` entry where `note_decision: "approved"` and the lead is still at `status: "classified"`: sends the LinkedIn connection request using `edited_note` (if set) or `note_draft`.
+   - Scans all `state/pending_approvals/*-connection.json` files for entries where `note_decision: "approved"` and the lead is still at `status: "classified"`: sends the LinkedIn connection request using `edited_note` (if set) or `note_draft`.
    - Updates lead status to `"request_sent"` on success.
 3. Executes pipeline **Step 7** — Detect Accepted Connections:
    - Fetches the full connection list and checks which `request_sent` leads have accepted.
    - Sets `status: "connected"` and computes `followup_eligible_after`.
 4. Executes pipeline **Step 8** — Surface Follow-Up Queue:
    - For `connected` leads whose `followup_eligible_after` has passed: invokes `agents/message-composer.md` to draft follow-up messages.
-   - Appends drafts to `state/pending_approvals.json → followup_approvals`.
+   - Writes drafts to a new `state/pending_approvals/<timestamp>-followup.json` file.
 5. Invokes `agents/email-notifier.md` with `phase: "messages_ready"` (if follow-up drafts were generated) or `phase: "connections_sent"` (if no follow-ups ready yet).
 6. Updates `state/run_log.json`.
 
 ## Before running
 
-- `state/pending_approvals.json → connection_approvals` must have at least one entry with `note_decision: "approved"`. If all are still `null`, nothing will be sent and you'll get a warning.
+- At least one entry across all `state/pending_approvals/*-connection.json` files must have `note_decision: "approved"`. If all are still `null`, nothing will be sent and you'll get a warning.
 - The LinkedIn CLI must be authenticated.
 - `RESEND_API_KEY` must be set in the environment for the email notification to send.
 
@@ -30,7 +30,7 @@
 
 ## After running
 
-If follow-up drafts were generated: check your email, open `state/pending_approvals.json → followup_approvals`, review each `followup_draft`, optionally fill `edited_message` to override it, and set `decision` to `"approved"` or `"rejected"`. Then run `/deliver-messages`.
+If follow-up drafts were generated: check your email, open the newly created `state/pending_approvals/<timestamp>-followup.json`, review each `followup_draft`, optionally fill `edited_message` to override it, and set `decision` to `"approved"` or `"rejected"`. Then run `/deliver-messages`.
 
 If no follow-ups are ready yet (connections not accepted): wait for connections to be accepted, then run `/send-connections` again — it will pick up newly accepted connections and draft follow-ups.
 
