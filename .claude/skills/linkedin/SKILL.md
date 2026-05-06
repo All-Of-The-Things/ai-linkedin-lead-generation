@@ -5,516 +5,228 @@ description: General-purpose LinkedIn automation – fetch profiles, search peop
 
 # LinkedIn Skill
 
-You have access to `linkedin` – a CLI tool for LinkedIn automation. Use it to fetch profiles, search people and companies, send messages, manage connections, create posts, react, comment, and more.
-
-Each command sends a request to Linked API, which runs a real cloud browser to perform the action on LinkedIn. Operations are **not instant** – expect 30 seconds to several minutes depending on complexity.
-
-If `linkedin` is not available, install it:
-
-```bash
-npm install -g @linkedapi/linkedin-cli
-```
+You have access to LinkedIn via the **`linkedapi` MCP server**. Use MCP tool calls (not CLI commands) for all LinkedIn operations. Each tool call routes through LinkedAPI's cloud browser automation — expect 30 seconds to several minutes per operation.
 
 ## Authentication
 
-If a command fails with exit code 2 (authentication error), ask the user to set up their account:
-
-1. Go to [app.linkedapi.io](https://app.linkedapi.io) and sign up or log in
-2. Connect their LinkedIn account
-3. Copy the **Linked API Token** and **Identification Token** from the dashboard
-
-Once the user provides the tokens, run:
-
-```bash
-linkedin setup --linked-api-token=TOKEN --identification-token=TOKEN
-```
-
-## Global Flags
-
-Always use `--json` and `-q` for machine-readable output:
-
-```bash
-linkedin <command> --json -q
-```
-
-| Flag                    | Description                             |
-| ----------------------- | --------------------------------------- |
-| `--json`                | Structured JSON output                  |
-| `--quiet` / `-q`        | Suppress stderr progress messages       |
-| `--fields name,url,...` | Select specific fields in output        |
-| `--no-color`            | Disable colors                          |
-| `--account "Name"`      | Use a specific account for this command |
-
-## Output Format
-
-Success:
-
-```json
-{ "success": true, "data": { "name": "John Doe", "headline": "Engineer" } }
-```
-
-Error:
+Tokens are configured in `.claude/settings.local.json` under `env`:
 
 ```json
 {
-  "success": false,
-  "error": { "type": "personNotFound", "message": "Person not found" }
+  "env": {
+    "LINKED_API_TOKEN": "<from app.linkedapi.io>",
+    "IDENTIFICATION_TOKEN": "<from app.linkedapi.io>"
+  }
 }
 ```
 
-Exit code 0 means the API call succeeded – always check the `success` field for the action outcome. Non-zero exit codes indicate infrastructure errors:
+If a tool returns an authentication error, stop immediately and ask the user to add their tokens to `.claude/settings.local.json` and restart Claude Code.
 
-| Exit Code | Meaning                                                                                     |
-| --------- | ------------------------------------------------------------------------------------------- |
-| 0         | Success (check `success` field – action may have returned an error like "person not found") |
-| 1         | General/unexpected error                                                                    |
-| 2         | Missing or invalid tokens                                                                   |
-| 3         | Subscription/plan required                                                                  |
-| 4         | LinkedIn account issue                                                                      |
-| 5         | Invalid arguments                                                                           |
-| 6         | Rate limited                                                                                |
-| 7         | Network error                                                                               |
-| 8         | Workflow timeout (workflowId returned for recovery)                                         |
+## Error Handling
 
-## Commands
+Tools return structured results. Check for errors in the response:
 
-### Fetch a Person Profile
+| Error type | Meaning | Action |
+|---|---|---|
+| Auth / token error | Missing or invalid tokens | Stop. Ask user to check tokens in `settings.local.json`. |
+| Rate limited | Too many requests | Wait `rate_limit.retry_delay_seconds`, retry up to `rate_limit.max_retries` times. If still failing, skip this item and continue. |
+| Subscription required | Feature needs higher plan | Log and skip the failing operation. |
+| Timeout / workflow | Long-running operation returned a `workflowId` | Call `get_workflow_status` with `wait: true`. |
+| Network error | Transient failure | Retry once after a short pause. |
 
-```bash
-linkedin person fetch <url> [flags] --json -q
-```
+**Never abort an entire pipeline run due to a single tool failure.** Log the error to the run's `errors` array and continue.
 
-Optional flags to include additional data:
-
-- `--experience` – work history
-- `--education` – education history
-- `--skills` – skills list
-- `--languages` – languages
-- `--posts` – recent posts (with `--posts-limit N`, `--posts-since TIMESTAMP`)
-- `--comments` – recent comments (with `--comments-limit N`, `--comments-since TIMESTAMP`)
-- `--reactions` – recent reactions (with `--reactions-limit N`, `--reactions-since TIMESTAMP`)
-
-Only request additional data when needed – each flag increases execution time.
-
-```bash
-# Basic profile
-linkedin person fetch https://www.linkedin.com/in/username --json -q
-
-# With experience and education
-linkedin person fetch https://www.linkedin.com/in/username --experience --education --json -q
-
-# With last 5 posts
-linkedin person fetch https://www.linkedin.com/in/username --posts --posts-limit 5 --json -q
-```
+## Tools
 
 ### Search People
 
-```bash
-linkedin person search [flags] --json -q
+```
+search_people
+  term?: string
+  position?: string
+  locations?: string        # comma-separated
+  industries?: string       # comma-separated
+  currentCompanies?: string # comma-separated
+  previousCompanies?: string
+  schools?: string
+  firstName?: string
+  lastName?: string
+  limit?: number
 ```
 
-| Flag                   | Description                            |
-| ---------------------- | -------------------------------------- |
-| `--term`               | Search keyword or phrase               |
-| `--limit`              | Max results                            |
-| `--first-name`         | Filter by first name                   |
-| `--last-name`          | Filter by last name                    |
-| `--position`           | Filter by job position                 |
-| `--locations`          | Comma-separated locations              |
-| `--industries`         | Comma-separated industries             |
-| `--current-companies`  | Comma-separated current company names  |
-| `--previous-companies` | Comma-separated previous company names |
-| `--schools`            | Comma-separated school names           |
+### Fetch a Person Profile
 
-```bash
-linkedin person search --term "product manager" --locations "San Francisco" --json -q
-linkedin person search --current-companies "Google" --position "Engineer" --limit 20 --json -q
+```
+fetch_person
+  url: string               # linkedin.com/in/... URL
+  experience?: boolean
+  education?: boolean
+  skills?: boolean
+  languages?: boolean
+  posts?: boolean
+  postsLimit?: number
+  comments?: boolean
+  reactions?: boolean
 ```
 
-### Fetch a Company
+Only request optional data when needed — each flag increases execution time.
 
-```bash
-linkedin company fetch <url> [flags] --json -q
+### List Connections
+
+```
+retrieve_connections
+  limit?: number
+  since?: string            # ISO timestamp
+  position?: string
+  locations?: string
+  industries?: string
+  currentCompanies?: string
+  previousCompanies?: string
+  firstName?: string
+  lastName?: string
 ```
 
-Optional flags:
+### Check Connection Status
 
-- `--employees` – include employees
-- `--dms` – include decision makers
-- `--posts` – include company posts
-
-Employee filters (require `--employees`):
-
-| Flag                     | Description                  |
-| ------------------------ | ---------------------------- |
-| `--employees-limit`      | Max employees to retrieve    |
-| `--employees-first-name` | Filter by first name         |
-| `--employees-last-name`  | Filter by last name          |
-| `--employees-position`   | Filter by position           |
-| `--employees-locations`  | Comma-separated locations    |
-| `--employees-industries` | Comma-separated industries   |
-| `--employees-schools`    | Comma-separated school names |
-
-| Flag            | Description                                        |
-| --------------- | -------------------------------------------------- |
-| `--dms-limit`   | Max decision makers to retrieve (requires `--dms`) |
-| `--posts-limit` | Max posts to retrieve (requires `--posts`)         |
-| `--posts-since` | Posts since ISO timestamp (requires `--posts`)     |
-
-```bash
-# Basic company info
-linkedin company fetch https://www.linkedin.com/company/name --json -q
-
-# With employees filtered by position
-linkedin company fetch https://www.linkedin.com/company/name --employees --employees-position "Engineer" --json -q
-
-# With decision makers and posts
-linkedin company fetch https://www.linkedin.com/company/name --dms --posts --posts-limit 10 --json -q
+```
+check_connection_status
+  url: string
 ```
 
-### Search Companies
+### Send Connection Request
 
-```bash
-linkedin company search [flags] --json -q
 ```
-
-| Flag           | Description                                                                                                  |
-| -------------- | ------------------------------------------------------------------------------------------------------------ |
-| `--term`       | Search keyword                                                                                               |
-| `--limit`      | Max results                                                                                                  |
-| `--sizes`      | Comma-separated sizes: `1-10`, `11-50`, `51-200`, `201-500`, `501-1000`, `1001-5000`, `5001-10000`, `10001+` |
-| `--locations`  | Comma-separated locations                                                                                    |
-| `--industries` | Comma-separated industries                                                                                   |
-
-```bash
-linkedin company search --term "fintech" --sizes "11-50,51-200" --json -q
+send_connection_request
+  url: string
+  note?: string             # up to 300 characters
 ```
 
 ### Send a Message
 
-```bash
-linkedin message send <person-url> '<text>' --json -q
 ```
-
-Text up to 1900 characters. Wrap the message in single quotes to avoid shell interpretation issues.
-
-```bash
-linkedin message send https://www.linkedin.com/in/username 'Hey, loved your latest post!' --json -q
+send_message
+  url: string               # person's linkedin.com/in/... URL
+  message: string           # up to 1900 characters
 ```
 
 ### Get Conversation
 
-```bash
-linkedin message get <person-url> [--since TIMESTAMP] --json -q
+```
+get_conversation
+  url: string
+  since?: string            # ISO timestamp
 ```
 
-The first call for a conversation triggers a background sync and may take longer. Subsequent calls are faster.
+### Fetch a Company
 
-```bash
-linkedin message get https://www.linkedin.com/in/username --json -q
-linkedin message get https://www.linkedin.com/in/username --since 2024-01-15T10:30:00Z --json -q
+```
+fetch_company
+  url: string               # linkedin.com/company/... URL
+  employees?: boolean
+  decisionMakers?: boolean
+  posts?: boolean
+  employeesLimit?: number
+  employeesPosition?: string
+  employeesLocations?: string
 ```
 
-### Connection Management
+### Search Companies
 
-#### Check connection status
-
-```bash
-linkedin connection status <url> --json -q
+```
+search_companies
+  term?: string
+  sizes?: string            # comma-separated: "1-10", "11-50", "51-200", "201-500", "501-1000", "1001-5000", "5001-10000", "10001+"
+  locations?: string
+  industries?: string
+  limit?: number
 ```
 
-#### Send connection request
+### Withdraw Connection Request
 
-```bash
-linkedin connection send <url> [--note 'text'] [--email user@example.com] --json -q
+```
+withdraw_connection_request
+  url: string
 ```
 
-#### List connections
+### Sales Navigator — Search People
 
-```bash
-linkedin connection list [flags] --json -q
+```
+nv_search_people
+  term?: string
+  position?: string
+  locations?: string
+  industries?: string
+  currentCompanies?: string
+  yearsOfExperience?: string  # "lessThanOne","oneToTwo","threeToFive","sixToTen","moreThanTen"
+  limit?: number
 ```
 
-| Flag                   | Description                                                                          |
-| ---------------------- | ------------------------------------------------------------------------------------ |
-| `--limit`              | Max connections to return                                                            |
-| `--since`              | Only connections made since ISO timestamp (only works when no filter flags are used) |
-| `--first-name`         | Filter by first name                                                                 |
-| `--last-name`          | Filter by last name                                                                  |
-| `--position`           | Filter by job position                                                               |
-| `--locations`          | Comma-separated locations                                                            |
-| `--industries`         | Comma-separated industries                                                           |
-| `--current-companies`  | Comma-separated current company names                                                |
-| `--previous-companies` | Comma-separated previous company names                                               |
-| `--schools`            | Comma-separated school names                                                         |
+### Sales Navigator — Fetch Person
 
-```bash
-linkedin connection list --limit 50 --json -q
-linkedin connection list --current-companies "Google" --position "Engineer" --json -q
-linkedin connection list --since 2024-01-01T00:00:00Z --json -q
+```
+nv_fetch_person
+  url: string               # hashed Sales Navigator URL
 ```
 
-#### List pending outgoing requests
+### Sales Navigator — Search Companies
 
-```bash
-linkedin connection pending --json -q
+```
+nv_search_companies
+  term?: string
+  limit?: number
 ```
 
-#### Withdraw a pending request
+### Sales Navigator — Fetch Company
 
-```bash
-linkedin connection withdraw <url> [--no-unfollow] --json -q
+```
+nv_fetch_company
+  url: string               # Sales Navigator company URL
 ```
 
-By default, withdrawing also unfollows the person. Use `--no-unfollow` to keep following.
+### Sales Navigator — Get Conversation
 
-#### Remove a connection
-
-```bash
-linkedin connection remove <url> --json -q
+```
+nv_get_conversation
+  url: string               # hashed Sales Navigator URL
+  since?: string            # ISO timestamp
 ```
 
-### Posts
+### Sales Navigator — Send InMail
 
-#### Fetch a post
-
-```bash
-linkedin post fetch <url> [flags] --json -q
+```
+nv_send_message
+  url: string               # hashed Sales Navigator URL
+  message: string
+  subject: string           # up to 80 characters
 ```
 
-| Flag                 | Description                                                        |
-| -------------------- | ------------------------------------------------------------------ |
-| `--comments`         | Include comments                                                   |
-| `--reactions`        | Include reactions                                                  |
-| `--comments-limit`   | Max comments to retrieve (requires `--comments`)                   |
-| `--comments-sort`    | Sort order: `mostRelevant` or `mostRecent` (requires `--comments`) |
-| `--comments-replies` | Include replies to comments (requires `--comments`)                |
-| `--reactions-limit`  | Max reactions to retrieve (requires `--reactions`)                 |
+### Execute Custom Workflow
 
-```bash
-linkedin post fetch https://www.linkedin.com/posts/username_activity-123 --json -q
-
-# With comments sorted by most recent, including replies
-linkedin post fetch https://www.linkedin.com/posts/username_activity-123 \
-  --comments --comments-sort mostRecent --comments-replies --json -q
+```
+execute_custom_workflow
+  workflow: object          # workflow definition JSON
 ```
 
-#### Create a post
+### Get Workflow Result
 
-```bash
-linkedin post create '<text>' [flags] --json -q
+```
+get_workflow_result
+  workflowId: string
+  operationName: string
 ```
 
-| Flag            | Description                                                                                                        |
-| --------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `--company-url` | Post on behalf of a company page (requires admin access)                                                           |
-| `--attachments` | Attachment as `url:type` or `url:type:name`. Types: `image`, `video`, `document`. Can be specified multiple times. |
+### Account / Usage
 
-Attachment limits: up to 9 images, or 1 video, or 1 document. Cannot mix types.
-
-```bash
-linkedin post create 'Excited to share our latest update!' --json -q
-
-# With a document
-linkedin post create 'Our Q4 report' \
-  --attachments "https://example.com/report.pdf:document:Q4 Report" --json -q
-
-# Post as a company
-linkedin post create 'Company announcement' \
-  --company-url https://www.linkedin.com/company/name --json -q
 ```
-
-#### React to a post
-
-```bash
-linkedin post react <url> --type <reaction> [--company-url <url>] --json -q
-```
-
-Reaction types: `like`, `love`, `support`, `celebrate`, `insightful`, `funny`.
-
-```bash
-linkedin post react https://www.linkedin.com/posts/username_activity-123 --type like --json -q
-
-# React on behalf of a company
-linkedin post react https://www.linkedin.com/posts/username_activity-123 --type celebrate \
-  --company-url https://www.linkedin.com/company/name --json -q
-```
-
-#### Comment on a post
-
-```bash
-linkedin post comment <url> '<text>' [--company-url <url>] --json -q
-```
-
-Text up to 1000 characters.
-
-```bash
-linkedin post comment https://www.linkedin.com/posts/username_activity-123 'Great insights!' --json -q
-
-# Comment on behalf of a company
-linkedin post comment https://www.linkedin.com/posts/username_activity-123 'Well said!' \
-  --company-url https://www.linkedin.com/company/name --json -q
-```
-
-### Statistics
-
-```bash
-# Social Selling Index
-linkedin stats ssi --json -q
-
-# Performance analytics (profile views, post impressions, search appearances)
-linkedin stats performance --json -q
-
-# API usage for a date range
-linkedin stats usage --start 2024-01-01T00:00:00Z --end 2024-01-31T00:00:00Z --json -q
-```
-
-### Sales Navigator
-
-Requires a LinkedIn Sales Navigator subscription. Uses hashed URLs for person/company lookups.
-
-#### Fetch person
-
-```bash
-linkedin navigator person fetch <hashed-url> --json -q
-```
-
-#### Search people
-
-```bash
-linkedin navigator person search [flags] --json -q
-```
-
-| Flag                    | Description                                                                                 |
-| ----------------------- | ------------------------------------------------------------------------------------------- |
-| `--term`                | Search keyword or phrase                                                                    |
-| `--limit`               | Max results                                                                                 |
-| `--first-name`          | Filter by first name                                                                        |
-| `--last-name`           | Filter by last name                                                                         |
-| `--position`            | Filter by job position                                                                      |
-| `--locations`           | Comma-separated locations                                                                   |
-| `--industries`          | Comma-separated industries                                                                  |
-| `--current-companies`   | Comma-separated current company names                                                       |
-| `--previous-companies`  | Comma-separated previous company names                                                      |
-| `--schools`             | Comma-separated school names                                                                |
-| `--years-of-experience` | Comma-separated ranges: `lessThanOne`, `oneToTwo`, `threeToFive`, `sixToTen`, `moreThanTen` |
-
-```bash
-linkedin navigator person search --term "VP Marketing" --locations "United States" --json -q
-linkedin navigator person search --years-of-experience "moreThanTen" --position "CEO" --json -q
-```
-
-#### Fetch company
-
-```bash
-linkedin navigator company fetch <hashed-url> [flags] --json -q
-```
-
-Optional flags:
-
-- `--employees` – include employees
-- `--dms` – include decision makers
-
-Employee filters (require `--employees`):
-
-| Flag                              | Description                                        |
-| --------------------------------- | -------------------------------------------------- |
-| `--employees-limit`               | Max employees to retrieve                          |
-| `--employees-first-name`          | Filter by first name                               |
-| `--employees-last-name`           | Filter by last name                                |
-| `--employees-positions`           | Comma-separated positions                          |
-| `--employees-locations`           | Comma-separated locations                          |
-| `--employees-industries`          | Comma-separated industries                         |
-| `--employees-schools`             | Comma-separated school names                       |
-| `--employees-years-of-experience` | Comma-separated experience ranges                  |
-| `--dms-limit`                     | Max decision makers to retrieve (requires `--dms`) |
-
-```bash
-linkedin navigator company fetch https://www.linkedin.com/sales/company/97ural --employees --dms --json -q
-linkedin navigator company fetch https://www.linkedin.com/sales/company/97ural \
-  --employees --employees-positions "Engineer,Designer" --employees-locations "Europe" --json -q
-```
-
-#### Search companies
-
-```bash
-linkedin navigator company search [flags] --json -q
-```
-
-| Flag            | Description                                                                                                  |
-| --------------- | ------------------------------------------------------------------------------------------------------------ |
-| `--term`        | Search keyword                                                                                               |
-| `--limit`       | Max results                                                                                                  |
-| `--sizes`       | Comma-separated sizes: `1-10`, `11-50`, `51-200`, `201-500`, `501-1000`, `1001-5000`, `5001-10000`, `10001+` |
-| `--locations`   | Comma-separated locations                                                                                    |
-| `--industries`  | Comma-separated industries                                                                                   |
-| `--revenue-min` | Min annual revenue in M USD: `0`, `0.5`, `1`, `2.5`, `5`, `10`, `20`, `50`, `100`, `500`, `1000`             |
-| `--revenue-max` | Max annual revenue in M USD: `0.5`, `1`, `2.5`, `5`, `10`, `20`, `50`, `100`, `500`, `1000`, `1000+`         |
-
-```bash
-linkedin navigator company search --term "fintech" --sizes "11-50,51-200" --json -q
-linkedin navigator company search --revenue-min 10 --revenue-max 100 --locations "United States" --json -q
-```
-
-#### Send InMail
-
-```bash
-linkedin navigator message send <person-url> '<text>' --subject '<subject>' --json -q
-```
-
-Text up to 1900 characters. Subject up to 80 characters.
-
-```bash
-linkedin navigator message send https://www.linkedin.com/in/username \
-  'Would love to chat about API integrations' --subject 'Partnership Opportunity' --json -q
-```
-
-#### Get Sales Navigator conversation
-
-```bash
-linkedin navigator message get <person-url> [--since TIMESTAMP] --json -q
-```
-
-### Custom Workflows
-
-Execute a custom workflow definition from a file, stdin, or inline:
-
-```bash
-# From file
-linkedin workflow run --file workflow.json --json -q
-
-# From stdin
-cat workflow.json | linkedin workflow run --json -q
-
-# Inline
-echo '{"actions":[...]}' | linkedin workflow run --json -q
-```
-
-Check workflow status or wait for completion:
-
-```bash
-linkedin workflow status <id> --json -q
-linkedin workflow status <id> --wait --json -q
-```
-
-See [Building Workflows](https://linkedapi.io/docs/building-workflows/) for the workflow JSON schema.
-
-### Account Management
-
-```bash
-linkedin account list                            # List accounts (* = active)
-linkedin account switch "Name"                   # Switch active account
-linkedin account rename "Name" --name "New Name" # Rename account
-linkedin reset                                   # Remove active account
-linkedin reset --all                             # Remove all accounts
+get_api_usage
+  start?: string            # ISO timestamp
+  end?: string
 ```
 
 ## Important Behavior
 
-- **Sequential execution.** All operations for an account run one at a time. Multiple requests queue up.
-- **Not instant.** A real browser navigates LinkedIn – expect 30 seconds to several minutes per operation.
-- **Timestamps in UTC.** All dates and times are in UTC.
-- **Single quotes for text arguments.** Use single quotes around message text, post text, and comments to avoid shell interpretation issues with special characters.
-- **Action limits.** Per-account limits are configurable on the platform. A `limitExceeded` error means the limit was reached.
-- **URL normalization.** All LinkedIn URLs in responses are normalized to `https://www.linkedin.com/...` format without trailing slashes.
-- **Null fields.** Fields that are unavailable are returned as `null` or `[]`, not omitted.
+- **Sequential per account.** All operations for an account queue; multiple calls run one at a time.
+- **Not instant.** A real browser navigates LinkedIn — expect 30 seconds to several minutes per operation.
+- **Timestamps in UTC.** All dates and times are UTC.
+- **URL normalization.** All LinkedIn URLs in responses are normalized to `https://www.linkedin.com/...` without trailing slashes.
+- **Null fields.** Unavailable fields are returned as `null` or `[]`, not omitted.

@@ -10,11 +10,9 @@ The calling pipeline will pass you the resolved criteria name (e.g. `"agency-par
 
 1. **Load the LinkedIn skill** from `.claude/skills/linkedin/SKILL.md`.
 
-2. **Fetch connections** — run:
-   ```
-   linkedin connections list --limit 200 --json -q
-   ```
-   If exit code 6, wait 120 seconds and retry once. If still failing, stop and report.
+2. **Fetch connections** — call the `retrieve_connections` MCP tool with `limit: 200`.
+
+   If a rate limit error is returned, wait 120 seconds and retry once. If still failing, stop and report.
 
 3. **Analyze the returned profiles.** Look for dominant patterns across all connections in these dimensions:
    - Job titles and seniority levels (VP, Director, Head of, Founder, C-level, etc.)

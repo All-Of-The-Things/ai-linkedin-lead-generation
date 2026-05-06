@@ -20,7 +20,7 @@
 ## Before running
 
 - At least one entry across all `state/pending_approvals/*-connection.json` files must have `note_decision: "approved"`. If all are still `null`, nothing will be sent and you'll get a warning.
-- The LinkedIn CLI must be authenticated.
+- The `linkedapi` MCP server must be connected (tokens set in `.claude/settings.local.json`).
 - `RESEND_API_KEY` must be set in the environment for the email notification to send.
 
 ## Safety checks
@@ -34,6 +34,6 @@ If follow-up drafts were generated: check your email, open the newly created `st
 
 If no follow-ups are ready yet (connections not accepted): wait for connections to be accepted, then run `/send-connections` again — it will pick up newly accepted connections and draft follow-ups.
 
-## Rate limit handling
+## Error handling
 
-Follows the same rules as the main pipeline: exit code 6 → wait and retry (up to `rate_limit.max_retries`); never abort the full phase on a single failure.
+Follows the MCP error handling rules in `CLAUDE.md`: rate limit → wait and retry (up to `rate_limit.max_retries`); never abort the full phase on a single failure. On auth error: stop and tell the user to check their tokens in `.claude/settings.local.json`.

@@ -25,6 +25,6 @@ Check your email — it shows each draft note alongside the lead. Open the relev
 
 Then run `/send-connections`.
 
-## Rate limit handling
+## Error handling
 
-No LinkedIn CLI calls are made in this phase (it's draft-only). If the message-composer subagent fails, log and skip that lead — do not abort.
+No LinkedIn MCP calls are made in this phase (it's draft-only). If the message-composer subagent fails, log and skip that lead — do not abort.
