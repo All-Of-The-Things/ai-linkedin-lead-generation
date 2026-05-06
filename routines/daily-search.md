@@ -45,5 +45,5 @@ Print a one-paragraph summary of what was found.
 ## Important reminders
 
 - Never send a connection request or message — that happens in Phase 2.
-- If LinkedIn auth fails (exit code 2), stop immediately and surface the error.
+- If the `linkedapi` MCP tools return an auth error, stop immediately and surface the error — the user needs to check their tokens in `.claude/settings.local.json`.
 - Routine expires after 7 days — log the expiry date in the run summary so you know when to re-register via `/schedule`.

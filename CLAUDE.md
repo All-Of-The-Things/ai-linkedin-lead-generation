@@ -100,38 +100,35 @@ Resolve the active criteria file using the **Criteria Selection** rules above. S
 **If running:**
 - Invoke `agents/criteria-extractor.md` as a subagent, passing the resolved criteria name.
 - That agent fetches connections, analyzes patterns, and writes to `config/criteria/<criteria_used>.json`.
-- On exit code 6 (rate limit): log, skip this step, continue with the existing criteria file. If no file exists and rate limited, abort run and log.
+- On rate limit error: log, skip this step, continue with the existing criteria file. If no file exists and rate limited, abort run and log.
 
 Mark step complete in run_log before moving on.
 
 ### Step 2 — Search for New Leads
 
-**Before building queries — build the exclusion set:** Run `linkedin connection list --limit 3000 --json -q` **three times in a row** and union all returned URLs into a single in-memory exclusion set. The API returns a non-deterministic subset of connections on each call; running three calls substantially increases coverage. A search result is skipped if its URL appears in `state/seen.json` OR in this exclusion set. Do NOT write existing connections into `seen.json` — the exclusion set is in-memory per run only.
+**Before building queries — build the exclusion set:** Call the `retrieve_connections` MCP tool with `limit: 3000` **three times in a row** and union all returned URLs into a single in-memory exclusion set. The API returns a non-deterministic subset of connections on each call; running three calls substantially increases coverage. A search result is skipped if its URL appears in `state/seen.json` OR in this exclusion set. Do NOT write existing connections into `seen.json` — the exclusion set is in-memory per run only.
 
 1. Load `config/criteria/<criteria_used>.json` (resolved in Step 1) and `config/pipeline.json`.
 2. Build up to `search.max_search_queries_per_run` queries by rotating through combinations of `target_roles`, `target_industries`, and `target_locations`. Track the rotation cursor in the current run_log entry (`search_cursor`).
-3. For each query, run:
-   ```
-   linkedin person search --position "<role>" --industries "<industry>" --locations "<location>" --limit <max_results_per_run> --json -q
-   ```
+3. For each query, call the `search_people` MCP tool with `position`, `industries`, `locations`, and `limit` parameters.
 4. For each returned person URL:
    - Normalize: lowercase, strip trailing slash, use the canonical `/in/` form.
    - Check `state/seen.json` AND the in-memory exclusion set. If present in either, skip.
    - Add to `seen.json` immediately (write-through).
    - Add a stub record to `leads.json` with `status: "new"`, `first_seen_run: <today>`.
-5. On exit code 6: wait `rate_limit.retry_delay_seconds`, retry up to `rate_limit.max_retries`. If still failing, log, skip that query, continue to next.
+5. On rate limit error: wait `rate_limit.retry_delay_seconds`, retry up to `rate_limit.max_retries`. If still failing, log, skip that query, continue to next.
 
 Mark step complete in run_log.
 
 ### Step 3 — Profile Enrichment
 
 For each lead in `leads.json` with `status: "new"`:
-```
-linkedin person fetch <url> --experience --json -q
-```
+
+Call the `fetch_person` MCP tool with the lead's URL and `experience: true`.
+
 Populate: `name`, `headline`, `location`, `industry`, `current_title`, `current_company`, `linkedin_raw`.
 
-On exit code 6: leave lead at `"new"` (retry next run — this step is re-entrant). Continue to next lead.
+On rate limit error: leave lead at `"new"` (retry next run — this step is re-entrant). Continue to next lead.
 On other errors: append to lead's `errors` array, leave at `"new"`.
 
 Mark step complete in run_log.
@@ -209,9 +206,9 @@ Runs in **`/send-connections`** (Phase 3).
 2. Find entries where `note_decision: "approved"` and the lead in `leads.json` still has `status: "classified"`.
 3. For each (up to `outreach.max_connection_requests_per_run` per run):
    - Use `edited_note` if non-null, otherwise use `note_draft`. The message must be non-null — do not send without a note.
-   - Run: `linkedin connection send <url> --note '<note>' --json -q`
+   - Call the `send_connection_request` MCP tool with the lead's URL and `note`.
    - On success: `status → "request_sent"`, set `connection_requested_at`, set `connection_note`.
-   - On exit code 6: retry per rate_limit config. If still failing: log error, leave at `"classified"` for next run.
+   - On rate limit error: retry per rate_limit config. If still failing: log error, leave at `"classified"` for next run.
    - On other failure: `status → "request_failed"`, log error.
 4. For entries with `note_decision: "rejected"`: `status → "rejected"`, set `approval_decided_at`, `approval_decision`.
 5. Update `approval_decided_at` and `approval_decision` on all processed leads.
@@ -225,7 +222,7 @@ Mark step complete in run_log.
 ### Step 7 — Detect Accepted Connections
 
 1. Get the timestamp of the previous run's `completed_at` from `run_log.json`.
-2. Run `linkedin connection list --limit 3000 --json -q` **three times** and union all returned URLs to maximize coverage before matching against `request_sent` leads.
+2. Call the `retrieve_connections` MCP tool with `limit: 3000` **three times** and union all returned URLs to maximize coverage before matching against `request_sent` leads.
 3. Normalize all returned URLs.
 4. For each lead in `leads.json` with `status: "request_sent"`: check if their URL appears in the connection list.
 5. If found:
@@ -277,12 +274,12 @@ Mark step complete in run_log. **Phase 3 ends here.** Do not proceed to Step 9 �
 2. Find entries with `decision: "approved"` where the lead's `status` is still `"followup_queued"`.
 3. For each (up to `followup.max_followups_per_run` per run):
    - Use `edited_message` if non-null, otherwise use `followup_draft`.
-   - Run: `linkedin message send <url> '<message>' --json -q`
+   - Call the `send_message` MCP tool with the lead's URL and message text.
    - On success: `status → "followup_sent"`, set `followup_sent_at`, set `followup_approved_at`.
    - Increment `followup_sequence` on the lead.
    - If `followup_sequence < followup.max_sequence`: `status → "connected"`, recompute `followup_eligible_after` for the next follow-up window.
    - If `followup_sequence >= followup.max_sequence`: leave at `"followup_sent"` (sequence complete).
-   - On exit code 6: retry per config. If still failing: log, leave at `"followup_queued"` for next run.
+   - On rate limit error: retry per config. If still failing: log, leave at `"followup_queued"` for next run.
    - On other failure: `status → "followup_failed"`, log error.
 
 **Safety check**: `require_approval_before_send` must be `true`. Refuse to send if false.
@@ -304,19 +301,21 @@ Mark step complete in run_log. **Phase 4 ends here.**
 
 ---
 
-## Rate Limit Handling
+## Error Handling (MCP)
 
-On exit code 6 from any `linkedin` command:
+LinkedIn operations use the `linkedapi` MCP server. Tools return structured results; errors appear in the response rather than as exit codes.
+
+**Rate limit error:**
 1. Wait `rate_limit.retry_delay_seconds` seconds.
 2. Retry up to `rate_limit.max_retries` times.
-3. If still exit code 6 after all retries: **log the failure** (step name, URL if applicable, timestamp) to the current run entry's `errors` array in `run_log.json`. Skip the current operation and continue the pipeline.
+3. If still failing after all retries: **log the failure** (step name, URL if applicable, timestamp) to the current run entry's `errors` array in `run_log.json`. Skip the current operation and continue the pipeline.
 4. **Never abort the entire run** due to a single rate limit failure.
 
-Other exit codes:
-- `2` (auth): Stop immediately. Log. Tell the user to run `linkedin setup`.
-- `3` (subscription): Log and skip the failing command.
-- `8` (timeout): Check for a `workflowId` in the response, then poll `linkedin workflow status <id> --wait --json -q`.
-- JSON parse failure on output: log raw output to run_log errors, skip that lead.
+**Other error types:**
+- Auth / token error: Stop immediately. Log. Tell the user to add their `LINKED_API_TOKEN` and `IDENTIFICATION_TOKEN` to `.claude/settings.local.json` and restart Claude Code.
+- Subscription required: Log and skip the failing operation.
+- Timeout / workflow: If the response contains a `workflowId`, call `get_workflow_result` with the `workflowId` and `operationName` to poll for completion.
+- Unexpected error: Log to run_log errors, skip that lead.
 
 ---
 

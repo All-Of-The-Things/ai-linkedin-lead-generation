@@ -1,5 +1,8 @@
 {
   "env": {
-    "RESEND_API_KEY": ""
-  }
+    "RESEND_API_KEY": "",
+    "LINKED_API_TOKEN": "",
+    "IDENTIFICATION_TOKEN": ""
+  },
+  "enableAllProjectMcpServers": true
 }

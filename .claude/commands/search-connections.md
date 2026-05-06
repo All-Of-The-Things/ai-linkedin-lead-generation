@@ -18,7 +18,7 @@
 
 ## Before running
 
-- LinkedIn CLI must be authenticated (`linkedin account list` to verify).
+- The `linkedapi` MCP server must be connected (tokens set in `.claude/settings.local.json`).
 - `RESEND_API_KEY` must be set in the environment for the email notification.
 - You can pass a criteria override: `/search-connections criteria=retail-brands`
 
@@ -29,6 +29,6 @@ Check your email — it shows a table of all discovered leads sorted hot → war
 
 Then run `/generate-messages` to compose connection notes for approved leads.
 
-## Rate limit handling
+## Error handling
 
-Follows the pipeline rules in `CLAUDE.md`: exit code 6 → wait and retry (up to `rate_limit.max_retries`). Never abort the full run on a single failure. On auth failure (exit code 2): stop immediately and tell the user to run `linkedin setup`.
+Follows the MCP error handling rules in `CLAUDE.md`: rate limit → wait and retry (up to `rate_limit.max_retries`). Never abort the full run on a single failure. On auth error: stop immediately and tell the user to check their tokens in `.claude/settings.local.json`.

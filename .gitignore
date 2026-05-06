@@ -7,6 +7,7 @@
 
 # Local secrets — never commit
 .claude/settings.local.json
+.mcp.json
 .env
 
 # OS / editor noise

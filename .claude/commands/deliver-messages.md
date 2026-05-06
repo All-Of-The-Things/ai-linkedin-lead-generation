@@ -9,7 +9,7 @@
 3. Executes pipeline **Step 9**:
    - Scans all `state/pending_approvals/*-followup.json` files for entries with `decision: "approved"`
    - Uses `edited_message` if filled in, otherwise uses `followup_draft`
-   - Sends each approved message via `linkedin message send`
+   - Sends each approved message via the `send_message` MCP tool
    - Updates `leads.json`: status → `"followup_sent"`, increments `followup_sequence`, resets `followup_eligible_after` if another follow-up in the sequence is due
    - Respects `followup.max_followups_per_run` limit from `config/pipeline.json`
 4. Invokes `agents/email-notifier.md` with `phase: "delivery_summary"` to send a confirmation email

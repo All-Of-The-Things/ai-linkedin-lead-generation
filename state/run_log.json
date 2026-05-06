@@ -229,6 +229,17 @@
       ]
     },
     {
+      "run_id": "2026-05-04-e3f79a12",
+      "started_at": "2026-05-04T09:00:00.000Z",
+      "status": "in_progress",
+      "criteria_used": "agency-partners",
+      "resume_from_step": 2,
+      "steps_completed": [0, 1],
+      "search_cursor": 3,
+      "counts": {},
+      "errors": []
+    },
+    {
       "run_id": "2026-04-29-604b611a",
       "started_at": "2026-04-29T17:00:00.000Z",
       "status": "phase3_complete",
