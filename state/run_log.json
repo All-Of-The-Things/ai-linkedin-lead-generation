@@ -253,6 +253,56 @@
           "note": "First 5 sends returned exit code 7 (network error); retried successfully. Second 5 returned success on first attempt."
         }
       ]
+    },
+    {
+      "run_id": "2026-05-06-c4d82e1a",
+      "started_at": "2026-05-06T00:00:00.000Z",
+      "status": "phase3_complete",
+      "criteria_used": "agency-partners",
+      "resume_from_step": 9,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        "6a",
+        "6b",
+        7,
+        8,
+        "7",
+        "8"
+      ],
+      "search_cursor": 1,
+      "counts": {
+        "new_leads_discovered": 67,
+        "enriched": 12,
+        "classified": 251,
+        "hot": 21,
+        "warm": 40,
+        "cold": 190,
+        "surfaced_for_approval": 251,
+        "email_sent": true,
+        "email_id": "c8ce29cb-db62-43bc-9bd1-63589ada1f70",
+        "notes_drafted": 21,
+        "notes_email_id": "cf446a5b-a07d-4cfe-8c61-1301ba0722e0",
+        "connections_sent": 9,
+        "connections_failed": 0,
+        "accepted_connections_detected": 0,
+        "followups_drafted": 3,
+        "connections_email_id": "2694465e-5c52-4544-aab8-93a051b4eab0",
+        "connections_sent_this_run": 0,
+        "newly_accepted": 1,
+        "newly_accepted_names": [
+          "Zabe Siddique"
+        ],
+        "followups_drafted_this_run": 0
+      },
+      "errors": [],
+      "completed_at": "2026-05-07T17:04:13.207512+00:00",
+      "phase3_completed_at": "2026-05-08T15:52:36.452690+00:00",
+      "last_updated": "2026-05-08T15:52:36.452690+00:00"
     }
   ],
   "retries": [
