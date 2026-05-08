@@ -30,9 +30,11 @@ The calling pipeline will pass you:
 **Body (HTML):**
 - Header: "Pipeline run complete — {criteria_used} criteria — {date}"
 - Counts summary: total found, hot/warm/cold breakdown
-- Table of ALL leads sorted hot → warm → cold:
-  | Name | Title | Company | Score | Classification |
-- Footer instruction: "Edit the latest `state/pending_approvals/*-connection.json` file. Set `decision` to `approved` or `rejected` for each entry. Then run `/generate-messages`."
+- Check `config/pipeline.json → review.email_suppress_cold`:
+  - If `true` (default): table shows **hot and warm leads only** (sorted hot → warm). Below the table add a muted note: "Cold leads ({cold_count}) written to `-cold.json` file(s) — not shown here."
+  - If `false`: table shows all leads sorted hot → warm → cold.
+- Table columns: | Name | Title | Company | Score | Classification |
+- Footer instruction: "Review `state/pending_approvals/YYYY-MM-DD-<run_id>-hot.json` first, then warm. Set `decision` to `approved` or `rejected` for each entry. Then run `/generate-messages`."
 
 ### `notes_ready`
 
@@ -42,7 +44,7 @@ The calling pipeline will pass you:
 - Header: "Connection note drafts — {criteria_used} — {date}"
 - Table showing each lead and its draft note side-by-side:
   | Name | Title | Company | Classification | Draft note |
-- Footer instruction: "Open the relevant `state/pending_approvals/*-connection.json` file(s). For each entry: review `note_draft`, optionally overwrite it in `edited_note`, and set `note_decision` to `approved` or `rejected`. Then run `/send-connections`."
+- Footer instruction: "Open `state/pending_approvals/YYYY-MM-DD-notes-ready.json`. For each entry: review `note_draft`, optionally overwrite it in `edited_note`, and set `note_decision` to `approved` or `rejected`. Then run `/send-connections`."
 
 ### `messages_ready`
 
