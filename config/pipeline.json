@@ -32,6 +32,12 @@
   },
   "run_log": "state/run_log.json",
 
+  "review": {
+    "page_size": 30,
+    "split_by_classification": true,
+    "email_suppress_cold": true
+  },
+
   "notifications": {
     "from": "AOTT Pipeline <hello@allofthethings.dev>",
     "to": "martin@allofthethings.dev",

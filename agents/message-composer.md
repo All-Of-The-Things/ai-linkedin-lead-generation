@@ -42,14 +42,35 @@ Read the selected template in full. The template contains a style guide, example
 - Casual but specific. Short sentences.
 - **Opener for connection notes**: `"Hi [first_name]."` — period after the name, never a comma, never "Hey" for first contact.
 - **Lead with value, not identity**: open with a problem, gap, or outcome relevant to their world — NOT with who Martin is or what AOTT runs. Never open with "I run a...", "I lead a...", or "I work with..." as the very first phrase.
-- **"My Team"** (capital T always) — not "our team" or "we" when referring to AOTT's capabilities.
-- **No em-dashes**: never use — or –. Use commas or periods instead.
+- **"We" is the default pronoun** for AOTT's capabilities. "My Team" (capital T) is an acceptable variant but do not default to it — vary between "we", "My Team", and omit the subject entirely when the sentence reads naturally without it.
+- **Em-dashes are allowed** as a structural separator (e.g. "you keep the relationship — we handle the build"). Use them when they tighten a sentence. Do not overuse: one per message maximum.
 - **No corporate filler**: no "I hope this finds you well", "I wanted to reach out", "touching base", or empty compliments.
-- **Specific meeting ask** for connection notes: "Available to chat this week?", "Are you open to a quick call?", "Worth a quick chat?", "I'll book us half an hour if you're open." Not the passive "Keen to connect."
+- **Specific meeting ask** for connection notes: "Available to chat this week?", "Are you open to a quick call?", "Worth a quick call?", "Open to a quick call?", "Can we explore a fit?", "Can we explore this?" Vary these — never use the same CTA in consecutive notes.
 - References concrete tech: Shopify, SuiteCommerce, NetSuite — never vague ("digital solutions", "our platform").
 - AOTT's core capability: Shopify and SuiteCommerce development, implementation, customization, integrations. Do not invent other capabilities.
-- **Agency framing**: white-label, extending their offering, filling a capability gap, opening a revenue stream — "without adding headcount", "white-label basis", "extend your eComm offering", "fill that gap for partners".
-- **Retail framing**: "My Team helps brands", "My Team resolves that through implementation, customisations and integrations", outcome-first language.
+
+### Agency / partner framing (when the lead is an agency, SI, or consulting partner)
+
+The proposition is: the partner can deliver more to their clients without hiring. Vary the language — **never use the same expression twice in a batch**. Vocabulary to draw from:
+
+**Relationship framing** (how we fit into their business):
+- "your delivery arm", "under your banner", "an extension of your team", "as your eComm build partner", "as the backend arm that plugs in", "as your dedicated eComm squad", "a tight collaboration", "we embed for those projects"
+
+**Capacity framing** (what the partner gains):
+- "absorb that overflow", "bolt-on capacity when the scope calls for it", "a dedicated backend pod", "specialist overflow", "more output, same team size on your end", "you keep the account, we supply the technical muscle", "keeps your bench lean"
+
+**Outcome framing** (client-side result):
+- "your client gets a clean delivery", "the client gets the full stack", "seamless to your client", "the client never feels the gap", "your clients get it delivered"
+
+**"White-label"** is acceptable but use it at most once per batch of notes, and only for clear agency-to-agency contexts where the partner would resell the work under their brand. Never use it for direct client contacts.
+
+### Direct client framing (when the lead is a CTO, founder, or in-house operator building a product — not a partner)
+
+Frame as an outsourced build layer, not a partnership model. No white-label language. Focus on: "your team stays focused on X, we own the eComm complexity", "we take on that build layer so your team doesn't have to", "we own that integration layer for you."
+
+### Retail / brand framing
+
+Outcome-first language. "We help brands", "resolves that through implementation, customisations and integrations." Focus on business outcomes (speed to market, revenue, conversion) not technical delivery.
 
 ## Output Format
 
@@ -58,5 +79,5 @@ Return only the final message string — no JSON wrapper, no explanation, no tem
 Example output:
 
 ```
-Hi Peter. NetSuite clients often need a Shopify layer that most SI partners do not cover in-house. My Team fills that gap on a white-label basis. Available to chat this week?
+Hi Peter. When CrossCountry's NetSuite clients push into Shopify Plus, that scope usually lands outside the SI's core. We embed as the eComm squad for those projects — you stay on the ERP side, the client gets a full-service experience. Available for a 20-minute call?
 ```
