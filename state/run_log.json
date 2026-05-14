@@ -365,6 +365,121 @@
         "id": "a8523aaa-c257-42ac-b0bf-92fce9de498d"
       },
       "phase3_completed_at": "2026-05-11T19:30:09.747754+00:00"
+    },
+    {
+      "run_id": "2026-05-12-0461df5c",
+      "started_at": "2026-05-12T14:20:35.423377+00:00",
+      "status": "phase3_complete",
+      "criteria_used": "mixed (retail-brands + agency-partners)",
+      "steps_completed": [
+        "6b",
+        "7",
+        "8"
+      ],
+      "counts": {
+        "connections_sent": 10,
+        "connections_failed": 0,
+        "newly_accepted": 0,
+        "followups_drafted": 0
+      },
+      "phase3_completed_at": "2026-05-12T14:20:35.423377+00:00",
+      "last_updated": "2026-05-12T14:20:35.423377+00:00",
+      "notes": "Sent remaining 10 from notes-ready. 1 lead (Nguyen The Hai) still at classified \u2014 will send next run. Zabe Siddique eligible for follow-up at 15:36 UTC today."
+    },
+    {
+      "run_id": "2026-05-12-1ad1460a",
+      "started_at": "2026-05-12T18:28:57.067647+00:00",
+      "status": "phase3_complete",
+      "criteria_used": "agency-partners",
+      "steps_completed": [
+        "6b",
+        "7",
+        "8"
+      ],
+      "counts": {
+        "connections_sent": 1,
+        "connections_failed": 0,
+        "newly_accepted": 2,
+        "followups_drafted": 1
+      },
+      "notes": "Sent Nguyen The Hai. Newly accepted: Jilly Parker (eligible 2026-05-15), Zabe Siddique (eligible now). Follow-up drafted for Zabe \u2192 2026-05-12-followup.json.",
+      "phase3_completed_at": "2026-05-13T12:55:44.354389+00:00",
+      "last_updated": "2026-05-13T12:55:44.354389+00:00"
+    },
+    {
+      "run_id": "2026-05-13-ce3f0ed8",
+      "started_at": "2026-05-13T15:13:04.894721+00:00",
+      "status": "phase1_complete",
+      "criteria_used": "agency-partners",
+      "steps_completed": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "counts": {
+        "new_stubs": 30,
+        "enriched": 30,
+        "classified": 35,
+        "hot": 18,
+        "warm": 8,
+        "cold": 9,
+        "surfaced": 35,
+        "files_written": [
+          "2026-05-13-ce3f0ed8-hot.json",
+          "2026-05-13-ce3f0ed8-warm.json",
+          "2026-05-13-ce3f0ed8-cold.json"
+        ]
+      },
+      "search_cursor": 7,
+      "last_updated": "2026-05-13T17:55:16.628877+00:00",
+      "phase1_completed_at": "2026-05-13T17:55:16.628877+00:00"
+    },
+    {
+      "run_id": "2026-05-13-ce3f0ed8-phase2",
+      "started_at": "2026-05-13T18:44:51.236938+00:00",
+      "status": "phase2_complete",
+      "criteria_used": "agency-partners",
+      "phase": "generate-messages",
+      "steps_completed": [
+        "6a"
+      ],
+      "counts": {
+        "notes_drafted": 18,
+        "auto_rejected_timed_out": 197
+      },
+      "notes_ready_file": "2026-05-13-notes-ready.json",
+      "phase2_completed_at": "2026-05-13T18:44:51.236938+00:00",
+      "last_updated": "2026-05-13T18:44:51.236938+00:00"
+    },
+    {
+      "run_id": "2026-05-14-ef31f68c",
+      "started_at": "2026-05-13T21:00:00.000000+00:00",
+      "status": "phase3_complete",
+      "criteria_used": "agency-partners",
+      "steps_completed": [
+        "6b",
+        "7",
+        "8"
+      ],
+      "counts": {
+        "connections_sent": 10,
+        "connections_already_pending": 1,
+        "connections_failed": 0,
+        "newly_accepted": 0,
+        "followups_drafted": 0,
+        "deferred_to_next_run": 7
+      },
+      "notes": "Sent first 10 from 2026-05-13-notes-ready.json (Jeffrey Cameron, Prabodh Kadam, Vish Annam, John W. Rochefort, Derek Hitchman, Rob Castaneda, Simon G., Robert B., Oli O'Connor, Shobhit Nigam). John Mack was alreadyPending (marked request_sent). 7 deferred to next run: Dan Power, Michael Chammas, Andre Marciniak, Mazhar Habib, Remy Medranda, Shawn Khemsurov, Anna Tillotson. 0 newly accepted. 0 followups eligible (Jilly Parker eligible 2026-05-15).",
+      "phase3_completed_at": "2026-05-14T13:04:49.341359+00:00",
+      "last_updated": "2026-05-14T13:06:02.960843+00:00",
+      "email_sent": {
+        "phase": "connections_sent",
+        "at": "2026-05-14T13:06:02.960843+00:00",
+        "to": "martin@allofthethings.dev",
+        "id": "68bbec72-c268-4b20-8cc3-658fce3e624f"
+      }
     }
   ],
   "retries": [
