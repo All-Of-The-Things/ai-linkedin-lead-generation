@@ -43,7 +43,7 @@ The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sendi
 | `config/criteria/` | Named criteria files; each is a self-contained search profile |
 | `state/leads.json` | Master lead ledger, keyed by normalized LinkedIn URL |
 | `state/seen.json` | Dedupe index — append-only, never remove a URL |
-| `state/pending_approvals/` | Human interface: one timestamped file per run (`<timestamp>-connection.json`, `<timestamp>-followup.json`) |
+| `state/pending_approvals/` | Human interface: classification-split files per run (`YYYY-MM-DD-<run_id>-hot.json`, `-warm.json`, `-cold.json`), notes-ready file after Phase 2 (`YYYY-MM-DD-notes-ready.json`), followup files (`YYYY-MM-DD-followup.json`) |
 | `state/run_log.json` | Audit log of every pipeline run |
 | `templates/` | Message style guides used by `agents/message-composer.md` |
 | `agents/` | Subagent prompt files for focused subtasks |
@@ -106,7 +106,7 @@ Mark step complete in run_log before moving on.
 
 ### Step 2 — Search for New Leads
 
-**Before building queries — build the exclusion set:** Run `linkedin connection list --limit 3000 --json -q` **three times in a row** and union all returned URLs into a single in-memory exclusion set. The API returns a non-deterministic subset of connections on each call; running three calls substantially increases coverage. A search result is skipped if its URL appears in `state/seen.json` OR in this exclusion set. Do NOT write existing connections into `seen.json` — the exclusion set is in-memory per run only.
+**Before building queries — build the exclusion set:** Run `linkedin connection list --limit 3000 --json -q` **three times in a row** and union all returned `publicUrl` values into a single in-memory exclusion set (normalize each: lowercase, strip trailing slash). The API returns a non-deterministic subset of connections on each call; running three calls substantially increases coverage. A search result is skipped if its URL appears in `state/seen.json` OR in this exclusion set. Do NOT write existing connections into `seen.json` — the exclusion set is in-memory per run only.
 
 1. Load `config/criteria/<criteria_used>.json` (resolved in Step 1) and `config/pipeline.json`.
 2. Build up to `search.max_search_queries_per_run` queries by rotating through combinations of `target_roles`, `target_industries`, and `target_locations`. Track the rotation cursor in the current run_log entry (`search_cursor`).
@@ -117,6 +117,11 @@ Mark step complete in run_log before moving on.
 4. For each returned person URL:
    - Normalize: lowercase, strip trailing slash, use the canonical `/in/` form.
    - Check `state/seen.json` AND the in-memory exclusion set. If present in either, skip.
+   - **Connection status check:** For any URL that passes both filters above, run:
+     ```
+     linkedin connection status <url> --json -q
+     ```
+     Parse the response. If `data.status` is `"connected"` or `"pending"`, add the URL to `seen.json` (so it is never re-proposed) but do NOT add it to `leads.json`. Skip to the next result. This catches connections the list calls missed due to API non-determinism.
    - Add to `seen.json` immediately (write-through).
    - Add a stub record to `leads.json` with `status: "new"`, `first_seen_run: <today>`.
 5. On exit code 6: wait `rate_limit.retry_delay_seconds`, retry up to `rate_limit.max_retries`. If still failing, log, skip that query, continue to next.
@@ -147,9 +152,11 @@ Mark step complete in run_log.
 
 ### Step 5 — Surface Connection Approvals
 
-**Approval file naming:** Each run writes its connection approvals to a new file: `state/pending_approvals/<timestamp>-connection.json`, where `<timestamp>` is the run's `started_at` in compact ISO form (e.g. `2026-04-30T143025Z`). Use the same timestamp format consistently.
+**Approval file naming:** Each run writes classification-split files using the pattern `state/pending_approvals/<YYYY-MM-DD>-<run_id>-<classification>.json`, where `<YYYY-MM-DD>` is derived from the run's `started_at` and `<run_id>` is the short run ID (last 8 chars of the UUID portion, e.g. `c4d82e1a`). Example: `2026-05-07-c4d82e1a-hot.json`.
 
-1. Build the set of URLs already in any `state/pending_approvals/*-connection.json` file across all existing files.
+**Legacy compatibility:** When scanning in later steps, glob both new-style (`*-hot.json`, `*-warm.json`, `*-cold.json`) and legacy (`*-connection.json`) files.
+
+1. Build the set of URLs already surfaced across ALL existing approval files in `state/pending_approvals/` (glob `*-hot.json`, `*-warm.json`, `*-cold.json`, `*-connection.json`).
 2. Read all leads with `status: "classified"` that are NOT in that set.
 3. For each, build an approval entry:
    ```json
@@ -167,17 +174,23 @@ Mark step complete in run_log.
      "note": null
    }
    ```
-4. Write all entries as a JSON array to `state/pending_approvals/<run-timestamp>-connection.json` (new file, not appended to any existing file).
+4. **Split entries by classification** (if `review.split_by_classification` is true, which is the default):
+   - Group entries into `hot`, `warm`, and `cold` buckets.
+   - For each non-empty bucket, paginate at `review.page_size` entries (default 30):
+     - Single page: `<date>-<run_id>-hot.json`
+     - Multiple pages: `<date>-<run_id>-warm-p1.json`, `<date>-<run_id>-warm-p2.json`, etc.
+   - Write each page as a separate JSON array file. Never append to existing files.
 5. Set `approval_surfaced_at` on each lead in `leads.json`.
 
 **All classifications (hot, warm, cold) are surfaced.** The user decides everything.
 
-5. **Send email notification** — invoke `agents/email-notifier.md` as a subagent with:
+6. **Send email notification** — invoke `agents/email-notifier.md` as a subagent with:
    - `phase: "search_complete"`
    - `run_id`: current run ID from `run_log.json`
    - `criteria_used`: resolved criteria name
    - `counts`: `{ total_new: N, hot: N, warm: N, cold: N }`
-   - `leads_snapshot`: all entries written to the new connection file
+   - `leads_snapshot`: all entries written (hot + warm only if `review.email_suppress_cold` is true)
+   - `files_written`: list of filenames created
 
 Mark step complete in run_log. **Phase 1 ends here.** Do not proceed to Step 6a — that is Phase 2 (`/generate-messages`).
 
@@ -185,19 +198,39 @@ Mark step complete in run_log. **Phase 1 ends here.** Do not proceed to Step 6a 
 
 Runs in **`/generate-messages`** (Phase 2).
 
-1. Scan all `state/pending_approvals/*-connection.json` files. Load every entry from every file, tracking which file each entry came from.
+1. Scan all approval files: glob `state/pending_approvals/*-hot.json`, `*-warm.json`, `*-cold.json`, and `*-connection.json` (legacy). Load every entry, tracking which file each came from.
 2. Find entries where `decision: "approved"` and `note_draft` is null.
 3. Auto-reject entries older than `approval.approval_timeout_days` days with `decision: null` (set `note_decision: "rejected"` on these).
 4. For each eligible lead:
-   - Invoke `agents/message-composer.md` as a subagent with the lead record, `message_type: "connection_note"`, and `criteria_used`. Receive back the drafted note string.
+   - Fetch the full profile using `linkedin person fetch <url> --experience --json -q` to get position history before drafting.
+   - Invoke `agents/message-composer.md` as a subagent with the lead record (including experience), `message_type: "connection_note"`, and `criteria_used`. Receive back the drafted note string.
    - Write `note_draft: "<drafted note>"` and `note_decision: null` back to that entry **in the same file it was read from**.
 5. For each **rejected** lead (decision: "rejected"): `status → "rejected"`, set `approval_decided_at`, `approval_decision`.
-6. **Send email notification** — invoke `agents/email-notifier.md` as a subagent with:
+6. **Write a notes-ready file** — after all drafts are written, collect every entry that just received a `note_draft` and write them to a new consolidated file:
+   - Filename: `state/pending_approvals/<YYYY-MM-DD>-notes-ready.json` (use today's date). If a file for today already exists, append `-2`, `-3`, etc.
+   - Each entry in this file:
+     ```json
+     {
+       "url": "...",
+       "name": "...",
+       "headline": "...",
+       "current_title": "...",
+       "current_company": "...",
+       "classification": "hot|warm|cold",
+       "score": 88,
+       "note_draft": "Hi ...",
+       "edited_note": null,
+       "note_decision": null,
+       "source_file": "<basename of the classification file this entry came from>"
+     }
+     ```
+   - This is the **primary review file** for the user. It contains only approved leads with drafted notes — no nulls, no rejected, no noise.
+7. **Send email notification** — invoke `agents/email-notifier.md` as a subagent with:
    - `phase: "notes_ready"`
    - `run_id`: current run ID
    - `criteria_used`: resolved criteria name
    - `counts`: `{ notes_drafted: N }`
-   - `leads_snapshot`: all entries that had `note_draft` just written (include `name`, `headline`, `current_title`, `current_company`, `classification`, `note_draft`)
+   - `leads_snapshot`: all entries written to the notes-ready file (include `name`, `headline`, `current_title`, `current_company`, `classification`, `note_draft`)
 
 Mark step complete in run_log. **Phase 2 ends here.** Do not proceed to Step 6b — that is Phase 3 (`/send-connections`).
 
@@ -205,8 +238,10 @@ Mark step complete in run_log. **Phase 2 ends here.** Do not proceed to Step 6b 
 
 Runs in **`/send-connections`** (Phase 3).
 
-1. Scan all `state/pending_approvals/*-connection.json` files and load every entry, tracking which file each came from.
-2. Find entries where `note_decision: "approved"` and the lead in `leads.json` still has `status: "classified"`.
+1. **Primary scan — notes-ready files:** Scan `state/pending_approvals/*-notes-ready.json`. For each entry with `note_decision: "approved"`, use `edited_note` if non-null, otherwise `note_draft`. Record which `source_file` each entry belongs to.
+2. **Legacy fallback:** Also scan `*-hot.json`, `*-warm.json`, `*-cold.json`, and `*-connection.json` for entries with `note_decision: "approved"` that are NOT already covered by a notes-ready file (i.e., their URL was not in any notes-ready file). This preserves backward compat with older runs.
+3. Deduplicate: if the same URL appears in both a notes-ready file and a legacy file, the notes-ready entry wins.
+4. From the combined set, find entries where the lead in `leads.json` still has `status: "classified"`.
 3. For each (up to `outreach.max_connection_requests_per_run` per run):
    - Use `edited_note` if non-null, otherwise use `note_draft`. The message must be non-null — do not send without a note.
    - Run: `linkedin connection send <url> --note '<note>' --json -q`
@@ -237,12 +272,13 @@ Mark step complete in run_log.
 
 ### Step 8 — Surface Follow-Up Queue
 
-**Approval file naming:** Each run writes its follow-up approvals to a new file: `state/pending_approvals/<run-timestamp>-followup.json` (same timestamp format as Step 5).
+**Approval file naming:** Each run writes its follow-up approvals to a new file: `state/pending_approvals/<YYYY-MM-DD>-followup.json` (using today's date). If a followup file for today already exists, append `-2`, `-3`, etc. (e.g. `2026-05-07-followup-2.json`).
 
 1. Build the set of URLs already pending across all `state/pending_approvals/*-followup.json` files (entries with `decision: null`).
 2. Find leads in `leads.json` with `status: "connected"` where:
    - `followup_eligible_after <= now`
    - `followup_sequence < followup.max_sequence`
+   - `do_not_contact` is not `true`
    - URL is NOT in the pending set from step 1
 3. For each eligible lead:
    - Invoke `agents/message-composer.md` as a subagent with the lead record, `message_type: "followup"`, `followup_sequence`, and `criteria_used`. The composer selects the correct template internally.

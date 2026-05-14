@@ -12,7 +12,7 @@
    - **Step 2** — Search for new leads: builds exclusion set (3× `linkedin connection list` union + `seen.json`), runs search queries, writes stubs to `leads.json` and `seen.json`.
    - **Step 3** — Profile enrichment: fetches full profiles for all `status: "new"` leads.
    - **Step 4** — Classification: invokes `agents/lead-classifier.md` to score and classify enriched leads.
-   - **Step 5** — Surface approvals: writes all classified leads to a new `state/pending_approvals/<timestamp>-connection.json` file and sends an email notification.
+   - **Step 5** — Surface approvals: writes classified leads to classification-split files (`YYYY-MM-DD-<run_id>-hot.json`, `-warm.json`, `-cold.json`), paginated at 30 entries each, and sends an email notification.
 4. Sends an email via `agents/email-notifier.md` with `phase: "search_complete"`.
 5. Updates `state/run_log.json` with `status: "phase1_complete"`.
 
@@ -24,8 +24,13 @@
 
 ## After running
 
-Check your email — it shows a table of all discovered leads sorted hot → warm → cold. Open the newly created `state/pending_approvals/<timestamp>-connection.json` file and for each entry:
-- Set `decision` to `"approved"` or `"rejected"`.
+Check your email — it shows hot and warm leads in a table (cold leads are counted but not listed). Three files are created in `state/pending_approvals/`:
+
+- `YYYY-MM-DD-<run_id>-hot.json` — start here, typically 10–30 entries
+- `YYYY-MM-DD-<run_id>-warm.json` — review next (may be paginated: `-warm-p1.json`, `-warm-p2.json`, ...)
+- `YYYY-MM-DD-<run_id>-cold.json` — low priority, skip if short on time
+
+For each entry in the hot and warm files, set `decision` to `"approved"` or `"rejected"`. You can add a `note` field with context if needed.
 
 Then run `/generate-messages` to compose connection notes for approved leads.
 
