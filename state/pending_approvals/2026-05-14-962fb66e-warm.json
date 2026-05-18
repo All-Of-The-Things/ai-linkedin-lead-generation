@@ -1,0 +1,93 @@
+[
+  {
+    "url": "https://www.linkedin.com/in/khyati-thakar-1b7873ba",
+    "name": "Khyati Thakar",
+    "headline": "Chief Executive Officer",
+    "current_title": "Chief Executive Officer",
+    "current_company": "BKMT Solutions",
+    "classification": "warm",
+    "score": 48,
+    "score_rationale": "CEO of BKMT Solutions \u2014 'Solutions' is a mild positive signal for IT services, but no explicit eCommerce/ERP specialization.",
+    "surfaced_at": "2026-05-14T19:08:22.975293+00:00",
+    "decision": null,
+    "note": null
+  },
+  {
+    "url": "https://www.linkedin.com/in/rob-pilo-b88a812",
+    "name": "Rob Pilo",
+    "headline": "Area Vice President of Sales",
+    "current_title": "Area Vice President Of Sales",
+    "current_company": "Oracle",
+    "classification": "warm",
+    "score": 62,
+    "score_rationale": "Area VP Sales at Oracle \u2014 Oracle is a direct target company signal, VP Sales is a target role. Oracle is the vendor not an SI but highly relevant for partner ecosystem.",
+    "surfaced_at": "2026-05-14T19:08:22.975293+00:00",
+    "decision": null,
+    "note": null
+  },
+  {
+    "url": "https://www.linkedin.com/in/warrenu",
+    "name": "Warren Uniewski",
+    "headline": "Founder & CTO of Autimo",
+    "current_title": "Founder & Director of Technology",
+    "current_company": null,
+    "classification": "warm",
+    "score": 45,
+    "score_rationale": "Founder of Pine IT \u2014 Founder + IT services company. Borderline warm, no explicit eCommerce/ERP signal.",
+    "surfaced_at": "2026-05-14T19:08:22.975293+00:00",
+    "decision": null,
+    "note": null
+  },
+  {
+    "url": "https://www.linkedin.com/in/mansoor-baburi-308615183",
+    "name": "Mansoor Baburi",
+    "headline": "CEO at Qualit\u00e8soft Inc.",
+    "current_title": "CEO & Chief Growth Officer",
+    "current_company": "Qualitesoft Inc.",
+    "classification": "warm",
+    "score": 55,
+    "score_rationale": "CEO of Qualitesoft Inc. \u2014 CEO + IT services/consulting firm. No explicit NetSuite/Shopify signal but consulting company type matches.",
+    "surfaced_at": "2026-05-14T19:08:22.975293+00:00",
+    "decision": null,
+    "note": null
+  },
+  {
+    "url": "https://www.linkedin.com/in/graemeashton",
+    "name": "Graeme ASHTON",
+    "headline": "Chief Executive Officer",
+    "current_title": "CEO - Quantitative Trading and Development",
+    "current_company": "Fintech Software Engineers",
+    "classification": "warm",
+    "score": 52,
+    "score_rationale": "CEO of Fintech Software Engineers \u2014 CEO + software consulting/dev firm. Fintech focus is partial miss but consulting type matches.",
+    "surfaced_at": "2026-05-14T19:08:22.975293+00:00",
+    "decision": null,
+    "note": null
+  },
+  {
+    "url": "https://www.linkedin.com/in/nicolasgantois",
+    "name": "Nicolas Gantois",
+    "headline": "Head of Direct Sales at Odoo",
+    "current_title": "Head of Direct Sales (Oceania)",
+    "current_company": "Odoo",
+    "classification": "warm",
+    "score": 72,
+    "score_rationale": "Head of Direct Sales (Oceania) at Odoo \u2014 ERP vendor with direct Shopify/NetSuite adjacency. Sales leadership at ERP vendor, Australia location.",
+    "surfaced_at": "2026-05-14T19:08:22.975293+00:00",
+    "decision": null,
+    "note": null
+  },
+  {
+    "url": "https://www.linkedin.com/in/jw3153",
+    "name": "Jason W.",
+    "headline": "Global Director of Technology",
+    "current_title": "Director of Technology",
+    "current_company": "Princess Polly",
+    "classification": "warm",
+    "score": 58,
+    "score_rationale": "Director of Technology at Princess Polly (DTC Shopify brand) \u2014 Shopify signal but Princess Polly is an end-client brand, not a Shopify Plus agency.",
+    "surfaced_at": "2026-05-14T19:08:22.975293+00:00",
+    "decision": null,
+    "note": null
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "url": "https://www.linkedin.com/in/laurajuneau",
+    "name": "Laura Juneau",
+    "headline": "NetSuite Architect | Founder at Sky High ERP",
+    "current_title": "Co-Founder",
+    "current_company": null,
+    "classification": "hot",
+    "score": 92,
+    "note_draft": "Hi Laura. Sky High ERP's NetSuite clients often hit Shopify Plus or SuiteCommerce scope alongside the ERP work. We run those as your delivery arm — you stay on the architecture side, the client gets the full stack. Can we explore a fit?",
+    "edited_note": "Hi Laura. NetSuite ERP clients often hit Shopify Plus or SuiteCommerce scope alongside their business optimization. We can run eComm as your delivery arm — you stay on the process side, the client gets the full stack. Can we explore a fit?",
+    "note_decision": "approved",
+    "source_file": "2026-05-14-962fb66e-hot.json"
+  },
+  {
+    "url": "https://www.linkedin.com/in/mohammadabutt",
+    "name": "Mohammad Butt",
+    "headline": "Director / Project Manager",
+    "current_title": "Director / Project Manager",
+    "current_company": "SuiteSquare",
+    "classification": "hot",
+    "score": 88,
+    "note_draft": "Hi Mohammad. SuiteSquare's NetSuite programs already carry eCommerce scope — Shopify Plus or SuiteCommerce. When that workstream needs a dedicated build pod, we slot in so delivery risk stays on your end, not the client's. Worth a quick call?",
+    "edited_note": "Hi Mohammad. NetSuite usually involve eCommerce scope — Shopify Plus or SuiteCommerce. When that workstream needs a dedicated build pod, we slot in so delivery risk stays on your end, not the client's. Worth a quick call?",
+    "note_decision": "approved",
+    "source_file": "2026-05-14-962fb66e-hot.json"
+  },
+  {
+    "url": "https://www.linkedin.com/in/shane-vaughan-ba4260ba",
+    "name": "Shane Vaughan",
+    "headline": "Global CTO @ Léays | Solutions Architecture, Technology Strategy",
+    "current_title": "Global CTO",
+    "current_company": "Léays",
+    "classification": "hot",
+    "score": 78,
+    "note_draft": "Hi Shane. When Léays' clients need Shopify or SuiteCommerce built alongside a broader architecture program, a consultancy rarely wants that build scope on its books. We take it on as your build arm. Are you open to a quick call?",
+    "edited_note": "Hi Shane. When Léays' clients need Shopify or SuiteCommerce built alongside a broader program, we can manage that build scope as your eCommerce arm. Are you open to a quick call?",
+    "note_decision": "approved",
+    "source_file": "2026-05-14-962fb66e-hot.json"
+  }
+]
