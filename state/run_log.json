@@ -78,13 +78,13 @@
         {
           "step": "6b",
           "url": "https://www.linkedin.com/in/dan-rutherford",
-          "error": "limitExceeded \u2014 LinkedIn platform connection request limit hit",
+          "error": "limitExceeded — LinkedIn platform connection request limit hit",
           "at": "2026-04-27T00:00:00.000Z"
         },
         {
           "step": "6b",
           "url": "https://www.linkedin.com/in/raghu-gnanasekaran-98b7141",
-          "error": "limitExceeded \u2014 LinkedIn platform connection request limit hit",
+          "error": "limitExceeded — LinkedIn platform connection request limit hit",
           "at": "2026-04-27T00:00:00.000Z"
         }
       ],
@@ -342,7 +342,7 @@
         "next_industry_idx": 3
       },
       "last_updated": "2026-05-11T19:30:09.747754+00:00",
-      "notes": "Step 2: skipped per-candidate status checks (71 candidates \u00d7 ~30s = too slow); false positives caught at send step",
+      "notes": "Step 2: skipped per-candidate status checks (71 candidates × ~30s = too slow); false positives caught at send step",
       "phase1_completed_at": "2026-05-11T15:41:21.776586+00:00",
       "email_sent": {
         "phase": "search_complete",
@@ -384,7 +384,7 @@
       },
       "phase3_completed_at": "2026-05-12T14:20:35.423377+00:00",
       "last_updated": "2026-05-12T14:20:35.423377+00:00",
-      "notes": "Sent remaining 10 from notes-ready. 1 lead (Nguyen The Hai) still at classified \u2014 will send next run. Zabe Siddique eligible for follow-up at 15:36 UTC today."
+      "notes": "Sent remaining 10 from notes-ready. 1 lead (Nguyen The Hai) still at classified — will send next run. Zabe Siddique eligible for follow-up at 15:36 UTC today."
     },
     {
       "run_id": "2026-05-12-1ad1460a",
@@ -402,7 +402,7 @@
         "newly_accepted": 2,
         "followups_drafted": 1
       },
-      "notes": "Sent Nguyen The Hai. Newly accepted: Jilly Parker (eligible 2026-05-15), Zabe Siddique (eligible now). Follow-up drafted for Zabe \u2192 2026-05-12-followup.json.",
+      "notes": "Sent Nguyen The Hai. Newly accepted: Jilly Parker (eligible 2026-05-15), Zabe Siddique (eligible now). Follow-up drafted for Zabe → 2026-05-12-followup.json.",
       "phase3_completed_at": "2026-05-13T12:55:44.354389+00:00",
       "last_updated": "2026-05-13T12:55:44.354389+00:00"
     },
@@ -480,6 +480,98 @@
         "to": "martin@allofthethings.dev",
         "id": "68bbec72-c268-4b20-8cc3-658fce3e624f"
       }
+    },
+    {
+      "run_id": "2026-05-14-4133b985",
+      "started_at": "2026-05-14T14:42:38.976875+00:00",
+      "status": "phase3_complete",
+      "criteria_used": "agency-partners",
+      "steps_completed": [
+        "6b",
+        "7",
+        "8"
+      ],
+      "counts": {
+        "connections_sent": 7,
+        "connections_failed": 0,
+        "newly_accepted": 3,
+        "newly_accepted_names": [
+          "Jeffrey Cameron",
+          "Prabodh Kadam",
+          "Derek Hitchman"
+        ],
+        "followups_drafted": 0,
+        "deferred_to_next_run": 0
+      },
+      "notes": "Sent remaining 7 from 2026-05-13-notes-ready.json (Dan Power, Michael Chammas, Andre Marciniak, Mazhar Habib, Remy Medranda, Shawn Khemsurov, Anna Tillotson). All 18 from the notes-ready file now sent. 3 newly accepted: Jeffrey Cameron (eligible 2026-05-18), Prabodh Kadam (eligible 2026-05-16), Derek Hitchman (eligible 2026-05-16). 0 followups eligible today. Jilly Parker eligible 2026-05-15.",
+      "phase3_completed_at": "2026-05-14T14:42:38.976875+00:00",
+      "last_updated": "2026-05-14T14:54:05.847194+00:00",
+      "email_sent": {
+        "phase": "connections_sent",
+        "at": "2026-05-14T14:54:05.847194+00:00",
+        "to": "martin@allofthethings.dev",
+        "id": "ed2e810e-a5ab-4491-b7aa-28e7ab9d3c5e"
+      }
+    },
+    {
+      "run_id": "2026-05-14-962fb66e",
+      "started_at": "2026-05-14T15:07:33.442960+00:00",
+      "status": "phase2_complete",
+      "criteria_used": "agency-partners",
+      "resume_from_step": "6a",
+      "steps_completed": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6a"
+      ],
+      "counts": {
+        "new_stubs": 39,
+        "enriched": 39,
+        "classified": 39,
+        "hot": 3,
+        "warm": 7,
+        "cold": 29,
+        "surfaced": 39,
+        "files_written": [
+          "2026-05-14-962fb66e-hot.json",
+          "2026-05-14-962fb66e-warm.json",
+          "2026-05-14-962fb66e-cold.json"
+        ],
+        "notes_drafted": 3
+      },
+      "errors": [],
+      "search_cursor": 10,
+      "notes": "Queries: Founder/IT&S/Canada, Managing Director/Software/UK, CEO/Management Consulting/Australia. Low yield from broad queries — 3 hot (Laura Juneau/Sky High ERP, Mohammad Butt/SuiteSquare, Shane Vaughan/Léays), 7 warm, 29 cold.",
+      "phase1_completed_at": "2026-05-14T19:09:44.744667+00:00",
+      "last_updated": "2026-05-14T19:31:54.714337+00:00",
+      "email_sent": {
+        "phase": "search_complete",
+        "at": "2026-05-14T19:31:54.714337+00:00",
+        "to": "martin@allofthethings.dev",
+        "id": "19ecdeeb-d6de-4fd7-a047-8273c9f96edc"
+      },
+      "notes_ready_file": "2026-05-15-notes-ready.json"
+    },
+    {
+      "run_id": "2026-05-15-phase3",
+      "started_at": "2026-05-15T21:19:50.024Z",
+      "completed_at": "2026-05-15T21:19:50.024Z",
+      "status": "phase3_complete",
+      "criteria_used": "agency-partners",
+      "steps_completed": [
+        "6b",
+        "7",
+        "8"
+      ],
+      "counts": {
+        "connections_sent": 3,
+        "connections_detected": 2,
+        "followups_queued": 1,
+        "notes": "3 connections sent: Laura Juneau (alreadyPending), Mohammad Butt (alreadyPending), Shane Vaughan (sent). 2 newly accepted: John W. Rochefort, Remy Medranda (eligible ~May 17). 1 follow-up drafted: Jilly Parker."
+      }
     }
   ],
   "retries": [
@@ -492,8 +584,8 @@
         "https://www.linkedin.com/in/raghu-gnanasekaran-98b7141"
       ],
       "results": {
-        "dan-rutherford": "failed \u2014 unexpectedError (LinkedIn API error, exit code 1)",
-        "raghu-gnanasekaran-98b7141": "failed \u2014 unexpectedError (LinkedIn API error, exit code 1)"
+        "dan-rutherford": "failed — unexpectedError (LinkedIn API error, exit code 1)",
+        "raghu-gnanasekaran-98b7141": "failed — unexpectedError (LinkedIn API error, exit code 1)"
       },
       "step7_connections_detected": [
         "https://www.linkedin.com/in/colbert-gendreau-600167255"
