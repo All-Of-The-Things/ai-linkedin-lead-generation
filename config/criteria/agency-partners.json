@@ -17,22 +17,28 @@
     "Aztech Digital"
   ],
 
+  "_company_type_signals_note": "These signals must be platform-specific to count toward agency boost. Generic words like 'Solutions', 'Services', 'Digital', 'Advisory' alone are not sufficient — they must appear alongside a platform keyword.",
   "company_type_signals": [
-    "Partner",
-    "Consulting",
-    "Consultancy",
-    "Solutions",
-    "Agency",
-    "Implementation",
-    "Integrator",
-    "Services",
-    "Digital",
-    "Advisory",
     "NetSuite",
-    "Oracle",
-    "Shopify Plus",
+    "Oracle NetSuite",
     "SuiteCommerce",
-    "ERP"
+    "Shopify Plus",
+    "Shopify Partner",
+    "Shopify Expert",
+    "Shopify Agency",
+    "Magento",
+    "Adobe Commerce",
+    "BigCommerce",
+    "Salesforce Commerce",
+    "ERP Partner",
+    "ERP Consulting",
+    "ERP Implementation",
+    "Solution Provider Partner",
+    "Alliance Partner",
+    "Systems Integrator",
+    "eCommerce Agency",
+    "eCommerce Consulting",
+    "Digital Commerce"
   ],
 
   "target_roles": [
@@ -56,12 +62,12 @@
     "Head of Operations"
   ],
 
+  "_target_industries_note": "LinkedIn industry field alone is not sufficient — must be combined with platform-specific domain signals. 'Financial Services' removed: it pulled in fintech consumer apps with no ERP/commerce context.",
   "target_industries": [
     "Information Technology and Services",
     "Computer Software",
     "Management Consulting",
-    "Internet",
-    "Financial Services"
+    "Internet"
   ],
 
   "target_locations": [

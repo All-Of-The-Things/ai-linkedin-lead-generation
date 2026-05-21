@@ -38,6 +38,14 @@
     "email_suppress_cold": true
   },
 
+  "warm_up": {
+    "max_leads_per_run": 10,
+    "posts_to_fetch_per_lead": 3,
+    "reaction_type": "insightful",
+    "require_approval_before_comment": true,
+    "skip_if_warmed_up_within_days": 14
+  },
+
   "notifications": {
     "from": "AOTT Pipeline <hello@allofthethings.dev>",
     "to": "martin@allofthethings.dev",

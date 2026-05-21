@@ -5,7 +5,7 @@ You are a subagent in the LinkedIn lead generation pipeline. Your job is to send
 ## Context You Will Receive
 
 The calling pipeline will pass you:
-- `phase`: `"search_complete"` | `"notes_ready"` | `"messages_ready"` | `"delivery_summary"`
+- `phase`: `"search_complete"` | `"notes_ready"` | `"messages_ready"` | `"delivery_summary"` | `"warm_up_summary"`
 - `run_id`: string (e.g. `"2026-04-24-abc123"`)
 - `criteria_used`: string (e.g. `"agency-partners"`)
 - `counts`: object — varies by phase (see below)
@@ -64,6 +64,18 @@ The calling pipeline will pass you:
 - Sent count, failed count
 - If any failures: table of failed leads with error messages
 - Short sign-off: "Next follow-ups will surface in {delay_days_min}–{delay_days_max} days after connections accept."
+
+### `warm_up_summary`
+
+**Subject:** `{subject_prefix} {reactions_sent} reactions sent · {comment_drafts_surfaced} comment drafts ready`
+
+**Body (HTML):**
+- Header: "Warm-up run complete — {date}"
+- Counts summary table: | Reactions sent | Comments sent | Comment drafts awaiting review | Leads with no posts |
+- If `comment_drafts_surfaced > 0`: table of comment drafts:
+  | Name | Title | Company | Post snippet (first 100 chars) | Draft comment |
+- If `comment_drafts_surfaced == 0`: note "No comment drafts generated this run."
+- Footer instruction: "Open `state/pending_approvals/YYYY-MM-DD-warmup-comments.json`. For each entry: review `comment_draft`, optionally fill `edited_comment` to override, then set `decision` to `approved` or `rejected`. Re-run `/connection-warm-up` to send approved comments."
 
 ## Sending the Email
 
