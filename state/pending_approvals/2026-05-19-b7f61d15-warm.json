@@ -1,0 +1,28 @@
+[
+  {
+    "url": "https://www.linkedin.com/in/sarahznideric",
+    "name": "Sarah Znideric",
+    "headline": "Partnerships & Alliances @ Pattern®",
+    "current_title": "Partnerships & Alliances @ Pattern®",
+    "current_company": null,
+    "classification": "warm",
+    "score": 45,
+    "score_rationale": "Domain gate passed — Pattern is a marketplace/eCommerce acceleration platform in the digital commerce space. Partnerships & Alliances role at a commerce-focused company qualifies, though the domain signal is lighter than a direct NetSuite/Shopify SI.",
+    "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
+    "decision": null,
+    "note": null
+  },
+  {
+    "url": "https://www.linkedin.com/in/jenny-homer-b430a03",
+    "name": "Jenny (Eddleston) Homer",
+    "headline": "Vice President Partnerships EMEA & APAC ANZ at Contentful",
+    "current_title": "Vice President Partnerships EMEA & APAC ANZ at Contentful",
+    "current_company": null,
+    "classification": "warm",
+    "score": 48,
+    "score_rationale": "Domain gate passed — Contentful is a headless CMS heavily used in digital commerce implementations, valid digital commerce ecosystem signal. VP Partnerships EMEA & APAC is strong seniority, but vendor-side employment keeps score in warm territory.",
+    "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
+    "decision": null,
+    "note": null
+  }
+]

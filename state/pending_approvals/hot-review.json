@@ -1,0 +1,44 @@
+[
+  {
+    "url": "https://www.linkedin.com/in/ariel-troy-b780033a",
+    "name": "Ariel Troy",
+    "headline": "Vice President, Bergdorf Goodman eCommerce",
+    "current_title": "Vice President, Bergdorf Goodman eCommerce",
+    "current_company": "Bergdorf Goodman",
+    "classification": "hot",
+    "score": 91,
+    "score_rationale": "VP of eCommerce at Bergdorf Goodman — high-prestige luxury department store (NMG/Neiman Marcus Group). Exact role + retail industry + NY-based. Senior eCommerce buyer at a brand that actively invests in digital. Strong direct-client candidate.",
+    "surfaced_at": "2026-04-27T00:00:00.000Z",
+    "decision": "approved",
+    "note": null,
+    "_source_file": "2026-04-27T000000Z-connection.json"
+  },
+  {
+    "url": "https://www.linkedin.com/in/ben-chmura-33a3745",
+    "name": "Ben Chmura",
+    "headline": "Vice President Ecommerce - Operations + UX/UI at Ashley Global Retail",
+    "current_title": "Vice President Ecommerce - Operations + UX/UI",
+    "current_company": "Ashley Global Retail",
+    "classification": "hot",
+    "score": 89,
+    "score_rationale": "VP Ecommerce (Operations + UX/UI) at Ashley Global Retail — #1 US furniture retailer, $850+ stores globally. Exact role match across Operations and UX/UI, the two areas AOTT covers directly. Deep eCommerce background (HSN, Ashley). Very strong direct-client fit.",
+    "surfaced_at": "2026-04-27T00:00:00.000Z",
+    "decision": "approved",
+    "note": null,
+    "_source_file": "2026-04-27T000000Z-connection.json"
+  },
+  {
+    "url": "https://www.linkedin.com/in/suzana-ferrari-%e2%98%81%ef%b8%8f-863bab1a",
+    "name": "Suzana Ferrari ☁️",
+    "headline": "Practice Director at Apps Associates, Oracle",
+    "current_title": "Practice Director at Apps Associates, Oracle",
+    "current_company": null,
+    "classification": "hot",
+    "score": 78,
+    "score_rationale": "Domain gate passed — Apps Associates is an Oracle/NetSuite implementation partner, 'Oracle' appears explicitly in headline, confirming strong ERP SI ecosystem fit. Practice Director at an Oracle SI firm is a direct target role match; Canadian location qualifies.",
+    "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
+    "decision": "approved",
+    "note": null,
+    "_source_file": "2026-05-19-b7f61d15-hot.json"
+  }
+]
