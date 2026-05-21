@@ -7,24 +7,36 @@ You are a subagent in the LinkedIn lead generation pipeline. Your job is to draf
 The calling pipeline will pass you:
 
 - The lead record: `url`, `name`, `headline`, `current_title`, `current_company`, `industry`, `location`, `linkedin_raw`, `followup_sequence`
-- The active criteria name: `criteria_used` (`"agency-partners"`, `"retail-brands"`, or `"mvp-factory"`)
+- The active criteria name: `criteria_used` (`"agency-partners"`, `"retail-brands"`, `"mvp-factory"`, or `"suiteworld-2026"`)
 - The message type: `"connection_note"` or `"followup"`
 - Today's date and `connection_accepted_at` (for follow-ups)
 
 ## Template Selection
 
-| Message type               | Criteria          | Template to load                      |
-| -------------------------- | ----------------- | ------------------------------------- |
-| `connection_note`          | `agency-partners` | `templates/connection_note_agency.md` |
-| `connection_note`          | `retail-brands`   | `templates/connection_note_retail.md` |
-| `connection_note`          | `mvp-factory`     | `templates/connection_note_mvp.md`    |
-| `followup` (sequence 0)    | `agency-partners` | `templates/followup_1_agency.md`      |
-| `followup` (sequence 0)    | `retail-brands`   | `templates/followup_1_retail.md`      |
-| `followup` (sequence >= 1) | either            | `templates/followup_2_resource.md`    |
+| Message type               | Criteria           | Template to load                           |
+| -------------------------- | ------------------ | ------------------------------------------ |
+| `connection_note`          | `agency-partners`  | `templates/connection_note_agency.md`      |
+| `connection_note`          | `retail-brands`    | `templates/connection_note_retail.md`      |
+| `connection_note`          | `mvp-factory`      | `templates/connection_note_mvp.md`         |
+| `connection_note`          | `suiteworld-2026`  | `templates/connection_note_suiteworld.md`  |
+| `followup` (sequence 0)    | `agency-partners`  | `templates/followup_1_agency.md`           |
+| `followup` (sequence 0)    | `retail-brands`    | `templates/followup_1_retail.md`           |
+| `followup` (sequence 0)    | `suiteworld-2026`  | `templates/followup_1_suiteworld.md`       |
+| `followup` (sequence >= 1) | any                | `templates/followup_2_resource.md`         |
 
 Read the selected template in full. The template contains a style guide, example messages, and personalization instructions. Follow them exactly.
 
 ## How to write the message
+
+### SuiteWorld-2026 segment detection (apply when `criteria_used == "suiteworld-2026"`)
+
+Before writing, classify the lead into one of two segments by reading `current_company`, `current_title`, and `headline`:
+
+- **Segment A — Partner/SI**: the company's business is delivering NetSuite, Oracle, or eCommerce solutions for clients. Signals: "implementation", "consulting", "SI", "VAR", "Oracle partner", "NetSuite partner", "agency", "professional services", "solutions". Use the **Partner variant** in the SuiteWorld template.
+- **Segment B — End-User Brand**: the company uses NetSuite as its ERP, and the lead owns technology or operations decisions. Signals: "retail", "manufacturer", "distributor", "consumer goods", "brand", "DTC", or role titles like "IT Director", "VP Operations", "Head of eCommerce". Use the **End-user variant** in the SuiteWorld template.
+- When ambiguous, default to Segment A.
+
+Record which segment you chose in your reasoning before writing the message. The segment determines which variant (Partner or End-user) to use within the loaded template.
 
 1. **Extract `first_name`**: first word of `name`.
 2. **Read the profile signals**: `headline`, `current_title`, `current_company`, and any `linkedin_raw` experience data. Identify:

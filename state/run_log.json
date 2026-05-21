@@ -572,6 +572,238 @@
         "followups_queued": 1,
         "notes": "3 connections sent: Laura Juneau (alreadyPending), Mohammad Butt (alreadyPending), Shane Vaughan (sent). 2 newly accepted: John W. Rochefort, Remy Medranda (eligible ~May 17). 1 follow-up drafted: Jilly Parker."
       }
+    },
+    {
+      "run_id": "2026-05-18-eacd5e95",
+      "started_at": "2026-05-18T15:39:54.937473+00:00",
+      "status": "completed",
+      "phase": "warm-up",
+      "resume_from_step": 1,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "counts": {
+        "leads_targeted": 10,
+        "leads_processed": 5,
+        "leads_skipped_person_not_found": 10,
+        "reactions_sent": 3,
+        "reactions_failed_post_not_found": 2,
+        "comments_sent": 0,
+        "comment_drafts_surfaced": 5,
+        "comments_failed_repost": 5
+      },
+      "completed_at": "2026-05-18T16:14:53.845179+00:00",
+      "warmup_comments_file": "2026-05-18-warmup-comments.json",
+      "email_sent": {
+        "phase": "warm_up_summary",
+        "at": "2026-05-18T16:14:53.845179+00:00",
+        "to": "martin@allofthethings.dev",
+        "id": "f624b7c9-ce48-4668-a01b-737eb7ac1a6f"
+      },
+      "errors": [
+        {
+          "step": 3,
+          "leads_skipped": [
+            "https://www.linkedin.com/in/hainguyenthe",
+            "https://www.linkedin.com/in/joegentile",
+            "https://www.linkedin.com/in/yurii-kuzminov",
+            "https://www.linkedin.com/in/raghu-gnanasekaran-98b7141",
+            "https://www.linkedin.com/in/tony-caporal",
+            "https://www.linkedin.com/in/vish-annam-36011029",
+            "https://www.linkedin.com/in/robertcastaneda",
+            "https://www.linkedin.com/in/simon-g-b1454b87",
+            "https://www.linkedin.com/in/olioconnor",
+            "https://www.linkedin.com/in/dan-power-4a35b4160"
+          ],
+          "error": "personNotFound — profiles may be deleted or URLs changed"
+        },
+        {
+          "step": "send_comments",
+          "error": "All 5 posts were reposts — LinkedIn commentingNotAllowed on reposts. Skill updated to filter for original posts only.",
+          "at": "2026-05-18T17:47:19.822889+00:00"
+        }
+      ],
+      "notes": "Processed 5 leads: Eyal Amir, Stephanie Kartchner, Waheed Qadir (reaction postNotFound), Jeremy Inman, Matthew Lehman (reaction postNotFound). 10 leads were personNotFound — likely deleted profiles from older batches.",
+      "last_updated": "2026-05-18T17:47:19.822889+00:00"
+    },
+    {
+      "run_id": "2026-05-19-3e6d53a1",
+      "started_at": "2026-05-19T14:17:24.385082+00:00",
+      "status": "completed",
+      "phase": "warm-up",
+      "resume_from_step": 1,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "counts": {
+        "leads_processed": 10,
+        "reactions_sent": 10,
+        "comment_drafts_surfaced": 6,
+        "leads_skipped_no_original_posts": 3,
+        "leads_skipped_posts_too_old": 1
+      },
+      "completed_at": "2026-05-19T18:30:00.000000+00:00",
+      "errors": [],
+      "email_notification": {
+        "email_sent": true,
+        "phase": "warm_up_summary",
+        "to": "martin@allofthethings.dev",
+        "at": "2026-05-19T18:30:00.000000+00:00",
+        "resend_id": "51ab6ec5-f750-41f7-9b13-90f92659c46d"
+      }
+    },
+    {
+      "run_id": "2026-05-19-b7f61d15",
+      "started_at": "2026-05-19T18:00:00.000000+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections",
+      "criteria_used": "agency-partners",
+      "resume_from_step": 6,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "search_cursor": 13,
+      "counts": {
+        "new_stubs": 75,
+        "exclusion_set_size": 1983,
+        "conn_list_calls_succeeded": 2,
+        "conn_list_call3_skipped_rate_limit": true,
+        "status_checks_skipped": true,
+        "status_checks_note": "75 candidates x ~30s too slow; false positives caught at send step",
+        "enriched": 56,
+        "unenriched_deferred": 19,
+        "classified": 56,
+        "hot": 1,
+        "warm": 2,
+        "cold": 53,
+        "surfaced_for_approval": 56,
+        "email_sent": true
+      },
+      "queries_run": [
+        "Director of Professional Services / Information Technology and Services / United States",
+        "Practice Director / Computer Software / Canada",
+        "VP of Partnerships / Management Consulting / United Kingdom"
+      ],
+      "phase1_completed_at": "2026-05-20T11:02:58.545235+00:00",
+      "last_updated": "2026-05-20T11:09:10.318965+00:00",
+      "files_written": [
+        "2026-05-19-b7f61d15-hot.json",
+        "2026-05-19-b7f61d15-warm.json",
+        "2026-05-19-b7f61d15-cold-p1.json",
+        "2026-05-19-b7f61d15-cold-p2.json"
+      ],
+      "email_sent": {
+        "phase": "search_complete",
+        "at": "2026-05-20T11:09:10.318965+00:00",
+        "to": "martin@allofthethings.dev",
+        "id": "c85835e2-5be1-41cb-94e6-ce089415fb1e"
+      }
+    },
+    {
+      "run_id": "2026-05-19-warm3b2f",
+      "started_at": "2026-05-19T18:45:00.000000+00:00",
+      "status": "paused_rate_limit",
+      "phase": "warm-up",
+      "resume_from_step": 3,
+      "steps_completed": [
+        0
+      ],
+      "counts": {
+        "leads_processed": 1,
+        "leads_skipped_no_recent_posts": 1,
+        "leads_attempted": 2,
+        "limit_hit_at_lead": "Oli O'Connor"
+      },
+      "errors": [
+        {
+          "type": "limitExceeded",
+          "message": "LinkedIn daily automation limit reached after ~30 API calls across 3 warm-up sessions today. Resumable tomorrow.",
+          "at": "2026-05-19T19:15:00.000000+00:00"
+        }
+      ],
+      "paused_at": "2026-05-19T19:15:00.000000+00:00"
+    },
+    {
+      "run_id": "2026-05-20-wu4a9c1e",
+      "started_at": "2026-05-20T10:58:00.000000+00:00",
+      "completed_at": "2026-05-20T11:30:00.000000+00:00",
+      "status": "completed",
+      "phase": "warm-up",
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "counts": {
+        "leads_processed": 10,
+        "reactions_sent": 6,
+        "reaction_failed_post_not_found": 1,
+        "leads_skipped_no_recent_posts": 3,
+        "leads_skipped_no_original_posts": 2,
+        "comment_drafts_surfaced": 5,
+        "comments_sent": 0
+      },
+      "warmup_comments_file": "2026-05-20-warmup-comments.json",
+      "errors": [
+        {
+          "type": "postNotFound",
+          "lead": "https://www.linkedin.com/in/simon-g-b1454b87",
+          "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7452400662543355904",
+          "at": "2026-05-20T11:15:00.000000+00:00"
+        }
+      ],
+      "email_notification": {
+        "email_sent": true,
+        "phase": "warm_up_summary",
+        "to": "martin@allofthethings.dev",
+        "at": "2026-05-20T11:30:00.000000+00:00",
+        "resend_id": "abb4c692-ae88-4586-a08b-90b375172f11"
+      }
+    },
+    {
+      "run_id": "2026-05-20-phase2-hot",
+      "started_at": "2026-05-20T16:18:32.802107+00:00",
+      "status": "phase2_complete",
+      "phase": "generate-messages",
+      "criteria_used": "agency-partners + retail-brands",
+      "steps_completed": [
+        "6a"
+      ],
+      "counts": {
+        "notes_drafted": 3,
+        "auto_rejected_timed_out": 0
+      },
+      "notes_ready_file": "2026-05-20-notes-ready.json",
+      "phase2_completed_at": "2026-05-20T16:18:32.802107+00:00",
+      "last_updated": "2026-05-20T16:18:32.802107+00:00",
+      "email_sent_notes": {
+        "phase": "notes_ready",
+        "at": "2026-05-20T16:18:32.802107+00:00",
+        "to": "martin@allofthethings.dev",
+        "id": "4cdc5d89-e694-4a93-9300-c2898abb44f3"
+      },
+      "notes": "3 hot leads drafted: Ariel Troy (Bergdorf Goodman, retail), Ben Chmura (Ashley Global Retail, retail), Suzana Ferrari (Apps Associates Oracle, agency). All from hot-review.json consolidated approval."
     }
   ],
   "retries": [

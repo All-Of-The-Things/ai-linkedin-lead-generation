@@ -1,0 +1,69 @@
+[
+  {
+    "url": "https://www.linkedin.com/in/eyal--amir",
+    "name": "Eyal Amir",
+    "headline": "CEO of Future Kind and Stealth Startup, Operator of Everydae",
+    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7295165942274146304",
+    "post_snippet": "Wanna learn more about the latest NetSuite release? Check out our 2025.1 Release episode of the NetSuite Podcast! \u2026featuring the introduction of SuiteProcurement, new NetSuite Connectors, and AI enhancements.",
+    "comment_draft": "SuiteProcurement is the one worth pausing on. Multi-entity procurement in NS has always meant custom approval chains or third-party connectors. If that's finally native, it changes a lot.",
+    "edited_comment": "SuiteProcurement is worth the whole episode. Native support for multi-entity propcurement removes the need third party connectors/custom approval chains which is a game-changer for One World users.",
+    "decision": "failed",
+    "surfaced_at": "2026-05-18T16:11:58.721108+00:00",
+    "failure_reason": "commentingNotAllowed \u2014 all fetched posts were reposts; LinkedIn does not allow commenting on reposts",
+    "failed_at": "2026-05-18T17:44:17.075167+00:00"
+  },
+  {
+    "url": "https://www.linkedin.com/in/stephaniekartchner",
+    "name": "Stephanie Kartchner",
+    "headline": "Founder & CEO, Unity Consulting Firm | ERP & Operational Transformation for Scaling Brands",
+    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7432953209138171904",
+    "post_snippet": "The real work isn't the software. It's helping teams trust their numbers, move out of reactive mode, and design systems that support how teams actually operate. That's what creates clarity as organizations grow.",
+    "comment_draft": "Getting teams to trust the data is where the real ROI lives. Once they stop verifying numbers elsewhere and just run on the system, forecasting and close time compress fast.",
+    "edited_comment": "Getting teams to trust the data is where the real ROI lives. To achieve a trusted single source of truth streamliens operations as it reduces effort across forecasting and close",
+    "decision": "failed",
+    "surfaced_at": "2026-05-18T16:11:58.721108+00:00",
+    "failure_reason": "commentingNotAllowed \u2014 all fetched posts were reposts; LinkedIn does not allow commenting on reposts",
+    "failed_at": "2026-05-18T17:44:17.075167+00:00"
+  },
+  {
+    "url": "https://www.linkedin.com/in/waheed-qadir",
+    "name": "Waheed Qadir",
+    "headline": "Making CRM & ERP work for you | Zoho Partner | Salesforce & NetSuite Support | AI Integration",
+    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7447185564052791296",
+    "post_snippet": "CRM is no longer just about managing customer data. Businesses are now shifting toward Customer Experience Management (CXM)\u2026the focus is clear \u2014 it's not just about customers anymore, it's about their experience with your brand.",
+    "comment_draft": "CXM is the right reframe. Organizing around the customer journey rather than individual records is what makes personalization actually stick at scale, not just in demos.",
+    "edited_comment": "CXM is the right reframe. Full focus on the customer journey is what makes personalization actually stick at scale.",
+    "decision": "failed",
+    "surfaced_at": "2026-05-18T16:11:58.721108+00:00",
+    "note": "Reaction failed (postNotFound) \u2014 profile view sent via post fetch.",
+    "failure_reason": "commentingNotAllowed \u2014 all fetched posts were reposts; LinkedIn does not allow commenting on reposts",
+    "failed_at": "2026-05-18T17:44:17.075167+00:00"
+  },
+  {
+    "url": "https://www.linkedin.com/in/jeremy-s-inman",
+    "name": "Jeremy Inman",
+    "headline": "CEO & Founder | Driving Business Transformation via Strategic Integration | Maximizing ROI through Innovative Technology",
+    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7459689604972158977",
+    "post_snippet": "We outgrew QuickBooks before we wanted to admit it\u2026 Start with Accounting. Add modules later. Trying to launch everything at once is how migrations die.",
+    "comment_draft": "\"Start with Accounting\" advice is the one that actually makes or breaks migrations. Teams that follow it tend to have cleaner data, faster closes, and real adoption within 90 days.",
+    "edited_comment": "\"Start with Accounting\" prioritizes certainty in numbers. You ensure that the rest of the migration departs from accurate math, facilitating adoption from Finance on the way. Safe approach that builds trust in the new system from the start.",
+    "decision": "failed",
+    "surfaced_at": "2026-05-18T16:11:58.721108+00:00",
+    "failure_reason": "commentingNotAllowed \u2014 all fetched posts were reposts; LinkedIn does not allow commenting on reposts",
+    "failed_at": "2026-05-18T17:44:17.075167+00:00"
+  },
+  {
+    "url": "https://www.linkedin.com/in/matthew-lehman-3838b9b4",
+    "name": "Matthew Lehman",
+    "headline": "Driving Growth for Online Retailers | ERP & NetSuite Solutions | Smarter Inventory + Seamless Integrations",
+    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7359403430957756417",
+    "post_snippet": "Hiring a NetSuite contractor isn't just about skillset. It's about trust, speed, and knowing who can actually deliver under pressure. I don't send resumes, I send solutions.",
+    "comment_draft": "Trust and recovery speed matter more than any cert. The best contractors are the ones who've already hit the hard edge cases and know how to route around them without losing the timeline.",
+    "edited_comment": "Reliability and sticking to timeline and requirements superseed any cert any day. The best contractors are the ones that communicate clearly and manage stakeholders expectations keeping honesty and quality at the forefront.",
+    "decision": "failed",
+    "surfaced_at": "2026-05-18T16:11:58.721108+00:00",
+    "note": "Reaction failed (postNotFound \u2014 Aug 2025 post may be deleted/restricted) \u2014 profile view sent via post fetch.",
+    "failure_reason": "commentingNotAllowed \u2014 all fetched posts were reposts; LinkedIn does not allow commenting on reposts",
+    "failed_at": "2026-05-18T17:44:17.075167+00:00"
+  }
+]
