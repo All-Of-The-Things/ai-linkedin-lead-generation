@@ -804,6 +804,16 @@
         "id": "4cdc5d89-e694-4a93-9300-c2898abb44f3"
       },
       "notes": "3 hot leads drafted: Ariel Troy (Bergdorf Goodman, retail), Ben Chmura (Ashley Global Retail, retail), Suzana Ferrari (Apps Associates Oracle, agency). All from hot-review.json consolidated approval."
+    },
+    {
+      "run_id": "2026-05-22-e7f3a1b9",
+      "started_at": "2026-05-22T00:00:00.000000+00:00",
+      "status": "in_progress",
+      "phase": "search-connections",
+      "criteria_used": "agency-partners",
+      "resume_from_step": 1,
+      "steps_completed": [0],
+      "counts": {}
     }
   ],
   "retries": [
