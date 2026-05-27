@@ -1,10 +1,10 @@
-# /generate-posts [A,B,C | all]
+# /generate-posts
 
-Generate full LinkedIn post drafts from the latest post-ideas file, following the style proven by top-performing posts.
+Generate full LinkedIn post drafts from the latest post-ideas file, following the style proven by top-performing posts. Accepts an optional argument: a comma-separated list of idea letters (`A,C,E`), `all` (default), or a date (`2026-05-01`) to use a specific ideas file.
 
 ## Arguments
 
-- `/generate-posts all` — generate all post ideas in the file (default if no argument given)
+- `/generate-posts` or `/generate-posts all` — generate all post ideas in the file
 - `/generate-posts A,C,E` — generate only the specified ideas by letter
 - `/generate-posts 2026-05-01` — use the ideas file for a specific date
 
@@ -88,6 +88,25 @@ Do not write:
 - Use the hook verbatim — do not rewrite it.
 - Each paragraph ends with a consequence or outcome, never a transition phrase ("This is why...", "As a result...").
 - The post must be readable without the link.
+
+### Accuracy and quality checks
+
+**Logical premise check:** Before writing the body, verify that the hook's implied scenario is technically achievable. If the hook implies a temporal sequence (A before B), confirm that sequence is possible in practice. If the hook implies a business scenario, confirm it reflects how the process actually works. Flag and rewrite any premise that doesn't hold before continuing.
+
+**Platform-specific accuracy:** Verify specific platform claims before asserting them. Facts to apply:
+- SuiteCommerce to NetSuite native integrations (estimates, order sync, customer and pricing sync) do not require SuiteFlow. SuiteFlow is for NetSuite-internal approval and automation workflows.
+- Shopify Functions runs at the infrastructure level (WebAssembly, Shopify's servers), not in the app layer. It is not a third-party app and is not configured via the Shopify admin like an extension.
+- Celigo is a connector for data sync between systems, not a business logic layer.
+- If a specific platform claim is uncertain, flag it for review rather than assert it.
+
+**Anti-AI-tell phrases:** Avoid these constructions:
+- Parallel "X didn't fail. Y failed." sentences.
+- Dramatic "It's not X. It's Y." closers used more than once per post.
+- Closing lines that invert the hook as a poetic callback with nothing substantive after them. Add a prescriptive sentence after, or replace entirely.
+
+**Wrap-up precision:** If the idea file specifies exact wrap-up phrasing, use it with minimal modification. Exact phrasing from the idea file takes priority over rewriting for style.
+
+**Infrastructure vs. app layer precision:** Distinguish clearly between: native/OOB platform behavior, infrastructure-level execution (Shopify Functions), middleware/connector (Celigo), third-party app, and custom code. Do not conflate these categories in the same sentence or attribute a capability of one to another.
 
 ### Length targets
 - Narrative: 150–250 words total (excluding hashtags)

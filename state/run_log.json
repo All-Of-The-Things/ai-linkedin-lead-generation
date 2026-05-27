@@ -78,13 +78,13 @@
         {
           "step": "6b",
           "url": "https://www.linkedin.com/in/dan-rutherford",
-          "error": "limitExceeded — LinkedIn platform connection request limit hit",
+          "error": "limitExceeded \u2014 LinkedIn platform connection request limit hit",
           "at": "2026-04-27T00:00:00.000Z"
         },
         {
           "step": "6b",
           "url": "https://www.linkedin.com/in/raghu-gnanasekaran-98b7141",
-          "error": "limitExceeded — LinkedIn platform connection request limit hit",
+          "error": "limitExceeded \u2014 LinkedIn platform connection request limit hit",
           "at": "2026-04-27T00:00:00.000Z"
         }
       ],
@@ -342,7 +342,7 @@
         "next_industry_idx": 3
       },
       "last_updated": "2026-05-11T19:30:09.747754+00:00",
-      "notes": "Step 2: skipped per-candidate status checks (71 candidates × ~30s = too slow); false positives caught at send step",
+      "notes": "Step 2: skipped per-candidate status checks (71 candidates \u00d7 ~30s = too slow); false positives caught at send step",
       "phase1_completed_at": "2026-05-11T15:41:21.776586+00:00",
       "email_sent": {
         "phase": "search_complete",
@@ -384,7 +384,7 @@
       },
       "phase3_completed_at": "2026-05-12T14:20:35.423377+00:00",
       "last_updated": "2026-05-12T14:20:35.423377+00:00",
-      "notes": "Sent remaining 10 from notes-ready. 1 lead (Nguyen The Hai) still at classified — will send next run. Zabe Siddique eligible for follow-up at 15:36 UTC today."
+      "notes": "Sent remaining 10 from notes-ready. 1 lead (Nguyen The Hai) still at classified \u2014 will send next run. Zabe Siddique eligible for follow-up at 15:36 UTC today."
     },
     {
       "run_id": "2026-05-12-1ad1460a",
@@ -402,7 +402,7 @@
         "newly_accepted": 2,
         "followups_drafted": 1
       },
-      "notes": "Sent Nguyen The Hai. Newly accepted: Jilly Parker (eligible 2026-05-15), Zabe Siddique (eligible now). Follow-up drafted for Zabe → 2026-05-12-followup.json.",
+      "notes": "Sent Nguyen The Hai. Newly accepted: Jilly Parker (eligible 2026-05-15), Zabe Siddique (eligible now). Follow-up drafted for Zabe \u2192 2026-05-12-followup.json.",
       "phase3_completed_at": "2026-05-13T12:55:44.354389+00:00",
       "last_updated": "2026-05-13T12:55:44.354389+00:00"
     },
@@ -544,7 +544,7 @@
       },
       "errors": [],
       "search_cursor": 10,
-      "notes": "Queries: Founder/IT&S/Canada, Managing Director/Software/UK, CEO/Management Consulting/Australia. Low yield from broad queries — 3 hot (Laura Juneau/Sky High ERP, Mohammad Butt/SuiteSquare, Shane Vaughan/Léays), 7 warm, 29 cold.",
+      "notes": "Queries: Founder/IT&S/Canada, Managing Director/Software/UK, CEO/Management Consulting/Australia. Low yield from broad queries \u2014 3 hot (Laura Juneau/Sky High ERP, Mohammad Butt/SuiteSquare, Shane Vaughan/L\u00e9ays), 7 warm, 29 cold.",
       "phase1_completed_at": "2026-05-14T19:09:44.744667+00:00",
       "last_updated": "2026-05-14T19:31:54.714337+00:00",
       "email_sent": {
@@ -621,15 +621,15 @@
             "https://www.linkedin.com/in/olioconnor",
             "https://www.linkedin.com/in/dan-power-4a35b4160"
           ],
-          "error": "personNotFound — profiles may be deleted or URLs changed"
+          "error": "personNotFound \u2014 profiles may be deleted or URLs changed"
         },
         {
           "step": "send_comments",
-          "error": "All 5 posts were reposts — LinkedIn commentingNotAllowed on reposts. Skill updated to filter for original posts only.",
+          "error": "All 5 posts were reposts \u2014 LinkedIn commentingNotAllowed on reposts. Skill updated to filter for original posts only.",
           "at": "2026-05-18T17:47:19.822889+00:00"
         }
       ],
-      "notes": "Processed 5 leads: Eyal Amir, Stephanie Kartchner, Waheed Qadir (reaction postNotFound), Jeremy Inman, Matthew Lehman (reaction postNotFound). 10 leads were personNotFound — likely deleted profiles from older batches.",
+      "notes": "Processed 5 leads: Eyal Amir, Stephanie Kartchner, Waheed Qadir (reaction postNotFound), Jeremy Inman, Matthew Lehman (reaction postNotFound). 10 leads were personNotFound \u2014 likely deleted profiles from older batches.",
       "last_updated": "2026-05-18T17:47:19.822889+00:00"
     },
     {
@@ -808,12 +808,127 @@
     {
       "run_id": "2026-05-22-e7f3a1b9",
       "started_at": "2026-05-22T00:00:00.000000+00:00",
+      "status": "phase2_complete",
+      "phase": "search-connections",
+      "criteria_used": "agency-partners",
+      "resume_from_step": "6a",
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "counts": {
+        "new_stubs": 75,
+        "enriched": 75,
+        "unenriched_deferred": 0,
+        "classified": 75,
+        "hot_this_run": 3,
+        "warm_this_run": 16,
+        "cold_this_run": 56,
+        "hot_surfaced_total": 26,
+        "warm_surfaced_total": 83,
+        "cold_surfaced_total": 321,
+        "surfaced_for_approval": 430,
+        "exclusion_set_size": 2060,
+        "status_checks_skipped": true,
+        "status_checks_note": "75 candidates x ~30s too slow; false positives caught at send step",
+        "email_sent": true,
+        "notes_drafted": 17,
+        "notes_ready_file": "state/pending_approvals/2026-05-26-notes-ready.json",
+        "phase2_email_sent": true,
+        "phase2_email_id": "654c6999-8c1e-4496-accd-94a8d2bd2b87"
+      },
+      "search_cursor": 16,
+      "queries_run": [
+        "Head of Delivery / Information Technology and Services / Australia",
+        "VP of Professional Services / Computer Software / United States",
+        "Director of Partnerships / Management Consulting / Canada"
+      ],
+      "files_written": [
+        "2026-05-22-e7f3a1b9-hot.json",
+        "2026-05-22-e7f3a1b9-warm-p1.json",
+        "2026-05-22-e7f3a1b9-warm-p2.json",
+        "2026-05-22-e7f3a1b9-warm-p3.json",
+        "2026-05-22-e7f3a1b9-cold-p1.json",
+        "2026-05-22-e7f3a1b9-cold-p2.json",
+        "2026-05-22-e7f3a1b9-cold-p3.json",
+        "2026-05-22-e7f3a1b9-cold-p4.json",
+        "2026-05-22-e7f3a1b9-cold-p5.json",
+        "2026-05-22-e7f3a1b9-cold-p6.json",
+        "2026-05-22-e7f3a1b9-cold-p7.json",
+        "2026-05-22-e7f3a1b9-cold-p8.json",
+        "2026-05-22-e7f3a1b9-cold-p9.json",
+        "2026-05-22-e7f3a1b9-cold-p10.json",
+        "2026-05-22-e7f3a1b9-cold-p11.json"
+      ],
+      "email_sent": {
+        "phase": "search_complete",
+        "at": "2026-05-25T18:31:38.464822+00:00",
+        "to": "martin@allofthethings.dev",
+        "id": "ee250824-4b0e-4cd1-9211-2c9013a07e59"
+      },
+      "phase1_completed_at": "2026-05-25T18:31:38.464822+00:00",
+      "last_updated": "2026-05-25T18:31:38.464822+00:00",
+      "errors": [],
+      "phase2_completed_at": "2026-05-26T00:00:00.000Z"
+    },
+    {
+      "run_id": "2026-05-25-sc3f9d2e",
+      "started_at": "2026-05-25T19:49:22.859852+00:00",
+      "completed_at": "2026-05-25T21:30:00.000Z",
+      "status": "phase3_complete",
+      "phase": "send-connections",
+      "criteria_used": "agency-partners",
+      "resume_from_step": "6b",
+      "steps_completed": [
+        "6b",
+        "7",
+        "8"
+      ],
+      "counts": {
+        "connections_sent": 0,
+        "connections_skipped_already_sent": 3,
+        "accepted_connections_detected": 6,
+        "followups_drafted": 5,
+        "followup_file": "state/pending_approvals/2026-05-25-followup.json",
+        "email_sent": true,
+        "email_id": "9aa598f7-829c-4f3e-88fe-604b3a428280",
+        "note": "All 3 approved notes already at request_sent from 2026-05-15 run. No new sends. 6 newly accepted connections detected. 5 eligible for follow-up."
+      },
+      "errors": []
+    },
+    {
+      "run_id": "2026-05-26-nsc9f7e2",
+      "started_at": "2026-05-26T00:00:00.000000+00:00",
       "status": "in_progress",
       "phase": "search-connections",
       "criteria_used": "agency-partners",
       "resume_from_step": 1,
-      "steps_completed": [0],
+      "steps_completed": [],
+      "search_cursor": 0,
+      "notes": "NetSuite/SuiteCommerce-focused run \u2014 using --term 'NetSuite'/'SuiteCommerce'/'Oracle NetSuite' to surface ERP agencies rather than Shopify agencies",
       "counts": {}
+    },
+    {
+      "run_id": "2026-05-26-5cda7be7",
+      "started_at": "2026-05-26T19:01:32.667784+00:00",
+      "status": "in_progress",
+      "phase": "send-connections",
+      "criteria_used": "agency-partners",
+      "resume_from_step": "6b",
+      "steps_completed": [
+        "6b"
+      ],
+      "counts": {
+        "connections_sent": 9,
+        "connections_skipped_over_limit": 1,
+        "over_limit_lead": "Ryan Besterwitch (329 chars \u2014 needs note shortened)",
+        "josh_green_note": "sent with draft (not edited_note \u2014 note was edited after send)"
+      },
+      "errors": []
     }
   ],
   "retries": [
@@ -826,8 +941,8 @@
         "https://www.linkedin.com/in/raghu-gnanasekaran-98b7141"
       ],
       "results": {
-        "dan-rutherford": "failed — unexpectedError (LinkedIn API error, exit code 1)",
-        "raghu-gnanasekaran-98b7141": "failed — unexpectedError (LinkedIn API error, exit code 1)"
+        "dan-rutherford": "failed \u2014 unexpectedError (LinkedIn API error, exit code 1)",
+        "raghu-gnanasekaran-98b7141": "failed \u2014 unexpectedError (LinkedIn API error, exit code 1)"
       },
       "step7_connections_detected": [
         "https://www.linkedin.com/in/colbert-gendreau-600167255"
