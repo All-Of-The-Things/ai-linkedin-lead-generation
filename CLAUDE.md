@@ -117,11 +117,7 @@ Mark step complete in run_log before moving on.
 4. For each returned person URL:
    - Normalize: lowercase, strip trailing slash, use the canonical `/in/` form.
    - Check `state/seen.json` AND the in-memory exclusion set. If present in either, skip.
-   - **Connection status check:** For any URL that passes both filters above, run:
-     ```
-     linkedin connection status <url> --json -q
-     ```
-     Parse the response. If `data.status` is `"connected"` or `"pending"`, add the URL to `seen.json` (so it is never re-proposed) but do NOT add it to `leads.json`. Skip to the next result. This catches connections the list calls missed due to API non-determinism.
+   - **Connection status check:** Skipped here for performance (N candidates × ~30s is too slow). False positives are caught in Step 5 for hot/warm leads and at the send step for any that slip through.
    - Add to `seen.json` immediately (write-through).
    - Add a stub record to `leads.json` with `status: "new"`, `first_seen_run: <today>`.
 5. On exit code 6: wait `rate_limit.retry_delay_seconds`, retry up to `rate_limit.max_retries`. If still failing, log, skip that query, continue to next.
@@ -170,21 +166,38 @@ Mark step complete in run_log.
      "score": 88,
      "score_rationale": "...",
      "surfaced_at": "<now ISO>",
+     "already_connected": false,
+     "has_conversation": false,
      "decision": null,
      "note": null
    }
    ```
-4. **Split entries by classification** (if `review.split_by_classification` is true, which is the default):
-   - Group entries into `hot`, `warm`, and `cold` buckets.
+   `already_connected` and `has_conversation` are populated by the checks in step 4 below. Cold entries get `null` for both (checks are skipped for cold).
+4. **Connection status + conversation checks (hot and warm only):** Before writing any files, run two checks on every hot and warm entry. Cold leads are skipped — the API cost is not worth it.
+
+   a. **Connection status check:**
+      ```
+      linkedin connection status <url> --json -q
+      ```
+      If `data.status` is `"connected"` or `"pending"`: add URL to `seen.json`, set `already_connected: true` on the lead in `leads.json`, and **remove the entry from the approval batch** — do not write it to any file. On exit code 6: apply rate-limit retry logic; if still failing, include the entry with `already_connected: null` (unknown, user must verify manually).
+
+   b. **Conversation check** (only for entries that passed the connection check above):
+      ```
+      linkedin message get <url> --json -q
+      ```
+      If the response contains any messages (`data.messages` is non-empty): set `has_conversation: true` on the entry. Otherwise set `has_conversation: false`. On error or rate-limit: set `has_conversation: null`. The `has_conversation` field is informational only — it does not gate approval.
+
+5. **Split entries by classification** (if `review.split_by_classification` is true, which is the default):
+   - Group remaining entries (those that passed the connection check) into `hot`, `warm`, and `cold` buckets.
    - For each non-empty bucket, paginate at `review.page_size` entries (default 30):
      - Single page: `<date>-<run_id>-hot.json`
      - Multiple pages: `<date>-<run_id>-warm-p1.json`, `<date>-<run_id>-warm-p2.json`, etc.
    - Write each page as a separate JSON array file. Never append to existing files.
-5. Set `approval_surfaced_at` on each lead in `leads.json`.
+6. Set `approval_surfaced_at` on each lead written to a file in `leads.json`.
 
 **All classifications (hot, warm, cold) are surfaced.** The user decides everything.
 
-6. **Send email notification** — invoke `agents/email-notifier.md` as a subagent with:
+7. **Send email notification** — invoke `agents/email-notifier.md` as a subagent with:
    - `phase: "search_complete"`
    - `run_id`: current run ID from `run_log.json`
    - `criteria_used`: resolved criteria name
