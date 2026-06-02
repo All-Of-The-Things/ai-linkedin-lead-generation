@@ -903,14 +903,90 @@
     {
       "run_id": "2026-05-26-nsc9f7e2",
       "started_at": "2026-05-26T00:00:00.000000+00:00",
-      "status": "in_progress",
+      "status": "phase3_complete",
       "phase": "search-connections",
       "criteria_used": "agency-partners",
-      "resume_from_step": 1,
-      "steps_completed": [],
-      "search_cursor": 0,
+      "resume_from_step": "9",
+      "steps_completed": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6a",
+        "6b",
+        "7",
+        "8"
+      ],
+      "search_cursor": 3,
       "notes": "NetSuite/SuiteCommerce-focused run \u2014 using --term 'NetSuite'/'SuiteCommerce'/'Oracle NetSuite' to surface ERP agencies rather than Shopify agencies",
-      "counts": {}
+      "queries_run": [
+        "NetSuite SuiteCommerce / CEO / IT&S / United States",
+        "SuiteCommerce / Founder / Computer Software / Canada",
+        "Oracle NetSuite / Managing Director / Management Consulting / United Kingdom"
+      ],
+      "counts": {
+        "exclusion_set_size": 2195,
+        "new_stubs": 43,
+        "q1_results": 25,
+        "q1_new": 12,
+        "q2_results": 15,
+        "q2_new": 14,
+        "q3_results": 25,
+        "q3_new": 17,
+        "new_leads_discovered": 43,
+        "enriched": 98,
+        "classified": 100,
+        "hot": 12,
+        "warm": 19,
+        "cold": 69,
+        "surfaced_for_approval": 100,
+        "approval_files": [
+          "2026-05-26-nsc9f7e2-hot.json",
+          "2026-05-26-nsc9f7e2-warm.json",
+          "2026-05-26-nsc9f7e2-cold-p1.json",
+          "2026-05-26-nsc9f7e2-cold-p2.json",
+          "2026-05-26-nsc9f7e2-cold-p3.json"
+        ],
+        "email_sent": true,
+        "email_id": "653514f1-f6e3-41a6-9218-20e8bd29a064",
+        "email_phase": "search_complete",
+        "notes_drafted": 9,
+        "notes_email_id": "c0d868e9-0a46-468a-9b0c-6cfe22fb3813",
+        "notes_ready_file": "2026-05-28-notes-ready.json",
+        "connections_sent": 6,
+        "connections_failed": 3,
+        "connections_skipped": 1,
+        "connections_failed_timeout": 3,
+        "connections_skipped_over_limit": 1,
+        "accepted_connections_detected": 0,
+        "followups_drafted": 4,
+        "followup_file": "2026-05-29-followup.json",
+        "phase3_email_id": "f084e4c7-6b9e-4c00-b52f-376952e31acf"
+      },
+      "phase1_completed_at": "2026-05-28T17:58:09.832970+00:00",
+      "phase2_completed_at": "2026-05-29T14:03:33.986079+00:00",
+      "errors": [
+        {
+          "step": "6b",
+          "url": "https://www.linkedin.com/in/adambaruh",
+          "error": "timeout",
+          "at": "2026-05-29T16:23:52.861467+00:00"
+        },
+        {
+          "step": "6b",
+          "url": "https://www.linkedin.com/in/skyler-wells",
+          "error": "timeout",
+          "at": "2026-05-29T16:23:52.861467+00:00"
+        },
+        {
+          "step": "6b",
+          "url": "https://www.linkedin.com/in/steveschepp",
+          "error": "timeout",
+          "at": "2026-05-29T16:23:52.861467+00:00"
+        }
+      ],
+      "phase3_completed_at": "2026-05-29T17:41:32.342908+00:00"
     },
     {
       "run_id": "2026-05-26-5cda7be7",
@@ -929,6 +1005,30 @@
         "josh_green_note": "sent with draft (not edited_note \u2014 note was edited after send)"
       },
       "errors": []
+    },
+    {
+      "run_id": "2026-05-27-a3e82f1b",
+      "started_at": "2026-05-27T00:00:00.000000+00:00",
+      "status": "in_progress",
+      "phase": "search-connections",
+      "criteria_used": "agency-partners",
+      "resume_from_step": 3,
+      "steps_completed": [
+        0,
+        1,
+        2
+      ],
+      "search_cursor": 3,
+      "notes": "Shopify/commerce-focused run \u2014 targeting Shopify Plus agency founders, eCommerce consulting directors, and digital commerce agency decision-makers",
+      "queries_run": [
+        "term: Shopify Plus agency (25 results)",
+        "term: Shopify agency founder (25 results)",
+        "term: digital commerce consulting / CEO / US,CA,UK,AU (25 results)"
+      ],
+      "counts": {
+        "exclusion_set_size": 1566,
+        "new_stubs": 68
+      }
     }
   ],
   "retries": [
