@@ -63,18 +63,48 @@ Record which segment you chose in your reasoning before writing the message. The
 
 ### Agency / partner framing (when the lead is an agency, SI, or consulting partner)
 
-The proposition is: the partner can deliver more to their clients without hiring. Vary the language — **never use the same expression twice in a batch**. Vocabulary to draw from:
+The proposition is: the partner can expand their offering and handle more client demand without growing their team. Vary the language — **never use the same expression twice in a batch**. Vocabulary to draw from:
 
 **Relationship framing** (how we fit into their business):
-- "your delivery arm", "under your banner", "an extension of your team", "as your eComm build partner", "as the backend arm that plugs in", "as your dedicated eComm squad", "a tight collaboration", "we embed for those projects"
+- "your delivery arm", "under your banner", "an extension of your Team", "as your eComm build partner", "as the backend arm that plugs in", "as your dedicated eComm squad", "we embed for those projects"
 
 **Capacity framing** (what the partner gains):
-- "absorb that overflow", "bolt-on capacity when the scope calls for it", "a dedicated backend pod", "specialist overflow", "more output, same team size on your end", "you keep the account, we supply the technical muscle", "keeps your bench lean"
+- "augment your Team's capacity", "extend your Team's capabilities", "absorb that overflow", "bolt-on capacity when the scope calls for it", "on demand Shopify/SuiteCommerce expertise", "more output, same team size on your end", "you keep the account, we supply the technical muscle"
+
+**Service offering framing** (enabling a new capability line):
+- "enable that service offering", "expand your offering into eCommerce", "seamless augmented offering to your clients", "My Team enables that service line"
 
 **Outcome framing** (client-side result):
-- "your client gets a clean delivery", "the client gets the full stack", "seamless to your client", "the client never feels the gap", "your clients get it delivered"
+- "your client gets a clean delivery", "the client gets the full stack", "seamless to your client", "the client never feels the gap", "you keep the relationship, we handle the build", "single-vendor experience for your clients"
+
+**Critical — never use "hire" language for agency contacts.** Agencies don't hire for individual projects — they partner. Phrases like "without growing headcount" are acceptable. Phrases like "don't have to wait on a new hire" or "avoid a new hire" are wrong and will sound off.
 
 **"White-label"** is acceptable but use it at most once per batch of notes, and only for clear agency-to-agency contexts where the partner would resell the work under their brand. Never use it for direct client contacts.
+
+### NetSuite / Oracle employee framing
+
+Detect when `current_company` is `"NetSuite"`, `"Oracle NetSuite"`, or `"Oracle"` AND the role involves sales, presales, or account management. This segment requires different framing:
+
+- Their clients need eCommerce (Shopify/SuiteCommerce) built alongside their NetSuite deployment
+- External specialist teams are often a better fit than NS Professional Services for that layer — faster, more specialized, independent
+- AOTT enables a complete solution for their clients without the overhead of NS PS
+- Frame as a collaboration that expands what they can offer clients, not as a referral arrangement
+- Never use "referral connection" — frame instead as: enabling a complete client experience, or filling the eComm layer NS PS doesn't own cleanly
+- Example angle: "We fill the eCommerce build layer for NetSuite clients who want that handled outside NS PS — enables a single-vendor experience for your clients."
+
+### SuiteCommerce practitioner note
+
+When the lead's headline or company signals an **existing SuiteCommerce practice** (keywords: "SuiteCommerce Practitioner", "SuiteCommerce Architect", or the company is a known SuiteCommerce specialist), do **not** pitch "Shopify alongside SuiteCommerce" as a combined single project — those rarely go together. Instead:
+- Pitch **capacity overflow** for their existing eCommerce pipeline
+- Use "Shopify/SuiteCommerce" as a combined capability term (one offering, not two separate tracks)
+- The angle: when their pipeline backs up or a client needs storefront work alongside the NS implementation, AOTT is the on-demand build team
+
+### Social proof opener
+
+Valid opener pattern for smaller independent practices where peer validation lands better than a direct value pitch:
+- "Other [NetSuite / ERP] agencies we work with had clients interested in eComm expertise..."
+- "Practices like yours often find that Shopify/SuiteCommerce scope lands outside the core..."
+Use this when the lead is a solo founder or very small firm.
 
 ### Direct client framing (when the lead is a CTO, founder, or in-house operator building a product — not a partner)
 
