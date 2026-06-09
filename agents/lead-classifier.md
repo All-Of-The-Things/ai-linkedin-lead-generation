@@ -10,25 +10,32 @@ The calling pipeline will pass you:
 
 ## Step 0 — Domain Gate (run first, before scoring)
 
-**This is the most important check.** The agency-partners criteria targets staff augmentation deals with NetSuite/Oracle/Shopify Plus implementation agencies and digital commerce consultancies. A generic tech founder who happens to be US-based is NOT the target.
+**This is the most important check.** The agency-partners criteria targets staff augmentation deals with **NetSuite/Oracle ERP agencies** that need Shopify integration capacity. AOTT's value is supplying Shopify dev talent to NetSuite SIs whose enterprise clients need NetSuite ↔ Shopify storefronts. A generic Shopify agency with no ERP context is NOT the target.
 
-Before computing any score, ask: **"Is this company in the digital commerce or ERP agency/SI ecosystem?"**
+Before computing any score, ask: **"Does this company work in the NetSuite/ERP ecosystem and do commerce integrations?"**
 
-Look for at least ONE of the following platform-specific domain signals in the company name, headline, or position:
-- **NetSuite** (any form: NetSuite partner, NetSuite Alliance, NetSuite SI, SuiteCommerce, Oracle NetSuite)
-- **Shopify Plus** or **Shopify** (agency, partner, expert, development)
+### Primary signals (at least one REQUIRED)
+
+At least one of these must appear in the company name, headline, or position. Without a primary signal, the lead fails the gate regardless of seniority or location:
+
+- **NetSuite** (any form: NetSuite partner, NetSuite Alliance, NetSuite SI, SuiteCommerce, Oracle NetSuite, NetSuite implementation)
+- **ERP** partner, consulting, or implementation (in a commerce/retail context — not purely HR/payroll ERP like Workday/ADP/SAP HR)
 - **Oracle Commerce** / **Oracle eCommerce**
-- **Magento** / **Adobe Commerce**
-- **BigCommerce** / **Salesforce Commerce Cloud**
-- **ERP** implementation, consulting, or partner (in the context of commerce/retail, not purely HR/payroll ERP like Workday/ADP)
-- **Digital commerce** or **eCommerce** consulting/agency/implementation
-- **Salesforce** implementation/consulting (adjacent — acceptable partial domain signal)
 
-**If no domain signal is found**, the lead is in the wrong ecosystem. Cap the score at 25 and classify as cold, regardless of how senior or US-based they are. A Founder at a healthcare AI startup, automotive marketplace, video production firm, crypto project, fintech consumer app, HR tech platform, or general software product company does not qualify — even if they have a "Founder" title and a US location.
+### Secondary signals (only count when paired with a primary signal)
 
-The domain gate is binary: either the company/headline shows they work in or around the target platforms/ecosystems, or the lead is cold.
+These signals are acceptable evidence of ecosystem fit but cannot pass the gate alone:
+- Magento / Adobe Commerce
+- Shopify Plus (in an agency/SI context, not a freelancer or DTC brand)
+- BigCommerce / Salesforce Commerce Cloud
+- Systems Integrator / Solution Provider Partner
+- eCommerce Consulting / Digital Commerce (only when the company name also contains an ERP/NetSuite keyword)
 
-**DTC brand exception**: Senior executives at retail/DTC brands (eCommerce directors, VP of digital, CTO at a DTC brand) are end-clients, not agency partners. They belong under the retail-brands criteria. Under agency-partners, apply the end-client penalty (see below) — do not treat them as agency leads.
+**A company whose name/headline contains only "Shopify Agency", "Shopify Partner", "Shopify Expert", or similar Shopify-only signals — with no ERP/NetSuite context anywhere — fails the domain gate.** Cap the score at 25 and classify as cold.
+
+**If no domain signal is found at all**, the lead is in the wrong ecosystem. Cap at 25, cold. This applies to: fintech consumer apps, healthcare AI, automotive, HR tech, iGaming, media, sports, payments processors, general SaaS products with no SI/integration angle.
+
+**DTC brand exception**: Senior executives at retail/DTC brands are end-clients, not agency partners. Apply the end-client penalty (see below) — do not treat them as agency leads.
 
 ## Step 1 — Score the Lead
 

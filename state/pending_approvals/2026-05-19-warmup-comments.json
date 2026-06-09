@@ -7,7 +7,7 @@
     "post_snippet": "Something that I hear a lot from locums agencies and physician groups is how hard it is to get a candidate to actually respond to their outreach. These candidates are highly sought after, are being bombarded from many different employers.",
     "comment_draft": "Precision sourcing in healthcare staffing is still underused. Knowing what a provider responded to last time and matching that to a live opening is a much stronger signal than mass outreach.",
     "edited_comment": null,
-    "decision": null,
+    "decision": "rejected",
     "surfaced_at": "2026-05-19T18:05:00.000000+00:00"
   },
   {
@@ -18,7 +18,7 @@
     "post_snippet": "Device identity may be the next fraud anchor to fail in the age of agentic AI.",
     "comment_draft": "Behavioral signals become much more valuable when device identity loses its anchoring power. Intent verification at the workflow level is the harder problem, but also the more durable signal.",
     "edited_comment": null,
-    "decision": null,
+    "decision": "rejected",
     "surfaced_at": "2026-05-19T18:05:00.000000+00:00"
   },
   {
@@ -29,7 +29,7 @@
     "post_snippet": "If you manage productions, you know the drill. One freelancer gets a text, another gets an email, someone misses the group thread, and you're the only one who knows where anything is.",
     "comment_draft": "Tying communication to the roster and project context is what changes this from a chat tool to an actual ops layer. When the thread lives next to the booking, context follows the work instead of scattering across inboxes.",
     "edited_comment": null,
-    "decision": null,
+    "decision": "rejected",
     "surfaced_at": "2026-05-19T18:05:00.000000+00:00"
   },
   {
@@ -40,7 +40,7 @@
     "post_snippet": "Here's my hot take on Agentic Commerce...UCP isn't the end of the road for your website, it's the AI superhighway that will bring high-intent customers to your website. Top of funnel discoverability magic.",
     "comment_draft": "UCP changes what 'in-market' even means for a brand. Shopify merchants get discovered in intent-rich AI shopping flows before a prospect ever forms a traditional search query. That's new top-of-funnel territory.",
     "edited_comment": null,
-    "decision": null,
+    "decision": "rejected",
     "surfaced_at": "2026-05-19T18:05:00.000000+00:00"
   },
   {
@@ -51,7 +51,7 @@
     "post_snippet": "The collision between AI-driven job displacement and a healthcare system that was never designed for self-employed Americans.",
     "comment_draft": "Self-employed Americans sit in a structural gap that portable benefit models haven't closed. AI-driven displacement forces that conversation in a way incremental policy never has.",
     "edited_comment": null,
-    "decision": null,
+    "decision": "rejected",
     "surfaced_at": "2026-05-19T18:05:00.000000+00:00"
   },
   {
@@ -62,7 +62,7 @@
     "post_snippet": "Instead of just offering developers, we provide AI-powered development capacity — experienced engineers across LATAM who integrate fast, contribute immediately, and help you move forward without the usual friction.",
     "comment_draft": "Integration speed is what separates this from traditional augmentation. Engineers who are already fluent in AI tooling compound your existing team's output instead of adding coordination overhead.",
     "edited_comment": null,
-    "decision": null,
+    "decision": "rejected",
     "surfaced_at": "2026-05-19T18:05:00.000000+00:00"
   }
 ]

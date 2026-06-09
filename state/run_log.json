@@ -1009,14 +1009,17 @@
     {
       "run_id": "2026-05-27-a3e82f1b",
       "started_at": "2026-05-27T00:00:00.000000+00:00",
-      "status": "in_progress",
+      "status": "cancelled",
       "phase": "search-connections",
       "criteria_used": "agency-partners",
-      "resume_from_step": 3,
+      "resume_from_step": "6a",
       "steps_completed": [
         0,
         1,
-        2
+        2,
+        "3",
+        "4",
+        "5"
       ],
       "search_cursor": 3,
       "notes": "Shopify/commerce-focused run \u2014 targeting Shopify Plus agency founders, eCommerce consulting directors, and digital commerce agency decision-makers",
@@ -1027,8 +1030,171 @@
       ],
       "counts": {
         "exclusion_set_size": 1566,
-        "new_stubs": 68
-      }
+        "new_stubs": 68,
+        "enriched": 87,
+        "classified": 87,
+        "hot_this_run": 9,
+        "warm_this_run": 26,
+        "cold_this_run": 52,
+        "hot_surfaced": 9,
+        "warm_surfaced": 26,
+        "cold_surfaced": 52,
+        "surfaced_for_approval": 35
+      },
+      "last_updated": "2026-06-03T16:51:30.706221+00:00",
+      "phase1_completed_at": "2026-06-03T16:51:30.706221+00:00",
+      "files_written": [
+        "2026-05-27-a3e82f1a-hot.json",
+        "2026-05-27-a3e82f1a-warm.json",
+        "2026-05-27-a3e82f1a-cold-p1.json",
+        "2026-05-27-a3e82f1a-cold-p2.json"
+      ],
+      "email_sent": {
+        "phase": "search_complete",
+        "at": "2026-06-03T16:51:30.706221+00:00",
+        "to": "martin@allofthethings.dev",
+        "id": "5e754a11-4369-4b41-a505-a51c7fbb9097"
+      },
+      "cancelled_reason": "Wrong search focus \u2014 Shopify-only agencies, no ERP/NetSuite context. Criteria updated to NetSuite-first; run deleted and restarted."
+    },
+    {
+      "run_id": "2026-06-03-2312a286",
+      "started_at": "2026-06-03T18:07:53.201159+00:00",
+      "status": "phase3_complete",
+      "phase": "send-connections",
+      "criteria_used": "agency-partners",
+      "resume_from_step": "6b",
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        "6a",
+        "6b",
+        7,
+        8,
+        "7",
+        "8"
+      ],
+      "counts": {
+        "exclusion_set_size": 2347,
+        "new_stubs": 55,
+        "enriched_batch1": 10,
+        "hot_batch1": 7,
+        "warm_batch1": 1,
+        "cold_batch1": 2,
+        "notes_drafted": 7,
+        "notes_rejected": 1,
+        "batch2_notes_drafted": 2,
+        "batch2_notes_rejected": 1,
+        "batch2_notes_pending_decision": 1,
+        "connections_sent": 7,
+        "connections_already_pending": 2,
+        "connections_already_accepted": 1,
+        "connections_failed": 1,
+        "newly_accepted": 2,
+        "newly_accepted_names": [
+          "Ryan Mcleod",
+          "Felicia Santoro-Petti"
+        ],
+        "followups_drafted": 0,
+        "messages_email_id": "a90e0699-4dd3-4b07-8bd7-abba8151d544",
+        "connections_skipped_over_limit": 2,
+        "over_limit_leads": [
+          "Ryan Besterwitch (329 chars)",
+          "Ross Latta (316 chars)"
+        ],
+        "accepted_connections_detected": 0
+      },
+      "phase3_errors": [
+        {
+          "step": "6b",
+          "url": "https://www.linkedin.com/in/ryanbesterwitch",
+          "error": "note too long (329 chars, LinkedIn hard limit 300) \u2014 send skipped, needs shorter note",
+          "at": "2026-06-05T00:00:00.000000+00:00"
+        }
+      ],
+      "last_updated": "2026-06-09T14:56:42.112336+00:00",
+      "phase2_completed_at": "2026-06-05T16:10:49.250526+00:00",
+      "phase2_batch2_completed_at": "2026-06-04T23:00:00.000000+00:00",
+      "notes_email_id": "83e9da5f-c0d8-4822-a883-b2af51f911b9",
+      "notes_ready_file_batch2": "2026-06-04-notes-ready-2.json",
+      "notes_email_id_batch2": "9a2e304d-d51a-41ec-aadf-12bc3ec22b48",
+      "search_cursor": 3,
+      "queries_run": [
+        "NetSuite partner CEO",
+        "NetSuite SI Founder",
+        "Oracle NetSuite MD"
+      ],
+      "notes": "NetSuite/ERP-focused run \u2014 targeting decision-makers at NetSuite Alliance Partners and Oracle NetSuite SIs",
+      "files_written": [
+        "2026-06-04-2312a286-batch1-hot.json",
+        "2026-06-04-2312a286-batch1-warm.json",
+        "2026-06-04-2312a286-batch2-hot.json",
+        "2026-06-04-2312a286-batch2-warm.json"
+      ],
+      "email_sent": {
+        "phase": "search_complete_batch1",
+        "at": "2026-06-04T15:17:31.911333+00:00",
+        "to": "martin@allofthethings.dev",
+        "id": "8cafbe81-086a-462c-8570-3f11429b8c3b"
+      },
+      "notes_ready_file": "2026-06-05-notes-ready.json",
+      "email_sent_notes": {
+        "phase": "notes_ready",
+        "at": "2026-06-05T16:10:49.250526+00:00",
+        "to": "martin@allofthethings.dev",
+        "id": "c2e7307f-36ce-4773-bdde-9a9e2ff9fb51"
+      },
+      "phase3_completed_at": "2026-06-09T14:56:42.112336+00:00"
+    },
+    {
+      "run_id": "2026-06-09-828a5bcb",
+      "started_at": "2026-06-09T00:00:00.000000+00:00",
+      "status": "blocked_network_error",
+      "phase": "search-connections",
+      "criteria_used": "agency-partners",
+      "resume_from_step": 2,
+      "steps_completed": [0, 1],
+      "counts": {},
+      "errors": [
+        {
+          "step": 2,
+          "error": "httpError — Request error: fetch failed on all LinkedIn API calls (connection list, person search). LinkedAPI service appears to be unavailable.",
+          "at": "2026-06-09T00:00:00.000000+00:00"
+        }
+      ]
+    },
+    {
+      "run_id": "2026-06-09-wu4a2b3c1d",
+      "started_at": "2026-06-09T15:00:00.000000+00:00",
+      "status": "blocked_network_error",
+      "phase": "warm-up",
+      "resume_from_step": 3,
+      "steps_completed": [0],
+      "counts": {},
+      "targets": [
+        "https://www.linkedin.com/in/j-hamblin",
+        "https://www.linkedin.com/in/nilayshah-catalyst-right",
+        "https://www.linkedin.com/in/mimckenzie",
+        "https://www.linkedin.com/in/christiansalas",
+        "https://www.linkedin.com/in/ginotieri",
+        "https://www.linkedin.com/in/glayton",
+        "https://www.linkedin.com/in/lpbaillargeon",
+        "https://www.linkedin.com/in/eyal-greifner-907b82a",
+        "https://www.linkedin.com/in/biswasnair",
+        "https://www.linkedin.com/in/antony-aguilera-aa049187"
+      ],
+      "errors": [
+        {
+          "step": 3,
+          "error": "httpError (exit code 7) — LinkedIn API unavailable, fetch failed on all attempts. Same issue as 2026-06-09-828a5bcb. Resumable when API recovers.",
+          "at": "2026-06-09T15:00:00.000000+00:00",
+          "leads_attempted": ["https://www.linkedin.com/in/j-hamblin", "https://www.linkedin.com/in/nilayshah-catalyst-right"]
+        }
+      ]
     }
   ],
   "retries": [
