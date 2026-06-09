@@ -1,12 +1,12 @@
 {
   "name": "agency-partners",
   "label": "Agency & SI Partners",
-  "description": "Targets decision-makers at NetSuite, Oracle, Shopify Plus, and digital commerce consulting/implementation agencies. AOTT's primary criteria for staff augmentation deals.",
+  "description": "Targets decision-makers at NetSuite Alliance Partners, Oracle NetSuite SIs, and ERP consulting firms that do commerce integrations. AOTT's Shopify capability fills the gap these agencies have when their enterprise clients need NetSuite ↔ Shopify storefronts connected. Pure Shopify agencies with no ERP context are out of scope.",
 
   "generated_at": "2026-04-24T00:00:00.000Z",
   "generated_from_connections": 200,
 
-  "_note": "AOTT's sweet spot is staff augmentation with consulting/implementation agencies, not direct retail clients. Target: decision-makers at NetSuite SIs, Oracle partners, Shopify Plus agencies, and digital commerce consultancies.",
+  "_note": "AOTT's value is staff augmentation for NetSuite SIs and ERP agencies: their clients run NetSuite ERP and need Shopify (or other commerce) integrations. AOTT supplies the Shopify dev capacity the SI lacks. Target: CEOs, founders, and practice leads at NetSuite Alliance Partners, Oracle consulting firms, and ERP integration shops — not pure Shopify or DTC agencies.",
 
   "reference_companies": [
     "Plative",
@@ -17,25 +17,26 @@
     "Aztech Digital"
   ],
 
-  "_company_type_signals_note": "These signals must be platform-specific to count toward agency boost. Generic words like 'Solutions', 'Services', 'Digital', 'Advisory' alone are not sufficient — they must appear alongside a platform keyword.",
+  "_company_type_signals_note": "NetSuite/Oracle/ERP signals are the required primary signals. A company with only 'Shopify Agency' or 'Shopify Partner' in its name — and no ERP/NetSuite context — does NOT qualify. Shopify/Magento signals are acceptable only when paired with at least one ERP primary signal.",
   "company_type_signals": [
     "NetSuite",
     "Oracle NetSuite",
     "SuiteCommerce",
-    "Shopify Plus",
-    "Shopify Partner",
-    "Shopify Expert",
-    "Shopify Agency",
-    "Magento",
-    "Adobe Commerce",
-    "BigCommerce",
-    "Salesforce Commerce",
+    "NetSuite Alliance Partner",
+    "NetSuite Partner",
     "ERP Partner",
     "ERP Consulting",
     "ERP Implementation",
+    "ERP Integration",
     "Solution Provider Partner",
     "Alliance Partner",
     "Systems Integrator",
+    "Magento",
+    "Adobe Commerce",
+    "Shopify Plus",
+    "Shopify Partner",
+    "BigCommerce",
+    "Salesforce Commerce",
     "eCommerce Agency",
     "eCommerce Consulting",
     "Digital Commerce"
@@ -62,7 +63,7 @@
     "Head of Operations"
   ],
 
-  "_target_industries_note": "LinkedIn industry field alone is not sufficient — must be combined with platform-specific domain signals. 'Financial Services' removed: it pulled in fintech consumer apps with no ERP/commerce context.",
+  "_target_industries_note": "LinkedIn industry field alone is not sufficient — must be combined with platform-specific domain signals. Focus on companies in IT consulting and ERP/commerce implementation space.",
   "target_industries": [
     "Information Technology and Services",
     "Computer Software",
@@ -111,15 +112,18 @@
     "Administrator",
     "Analyst",
     "Demand Generation",
-    "Bachelor of Science"
+    "Bachelor of Science",
+    "Shopify Expert",
+    "Dropshipping",
+    "Dropshipper"
   ],
 
   "search_terms": [
     "NetSuite partner CEO",
-    "Oracle consulting managing director",
-    "ERP implementation director",
-    "Shopify Plus agency founder",
-    "digital commerce consulting"
+    "NetSuite SI founder",
+    "SuiteCommerce agency managing director",
+    "Oracle NetSuite implementation director",
+    "ERP Shopify integration consulting"
   ],
 
   "scoring_weights": {

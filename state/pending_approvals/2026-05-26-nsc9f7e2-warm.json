@@ -12,7 +12,9 @@
     "already_connected": false,
     "has_conversation": null,
     "decision": "approved",
-    "note": null
+    "note": null,
+    "note_draft": "Hi Gino. My Team fills the Shopify and SuiteCommerce build layer for NetSuite clients who want that handled outside NS PS. Your clients get a full implementation experience without relying on NS Professional Services for eCommerce. Worth a quick call?",
+    "note_decision": null
   },
   {
     "url": "https://www.linkedin.com/in/alanjurysta",
@@ -177,7 +179,9 @@
     "already_connected": false,
     "has_conversation": false,
     "decision": "approved",
-    "note": null
+    "note": null,
+    "note_draft": "Hi Geoff. NetSuite SIs often don't carry Shopify or SuiteCommerce delivery in-house. My Team slots in as that build resource for your clients when eCommerce enters the conversation. Available to explore a fit?",
+    "note_decision": null
   },
   {
     "url": "https://www.linkedin.com/in/rex-gutermuth",
@@ -267,7 +271,9 @@
     "already_connected": false,
     "has_conversation": null,
     "decision": "approved",
-    "note": null
+    "note": null,
+    "note_draft": "Hi Louis-Philippe. Other NetSuite consultancies we work with have clients interested in Shopify or SuiteCommerce builds alongside their ERP. My Team fills that delivery layer on demand. Can we explore this?",
+    "note_decision": null
   },
   {
     "url": "https://www.linkedin.com/in/martin-painter-5218039",
