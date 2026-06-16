@@ -98,6 +98,9 @@
     "President"
   ],
 
+  "_retail_brand_guidance": "A lead at a retail/DTC/consumer brand (not an agency or SI) qualifies as warm or above ONLY when their company is a confirmed Shopify or NetSuite/SuiteCommerce user. The platform signal must be strong and current — it must appear in their current role description, company About section, or company name with clear specificity (e.g. 'Built our Shopify Plus store', 'our store runs SuiteCommerce', 'Shopify Plus merchant'). A vague career mention like 'has experience with Shopify' or a past role at a Shopify company does NOT count. Any title is eligible (VP Ecommerce, VP Marketing, CTO, CEO, Director) — the platform confirmation alone gates warm/hot classification. Without it, classify as cold regardless of seniority.",
+  "retail_brand_platform_required": true,
+
   "anti_patterns": [
     "Recruiter",
     "Recruitment",
