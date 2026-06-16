@@ -12,7 +12,9 @@
     "already_connected": false,
     "has_conversation": null,
     "decision": "approved",
-    "note": null
+    "note": null,
+    "note_draft": "Hi Gino. We fill the eCommerce build layer for NetSuite clients who want Shopify or SuiteCommerce handled outside NS Professional Services. Faster, more specialized. Enables a complete solution for your accounts. Can we explore a fit?",
+    "note_decision": "approved"
   },
   {
     "url": "https://www.linkedin.com/in/alanjurysta",
@@ -177,7 +179,9 @@
     "already_connected": false,
     "has_conversation": false,
     "decision": "approved",
-    "note": null
+    "note": null,
+    "note_draft": "Hi Geoff. Other NetSuite practices we work with had clients interested in eCommerce expertise alongside their ERP implementation. My Team fills that Shopify/SuiteCommerce layer under your banner. Are you open to a quick call?",
+    "note_decision": "approved"
   },
   {
     "url": "https://www.linkedin.com/in/rex-gutermuth",
@@ -267,7 +271,9 @@
     "already_connected": false,
     "has_conversation": null,
     "decision": "approved",
-    "note": null
+    "note": null,
+    "note_draft": "Hi Louis-Philippe. ERP dedicated consultancies rely on us when Shopify or SuiteCommerce enters a client engagement. We handle the eCommerce build layer under your banner, so your clients get the full stack. Can we explore this?",
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/martin-painter-5218039",

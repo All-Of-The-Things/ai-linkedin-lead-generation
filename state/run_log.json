@@ -1009,26 +1009,285 @@
     {
       "run_id": "2026-05-27-a3e82f1b",
       "started_at": "2026-05-27T00:00:00.000000+00:00",
-      "status": "in_progress",
+      "status": "cancelled",
       "phase": "search-connections",
       "criteria_used": "agency-partners",
-      "resume_from_step": 3,
+      "resume_from_step": 4,
       "steps_completed": [
         0,
         1,
-        2
+        2,
+        3
       ],
       "search_cursor": 3,
-      "notes": "Shopify/commerce-focused run \u2014 targeting Shopify Plus agency founders, eCommerce consulting directors, and digital commerce agency decision-makers",
+      "notes": "NetSuite/ERP agency-partners run \u2014 resumed 2026-06-09. Scoped enrichment: only today's 45 leads (2026-06-09-828a5bcb first_seen_run), not full backlog.",
       "queries_run": [
-        "term: Shopify Plus agency (25 results)",
-        "term: Shopify agency founder (25 results)",
-        "term: digital commerce consulting / CEO / US,CA,UK,AU (25 results)"
+        "term: NetSuite Alliance Partner / CEO / US,Canada (25 results)",
+        "term: SuiteCommerce implementation / Founder / UK,Australia (25 results)",
+        "term: Oracle NetSuite consulting / Managing Director / global (25 results)"
       ],
       "counts": {
-        "exclusion_set_size": 1566,
-        "new_stubs": 68
+        "exclusion_set_size": 2326,
+        "new_stubs": 45,
+        "cold_skipped_pre_enrichment": 2,
+        "enrichment_queued": 43,
+        "stale_new_leads_deferred": 87
+      },
+      "notes_step3": "Enriching all 132 status=new leads (2026-06-09)",
+      "last_updated": "2026-06-09T00:00:00.000000+00:00",
+      "cancelled_at": "2026-06-09T00:00:00.000000+00:00",
+      "cancel_reason": "superseded by run 2026-06-09-828a5bcb"
+    },
+    {
+      "run_id": "2026-06-09-828a5bcb",
+      "started_at": "2026-06-09T09:00:00.000000+00:00",
+      "status": "phase3_complete",
+      "criteria_used": "agency-partners",
+      "resume_from_step": "9",
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        "6a",
+        "6b",
+        "7",
+        "8"
+      ],
+      "counts": {
+        "exclusion_set_size": 2326,
+        "new_stubs": 45,
+        "cold_skipped_pre_enrichment": 2,
+        "enrichment_queued": 43,
+        "stale_new_leads_deferred": 87,
+        "classified": 43,
+        "hot": 11,
+        "warm": 23,
+        "cold": 10,
+        "surfaced_for_approval": 44,
+        "excluded_already_connected": 1,
+        "connections_sent": 10,
+        "newly_connected": 2,
+        "followups_drafted": 2,
+        "already_connected_detected": 1
+      },
+      "search_cursor": {
+        "role_idx": 2,
+        "industry_idx": 0,
+        "location_idx": 0
+      },
+      "errors": [],
+      "phase1_completed_at": "2026-06-10T10:00:00.000000+00:00",
+      "email_notification": {
+        "email_sent": true,
+        "phase": "search_complete",
+        "to": "martin@allofthethings.dev",
+        "resend_id": "a733e80a-5e14-4b89-82a8-287ae31dd27b",
+        "at": "2026-06-10T10:00:00.000000+00:00"
+      },
+      "phase2_completed_at": "2026-06-10T10:30:00.000000+00:00",
+      "email_notification_phase2": {
+        "email_sent": true,
+        "phase": "notes_ready",
+        "to": "martin@allofthethings.dev",
+        "resend_id": "7252736f-3bfd-49e6-b3b2-88dd90efcf26",
+        "at": "2026-06-10T10:30:00.000000+00:00"
+      },
+      "phase3_completed_at": "2026-06-11T09:30:00.000000+00:00",
+      "email_notification_phase3": {
+        "email_sent": true,
+        "phase": "messages_ready",
+        "resend_id": "37beec98-858d-4aad-82b1-413e2b0941dc",
+        "at": "2026-06-11T09:30:00.000000+00:00"
+      },
+      "phase3b_completed_at": "2026-06-11T10:48:00.000000+00:00",
+      "phase3b_note": "Second send batch: 9 sent (Palak, Nigel, Mustafa, R\u00e9da, Joseph, Ezequiel, Raj, Ramesh, Laura), 1 already_connected (Geoff Layton \u2192 connected, followup 2026-06-14)",
+      "phase3b_email": {
+        "email_sent": false,
+        "reason": "sandbox_denied",
+        "phase": "connections_sent_batch2"
       }
+    },
+    {
+      "run_id": "2026-06-10-wub5c3d2e1",
+      "started_at": "2026-06-10T09:00:00.000000+00:00",
+      "status": "completed",
+      "phase": "warm-up",
+      "criteria_used": "agency-partners",
+      "resume_from_step": 6,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "target_urls": [
+        "https://www.linkedin.com/in/joegentile",
+        "https://www.linkedin.com/in/yurii-kuzminov",
+        "https://www.linkedin.com/in/josh-green-901597187",
+        "https://www.linkedin.com/in/raghu-gnanasekaran-98b7141",
+        "https://www.linkedin.com/in/tony-caporal",
+        "https://www.linkedin.com/in/andrew-greenberg-b38b0864",
+        "https://www.linkedin.com/in/danstern",
+        "https://www.linkedin.com/in/peterson-emilya",
+        "https://www.linkedin.com/in/adamtregear",
+        "https://www.linkedin.com/in/hadi-bizri-2260a075"
+      ],
+      "counts": {
+        "leads_targeted": 10,
+        "reactions_sent": 9,
+        "leads_skipped_no_posts": 1,
+        "comment_drafts_surfaced": 6,
+        "comments_sent": 0,
+        "leads_with_no_original_posts": 3
+      },
+      "errors": [],
+      "completed_at": "2026-06-10T09:50:00.000000+00:00",
+      "warmup_comments_file": "2026-06-10-warmup-comments.json",
+      "email_notification": {
+        "email_sent": false,
+        "reason": "permission_denied",
+        "at": "2026-06-10T09:55:00.000000+00:00"
+      }
+    },
+    {
+      "run_id": "2026-06-11-c7e4f091",
+      "started_at": "2026-06-11T00:00:00.000000+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections",
+      "criteria_used": "netsuite-latam",
+      "resume_from_step": null,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "search_cursor": {
+        "role_idx": 0,
+        "industry_idx": 0,
+        "location_idx": 0
+      },
+      "counts": {
+        "new_leads": 72,
+        "classified": 72,
+        "hot": 6,
+        "warm": 22,
+        "cold": 44,
+        "surfaced_for_approval": 72,
+        "connections_sent": 0,
+        "errors": 0
+      },
+      "queries_run": [
+        "NetSuite / CEO / IT&S / Mexico",
+        "NetSuite / Founder / Computer Software / Colombia",
+        "Oracle NetSuite / Managing Director / Management Consulting / Argentina"
+      ],
+      "notes": "Step 1 skipped: first run for netsuite-latam, criteria file just created. Sandbox was blocking linkedapi.io \u2014 all LinkedIn commands run without sandbox. Steps 3+4 ran but run_log not updated; corrected on 2026-06-12. Step 5 ran on 2026-06-12; approval files written. run_log corrected on 2026-06-15.",
+      "errors": [],
+      "completed_at": "2026-06-12T00:00:00Z",
+      "email_notification": {
+        "email_sent": false,
+        "reason": "skipped by user",
+        "phase": "search_complete"
+      },
+      "phase1_completed_at": "2026-06-12T15:33:00.000000+00:00"
+    },
+    {
+      "run_id": "2026-06-15-b3f7a291",
+      "started_at": "2026-06-15T00:00:00.000000+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections",
+      "criteria_used": "netsuite-latam",
+      "resume_from_step": "6a",
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "search_cursor": {
+        "role_idx": 6,
+        "industry_idx": 2,
+        "location_idx": 0
+      },
+      "queries_run": [
+        "NetSuite / Fundador / Internet / Chile (3 results)",
+        "Oracle NetSuite / Co-Fundador / IT&S / Peru (4 results)",
+        "ERP / Managing Director / Computer Software / Brazil (25 results)"
+      ],
+      "counts": {
+        "exclusion_set_size": 2449,
+        "new_stubs": 32,
+        "enriched": 12,
+        "unenriched_deferred": 20,
+        "classified": 12,
+        "hot": 1,
+        "warm": 1,
+        "cold": 10,
+        "surfaced_for_approval": 12,
+        "email_sent": true
+      },
+      "files_written": [
+        "2026-06-15-b3f7a291-hot.json",
+        "2026-06-15-b3f7a291-warm.json",
+        "2026-06-15-b3f7a291-cold.json"
+      ],
+      "email_notification": {
+        "email_sent": true,
+        "phase": "search_complete",
+        "to": "martin@allofthethings.dev",
+        "resend_id": "2a4be7e1-ce26-4147-8ffc-0e64c25849e0",
+        "at": "2026-06-16T00:00:00.000000+00:00"
+      },
+      "phase1_completed_at": "2026-06-16T00:00:00.000000+00:00",
+      "errors": []
+    },
+    {
+      "run_id": "2026-06-16-wu31903be0",
+      "started_at": "2026-06-16T09:00:00.000000+00:00",
+      "status": "completed",
+      "phase": "warm-up",
+      "criteria_used": "agency-partners",
+      "resume_from_step": null,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "counts": {
+        "leads_targeted": 10,
+        "reactions_sent": 9,
+        "leads_skipped_no_posts": 1,
+        "comment_drafts_surfaced": 4,
+        "comments_sent": 0,
+        "no_original_posts": 3,
+        "no_comment_too_generic_or_sparse": 2
+      },
+      "errors": [],
+      "completed_at": "2026-06-16T16:05:00.000Z",
+      "notifications": [
+        {
+          "email_sent": true,
+          "phase": "warm_up_summary",
+          "to": "martin@allofthethings.dev",
+          "resend_id": "1609cff0-1914-4a82-98ba-d34e46fbb277",
+          "at": "2026-06-16T16:05:30.000Z"
+        }
+      ]
     }
   ],
   "retries": [
@@ -1048,6 +1307,25 @@
         "https://www.linkedin.com/in/colbert-gendreau-600167255"
       ],
       "note": "Both sends failed with unexpectedError. Likely daily connection request limit still active. Colbert Gendreau detected as newly accepted."
+    },
+    {
+      "run_id": "2026-06-11-c7e4f091",
+      "started_at": "2026-06-11T00:00:00.000000+00:00",
+      "status": "in_progress",
+      "phase": "search-connections",
+      "criteria_used": "netsuite-latam",
+      "resume_from_step": 1,
+      "steps_completed": [
+        0
+      ],
+      "errors": [
+        {
+          "step": 2,
+          "error": "exit code 7 (network error) on all LinkedIn API calls \u2014 connection list and person search both failing. account list succeeds (local). Service appears temporarily unavailable. Run preserved for resumption.",
+          "at": "2026-06-11T00:00:00.000000+00:00"
+        }
+      ],
+      "notes": "Blocked at Step 2 \u2014 LinkedIn API network error (exit 7) on all remote calls. Run is in_progress and will resume from Step 1 on next /search-connections invocation."
     }
   ]
 }
