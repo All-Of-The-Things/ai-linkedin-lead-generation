@@ -1,0 +1,126 @@
+{
+  "name": "agency-shopify",
+  "label": "Shopify Agency Partners",
+  "description": "Targets decision-makers at Shopify Plus agencies, eCommerce consultancies, and digital commerce implementation firms. Pitch angle: capacity overflow for Shopify Plus builds and SuiteCommerce cross-sell for agencies looking to expand their offering.",
+
+  "generated_at": "2026-07-01T00:00:00.000Z",
+  "generated_from_connections": 200,
+
+  "_note": "AOTT's angle with Shopify agencies is twofold: (1) overflow capacity — when their Shopify Plus pipeline backs up, we embed as the extra build team; (2) SuiteCommerce cross-sell — we bring SuiteCommerce capability they may not carry in-house. Target: decision-makers at Shopify Plus agencies, eCommerce consultancies, and digital commerce implementation firms.",
+
+  "reference_companies": [
+    "Aztech Digital"
+  ],
+
+  "_company_type_signals_note": "These signals must be platform-specific to count toward agency boost. Generic words like 'Solutions', 'Services', 'Digital', 'Advisory' alone are not sufficient — they must appear alongside a platform keyword.",
+  "company_type_signals": [
+    "Shopify Plus",
+    "Shopify Partner",
+    "Shopify Expert",
+    "Shopify Agency",
+    "Magento",
+    "Adobe Commerce",
+    "BigCommerce",
+    "Salesforce Commerce",
+    "eCommerce Agency",
+    "eCommerce Consulting",
+    "Digital Commerce"
+  ],
+
+  "target_roles": [
+    "CEO",
+    "Founder",
+    "Co-Founder",
+    "Managing Director",
+    "General Manager",
+    "CTO",
+    "VP of Delivery",
+    "Head of Delivery",
+    "VP of Professional Services",
+    "Director of Professional Services",
+    "Practice Director",
+    "Practice Lead",
+    "VP of Partnerships",
+    "Director of Partnerships",
+    "VP of Sales",
+    "Chief Revenue Officer",
+    "Head of Talent",
+    "Head of Operations"
+  ],
+
+  "_target_industries_note": "LinkedIn industry field alone is not sufficient — must be combined with platform-specific domain signals.",
+  "target_industries": [
+    "Information Technology and Services",
+    "Computer Software",
+    "Management Consulting",
+    "Internet"
+  ],
+
+  "target_locations": [
+    "United States",
+    "Canada",
+    "United Kingdom",
+    "Australia"
+  ],
+
+  "seniority_signals": [
+    "CEO",
+    "Founder",
+    "Co-Founder",
+    "CTO",
+    "COO",
+    "CRO",
+    "Managing Director",
+    "Managing Partner",
+    "General Manager",
+    "VP",
+    "Vice President",
+    "SVP",
+    "Head of",
+    "Director",
+    "Principal",
+    "Partner",
+    "Practice Lead",
+    "President"
+  ],
+
+  "_retail_brand_guidance": "A lead at a retail/DTC/consumer brand (not an agency) qualifies as warm or above ONLY when their company is a confirmed Shopify Plus or SuiteCommerce user. The platform signal must be strong and current. Without it, classify as cold regardless of seniority.",
+  "retail_brand_platform_required": true,
+
+  "anti_patterns": [
+    "Recruiter",
+    "Recruitment",
+    "Staffing",
+    "Student",
+    "Intern",
+    "QA Analyst",
+    "Junior",
+    "Developer",
+    "Engineer",
+    "Administrator",
+    "Analyst",
+    "Demand Generation",
+    "Bachelor of Science"
+  ],
+
+  "search_terms": [
+    "Shopify Plus agency founder",
+    "eCommerce agency CEO",
+    "digital commerce consulting",
+    "Shopify expert managing director",
+    "Shopify agency head of delivery"
+  ],
+
+  "scoring_weights": {
+    "role_match": 0.30,
+    "industry_match": 0.30,
+    "seniority_match": 0.25,
+    "location_match": 0.10,
+    "company_size_match": 0.05
+  },
+
+  "classification_thresholds": {
+    "hot": 75,
+    "warm": 45
+  }
+}

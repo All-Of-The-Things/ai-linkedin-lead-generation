@@ -1,0 +1,60 @@
+# Connection Note — NetSuite & ERP Agency Partners
+
+<!-- Criteria: agency-netsuite -->
+<!-- Max 300 chars. Tone: direct, peer-to-peer, outcome-first. -->
+<!-- Tokens: {{first_name}}, {{current_company}} -->
+<!-- Agent: read current_title, headline, and linkedin_raw to identify their ERP stack and delivery model, then personalise. -->
+
+## Style guide
+
+- Open with "Hi {{first_name}}." — period after the name, never a comma, never "Hey"
+- Lead with a **problem, gap, or outcome** relevant to their ERP practice — NOT with who we are or what we run
+- **"We" and "My Team"** (capital T) are both default pronouns — mix them across notes. Never use the same pronoun in every message in a batch.
+- Frame around **what the ERP partner gains**: a wider service offering, more delivery capacity for eCommerce scope, a cleaner client experience — without growing their team
+- **Vary the partnership vocabulary** — see the vocabulary bank below. Never use the same expression twice in a batch
+- **Never use "hire" language for agency contacts.** Agencies partner, not hire for individual projects. "Don't have to wait on a new hire" or "avoid a new hire" are wrong. "Without growing headcount" is acceptable.
+- "White-label" is acceptable but use it at most once per batch. Never for direct client contacts.
+- Em-dashes are allowed as a structural separator — one per note maximum
+- End with a **specific, low-friction meeting ask** — rotate these: "Available to chat this week?", "Are you open to a quick call?", "Worth a quick call?", "Can we explore a fit?", "Open to a quick call?", "Available to explore?", "Available to explore partnership opportunities?"
+- Hard limit: 300 characters
+
+## Partnership vocabulary bank (vary — never repeat the same expression in a batch)
+
+**Relationship framing**: "your delivery arm", "under your banner", "an extension of your Team", "as your eComm build partner", "as the backend arm that plugs in", "your dedicated eComm squad", "we embed for those projects"
+
+**Capacity framing**: "augment your Team's capacity", "extend your Team's capabilities", "absorb that overflow", "bolt-on capacity when the scope calls for it", "on demand Shopify/SuiteCommerce expertise", "more output, same team size on your end", "you keep the account, we supply the technical muscle"
+
+**Service offering framing**: "enable that service offering", "expand your offering into eCommerce", "seamless augmented offering to your clients", "My Team enables that service line"
+
+**Outcome framing**: "your client gets a clean delivery", "the client gets the full stack", "seamless to your client", "the client never feels the gap", "you keep the relationship, we handle the build", "single-vendor experience for your clients"
+
+## SuiteCommerce practitioner note
+
+When the lead is a known SuiteCommerce practitioner (headline keywords: "SuiteCommerce Practitioner", "SuiteCommerce Architect"), do **not** pitch "Shopify alongside SuiteCommerce" as a co-project — those rarely combine. Pitch **capacity overflow** for their existing eCommerce pipeline. Use "Shopify/SuiteCommerce" as a combined term for one offering they may need more hands on.
+
+## NetSuite / Oracle employee framing
+
+When `current_company` is "NetSuite", "Oracle NetSuite", or "Oracle" AND the role involves sales, presales, or account management:
+- Their clients need eCommerce (Shopify/SuiteCommerce) built alongside their NetSuite deployment
+- Frame AOTT as filling the eComm layer NS PS doesn't own cleanly
+- Never use "referral connection" — frame as enabling a complete client experience
+- Example angle: "We fill the eCommerce build layer for NetSuite clients who want that handled outside NS PS — enables a single-vendor experience for your clients."
+
+## Example messages (voice reference — do not copy verbatim)
+
+"Hi {{first_name}}. ERP focused consultancies don't usually carry eCommerce expertise in-house. My Team enables that service offering — Shopify/SuiteCommerce implementations under your banner, your Team stays on the ERP and integration side. Available to explore?"
+
+"Hi {{first_name}}. We help Alliance Partners augment their capacity for clients looking to deliver an online store as part of their NS implementation. On demand Shopify/SuiteCommerce build expertise, your Team stays on the ERP side. Can we explore a fit?"
+
+"Hi {{first_name}}. Other NetSuite agencies we work with had clients interested in eComm expertise. My Team fills that gap seamlessly — Shopify/SuiteCommerce implementation under your brand, you keep the client relationship. Are you open to a quick call?"
+
+"Hi {{first_name}}. My Team can extend {{current_company}}'s reach into Shopify/SuiteCommerce for clients who need storefront expertise. We take care of that layer, your Team stays focused on the NetSuite side. Available for a quick call?"
+
+## What to personalise
+
+- Name their actual ERP stack (NetSuite, SuiteCommerce, Oracle, Celigo, Boomi) — never be vague
+- If their company is a known NetSuite SI (Plative, Esonus, Foretopia, N2Lab, Techfino), skip the generic framing and be specific about what their clients encounter
+- If their role is more technical (Solutions Architect, Practice Lead), lean into the capability angle
+- If their role is more executive (CEO, MD, CRO), lean into the business/revenue angle — "more output", "wider offer", "keep the account"
+- Match the energy: concise headline = concise note; detailed headline = slightly more specific note
+- **For direct client contacts** (a CTO or in-house operator, not running an agency): drop the partner framing entirely. Frame as: "we take on that build layer so your team doesn't have to"
