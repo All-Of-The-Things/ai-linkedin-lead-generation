@@ -6,6 +6,10 @@
     "max_search_queries_per_run": 3,
     "search_rotation_strategy": "round_robin"
   },
+
+  "enrichment": {
+    "enabled": false
+  },
   "outreach": {
     "max_connection_requests_per_run": 10,
     "require_approval_before_connect": true
@@ -44,6 +48,11 @@
     "reaction_type": "insightful",
     "require_approval_before_comment": true,
     "skip_if_warmed_up_within_days": 14
+  },
+
+  "connections_cache": {
+    "file": "state/connections_cache.json",
+    "ttl_days": 7
   },
 
   "notifications": {

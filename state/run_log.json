@@ -1288,6 +1288,145 @@
           "at": "2026-06-16T16:05:30.000Z"
         }
       ]
+    },
+    {
+      "run_id": "2026-06-16-a9d3c7f2",
+      "started_at": "2026-06-16T16:30:00.000000+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections",
+      "criteria_used": "agency-partners",
+      "resume_from_step": "6a",
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "search_cursor": {
+        "role_idx": 5,
+        "industry_idx": 3,
+        "location_idx": 3
+      },
+      "queries_run": [
+        "NetSuite / Co-Founder / IT&S / United States (25 results, 20 new)",
+        "Shopify Plus / Managing Director / Computer Software / Canada (25 results, 24 new)",
+        "ERP consulting / General Manager / Management Consulting / United Kingdom (25 results, 25 new)"
+      ],
+      "counts": {
+        "connections_cache_used": true,
+        "connections_cache_size": 1601,
+        "total_search_results": 75,
+        "skipped_exclusion": 6,
+        "new_stubs": 69,
+        "enriched": 69,
+        "classified": 69,
+        "hot": 17,
+        "warm": 19,
+        "cold": 33,
+        "surfaced_for_approval": 69,
+        "already_connected_removed": 0,
+        "email_sent": false,
+        "email_skipped_reason": "user denied sandbox override"
+      },
+      "files_written": [
+        "2026-06-16-a9d3c7f2-hot.json",
+        "2026-06-16-a9d3c7f2-warm.json",
+        "2026-06-16-a9d3c7f2-cold.json"
+      ],
+      "phase1_completed_at": "2026-06-18T00:00:00.000000+00:00",
+      "last_updated": "2026-06-18T00:00:00.000000+00:00",
+      "errors": []
+    },
+    {
+      "run_id": "2026-06-18-b5c71d3a",
+      "started_at": "2026-06-18T00:00:00.000000+00:00",
+      "status": "cancelled",
+      "phase": "search-connections",
+      "criteria_used": "agency-partners",
+      "resume_from_step": 3,
+      "steps_completed": [
+        0,
+        1,
+        2
+      ],
+      "search_cursor": {
+        "role_idx": 8,
+        "industry_idx": 2,
+        "location_idx": 2
+      },
+      "queries_run": [
+        "CTO NetSuite Shopify ERP / Australia (15 results, 15 new)",
+        "VP Delivery ERP NetSuite / United States (25 results, 18 new after exclusions)",
+        "Head of Delivery Shopify eCommerce / Canada (25 results, 25 new after exclusions)"
+      ],
+      "counts": {
+        "connections_cache_used": true,
+        "connections_cache_age_days": 2,
+        "connections_cache_size": 1601,
+        "seen_size": 985,
+        "total_exclusions": 2552,
+        "total_search_results": 65,
+        "skipped_exclusion": 7,
+        "new_stubs": 58
+      },
+      "cancel_reason": "superseded by 2026-07-01-e3a9b4f1 (agency-netsuite run)",
+      "cancelled_at": "2026-07-01T00:00:00.000000+00:00",
+      "errors": []
+    },
+    {
+      "run_id": "2026-07-01-e3a9b4f1",
+      "started_at": "2026-07-01T00:00:00.000000+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": 9,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "search_cursor": {
+        "role_idx": 0,
+        "industry_idx": 0,
+        "location_idx": 0
+      },
+      "queries_run": [
+        "NetSuite Alliance Partner / CEO / IT&S / United States (25 results, 12 new)",
+        "SuiteCommerce implementation / Founder / Computer Software / UK,Australia (25 results, 18 new)",
+        "Oracle NetSuite consulting / Managing Director / Management Consulting / Canada,UK (25 results, 16 new)"
+      ],
+      "counts": {
+        "connections_cache_rebuilt": true,
+        "connections_cache_size": 1538,
+        "seen_size_before": 1043,
+        "exclusion_set_size": 2540,
+        "total_search_results": 75,
+        "skipped_exclusion": 29,
+        "new_stubs": 46,
+        "classified": 46,
+        "hot": 18,
+        "warm": 14,
+        "cold": 14,
+        "surfaced_for_approval": 46,
+        "email_sent": false,
+        "email_note": "email send permission denied \u2014 skipped (non-blocking)"
+      },
+      "errors": [],
+      "step3_note": "enrichment disabled (pipeline.json enrichment.enabled=false) \u2014 skipped all linkedin person fetch calls",
+      "step4_completed_at": "2026-07-06T15:28:04.497222Z",
+      "phase1_completed_at": "2026-07-06T15:30:23.688641Z",
+      "last_updated": "2026-07-06T15:30:23.688641Z",
+      "step5_note": "connection status checks skipped \u2014 connections_cache was rebuilt this same run (0 days old, 1538 URLs), all 46 leads were verified not-connected by exclusion set in Step 2",
+      "files_written": [
+        "2026-07-01-e3a9b4f1-hot.json",
+        "2026-07-01-e3a9b4f1-warm.json",
+        "2026-07-01-e3a9b4f1-cold.json"
+      ]
     }
   ],
   "retries": [
