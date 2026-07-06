@@ -10,8 +10,8 @@
    - **Step 0** — Re-entry check: resume an in-progress run if one exists, otherwise create a new run entry in `run_log.json`.
    - **Step 1** — Criteria refresh (conditional): runs `agents/criteria-extractor.md` if due.
    - **Step 2** — Search for new leads: builds exclusion set (3× `linkedin connection list` union + `seen.json`), runs search queries, writes stubs to `leads.json` and `seen.json`.
-   - **Step 3** — Profile enrichment: fetches full profiles for all `status: "new"` leads.
-   - **Step 4** — Classification: invokes `agents/lead-classifier.md` to score and classify enriched leads.
+   - **Step 3** — Profile enrichment (conditional): checks `pipeline.json → enrichment.enabled`. If `false` (default), skips all `linkedin person fetch` calls and proceeds directly to classification using search-result fields (`name`, `headline`, `location`). If `true`, fetches full profiles for all `status: "new"` leads.
+   - **Step 4** — Classification: invokes `agents/lead-classifier.md` to score and classify leads. When enrichment was skipped, classification runs from `headline` only; `current_title` and `current_company` will be null.
    - **Step 5** — Surface approvals: for every hot/warm lead runs a connection status check (removes already-connected leads) and a conversation check (adds `has_conversation` flag), then writes classification-split files (`YYYY-MM-DD-<run_id>-hot.json`, `-warm.json`, `-cold.json`), paginated at 30 entries each, and sends an email notification.
 4. Sends an email via `agents/email-notifier.md` with `phase: "search_complete"`.
 5. Updates `state/run_log.json` with `status: "phase1_complete"`.
