@@ -7,6 +7,11 @@ You are a subagent in the LinkedIn lead generation pipeline. Your job is to scor
 The calling pipeline will pass you:
 - A JSON array of lead records (each with `url`, `name`, `headline`, `current_title`, `current_company`, `industry`, `location`)
 - The contents of the active criteria file
+- An `enrichment_enabled` flag (true/false)
+
+### When enrichment was skipped (`enrichment_enabled: false`)
+
+`current_title`, `current_company`, and `industry` will be null for all leads. Extract company and role signals from `headline` only — LinkedIn headlines typically contain both (e.g. "CEO at Plative | NetSuite Alliance Partner", "Managing Director · Shopify Plus Agency"). Apply the domain gate and scoring rules as normal, using `headline` as the source for role and company signals. Score `company_size_match` at `0.5 × weight` (data unavailable). Always append "enrichment skipped — classification from headline only" to the `score_rationale`.
 
 ## Step 0 — Domain Gate (run first, before scoring)
 
@@ -47,6 +52,14 @@ Each dimension scores 0–1. Multiply by weight × 100 and sum.
 **Agency boost**: If `current_company` exactly matches any `reference_companies`, or if the company name or headline contains 2+ platform-specific signals (e.g. "NetSuite Partner", "Oracle consulting", "Shopify Plus agency"), add 15 points before capping.
 
 **End-client penalty**: If the lead's company is clearly a retail/DTC brand, or a non-commerce-ecosystem company (healthcare, automotive, HR tech, fintech consumer, crypto, media, food/CPG, video production, general SaaS product with no agency/SI context), subtract 25 points. This catches cases the domain gate might partially pass (e.g. a DTC brand that mentions Shopify).
+
+**Oracle/NetSuite internal employee rule**: When the lead works directly at Oracle, Oracle NetSuite, or NetSuite (headline ends in "at Oracle" / "at NetSuite", or `current_company` is Oracle/NetSuite), apply the following sub-classification:
+
+- **Internal delivery staff** — roles like "Consulting Technical Director", "Consulting Director", "Senior Director Consulting", "Principal Consultant", "Technical Consultant", "Implementation Consultant", "Project Manager" at Oracle/NetSuite: subtract 25 points ("internal delivery penalty"). These are internal Oracle consultants who do the hands-on work; they rarely source external build teams and are an exception, not the rule. Cap score at warm.
+- **Outward-facing roles** — "Partner Manager", "Account Executive", "Solution Consulting" (pre-sales), "Business Development", "Alliance", "Channel", "ISV": no penalty. These are the contacts who work with external partners and could refer AOTT. Keep at warm.
+- **Practice leadership** — "Practice Director", "VP", "SVP", "Managing Director" at Oracle/NetSuite: no penalty. These are senior enough to manage external partner relationships. Can score hot if other signals are strong.
+
+State which sub-classification you applied in `score_rationale`.
 
 **Anti-patterns**: if `current_title` or `headline` contains any `anti_patterns` keyword, cap the score at 20.
 

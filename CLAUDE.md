@@ -106,7 +106,12 @@ Mark step complete in run_log before moving on.
 
 ### Step 2 — Search for New Leads
 
-**Before building queries — build the exclusion set:** Run `linkedin connection list --limit 3000 --json -q` **three times in a row** and union all returned `publicUrl` values into a single in-memory exclusion set (normalize each: lowercase, strip trailing slash). The API returns a non-deterministic subset of connections on each call; running three calls substantially increases coverage. A search result is skipped if its URL appears in `state/seen.json` OR in this exclusion set. Do NOT write existing connections into `seen.json` — the exclusion set is in-memory per run only.
+**Before building queries — build the exclusion set:**
+
+1. Check `state/connections_cache.json` (`connections_cache.file` in `pipeline.json`).
+   - If the file exists and `cached_at` is within the last `connections_cache.ttl_days` days (default 7): load `urls` from the cache as the exclusion set. No API calls needed.
+   - If the file is missing or expired: run `linkedin connection list --limit 3000 --json -q` **three times in a row**, union all returned `publicUrl` values (normalize: lowercase, strip trailing slash), write to `state/connections_cache.json` as `{ "cached_at": "<now ISO>", "connection_count": N, "urls": [...sorted...] }`, then use that as the exclusion set.
+2. A search result is skipped if its URL appears in `state/seen.json` OR in this exclusion set. Do NOT write existing connections into `seen.json` — the exclusion set is used in-memory per run only.
 
 1. Load `config/criteria/<criteria_used>.json` (resolved in Step 1) and `config/pipeline.json`.
 2. Build up to `search.max_search_queries_per_run` queries by rotating through combinations of `target_roles`, `target_industries`, and `target_locations`. Track the rotation cursor in the current run_log entry (`search_cursor`).
@@ -119,30 +124,33 @@ Mark step complete in run_log before moving on.
    - Check `state/seen.json` AND the in-memory exclusion set. If present in either, skip.
    - **Connection status check:** Skipped here for performance (N candidates × ~30s is too slow). False positives are caught in Step 5 for hot/warm leads and at the send step for any that slip through.
    - Add to `seen.json` immediately (write-through).
-   - Add a stub record to `leads.json` with `status: "new"`, `first_seen_run: <today>`.
+   - Add a stub record to `leads.json` with `status: "new"`, `first_seen_run: <today>`. **Also write any fields returned by the search API** — at minimum `name`, `headline`, `location` — into the stub. These are available from search results without a separate fetch and are critical when enrichment is disabled.
 5. On exit code 6: wait `rate_limit.retry_delay_seconds`, retry up to `rate_limit.max_retries`. If still failing, log, skip that query, continue to next.
 
 Mark step complete in run_log.
 
-### Step 3 — Profile Enrichment
+### Step 3 — Profile Enrichment (conditional)
 
-For each lead in `leads.json` with `status: "new"`:
-```
-linkedin person fetch <url> --experience --json -q
-```
-Populate: `name`, `headline`, `location`, `industry`, `current_title`, `current_company`, `linkedin_raw`.
+1. Read `pipeline.json → enrichment.enabled`.
+2. **If `false` (default):** Log "enrichment disabled by pipeline config". Mark step complete in run_log. Proceed to Step 4 immediately — no `linkedin person fetch` calls are made.
+3. **If `true`:** For each lead in `leads.json` with `status: "new"`:
+   ```
+   linkedin person fetch <url> --experience --json -q
+   ```
+   Populate: `name`, `headline`, `location`, `industry`, `current_title`, `current_company`, `linkedin_raw`.
 
-On exit code 6: leave lead at `"new"` (retry next run — this step is re-entrant). Continue to next lead.
-On other errors: append to lead's `errors` array, leave at `"new"`.
+   On exit code 6: leave lead at `"new"` (retry next run — this step is re-entrant). Continue to next lead.
+   On other errors: append to lead's `errors` array, leave at `"new"`.
 
 Mark step complete in run_log.
 
 ### Step 4 — Classification
 
-1. Collect all leads with `status: "new"` that have a non-null `name` (i.e., enrichment succeeded).
-2. Invoke `agents/lead-classifier.md` as a subagent, passing the batch of leads and the contents of `config/criteria/<criteria_used>.json`.
-3. Receive back a JSON array: `[{ url, score, classification, score_rationale }]`.
-4. For each result, update the lead in `leads.json`: set `score`, `classification`, `score_rationale`, `status: "classified"`, `last_updated`.
+1. Read `pipeline.json → enrichment.enabled` and pass it to the classifier as `enrichment_enabled`.
+2. Collect all leads with `status: "new"` that have a non-null `name`. When enrichment is disabled, `name` comes from the search stub (Step 2). When enrichment is enabled, `name` confirms the enrichment succeeded.
+3. Invoke `agents/lead-classifier.md` as a subagent, passing the batch of leads, the contents of `config/criteria/<criteria_used>.json`, and `enrichment_enabled`.
+4. Receive back a JSON array: `[{ url, score, classification, score_rationale }]`.
+5. For each result, update the lead in `leads.json`: set `score`, `classification`, `score_rationale`, `status: "classified"`, `last_updated`.
 
 Mark step complete in run_log.
 
@@ -165,6 +173,7 @@ Mark step complete in run_log.
      "classification": "hot|warm|cold",
      "score": 88,
      "score_rationale": "...",
+     "enriched": true,
      "surfaced_at": "<now ISO>",
      "already_connected": false,
      "has_conversation": false,
@@ -172,7 +181,7 @@ Mark step complete in run_log.
      "note": null
    }
    ```
-   `already_connected` and `has_conversation` are populated by the checks in step 4 below. Cold entries get `null` for both (checks are skipped for cold).
+   Set `enriched` to `false` when `pipeline.json → enrichment.enabled` is false — in that case `current_title` and `current_company` will be null (visible to the user as a signal to validate manually). `already_connected` and `has_conversation` are populated by the checks in step 4 below. Cold entries get `null` for both (checks are skipped for cold).
 4. **Connection status + conversation checks (hot and warm only):** Before writing any files, run two checks on every hot and warm entry. Cold leads are skipped — the API cost is not worth it.
 
    a. **Connection status check:**
