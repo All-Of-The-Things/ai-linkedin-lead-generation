@@ -1427,6 +1427,111 @@
         "2026-07-01-e3a9b4f1-warm.json",
         "2026-07-01-e3a9b4f1-cold.json"
       ]
+    },
+    {
+      "run_id": "2026-07-06-b2ba86e7",
+      "started_at": "2026-07-06T18:55:36.778559+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": 6,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1538,
+        "exclusion_set_size": 1538,
+        "total_search_results": 51,
+        "skipped_exclusion": 12,
+        "new_stubs": 39,
+        "classified": 39,
+        "hot": 6,
+        "warm": 6,
+        "cold": 27,
+        "surfaced_for_approval": 38,
+        "removed_already_connected_or_pending": 1,
+        "email_sent": false
+      },
+      "errors": [],
+      "step1_note": "criteria refresh skipped: file exists, run 38 mod 7 != 0",
+      "last_updated": "2026-07-07T18:48:50.363628+00:00",
+      "queries_run": [
+        "NetSuite partner / CTO / IT&S / United States (25 results, 13 new)",
+        "ERP implementation / Practice Director / Mgmt Consulting,IT&S / US,Canada (25 results, 25 new)",
+        "SuiteCommerce / Co-Founder / Computer Software,Internet / UK,Australia (1 results, 1 new)"
+      ],
+      "search_cursor": {
+        "role_idx": 6,
+        "industry_idx": 3,
+        "location_idx": 3
+      },
+      "step3_note": "enrichment disabled (pipeline.json enrichment.enabled=false) \u2014 skipped all linkedin person fetch calls",
+      "step4_completed_at": "2026-07-06T19:13:50.574471+00:00",
+      "step4_note": "93 stale status=new leads from prior runs (other criteria) intentionally excluded, matching precedent of run 2026-07-01-e3a9b4f1",
+      "files_written": [
+        "2026-07-06-b2ba86e7-hot.json",
+        "2026-07-06-b2ba86e7-warm.json",
+        "2026-07-06-b2ba86e7-cold.json"
+      ],
+      "step5_note": "connection+conversation checks run on 12 hot/warm leads; 1 removed (pending request): [('Donna Corwin', 'pending')]",
+      "phase1_completed_at": "2026-07-07T18:48:50.363628+00:00",
+      "email_note": "email send interrupted by user \u2014 skipped (non-blocking)",
+      "post_run_note": "user reviewed approvals manually on 2026-07-07: 2 approved and sent outside pipeline (Manoj Nair, Dan Goldman), all others rejected"
+    },
+    {
+      "run_id": "2026-07-07-f6e4a11c",
+      "started_at": "2026-07-07T18:51:39.283416+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections",
+      "criteria_used": "agency-partners",
+      "resume_from_step": 5,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "step1_note": "criteria refresh skipped: file exists, run 39 mod 7 != 0",
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1538,
+        "exclusion_set_size": 1538,
+        "total_search_results": 75,
+        "skipped_exclusion": 11,
+        "new_stubs": 64,
+        "classified": 64,
+        "hot": 11,
+        "warm": 31,
+        "cold": 22,
+        "surfaced_for_approval": 64
+      },
+      "errors": [],
+      "queries_run": [
+        "ERP implementation / VP of Professional Services / Mgmt Consulting,IT&S / UK (25 results, 21 new)",
+        "Shopify Plus / Director of Partnerships / Internet,Computer Software / AU,Canada (25 results, 19 new)",
+        "Oracle consulting / Practice Director / IT&S / United States (25 results, 24 new)"
+      ],
+      "search_cursor": {
+        "role_idx": 13,
+        "industry_idx": 1,
+        "location_idx": 1
+      },
+      "step3_note": "enrichment disabled (pipeline.json enrichment.enabled=false) \u2014 skipped all linkedin person fetch calls",
+      "last_updated": "2026-07-08T14:34:16.706917+00:00",
+      "step4_completed_at": "2026-07-07T19:13:30.171922+00:00",
+      "phase1_completed_at": "2026-07-08T14:34:16.706917+00:00",
+      "files_written": [
+        "2026-07-07-f6e4a11c-links.json"
+      ],
+      "step5_note": "session died mid-Step-5 checks; run completed retroactively on 2026-07-08 using the new Abbreviated Mode links-file format (Step 5L) \u2014 no status/conversation checks, no email. Pending-requests audit confirmed none of these 64 leads were contacted."
     }
   ],
   "retries": [
