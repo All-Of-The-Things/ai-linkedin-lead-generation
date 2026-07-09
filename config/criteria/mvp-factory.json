@@ -137,6 +137,20 @@
     "manual"
   ],
 
+  "_excluded_employers_note": "Employees of large platform vendors and big tech (Oracle, NetSuite, Shopify, Salesforce, SAP, Adobe, Microsoft, Google, Amazon, Meta) are never MVP Factory buyers — they have effectively unlimited internal build capacity, the exact opposite of the target profile. Classify cold, cap score at 25, regardless of title. Detect from the headline when company fields are null ('at Oracle', '@ Shopify', etc.). This is the large-enterprise penalty from _classifier_note applied as a hard rule.",
+  "excluded_employers": [
+    "Oracle",
+    "NetSuite",
+    "Shopify",
+    "Salesforce",
+    "SAP",
+    "Adobe",
+    "Microsoft",
+    "Google",
+    "Amazon",
+    "Meta"
+  ],
+
   "anti_patterns": [
     "Software Engineer",
     "Developer",

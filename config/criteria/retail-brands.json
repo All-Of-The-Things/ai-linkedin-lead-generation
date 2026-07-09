@@ -61,6 +61,18 @@
     "Global"
   ],
 
+  "_excluded_employers_note": "This criteria targets people at retail and consumer BRANDS. Employees of the commerce platform vendors themselves (Shopify, Oracle/NetSuite, Salesforce, Adobe, BigCommerce) are not brands and not leads — classify cold, cap score at 25, regardless of seniority. Detect from the headline when company fields are null: 'at Shopify', '@ Shopify', 'at Oracle', 'at NetSuite'.",
+  "excluded_employers": [
+    "Shopify",
+    "Oracle",
+    "NetSuite",
+    "Salesforce",
+    "SAP",
+    "Adobe",
+    "Microsoft",
+    "BigCommerce"
+  ],
+
   "anti_patterns": [
     "Recruiter",
     "Recruitment",

@@ -100,6 +100,19 @@
     "Presidente"
   ],
 
+  "_excluded_employers_note": "AOTT sells staff augmentation TO the partner ecosystem, never to the platform vendors themselves. Anyone whose CURRENT employer is a platform vendor is not a lead: they have internal delivery orgs and do not buy external agency capacity. Detect from the headline when company fields are null: 'at Oracle', 'en Oracle', 'at NetSuite', '@ Shopify', 'Oracle Consulting'. Oracle-internal titles like 'Consulting Practice Director' / 'Director de Consultoría en Oracle' are vendor employees, not partner-agency staff. Classify excluded-employer leads as cold and cap score at 25 regardless of seniority — this exclusion overrides company_type_signals and seniority_signals. Do not drop them from output; the operator can rescue from cold. Also cold: mega-SIs (Accenture, Deloitte, Capgemini, IBM, Infosys, TCS, Wipro, Cognizant, Globant) — cap at 40; and in-house IT/ERP leaders at end-user enterprises — cap at 30. The buyer must work at a consultora/agency whose BUSINESS is delivering NetSuite/SuiteCommerce projects for clients.",
+  "excluded_employers": [
+    "Oracle",
+    "NetSuite",
+    "Oracle NetSuite",
+    "Shopify",
+    "Salesforce",
+    "SAP",
+    "Adobe",
+    "Microsoft",
+    "BigCommerce"
+  ],
+
   "anti_patterns": [
     "Recruiter",
     "Recruitment",
@@ -116,10 +129,11 @@
     "Bachelor of Science"
   ],
 
+  "_search_terms_note": "QUERY-BUILDING RULE for Step 2: never pair a bare platform name with a role — 'Oracle consulting' matches Oracle's own Consulting org. Every query must include a partner/implementador/consultora/agency qualifier alongside the platform name so results skew toward people whose employer partners with the platform rather than the vendor's own staff.",
   "search_terms": [
     "NetSuite partner CEO Mexico",
-    "Oracle consulting director Colombia",
-    "ERP implementation director Argentina",
+    "Oracle partner consultora director Colombia",
+    "ERP implementation consultancy director Argentina",
     "NetSuite implementador fundador",
     "Shopify Plus agency Latam"
   ],

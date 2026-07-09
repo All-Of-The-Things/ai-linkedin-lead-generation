@@ -89,6 +89,19 @@
   "_retail_brand_guidance": "A lead at a retail/DTC/consumer brand (not an agency or SI) qualifies as warm or above ONLY when their company is a confirmed Shopify or NetSuite/SuiteCommerce user. The platform signal must be strong and current. Without it, classify as cold regardless of seniority.",
   "retail_brand_platform_required": true,
 
+  "_excluded_employers_note": "AOTT sells staff augmentation TO the partner ecosystem, never to the platform vendors themselves. Anyone whose CURRENT employer is a platform vendor is not a lead: they have internal delivery orgs and do not buy external agency capacity. Detect from the headline when company fields are null: 'at Oracle', 'at NetSuite', '@ Shopify', 'Oracle Consulting', 'Oracle Cloud Applications'. Watch for Oracle-internal titles — 'Consulting Practice Director', 'Consulting Project Director', 'Head of Consulting Services' with Oracle context (or no partner-company context at all) are vendor employees, not partner-agency staff. Classify excluded-employer leads as cold and cap score at 25 regardless of seniority — this exclusion overrides company_type_signals and seniority_signals. Do not drop them from output; the operator can still manually approve a rare vendor-side contact from the cold tier. Two adjacent exclusions, also cold: (a) mega-SIs with in-house delivery at scale (Accenture, Deloitte, Capgemini, IBM, Infosys, TCS, Wipro, Cognizant, Coforge) — cap at 40; (b) in-house IT/ERP/digital-transformation leaders at end-user enterprises or unrelated software vendors (banks, insurers, Unit4, BlackLine, etc.) — cap at 30. The buyer must work at an agency, SI, or consultancy whose BUSINESS is delivering NetSuite/ERP projects for clients, sized boutique-to-mid-market like the reference_companies.",
+  "excluded_employers": [
+    "Oracle",
+    "NetSuite",
+    "Oracle NetSuite",
+    "Shopify",
+    "Salesforce",
+    "SAP",
+    "Adobe",
+    "Microsoft",
+    "BigCommerce"
+  ],
+
   "anti_patterns": [
     "Recruiter",
     "Recruitment",
@@ -105,10 +118,11 @@
     "Bachelor of Science"
   ],
 
+  "_search_terms_note": "QUERY-BUILDING RULE for Step 2: never pair a bare platform name with a role. 'Oracle consulting' matches Oracle's own Consulting org. Every query must include a partner/agency/implementation/reseller qualifier alongside the platform name (e.g. 'NetSuite alliance partner', 'SuiteCommerce agency') so results skew toward people whose employer partners with the platform rather than the vendor's own staff.",
   "search_terms": [
-    "NetSuite partner CEO",
-    "Oracle consulting managing director",
-    "ERP implementation director",
+    "NetSuite alliance partner CEO",
+    "NetSuite solution provider managing director",
+    "ERP implementation consultancy director",
     "SuiteCommerce agency founder",
     "NetSuite SI managing director"
   ],

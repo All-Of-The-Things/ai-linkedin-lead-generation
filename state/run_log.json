@@ -1532,6 +1532,54 @@
         "2026-07-07-f6e4a11c-links.json"
       ],
       "step5_note": "session died mid-Step-5 checks; run completed retroactively on 2026-07-08 using the new Abbreviated Mode links-file format (Step 5L) \u2014 no status/conversation checks, no email. Pending-requests audit confirmed none of these 64 leads were contacted."
+    },
+    {
+      "run_id": "2026-07-08-ce497cef",
+      "started_at": "2026-07-08T16:33:38.626606+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-partners",
+      "resume_from_step": 10,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "step1_note": "criteria refresh skipped: file exists, run 40 mod 7 != 0. Criteria manually refined this session per operator feedback (excluded_employers rule added)",
+      "counts": {
+        "connections_cache_rebuilt": true,
+        "connections_cache_size": 1630,
+        "seen_size_before": 1192,
+        "exclusion_set_size": 2776,
+        "total_search_results": 61,
+        "skipped_exclusion": 15,
+        "new_stubs": 46,
+        "classified": 46,
+        "hot": 3,
+        "warm": 4,
+        "cold": 39,
+        "surfaced_for_approval": 46
+      },
+      "errors": [],
+      "queries_run": [
+        "NetSuite alliance partner / Director of Partnerships / CompSW,IT&S / Canada (25 results, 13 new)",
+        "Shopify Plus agency / VP of Sales / Internet,CompSW / United Kingdom (11 results, 10 new)",
+        "ERP implementation consultancy / Chief Revenue Officer / MgmtCons,IT&S / Australia (25 results, 23 new)"
+      ],
+      "search_cursor": {
+        "role_idx": 16,
+        "industry_idx": 0,
+        "location_idx": 0
+      },
+      "step3_note": "abbreviated mode: Step 3 never runs, no person fetch calls",
+      "last_updated": "2026-07-08T17:52:14.030938+00:00",
+      "step4_note": "classified only this run's leads; score_rationale not persisted (abbreviated mode); classifier + all criteria files refined this session: excluded_employers rule (vendor employees -> cold)",
+      "files_written": [
+        "2026-07-08-ce497cef-links.json"
+      ],
+      "phase1_completed_at": "2026-07-08T17:52:14.030938+00:00"
     }
   ],
   "retries": [
