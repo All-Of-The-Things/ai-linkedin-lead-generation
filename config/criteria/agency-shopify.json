@@ -87,6 +87,18 @@
   "_retail_brand_guidance": "A lead at a retail/DTC/consumer brand (not an agency) qualifies as warm or above ONLY when their company is a confirmed Shopify Plus or SuiteCommerce user. The platform signal must be strong and current. Without it, classify as cold regardless of seniority.",
   "retail_brand_platform_required": true,
 
+  "_excluded_employers_note": "AOTT sells staff augmentation TO the partner ecosystem, never to the platform vendors themselves. Anyone whose CURRENT employer is a platform vendor is not a lead: they have internal delivery orgs and do not buy external agency capacity. Detect from the headline when company fields are null: '@ Shopify', 'at Shopify', 'Partnerships at Shopify', 'at Oracle', 'at Adobe', 'at BigCommerce'. Shopify's own partnerships/BD staff match this criteria's role list almost perfectly — they are NOT leads. Classify excluded-employer leads as cold and cap score at 25 regardless of seniority — this exclusion overrides company_type_signals and seniority_signals. Do not drop them from output; the operator can still manually approve a rare vendor-side contact from the cold tier. Also cold: mega-SIs with in-house delivery at scale (Accenture, Deloitte, Capgemini, IBM, Infosys, TCS, Wipro, Cognizant, Coforge) — cap at 40; and in-house digital/ecommerce leaders at end-user enterprises without a confirmed platform signal — cap at 30. The buyer must work at an agency or consultancy whose BUSINESS is delivering Shopify/commerce projects for clients, sized boutique-to-mid-market like the reference_companies.",
+  "excluded_employers": [
+    "Shopify",
+    "Oracle",
+    "NetSuite",
+    "Salesforce",
+    "SAP",
+    "Adobe",
+    "Microsoft",
+    "BigCommerce"
+  ],
+
   "anti_patterns": [
     "Recruiter",
     "Recruitment",
@@ -103,10 +115,11 @@
     "Bachelor of Science"
   ],
 
+  "_search_terms_note": "QUERY-BUILDING RULE for Step 2: never pair a bare platform name with a role — 'Shopify' + 'Director of Partnerships' matches Shopify's own partnerships team. Every query must include an agency/partner/expert qualifier alongside the platform name (e.g. 'Shopify Plus agency', 'Shopify expert') so results skew toward people whose employer partners with the platform rather than the vendor's own staff.",
   "search_terms": [
     "Shopify Plus agency founder",
     "eCommerce agency CEO",
-    "digital commerce consulting",
+    "digital commerce consulting director",
     "Shopify expert managing director",
     "Shopify agency head of delivery"
   ],

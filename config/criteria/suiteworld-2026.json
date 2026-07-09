@@ -183,6 +183,19 @@
     "Owner"
   ],
 
+  "_excluded_employers_note": "Neither segment includes employees of the platform vendors themselves. Oracle/NetSuite staff attend SuiteWorld in force, will match these roles and industries, and are NOT buyers: they have internal delivery orgs (Segment A fail) and are not end-user companies (Segment B fail). Detect from the headline when company fields are null: 'at Oracle', 'at NetSuite', '@ Shopify', 'Oracle Consulting'. Oracle-internal titles like 'Consulting Practice Director' / 'Consulting Project Director' with Oracle context (or no partner-company context) are vendor employees. Classify excluded-employer leads as cold and cap score at 25 regardless of seniority — this exclusion overrides company_type_signals and seniority_signals. Do not drop them from output; the operator can rescue from cold. Mega-SIs (Accenture, Deloitte, Capgemini, IBM, Infosys, TCS, Wipro, Cognizant) cap at 40 — reference_companies shows the boutique-to-mid-market target; RSM/BDO/Wipfli-sized NetSuite practices are the upper bound.",
+  "excluded_employers": [
+    "Oracle",
+    "NetSuite",
+    "Oracle NetSuite",
+    "Shopify",
+    "Salesforce",
+    "SAP",
+    "Adobe",
+    "Microsoft",
+    "BigCommerce"
+  ],
+
   "anti_patterns": [
     "Recruiter",
     "Recruitment",
@@ -207,17 +220,18 @@
     "Bachelor of Science"
   ],
 
+  "_search_terms_note": "QUERY-BUILDING RULE for Step 2: for Segment A queries, never pair a bare platform name with a delivery/consulting role — 'NetSuite consulting practice director' matches Oracle's own Consulting org; always include a partner/SI/VAR/agency qualifier. Segment B queries (IT director, VP operations, head of ecommerce + NetSuite) are exempt: end-user titles plus a platform name is the correct end-user pattern.",
   "search_terms": [
     "NetSuite partner CEO",
     "NetSuite SI managing director",
     "Oracle NetSuite VAR founder",
-    "SuiteCommerce director",
+    "SuiteCommerce agency director",
     "IT director NetSuite ERP",
     "VP operations NetSuite",
     "head of ecommerce NetSuite",
     "director of IT ERP retail",
     "ERP director manufacturing",
-    "NetSuite consulting practice director",
+    "NetSuite partner practice director",
     "Shopify Plus NetSuite integration director"
   ],
 

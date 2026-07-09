@@ -1,18 +1,6 @@
 {
-  "approved": [],
-  "hot": [
-    "https://www.linkedin.com/in/johnpdavidson",
-    "https://www.linkedin.com/in/gary-ayling",
-    "https://www.linkedin.com/in/hermannfilho",
-    "https://www.linkedin.com/in/nherber",
-    "https://www.linkedin.com/in/ajaysingh",
-    "https://www.linkedin.com/in/saq-khan",
-    "https://www.linkedin.com/in/atin-angirish-61b46a",
-    "https://www.linkedin.com/in/sagar-shah-85b9173",
-    "https://www.linkedin.com/in/shane-campbell-a1666648",
-    "https://www.linkedin.com/in/robin-britt-pmp-b35344",
-    "https://www.linkedin.com/in/david-j-downey-51aa454"
-  ],
+  "approved": ["https://www.linkedin.com/in/hermannfilho"],
+  "hot": [],
   "warm": [
     "https://www.linkedin.com/in/antoniolisbon",
     "https://www.linkedin.com/in/manishverma07",
