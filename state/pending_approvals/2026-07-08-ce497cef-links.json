@@ -1,16 +1,11 @@
 {
-  "approved": [],
-  "hot": [
+  "approved": [
     "https://www.linkedin.com/in/ziabutt",
     "https://www.linkedin.com/in/danielyperry",
     "https://www.linkedin.com/in/greg-hughes-274a0168"
   ],
-  "warm": [
-    "https://www.linkedin.com/in/kalaiyarasanveerasamy",
-    "https://www.linkedin.com/in/belalt",
-    "https://www.linkedin.com/in/hamishjcameron",
-    "https://www.linkedin.com/in/jeriwambeek"
-  ],
+  "hot": [],
+  "warm": [],
   "cold": [
     "https://www.linkedin.com/in/darenjfitzgerald",
     "https://www.linkedin.com/in/gavin-cliffe-744bb212",
