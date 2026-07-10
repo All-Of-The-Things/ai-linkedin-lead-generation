@@ -7,7 +7,7 @@
 1. Reads `CLAUDE.md`, `config/pipeline.json`, and resolves the active criteria.
 2. Executes pipeline **Step 6a** — Compose Connection Note Drafts:
    - Scans all approval files (`*-hot.json`, `*-warm.json`, `*-cold.json`, `*-connection.json`, `*-links.json`) for approved leads without drafts. URLs in a links file's `approved` array count exactly as `decision: "approved"`.
-   - Expires links-file URLs left undecided past `approval.approval_timeout_days` (moved to the file's `expired` array, lead marked rejected — move a URL to `approved` to rescue it later).
+   - Expires links-file URLs left undecided past `approval.approval_timeout_days` (moved to the file's `expired` array, lead marked rejected — move a URL to `approved` to rescue it later). Stale undecided classification/legacy entries expire the same way: `decision` is stamped `"rejected"` and the lead marked rejected (`approval_decision: "expired"`), so decided files can later be archived by `/pipeline-maintenance`.
    - Fetches the full LinkedIn profile (with experience) for each lead before drafting, **writes the fetched fields back** to `leads.json` (`name`, `headline`, `current_title`, `current_company`, `industry`, `location`) and stores the raw payload in `state/raw/<slug>.json` (per CLAUDE.md Step 6a).
    - Invokes `agents/message-composer.md` to draft a personalized connection note for each.
    - Writes `note_draft` back to the source classification file (links-file leads have no per-entry fields — their drafts live only in the notes-ready file).
