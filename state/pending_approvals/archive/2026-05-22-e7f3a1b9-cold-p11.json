@@ -9,8 +9,9 @@
     "score": 20,
     "score_rationale": "No company listed and no platform-specific digital commerce or ERP signals in the generic headline. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/justinmanduke",
@@ -22,8 +23,9 @@
     "score": 20,
     "score_rationale": "Optro has no visible digital commerce or ERP ecosystem signals; prior experience at fintech companies does not qualify. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/raymondbonnett",
@@ -35,8 +37,9 @@
     "score": 20,
     "score_rationale": "iQSTEL is a telecom/fintech company with no digital commerce or ERP implementation signals. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/todd-brown-1a52471",
@@ -48,8 +51,9 @@
     "score": 15,
     "score_rationale": "Hewlett Packard Enterprise is a hardware/cloud infrastructure company with no digital commerce or ERP agency/SI signals. Fails the domain gate; capped at 15.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/troy-michalski-2666ba6",
@@ -61,8 +65,9 @@
     "score": 20,
     "score_rationale": "No company listed and no platform-specific digital commerce or ERP signals in the headline. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/thomas-e-gebhart",
@@ -74,8 +79,9 @@
     "score": 25,
     "score_rationale": "No company listed; 'Vertical Market Software Expertise' is generic and does not confirm digital commerce or ERP implementation context. Fails the domain gate; capped at 25.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/daveballard1",
@@ -87,8 +93,9 @@
     "score": 20,
     "score_rationale": "No company listed and no platform-specific digital commerce or ERP signals in the headline. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/geoff-howes-9507958b",
@@ -100,8 +107,9 @@
     "score": 20,
     "score_rationale": "Corebridge Financial is an insurance/financial services company with no digital commerce or ERP implementation signals. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/adrienne-allan",
@@ -113,8 +121,9 @@
     "score": 20,
     "score_rationale": "Hootsuite is a social media management platform with no digital commerce or ERP implementation signals. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/gian-paolo-andreis",
@@ -126,8 +135,9 @@
     "score": 15,
     "score_rationale": "Rogers Communications is a telecom/media company with no digital commerce or ERP implementation signals. Fails the domain gate; capped at 15.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/beanlara",
@@ -139,8 +149,9 @@
     "score": 20,
     "score_rationale": "Blue J is a legal AI/tax research platform with no digital commerce or ERP ecosystem signals. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/jshimkovitz",
@@ -152,8 +163,9 @@
     "score": 20,
     "score_rationale": "Boundless AI has no visible digital commerce or ERP ecosystem signals in the available data. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/edward-min",
@@ -165,8 +177,9 @@
     "score": 20,
     "score_rationale": "No company listed and no platform-specific digital commerce or ERP signals in the minimal headline. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/fadi-kanaan-268574155",
@@ -178,8 +191,9 @@
     "score": 20,
     "score_rationale": "No company listed and 'Partnerships & Strategic Alliances | SaaS' is too generic with no platform-specific digital commerce or ERP signals. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/eddyem",
@@ -191,8 +205,9 @@
     "score": 20,
     "score_rationale": "Journey Capital is a financial services/lending company with no digital commerce or ERP implementation signals. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/beth-beese-426b533",
@@ -204,8 +219,9 @@
     "score": 20,
     "score_rationale": "No company listed and generic 'SaaS sales & partnerships' headline provides no platform-specific digital commerce or ERP signals. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/eli-mitchell-80037b68",
@@ -217,8 +233,9 @@
     "score": 20,
     "score_rationale": "No company listed and 'SaaS Partnerships Leader' is too generic with no platform-specific digital commerce or ERP signals. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/corey-bloom",
@@ -230,8 +247,9 @@
     "score": 20,
     "score_rationale": "Skip is a food delivery app with no digital commerce or ERP implementation signals. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/david-o-reilly-9a365b3",
@@ -243,8 +261,9 @@
     "score": 15,
     "score_rationale": "CivicAction is a non-profit/civic engagement organization with no digital commerce or ERP implementation signals. Fails the domain gate; capped at 15.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/stephanerioux",
@@ -256,8 +275,9 @@
     "score": 20,
     "score_rationale": "No company listed and the headline is too generic with no platform-specific digital commerce or ERP signals. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/brent-frew-04509223",
@@ -269,7 +289,8 @@
     "score": 15,
     "score_rationale": "Canucks Sports & Entertainment is a professional sports/entertainment organization with no digital commerce or ERP implementation signals. Fails the domain gate; capped at 15.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   }
 ]

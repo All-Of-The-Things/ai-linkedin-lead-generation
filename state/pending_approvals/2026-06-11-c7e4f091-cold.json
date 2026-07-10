@@ -7,27 +7,29 @@
     "current_company": "Druidit",
     "classification": "cold",
     "score": 18,
-    "score_rationale": "CEO at Druidit — no NetSuite, Shopify, ERP, or digital commerce signal in the company name or headline. Domain gate fails.",
+    "score_rationale": "CEO at Druidit \u2014 no NetSuite, Shopify, ERP, or digital commerce signal in the company name or headline. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/marcos-erick-lopez-cortes/en",
-    "name": "Marcos Erick López Cortes",
-    "headline": "Chief Technology Officer | Technology Executive — Aligning Enterprise Infrastructure with Product Strategy | Cloud Automation (AWS, Terraform), NetSuite ERP Ecosystems & AI Pipelines",
+    "name": "Marcos Erick L\u00f3pez Cortes",
+    "headline": "Chief Technology Officer | Technology Executive \u2014 Aligning Enterprise Infrastructure with Product Strategy | Cloud Automation (AWS, Terraform), NetSuite ERP Ecosystems & AI Pipelines",
     "current_title": "Technology Sr Manager",
     "current_company": "AVERA",
     "classification": "cold",
     "score": 44,
-    "score_rationale": "Technology Sr Manager at AVERA — headline references NetSuite ERP but AVERA shows no agency/SI identity. Role suggests internal IT, not consulting. Below warm threshold.",
+    "score_rationale": "Technology Sr Manager at AVERA \u2014 headline references NetSuite ERP but AVERA shows no agency/SI identity. Role suggests internal IT, not consulting. Below warm threshold.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/jorge-eduardo-fernandez-torres",
@@ -37,12 +39,13 @@
     "current_company": "RISO LATIN AMERICA, INC.",
     "classification": "cold",
     "score": 10,
-    "score_rationale": "Controller at RISO LATIN AMERICA — no NetSuite, ERP consulting, or digital commerce signal. Domain gate fails.",
+    "score_rationale": "Controller at RISO LATIN AMERICA \u2014 no NetSuite, ERP consulting, or digital commerce signal. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/diegocadenalau",
@@ -52,12 +55,13 @@
     "current_company": "Stealth",
     "classification": "cold",
     "score": 12,
-    "score_rationale": "Co-Founder at Stealth with generic fintech headline — no NetSuite, ERP, Shopify, or digital commerce signal. Domain gate fails.",
+    "score_rationale": "Co-Founder at Stealth with generic fintech headline \u2014 no NetSuite, ERP, Shopify, or digital commerce signal. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/shoctors",
@@ -67,12 +71,13 @@
     "current_company": "LIFE Properties International",
     "classification": "cold",
     "score": 8,
-    "score_rationale": "CFO at LIFE Properties International — real estate executive with no ERP consulting or NetSuite signals. Domain gate fails.",
+    "score_rationale": "CFO at LIFE Properties International \u2014 real estate executive with no ERP consulting or NetSuite signals. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/christiansilva75",
@@ -82,57 +87,61 @@
     "current_company": "Mobik Retail",
     "classification": "cold",
     "score": 10,
-    "score_rationale": "CFO at Mobik Retail — retail brand, not an agency. End-client penalty applied. Domain gate fails.",
+    "score_rationale": "CFO at Mobik Retail \u2014 retail brand, not an agency. End-client penalty applied. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/carlos-urbina",
     "name": "Carlos Urbina",
-    "headline": "CEO Caracol Púrpura en Caracol Púrpura",
+    "headline": "CEO Caracol P\u00farpura en Caracol P\u00farpura",
     "current_title": "CEO art2play",
     "current_company": "art2play",
     "classification": "cold",
     "score": 10,
-    "score_rationale": "CEO at art2play — no NetSuite, Shopify, ERP, or digital commerce signal. Domain gate fails.",
+    "score_rationale": "CEO at art2play \u2014 no NetSuite, Shopify, ERP, or digital commerce signal. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/carlos-jim%c3%a9nez-509a0839/en",
-    "name": "Carlos Jiménez",
-    "headline": "Founder & CEO at Edificación Virtual® | Driving Digital Transformation in the AEC Industry",
+    "name": "Carlos Jim\u00e9nez",
+    "headline": "Founder & CEO at Edificaci\u00f3n Virtual\u00ae | Driving Digital Transformation in the AEC Industry",
     "current_title": "Managing Director & Founder",
-    "current_company": "Edificación Virtual®",
+    "current_company": "Edificaci\u00f3n Virtual\u00ae",
     "classification": "cold",
     "score": 10,
-    "score_rationale": "Founder at Edificación Virtual in AEC industry — no NetSuite, Shopify, ERP implementation, or digital commerce signals. Domain gate fails.",
+    "score_rationale": "Founder at Edificaci\u00f3n Virtual in AEC industry \u2014 no NetSuite, Shopify, ERP implementation, or digital commerce signals. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/tatianapenna",
-    "name": "Tatiana Peña",
-    "headline": "Head of Growth 🚀 | Sales Manager | Investment",
+    "name": "Tatiana Pe\u00f1a",
+    "headline": "Head of Growth \ud83d\ude80 | Sales Manager | Investment",
     "current_title": "Co-Founder & Head of growth",
     "current_company": "Alpha",
     "classification": "cold",
     "score": 12,
-    "score_rationale": "Co-Founder at Alpha — generic growth/investment headline with no NetSuite, ERP, or digital commerce signal. Domain gate fails.",
+    "score_rationale": "Co-Founder at Alpha \u2014 generic growth/investment headline with no NetSuite, ERP, or digital commerce signal. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/miguel-calero-04205b10b",
@@ -142,12 +151,13 @@
     "current_company": "Rapid Phone Center",
     "classification": "cold",
     "score": 10,
-    "score_rationale": "Customer Experience lead at Rapid Phone Center — mobile retail with no ERP or digital commerce signals. Domain gate fails.",
+    "score_rationale": "Customer Experience lead at Rapid Phone Center \u2014 mobile retail with no ERP or digital commerce signals. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/gabriela-flores-peregrina",
@@ -157,12 +167,13 @@
     "current_company": "Resolve",
     "classification": "cold",
     "score": 8,
-    "score_rationale": "HR Director at Resolve — people/HR role with no ERP consulting or NetSuite signals. Domain gate fails.",
+    "score_rationale": "HR Director at Resolve \u2014 people/HR role with no ERP consulting or NetSuite signals. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/erick-pelayo/en",
@@ -172,27 +183,29 @@
     "current_company": "VALOREO",
     "classification": "cold",
     "score": 19,
-    "score_rationale": "Senior PM at VALOREO (eCommerce brand aggregator) — end-client, not consulting. End-client penalty applied. Domain gate partially passes but role and company don't fit.",
+    "score_rationale": "Senior PM at VALOREO (eCommerce brand aggregator) \u2014 end-client, not consulting. End-client penalty applied. Domain gate partially passes but role and company don't fit.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/orviljuarez",
-    "name": "Orvil Juárez",
+    "name": "Orvil Ju\u00e1rez",
     "headline": "CEO & Owner",
     "current_title": "CEO & Owner",
     "current_company": "J&A Consulting",
     "classification": "cold",
     "score": 15,
-    "score_rationale": "CEO at J&A Consulting — generic consulting with no platform-specific signal. Domain gate fails.",
+    "score_rationale": "CEO at J&A Consulting \u2014 generic consulting with no platform-specific signal. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/marco-patron-02a86343/en",
@@ -202,12 +215,13 @@
     "current_company": "Grupo Staff Business Process & IT Consulting",
     "classification": "cold",
     "score": 15,
-    "score_rationale": "Director at Grupo Staff Business Process & IT Consulting — generic IT terms with no NetSuite, Shopify, or ERP implementation keyword. Domain gate fails.",
+    "score_rationale": "Director at Grupo Staff Business Process & IT Consulting \u2014 generic IT terms with no NetSuite, Shopify, or ERP implementation keyword. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/omar-y-hdz",
@@ -217,12 +231,13 @@
     "current_company": "Independent Consultant",
     "classification": "cold",
     "score": 12,
-    "score_rationale": "Independent IT Consultant with generic Digital Transformation headline — no platform-specific signal. Domain gate fails.",
+    "score_rationale": "Independent IT Consultant with generic Digital Transformation headline \u2014 no platform-specific signal. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/rommel-marcelo-paredes-b4832565/en",
@@ -232,87 +247,93 @@
     "current_company": "Cloud River Rech",
     "classification": "cold",
     "score": 12,
-    "score_rationale": "CEO at Cloud River Tech — cloud/tech company with no NetSuite, Shopify, ERP consulting, or digital commerce signal. Domain gate fails.",
+    "score_rationale": "CEO at Cloud River Tech \u2014 cloud/tech company with no NetSuite, Shopify, ERP consulting, or digital commerce signal. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/monsecorral",
     "name": "Monserrath Garcia Corral",
-    "headline": "Coordinadora administrativa | Gestión Operativa",
+    "headline": "Coordinadora administrativa | Gesti\u00f3n Operativa",
     "current_title": "Executive Assistant CEO",
     "current_company": "GRUPO DUNA",
     "classification": "cold",
     "score": 8,
-    "score_rationale": "Executive Assistant CEO at Grupo DUNA — administrative role with no platform-specific domain signal. Domain gate fails.",
+    "score_rationale": "Executive Assistant CEO at Grupo DUNA \u2014 administrative role with no platform-specific domain signal. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/arturo-ceballos-a7668718",
     "name": "Arturo Ceballos",
-    "headline": "Vendedor, Emprendedor, CEO & Fundador ⭕️CírculoLÍder",
+    "headline": "Vendedor, Emprendedor, CEO & Fundador \u2b55\ufe0fC\u00edrculoL\u00cdder",
     "current_title": "CEO & Fundador",
-    "current_company": "Círculo Líder",
+    "current_company": "C\u00edrculo L\u00edder",
     "classification": "cold",
     "score": 10,
-    "score_rationale": "CEO at Círculo Líder — leadership/coaching business with no NetSuite, ERP, Shopify, or digital commerce signal. Domain gate fails.",
+    "score_rationale": "CEO at C\u00edrculo L\u00edder \u2014 leadership/coaching business with no NetSuite, ERP, Shopify, or digital commerce signal. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/karla-trujillo-de-la-fuente",
     "name": "Karla Trujillo De La Fuente",
-    "headline": "Empowering World Class Orgs🏆 @Salesforce💙",
+    "headline": "Empowering World Class Orgs\ud83c\udfc6 @Salesforce\ud83d\udc99",
     "current_title": "Salesforce",
     "current_company": "Salesforce",
     "classification": "cold",
     "score": 27,
-    "score_rationale": "Salesforce vendor-side employee — adjacent domain signal but no agency/SI role or leadership indicator. Score insufficient for warm.",
+    "score_rationale": "Salesforce vendor-side employee \u2014 adjacent domain signal but no agency/SI role or leadership indicator. Score insufficient for warm.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/daniel-iv%c3%a1n-blancas-oviedo-337ba814b",
-    "name": "Daniel Iván Blancas Oviedo",
+    "name": "Daniel Iv\u00e1n Blancas Oviedo",
     "headline": "Chief Financial Officer",
     "current_title": "Cashi Fintech",
-    "current_company": "Walmart de México y Centroamérica",
+    "current_company": "Walmart de M\u00e9xico y Centroam\u00e9rica",
     "classification": "cold",
     "score": 10,
-    "score_rationale": "CFO at Walmart de México — large retail corporation, no ERP consulting signal. Domain gate fails.",
+    "score_rationale": "CFO at Walmart de M\u00e9xico \u2014 large retail corporation, no ERP consulting signal. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/felipe-bernal-andrade",
-    "name": "Andrés Felipe Bernal Andrade",
+    "name": "Andr\u00e9s Felipe Bernal Andrade",
     "headline": "Oracle Consultant || Oracle NetSuite || ERP",
     "current_title": "Staff Consultant",
     "current_company": "Bryant Park Consulting",
     "classification": "cold",
     "score": 42,
-    "score_rationale": "Staff Consultant at Bryant Park Consulting (Oracle NetSuite ERP) — domain gate passes but junior/IC role with no seniority match. Below warm threshold.",
+    "score_rationale": "Staff Consultant at Bryant Park Consulting (Oracle NetSuite ERP) \u2014 domain gate passes but junior/IC role with no seniority match. Below warm threshold.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/ignacio-moreno-crespin-531b97148/en",
@@ -322,12 +343,13 @@
     "current_company": "Lean Solutions Group",
     "classification": "cold",
     "score": 22,
-    "score_rationale": "AI Solutions Architect at Lean Solutions Group (nearshore staffing) — domain gate passes on headline NetSuite signal but company is staffing, not an SI. IC architect role not in target roles.",
+    "score_rationale": "AI Solutions Architect at Lean Solutions Group (nearshore staffing) \u2014 domain gate passes on headline NetSuite signal but company is staffing, not an SI. IC architect role not in target roles.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/marcela-saracay-205176130",
@@ -337,27 +359,29 @@
     "current_company": "Consulting Resource Group",
     "classification": "cold",
     "score": 15,
-    "score_rationale": "Co-Founder at Consulting Resource Group — generic consulting with no platform-specific signal. Domain gate fails.",
+    "score_rationale": "Co-Founder at Consulting Resource Group \u2014 generic consulting with no platform-specific signal. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/juancamilovillegas",
     "name": "Juan Camilo Villegas",
     "headline": "Advisor | Founder | Board Member |",
     "current_title": "Co-Founder",
-    "current_company": "R4H – Rent for Hours",
+    "current_company": "R4H \u2013 Rent for Hours",
     "classification": "cold",
     "score": 10,
-    "score_rationale": "Co-Founder at R4H (rental marketplace) — no NetSuite, ERP, Shopify, or digital commerce signal. Domain gate fails.",
+    "score_rationale": "Co-Founder at R4H (rental marketplace) \u2014 no NetSuite, ERP, Shopify, or digital commerce signal. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/adalberto-fonseca-horta-5736ab1b",
@@ -367,27 +391,29 @@
     "current_company": "Consware",
     "classification": "cold",
     "score": 15,
-    "score_rationale": "Founder & CEO at Consware — no platform-specific signal found. Domain gate fails.",
+    "score_rationale": "Founder & CEO at Consware \u2014 no platform-specific signal found. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/paolaandreavargaslopez",
-    "name": "Paola Andrea Vargas López",
+    "name": "Paola Andrea Vargas L\u00f3pez",
     "headline": "MSc. in Finance | investments | Corporate Finance | Management | MBA | Strategic formulation |",
-    "current_title": "Dirección Administrativa y financiera",
+    "current_title": "Direcci\u00f3n Administrativa y financiera",
     "current_company": "Aliados Colombia Internacional SAS",
     "classification": "cold",
     "score": 8,
-    "score_rationale": "Administrative and financial director at Aliados Colombia — finance/admin role with no ERP consulting signals. Domain gate fails.",
+    "score_rationale": "Administrative and financial director at Aliados Colombia \u2014 finance/admin role with no ERP consulting signals. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/maria-carolina-florez/en",
@@ -401,8 +427,9 @@
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/brayan-galvez/en",
@@ -412,12 +439,13 @@
     "current_company": "Bring IT",
     "classification": "cold",
     "score": 20,
-    "score_rationale": "Founder at Bring IT — 'Nesstion' in headline is ambiguous, not explicit NetSuite keyword. Domain gate fails on lack of explicit platform signal.",
+    "score_rationale": "Founder at Bring IT \u2014 'Nesstion' in headline is ambiguous, not explicit NetSuite keyword. Domain gate fails on lack of explicit platform signal.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/carolina-giraldo-del-valle/en",
@@ -427,57 +455,61 @@
     "current_company": "Monite",
     "classification": "cold",
     "score": 12,
-    "score_rationale": "Strategy & Operations Lead at Monite (B2B fintech) — no NetSuite, ERP consulting, or digital commerce signal. Domain gate fails.",
+    "score_rationale": "Strategy & Operations Lead at Monite (B2B fintech) \u2014 no NetSuite, ERP consulting, or digital commerce signal. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/carlosandrescortesag",
     "name": "Carlos Andres Cortes",
-    "headline": "Senior .NET Developer | C# | .NET Core | API | Azure | SQL & EF | Ex-Microsoft | AI‑Enhanced Software Engineering",
+    "headline": "Senior .NET Developer | C# | .NET Core | API | Azure | SQL & EF | Ex-Microsoft | AI\u2011Enhanced Software Engineering",
     "current_title": "Software Engineer",
     "current_company": "Proxify",
     "classification": "cold",
     "score": 15,
-    "score_rationale": "Software Engineer at Proxify — anti-pattern 'Engineer' in title. No NetSuite/ERP/digital commerce agency signal.",
+    "score_rationale": "Software Engineer at Proxify \u2014 anti-pattern 'Engineer' in title. No NetSuite/ERP/digital commerce agency signal.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/julianescandon",
-    "name": "Julián Escandón",
+    "name": "Juli\u00e1n Escand\u00f3n",
     "headline": "SoftwareOne / Ex Oracle / Ex Linio / MBA",
     "current_title": "Latam Digital Sales Director",
     "current_company": "SoftwareOne",
     "classification": "cold",
     "score": 20,
-    "score_rationale": "Latam Digital Sales Director at SoftwareOne — software asset management company, not a NetSuite/ERP implementation SI. Domain gate fails.",
+    "score_rationale": "Latam Digital Sales Director at SoftwareOne \u2014 software asset management company, not a NetSuite/ERP implementation SI. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/jorge-eduardo-le%c3%b3n-g%c3%b3mez-/en",
-    "name": "Jorge Eduardo León Gómez",
+    "name": "Jorge Eduardo Le\u00f3n G\u00f3mez",
     "headline": "CFO | Strategic Finance & FP&A | Fintech & Corporate Strategy | Capital Raising | Financial Planning | High-Performance Teams | Digital Transformation | Global Finance Leadership | Private Debt",
     "current_title": "Chief Financial Officer / Cofounder",
     "current_company": "Finaktiva",
     "classification": "cold",
     "score": 10,
-    "score_rationale": "CFO/Cofounder at Finaktiva (fintech) — no NetSuite, ERP consulting, or digital commerce signals. Domain gate fails.",
+    "score_rationale": "CFO/Cofounder at Finaktiva (fintech) \u2014 no NetSuite, ERP consulting, or digital commerce signals. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/antonio-velasquez-cruz",
@@ -487,12 +519,13 @@
     "current_company": "MIC AVIATION",
     "classification": "cold",
     "score": 8,
-    "score_rationale": "Co Founder at MIC AVIATION — aviation company with no ERP/NetSuite/digital commerce signal. Domain gate fails.",
+    "score_rationale": "Co Founder at MIC AVIATION \u2014 aviation company with no ERP/NetSuite/digital commerce signal. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/jhon-frazier-moreno-moreno-a01326125",
@@ -502,12 +535,13 @@
     "current_company": "Keep it Simple S.A.S.",
     "classification": "cold",
     "score": 12,
-    "score_rationale": "Chief Innovation Officer at Keep it Simple S.A.S. — no platform-specific signal. Domain gate fails.",
+    "score_rationale": "Chief Innovation Officer at Keep it Simple S.A.S. \u2014 no platform-specific signal. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/oscar-d-hinestroza-163532222",
@@ -517,12 +551,13 @@
     "current_company": "Tech First",
     "classification": "cold",
     "score": 15,
-    "score_rationale": "Delivery Lead at Tech First — nearshore staffing company, anti-pattern 'Staffing' in headline. Capped.",
+    "score_rationale": "Delivery Lead at Tech First \u2014 nearshore staffing company, anti-pattern 'Staffing' in headline. Capped.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/calledavid",
@@ -532,12 +567,13 @@
     "current_company": "Candid Leap - Webflow Enterprise Partner",
     "classification": "cold",
     "score": 15,
-    "score_rationale": "Project Lead at Candid Leap (Webflow Enterprise Partner) — Webflow not a target platform. Domain gate fails.",
+    "score_rationale": "Project Lead at Candid Leap (Webflow Enterprise Partner) \u2014 Webflow not a target platform. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/steve-a-20731aa8/en",
@@ -547,12 +583,13 @@
     "current_company": "Apploi",
     "classification": "cold",
     "score": 12,
-    "score_rationale": "QA Engineer at Apploi — anti-pattern 'Engineer' in title. Healthcare platform with no ERP/NetSuite signal.",
+    "score_rationale": "QA Engineer at Apploi \u2014 anti-pattern 'Engineer' in title. Healthcare platform with no ERP/NetSuite signal.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/eduardo-monti-3220a41",
@@ -562,12 +599,13 @@
     "current_company": "MQSet",
     "classification": "cold",
     "score": 15,
-    "score_rationale": "Managing Director at MQSet — no platform-specific signal. Domain gate fails.",
+    "score_rationale": "Managing Director at MQSet \u2014 no platform-specific signal. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/hernanazpiri",
@@ -577,12 +615,13 @@
     "current_company": "aXiesData",
     "classification": "cold",
     "score": 12,
-    "score_rationale": "Managing Director at aXiesData (data analytics) — no NetSuite, ERP, or digital commerce signal. Domain gate fails.",
+    "score_rationale": "Managing Director at aXiesData (data analytics) \u2014 no NetSuite, ERP, or digital commerce signal. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/nataliascaliter",
@@ -592,12 +631,13 @@
     "current_company": "Google",
     "classification": "cold",
     "score": 10,
-    "score_rationale": "Managing Director Google Cloud Argentina at Google — no NetSuite/ERP implementation signal. Domain gate fails.",
+    "score_rationale": "Managing Director Google Cloud Argentina at Google \u2014 no NetSuite/ERP implementation signal. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/enrique-arce-028266",
@@ -607,42 +647,45 @@
     "current_company": "Oracle",
     "classification": "cold",
     "score": 42,
-    "score_rationale": "Oracle employee with no headline or title detail — domain gate passes minimally but no role, seniority, or partner-facing context. Below warm threshold.",
+    "score_rationale": "Oracle employee with no headline or title detail \u2014 domain gate passes minimally but no role, seniority, or partner-facing context. Below warm threshold.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/agarzon",
-    "name": "Adrián Garzón",
+    "name": "Adri\u00e1n Garz\u00f3n",
     "headline": "Corporate IT Senior Manager and PM",
     "current_title": "Partnership-Associate Director",
     "current_company": "Share IT",
     "classification": "cold",
     "score": 15,
-    "score_rationale": "Partnership-Associate Director at Share IT — corporate IT with no platform-specific signal. Domain gate fails.",
+    "score_rationale": "Partnership-Associate Director at Share IT \u2014 corporate IT with no platform-specific signal. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/perla-davini-10a836",
     "name": "Perla Davini",
     "headline": "Managing Director",
     "current_title": "Managing Director",
-    "current_company": "EstiloBebé",
+    "current_company": "EstiloBeb\u00e9",
     "classification": "cold",
     "score": 10,
-    "score_rationale": "Managing Director at EstiloBebé (baby fashion/retail brand) — no ERP consulting or NetSuite/digital commerce agency signal. Domain gate fails.",
+    "score_rationale": "Managing Director at EstiloBeb\u00e9 (baby fashion/retail brand) \u2014 no ERP consulting or NetSuite/digital commerce agency signal. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/brunochourrout",
@@ -652,11 +695,12 @@
     "current_company": "DIRECTV Latin America",
     "classification": "cold",
     "score": 10,
-    "score_rationale": "Gerente IT Digital at DIRECTV Latin America — media/cable company with no NetSuite/ERP consulting signal. Domain gate fails.",
+    "score_rationale": "Gerente IT Digital at DIRECTV Latin America \u2014 media/cable company with no NetSuite/ERP consulting signal. Domain gate fails.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   }
 ]

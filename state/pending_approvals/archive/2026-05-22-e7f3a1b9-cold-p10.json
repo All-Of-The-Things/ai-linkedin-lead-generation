@@ -9,8 +9,9 @@
     "score": 15,
     "score_rationale": "Orikan operates in parking/transport management technology with no digital commerce or ERP implementation signals. Fails the domain gate; capped at 15.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/saisri",
@@ -22,8 +23,9 @@
     "score": 20,
     "score_rationale": "Wipro Technologies is a large generalist IT services firm; headline references ANZ sector with no platform-specific commerce or ERP signals. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/carlpiesse",
@@ -35,8 +37,9 @@
     "score": 15,
     "score_rationale": "Hays is a staffing and recruitment firm with no digital commerce or ERP ecosystem signals. Fails the domain gate; capped at 15.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/meegan-kepert",
@@ -48,8 +51,9 @@
     "score": 20,
     "score_rationale": "Orchestrated could be an ERP platform for beverage/food distributors but shows no clear digital commerce or SI/agency signals in the available data. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/vinhle05",
@@ -61,8 +65,9 @@
     "score": 10,
     "score_rationale": "Bunnings is a large retail/hardware brand (end-client), not an agency or SI. End-client penalty applied; capped at 10.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/jfarrugia",
@@ -74,8 +79,9 @@
     "score": 20,
     "score_rationale": "No company listed and no platform-specific signals in the headline to confirm digital commerce or ERP ecosystem participation. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/sergei-davidov-b545aa1",
@@ -87,8 +93,9 @@
     "score": 20,
     "score_rationale": "Concentrix Catalyst is a CX/BPO services firm with no digital commerce platform or ERP implementation signals. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/sophie-hopkins-pm",
@@ -100,8 +107,9 @@
     "score": 25,
     "score_rationale": "Drive Digital sounds like a digital agency but has no platform-specific signals (NetSuite, Shopify, Magento, etc.) visible in the headline or company name. Fails the domain gate; capped at 25.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/shauryasaxena",
@@ -113,8 +121,9 @@
     "score": 15,
     "score_rationale": "Genpact is a large BPO/IT services firm with no digital commerce or ERP implementation focus visible in the data. Fails the domain gate; capped at 15.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/harrisonfriend",
@@ -126,8 +135,9 @@
     "score": 25,
     "score_rationale": "Revium is a digital agency in Australia but no platform-specific signals (NetSuite, Shopify Plus, Magento, etc.) appear in headline or company name to confirm domain passage. Fails the domain gate; capped at 25.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/jose-vasquez-452a2b4a",
@@ -139,8 +149,9 @@
     "score": 15,
     "score_rationale": "Hewlett Packard Enterprise is a hardware/cloud infrastructure company with no digital commerce or ERP agency/SI signals. Fails the domain gate; capped at 15.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/seanrushby",
@@ -152,8 +163,9 @@
     "score": 20,
     "score_rationale": "Bravura Solutions is a financial services/wealth management software firm with no digital commerce or ERP implementation signals. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/nigelwee",
@@ -165,8 +177,9 @@
     "score": 15,
     "score_rationale": "Fetch TV is a media/streaming service with no digital commerce or ERP ecosystem signals. Fails the domain gate; capped at 15.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/hyung-c-kim-82b07021",
@@ -178,8 +191,9 @@
     "score": 15,
     "score_rationale": "Macquarie Group is a financial services/investment banking firm with no digital commerce or ERP implementation signals. Fails the domain gate; capped at 15.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/richard-acquistapace",
@@ -191,8 +205,9 @@
     "score": 10,
     "score_rationale": "Endeavour Group is a retail liquor brand (end-client), not an agency or SI in the commerce/ERP ecosystem. End-client penalty applied; capped at 10.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/nesrin-saab-7136b93",
@@ -204,8 +219,9 @@
     "score": 15,
     "score_rationale": "Westpac is a major bank/financial institution with no digital commerce or ERP implementation signals. Fails the domain gate; capped at 15.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/amhp",
@@ -217,8 +233,9 @@
     "score": 15,
     "score_rationale": "NBCUniversal is a media/entertainment company with no digital commerce or ERP ecosystem signals. Fails the domain gate; capped at 15.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/peterscobie",
@@ -230,8 +247,9 @@
     "score": 25,
     "score_rationale": "Servian is a data analytics and technology consultancy with no visible platform-specific digital commerce or ERP implementation signals in the available data. Fails the domain gate; capped at 25.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/bassemselim",
@@ -243,8 +261,9 @@
     "score": 20,
     "score_rationale": "Accenture is a large generalist consulting firm; headline mentions 'digital transformation' but no platform-specific commerce or ERP signals. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/ansalent-soosaipillai-4ab38311",
@@ -256,8 +275,9 @@
     "score": 15,
     "score_rationale": "Ingenico is a payment terminals/hardware company with no digital commerce agency or ERP implementation signals. Fails the domain gate; capped at 15.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/jrbmarshall",
@@ -269,8 +289,9 @@
     "score": 20,
     "score_rationale": "SciSparc is a pharmaceutical/biotech company with no digital commerce or ERP ecosystem signals. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/matt-girgenti-486b767",
@@ -282,8 +303,9 @@
     "score": 25,
     "score_rationale": "New Era Technology is a general IT solutions/managed services company with no platform-specific digital commerce or ERP implementation signals visible. Fails the domain gate; capped at 25.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/brandon-burris-b918024",
@@ -295,8 +317,9 @@
     "score": 20,
     "score_rationale": "Inpixon is an indoor intelligence/IoT software company with no digital commerce or ERP implementation signals. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/kirkpatrickshawn",
@@ -308,8 +331,9 @@
     "score": 25,
     "score_rationale": "C3 Integrated Solutions name suggests IT integration but no platform-specific digital commerce or ERP signals are visible. Fails the domain gate; capped at 25.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/johnwdutton",
@@ -321,8 +345,9 @@
     "score": 20,
     "score_rationale": "No company listed and generic 'Innovation and Transformation' headline provides no platform-specific digital commerce or ERP signals. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/laura-repaci",
@@ -334,8 +359,9 @@
     "score": 20,
     "score_rationale": "Skillsoft is a corporate learning/e-learning platform with no digital commerce or ERP implementation signals. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/benjamin-sandmann-979b678",
@@ -347,8 +373,9 @@
     "score": 20,
     "score_rationale": "MongoDB is a database technology company, not a digital commerce or ERP implementation agency/SI. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/todd-kuhns-62a849a",
@@ -360,8 +387,9 @@
     "score": 20,
     "score_rationale": "RFPIO is a proposal management software company with no digital commerce or ERP implementation signals. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/brian-sas",
@@ -373,8 +401,9 @@
     "score": 20,
     "score_rationale": "Sovos is a B2B tax compliance software company with no digital commerce or ERP agency/SI signals. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/george-sarris-758a4816",
@@ -386,7 +415,8 @@
     "score": 20,
     "score_rationale": "PRO-telligent is a defense/government IT services firm with no digital commerce or ERP implementation signals. Fails the domain gate; capped at 20.",
     "surfaced_at": "2026-05-25T17:53:31.684012+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   }
 ]

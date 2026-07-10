@@ -7,7 +7,7 @@
     "post_snippet": "Whatever volume of change management work seems about right, I should triple that.",
     "comment_draft": "Tripling the communication budget is the right calibration. Most gaps compound quietly and surface three months later, not at launch. The third follow-up check is where you actually see whether the change landed.",
     "edited_comment": null,
-    "decision": null,
+    "decision": "rejected",
     "surfaced_at": "2026-06-16T16:01:53.000Z"
   },
   {
@@ -18,7 +18,7 @@
     "post_snippet": "Most shop owners blame slow payment on customers. After 14 years of customer conversations, I disagree. The lag is almost always self-inflicted, and the numbers show exactly where it starts.",
     "comment_draft": "The self-inflicted framing is right. Most shops treat invoicing as back-office cleanup rather than the handoff that closes the job. Sending on-site keeps context high and friction low, which is why timing maps so directly to cycle length.",
     "edited_comment": null,
-    "decision": null,
+    "decision": "rejected",
     "surfaced_at": "2026-06-16T16:01:53.000Z"
   },
   {
@@ -26,10 +26,10 @@
     "name": "Nico Magni",
     "headline": "Co-Founder @Cedalio (YC S23) - Tech Enthusiast - Digital Product Lover",
     "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7467970546807365632",
-    "post_snippet": "¿Cómo doy los primeros pasos sin comprometer la integridad y la confidencialidad de los datos? ¿Cómo escalo un piloto o un agente que ya funciona localmente?",
+    "post_snippet": "\u00bfC\u00f3mo doy los primeros pasos sin comprometer la integridad y la confidencialidad de los datos? \u00bfC\u00f3mo escalo un piloto o un agente que ya funciona localmente?",
     "comment_draft": "The governance and scalability framing is right. A pilot on one machine doesn't surface the permission boundaries or audit requirements that emerge across twenty users. Those are infrastructure problems, not AI ones.",
     "edited_comment": null,
-    "decision": null,
+    "decision": "rejected",
     "surfaced_at": "2026-06-16T16:01:53.000Z"
   },
   {
@@ -40,7 +40,7 @@
     "post_snippet": "The most interesting thing about the Dangote IPO is potential participation from multiple African countries including the diaspora. If you can aggregate the liquidity of the continent then all of sudden you have a much larger stock market.",
     "comment_draft": "The aggregation point is the real unlock. Individual African exchanges face thin liquidity because the pool is too small for institutional depth to develop. Enough scale and the instrument design possibilities shift completely.",
     "edited_comment": null,
-    "decision": null,
+    "decision": "rejected",
     "surfaced_at": "2026-06-16T16:01:53.000Z"
   }
 ]

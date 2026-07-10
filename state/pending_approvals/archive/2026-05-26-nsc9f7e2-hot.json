@@ -145,8 +145,9 @@
     "surfaced_at": "2026-05-28T17:43:36.798386+00:00",
     "already_connected": null,
     "has_conversation": null,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/timplunkett",

@@ -9,7 +9,7 @@
     "followup_draft": "Hi Jeffrey, great to connect. Events.com runs a complex ticketing platform and eCommerce can add real overhead. My Team owns the Shopify side entirely: implementation, customization, integrations. Your team stays focused on the core product, we handle the eComm complexity. Keen to chat and explore?",
     "connection_accepted_at": "2026-05-14T00:00:00.000Z",
     "surfaced_at": "2026-05-25T21:30:00.000Z",
-    "decision": null,
+    "decision": "rejected",
     "edited_message": null
   },
   {
@@ -22,7 +22,7 @@
     "followup_draft": "Hi Prabodh, glad to connect. As a NetSuite Alliance Partner, Consule Solutions likely runs into clients needing an eComm layer. My Team covers Shopify and SuiteCommerce development and implementation. We can be a solid complement to your NetSuite practice. Keen to explore if we can extend your offering?",
     "connection_accepted_at": "2026-05-14T00:00:00.000Z",
     "surfaced_at": "2026-05-25T21:30:00.000Z",
-    "decision": null,
+    "decision": "rejected",
     "edited_message": null
   },
   {
@@ -35,7 +35,7 @@
     "followup_draft": "Hi John, great to connect. AppWrap's focus on SaaS and hi-growth tech means your clients often need eCommerce to scale fast. We handle the Shopify and SuiteCommerce side: implementation, customization, integrations. Think we could be a strong complement to your NetSuite practice. Keen to chat?",
     "connection_accepted_at": "2026-05-15T21:19:25.650Z",
     "surfaced_at": "2026-05-25T21:30:00.000Z",
-    "decision": null,
+    "decision": "rejected",
     "edited_message": null
   },
   {
@@ -48,7 +48,7 @@
     "followup_draft": "Hi Derek, glad to connect. Consulting firms with a NetSuite practice often need a reliable eComm partner to round out their offering. My Team handles Shopify and SuiteCommerce: implementation, customization, integrations. We work well as an extension of existing NetSuite teams. Keen to explore if we complement CrossCountry's capabilities?",
     "connection_accepted_at": "2026-05-13T00:00:00.000Z",
     "surfaced_at": "2026-05-25T21:30:00.000Z",
-    "decision": null,
+    "decision": "rejected",
     "edited_message": null
   },
   {
@@ -61,7 +61,7 @@
     "followup_draft": "Hi Remy, great to connect. You're already deep in Shopify Plus for high-revenue brands. We cover the NetSuite and SuiteCommerce side: implementation, customization, ERP integrations. Could be a natural complement when your clients need that backend layer. Keen to chat and explore?",
     "connection_accepted_at": "2026-05-15T21:19:25.650Z",
     "surfaced_at": "2026-05-25T21:30:00.000Z",
-    "decision": null,
+    "decision": "rejected",
     "edited_message": null
   }
 ]

@@ -186,7 +186,7 @@
     {
       "run_id": "2026-05-26-5cda7be7",
       "started_at": "2026-05-26T19:01:32.667784+00:00",
-      "status": "in_progress",
+      "status": "abandoned",
       "phase": "send-connections",
       "criteria_used": "agency-partners",
       "resume_from_step": "6b",
@@ -199,7 +199,9 @@
         "over_limit_lead": "Ryan Besterwitch (329 chars \u2014 needs note shortened)",
         "josh_green_note": "sent with draft (not edited_note \u2014 note was edited after send)"
       },
-      "errors": []
+      "errors": [],
+      "abandon_note": "Step 6b completed (9 requests sent, see counts); steps 7-8 never ran; marked abandoned during 2026-07-10 maintenance follow-up so Step 0 phase-matching no longer trips on it",
+      "last_updated": "2026-07-10T18:33:34.080500+00:00"
     },
     {
       "run_id": "2026-05-27-a3e82f1b",

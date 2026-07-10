@@ -7,10 +7,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 12,
-    "score_rationale": "Domain gate failed — Fuller Landau is an accounting/financial advisory firm with no digital commerce or ERP signals.",
+    "score_rationale": "Domain gate failed \u2014 Fuller Landau is an accounting/financial advisory firm with no digital commerce or ERP signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/sarah-morris-b189aa82",
@@ -20,10 +21,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 8,
-    "score_rationale": "Domain gate failed — Royal Victoria Regional Health Centre is a healthcare institution with no digital commerce or ERP signals.",
+    "score_rationale": "Domain gate failed \u2014 Royal Victoria Regional Health Centre is a healthcare institution with no digital commerce or ERP signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/becky-hynes-67a73347",
@@ -33,10 +35,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 8,
-    "score_rationale": "Domain gate failed — 'Interprofessional Practice Director' is a healthcare/clinical title with no digital commerce or ERP signals.",
+    "score_rationale": "Domain gate failed \u2014 'Interprofessional Practice Director' is a healthcare/clinical title with no digital commerce or ERP signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/rebekka-evans-491513134",
@@ -46,10 +49,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 12,
-    "score_rationale": "Domain gate failed — no company identified, 'Practice Director' provides no platform-specific signals.",
+    "score_rationale": "Domain gate failed \u2014 no company identified, 'Practice Director' provides no platform-specific signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/mila-arsenijevic-msw-rsw-4188842",
@@ -59,10 +63,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 8,
-    "score_rationale": "Domain gate failed — 'Clinical Director, Reproductive Mental Health' is a healthcare clinical role with no digital commerce or ERP signals.",
+    "score_rationale": "Domain gate failed \u2014 'Clinical Director, Reproductive Mental Health' is a healthcare clinical role with no digital commerce or ERP signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/norma-tomlin-rpn-bha-mha-a9b10435",
@@ -72,10 +77,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 8,
-    "score_rationale": "Domain gate failed — RPN/BHA/MHA credentials confirm healthcare nursing practice role outside the target ecosystem.",
+    "score_rationale": "Domain gate failed \u2014 RPN/BHA/MHA credentials confirm healthcare nursing practice role outside the target ecosystem.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/sandra-milloy-883319",
@@ -85,10 +91,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 12,
-    "score_rationale": "Domain gate failed — 'Senior Practice Director - Corporate and Intellectual Property' is a legal/IP context outside the target ecosystem.",
+    "score_rationale": "Domain gate failed \u2014 'Senior Practice Director - Corporate and Intellectual Property' is a legal/IP context outside the target ecosystem.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/tracey-dasgupta",
@@ -98,10 +105,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 8,
-    "score_rationale": "Domain gate failed — Sunnybrook Health Sciences Centre is a hospital with no digital commerce or ERP signals.",
+    "score_rationale": "Domain gate failed \u2014 Sunnybrook Health Sciences Centre is a hospital with no digital commerce or ERP signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/roberta-dubois-b1416122",
@@ -111,10 +119,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 8,
-    "score_rationale": "Domain gate failed — Alberta Health Services is a provincial healthcare authority with no digital commerce or ERP signals.",
+    "score_rationale": "Domain gate failed \u2014 Alberta Health Services is a provincial healthcare authority with no digital commerce or ERP signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/sharla-span-a2149b184",
@@ -124,10 +133,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 8,
-    "score_rationale": "Domain gate failed — 'Clinic Director' is a healthcare clinical role outside the target ecosystem.",
+    "score_rationale": "Domain gate failed \u2014 'Clinic Director' is a healthcare clinical role outside the target ecosystem.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/greg-limb-88b1b975",
@@ -137,10 +147,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 18,
-    "score_rationale": "Domain gate failed — Robert Half Management Resources is a staffing/recruitment firm hitting the Staffing anti-pattern.",
+    "score_rationale": "Domain gate failed \u2014 Robert Half Management Resources is a staffing/recruitment firm hitting the Staffing anti-pattern.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/arancrowe",
@@ -150,10 +161,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 18,
-    "score_rationale": "Domain gate failed — Robert Half Permanent Placement is a staffing/recruitment firm hitting the Staffing anti-pattern.",
+    "score_rationale": "Domain gate failed \u2014 Robert Half Permanent Placement is a staffing/recruitment firm hitting the Staffing anti-pattern.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/heather-lovelace-36a49b12",
@@ -163,10 +175,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 8,
-    "score_rationale": "Domain gate failed — BC Children's Hospital is a healthcare institution outside the target ecosystem.",
+    "score_rationale": "Domain gate failed \u2014 BC Children's Hospital is a healthcare institution outside the target ecosystem.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/farrah-press-2a91383",
@@ -176,10 +189,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 18,
-    "score_rationale": "Domain gate failed — Robert Half is a staffing/recruitment firm hitting the Staffing anti-pattern.",
+    "score_rationale": "Domain gate failed \u2014 Robert Half is a staffing/recruitment firm hitting the Staffing anti-pattern.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/jennifer-daljeet-21b65132",
@@ -189,10 +203,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 8,
-    "score_rationale": "Domain gate failed — St. Peter's Residence at Chedoke is a long-term care/healthcare facility outside the target ecosystem.",
+    "score_rationale": "Domain gate failed \u2014 St. Peter's Residence at Chedoke is a long-term care/healthcare facility outside the target ecosystem.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/deborah-harver-3a25b0126",
@@ -202,10 +217,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 8,
-    "score_rationale": "Domain gate failed — 'Director Primary Care Services' is a healthcare role outside the target ecosystem.",
+    "score_rationale": "Domain gate failed \u2014 'Director Primary Care Services' is a healthcare role outside the target ecosystem.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/justinlochang",
@@ -215,10 +231,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 8,
-    "score_rationale": "Domain gate failed — Fraser Health Authority is a regional health authority outside the target ecosystem.",
+    "score_rationale": "Domain gate failed \u2014 Fraser Health Authority is a regional health authority outside the target ecosystem.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/thirumaran-ramanathan-b424139",
@@ -228,10 +245,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 38,
-    "score_rationale": "Domain gate partially met — 'Practice Director, Digital - AMER' suggests digital practice work but no specific platform signals (NetSuite, Shopify, Oracle Commerce) present. Score below warm threshold.",
+    "score_rationale": "Domain gate partially met \u2014 'Practice Director, Digital - AMER' suggests digital practice work but no specific platform signals (NetSuite, Shopify, Oracle Commerce) present. Score below warm threshold.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/jillian-farrow-b777135b",
@@ -241,10 +259,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 12,
-    "score_rationale": "Domain gate failed — Sun Life is a financial services/insurance company with no digital commerce or ERP implementation signals.",
+    "score_rationale": "Domain gate failed \u2014 Sun Life is a financial services/insurance company with no digital commerce or ERP implementation signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/kathy-ponting-45281b2",
@@ -254,10 +273,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 25,
-    "score_rationale": "Domain gate failed — no company identified, 'VP Global Strategic Partnerships' has no platform-specific signals confirming ecosystem fit.",
+    "score_rationale": "Domain gate failed \u2014 no company identified, 'VP Global Strategic Partnerships' has no platform-specific signals confirming ecosystem fit.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/ilonaspilker",
@@ -267,10 +287,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 20,
-    "score_rationale": "Domain gate failed — WPP Media is an advertising/media agency outside the target ecosystem.",
+    "score_rationale": "Domain gate failed \u2014 WPP Media is an advertising/media agency outside the target ecosystem.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/brandontrollip",
@@ -280,10 +301,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 20,
-    "score_rationale": "Domain gate failed — MasterCard is a payment network/financial services company, not a digital commerce or ERP implementation agency.",
+    "score_rationale": "Domain gate failed \u2014 MasterCard is a payment network/financial services company, not a digital commerce or ERP implementation agency.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/jonathan-di-sapia-3778936",
@@ -293,9 +315,10 @@
     "current_company": null,
     "classification": "cold",
     "score": 18,
-    "score_rationale": "Domain gate failed — LoopMe is an ad tech/programmatic advertising platform outside the target ecosystem.",
+    "score_rationale": "Domain gate failed \u2014 LoopMe is an ad tech/programmatic advertising platform outside the target ecosystem.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   }
 ]
