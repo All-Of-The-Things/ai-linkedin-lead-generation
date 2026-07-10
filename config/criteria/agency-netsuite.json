@@ -102,7 +102,9 @@
     "BigCommerce"
   ],
 
+  "_sap_note": "Operator feedback 2026-07-09: SAP-related leads are out of scope entirely — no business there. This is broader than excluded_employers: SAP partner consultancies, SAP implementation practices, and in-house SAP program leaders are all non-buyers. A generic ERP signal that resolves to SAP does not pass the domain gate.",
   "anti_patterns": [
+    "SAP",
     "Recruiter",
     "Recruitment",
     "Staffing",

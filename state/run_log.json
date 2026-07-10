@@ -1580,6 +1580,202 @@
         "2026-07-08-ce497cef-links.json"
       ],
       "phase1_completed_at": "2026-07-08T17:52:14.030938+00:00"
+    },
+    {
+      "run_id": "2026-07-09-ef198899",
+      "started_at": "2026-07-09T15:41:39.982033+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 6,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1630,
+        "exclusion_set_size": 1630,
+        "total_search_results": 75,
+        "skipped_exclusion": 18,
+        "new_stubs": 57,
+        "classified": 57,
+        "hot": 5,
+        "warm": 10,
+        "cold": 42,
+        "surfaced_for_approval": 57,
+        "email_sent": false
+      },
+      "errors": [],
+      "criteria_used": "agency-netsuite",
+      "step1_note": "criteria refresh skipped: file exists, run 41 mod 7 != 0",
+      "last_updated": "2026-07-09T17:44:38.475980+00:00",
+      "queries_run": [
+        "NetSuite partner / VP of Delivery / Internet,IT&S / Australia,US (25 results, 23 new)",
+        "ERP implementation partner / Head of Delivery / IT&S,Mgmt Consulting / US,Canada (25 results, 19 new)",
+        "NetSuite consultancy / VP of Professional Services / Computer Software,Mgmt Consulting / US,UK (25 results, 15 new)"
+      ],
+      "search_cursor": {
+        "role_idx": 9,
+        "industry_idx": 2,
+        "location_idx": 2
+      },
+      "step3_note": "abbreviated mode: Step 3 never runs",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted",
+      "step4_completed_at": "2026-07-09T16:34:52.118119+00:00",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-09-ef198899-links.json"
+      ],
+      "phase1_completed_at": "2026-07-09T16:34:52.118119+00:00",
+      "post_run_note": "user reviewed links file on 2026-07-09: 6 approved and sent manually outside pipeline; 4 hot URLs were deleted from the file by the user (restored to expired array), all 51 non-approved leads marked rejected per user instruction"
+    },
+    {
+      "run_id": "2026-07-09-864c9d9f",
+      "started_at": "2026-07-09T17:45:12.757033+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 10,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5,
+        10
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1630,
+        "exclusion_set_size": 1630,
+        "total_search_results": 75,
+        "skipped_exclusion": 26,
+        "new_stubs": 49,
+        "classified": 49,
+        "hot": 19,
+        "warm": 7,
+        "cold": 23,
+        "surfaced_for_approval": 49,
+        "email_sent": false,
+        "errors": 0
+      },
+      "errors": [],
+      "criteria_used": "suiteworld-2026",
+      "step1_note": "criteria refresh due by rule (run 42 mod 7 == 0) but SKIPPED deliberately: suiteworld-2026.json is hand-crafted (two-segment design, excluded-employer rules, query-building rules); criteria-extractor would overwrite it with generic connection-pattern criteria. Operator should refresh manually if desired.",
+      "last_updated": "2026-07-09T18:00:50.868145+00:00",
+      "queries_run": [
+        "NetSuite partner / CEO / IT&S,Computer Software / US,Canada (25 results, 2 new)",
+        "NetSuite / IT Director / Retail,Manufacturing / US,UK (25 results, 24 new)",
+        "NetSuite / VP of Operations / Consumer Goods,Wholesale / US,Australia (25 results, 23 new)"
+      ],
+      "search_cursor": {
+        "role_idx": 3,
+        "industry_idx": 3,
+        "location_idx": 3
+      },
+      "step3_note": "abbreviated mode: Step 3 never runs",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; 1 lead (shireen-dehghan) dropped by classifier subagent, scored inline per excluded-employer + anti-pattern rules (18/cold)",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-09-864c9d9f-links.json"
+      ],
+      "phase1_completed_at": "2026-07-09T18:00:50.868145+00:00"
+    },
+    {
+      "run_id": "2026-07-09-cabda126",
+      "started_at": "2026-07-09T18:01:40.675513+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 6,
+      "criteria_used": "agency-netsuite",
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "step1_note": "criteria refresh skipped: file exists, run 43 mod 7 != 0; file updated today with operator SAP exclusion",
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1630,
+        "exclusion_set_size": 1630,
+        "total_search_results": 75,
+        "skipped_exclusion": 26,
+        "new_stubs": 49,
+        "classified": 49,
+        "hot": 0,
+        "warm": 1,
+        "cold": 48,
+        "surfaced_for_approval": 49,
+        "email_sent": false,
+        "errors": 0
+      },
+      "errors": [],
+      "last_updated": "2026-07-10T14:06:42.650346+00:00",
+      "queries_run": [
+        "NetSuite partner / Director of Professional Services / Mgmt Consulting,IT&S / US,UK (25 results, 18 new)",
+        "NetSuite implementation partner / Practice Director / IT&S,Computer Software / US,Canada (25 results, 7 new)",
+        "NetSuite solution provider / Practice Lead / IT&S,Internet / UK,Australia (25 results, 24 new)"
+      ],
+      "search_cursor": {
+        "role_idx": 12,
+        "industry_idx": 1,
+        "location_idx": 1
+      },
+      "step3_note": "abbreviated mode: Step 3 never runs",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; SAP anti-pattern active (criteria updated today)",
+      "step4_completed_at": "2026-07-10T14:06:42.650346+00:00",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-09-cabda126-links.json"
+      ],
+      "phase1_completed_at": "2026-07-10T14:06:42.650346+00:00"
+    },
+    {
+      "run_id": "2026-07-09-ff73fe9c",
+      "started_at": "2026-07-10T14:42:28.146579+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 6,
+      "criteria_used": "agency-netsuite",
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "step1_note": "criteria refresh skipped: file exists, run 44 mod 7 != 0",
+      "step2_note": "company-anchored search variant per operator instruction: queries anchor on known NetSuite partner firms via --current-companies instead of role/industry rotation; search_cursor intentionally not advanced",
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1630,
+        "exclusion_set_size": 1630,
+        "total_search_results": 75,
+        "skipped_exclusion": 3,
+        "new_stubs": 72,
+        "classified": 72,
+        "hot": 10,
+        "warm": 10,
+        "cold": 52,
+        "surfaced_for_approval": 72,
+        "email_sent": false,
+        "errors": 0
+      },
+      "errors": [],
+      "last_updated": "2026-07-10T14:58:50.958929+00:00",
+      "queries_run": [
+        "NetSuite / companies: Plative,Techfino,Esonus,Foretopia,N2Lab / US,CA,UK,AU (25 results, 23 new)",
+        "NetSuite / companies: Myers-Holum,Big Bang,Cumula 3 Group,Bryant Park Consulting,Zanovoy / US,CA,UK,AU (25 results, 24 new)",
+        "NetSuite / companies: Appficiency,ScaleNorth,Kodella,SuiteDynamics,Eureka Solutions / US,CA,UK,AU (25 results, 25 new)"
+      ],
+      "step3_note": "abbreviated mode: Step 3 never runs",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; company-anchored batch \u2014 differentiator was role seniority, ICs sank to cold",
+      "step4_completed_at": "2026-07-10T14:58:50.958929+00:00",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-09-ff73fe9c-links.json"
+      ],
+      "phase1_completed_at": "2026-07-10T14:58:50.958929+00:00"
     }
   ],
   "retries": [
