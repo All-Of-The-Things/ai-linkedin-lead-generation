@@ -11,8 +11,9 @@
     "surfaced_at": "2026-06-17T00:00:00.000000+00:00",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/ryan-fast",
@@ -26,8 +27,9 @@
     "surfaced_at": "2026-06-17T00:00:00.000000+00:00",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/perrykountouriotis",
@@ -56,8 +58,9 @@
     "surfaced_at": "2026-06-17T00:00:00.000000+00:00",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/melissac-erpit",
@@ -206,8 +209,9 @@
     "surfaced_at": "2026-06-17T00:00:00.000000+00:00",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/edmondpruthi",

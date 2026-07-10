@@ -7,10 +7,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 22,
-    "score_rationale": "Domain gate failed — Ivanti is an IT asset management/security platform with no digital commerce or ERP implementation signals.",
+    "score_rationale": "Domain gate failed \u2014 Ivanti is an IT asset management/security platform with no digital commerce or ERP implementation signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/patrick-mclaughlin-6540915",
@@ -20,10 +21,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 20,
-    "score_rationale": "Domain gate failed — 'Strategy' (MicroStrategy) is a business intelligence/analytics company with no digital commerce or ERP implementation signals.",
+    "score_rationale": "Domain gate failed \u2014 'Strategy' (MicroStrategy) is a business intelligence/analytics company with no digital commerce or ERP implementation signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/jasonedulin",
@@ -33,10 +35,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 15,
-    "score_rationale": "Domain gate failed — company not identified and no platform-specific signals in headline or title.",
+    "score_rationale": "Domain gate failed \u2014 company not identified and no platform-specific signals in headline or title.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/nashcraft",
@@ -46,10 +49,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 15,
-    "score_rationale": "Domain gate failed — no company name visible and no platform-specific signals in headline or title.",
+    "score_rationale": "Domain gate failed \u2014 no company name visible and no platform-specific signals in headline or title.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/dereklamarche",
@@ -59,10 +63,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 20,
-    "score_rationale": "Domain gate failed — Tricentis is a software testing/QA platform with no digital commerce or ERP implementation signals.",
+    "score_rationale": "Domain gate failed \u2014 Tricentis is a software testing/QA platform with no digital commerce or ERP implementation signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/kevin-mccombs-44098824",
@@ -72,10 +77,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 35,
-    "score_rationale": "Partial domain signal — Retail Information Systems (RIS) serves retail clients with POS/ERP systems, adjacent but not a confirmed commerce/ERP agency.",
+    "score_rationale": "Partial domain signal \u2014 Retail Information Systems (RIS) serves retail clients with POS/ERP systems, adjacent but not a confirmed commerce/ERP agency.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/rohit-ganguly-25b45b7",
@@ -85,10 +91,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 30,
-    "score_rationale": "Domain gate partially met — Salesforce is an acceptable partial signal, but this is an internal Salesforce employee (vendor-side), not an SI/agency.",
+    "score_rationale": "Domain gate partially met \u2014 Salesforce is an acceptable partial signal, but this is an internal Salesforce employee (vendor-side), not an SI/agency.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/richardjlucas",
@@ -98,10 +105,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 12,
-    "score_rationale": "Domain gate failed — no company identified and 'Director of Services' headline has no platform-specific signals.",
+    "score_rationale": "Domain gate failed \u2014 no company identified and 'Director of Services' headline has no platform-specific signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/elliott-davenport-4a430a19",
@@ -111,10 +119,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 18,
-    "score_rationale": "Domain gate failed — UKG is an HR/workforce management platform, explicitly excluded as HR/payroll ERP.",
+    "score_rationale": "Domain gate failed \u2014 UKG is an HR/workforce management platform, explicitly excluded as HR/payroll ERP.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/magesh-jayaraj",
@@ -124,10 +133,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 22,
-    "score_rationale": "Domain gate failed — healthcare-focused internal Salesforce role, not a commerce SI/agency.",
+    "score_rationale": "Domain gate failed \u2014 healthcare-focused internal Salesforce role, not a commerce SI/agency.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/tanotras",
@@ -137,23 +147,25 @@
     "current_company": null,
     "classification": "cold",
     "score": 12,
-    "score_rationale": "Domain gate failed — no company identified, no platform-specific signals.",
+    "score_rationale": "Domain gate failed \u2014 no company identified, no platform-specific signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/carla-silvado-%e2%98%81-a6771616",
-    "name": "Carla Silvado ☁",
+    "name": "Carla Silvado \u2601",
     "headline": "Director of Professional Services | MIT A.C.E.",
     "current_title": "Director of Professional Services | MIT A.C.E.",
     "current_company": null,
     "classification": "cold",
     "score": 12,
-    "score_rationale": "Domain gate failed — no company with digital commerce or ERP signals identified.",
+    "score_rationale": "Domain gate failed \u2014 no company with digital commerce or ERP signals identified.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/nathcurtis",
@@ -163,10 +175,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 28,
-    "score_rationale": "Domain gate partially met — Salesforce partial signal, but internal vendor-side employee, not an SI or agency.",
+    "score_rationale": "Domain gate partially met \u2014 Salesforce partial signal, but internal vendor-side employee, not an SI or agency.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/rob-warner25",
@@ -176,10 +189,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 12,
-    "score_rationale": "Domain gate failed — no company identified and no platform-specific signals present.",
+    "score_rationale": "Domain gate failed \u2014 no company identified and no platform-specific signals present.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/dana-hartnett-6097018",
@@ -189,10 +203,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 30,
-    "score_rationale": "Domain gate partially met — Infor is an ERP vendor adjacent to the space, but as an internal vendor employee (not SI/partner), fit is weak.",
+    "score_rationale": "Domain gate partially met \u2014 Infor is an ERP vendor adjacent to the space, but as an internal vendor employee (not SI/partner), fit is weak.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/efraim-schwartz-842406",
@@ -202,10 +217,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 22,
-    "score_rationale": "Domain gate failed — Computer Design & Integration (CDI) is an IT infrastructure/solutions provider with no clear digital commerce or ERP implementation signals.",
+    "score_rationale": "Domain gate failed \u2014 Computer Design & Integration (CDI) is an IT infrastructure/solutions provider with no clear digital commerce or ERP implementation signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/readnorton",
@@ -215,10 +231,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 12,
-    "score_rationale": "Domain gate failed — 'Software Services Leader' provides no company or platform-specific signals.",
+    "score_rationale": "Domain gate failed \u2014 'Software Services Leader' provides no company or platform-specific signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/cesareoviedo",
@@ -228,10 +245,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 18,
-    "score_rationale": "Domain gate failed — no company identified and LATAM regional focus is outside target locations.",
+    "score_rationale": "Domain gate failed \u2014 no company identified and LATAM regional focus is outside target locations.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/tduncan",
@@ -241,10 +259,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 18,
-    "score_rationale": "Domain gate failed — Contact Center Technology and AI Transformation focus with no digital commerce or ERP signals.",
+    "score_rationale": "Domain gate failed \u2014 Contact Center Technology and AI Transformation focus with no digital commerce or ERP signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/mattlinebarger",
@@ -254,10 +273,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 20,
-    "score_rationale": "Domain gate failed — PagerDuty is an IT operations/incident management platform outside the target ecosystem.",
+    "score_rationale": "Domain gate failed \u2014 PagerDuty is an IT operations/incident management platform outside the target ecosystem.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/buildinguppeople",
@@ -267,10 +287,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 20,
-    "score_rationale": "Domain gate failed — NICE CXone is a contact center cloud platform with no digital commerce or ERP signals.",
+    "score_rationale": "Domain gate failed \u2014 NICE CXone is a contact center cloud platform with no digital commerce or ERP signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/jessica-massoletti-thepm",
@@ -280,10 +301,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 15,
-    "score_rationale": "Domain gate failed — Inobranch has no identifiable digital commerce or ERP signals.",
+    "score_rationale": "Domain gate failed \u2014 Inobranch has no identifiable digital commerce or ERP signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/kavita-beri-27430b1",
@@ -293,10 +315,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 12,
-    "score_rationale": "Domain gate failed — no company identified, no platform-specific signals.",
+    "score_rationale": "Domain gate failed \u2014 no company identified, no platform-specific signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/ml-miller",
@@ -306,10 +329,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 15,
-    "score_rationale": "Domain gate failed — no company identified, headline references general PS and CIO experience with no commerce/ERP signals.",
+    "score_rationale": "Domain gate failed \u2014 no company identified, headline references general PS and CIO experience with no commerce/ERP signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/sarah-solberg-6136b25b",
@@ -319,10 +343,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 20,
-    "score_rationale": "Domain gate failed — Tenable is a cybersecurity platform outside the target ecosystem.",
+    "score_rationale": "Domain gate failed \u2014 Tenable is a cybersecurity platform outside the target ecosystem.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/michael-cytrynbaum-69b20028",
@@ -332,10 +357,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 18,
-    "score_rationale": "Domain gate failed — Michael Page is a staffing/recruitment firm hitting the Staffing anti-pattern.",
+    "score_rationale": "Domain gate failed \u2014 Michael Page is a staffing/recruitment firm hitting the Staffing anti-pattern.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/aruna-yekkala-b76010259",
@@ -345,10 +371,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 10,
-    "score_rationale": "Domain gate failed — 'Clinic Director' is a healthcare clinical role with no digital commerce or ERP signals.",
+    "score_rationale": "Domain gate failed \u2014 'Clinic Director' is a healthcare clinical role with no digital commerce or ERP signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/sandratimoteo",
@@ -358,10 +385,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 22,
-    "score_rationale": "Domain gate failed — 'Technology Practice Group' is generic with no specific digital commerce or ERP platform signals.",
+    "score_rationale": "Domain gate failed \u2014 'Technology Practice Group' is generic with no specific digital commerce or ERP platform signals.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/nina-koebel-535b764b",
@@ -371,10 +399,11 @@
     "current_company": null,
     "classification": "cold",
     "score": 18,
-    "score_rationale": "Domain gate failed — Robert Half is a staffing/recruitment firm hitting the Staffing anti-pattern.",
+    "score_rationale": "Domain gate failed \u2014 Robert Half is a staffing/recruitment firm hitting the Staffing anti-pattern.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/andrea-advincula-24737b97",
@@ -384,9 +413,10 @@
     "current_company": null,
     "classification": "cold",
     "score": 18,
-    "score_rationale": "Domain gate failed — Robert Half is a staffing/recruitment firm hitting the Staffing anti-pattern.",
+    "score_rationale": "Domain gate failed \u2014 Robert Half is a staffing/recruitment firm hitting the Staffing anti-pattern.",
     "surfaced_at": "2026-05-20T11:02:36.000154+00:00",
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   }
 ]
