@@ -2,32 +2,34 @@
   {
     "url": "https://www.linkedin.com/in/michel-kuperman-17551a22/en",
     "name": "Michel Kuperman",
-    "headline": "Solution Consulting Leader | Sales Consulting Leader | SMB | Built Teams Across LATAM | PreSales | Oracle NetSuite · Accenture | ERP/CX Transformation | Service Design | Trilingual | AI Strategy 🧿",
+    "headline": "Solution Consulting Leader | Sales Consulting Leader | SMB | Built Teams Across LATAM | PreSales | Oracle NetSuite \u00b7 Accenture | ERP/CX Transformation | Service Design | Trilingual | AI Strategy \ud83e\uddff",
     "current_title": "Manager, Solution Advisory - Mid-Market & Customer Growth for NAM & LATAM",
     "current_company": "Aalto University",
     "classification": "warm",
     "score": 68,
-    "score_rationale": "Manager Solution Advisory with Oracle NetSuite and Accenture in LATAM — domain gate passes. Strong industry match; current company is Aalto University suggesting transitional status. Falls short of hot.",
+    "score_rationale": "Manager Solution Advisory with Oracle NetSuite and Accenture in LATAM \u2014 domain gate passes. Strong industry match; current company is Aalto University suggesting transitional status. Falls short of hot.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/pedroriveraarevalo",
-    "name": "Pedro Rivera Arévalo",
-    "headline": "🚀 Potenciando el crecimiento empresarial con Oracle NetSuite | Ventas consultivas B2B | ERP & CRM | Transformación Digital",
+    "name": "Pedro Rivera Ar\u00e9valo",
+    "headline": "\ud83d\ude80 Potenciando el crecimiento empresarial con Oracle NetSuite | Ventas consultivas B2B | ERP & CRM | Transformaci\u00f3n Digital",
     "current_title": "Corporate Territory Sales Manager",
     "current_company": "Universidad Nacional de Colombia",
     "classification": "warm",
     "score": 55,
-    "score_rationale": "Territory Sales Manager with headline 'Oracle NetSuite | ERP & CRM' — domain gate passes. Vendor-side/partner sales role; capped at warm. Colombia location.",
+    "score_rationale": "Territory Sales Manager with headline 'Oracle NetSuite | ERP & CRM' \u2014 domain gate passes. Vendor-side/partner sales role; capped at warm. Colombia location.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/lorenaleont",
@@ -37,42 +39,45 @@
     "current_company": "Oracle",
     "classification": "warm",
     "score": 55,
-    "score_rationale": "Regional Sales Management LATAM at Oracle — vendor-side employee capped at warm. Colombia location.",
+    "score_rationale": "Regional Sales Management LATAM at Oracle \u2014 vendor-side employee capped at warm. Colombia location.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/felipe-andres-rodriguez-poveda-pmp-sap-netsuite-erp-iso",
     "name": "FELIPE ANDRES RODRIGUEZ POVEDA",
-    "headline": "Director de Operaciones | Gerente de Proyectos (PMI / Scrum) | Facility & Property Manager | Transformación Digital | CAPEX/OPEX | KPIs | Mejora Continua ISO 9001-14001 | ERP-CRM-CMMS-SAP-NETSuite|",
+    "headline": "Director de Operaciones | Gerente de Proyectos (PMI / Scrum) | Facility & Property Manager | Transformaci\u00f3n Digital | CAPEX/OPEX | KPIs | Mejora Continua ISO 9001-14001 | ERP-CRM-CMMS-SAP-NETSuite|",
     "current_title": "Fundador & Consultor",
     "current_company": "Universidad de La Sabana",
     "classification": "warm",
     "score": 68,
-    "score_rationale": "Fundador & Consultor with NetSuite, SAP, ERP signals in headline — domain gate passes. Full seniority and role match (Fundador). Score moderated: current company is a university, no confirmed active agency.",
+    "score_rationale": "Fundador & Consultor with NetSuite, SAP, ERP signals in headline \u2014 domain gate passes. Full seniority and role match (Fundador). Score moderated: current company is a university, no confirmed active agency.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/diego-del-castillo/en",
     "name": "Diego Del Castillo",
-    "headline": "Ingeniero en computación con amplia y exitosa trayectoria en puestos de alta responsabilidad en la Gestión del área de Tecnología (IT), Arquitectura de Sistemas y Gerencia de Proyectos en grandes multinacionales.",
+    "headline": "Ingeniero en computaci\u00f3n con amplia y exitosa trayectoria en puestos de alta responsabilidad en la Gesti\u00f3n del \u00e1rea de Tecnolog\u00eda (IT), Arquitectura de Sistemas y Gerencia de Proyectos en grandes multinacionales.",
     "current_title": "Customer Management Director / IT Services Director",
     "current_company": "Oracle",
     "classification": "warm",
     "score": 58,
-    "score_rationale": "Customer Management Director / IT Services Director at Oracle Argentina — vendor-side director; capped at warm. Argentina location.",
+    "score_rationale": "Customer Management Director / IT Services Director at Oracle Argentina \u2014 vendor-side director; capped at warm. Argentina location.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/matias-conci-5187a412",
@@ -82,12 +87,13 @@
     "current_company": "Oracle",
     "classification": "warm",
     "score": 50,
-    "score_rationale": "VP Finance Latin America at Oracle — vendor-side VP; finance role not partner-facing. Capped at warm. Argentina location.",
+    "score_rationale": "VP Finance Latin America at Oracle \u2014 vendor-side VP; finance role not partner-facing. Capped at warm. Argentina location.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/federico-g-long",
@@ -97,12 +103,13 @@
     "current_company": "Oracle",
     "classification": "warm",
     "score": 52,
-    "score_rationale": "Client Manager at Oracle Managed Cloud Services — vendor-side; capped at warm. Argentina location.",
+    "score_rationale": "Client Manager at Oracle Managed Cloud Services \u2014 vendor-side; capped at warm. Argentina location.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/silvana-marrone-7927214",
@@ -112,12 +119,13 @@
     "current_company": "Oracle",
     "classification": "warm",
     "score": 58,
-    "score_rationale": "LAD Vice President Oracle Customer Success Services Sales — vendor-side VP with broad LAD coverage. Capped at warm. High seniority and regional scope. Argentina location.",
+    "score_rationale": "LAD Vice President Oracle Customer Success Services Sales \u2014 vendor-side VP with broad LAD coverage. Capped at warm. High seniority and regional scope. Argentina location.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/pablomacchi",
@@ -127,27 +135,29 @@
     "current_company": "Calipso",
     "classification": "warm",
     "score": 65,
-    "score_rationale": "Managing Director at Calipso (Argentine ERP company) — domain gate passes. Full role/seniority match; score moderated because Calipso is a proprietary ERP product, not a NetSuite/Oracle SI. Argentina location.",
+    "score_rationale": "Managing Director at Calipso (Argentine ERP company) \u2014 domain gate passes. Full role/seniority match; score moderated because Calipso is a proprietary ERP product, not a NetSuite/Oracle SI. Argentina location.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/ver%c3%b3nica-llames-massini-5a22a47",
-    "name": "Verónica Llames Massini",
-    "headline": "Director, ACS LAD, Resource Management/ Coach Ontológico y Sistémico",
+    "name": "Ver\u00f3nica Llames Massini",
+    "headline": "Director, ACS LAD, Resource Management/ Coach Ontol\u00f3gico y Sist\u00e9mico",
     "current_title": "Oracle",
     "current_company": "Oracle",
     "classification": "warm",
     "score": 55,
-    "score_rationale": "Director ACS LAD Resource Management at Oracle — vendor-side Director in Advanced Customer Services. Capped at warm. Argentina location.",
+    "score_rationale": "Director ACS LAD Resource Management at Oracle \u2014 vendor-side Director in Advanced Customer Services. Capped at warm. Argentina location.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/paulsd",
@@ -157,12 +167,13 @@
     "current_company": "Oracle",
     "classification": "warm",
     "score": 55,
-    "score_rationale": "Solution Architecture Leader Customer Success LATAM at Oracle — vendor-side with LATAM-wide scope. Capped at warm. Argentina location.",
+    "score_rationale": "Solution Architecture Leader Customer Success LATAM at Oracle \u2014 vendor-side with LATAM-wide scope. Capped at warm. Argentina location.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/santarelli-gabriel",
@@ -172,27 +183,29 @@
     "current_company": "Oracle",
     "classification": "warm",
     "score": 55,
-    "score_rationale": "Business Unit Director at Oracle — vendor-side Director. Capped at warm. Argentina location.",
+    "score_rationale": "Business Unit Director at Oracle \u2014 vendor-side Director. Capped at warm. Argentina location.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": null,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/nakary-maita",
     "name": "Nakary Najeanny M.",
-    "headline": "Senior ERP Functional Consultant | NetSuite & SAP FI Certified | Transformando procesos financieros con innovación y estrategias claves",
+    "headline": "Senior ERP Functional Consultant | NetSuite & SAP FI Certified | Transformando procesos financieros con innovaci\u00f3n y estrategias claves",
     "current_title": "Senior Solution Architect NetSuite",
-    "current_company": "LatamReady | Oracle NetSuite Solution Provider para América Latina | Partner Oficial",
+    "current_company": "LatamReady | Oracle NetSuite Solution Provider para Am\u00e9rica Latina | Partner Oficial",
     "classification": "warm",
     "score": 57,
-    "score_rationale": "Senior Solution Architect NetSuite at LatamReady (Oracle NetSuite Solution Provider for LATAM) — domain gate passes very strongly; agency boost applied. Technical architect role limits score. Argentina location.",
+    "score_rationale": "Senior Solution Architect NetSuite at LatamReady (Oracle NetSuite Solution Provider for LATAM) \u2014 domain gate passes very strongly; agency boost applied. Technical architect role limits score. Argentina location.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": null,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/maiorini-adrian-8013a83",
@@ -202,12 +215,13 @@
     "current_company": "Oracle",
     "classification": "warm",
     "score": 55,
-    "score_rationale": "Director ACS Service Management at Oracle Argentina — vendor-side Director in Advanced Customer Services. Capped at warm. Argentina location.",
+    "score_rationale": "Director ACS Service Management at Oracle Argentina \u2014 vendor-side Director in Advanced Customer Services. Capped at warm. Argentina location.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/carlos-benaglia-a99350",
@@ -217,27 +231,29 @@
     "current_company": "Oracle",
     "classification": "warm",
     "score": 55,
-    "score_rationale": "Regional Sales Director HGBU LAD at Oracle — vendor-side Sales Director covering Latin America. Capped at warm. Argentina location.",
+    "score_rationale": "Regional Sales Director HGBU LAD at Oracle \u2014 vendor-side Sales Director covering Latin America. Capped at warm. Argentina location.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/mat%c3%adas-arias",
-    "name": "Matías Arias",
-    "headline": "Esp. Dirección de Proyectos | Lic. Administración | Managing Principal Consultant at Oracle",
+    "name": "Mat\u00edas Arias",
+    "headline": "Esp. Direcci\u00f3n de Proyectos | Lic. Administraci\u00f3n | Managing Principal Consultant at Oracle",
     "current_title": "Oracle",
     "current_company": "Oracle",
     "classification": "warm",
     "score": 55,
-    "score_rationale": "Managing Principal Consultant at Oracle — vendor-side Principal Consultant. Capped at warm. Argentina location.",
+    "score_rationale": "Managing Principal Consultant at Oracle \u2014 vendor-side Principal Consultant. Capped at warm. Argentina location.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/federico-de-armas-63707816",
@@ -247,12 +263,13 @@
     "current_company": "Oracle",
     "classification": "warm",
     "score": 57,
-    "score_rationale": "Director Consulting Services at Oracle — most implementation-adjacent of the Oracle group. Capped at warm. Argentina location.",
+    "score_rationale": "Director Consulting Services at Oracle \u2014 most implementation-adjacent of the Oracle group. Capped at warm. Argentina location.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/juangomezfleytas",
@@ -262,12 +279,13 @@
     "current_company": "Oracle",
     "classification": "warm",
     "score": 55,
-    "score_rationale": "Business Development Director Hybrid Tech at Oracle — vendor-side BD Director. Capped at warm. Argentina location.",
+    "score_rationale": "Business Development Director Hybrid Tech at Oracle \u2014 vendor-side BD Director. Capped at warm. Argentina location.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/martin-bouso",
@@ -277,12 +295,13 @@
     "current_company": "Oracle",
     "classification": "warm",
     "score": 50,
-    "score_rationale": "Solution Architecture Manager at Oracle — vendor-side manager-level solution architect. Capped at warm. Argentina location.",
+    "score_rationale": "Solution Architecture Manager at Oracle \u2014 vendor-side manager-level solution architect. Capped at warm. Argentina location.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/mcitterio",
@@ -292,12 +311,13 @@
     "current_company": "Oracle",
     "classification": "warm",
     "score": 55,
-    "score_rationale": "Cloud Architect Director Strategic Accounts at Oracle — vendor-side Director. Capped at warm. Argentina location.",
+    "score_rationale": "Cloud Architect Director Strategic Accounts at Oracle \u2014 vendor-side Director. Capped at warm. Argentina location.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/alvarovenini",
@@ -307,12 +327,13 @@
     "current_company": "Self-employed",
     "classification": "warm",
     "score": 67,
-    "score_rationale": "Former Oracle Sr. Director now self-employed — domain gate passes (Oracle signal). No longer vendor-side so no cap; Director seniority and Argentina location. Falls below hot without active agency/SI company.",
+    "score_rationale": "Former Oracle Sr. Director now self-employed \u2014 domain gate passes (Oracle signal). No longer vendor-side so no cap; Director seniority and Argentina location. Falls below hot without active agency/SI company.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/gduran",
@@ -322,11 +343,12 @@
     "current_company": "Oracle",
     "classification": "warm",
     "score": 50,
-    "score_rationale": "Territory Sales Manager Public Sector at Oracle — vendor-side sales manager. Capped at warm. Argentina location.",
+    "score_rationale": "Territory Sales Manager Public Sector at Oracle \u2014 vendor-side sales manager. Capped at warm. Argentina location.",
     "surfaced_at": "2026-06-12T00:00:00Z",
     "already_connected": false,
     "has_conversation": false,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   }
 ]

@@ -1,0 +1,41 @@
+[
+  {
+    "url": "https://www.linkedin.com/in/ariel-troy-b780033a",
+    "name": "Ariel Troy",
+    "headline": "Vice President, Bergdorf Goodman eCommerce",
+    "current_title": "Vice President, Bergdorf Goodman eCommerce",
+    "current_company": "Bergdorf Goodman",
+    "classification": "hot",
+    "score": 91,
+    "note_draft": "Hi Ariel. The implementation and customization work behind a Bergdorf-level digital experience rarely fits a standard build timeline. My Team covers that layer for VP-level eComm teams. Would you be open to a quick call?",
+    "edited_note": null,
+    "note_decision": "rejected",
+    "source_file": "2026-04-27T000000Z-connection.json"
+  },
+  {
+    "url": "https://www.linkedin.com/in/ben-chmura-33a3745",
+    "name": "Ben Chmura",
+    "headline": "Vice President Ecommerce - Operations + UX/UI at Ashley Global Retail",
+    "current_title": "Vice President Ecommerce - Operations + UX/UI",
+    "current_company": "Ashley Global Retail",
+    "classification": "hot",
+    "score": 89,
+    "note_draft": "Hi Ben. Running Operations and UX together at Ashley's scale means every Salesforce Commerce Cloud change touches two teams at once. My Team helps keep those implementations moving cleanly. Open to a quick call?",
+    "edited_note": null,
+    "note_decision": "rejected",
+    "source_file": "2026-04-27T000000Z-connection.json"
+  },
+  {
+    "url": "https://www.linkedin.com/in/suzana-ferrari-%e2%98%81%ef%b8%8f-863bab1a",
+    "name": "Suzana Ferrari \u2601\ufe0f",
+    "headline": "Practice Director at Apps Associates, Oracle",
+    "current_title": "Practice Director at Apps Associates, Oracle",
+    "current_company": null,
+    "classification": "hot",
+    "score": 78,
+    "note_draft": "Hi Suzana. When Apps Associates' Oracle clients start needing SuiteCommerce or Shopify Plus work alongside the ERP, that scope usually sits outside what a finance practice wants to staff permanently. We plug in for those builds. Can we explore a fit?",
+    "edited_note": null,
+    "note_decision": "rejected",
+    "source_file": "2026-05-19-b7f61d15-hot.json"
+  }
+]
