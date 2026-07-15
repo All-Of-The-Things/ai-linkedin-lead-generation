@@ -12,8 +12,9 @@
     "surfaced_at": "2026-07-06T15:28:52.034325Z",
     "already_connected": false,
     "has_conversation": null,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/latestbuy",
@@ -28,8 +29,9 @@
     "surfaced_at": "2026-07-06T15:28:52.034325Z",
     "already_connected": false,
     "has_conversation": null,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/aaron-moy",
@@ -44,8 +46,9 @@
     "surfaced_at": "2026-07-06T15:28:52.034325Z",
     "already_connected": false,
     "has_conversation": null,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/david-gosselin-cpa-cma",
@@ -60,8 +63,9 @@
     "surfaced_at": "2026-07-06T15:28:52.034325Z",
     "already_connected": false,
     "has_conversation": null,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/moxi-guo-243a11147",
@@ -76,8 +80,9 @@
     "surfaced_at": "2026-07-06T15:28:52.034325Z",
     "already_connected": false,
     "has_conversation": null,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/bluepointusa",
@@ -92,8 +97,9 @@
     "surfaced_at": "2026-07-06T15:28:52.034325Z",
     "already_connected": false,
     "has_conversation": null,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/kevinlentz",
@@ -108,8 +114,9 @@
     "surfaced_at": "2026-07-06T15:28:52.034325Z",
     "already_connected": false,
     "has_conversation": null,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/ray-haylock-999a1256",
@@ -124,8 +131,9 @@
     "surfaced_at": "2026-07-06T15:28:52.034325Z",
     "already_connected": false,
     "has_conversation": null,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/echron",
@@ -140,8 +148,9 @@
     "surfaced_at": "2026-07-06T15:28:52.034325Z",
     "already_connected": false,
     "has_conversation": null,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/vittoria-anderson",
@@ -156,8 +165,9 @@
     "surfaced_at": "2026-07-06T15:28:52.034325Z",
     "already_connected": false,
     "has_conversation": null,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/muhammad-arslan-8a44a6244",
@@ -172,8 +182,9 @@
     "surfaced_at": "2026-07-06T15:28:52.034325Z",
     "already_connected": false,
     "has_conversation": null,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/rickyhayes",
@@ -188,8 +199,9 @@
     "surfaced_at": "2026-07-06T15:28:52.034325Z",
     "already_connected": false,
     "has_conversation": null,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/simonede",
@@ -204,8 +216,9 @@
     "surfaced_at": "2026-07-06T15:28:52.034325Z",
     "already_connected": false,
     "has_conversation": null,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   },
   {
     "url": "https://www.linkedin.com/in/martinrealjr",
@@ -220,7 +233,8 @@
     "surfaced_at": "2026-07-06T15:28:52.034325Z",
     "already_connected": false,
     "has_conversation": null,
-    "decision": null,
-    "note": null
+    "decision": "rejected",
+    "note": null,
+    "note_decision": "rejected"
   }
 ]

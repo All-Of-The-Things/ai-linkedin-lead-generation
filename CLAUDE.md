@@ -13,10 +13,12 @@ The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sendi
 
 ```
 [Phase 1 — Search]     /search-connections  (manual slash command)
+                        /search-connections-abbreviated  (manual, minimal-footprint variant — see Abbreviated Mode)
                         routines/daily-search.md  (scheduled, weekdays 9am)
     Steps 0–5: re-entry check → criteria refresh → search → enrich → classify → surface approvals
     → Email: "N leads ready for your review"
     → Human: edits the latest `state/pending_approvals/*-connection.json`, sets decision fields
+      (abbreviated: moves URLs into the `approved` array of the run's `-links.json` file; no email)
 
 [Phase 2 — Draft]      /generate-messages  (manual slash command)
     Step 6a: compose connection note drafts for approved leads
@@ -31,6 +33,9 @@ The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sendi
 [Phase 4 — Deliver]    /deliver-messages  (manual slash command)
     Step 9: send approved follow-up messages via LinkedIn
     → Email: delivery summary
+
+[Maintenance]          /pipeline-maintenance  (manual only — never scheduled, never auto-run)
+    Archives decided approval files, terminal leads, old run_log entries; migrates raw payloads to state/raw/
 ```
 
 ---
@@ -43,7 +48,9 @@ The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sendi
 | `config/criteria/` | Named criteria files; each is a self-contained search profile |
 | `state/leads.json` | Master lead ledger, keyed by normalized LinkedIn URL |
 | `state/seen.json` | Dedupe index — append-only, never remove a URL |
-| `state/pending_approvals/` | Human interface: classification-split files per run (`YYYY-MM-DD-<run_id>-hot.json`, `-warm.json`, `-cold.json`), notes-ready file after Phase 2 (`YYYY-MM-DD-notes-ready.json`), followup files (`YYYY-MM-DD-followup.json`) |
+| `state/pending_approvals/` | Human interface: classification-split files per run (`YYYY-MM-DD-<run_id>-hot.json`, `-warm.json`, `-cold.json`), links files from abbreviated runs (`YYYY-MM-DD-<run_id>-links.json`), notes-ready file after Phase 2 (`YYYY-MM-DD-notes-ready.json`), followup files (`YYYY-MM-DD-followup.json`) |
+| `state/raw/` | Raw `linkedin person fetch` payloads, one `<slug>.json` per lead — gitignored, re-derivable |
+| `state/archive/` | Maintenance output: `leads-archive.json`, `run_log-archive.json` — written only by `/pipeline-maintenance` |
 | `state/run_log.json` | Audit log of every pipeline run |
 | `templates/` | Message style guides used by `agents/message-composer.md` |
 | `agents/` | Subagent prompt files for focused subtasks |
@@ -52,6 +59,8 @@ The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sendi
 | `.claude/commands/generate-messages.md` | Phase 2 slash command (`/generate-messages`) |
 | `.claude/commands/send-connections.md` | Phase 3 slash command (`/send-connections`) |
 | `.claude/commands/deliver-messages.md` | Phase 4 slash command (`/deliver-messages`) |
+| `.claude/commands/search-connections-abbreviated.md` | Phase 1 minimal-footprint variant (`/search-connections-abbreviated`) |
+| `.claude/commands/pipeline-maintenance.md` | Manual state housekeeping (`/pipeline-maintenance`) |
 
 ---
 
@@ -88,7 +97,9 @@ Execute steps 0–9 in order every run. Each step is idempotent — if it alread
 
 1. Read `state/run_log.json`.
 2. If the most recent run has `status: "in_progress"`, resume from its `resume_from_step` field. Skip all lower-numbered steps.
-3. Otherwise, create a new run entry: `{ run_id: "<ISO-date>-<uuid4-short>", started_at: "<now>", status: "in_progress", resume_from_step: 1, steps_completed: [], counts: {} }`.
+
+   **Phase matching:** every run entry records its `phase` (e.g. `"search-connections"`, `"search-connections-abbreviated"`). Only resume an in-progress run whose `phase` matches the command now executing. If the most recent run is `in_progress` under a different phase, stop and ask the user: finish it with its own command, or mark it `status: "abandoned"` and start fresh. Never continue a standard search run in abbreviated mode (or vice versa) — they write different Step 5 artifacts.
+3. Otherwise, create a new run entry: `{ run_id: "<ISO-date>-<uuid4-short>", started_at: "<now>", status: "in_progress", phase: "<command name>", resume_from_step: 1, steps_completed: [], counts: {} }`.
 4. Write the new entry back to `run_log.json` before proceeding.
 
 ### Step 1 — Criteria Refresh (conditional)
@@ -137,7 +148,7 @@ Mark step complete in run_log.
    ```
    linkedin person fetch <url> --experience --json -q
    ```
-   Populate: `name`, `headline`, `location`, `industry`, `current_title`, `current_company`, `linkedin_raw`.
+   Populate: `name`, `headline`, `location`, `industry`, `current_title`, `current_company`. Write the raw fetch payload to `state/raw/<slug>.json` (slug = the URL's lowercased `/in/` handle, e.g. `.../in/irmarios` → `irmarios.json`). `leads.json` never stores `linkedin_raw`.
 
    On exit code 6: leave lead at `"new"` (retry next run — this step is re-entrant). Continue to next lead.
    On other errors: append to lead's `errors` array, leave at `"new"`.
@@ -160,7 +171,7 @@ Mark step complete in run_log.
 
 **Legacy compatibility:** When scanning in later steps, glob both new-style (`*-hot.json`, `*-warm.json`, `*-cold.json`) and legacy (`*-connection.json`) files.
 
-1. Build the set of URLs already surfaced across ALL existing approval files in `state/pending_approvals/` (glob `*-hot.json`, `*-warm.json`, `*-cold.json`, `*-connection.json`).
+1. Build the set of URLs already surfaced across ALL existing approval files in `state/pending_approvals/` (glob `*-hot.json`, `*-warm.json`, `*-cold.json`, `*-connection.json`, and every array of every `*-links.json`).
 2. Read all leads with `status: "classified"` that are NOT in that set.
 3. For each, build an approval entry:
    ```json
@@ -220,13 +231,22 @@ Mark step complete in run_log. **Phase 1 ends here.** Do not proceed to Step 6a 
 
 Runs in **`/generate-messages`** (Phase 2).
 
-1. Scan all approval files: glob `state/pending_approvals/*-hot.json`, `*-warm.json`, `*-cold.json`, and `*-connection.json` (legacy). Load every entry, tracking which file each came from.
-2. Find entries where `decision: "approved"` and `note_draft` is null.
-3. Auto-reject entries older than `approval.approval_timeout_days` days with `decision: null` (set `note_decision: "rejected"` on these).
+1. Scan all approval files: glob `state/pending_approvals/*-hot.json`, `*-warm.json`, `*-cold.json`, `*-connection.json` (legacy), **and `*-links.json`**. Load every entry, tracking which file each came from. For links files, every URL in the `"approved"` array is an approval — exactly equivalent to `decision: "approved"`. Normalize links-file URLs on read (lowercase, strip trailing slash).
+2. Find eligible leads:
+   - **Classification/legacy entries**: `decision: "approved"` and `note_draft` is null.
+   - **Links-file URLs**: in `"approved"`, lead at `status: "classified"` in `leads.json`, and URL not already present in any `*-notes-ready.json`. Links files hold no per-entry fields — the notes-ready file is the only place their drafts live.
+   - **Deduplicate across sources** by normalized URL — draft once. A classification entry wins over a links-file approval (richer display fields, `source_file` points at the classification file). A URL approved in two links files drafts once; `source_file` is the lexicographically first filename.
+   - If a links-approved URL also still sits in a tier array of the same file (copied instead of cut): the approval wins — remove the tier duplicate when writing the file back (self-heal).
+   - Status guard for links-approved URLs: not in `leads.json` or at `status: "new"` → skip and warn (paste error or interrupted classification). At `status: "rejected"` with `approval_decision: "expired"` → **rescue**: treat as approved and proceed. At `status: "rejected"` for any other reason → skip and flag the conflict in the run summary. Past `"classified"` (`request_sent`, …) → skip silently, already processed.
+3. **Expire stale approvals:**
+   - Classification/legacy entries older than `approval.approval_timeout_days` days (by `surfaced_at`, falling back to filename date) with `decision: null`: stamp `decision: "rejected"` and `note_decision: "rejected"` on the entry. Additionally, in `leads.json` set `status: "rejected"`, `approval_decision: "expired"`, `approval_decided_at` — but only when the lead is still at `status: "classified"` AND the URL is not approved anywhere (no entry with `decision: "approved"`, no links-file `"approved"` array). A URL approved elsewhere still gets the entry stamp (the null entry is a stale duplicate surface) but its lead is never touched. Entries remain in the file — only decision fields are filled in.
+   - Links files whose filename date is more than `approval.approval_timeout_days` days old: every URL still in `hot`/`warm`/`cold` is expired — move it to an `"expired"` array in that file (create if absent), and in `leads.json` set `status: "rejected"`, `approval_decision: "expired"`, `approval_decided_at`. Never expire a URL that is approved anywhere (any links `"approved"` array or any entry with `decision: "approved"`), and never touch a lead whose status is not `"classified"`. A URL never leaves a links file — it only moves between arrays.
 4. For each eligible lead:
    - Fetch the full profile using `linkedin person fetch <url> --experience --json -q` to get position history before drafting.
-   - Invoke `agents/message-composer.md` as a subagent with the lead record (including experience), `message_type: "connection_note"`, and `criteria_used`. Receive back the drafted note string.
-   - Write `note_draft: "<drafted note>"` and `note_decision: null` back to that entry **in the same file it was read from**.
+   - **Write back** the fetched `name`, `headline`, `current_title`, `current_company`, `industry`, `location` to the lead in `leads.json` (freshest fetch wins — see State File Contracts), and write the raw payload to `state/raw/<slug>.json`. Never store `linkedin_raw` in `leads.json`.
+   - If the fetch fails after retries: fall back to an existing `state/raw/<slug>.json` sidecar if present; otherwise draft from the lead's existing fields.
+   - Invoke `agents/message-composer.md` as a subagent with the lead record, passing the raw payload as `linkedin_raw` (from the fresh fetch, else the sidecar), `message_type: "connection_note"`, and `criteria_used`. Receive back the drafted note string.
+   - Classification/legacy entries: write `note_draft: "<drafted note>"` and `note_decision: null` back to that entry **in the same file it was read from**. Links-file URLs: no per-entry write-back — the draft lives only in the notes-ready file.
 5. For each **rejected** lead (decision: "rejected"): `status → "rejected"`, set `approval_decided_at`, `approval_decision`.
 6. **Write a notes-ready file** — after all drafts are written, collect every entry that just received a `note_draft` and write them to a new consolidated file:
    - Filename: `state/pending_approvals/<YYYY-MM-DD>-notes-ready.json` (use today's date). If a file for today already exists, append `-2`, `-3`, etc.
@@ -247,6 +267,7 @@ Runs in **`/generate-messages`** (Phase 2).
      }
      ```
    - This is the **primary review file** for the user. It contains only approved leads with drafted notes — no nulls, no rejected, no noise.
+   - For links-file leads, populate `name`, `headline`, `current_title`, `current_company`, `classification`, `score` from `leads.json` **after** the step-4 write-back; `source_file` is the links file's basename.
 7. **Send email notification** — invoke `agents/email-notifier.md` as a subagent with:
    - `phase: "notes_ready"`
    - `run_id`: current run ID
@@ -362,6 +383,36 @@ Mark step complete in run_log. **Phase 4 ends here.**
 
 ---
 
+## Abbreviated Mode — /search-connections-abbreviated
+
+A minimal-footprint variant of Phase 1. Same discovery, same classification — but no enrichment, no per-lead API checks, no email, and one links file instead of classification-split files. Review is cut/paste: the user moves URLs into `"approved"`.
+
+Runs Steps 0, 1, 2, and 4 exactly as written above, with these deltas:
+
+- **Step 0**: create the run entry with `phase: "search-connections-abbreviated"`. Resume follows the phase-matching rule in Step 0.
+- **Step 3 never runs** — regardless of `pipeline.json → enrichment.enabled`. No `linkedin person fetch` calls. Enrichment happens later, per approved lead, in Step 6a.
+- **Step 4 deltas**: classify only leads created by the current run (`run_id` match) — stale `status: "new"` leads from older runs are left untouched. The classifier still returns `score_rationale`; do **not** persist it to `leads.json`. Lead stubs in this mode carry only: `url`, `status`, `classification`, `score`, `name`, `headline`, `location`, `run_id`, `criteria`, `first_seen_run`, `last_updated`. Never `linkedin_raw`.
+- **Step 5 is replaced by Step 5L.** The connection-status and conversation checks are skipped entirely — false positives are caught by Step 6b's `status: "classified"` gate and the send-time safety checks.
+- **No email** — do not invoke `agents/email-notifier.md`. The links file is the review surface.
+- **Step 10** runs as written.
+
+### Step 5L — Surface Links File
+
+1. Build the set of URLs already surfaced across ALL existing approval files (glob `*-hot.json`, `*-warm.json`, `*-cold.json`, `*-connection.json`, and every array of every `*-links.json`).
+2. Read all leads with `status: "classified"` from the current run that are NOT in that set.
+3. Write ONE file `state/pending_approvals/<YYYY-MM-DD>-<run_id>-links.json` (`<run_id>` = short run ID, as in Step 5):
+   ```json
+   { "approved": [], "hot": ["<url>", ...], "warm": [...], "cold": [...] }
+   ```
+   URLs are normalized (lowercase, no trailing slash) and sorted by `score` descending within each tier. No pagination, no per-lead entries.
+4. Set `approval_surfaced_at` on each lead written.
+
+Mark step complete in run_log (record as step `5`). **Phase 1 ends here.**
+
+**Review contract:** *move* (cut, not copy) URLs from `hot`/`warm`/`cold` into `approved`. A URL in `approved` means exactly `decision: "approved"`. URLs left in a tier longer than `approval.approval_timeout_days` are expired by Step 6a: moved to an `"expired"` array in the same file, lead `status → "rejected"`, `approval_decision: "expired"`. Moving an expired URL into `approved` rescues it on the next `/generate-messages` run.
+
+---
+
 ## Rate Limit Handling
 
 On exit code 6 from any `linkedin` command:
@@ -381,8 +432,8 @@ Other exit codes:
 ## Approval Contract
 
 **Never send a connection request unless:**
-1. Some file in `state/pending_approvals/*-connection.json` has an entry for that URL with `decision: "approved"`.
-2. That same entry has `note_decision: "approved"` AND `note_draft` (or `edited_note`) is non-null.
+1. Some file in `state/pending_approvals/` records an approval for that URL — either an entry with `decision: "approved"` in a `*-hot/-warm/-cold/-connection.json` file, or membership in the `"approved"` array of a `*-links.json` file.
+2. A notes-ready entry (or that same classification entry) for the URL has `note_decision: "approved"` AND `note_draft` (or `edited_note`) is non-null. Links-file approvals carry no per-entry fields — for those leads this check can only be satisfied by a notes-ready entry.
 3. `leads.json` shows the lead at `status: "classified"`.
 
 All three checks are independent. All must pass.
@@ -397,10 +448,12 @@ Both checks must pass.
 
 ## State File Contracts
 
-- **`seen.json`**: append-only. Never remove a URL once written. A URL added here means "this person has been discovered and will never be re-proposed."
-- **`leads.json`**: keyed by normalized URL. Each pipeline step only writes to its own fields. Do not overwrite fields owned by other steps.
-- **`pending_approvals/`**: one timestamped file is created per run — never deleted, never merged into other files. Within each file, entries are never removed — only `decision` fields are filled in. Entries older than `approval_timeout_days` with null decisions are treated as auto-rejected by Step 6 but remain in the file. File naming: `<YYYYMMDDTHHMMSSZ>-connection.json` or `<YYYYMMDDTHHMMSSZ>-followup.json`.
-- **`run_log.json`**: append-only to the `runs` array. Each run gets its own entry.
+- **`seen.json`**: append-only. Never remove a URL once written — not by any pipeline step and not by `/pipeline-maintenance`. A URL added here means "this person has been discovered and will never be re-proposed." Archiving a lead never touches `seen.json`; dedupe survives archiving by design.
+- **`leads.json`**: keyed by normalized URL. Each pipeline step only writes to its own fields. Do not overwrite fields owned by other steps. **One shared exception:** the profile fields (`name`, `headline`, `location`, `industry`, `current_title`, `current_company`) are enrichment-owned and may be written by Step 3 or the Step 6a approval fetch — freshest fetch wins. `leads.json` never contains `linkedin_raw`; raw payloads live in `state/raw/`. `/pipeline-maintenance` may *move* terminal leads to `state/archive/leads-archive.json`.
+- **`pending_approvals/`**: one timestamped file is created per run — never deleted, never merged into other files. `/pipeline-maintenance` may *move* fully-decided files to `pending_approvals/archive/`; nothing else relocates them. In entry-style files (`-hot/-warm/-cold/-connection/-notes-ready/-followup/-warmup-comments`) entries are never removed — only decision fields are filled in. Entries older than `approval_timeout_days` with null decisions are expired by Step 6a — it stamps `decision: "rejected"` on them (they remain in the file), so fully-decided files can eventually be archived by `/pipeline-maintenance`. In `*-links.json` files the invariant is **file-level, not array-level**: URLs move between arrays (tier → `approved` by the user; tier → `expired` by Step 6a; tier-duplicate removal when a URL was copied instead of cut) but never leave the file — the union of all arrays is stable from the moment the file is written.
+- **`state/raw/<slug>.json`**: raw fetch payloads, one file per lead; slug = the lowercased `/in/` handle, sanitized: take only the first path segment after `/in/` (drops locale suffixes like `/en`) and replace any character outside `[a-z0-9._-]` with `_`. Written by Step 3 and the Step 6a approval fetch; last write wins. **Gitignored** — bulky, re-derivable, never used for dedupe, safe to delete. Agents without sidecars fall back to a fresh fetch.
+- **`state/archive/`**: written only by `/pipeline-maintenance`. `leads-archive.json` mirrors `leads.json`'s keyed shape; `run_log-archive.json` holds rotated run entries in order.
+- **`run_log.json`**: append-only to the `runs` array during pipeline runs. Each run gets its own entry. `/pipeline-maintenance` may rotate completed entries beyond the most recent 20 into the archive.
 
 ---
 
@@ -429,4 +482,4 @@ Templates live in `templates/` and are selected by `agents/message-composer.md` 
 | `followup_1_retail.md` | First follow-up, retail-brands criteria |
 | `followup_2_resource.md` | Second follow-up, both criteria |
 
-Common tokens the composer uses as placeholders: `{{first_name}}`, `{{current_title}}`, `{{current_company}}`. All other personalization is derived from the lead's `headline` and `linkedin_raw` profile data.
+Common tokens the composer uses as placeholders: `{{first_name}}`, `{{current_title}}`, `{{current_company}}`. All other personalization is derived from the lead's `headline` and the raw profile payload the caller passes as `linkedin_raw` (fresh Step 6a fetch, else `state/raw/<slug>.json`).
