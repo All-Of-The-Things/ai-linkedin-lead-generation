@@ -102,6 +102,11 @@
     "BigCommerce"
   ],
 
+  "_excluded_companies_note": "Operator feedback 2026-07-16: never surface anyone from these firms in any tier. Unlike excluded_employers (surfaced cold), these are dropped entirely at Step 2 — skip the result AND write it to seen.json so it never resurfaces. Detect from headline naming the firm.",
+  "excluded_companies": [
+    "Tavano Team"
+  ],
+
   "_sap_note": "Operator feedback 2026-07-09: SAP-related leads are out of scope entirely — no business there. This is broader than excluded_employers: SAP partner consultancies, SAP implementation practices, and in-house SAP program leaders are all non-buyers. A generic ERP signal that resolves to SAP does not pass the domain gate.",
   "anti_patterns": [
     "SAP",
