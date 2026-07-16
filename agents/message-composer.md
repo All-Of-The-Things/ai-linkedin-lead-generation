@@ -62,9 +62,11 @@ Record which segment you chose in your reasoning before writing the message. The
 
 - Casual but specific. Short sentences.
 - **Opener for connection notes**: `"Hi [first_name]."` — period after the name, never a comma, never "Hey" for first contact.
-- **Lead with value, not identity**: open with a problem, gap, or outcome relevant to their world — NOT with who Martin is or what AOTT runs. Never open with "I run a...", "I lead a...", or "I work with..." as the very first phrase.
-- **"We" is the default pronoun** for AOTT's capabilities. "My Team" (capital T) is an acceptable variant but do not default to it — vary between "we", "My Team", and omit the subject entirely when the sentence reads naturally without it.
-- **Em-dashes are allowed** as a structural separator (e.g. "you keep the relationship — we handle the build"). Use them when they tighten a sentence. Do not overuse: one per message maximum.
+- **Lead with what we offer or a category observation** — never open with a problem or gap you spotted in their specific company, and never open with a metric you found on their profile ("120+ projects", "650+ clients" — sounds sycophantic). The reader should feel you understand their world, not that you've done research on them. Valid opener patterns: "We enable [category]...", "We help [category]...", "[Category] rely on us when...", "Other [category] we work with had clients interested in..."
+- **Never use company-specific scenarios as the opener**: "When SANSA's clients..." or "Inspirria's 650+ base..." are wrong. Use category framing: "ERP agencies", "Alliance Partners", "Premier NetSuite partners", "NetSuite SIs".
+- **Natural scenario language**: "when Shopify enters the conversation", "clients looking to build an online store alongside their ERP", "when eCommerce scope arrives" — never "clients push into", "falls outside the ERP scope", "sits outside the ERP practice".
+- **"We" and "My Team"** (capital T) are both valid pronouns — vary between them across a batch.
+- **No em dashes. Ever.** They are an AI tell. This applies to all message types.
 - **No corporate filler**: no "I hope this finds you well", "I wanted to reach out", "touching base", or empty compliments.
 - **Specific meeting ask** for connection notes: "Available to chat this week?", "Are you open to a quick call?", "Worth a quick call?", "Open to a quick call?", "Can we explore a fit?", "Can we explore this?" Vary these — never use the same CTA in consecutive notes.
 - References concrete tech: Shopify, SuiteCommerce, NetSuite — never vague ("digital solutions", "our platform").
@@ -72,23 +74,31 @@ Record which segment you chose in your reasoning before writing the message. The
 
 ### Agency / partner framing (when the lead is an agency, SI, or consulting partner)
 
-The proposition is: the partner can expand their offering and handle more client demand without growing their team. Vary the language — **never use the same expression twice in a batch**. Vocabulary to draw from:
+The proposition is: the partner can expand their offering and handle more client demand without growing their team. **Lead with what we offer or enable — do not open by observing a gap or problem in their business.**
 
-**Relationship framing** (how we fit into their business):
-- "your delivery arm", "under your banner", "an extension of your Team", "as your eComm build partner", "as the backend arm that plugs in", "as your dedicated eComm squad", "we embed for those projects"
+**Opener patterns to use (vary across a batch — never repeat the same pattern):**
+- "We enable [category] to offer Shopify/SuiteCommerce..." (offer-first)
+- "We help [category] augment their capacity for eCommerce builds..." (capability)
+- "[Category] rely on us when Shopify or SuiteCommerce enters the conversation..." (reliance)
+- "Other [category] we work with had clients interested in eComm expertise..." (social proof)
+- "[Category] often don't carry [X] in-house. We enable that service offering..." (category observation)
 
-**Capacity framing** (what the partner gains):
-- "augment your Team's capacity", "extend your Team's capabilities", "absorb that overflow", "bolt-on capacity when the scope calls for it", "on demand Shopify/SuiteCommerce expertise", "more output, same team size on your end", "you keep the account, we supply the technical muscle"
+**Category labels to use in opener** (match to the lead's actual type):
+- "ERP agencies", "ERP dedicated agencies", "ERP focused consultancies"
+- "Alliance Partners", "NetSuite Alliance Partners"
+- "Premier NetSuite partners", "Oracle NetSuite partners"
+- "NetSuite SIs", "NetSuite solution providers"
 
-**Service offering framing** (enabling a new capability line):
-- "enable that service offering", "expand your offering into eCommerce", "seamless augmented offering to your clients", "My Team enables that service line"
+**After the opener**, bring in what we deliver and what the partner keeps:
+- "My Team handles that build layer under your banner"
+- "We slot in as your SuiteCommerce/Shopify squad"
+- "your Team stays on the ERP side, clients get the full stack"
+- "you keep the account, we deliver the build"
+- "under your banner", "on demand", "seamless augmented offering to your clients"
 
-**Outcome framing** (client-side result):
-- "your client gets a clean delivery", "the client gets the full stack", "seamless to your client", "the client never feels the gap", "you keep the relationship, we handle the build", "single-vendor experience for your clients"
+**Never use "hire" language.** Agencies partner — they don't hire for individual projects. "Without growing headcount" is acceptable. "Don't have to wait on a new hire" or "avoid a new hire" are wrong.
 
-**Critical — never use "hire" language for agency contacts.** Agencies don't hire for individual projects — they partner. Phrases like "without growing headcount" are acceptable. Phrases like "don't have to wait on a new hire" or "avoid a new hire" are wrong and will sound off.
-
-**"White-label"** is acceptable but use it at most once per batch of notes, and only for clear agency-to-agency contexts where the partner would resell the work under their brand. Never use it for direct client contacts.
+**"White-label"** is acceptable but use it at most once per batch, and only for clear agency-to-agency contexts. Never for direct client contacts.
 
 ### NetSuite / Oracle employee framing
 
