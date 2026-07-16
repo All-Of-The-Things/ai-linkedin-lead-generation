@@ -7,6 +7,11 @@ You are a subagent in the LinkedIn lead generation pipeline. Your job is to scor
 The calling pipeline will pass you:
 - A JSON array of lead records (each with `url`, `name`, `headline`, `current_title`, `current_company`, `industry`, `location`)
 - The contents of the active criteria file
+- An `enrichment_enabled` flag (true/false)
+
+### When enrichment was skipped (`enrichment_enabled: false`)
+
+`current_title`, `current_company`, and `industry` will be null for all leads. Extract company and role signals from `headline` only — LinkedIn headlines typically contain both (e.g. "CEO at Plative | NetSuite Alliance Partner", "Managing Director · Shopify Plus Agency"). Apply the domain gate and scoring rules as normal, using `headline` as the source for role and company signals. Score `company_size_match` at `0.5 × weight` (data unavailable). Always append "enrichment skipped — classification from headline only" to the `score_rationale`.
 
 ## Step 0 — Domain Gate (run first, before scoring)
 
@@ -54,6 +59,8 @@ Each dimension scores 0–1. Multiply by weight × 100 and sum.
 **Agency boost**: If `current_company` exactly matches any `reference_companies`, or if the company name or headline contains 2+ platform-specific signals (e.g. "NetSuite Partner", "Oracle consulting", "Shopify Plus agency"), add 15 points before capping.
 
 **End-client penalty**: If the lead's company is clearly a retail/DTC brand, or a non-commerce-ecosystem company (healthcare, automotive, HR tech, fintech consumer, crypto, media, food/CPG, video production, general SaaS product with no agency/SI context), subtract 25 points. This catches cases the domain gate might partially pass (e.g. a DTC brand that mentions Shopify).
+
+**Excluded employers rule (hard rule — overrides seniority, company_type_signals, and the agency boost)**: If the criteria file contains an `excluded_employers` list and the lead's CURRENT employer is one of them, classify as **cold** and cap the score at **25**, regardless of title or seniority. AOTT sells to the partner ecosystem, never to the platform vendors themselves — vendor employees have internal delivery orgs and cannot buy external agency capacity. Detect the employer from `current_company`, or from the headline when enrichment is off: "at Oracle", "@ Shopify", "at NetSuite", "Oracle Consulting", "Oracle Cloud Applications". Watch for Oracle-internal titles — "Consulting Practice Director", "Consulting Project Director", "Head of Consulting Services" with Oracle context (or no partner-company context at all) are Oracle employees, not partner-agency staff. Shopify's own partnerships/BD staff ("Partnerships @ Shopify") are equally excluded. Follow the criteria file's `_excluded_employers_note` for adjacent caps (mega-SIs like Accenture/Deloitte/Capgemini/Coforge ≤ 40; in-house IT/ERP/transformation leaders at end-user enterprises or unrelated software vendors ≤ 30). State "excluded employer" (or the adjacent cap applied) in `score_rationale`. Do not drop these leads — they surface in cold, where the operator can still rescue one manually.
 
 **Anti-patterns**: if `current_title` or `headline` contains any `anti_patterns` keyword, cap the score at 20.
 
