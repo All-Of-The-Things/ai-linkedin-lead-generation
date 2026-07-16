@@ -1,0 +1,76 @@
+{
+  "name": "Rex Gutermuth",
+  "headline": "Head of Development Performance & Availability Oracle | NetSuite",
+  "location": "Canada",
+  "companyName": "Oracle",
+  "followersCount": 172,
+  "companyHashedUrl": "https://www.linkedin.com/company/1028",
+  "companyUrl": null,
+  "position": "Head of Development Performance & Availability",
+  "publicUrl": "https://www.linkedin.com/in/rex-gutermuth",
+  "about": "Benchmarking, tuning, and reporting performance of Oracle | NetSuite's ERP Systems and continuous performance testing in our CI/CD processes and pipelines.",
+  "countryCode": "CA",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAO-jIIBGY9NxXqErXIPM90nwrt6i7JRjTY",
+  "experiences": [
+    {
+      "startTime": "2024-09-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 21,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": "Vancouver, British Columbia, Canada",
+      "position": "Head of Development Performance & Availability",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2021-04-01T00:00:00.000Z",
+      "endTime": "2024-09-01T00:00:00.000Z",
+      "duration": 42,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "NetSuite",
+      "location": null,
+      "position": "Performance & Availability - Program Director",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/6137/"
+    },
+    {
+      "startTime": "2017-08-01T00:00:00.000Z",
+      "endTime": "2021-04-01T00:00:00.000Z",
+      "duration": 45,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "NetSuite",
+      "location": null,
+      "position": "Principal, Performance & Benchmark Development",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/6137/"
+    },
+    {
+      "startTime": "2016-05-01T00:00:00.000Z",
+      "endTime": "2017-08-01T00:00:00.000Z",
+      "duration": 16,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "NetSuite",
+      "location": null,
+      "position": "Senior Web Performance Engineer",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/6137/"
+    },
+    {
+      "startTime": "1996-01-01T00:00:00.000Z",
+      "endTime": "2016-05-01T00:00:00.000Z",
+      "duration": 245,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Montage Web Design",
+      "location": "Vancouver, British Columbia, Canada",
+      "position": "Managing Director / Owner",
+      "description": "Design, integrate, consult and customize primarily within the Netsuite ERP Solutions space.\nERP centric skillset:\n\u2022 Requirements Analysis and Design\n\u2022 UX / UI Design \n\u2022 Web Performance\n\u2022 Functional Implementation\n\u2022 Customization (SuiteScript)\n\u2022 Integration and Configuration\n\u2022 Client Training\n\u2022 Project Management\n\u2022 Remote Administration",
+      "companyHashedUrl": "https://www.linkedin.com/company/8562451/"
+    }
+  ]
+}

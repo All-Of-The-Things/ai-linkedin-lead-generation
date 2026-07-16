@@ -1,0 +1,64 @@
+{
+  "name": "Roberta Dubois",
+  "headline": "Provincial Practice Director, Respiratory Services, Alberta Health Services",
+  "location": "Edmonton, Alberta, Canada",
+  "companyName": "Alberta Health Services",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/337982",
+  "companyUrl": null,
+  "position": "Alberta Health Services",
+  "publicUrl": "https://www.linkedin.com/in/roberta-dubois-b1416122",
+  "about": null,
+  "countryCode": "CA",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAASmXwABDLf8olhrEhDWEHw46x10epuTbnk",
+  "experiences": [
+    {
+      "startTime": "2019-03-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 87,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Alberta Health Services",
+      "location": "Edmon",
+      "position": "Practice Director",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/337982/"
+    },
+    {
+      "startTime": "2010-10-01T00:00:00.000Z",
+      "endTime": "2019-03-01T00:00:00.000Z",
+      "duration": 102,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Alberta Health Services",
+      "location": null,
+      "position": "Senior Practice Lead, Respiratory Services",
+      "description": "Practice Consultation & Support; Community of Practice Facilitation",
+      "companyHashedUrl": "https://www.linkedin.com/company/337982/"
+    },
+    {
+      "startTime": "2006-01-01T00:00:00.000Z",
+      "endTime": "2010-11-01T00:00:00.000Z",
+      "duration": 59,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Alberta Health Services",
+      "location": null,
+      "position": "Manager, Respiratory Services",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/337982/"
+    },
+    {
+      "startTime": "2005-01-01T00:00:00.000Z",
+      "endTime": "2008-01-01T00:00:00.000Z",
+      "duration": 37,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "David Thompson Health Region",
+      "location": null,
+      "position": "Manager, Respiratory Services",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/90551/"
+    }
+  ]
+}

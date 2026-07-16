@@ -1,0 +1,88 @@
+{
+  "name": "Fabian De Leon",
+  "headline": "CEO and Founder at SuiteDB | NetSuite Solution ArchitectNetSuite Alliance Partner",
+  "location": "Uruguay",
+  "companyName": "SuiteDB | ERP & eCommerce Agency | NetSuite Alliance Partner",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/10008557",
+  "companyUrl": null,
+  "position": "Co-Founder",
+  "publicUrl": "https://www.linkedin.com/in/fabian-de-leon-0a57ba4b",
+  "about": "I\u00b4m a Software developer with great interest for innovation and cutting-edge technologies, as well as researching and investigating assignments for creating / delivering up-to-date, reliable, useful and attractive applications in an agile way.",
+  "countryCode": "UY",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAqegv0BYAfZMy6CSXwfWkEfongtsqJLXjg",
+  "experiences": [
+    {
+      "startTime": "2018-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 102,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "SuiteDB | ERP & eCommerce Agency | NetSuite Alliance Partner",
+      "location": "Uruguay",
+      "position": "Co-Founder",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/10008557/"
+    },
+    {
+      "startTime": "2015-01-01T00:00:00.000Z",
+      "endTime": "2018-01-01T00:00:00.000Z",
+      "duration": 37,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Strongpoint.io",
+      "location": "80 Peter Street, Toronto Ontario M5V1J9",
+      "position": "Software Engineer, Sr integrator.",
+      "description": "Manage NetSuite and all IT applications in order to promote efficient systems integrations and improve business processes.  Reorganize CRM structure, ERP related transactions and improve inventory management.  Build and maintain a new e-commerce platform. Create custom workflows and scripts (suitelets, user events, client scrips, workflow actions, and important searches/reports.\n\nDevelop custom solutions for Site Builder, SSP Applications and extend SuiteCommerce Advanced implementations.",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2015-02-01T00:00:00.000Z",
+      "endTime": "2017-03-01T00:00:00.000Z",
+      "duration": 26,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Lima Consulting Group",
+      "location": "Uruguay",
+      "position": "Software Solution Engineer",
+      "description": "* Adobe Dynamic Tag Management\n\n*Strategy formulation / audit / analytics\n\n* Development Rules:Tag Management\n\n* Sr Netsuite Developer",
+      "companyHashedUrl": "https://www.linkedin.com/company/232851/"
+    },
+    {
+      "startTime": "2012-03-01T00:00:00.000Z",
+      "endTime": "2015-02-01T00:00:00.000Z",
+      "duration": 36,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Tavano Team",
+      "location": null,
+      "position": "Senior Software Developer",
+      "description": "Development Web Application at Netsuite hosted platforms.\n\n* Netsuite customization.\n\nFront-End : HTML5, Angular.js, Backbone.js , Jquery, Javascript, Ajax.\n\nBack-End: Netsuite\n\nAdobe Marketing Cloud  (Omniture)",
+      "companyHashedUrl": "https://www.linkedin.com/company/3619042/"
+    },
+    {
+      "startTime": "2014-03-01T00:00:00.000Z",
+      "endTime": "2014-10-01T00:00:00.000Z",
+      "duration": 8,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "ThinkSpot Group",
+      "location": "Uruguay",
+      "position": "Senior Developer Freelance",
+      "description": "* Development Sr at Netsuite\n\n* Project Lead\n\n* Netsuite Backend and Frontend\n\n* Integration with Netsuite",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2010-02-01T00:00:00.000Z",
+      "endTime": "2013-01-01T00:00:00.000Z",
+      "duration": 36,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Before Interactive Solutions",
+      "location": "Uruguay",
+      "position": "Tester",
+      "description": "Quality assurance",
+      "companyHashedUrl": null
+    }
+  ]
+}

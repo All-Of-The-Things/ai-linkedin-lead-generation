@@ -1,0 +1,100 @@
+{
+  "name": "Eric Lussier",
+  "headline": "Director of Growth at Shopify",
+  "location": "Ottawa, Ontario, Canada",
+  "companyName": "Shopify",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/784652",
+  "companyUrl": null,
+  "position": "Director of Growth",
+  "publicUrl": "https://www.linkedin.com/in/ericlussier",
+  "about": null,
+  "countryCode": "CA",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAADOp_YBlYTiY0vTXD3OpvX4k74Q4kRxFM4",
+  "experiences": [
+    {
+      "startTime": "2021-06-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 61,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": null,
+      "location": "Ottawa, Ontario, Canada",
+      "position": "Director of Growth",
+      "description": "Focused on building the team and analytics infrastructure to drive the next wave of growth.",
+      "companyHashedUrl": "https://www.linkedin.com/company/784652/"
+    },
+    {
+      "startTime": "2020-01-01T00:00:00.000Z",
+      "endTime": "2021-06-01T00:00:00.000Z",
+      "duration": 18,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "TripAdvisor",
+      "location": "Greater Ottawa Metropolitan Area",
+      "position": "Senior Director, Traffic Acquisition",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/15027/"
+    },
+    {
+      "startTime": "2017-01-01T00:00:00.000Z",
+      "endTime": "2020-01-01T00:00:00.000Z",
+      "duration": 37,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "TripAdvisor",
+      "location": "Greater Ottawa Metropolitan Area",
+      "position": "Director, Traffic Acquisition",
+      "description": "Leading a great team of senior engineers and analysts in cutting edge digital marketing, driven by analytics and focused on moving the needle for TripAdvisor.",
+      "companyHashedUrl": "https://www.linkedin.com/company/15027/"
+    },
+    {
+      "startTime": "2012-04-01T00:00:00.000Z",
+      "endTime": "2017-01-01T00:00:00.000Z",
+      "duration": 58,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "TripAdvisor",
+      "location": "Ottawa",
+      "position": "Director, TripAdvisor SEO",
+      "description": "Based on our success and learnings we had at TravelPod, our Ottawa team was asked to take on TripAdvisor's global SEO program.",
+      "companyHashedUrl": "https://www.linkedin.com/company/15027/"
+    },
+    {
+      "startTime": "2008-05-01T00:00:00.000Z",
+      "endTime": "2012-04-01T00:00:00.000Z",
+      "duration": 48,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "TravelPod",
+      "location": "Ottawa",
+      "position": "Senior Product Manager",
+      "description": "TravelPod (acquired by TripAdvisor) was founded in 1997 making it the world's first travel blogging platform. Over the years it grew a large community of engaged travellers based on a well refined product and was always on the cutting edge of performance marketing. \n\nI was brought in as the company's first Product Manager and working with a small but talented group, we ran all aspects of the business from keeping the servers online to customer support. \n\nThat broad experience was highly formative and allowed me to establish many learnings that I still apply today. \n\nSkills:\n- A ton of A/B Testing\n- Daily Release Development \n- Performance Metrics & Dashboarding\n- Cutting edge SEO, SEM, Social\n- Interface Design\n- Usability\n- QA\n- SQL\n- Customer Support & Community Building\n- Some JS & HTML coding\n\nNotable Accomplishments:\n- Introduced a significant new driver of organic traffic which doubled revenue.\n- Designed and launched an entirely new dashboard (CMS) for the bloggers; the first significant redesign since 1997.\n- Played a meaningful leadership role in defining ways-of-working and culture in a small group of senior professionals, many of which still work closely together as part of TripAdvisor after 10 years.",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2005-03-01T00:00:00.000Z",
+      "endTime": "2007-08-01T00:00:00.000Z",
+      "duration": 30,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Softonic International",
+      "location": "Barcelona",
+      "position": "Product Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/50208/"
+    },
+    {
+      "startTime": "2000-06-01T00:00:00.000Z",
+      "endTime": "2005-01-01T00:00:00.000Z",
+      "duration": 56,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Freebalance",
+      "location": "Ottawa",
+      "position": "Web Developer",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/30263/"
+    }
+  ]
+}

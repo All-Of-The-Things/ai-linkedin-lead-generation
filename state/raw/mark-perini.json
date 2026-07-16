@@ -1,0 +1,40 @@
+{
+  "name": "Mark Perini",
+  "headline": "Founder at ICEE Social",
+  "location": "New York, New York, United States",
+  "companyName": "ICEE Social",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/13053025",
+  "companyUrl": null,
+  "position": "Founder",
+  "publicUrl": "https://www.linkedin.com/in/mark-perini",
+  "about": "The best part of our job is helping businesses take an idea (whether it be fledgling or fully formed), and flesh it out to develop a fully functioning business. This process occurs through the development of trust and partnership with ICEE and our all-star team. To us there's no greater satisfaction than helping someone realize their entrepreneurial dreams!",
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAA7S6FwBql4UyVqg9sO6iZbyUmSIf8UFubw",
+  "experiences": [
+    {
+      "startTime": "2008-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 220,
+      "employmentType": "selfEmployed",
+      "locationType": null,
+      "companyName": "ICEE Social",
+      "location": "New York City Metropolitan Area",
+      "position": "Founder",
+      "description": "ICEE Social is a boutique development agency specializing in the development of Shopify E-commerce Stores. Our trustworthy and highly-rated concierge shop has built (and continues to manage) hundreds of Shopify stores over the past 10 years, maintaining our status as a top 10 Shopify Partner/Expert. \n\nThe best part of our  job is helping businesses take an idea (whether it be fledgling or fully formed), and flesh it out to develop a fully functioning business. This process occurs through the development of trust and partnership with ICEE and our all-star team. To us there's no greater satisfaction than helping someone realize their entrepreneurial dreams!",
+      "companyHashedUrl": "https://www.linkedin.com/company/13053025/"
+    },
+    {
+      "startTime": "2013-01-01T00:00:00.000Z",
+      "endTime": "2018-01-01T00:00:00.000Z",
+      "duration": 61,
+      "employmentType": "selfEmployed",
+      "locationType": null,
+      "companyName": "Author of Halfway Perfect",
+      "location": "New York, New York, United States",
+      "position": "Author",
+      "description": null,
+      "companyHashedUrl": null
+    }
+  ]
+}

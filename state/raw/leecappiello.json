@@ -1,0 +1,69 @@
+{
+  "name": "Lee Cappiello",
+  "headline": "Principal Consultant",
+  "location": "New York City Metropolitan Area",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": "2025-08-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 10,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Sterling Suite Advisors",
+      "location": null,
+      "position": "Principal Consultant",
+      "description": "Strategic Advising & Functional Optimization - Serve as the primary functional advisor for enterprise-level NetSuite implementations, translating complex business requirements into scalable system architectures.\n\nLead comprehensive business process mapping sessions (Order-to-Cash, Procure-to-Pay, Record-to-Report) to identify gaps and prescribe optimizations that align NetSuite functionality with strategic business goals.\n\nAdvise C-level stakeholders on ERP best practices, driving system adoption and maximizing return on investment (ROI) through post-implementation optimization.\n\nProject Management & Leadership - Direct end-to-end NetSuite implementation lifecycles, managing project scope, timelines, resource allocation, and budget deliverables for concurrent high-priority engagements.\n\nCoordinate user acceptance testing (UAT) phases.\n\nLiaison: Bridging Business & Technical Teams - Act as the primary bridge between internal business process owners (finance, supply chain, sales) and external technical developers, ensuring accurate interpretation of requirements.\n\nTranslate non-technical business needs into precise technical documentation (BRDs, FRDs) for development teams.\n\nFacilitate cross-functional workshops to reconcile conflicting requirements between departments, fostering consensus on system configuration and process design.\n\nManage vendor relationships and external consulting resources, holding third-party teams accountable for deliverable quality and deadlines.\n\nTraining & Change Management - Develop and deliver customized end-user training programs and materials (user guides, SOPs, webinars) to accelerate organizational adoption and minimize business disruption.\n\nMentor client internal subject matter experts (SMEs), empowering them to become self-sufficient NetSuite administrators and first-line support post-go-live.",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2024-04-01T00:00:00.000Z",
+      "endTime": "2025-08-01T00:00:00.000Z",
+      "duration": 17,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "TOWN & COUNTRY LIVING",
+      "location": "New York City Metropolitan Area",
+      "position": "Director of Information Technology",
+      "description": "Led the migration of legacy systems to NetSuite cloud-based infrastructure, resulting in increased scalability and ease of access for remote employees.\nManaged technology vendor relationships effectively, ensuring timely delivery of products and services while maintaining cost controls.\nOptimized IT budget allocation by identifying cost-saving opportunities and reallocating resources towards high-impact projects.\nSuccessfully managed large-scale IT projects from inception through completion while adhering to strict timelines and budget constraints.\nDeveloped cross-functional relationships with other departments to better understand their technology needs and deliver tailored solutions that supported business objectives.",
+      "companyHashedUrl": "https://www.linkedin.com/company/354793/"
+    },
+    {
+      "startTime": "2021-05-01T00:00:00.000Z",
+      "endTime": "2024-04-01T00:00:00.000Z",
+      "duration": 36,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Orva",
+      "location": "New York, New York, United States",
+      "position": "Director Of Information Technology",
+      "description": "\u2022 Define and build the IT organization and manage relationships with key IT and non-IT (including customer supply chain and technology organizations and 3PLs) vendors and third parties in order to enable continued rapid company growth.\n\u2022 Plan and direct the strategic goals and initiatives of Orva\u2019s information technology organization in alignment with company objectives. \n\u2022 Day to day operational management of the IT organization including infrastructure, cyber security, and enterprise applications. \n\u2022 Maintain organizational effectiveness and efficiency by defining, delivering, and supporting strategic plans for implementing solutions across a multi-site organization, including selection and implementation of ERP, WMS, EDI, Demand Planning and Allocation or other enterprise applications and supporting infrastructure.",
+      "companyHashedUrl": "https://www.linkedin.com/company/6990354/"
+    },
+    {
+      "startTime": "2020-08-01T00:00:00.000Z",
+      "endTime": "2021-05-01T00:00:00.000Z",
+      "duration": 10,
+      "employmentType": "contract",
+      "locationType": null,
+      "companyName": "RPE Solutions",
+      "location": "New York City Metropolitan Area",
+      "position": "Senior Information Technology Consultant",
+      "description": "\u2022 Acts as a strategic thought partner, proposes alternatives/solutions in alignment with requirements/objectives/timelines and address issues facing the business\n\u2022 Advanced leadership capability, including ability to motivate and mentor others within work group\n\u2022 Executes and leads medium or multiple agile/waterfall projects with a focus on process documentation, requirements documents, user story development, user acceptance testing and training/communications\n\u2022 Acts as liaison with technical and development teams to convert business requirements into technology requirements\n\u2022 Develops business cases, test cases and fulfills the project technical SME role on various projects\n\u2022 Supports implementation and testing of projects including version upgrades\n\u2022 Designs, develops and implements change management plans to ensure adoption of process improvement changes and technology solutions across the organization\n\u2022 Ensures proper processes are followed in the systems life cycle and maintain a responsive, reliable, and functional system\n\u2022 Provides technical and application support for troubleshooting and resolving issues where required and coordinates with investigation of root cause on support issues\n\u2022 Development and definition of support models for new solutions",
+      "companyHashedUrl": "https://www.linkedin.com/company/107052/"
+    },
+    {
+      "startTime": "2003-06-01T00:00:00.000Z",
+      "endTime": "2020-08-01T00:00:00.000Z",
+      "duration": 207,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Ascena Retail Group, Inc.",
+      "location": null,
+      "position": "Senior Information Technology Manager",
+      "description": "Directed a team of technical specialists, supporting various applications for the Merchandising, Planning and Allocation departments.  The team was balanced across multiple geographies both in the US and India.\n\nResponsible for Merchandising, Planning & Allocation, Ecommerce, and Pricing applications throughout the Software Development Life Cycle (SDLC) for multiple business units.\n\nLed a team of developers in a Oracle, PL/SQL, .NET. environment.\n\nWorked with business units to determine specific application requirements and solutions.\n\nManaged and motivated a team of software developers through application and organizational changes.",
+      "companyHashedUrl": "https://www.linkedin.com/company/2718842/"
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/leecappiello"
+}

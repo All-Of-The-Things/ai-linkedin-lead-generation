@@ -1,0 +1,76 @@
+{
+  "name": "Ian Garvey",
+  "headline": "Director at Epaccsys, Cloud ERP and Prerogative",
+  "location": "Watford, England, United Kingdom",
+  "companyName": "Epaccsys",
+  "followersCount": 1592,
+  "companyHashedUrl": "https://www.linkedin.com/company/1086232",
+  "companyUrl": null,
+  "position": "ERP Specialist",
+  "publicUrl": "https://www.linkedin.com/in/ian-garvey-0b1a5022",
+  "about": "Experience in helping businesses select, implement and exploit their investment in business applications. More than 20 years experience with the Epicor range of business solutions and 10 years experience with the Greentree Business Solution.",
+  "countryCode": "GB",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAATILYUB3qSELTiErLMcYdxCpheSNSD991U",
+  "experiences": [
+    {
+      "startTime": "2001-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 306,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Epaccsys",
+      "location": "Leicester and Ringwood United Kingdom",
+      "position": "ERP Specialist",
+      "description": "Director and Founder of Epaccsys Ltd. Epaccsys implements the Epicor Kinetic Business Solution. My role involves meeting clients at the relevant stages of their Epicor implementation from presales, implementation, support and ongoing account management.",
+      "companyHashedUrl": "https://www.linkedin.com/company/1086232/"
+    },
+    {
+      "startTime": "2022-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 54,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Cloud ERP Limited",
+      "location": "United Kingdom",
+      "position": "ERP Specialist and advisor",
+      "description": "Founder of Cloud ERP Ltd. Cloud ERP implements the Acumatica Business Solution. My role involves meeting clients at the relevant stages of their Acumatica implementation from Presales, implementation, support and ongoing account management.",
+      "companyHashedUrl": "https://www.linkedin.com/company/82217157/"
+    },
+    {
+      "startTime": "2003-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 282,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Prerogative Ltd",
+      "location": "Leicester and Ringwood United Kingdom",
+      "position": "ERP Specialist",
+      "description": "Director and Founder of Prerogative Ltd.  Prerogative implements the Greentree Business Solution. My role involves meeting clients at the relevant stages of their Greentree implementation from Presales, implementation, support and ongoing account management.",
+      "companyHashedUrl": "https://www.linkedin.com/company/382505/"
+    },
+    {
+      "startTime": "1995-01-01T00:00:00.000Z",
+      "endTime": "2001-01-01T00:00:00.000Z",
+      "duration": 73,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Platsoft",
+      "location": "Greater Bournemouth Area",
+      "position": "Sales Manager",
+      "description": "Started at Platsoft as a sales consultant providing the Platinum (now Epicor) range of business applications. My role started as a sales consultant carrying out all sales activities including marketing, presales, sales negotiation and then account management. After a number of years I was promoted to sales manager where I recruited and managed a sales team.",
+      "companyHashedUrl": "https://www.linkedin.com/company/4617/"
+    },
+    {
+      "startTime": "1991-01-01T00:00:00.000Z",
+      "endTime": "1995-01-01T00:00:00.000Z",
+      "duration": 49,
+      "employmentType": "fullTime",
+      "locationType": "onSite",
+      "companyName": "Independent computer solutions",
+      "location": "Greater London, England, United Kingdom",
+      "position": "Sales Consultant",
+      "description": null,
+      "companyHashedUrl": null
+    }
+  ]
+}

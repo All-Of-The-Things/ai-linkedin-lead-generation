@@ -1,0 +1,40 @@
+{
+  "name": "Yang Forjindam",
+  "headline": "Co-founder at PocketSuite",
+  "location": "San Francisco, California, United States",
+  "companyName": "PocketSuite (YC W16)",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/3300972",
+  "companyUrl": null,
+  "position": "Co-Founder",
+  "publicUrl": "https://www.linkedin.com/in/yangforjindam",
+  "about": "Spent the first 10 years of my career helping midsize companies operate more efficiently over the Internet. Now doing the same thing for small, independent companies on mobile.",
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAACeAhUBrzk9S4l7f6lj_DxH8EL2wmjsmh4",
+  "experiences": [
+    {
+      "startTime": "2014-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 150,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "PocketSuite (YC W16)",
+      "location": "San Francisco Bay Area",
+      "position": "Co-Founder",
+      "description": "PocketSuite is a business management iPhone app for today's independent professional. \n\nPocketSuite enables professionals to send booking confirmations to any customer over SMS, source booking requests directly from their website or Facebook page, confirm all client appointments with payment, and keep all client communication in one app.\n\nIn charge of product development, engineering and strategy",
+      "companyHashedUrl": "https://www.linkedin.com/company/3300972/"
+    },
+    {
+      "startTime": "2000-01-01T00:00:00.000Z",
+      "endTime": "2011-01-01T00:00:00.000Z",
+      "duration": 133,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "NetSuite",
+      "location": "San Mateo, CA",
+      "position": "Software Engineer",
+      "description": "Began as a software engineer, developed the documentation system, contributed to the core ui infrastructure, and helped launch the CRM and eCommerce modules. Awarded a patent for a method for using incoming email to automate business processes\n\nTransitioned to principal engineer on the platform team where I helped launch SuiteScript, a Javascript api, runtime, sdk (with debugger) and web framework for building third party applications (browser and server side) in NetSuite.\n\nServed as architect and led system wide re-architecture initiative to standardize on a unified api thereby simplifying the development process, making the product more testable, and making it easier to build extensions on the platform.",
+      "companyHashedUrl": "https://www.linkedin.com/company/6137/"
+    }
+  ]
+}

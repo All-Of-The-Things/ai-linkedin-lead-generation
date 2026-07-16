@@ -1,0 +1,64 @@
+{
+  "name": "Alexander Hadimulya",
+  "headline": "Senior Web Developer / Team Lead at VisionPros",
+  "location": "Canada",
+  "companyName": "VisionPros",
+  "followersCount": 110,
+  "companyHashedUrl": "https://www.linkedin.com/company/1120107",
+  "companyUrl": null,
+  "position": "VisionPros",
+  "publicUrl": "https://www.linkedin.com/in/alexander-hadimulya-8886416a",
+  "about": "I'm a creative problem solver and out-of-the-box thinker specializing in e-commerce and B2B front end web development. Currently focusing in on Backbone, React and Node projects.\n\nLanguages: Javascript, Node, JQuery, Github, Gulp, BackBone, Require, React, Underscore, HTML, HTML5, CSS, CSS3, PHP\nDesign Tools: Adobe Photoshop, Illustrator, Adobe XD\nCMS: Netsuite (SuiteCommerce), Wordpress, Magento, Shopify\n\u2026 more",
+  "countryCode": "CA",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAA6wN6gB0bYHwEA3VmYQWVpsksQ0EBwQ8UU",
+  "experiences": [
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "VisionPros",
+      "location": null,
+      "position": "Senior Web Developer / Team Lead",
+      "description": "Oversee and lead the development of e-commerce and B2B websites from start to finish. Build and customize components for e-commerce, integrate various APIs.\n\nTools used: Node, Github, Gulp, BackBone, Require, React, Underscore, Netsuite, Wordpress, Magento, Adobe Photoshop/Illustrator, Adobe XD",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2010-06-01T00:00:00.000Z",
+      "endTime": "2014-12-01T00:00:00.000Z",
+      "duration": 55,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "VisionPros",
+      "location": "Vancouver, BC",
+      "position": "Senior Web Designer / Front End Web Developer",
+      "description": "Specialized in:\n- creating highly engaging UX designs and prototypes\n- front end web development for Netsuite, Magento and Wordpress\n\u2026 more",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2011-09-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 177,
+      "employmentType": "freelance",
+      "locationType": null,
+      "companyName": "BigTurns",
+      "location": "Vancouver, BC",
+      "position": "UX Designer / Front End Web Developer",
+      "description": "Design and develop websites for e-commerce, small-to-medium sized businesses. Responsive web design using various frameworks including Foundation 5 and Bootstrap. Customized web development on various CMS platforms including Adobe Business Catalyst, Wordpress, Magento and Shopify.",
+      "companyHashedUrl": "https://www.linkedin.com/company/1120107/"
+    },
+    {
+      "startTime": "2009-02-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 208,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "TamingTheWeb.ca",
+      "location": "Coquitlam, BC",
+      "position": "Founder / Lead Designer",
+      "description": null,
+      "companyHashedUrl": null
+    }
+  ]
+}

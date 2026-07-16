@@ -1,0 +1,76 @@
+{
+  "name": "Enrique Arce",
+  "headline": ".",
+  "location": "Argentina",
+  "companyName": "Oracle",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/1028",
+  "companyUrl": null,
+  "position": "Oracle",
+  "publicUrl": "https://www.linkedin.com/in/enrique-arce-028266",
+  "about": "Specialties: complex sales, PMO, ITIL, ITSM, IT outsourcing, IT project management, process reengineering, Public Cloud, Enterprise Cloud Adoption, DaaS, SaaS, PaaS, IaaS",
+  "countryCode": "AR",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAAJpqABNkxGYCipm_QPHQabG1HRDsupbw4",
+  "experiences": [
+    {
+      "startTime": "2006-06-01T00:00:00.000Z",
+      "endTime": "2025-10-01T00:00:00.000Z",
+      "duration": 233,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": null,
+      "position": "LatinAmerica Solution Management Senior Director",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2002-07-01T00:00:00.000Z",
+      "endTime": "2006-05-01T00:00:00.000Z",
+      "duration": 47,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": null,
+      "position": "Outsourcing Sales South Cone",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2001-01-01T00:00:00.000Z",
+      "endTime": "2002-01-01T00:00:00.000Z",
+      "duration": 13,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "CPM Argentina",
+      "location": "Argentina",
+      "position": "Gerente",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/157240/"
+    },
+    {
+      "startTime": "1996-08-01T00:00:00.000Z",
+      "endTime": "2000-12-01T00:00:00.000Z",
+      "duration": 53,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": null,
+      "position": "Applications Sales Rep.",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "1987-08-01T00:00:00.000Z",
+      "endTime": "1996-07-01T00:00:00.000Z",
+      "duration": 108,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Coopers&Lybrand",
+      "location": "Argentina",
+      "position": "Manager - MCS",
+      "description": "Management Consulting Services Manager. IT and Processes Improvements.",
+      "companyHashedUrl": "https://www.linkedin.com/company/1044/"
+    }
+  ]
+}

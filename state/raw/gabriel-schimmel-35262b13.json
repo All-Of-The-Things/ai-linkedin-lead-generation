@@ -1,0 +1,69 @@
+{
+  "name": "Gabriel Schimmel",
+  "headline": "Chief Operating Officer at r-pac International",
+  "location": "New York, New York, United States",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "r-pac International",
+      "location": null,
+      "position": "Chief Operating Officer",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/156511/"
+    },
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "r-pac International",
+      "location": null,
+      "position": "President Europe",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/156511/"
+    },
+    {
+      "startTime": "2005-03-01T00:00:00.000Z",
+      "endTime": "2021-12-01T00:00:00.000Z",
+      "duration": 202,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "r-pac International",
+      "location": "El Salvador",
+      "position": "President Central America",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/156511/"
+    },
+    {
+      "startTime": "1992-10-01T00:00:00.000Z",
+      "endTime": "2018-12-01T00:00:00.000Z",
+      "duration": 315,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Medea SA",
+      "location": null,
+      "position": "CEO",
+      "description": "Led the transformation of the family\u2019s textile label manufacturing business from a local and regional player into an international boutique supplier serving the U.S. and Europe.",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "1991-07-01T00:00:00.000Z",
+      "endTime": "1991-09-01T00:00:00.000Z",
+      "duration": 3,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "M&M Mars - New Jersey USA",
+      "location": null,
+      "position": "Commodity Trade Research Assistant",
+      "description": "Research and analysis of commodity prices, including cocoa. Study supply of these commodities using mathematical models.",
+      "companyHashedUrl": null
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/gabriel-schimmel-35262b13"
+}

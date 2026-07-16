@@ -1,0 +1,100 @@
+{
+  "name": "Karan Karandikar",
+  "headline": "Co-Founder | COO/CTO - Xcelero | Cloud ERP | NetSuite",
+  "location": "Greater Boston",
+  "companyName": "Xcelero / Centium",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/1681775",
+  "companyUrl": null,
+  "position": "Co-founder and Chief Operating Officer",
+  "publicUrl": "https://www.linkedin.com/in/karan-karandikar-95b484",
+  "about": null,
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAAR2FcB8CDpKmAtas0TWTsl2GNoQnzFjvo",
+  "experiences": [
+    {
+      "startTime": "2003-05-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 278,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Xcelero / Centium",
+      "location": "Greater Boston",
+      "position": "Co-founder and Chief Operating Officer",
+      "description": "- Architected and launched an innovative SuiteApp for Test Automation for NetSuite\n- Built a consulting practice around Oracle E-Business Suite and NetSuite Cloud ERP\n- Helped Centium achieve a NetSuite Five Star Solution Provider status three years in a row\n- Architected innovative solutions in the Project Costing, Project Billing, Supply Chain and Customer Service Areas\n- Designed complex system integration solutions\n- Played a Trusted Advisor role on large customer engagements\n- Built NetSuite competency in the Off-shore Development Center",
+      "companyHashedUrl": "https://www.linkedin.com/company/1681775/"
+    },
+    {
+      "startTime": "1998-04-01T00:00:00.000Z",
+      "endTime": "2003-04-01T00:00:00.000Z",
+      "duration": 61,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Kenexa",
+      "location": "Greater Boston",
+      "position": "Practice Director",
+      "description": "- Pre-sales consulting and preparation of proposals for Oracle projects\n- Development of functional and tchnical consulting practice for Oracle Applications\n- Engagement manager for large clients\n- Project management of Oracle Applications implementation / integration projects\n- Functional consulting around Oracle's Manufacturing modules",
+      "companyHashedUrl": "https://www.linkedin.com/company/1009/"
+    },
+    {
+      "startTime": "1996-08-01T00:00:00.000Z",
+      "endTime": "1998-03-01T00:00:00.000Z",
+      "duration": 20,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "CSC Consulting",
+      "location": "Singapore",
+      "position": "Principal Consultant",
+      "description": "- Pre-sales for IT consulting projects\n- Project management",
+      "companyHashedUrl": "https://www.linkedin.com/company/1120/"
+    },
+    {
+      "startTime": "1996-01-01T00:00:00.000Z",
+      "endTime": "1997-01-01T00:00:00.000Z",
+      "duration": 13,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Cincom Systems",
+      "location": "Singapore and Malaysia",
+      "position": "Industry Consultant - Manufacturing",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/6160/"
+    },
+    {
+      "startTime": "1991-01-01T00:00:00.000Z",
+      "endTime": "1994-01-01T00:00:00.000Z",
+      "duration": 37,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Apex Systems Pte Ltd",
+      "location": "Singapore",
+      "position": "Sr Systems Analyst",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/4787/"
+    },
+    {
+      "startTime": "1990-01-01T00:00:00.000Z",
+      "endTime": "1991-01-01T00:00:00.000Z",
+      "duration": 13,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Tata Consultancy Services",
+      "location": "Greater Chennai Area",
+      "position": "Senior Systems Analyst",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1353/"
+    },
+    {
+      "startTime": "1984-01-01T00:00:00.000Z",
+      "endTime": "1986-01-01T00:00:00.000Z",
+      "duration": 25,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Tata Motors",
+      "location": "Pune/Pimpri-Chinchwad Area",
+      "position": "Programmer/Analyst",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/5665/"
+    }
+  ]
+}

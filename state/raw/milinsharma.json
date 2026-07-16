@@ -1,0 +1,88 @@
+{
+  "name": "Milin Sharma",
+  "headline": "Consulting Technical Director at Oracle-Netsuite",
+  "location": "Newark, California, United States",
+  "companyName": "Oracle",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/1028",
+  "companyUrl": null,
+  "position": "Consulting Technical Director at Oracle-Netsuite",
+  "publicUrl": "https://www.linkedin.com/in/milinsharma",
+  "about": "Specializing in customizing, integrating and implementing Cloud/On-Premise ERP, Supply Chain Management, Order Management and Fulfillment, Recurring Billing, Discrete/Semiconductor Manufacturing, Shop-Floor Management, Master Data Management, NPI Process, Configuration, Pricing, Invoicing Quoting, Quote-to-Cash, Procure-to-Pay.\n\nSeeking a challenging Technical Director/Sr. Staff Solution Architect position. My strengths are in solutioning, customizing, implementing, integrating Supply Chain Management, Semiconductor/Discrete Manufacturing Process Mgmt, Master Data mgmt, Configuration-Pricing-Quoting, Procure-to-Pay based projects.\n\nSummary:\n\u2022 Strong techno-functional Cloud/On-Premise knowledge in Order Management, Configuration, Pricing, Product Information Management (Master Data Management), Inventory, Manufacturing, Bill Of Materials, Accounts Receivable, Finance, Purchasing, Configurator and Advance Pricing, Recurring Billing, Discrete/Semiconductor Manufacturing.\n\u2022 Architected many lighthouse projects for customization and integrations using middleware like Boomi, Oracle Integration Cloud, MuleSoft, FarApp, etc.\n\u2022 Integrated NetSuite/Oracle Apps projects with Amazon, Magento2, Shopify, Avalara, banks, Payment Gateways, etc.\n\u2022 Extensive experience in delivering Proof of Concept and Pre-Sales Engagement.\n\u2022 SME of Product and Service configuration, NPI Process and expert in designing the schema/data structure for Configuration Rules, Pricing and Quoting.\n\u2022 Worked as Technical Consulting Director, Staff Solution Architect, Director of Architecture in companies like NetSuite-Oracle, Cisco, Selectica, E2open and Wipro where I had provided solutions to Barracuda Networks, OpenTable, American Express, Cisco, IBM, GE, Fujitsu, Seagate, Forrester, Power Integrations, Chegg, Paylocity, United Talent Agency etc.\n\u2026 more",
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAG-M3YBedO4jmM-nh3rbLvdpUw3UYvBPRY",
+  "experiences": [
+    {
+      "startTime": "2015-04-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 135,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": "San Mateo, California",
+      "position": "Consulting Technical Director at Oracle-Netsuite",
+      "description": "\u2022\tArchitected & designed the customization and integration for many enterprise projects.\n\u2022\tArchitected & delivered successfully many lighthouse projects for customers like Barracuda, OpenTable, United Talent Agency, Paylocity, City Bank etc. across several industries including Manufacturing, Finance, HR, Retail and Supply Chain Management.\n\u2022\tSME of Integration, Performance and Scalability. Innovated SuiteAdapter SuiteApp for integration and implemented for many customers as a replacement of middlewares like Dell Boomi /Celigo.\n\u2022\tLed Integration Guild and trained many resources on NetSuite Webservices (SOAP/REST).\n\u2022\tWorked for Architecture Review Board and reviewed 40+ watchlist projects. \n\u2022\tHandled numerous customer escalations, re-engineered the system and got projects back on track.\n\u2022\tWorked as Single Point of Contact for all Product Managers and led the effort to provide Product feedback. Logged 50+ enhancements and got them implemented for SuiteBundler, Scripts, Web Services, Application Performance Management Tool, etc.\n\u2022\tDesigned customizations using SuiteLet/SuiteScripts/Map Reduce Scripts.",
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2013-12-01T00:00:00.000Z",
+      "endTime": "2015-03-01T00:00:00.000Z",
+      "duration": 16,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "E2open",
+      "location": "San Francisco Bay Area",
+      "position": "Staff Solution Architect",
+      "description": "\u2022\tResponsible for solutioning and blueprinting the implementation of E2open\u2019s Supply Chain Visibility (SCV) product for Power Integrations. Provided the solution and performed the supplier on-boarding where all supplier transactions/snapshots such as Inventory, Purchase Orders, Shipments, etc are reported and processed.\n\u2022\tIntegrated the Supply Chain Visibility with Shop Floor Management of Oracle E Business Suite (R12).\n\u2022\tDesigned the custom functionality for Assembly Build Order Instructions.\n\u2022\tDesigned and implemented the integration with Oracle Shop Floor management (OSFM).\n\u2022\tDesigned XSDs of the transaction files which are passed to OSFM. \n\u2022\tIntegrated E2open with Oracle Purchasing System to get the Standard PO, Blanket PO info and to posted the Outside Processing Receipt transactions. Designed and implemented various OSFM transactions such as Create Inventory Lot, Split Inventory Lot, Create Job, Move Job, Split Lot, etc.",
+      "companyHashedUrl": "https://www.linkedin.com/company/7677/"
+    },
+    {
+      "startTime": "2012-10-01T00:00:00.000Z",
+      "endTime": "2013-12-01T00:00:00.000Z",
+      "duration": 15,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Determine, a Corcentric Company",
+      "location": "San Mateo",
+      "position": "Director (Technical Architecture and Engineering)",
+      "description": "Led the design and development effort of Selectica\u2019s cloud based Guided Selling Product for Configuration, Pricing and Quoting. Accountable for solutioning on-going releases of Guided Selling Enhancements.\n\u2022\tDelivered major Pricing features such as Dynamic Price List, Price List Availability Rules, Cross Product Volume Discounts and Promotion Management etc. for customers like Forrester, PSC.\n\u2022\tDelivered various types of Quoting Attributes and APIs for accessing quote information.\n\u2022\tDelivered complex Configuration rules like Incompatibility, Recommendation, Expansion, Cross-Categories, Conditional Defaulting, Resource Check, etc\n\u2022\tInstrumental in prototyping key Selectica features resulting in new sales deals.",
+      "companyHashedUrl": "https://www.linkedin.com/company/165915/"
+    },
+    {
+      "startTime": "2006-12-01T00:00:00.000Z",
+      "endTime": "2012-10-01T00:00:00.000Z",
+      "duration": 71,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Cisco",
+      "location": "San Jose",
+      "position": "Technical Lead for Master Data Management (Product Hub)",
+      "description": "Led Cisco MDM team and implemented Oracle Application\u2019s Product Information Management module for 3 million Commercial items and 900 million attributes.  Previously, led Product Configuration IT development team and implemented Selectica Configurator and integrate with Oracle Applications\u2019 Order Management module.\n\n\u2022\tLed and managed the implementation of Product Information Management module of Oracle EBiz R12 Release and responsible for development of custom features. \n\u2022\tResponsible to work with cross functional teams for localization Patches, Performance team etc.\n\u2022\tLed and managed the migration of PIM to R 12.1.1 release from HP Servers to Cisco servers, all new Cisco servers were populated from scratch for 624 Million master data transactions.\n\u2022\tDelivered a custom UI named eGenie using Oracle provided APIs. This UI is used across Cisco to create commercial items such as hardware, software, service, license etc.\n\u2022\tImplemented Selectica Configurator for 5,000 Cisco Products and Services with 40,000 Configuration rules.\n\u2022\tResponsible for managing the entire backend data, Configuration rules of Cisco Products.  Designed configuration rules for all Cisco Products like routers, servers, etc. and the associated data model. Awarded \u201cRock Star\u201d by VP of Cisco.\n\u2022\tResponsible to provide defect matrix, performance matrix, go live readiness etc. to senior management and update them regarding business benefits of the releases.\n\u2022\tDesigned and delivered all the design-time components of ICW (Integrated Commerce Workplace) project such as Tagging, Item Info Extract, KBS Generator, Publishing process, Markup needed to deploy Cisco products. \n\u2022\tWon the Cisco Innovation context by designing and developing a new Configuration system that reduced publishing time by from 48 hours to 15 minutes (200x speedup).\n\u2022\tMigrated 5000 Cisco Products from legacy to ICW with the limited budget, resources and innovative ideas. Team was awarded a Cisco commerce award, \u201cQ2\u201909 Wonders of the World\u201d.",
+      "companyHashedUrl": "https://www.linkedin.com/company/1063/"
+    },
+    {
+      "startTime": "2006-01-01T00:00:00.000Z",
+      "endTime": "2012-01-01T00:00:00.000Z",
+      "duration": 73,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Cisco",
+      "location": null,
+      "position": "Technical Lead",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1063/"
+    },
+    {
+      "startTime": "2000-05-01T00:00:00.000Z",
+      "endTime": "2006-12-01T00:00:00.000Z",
+      "duration": 80,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Determine, a Corcentric Company",
+      "location": "San Jose",
+      "position": "Professional Services Manager",
+      "description": "Fastraq/Enterprise Productivity Suite \u2013 for Manufacturing (Solution Engineering)\n\u2022\tResponsible to build and manage the offshore development and Q/A team of Selectica\u2019s Solution Engineering. Responsible for design and development of UI, schema and Config rules. \n\u2022\tResponsible for design and development of Pricing Model of Fastraq. Worked with various Product Managers to deliver new functionality.\n\u2022\tResponsible for acquiring talent and apprising team members as SME.\n\u2022\tDelivered this hosted solution of Selectica for Configuration, Pricing and Quoting on time. Using Fastraq, customers could easily create Product and Pricing data and configuration rules.\n\u2022\tDelivered Pricing features like Formula Based Pricing, Discount Thresholds, etc.\nProvided seamless integration with Quoting and Ordering.\n\nCisco Apollo \u2013 Implementation of Selectica Configurator at Cisco (Professional Services)\n\u2022\tResponsible for managing and delivering all complex design-time components of Configuration. \n\u2022\tResponsible for getting the required functionality from Engineering/Solution Engineering team.\n\u2022\tResponsible for managing the QA of customization done/functionality provided by Professional Services.\n\u2022\tImplemented Selectica Configuration technology for Ordering of Cisco\u2019s 2000 configurable products.\n\u2022\tAuthored and implemented the Selectica Product Enterprise Date Tool to convert the manufacturing BOM into the Cisco\u2019s Configurable Product.",
+      "companyHashedUrl": "https://www.linkedin.com/company/165915/"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "name": "Federico De Armas",
+  "headline": "Director Consulting Services",
+  "location": "Argentina",
+  "companyName": "Oracle",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/1028",
+  "companyUrl": null,
+  "position": "Oracle",
+  "publicUrl": "https://www.linkedin.com/in/federico-de-armas-63707816",
+  "about": "Mi nombre es Federico, llevo m\u00e1s de 15 a\u00f1os de trayectoria profesional liderando proyectos de tecnolog\u00eda digital, enfocados en la mejora continua de las organizaciones y brindando soluciones Cloud.\n Estoy convencido en la evoluci\u00f3n de la tecnolog\u00eda digital como una nueva forma de desarrollar negocios. Pienso que la revoluci\u00f3n digital ha transformado la experiencia con el cliente, la cultura y los procesos en una empresa e inclusive el modelo de negocio que adaptamos d\u00eda a d\u00eda.\nMi alto compromiso y capacidad de dirigir me ha permitido estar a cargo de Oracle Consulting Argentina con m\u00e1s de 300 profesionales y colaboradores, m\u00e1s de 150 clientes atendidos en Argentina, Brasil Chile Colombia y otros pa\u00edses en la regi\u00f3n.\nActualmente estamos marcando el ritmo de la tecnolog\u00eda en aplicaciones independientes y en la nube. Direcciono a un amplio equipo de profesionales, quienes ayudar\u00e1n a cubrir sus necesidades hacia las soluciones Cloud. Trabajamos con ustedes para inspirar su negocio, desaf\u00edos y oportunidades con rapidez e inteligencia.\n\u2026 more",
+  "countryCode": "AR",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAM2kIsBt9AiPXjwch0buZhRjbERYQGi8i0",
+  "experiences": [
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": null,
+      "position": "Director Consulting Services",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2017-01-01T00:00:00.000Z",
+      "endTime": "2020-03-01T00:00:00.000Z",
+      "duration": 39,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": "CABA",
+      "position": "Consulting Practice Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2015-01-01T00:00:00.000Z",
+      "endTime": "2020-03-01T00:00:00.000Z",
+      "duration": 63,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": null,
+      "position": "Project Manager Siebel",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": null,
+      "position": "Consultor Senior Siebel CRM",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2006-06-01T00:00:00.000Z",
+      "endTime": "2011-12-01T00:00:00.000Z",
+      "duration": 67,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Programatika",
+      "location": null,
+      "position": "Consultor Senior Siebel CRM",
+      "description": null,
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2008-01-01T00:00:00.000Z",
+      "endTime": "2011-01-01T00:00:00.000Z",
+      "duration": 37,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Deloitte",
+      "location": null,
+      "position": "Consultor Siebel CRM",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1038/"
+    },
+    {
+      "startTime": "2005-01-01T00:00:00.000Z",
+      "endTime": "2006-01-01T00:00:00.000Z",
+      "duration": 13,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Tsoft",
+      "location": null,
+      "position": "Analista",
+      "description": null,
+      "companyHashedUrl": null
+    }
+  ]
+}

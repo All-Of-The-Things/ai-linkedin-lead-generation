@@ -1,0 +1,112 @@
+{
+  "name": "Mark Quinn",
+  "headline": "Director, Solution Design and Implementations at Oracle",
+  "location": "Polmont, Scotland, United Kingdom",
+  "companyName": "Oracle",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/1028",
+  "companyUrl": null,
+  "position": "Oracle",
+  "publicUrl": "https://www.linkedin.com/in/markquinnuk",
+  "about": "Current role: Director of cloud based connected services.\n\nWide breadth of IT related expertise with over a decade of experience in cloud services, service delivery, managed services, project and program management, operations management, customer support, business analysis and reporting\n\nExceptional communication skills across a range of mediums, ranging from senior executives to technical level.\n\nInternational work experience, have participated in and lead global teams.\n\nExtensive process design and enhancement experience, working with cross functional teams to find operational efficiency savings.\n\nBEng Computing\n\nSpecialties: Service Delivery, People Management, Cloud Services, Technology and Process, Design and Risk Analysis, Project Management - PRINCE 2 Practitioner certified, Operations Management, Supplier / Contract Management, Process Design, ITIL, Solaris, Virtualisation, Professional Services\n\u2026 more",
+  "countryCode": "GB",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAABGg4oBx3qSbODdBtBsU9Z4y6cAlsb41i4",
+  "experiences": [
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": null,
+      "position": "Director, Solution Design and Implementations",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2018-05-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 97,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": "Linlithgow, West Lothian, United Kingdom",
+      "position": "Senior Manager Cloud@Customer and Connected Services Global Operations",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2016-07-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 119,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": null,
+      "position": "Senior Manager - Global Advanced Customer Support Cloud Implementations",
+      "description": "Responsible globally, for the service implementation of Oracle Advanced Customer Support remote and on-site managed and monitoring services.  Specialising in Oracle Advanced Support Cloud Services.",
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2014-11-01T00:00:00.000Z",
+      "endTime": "2020-08-01T00:00:00.000Z",
+      "duration": 70,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": null,
+      "position": "Senior Manager - Europe, Middle East & Africa Implementations",
+      "description": "Responsible for the service implementation of Oracle Advanced Customer Support remote and on-site managed services in the EMEA region.  Specialising in Oracle Advanced Support Cloud Services.",
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2010-03-01T00:00:00.000Z",
+      "endTime": "2014-11-01T00:00:00.000Z",
+      "duration": 57,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": null,
+      "position": "Regional Implementation Team Manager - Europe, Middle East & Africa",
+      "description": "Responsible for a team of Project Managers who implement remote and onsite IT managed services in the EMEA region.",
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2006-09-01T00:00:00.000Z",
+      "endTime": "2008-05-01T00:00:00.000Z",
+      "duration": 21,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Sun Microsystems",
+      "location": null,
+      "position": "Manager - Implementation & Build Group",
+      "description": "Responsible for the daily running of a team of project managers and design engineers implementing remotely hosted managed services. Was a subject matter expert on the service.",
+      "companyHashedUrl": "https://www.linkedin.com/company/1062/"
+    },
+    {
+      "startTime": "2006-01-01T00:00:00.000Z",
+      "endTime": "2006-09-01T00:00:00.000Z",
+      "duration": 9,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Sun Microsystems",
+      "location": null,
+      "position": "Implementation Manager",
+      "description": "Responsible for the implementation and setup of Sun Managed Services.  This included the project management and oversight of the service setup and delivery to the customer.",
+      "companyHashedUrl": "https://www.linkedin.com/company/1062/"
+    },
+    {
+      "startTime": "2004-07-01T00:00:00.000Z",
+      "endTime": "2006-01-01T00:00:00.000Z",
+      "duration": 19,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Sun Microsystems",
+      "location": null,
+      "position": "Operations Manager",
+      "description": "Oversight responsibility for remote delivery centres specialising in the delivery of remote managed services to internal and external customers across globally.",
+      "companyHashedUrl": "https://www.linkedin.com/company/1062/"
+    }
+  ]
+}

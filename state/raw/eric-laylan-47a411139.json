@@ -1,0 +1,100 @@
+{
+  "name": "Eric Laylan",
+  "headline": "Owner at Culvers",
+  "location": "United States",
+  "companyName": "Culver's Restaurants",
+  "followersCount": 340,
+  "companyHashedUrl": "https://www.linkedin.com/company/241687",
+  "companyUrl": null,
+  "position": "Owner",
+  "publicUrl": "https://www.linkedin.com/in/eric-laylan-47a411139",
+  "about": "Developer and Administrator with a background in various technical fields who specializes in Netsuite Customization.",
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAACGy2l4BE4L_BLXuA_YDsgWZX1QAsXBnyw0",
+  "experiences": [
+    {
+      "startTime": "2025-04-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 14,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Culver's Restaurants",
+      "location": null,
+      "position": "Owner",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/241687/"
+    },
+    {
+      "startTime": "2023-11-01T00:00:00.000Z",
+      "endTime": "2025-04-01T00:00:00.000Z",
+      "duration": 18,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "SuiteDynamics, NetSuite Consultants & Developers",
+      "location": null,
+      "position": "Technical Lead",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/74328683/"
+    },
+    {
+      "startTime": "2022-05-01T00:00:00.000Z",
+      "endTime": "2023-12-01T00:00:00.000Z",
+      "duration": 20,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Anchor Group NetSuite Consultants and Developers",
+      "location": null,
+      "position": "Chief Technology Officer",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/32867661/"
+    },
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Anchor Group NetSuite Consultants and Developers",
+      "location": null,
+      "position": "Chief Executive Officer",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/32867661/"
+    },
+    {
+      "startTime": "2018-08-01T00:00:00.000Z",
+      "endTime": "2021-12-01T00:00:00.000Z",
+      "duration": 41,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Anchor Group NetSuite Consultants and Developers",
+      "location": "Greater Madison Area",
+      "position": "Lead Netsuite Developer",
+      "description": "\u25cf Build Custom solutions with Suitescript, SuiteCommerce Advanced, third party application integrations, custom records, saved searches, and workflows.\n\u25cf Build Custom web applications with Javascript, jQuery, Bootstrap, Git, CSS, and HTML\n\u25cf Implement native Netsuite processes to enhance client business practices",
+      "companyHashedUrl": "https://www.linkedin.com/company/32867661/"
+    },
+    {
+      "startTime": "2017-10-01T00:00:00.000Z",
+      "endTime": "2018-08-01T00:00:00.000Z",
+      "duration": 11,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "L. W. Allen Inc",
+      "location": "Greater Madison Area",
+      "position": "Controls Software Engineer",
+      "description": "\u25cf Program industrial water and wastewater systems using ladder logic and structured text languages \n\u25cf Develop user-interface applications using Wonderware and Rockwell software in order to meet the specific needs of the customer that are outlined in product specification orders\n\u25cf Troubleshoot existing systems remotely including network connectivity problems, Programmable \n  Logic Controller faults, and computer issues \n\u25cf Set up and configure user interface software on new customer computers",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2012-05-01T00:00:00.000Z",
+      "endTime": "2018-05-01T00:00:00.000Z",
+      "duration": 73,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Air National Guard",
+      "location": "Greater Madison Area",
+      "position": "F-16 Aircraft Technician",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/2061386/"
+    }
+  ]
+}

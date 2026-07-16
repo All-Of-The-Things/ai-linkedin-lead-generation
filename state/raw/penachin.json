@@ -1,0 +1,88 @@
+{
+  "name": "Cassio Penachin",
+  "headline": "Director of Data Science at Shopify | Entrepreneurial AI Executive | Scaling Data-Driven Growth Engines",
+  "location": "Waterloo, Ontario, Canada",
+  "companyName": "Shopify",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/784652",
+  "companyUrl": null,
+  "position": "Director, Head of Growth and Support Data Science",
+  "publicUrl": "https://www.linkedin.com/in/penachin",
+  "about": "For over 20 years, I have been at the forefront of applying Artificial Intelligence to solve complex business challenges. My journey began long before the current hype cycle, giving me a unique, first-principles perspective on how to architect and deliver robust, scalable, and truly impactful AI solutions that stand the test of time. My core belief is that AI's ultimate purpose in business is to serve as an engine for growth, innovation, and efficiency\u2014a belief I've validated by founding four AI companies and leading world-class teams at Shopify.\n\nAs the Director of Data Science for Growth & Support at Shopify, I lead a 70-person global organization that builds the intelligent systems powering our merchant journey. We're responsible for everything from optimizing marketing spend with ML-driven bidding platforms to fundamentally reinventing our customer support operations with AI. My role is to set the vision, build the team, and clear the path for us to deliver transformative business impact.\n\nMy leadership philosophy is built on three pillars:\n\nBuild Platforms, Not Projects: I focus on creating foundational, reusable AI platforms that become durable company assets, accelerating innovation across the entire organization.\n\nFoster a Culture of Excellence: I am passionate about building and mentoring high-performing, multidisciplinary teams. I've scaled organizations from 0 to 70+ and have a track record of retaining top talent with attrition rates consistently below 5%.\n\nConnect AI to P&L: With deep experience as a founder and CEO, I am fluent in the language of business. I partner with executive leaders to ensure our AI strategy is directly tied to commercial outcomes, from driving revenue and market share to improving operational efficiency and customer satisfaction.\n\u2026 more",
+  "countryCode": "CA",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAAE_4gBN6yOl-9q_bzvBc3vSgYGcQZYGOk",
+  "experiences": [
+    {
+      "startTime": "2021-10-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 57,
+      "employmentType": null,
+      "locationType": "remote",
+      "companyName": null,
+      "location": "Waterloo, Ontario, Canada",
+      "position": "Director, Head of Growth and Support Data Science",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/784652/"
+    },
+    {
+      "startTime": "2017-07-01T00:00:00.000Z",
+      "endTime": "2021-09-01T00:00:00.000Z",
+      "duration": 51,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "SingularityNET",
+      "location": "Greater Belo Horizonte",
+      "position": "Chief AI Officer",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/18320465/"
+    },
+    {
+      "startTime": "2002-01-01T00:00:00.000Z",
+      "endTime": "2017-06-01T00:00:00.000Z",
+      "duration": 186,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Novamente LLC",
+      "location": "Greater Seattle Area",
+      "position": "CTO",
+      "description": null,
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2011-11-01T00:00:00.000Z",
+      "endTime": "2016-10-01T00:00:00.000Z",
+      "duration": 60,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Aidyia Limited",
+      "location": "Hong Kong SAR",
+      "position": "CTO",
+      "description": "Developing sophisticated artificial intelligente technology for financial market forecasting based on trading data, multilingual news analysis, economic and fundamental factors.",
+      "companyHashedUrl": "https://www.linkedin.com/company/3267735/"
+    },
+    {
+      "startTime": "2001-05-01T00:00:00.000Z",
+      "endTime": "2011-10-01T00:00:00.000Z",
+      "duration": 126,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Igenesis",
+      "location": "Greater Belo Horizonte",
+      "position": "Founder and Partner",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1245049/"
+    },
+    {
+      "startTime": "1998-05-01T00:00:00.000Z",
+      "endTime": "2001-04-01T00:00:00.000Z",
+      "duration": 36,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Webmind, Inc",
+      "location": null,
+      "position": "VP, AI Development",
+      "description": "Responsible for software process and project management for the AI Development position, managing a team of approximately 45 researchers and software engineers in four offices around the globe.  Also, Country Manager for the Brazilian subsidiary.",
+      "companyHashedUrl": "https://www.linkedin.com/company/33477/"
+    }
+  ]
+}

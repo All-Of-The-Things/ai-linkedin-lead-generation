@@ -1,0 +1,76 @@
+{
+  "name": "George Sarris",
+  "headline": "Vice President of Professional Services at PRO-telligent, LLC, a Tetra Tech Company",
+  "location": "Arlington, Virginia, United States",
+  "companyName": "PRO-telligent, LLC, a Tetra Tech Company",
+  "followersCount": 0,
+  "companyHashedUrl": "https://www.linkedin.com/company/434610",
+  "companyUrl": null,
+  "position": "Vice President of Professional Services",
+  "publicUrl": "https://www.linkedin.com/in/george-sarris-758a4816",
+  "about": "- Seasoned, Top Secret cleared (SCI Eligible) management professional with extensive experience in managing, analyzing, and providing IT and Professional Service solutions to Federal and Commercial customers (~27 years of Management and ~6 years of Technical Lead/Programmer Analyst experience)\n\u2022 Responsible for 500+ personnel, comprised of employees, VARs, subcontractors, having total contract award of $416M, demonstrating success growing a positive client relation, and exceptional service delivery\n- Grew IT Division over 200% in 3 years, including 7 subcontractors and 10 consultants across 12 clients\n- Leads a division within our $3.6B company where I manage a team of Directors, Program Managers, and Senior Project Managers with the implementation of technical and non-technical international projects\n- Serves as primary client and partner point of contact to manage customer/partner relations \n- Leads strategic planning and growth of my unit, including capture and business development pursuits, hiring/interview process, and human capital management/career development.\n- Significant experience working with geographically distributed teams, including local labor laws and local nationals\n- Supported project travel to more than 120 countries over the 5 years prior to the pandemic\n- Served as the Quality Management System Representative for our unit to earn our ISO 9001 QMS certification, document repeatable processes, and provide supporting documentation for audits\n- Possesses a PMP and Lean Six Sigma certifications as well as been trained in SAFe Agile\n\u2026 more",
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAANbljQBZ2QrF391C_XdX5ynVm_JbX0ItKQ",
+  "experiences": [
+    {
+      "startTime": "2001-03-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 303,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "PRO-telligent, LLC, a Tetra Tech Company",
+      "location": null,
+      "position": "Vice President of Professional Services",
+      "description": null,
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "1999-01-01T00:00:00.000Z",
+      "endTime": "2001-01-01T00:00:00.000Z",
+      "duration": 25,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "OneSoft",
+      "location": null,
+      "position": "Sr Project Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/434610/"
+    },
+    {
+      "startTime": "1996-01-01T00:00:00.000Z",
+      "endTime": "1999-01-01T00:00:00.000Z",
+      "duration": 37,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Howrey & Simon",
+      "location": null,
+      "position": "Manager of Enterprise Systems",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/7721/"
+    },
+    {
+      "startTime": "1994-01-01T00:00:00.000Z",
+      "endTime": "1996-01-01T00:00:00.000Z",
+      "duration": 25,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "SAIC",
+      "location": null,
+      "position": "Database Manager / Lead Software Engineer",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1614/"
+    },
+    {
+      "startTime": "1991-01-01T00:00:00.000Z",
+      "endTime": "1994-01-01T00:00:00.000Z",
+      "duration": 37,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "E-Systems, Melpar",
+      "location": null,
+      "position": "Project Lead",
+      "description": null,
+      "companyHashedUrl": null
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "name": "Arlyne Fairbanks-Manlapaz",
+  "headline": "Manager - Software Engineering at QVC Group",
+  "location": "St. Petersburg, Florida, United States",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": "2014-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 149,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "HSN",
+      "location": null,
+      "position": "Manager - Software Engineering",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/164234/"
+    },
+    {
+      "startTime": "2007-04-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 230,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "HSN",
+      "location": null,
+      "position": "Sr Software Engineer",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/164234/"
+    },
+    {
+      "startTime": "2002-01-01T00:00:00.000Z",
+      "endTime": "2007-01-01T00:00:00.000Z",
+      "duration": 61,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Datex Corporation",
+      "location": null,
+      "position": "Software Engineer",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/217555/"
+    },
+    {
+      "startTime": "2000-01-01T00:00:00.000Z",
+      "endTime": "2002-01-01T00:00:00.000Z",
+      "duration": 25,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Cyber City Teleservices",
+      "location": null,
+      "position": "Software Engineer",
+      "description": null,
+      "companyHashedUrl": null
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/arlyne-fairbanks-manlapaz-a0b47178"
+}

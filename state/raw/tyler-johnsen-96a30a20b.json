@@ -1,0 +1,33 @@
+{
+  "name": "Tyler Johnsen",
+  "headline": "Project Manager at The Costumer",
+  "location": "Albany, New York Metropolitan Area",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "The Costumer",
+      "location": null,
+      "position": "Project Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/3919401/"
+    },
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": "partTime",
+      "locationType": null,
+      "companyName": "The Costumer",
+      "location": null,
+      "position": "Production Assistant",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/3919401/"
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/tyler-johnsen-96a30a20b"
+}

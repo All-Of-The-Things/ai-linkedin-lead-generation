@@ -1,0 +1,112 @@
+{
+  "name": "Ben Patterson",
+  "headline": "Director, Global Strategic Partnerships & Alliances",
+  "location": "Canada",
+  "companyName": "Clio",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/385372",
+  "companyUrl": null,
+  "position": "Clio",
+  "publicUrl": "https://www.linkedin.com/in/benwpatterson",
+  "about": null,
+  "countryCode": "CA",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAa2EagBJx-3V2Zs9gJ4O8GG8I0Vj8hJnIQ",
+  "experiences": [
+    {
+      "startTime": "2026-03-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 3,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Clio",
+      "location": null,
+      "position": "Director, Global Strategic Partnerships & Alliances",
+      "description": "Leading Clio's international market expansion and enterprise partnership strategy \u2014 an expanded mandate building on the Business Development directorship \u2014 focused on structuring partnerships that enable Clio to enter new markets globally.",
+      "companyHashedUrl": "https://www.linkedin.com/company/385372/"
+    },
+    {
+      "startTime": "2024-04-01T00:00:00.000Z",
+      "endTime": "2026-03-01T00:00:00.000Z",
+      "duration": 24,
+      "employmentType": null,
+      "locationType": "remote",
+      "companyName": "Clio",
+      "location": null,
+      "position": "Director, Business Development",
+      "description": "Oversaw Clio's global business development strategy and partner integration ecosystem of 300+ ISV partners, setting the direction for ecosystem growth, go-to-market execution, and cross-functional initiatives across Product, Legal, and GTM teams.\n\nDirected a team of Partner Managers and Business Development professionals, driving strategic conversations and partnerships forward while governing operations across the direct and cross-functional teams.\n\u2026 more",
+      "companyHashedUrl": "https://www.linkedin.com/company/385372/"
+    },
+    {
+      "startTime": "2022-09-01T00:00:00.000Z",
+      "endTime": "2024-04-01T00:00:00.000Z",
+      "duration": 20,
+      "employmentType": null,
+      "locationType": "remote",
+      "companyName": "Clio",
+      "location": null,
+      "position": "Director, Product Partnerships & Interim Product Director, Platform",
+      "description": "Led Clio's product partnerships team and simultaneously directed the key components of the Platform product organization, directing the roadmap for major launches including Clio's multi-product API expansion, self-service website builder, and bulk document migration tooling.\n\u2026 more",
+      "companyHashedUrl": "https://www.linkedin.com/company/385372/"
+    },
+    {
+      "startTime": "2021-08-01T00:00:00.000Z",
+      "endTime": "2022-09-01T00:00:00.000Z",
+      "duration": 14,
+      "employmentType": null,
+      "locationType": "remote",
+      "companyName": "Clio",
+      "location": null,
+      "position": "Director, Strategic Alliances",
+      "description": "Led Clio's strategic alliances with Google, Microsoft, and Intuit, driving joint product and go-to-market initiatives \u2014 recognized as Intuit's App Partner of the Year.\n\nStructured the legal industry's first Google Local Services Ads integration, establishing a new partnership revenue model for Clio's ecosystem.\n\u2026 more",
+      "companyHashedUrl": "https://www.linkedin.com/company/385372/"
+    },
+    {
+      "startTime": "2017-04-01T00:00:00.000Z",
+      "endTime": "2021-08-01T00:00:00.000Z",
+      "duration": 53,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": null,
+      "location": "Toronto, Ontario, Canada",
+      "position": "Business Development Manager - Strategic Partnerships",
+      "description": "Driving strategy and new business development for the Americas Product Partnerships Team with a focus on Product-lead Platforms in the Commerce, Payments, POS, CRM and Adtech verticals. The goal is to democratize the power of Google Solutions through API driven integrations to deliver incremental value to SMBs globally.",
+      "companyHashedUrl": "https://www.linkedin.com/company/1441/"
+    },
+    {
+      "startTime": "2016-02-01T00:00:00.000Z",
+      "endTime": "2017-04-01T00:00:00.000Z",
+      "duration": 15,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Salesforce",
+      "location": "Greater Toronto Area, Canada",
+      "position": "Sales Representative",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/3185/"
+    },
+    {
+      "startTime": "2014-12-01T00:00:00.000Z",
+      "endTime": "2016-02-01T00:00:00.000Z",
+      "duration": 15,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Tech Data",
+      "location": "Ontario, Canada",
+      "position": "Sales Executive",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/2699/"
+    },
+    {
+      "startTime": "2013-09-01T00:00:00.000Z",
+      "endTime": "2014-12-01T00:00:00.000Z",
+      "duration": 16,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Maverick Inc.",
+      "location": null,
+      "position": "Account Coordinator",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/69787/"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "name": "Jake Peterson",
+  "headline": "NetSuite Account Executive",
+  "location": "Columbus, Ohio Metropolitan Area",
+  "companyName": "Columbus Chapter CFO Leadership Council",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/106852714",
+  "companyUrl": null,
+  "position": "Advisory Board Member - Columbus Chapter",
+  "publicUrl": "https://www.linkedin.com/in/jakepeterson258",
+  "about": null,
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAACVaUfQB2R5RQMOM6iTeBax-dStnoVfCoBg",
+  "experiences": [
+    {
+      "startTime": "2025-12-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 7,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Columbus Chapter CFO Leadership Council",
+      "location": "Columbus, Ohio, United States",
+      "position": "Advisory Board Member - Columbus Chapter",
+      "description": "The CFO Leadership Council (CFOLC) is a national professional association that brings together senior finance executives to share best practices, expand networks, and engage in peer-driven learning. Through local chapters and events, it equips CFOs with the tools and connections to drive organizational success and career growth.",
+      "companyHashedUrl": "https://www.linkedin.com/company/106852714/"
+    },
+    {
+      "startTime": "2025-09-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 10,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "NetSuite",
+      "location": null,
+      "position": "Mid-Market Account Executive",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/6137/"
+    },
+    {
+      "startTime": "2024-10-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 21,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "NextRep",
+      "location": "Columbus, Ohio Metropolitan Area",
+      "position": "Co-Founder",
+      "description": "Bootstrapped NextRep from 0-1.\n\nMission: help reps turn daily prospecting from a grind into a predictable, repeatable advantage.",
+      "companyHashedUrl": "https://www.linkedin.com/company/106873131/"
+    },
+    {
+      "startTime": "2022-09-01T00:00:00.000Z",
+      "endTime": "2024-10-01T00:00:00.000Z",
+      "duration": 26,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "NetSuite",
+      "location": null,
+      "position": "Account Executive",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/6137/"
+    },
+    {
+      "startTime": "2021-08-01T00:00:00.000Z",
+      "endTime": "2022-09-01T00:00:00.000Z",
+      "duration": 14,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "NetSuite",
+      "location": null,
+      "position": "Business Development Representative",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/6137/"
+    },
+    {
+      "startTime": "2020-06-01T00:00:00.000Z",
+      "endTime": "2021-06-01T00:00:00.000Z",
+      "duration": 13,
+      "employmentType": "internship",
+      "locationType": null,
+      "companyName": "NetSuite",
+      "location": "Chicago, Illinois, United States",
+      "position": "Business Development Representative Intern",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/6137/"
+    }
+  ]
+}

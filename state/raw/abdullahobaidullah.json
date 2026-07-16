@@ -1,0 +1,88 @@
+{
+  "name": "Abdullah Obaidullah",
+  "headline": "Founder & CEO | Salesforce Commerce Cloud Consultant",
+  "location": "Lahore District, Punjab, Pakistan",
+  "companyName": "Entrepreneur",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/66915624",
+  "companyUrl": null,
+  "position": "Sales Force Commerce Cloud Consultant",
+  "publicUrl": "https://www.linkedin.com/in/abdullahobaidullah",
+  "about": "With over 7.5 years in technology leadership, my core competencies lie in pioneering e-commerce solutions and steering business growth at ANTSOFT. I aim to leverage my expertise in Salesforce Commerce Cloud to deliver cutting-edge platforms that align with the organization's culture of innovation. I am committed to expanding our reach through strategic partnerships and new market exploration, consistently aiming to bring diverse perspectives and experiences to our team.\n\nAt ANTSOFT, my role as Founder and CEO encompasses setting the direction and executing the vision that has propelled our company forward. I thrive on identifying new business opportunities and have a proven track record in setting performance metrics that ensure we meet our ambitious goals. My hands-on experience with Salesforce B2C Commerce has been instrumental in delivering scalable and robust e-commerce solutions.\n\u2026 more",
+  "countryCode": "PK",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAupFKYBU9FGhrrbHYmEeK83aFAq2pHx8KA",
+  "experiences": [
+    {
+      "startTime": "2017-07-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 108,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Entrepreneur",
+      "location": null,
+      "position": "Sales Force Commerce Cloud Consultant",
+      "description": null,
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2017-07-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 108,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "ANTSOFT",
+      "location": "Lahore, Punjab, Pakistan",
+      "position": "Founder & CEO",
+      "description": "\u2022 Develop and implement the company's vision, mission, and overall direction to drive growth.\n\u2022 Identify new business opportunities, partnerships, and markets to expand the company's reach.\n\u2022 Set performance metrics and regularly review progress toward achieving goals.",
+      "companyHashedUrl": "https://www.linkedin.com/company/66915624/"
+    },
+    {
+      "startTime": "2015-06-01T00:00:00.000Z",
+      "endTime": "2017-06-01T00:00:00.000Z",
+      "duration": 25,
+      "employmentType": "fullTime",
+      "locationType": "onSite",
+      "companyName": "Visionet Systems Inc.",
+      "location": "Lahore, Pakistan",
+      "position": "SFCC Technical Lead & Consultant",
+      "description": "\u2022 Led discussions with onsite teams to implement e-commerce projects using the SFCC technology framework.\n\u2022 Created project documentation and actively participated in pre-sales activities for Visionet Systems Inc.\n\u2022 Worked on several customizations & 3rd party integrations to meet business needs. \n\u2022 Trained team members on SFCC technology to enhance project implementation efficiency.",
+      "companyHashedUrl": "https://www.linkedin.com/company/61324/"
+    },
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Systems Limited",
+      "location": null,
+      "position": "Senior Software Engineer",
+      "description": "\u2022 Collaborated with on-site teams to develop backend solutions for reinsurance and Airflight projects.\n\u2022 Participated in discussions to ensure seamless integration of backend systems.\n\u2022 Implemented efficient coding practices to optimize system performance.\n\u2022 Contributed to the success of projects by delivering high-quality code within deadlines.",
+      "companyHashedUrl": "https://www.linkedin.com/company/15350/"
+    },
+    {
+      "startTime": "2013-08-01T00:00:00.000Z",
+      "endTime": "2014-06-01T00:00:00.000Z",
+      "duration": 11,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Systems Limited",
+      "location": "97-Aziz Avenue Canal Bank, Gulberg V, Lahore, Pakistan",
+      "position": "Associate Software Engineer",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/15350/"
+    },
+    {
+      "startTime": "2012-10-01T00:00:00.000Z",
+      "endTime": "2013-07-01T00:00:00.000Z",
+      "duration": 10,
+      "employmentType": null,
+      "locationType": "onSite",
+      "companyName": "University of the Punjab",
+      "location": "Lahore",
+      "position": "Teacher Assistant",
+      "description": "\u2022 Assisted in teaching Object-Oriented Programming principles to students, focusing on encapsulation, inheritance, polymorphism, and abstraction.\n\u2022 Supported students in understanding Data Structures and Algorithms, helping them develop efficient problem-solving skills.",
+      "companyHashedUrl": null
+    }
+  ]
+}

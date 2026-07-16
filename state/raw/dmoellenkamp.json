@@ -1,0 +1,76 @@
+{
+  "name": "David Moellenkamp",
+  "headline": "Director of Product Management at Shopify",
+  "location": "Kitchener, Ontario, Canada",
+  "companyName": "Shopify",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/784652",
+  "companyUrl": null,
+  "position": "Director of Product",
+  "publicUrl": "https://www.linkedin.com/in/dmoellenkamp",
+  "about": null,
+  "countryCode": "CA",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAABObEABY96wHn-PJTjvwnI2Qv7C9ZPKeBE",
+  "experiences": [
+    {
+      "startTime": "2020-11-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 68,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Shopify",
+      "location": "Waterloo, Ontario, Canada",
+      "position": "Director of Product",
+      "description": "Building developer tooling and experiences for Shopify partners.",
+      "companyHashedUrl": "https://www.linkedin.com/company/784652/"
+    },
+    {
+      "startTime": "2016-06-01T00:00:00.000Z",
+      "endTime": "2020-11-01T00:00:00.000Z",
+      "duration": 54,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Shopify Plus",
+      "location": "Kitchener, Ontario, Canada",
+      "position": "Director of Product",
+      "description": "Helping build the future of commerce.",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2011-08-01T00:00:00.000Z",
+      "endTime": "2016-06-01T00:00:00.000Z",
+      "duration": 59,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "BlackBerry",
+      "location": "Waterloo, ON, Canada",
+      "position": "Senior Director, Technical Product Management",
+      "description": "As Senior Director of Technical Product Management I lead a team of Product Owners responsible for ensuring our product meets the demanding needs of our Enterprise customers. These solutions products include BlackBerry Enterprise Server, BlackBerry Business Cloud Services for Microsoft Office 365, BlackBerry Enterprise Service 10 and BES12.",
+      "companyHashedUrl": "https://www.linkedin.com/company/2828/"
+    },
+    {
+      "startTime": "2004-08-01T00:00:00.000Z",
+      "endTime": "2011-09-01T00:00:00.000Z",
+      "duration": 86,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "BlackBerry",
+      "location": "Waterloo, Ontario, Canada",
+      "position": "Manager, Software Development Support",
+      "description": "Managed a team of 30+ highly technical development support analysts tasked with debugging the most complex customer support issues. Communicated problem status updates to VP and executive stakeholders and managed development interactions with our Enterprise customers.\n\nOther key responsibilities:\n\n \u2022 Managed requirements and contents of maintenance releases for BlackBerry Enterprise Server \n \u2022  Worked with Customer Support Operations to drive issues to closure and advocate on behalf of customers to various development teams.\n \u2022 Create and deliver technical presentations to customers of small, medium and large audience sizes\n\u2026 more",
+      "companyHashedUrl": "https://www.linkedin.com/company/2828/"
+    },
+    {
+      "startTime": "2001-01-01T00:00:00.000Z",
+      "endTime": "2005-01-01T00:00:00.000Z",
+      "duration": 49,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "J.J. Barnicke",
+      "location": null,
+      "position": "IT",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/28739/"
+    }
+  ]
+}

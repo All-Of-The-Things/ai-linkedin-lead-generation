@@ -1,0 +1,69 @@
+{
+  "name": "Toby Bielenberg",
+  "headline": "Executive Vice President of Operations at National Safety Apparel",
+  "location": "Greater Chicago Area",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "National Safety Apparel",
+      "location": null,
+      "position": "Executive Vice President Of Operations",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/2302613/"
+    },
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "National Safety Apparel",
+      "location": null,
+      "position": "Vice President - Global Supply Chain & Chicago Operations",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/2302613/"
+    },
+    {
+      "startTime": "2019-01-01T00:00:00.000Z",
+      "endTime": "2020-07-01T00:00:00.000Z",
+      "duration": 19,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "National Safety Apparel",
+      "location": "Greater Chicago Area",
+      "position": "Vice President - Strategic Operations",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/2302613/"
+    },
+    {
+      "startTime": "2018-07-01T00:00:00.000Z",
+      "endTime": "2019-01-01T00:00:00.000Z",
+      "duration": 7,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "National Safety Apparel",
+      "location": "Greater Chicago Area",
+      "position": "Senior Director | Strategy & Operations",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/2302613/"
+    },
+    {
+      "startTime": "2017-01-01T00:00:00.000Z",
+      "endTime": "2018-07-01T00:00:00.000Z",
+      "duration": 19,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "National Safety Apparel",
+      "location": "Chicago, Illinois",
+      "position": "Director - Supply Chain & Strategic Operations",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/2302613/"
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/tobybielenberg"
+}

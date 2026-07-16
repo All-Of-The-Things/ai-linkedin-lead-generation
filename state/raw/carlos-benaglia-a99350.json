@@ -1,0 +1,76 @@
+{
+  "name": "Carlos Benaglia",
+  "headline": "Regional Sales Director HGBU LAD at Oracle",
+  "location": "Argentina",
+  "companyName": "Oracle",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/1028",
+  "companyUrl": null,
+  "position": "Regional Sales Director HGBU LAD",
+  "publicUrl": "https://www.linkedin.com/in/carlos-benaglia-a99350",
+  "about": null,
+  "countryCode": "AR",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAAM_xUBhwoJASvu3jVlXwFb-SaNz0TZtsY",
+  "experiences": [
+    {
+      "startTime": "2015-06-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 133,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": "Argentina",
+      "position": "Regional Sales Director HGBU LAD",
+      "description": "Regional Sales Director HGBU HOtel LAD including Argentina, Chile, Peru, Colombia, Ecuador, Uruguay, Paraguay and Bolivia, leading a 10 Manager and Sales Rep",
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2014-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 150,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Micros Argentina",
+      "location": null,
+      "position": "Managing Director",
+      "description": "Leading the business, operation and finance team focus on hospitality  market (Hotels and F&B niche)  at the Argentina, Uruguay, Bolivia-Paraguay market \nFull responsability for Income and IBT quota, including business strategy, customer satisfaction, and revenue recognition.",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2001-03-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 304,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Micros Fidelio South America",
+      "location": null,
+      "position": "Regional Sales Director",
+      "description": "To lead business operation, including a Sales Team distributed across LAD (including all SouthAmerica, excluding Brazil and Venezuela). \nTo focus on mid Term Business Strategy, Fiscal Budgeting/Forecasting, Quota Achievement ratios and team building.\nTo help Sales Team to reach the target market.",
+      "companyHashedUrl": "https://www.linkedin.com/company/164979/"
+    },
+    {
+      "startTime": "2000-05-01T00:00:00.000Z",
+      "endTime": "2001-03-01T00:00:00.000Z",
+      "duration": 11,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Micros Fidelio South America",
+      "location": "Argentina",
+      "position": "Regional Sales Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/81236/"
+    },
+    {
+      "startTime": "1997-01-01T00:00:00.000Z",
+      "endTime": "2001-02-01T00:00:00.000Z",
+      "duration": 50,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Scotiabank Argentina",
+      "location": "Buenos Aires",
+      "position": "Chief of Staff Corporate Bank",
+      "description": "To support Corporate Bank Director focus on business areas -acting as, to built customer /corporate relationships, to enhance corporate strategies to be accomplishment at the target market (Mid-Corp, no Retail)\nTo participate to different Corporate Commitiee (the Risk Committie, The Assets & Liabilities Committee, etc)",
+      "companyHashedUrl": null
+    }
+  ]
+}

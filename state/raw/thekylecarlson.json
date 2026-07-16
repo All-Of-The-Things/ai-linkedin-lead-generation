@@ -1,0 +1,64 @@
+{
+  "name": "Kyle Carlson",
+  "headline": "Helping small businesses run cleaner, simpler systems",
+  "location": "Kansas City, Missouri, United States",
+  "companyName": "Missouri State University",
+  "followersCount": 157,
+  "companyHashedUrl": "https://www.linkedin.com/company/30662485",
+  "companyUrl": null,
+  "position": "NetSuite Administrator",
+  "publicUrl": "https://www.linkedin.com/in/thekylecarlson",
+  "about": "Most small businesses don\u2019t need new software \u2014 they just need their day\u2011to\u2011day operations streamlined.\n\nI help businesses that run on paper, spreadsheets, whiteboards, and memory. The ones where information lives in different places, things get lost, and people are constantly asking \u201cWhere is that?\u201d or \u201cWho has it?\u201d\n\nMy work is simple and practical:\n\n- Understand how your business actually runs\n- Find the spots where things get messy\n- Organize everything into a clear, easy system\n- Set up tools that make the day\u2011to\u2011day smoother\n\nI focus on customer tracking, quoting and invoicing, job handling, inventory and order details, and the everyday operational pieces that tend to pile up or fall through the cracks.\n\nIf you\u2019re tired of chasing paperwork, digging through spreadsheets, or trying to keep everything in your head, I can help you clean things up and make the work easier.\n\nLet\u2019s talk about how your business runs today.\n\u2026 more",
+  "countryCode": "US",
+  "hashedUrl": "",
+  "experiences": [
+    {
+      "startTime": "2024-02-01T00:00:00.000Z",
+      "endTime": "2024-06-01T00:00:00.000Z",
+      "duration": 5,
+      "employmentType": "fullTime",
+      "locationType": "onSite",
+      "companyName": "AE Tools & Computers",
+      "location": "Olathe, Kansas, United States",
+      "position": "NetSuite Administrator",
+      "description": "As the primary NetSuite Administrator, I supported Finance, Inventory, and CRM modules in a fast-paced, multi-subsidiary environment. I led the successful integration from Magento 2 to Shopify via Celigo, collaborated closely with internal stakeholders to define requirements, and implemented new features to improve daily operations.\n\nI designed and deployed custom workflows, dashboards, saved searches, and reports to increase visibility and efficiency across departments. I also managed data migrations during integrations and upgrades, ensuring data integrity and audit readiness. Partnering with finance teams, I automated billing, procure-to-pay, and month-end processes using SuiteScript and native tools. Additionally, I provided user training, documentation, and ongoing support for 20+ staff, maintaining change logs and promoting consistent adoption of NetSuite best practices.",
+      "companyHashedUrl": "https://www.linkedin.com/company/30662485/"
+    },
+    {
+      "startTime": "2022-04-01T00:00:00.000Z",
+      "endTime": "2023-10-01T00:00:00.000Z",
+      "duration": 19,
+      "employmentType": "fullTime",
+      "locationType": "hybrid",
+      "companyName": "ALL THINGS BBQ, LLC",
+      "location": "Wichita, Kansas, United States",
+      "position": "NetSuite Administrator",
+      "description": "As the NetSuite Administrator at ATBBQ, I led key system integrations with Shopify (via Celigo), Klaviyo (via Cazoomi SyncApps), and Pacejet (via custom SuiteScript) to streamline order and shipping workflows. I managed daily NetSuite support for all departments, writing 10\u201315 saved searches per month tailored to specific roles, designing and customizing forms, and improving usability across the platform.\n\nI also served as the primary liaison with our NetSuite consulting partner, coordinating weekly meetings and prioritizing user requests across the company. In addition to hands-on development work in SuiteScript 1.0 & 2.0, I conducted training sessions for staff at every level to ensure effective system adoption and maximize the value of our ERP investment.",
+      "companyHashedUrl": "https://www.linkedin.com/company/59786257/"
+    },
+    {
+      "startTime": "2013-04-01T00:00:00.000Z",
+      "endTime": "2021-10-01T00:00:00.000Z",
+      "duration": 103,
+      "employmentType": "fullTime",
+      "locationType": "remote",
+      "companyName": "Pinnacle Living Supplies",
+      "location": "Kansas City, Missouri, United States",
+      "position": "Owner / E-Commerce Entrepreneur",
+      "description": "Founded and operated an Amazon-based e-commerce business, achieving over $200,000 in total sales revenue. Managed end-to-end operations including product sourcing, inventory management, pricing strategy, and customer service. Optimized product listings, advertising campaigns, and SEO to drive traffic and conversions. Handled order fulfillment, returns, and financial reporting, developing a deep understanding of e-commerce marketplaces, analytics, and small business management.",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2009-11-01T00:00:00.000Z",
+      "endTime": "2012-05-01T00:00:00.000Z",
+      "duration": 31,
+      "employmentType": "fullTime",
+      "locationType": "onSite",
+      "companyName": "Stallard Technologies, Inc",
+      "location": "Overland Park, Kansas, United States",
+      "position": "NetSuite Administrator",
+      "description": "As the NetSuite Administrator, I managed and optimized our SuiteCommerce Advanced platform to support a growing e-commerce business. I developed and debugged custom SuiteScript solutions to enhance the web store experience, and implemented integrations between NetSuite CRM and third-party tools like Constant Contact and FarApp to improve marketing and fulfillment workflows.\n\nI also mined CRM and sales data to create KPI dashboards and reporting tools for leadership, helping drive data-informed decisions. Beyond ERP management, I trained Account Executives on a new live chat system that generated over $60,000/month in new sales. I also supported digital marketing initiatives by managing over $5,000/month in PPC campaigns and refining our SEO strategy to increase customer acquisition and online visibility.",
+      "companyHashedUrl": "https://www.linkedin.com/company/766982/"
+    }
+  ]
+}

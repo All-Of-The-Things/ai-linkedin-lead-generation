@@ -1,0 +1,52 @@
+{
+  "name": "Heather Lovelace",
+  "headline": "Director of Professional Practice, BC Children's Hospital and BC Women's Hospital and Health Centre",
+  "location": "Vancouver, British Columbia, Canada",
+  "companyName": "BC Children's and Women's Hospital and Health Centre",
+  "followersCount": 464,
+  "companyHashedUrl": "https://www.linkedin.com/company/15190419",
+  "companyUrl": null,
+  "position": "Director of Professional Practice",
+  "publicUrl": "https://www.linkedin.com/in/heather-lovelace-36a49b12",
+  "about": null,
+  "countryCode": "CA",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAKQNUIBZ4wIJpnTgcXQayyJOFwREGxh67M",
+  "experiences": [
+    {
+      "startTime": "2021-11-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 55,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": null,
+      "location": "Vancouver, British Columbia, Canada",
+      "position": "Director of Professional Practice",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/15190419/"
+    },
+    {
+      "startTime": "2010-09-01T00:00:00.000Z",
+      "endTime": "2021-10-01T00:00:00.000Z",
+      "duration": 134,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "BC Children's Hospital, Vancouver",
+      "location": null,
+      "position": "Professional Practice Leader, Nutrition Services",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/674257/"
+    },
+    {
+      "startTime": "2005-07-01T00:00:00.000Z",
+      "endTime": "2011-01-01T00:00:00.000Z",
+      "duration": 67,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Vancouver General Hospital",
+      "location": null,
+      "position": "Practice Coordinator",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/8150/"
+    }
+  ]
+}

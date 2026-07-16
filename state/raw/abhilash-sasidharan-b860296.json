@@ -1,0 +1,88 @@
+{
+  "name": "Abhilash Sasidharan",
+  "headline": "Consulting Technical Director at Oracle",
+  "location": "Nashville, Tennessee, United States",
+  "companyName": "Oracle",
+  "followersCount": 457,
+  "companyHashedUrl": "https://www.linkedin.com/company/1028",
+  "companyUrl": null,
+  "position": "Oracle",
+  "publicUrl": "https://www.linkedin.com/in/abhilash-sasidharan-b860296",
+  "about": null,
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAESRVYBJLVCcOm86TMJcYkm6lJD0FlBxPo",
+  "experiences": [
+    {
+      "startTime": "2024-10-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 21,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": "Nashville, Tennessee, United States",
+      "position": "Consulting Technical Director",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2017-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 114,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": "Denver Metropolitan Area",
+      "position": "Consulting Technical Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2015-10-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 129,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "NetSuite",
+      "location": "Denver Metropolitan Area",
+      "position": "Professional Services Sr Consultant",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/6137/"
+    },
+    {
+      "startTime": "2014-10-01T00:00:00.000Z",
+      "endTime": "2015-09-01T00:00:00.000Z",
+      "duration": 12,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Swiftpage",
+      "location": null,
+      "position": "NetSuite Engineer",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/77772/"
+    },
+    {
+      "startTime": "2013-08-01T00:00:00.000Z",
+      "endTime": "2014-10-01T00:00:00.000Z",
+      "duration": 15,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Aashna Cloudtech Private Limited",
+      "location": "Pune/Pimpri-Chinchwad Area",
+      "position": "Senior Project Manager - NetSuite",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/206692/"
+    },
+    {
+      "startTime": "2006-08-01T00:00:00.000Z",
+      "endTime": "2013-07-01T00:00:00.000Z",
+      "duration": 84,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Proquest Solutions Pvt Ltd",
+      "location": "Pune/Pimpri-Chinchwad Area",
+      "position": "Project Manager - NetSuite",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/8507720/"
+    }
+  ]
+}

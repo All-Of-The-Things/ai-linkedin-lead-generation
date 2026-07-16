@@ -1,0 +1,88 @@
+{
+  "name": "Nanjuan Shi",
+  "headline": "Founder at Sophtron",
+  "location": "Redmond, Washington, United States",
+  "companyName": "Sophtron",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/28816683",
+  "companyUrl": null,
+  "position": "Founder",
+  "publicUrl": "https://www.linkedin.com/in/nanjuanshi",
+  "about": null,
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAAl5usBV-QHaeNH_eAmFNVVq3ULNGdf3Pk",
+  "experiences": [
+    {
+      "startTime": "2017-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 112,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Sophtron",
+      "location": "Greater Seattle Area",
+      "position": "Founder",
+      "description": "Building a platform that fuels business growth by aggregating proprietary data; and empowers consumers to make full use of their own data. Making data more accessible by leveraging natural language processing and machine learning.\n\nWe are hiring: software engineers with passion in machine learning , information retrieval, and natural language processing.",
+      "companyHashedUrl": "https://www.linkedin.com/company/28816683/"
+    },
+    {
+      "startTime": "2014-11-01T00:00:00.000Z",
+      "endTime": "2016-12-01T00:00:00.000Z",
+      "duration": 26,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Xero",
+      "location": "Greater Seattle Area",
+      "position": "Director of Software Engineering",
+      "description": "Responsible for overseeing software engineering activities for a group of software engineering teams for payroll in Xero. Motivate and lead the engineering team to take ownership of the technical out as a whole with pride and deliver quality, on-time projects. Manage and coordinate all aspects of multiple projects; including analysis, scoping; technical prototyping, construction, rollout & production support.",
+      "companyHashedUrl": "https://www.linkedin.com/company/50780/"
+    },
+    {
+      "startTime": "2011-12-01T00:00:00.000Z",
+      "endTime": "2014-11-01T00:00:00.000Z",
+      "duration": 36,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "DeepIntel Solutions",
+      "location": "Kirkland, WA",
+      "position": "Director of Product Planning",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/580664/"
+    },
+    {
+      "startTime": "2011-12-01T00:00:00.000Z",
+      "endTime": "2014-11-01T00:00:00.000Z",
+      "duration": 36,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Monchilla Inc",
+      "location": "Seattle",
+      "position": "Co-founder, Director of Product Planning",
+      "description": "Building next generation online financial services for small and medium businesses.\n\nLed the development team to build a comprehensive package of online accounting and payroll services. Responsible for all aspects of planning, budgeting, design, development, quality assurance at rapid iteration.\n\nDesigned and led implementation of electronic fund transfer system with a national bank.\n\nDesigned and led implementation of electronic filing/payment system with Internal Revenue Service and department of revenue of various states.\n\nInitiated and built partnership or integration with 4 industry leaders across payment, financial, loan, and legal industries.\n\nMarketing to build early traction of Monchilla, see over 40% growth month over month.\n\nAcquired by Xero.",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2006-08-01T00:00:00.000Z",
+      "endTime": "2011-12-01T00:00:00.000Z",
+      "duration": 65,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Microsoft",
+      "location": null,
+      "position": "Senior SDET Lead",
+      "description": "Dynamics CRM\nBusiness Contact Manager",
+      "companyHashedUrl": "https://www.linkedin.com/company/1035/"
+    },
+    {
+      "startTime": "2004-01-01T00:00:00.000Z",
+      "endTime": "2006-08-01T00:00:00.000Z",
+      "duration": 32,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "MS",
+      "location": null,
+      "position": "SDET",
+      "description": "Business Contact Management",
+      "companyHashedUrl": null
+    }
+  ]
+}

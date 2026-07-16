@@ -1,0 +1,57 @@
+{
+  "name": "Joshua Friedman Silverstein",
+  "headline": "Founder of ComicBookDirect.com",
+  "location": "Greater Tampa Bay Area",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": "2023-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 41,
+      "employmentType": "selfEmployed",
+      "locationType": null,
+      "companyName": "ComicBookDirect.com",
+      "location": null,
+      "position": "Owner",
+      "description": null,
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2023-01-01T00:00:00.000Z",
+      "endTime": "2023-04-01T00:00:00.000Z",
+      "duration": 4,
+      "employmentType": "fullTime",
+      "locationType": "onSite",
+      "companyName": "Blackstone Medical Services",
+      "location": "Tampa, Florida, United States",
+      "position": "Special Project Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/2077149/"
+    },
+    {
+      "startTime": "2021-08-01T00:00:00.000Z",
+      "endTime": "2023-01-01T00:00:00.000Z",
+      "duration": 18,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "KnowBe4",
+      "location": "Clearwater, Florida, United States",
+      "position": "Business Intelligence Data Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/2225282/"
+    },
+    {
+      "startTime": "2019-03-01T00:00:00.000Z",
+      "endTime": "2021-08-01T00:00:00.000Z",
+      "duration": 30,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Blackstone Medical Services",
+      "location": null,
+      "position": "Quality Control Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/2077149/"
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/joshua-friedman-silverstein-3b64001a1"
+}

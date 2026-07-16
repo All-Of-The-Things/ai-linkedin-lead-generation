@@ -1,0 +1,112 @@
+{
+  "name": "Willem Schro\u00e9",
+  "headline": "Founder @ Botanix Labs",
+  "location": "New York, New York, United States",
+  "companyName": "Botanix Labs",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/98376280",
+  "companyUrl": null,
+  "position": "Founder",
+  "publicUrl": "https://www.linkedin.com/in/willemschroe",
+  "about": "Entrepreneur, Engineer, Problem Solver. \n\nI\u2019m the Founder and CEO of Botanix Labs, where we\u2019re building Botanix, a Bitcoin-based Layer 2 blockchain designed to unlock the future of Bitcoin Finance. My background is in mathematics and computer science, with a special focus on cryptography, and I\u2019ve dedicated my career to making Bitcoin the most productive form of collateral in global markets.\n\nAt Botanix, we recently launched stBTC, the first yield-bearing Bitcoin standard, enabling institutions and users to earn sustainable returns from real economic activity while maintaining full self-custody. Under my leadership, Botanix has processed millions of transactions, forged partnerships with leading institutions including Chainlink and Fireblocks, and integrated with top DeFi protocols.\n\nI regularly share insights on Bitcoin adoption and decentralized finance with features in NYSE, Schwab Network, Barron\u2019s, and CoinDesk. My mission is simple: to transform Bitcoin from a passive asset into the foundation of global capital markets.\n\nSend me a message here on LinkedIn to get in touch.\n\u2026 more",
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAl_OhUBU24TAbi5m3Y6baP2y3fxiGwcaJ4",
+  "experiences": [
+    {
+      "startTime": "2022-06-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 47,
+      "employmentType": "fullTime",
+      "locationType": "onSite",
+      "companyName": "Botanix Labs",
+      "location": "New York, United States",
+      "position": "Founder",
+      "description": "Botanix builds the rails for a global economy where Bitcoin powers every transaction.",
+      "companyHashedUrl": "https://www.linkedin.com/company/98376280/"
+    },
+    {
+      "startTime": "2021-01-01T00:00:00.000Z",
+      "endTime": "2021-06-01T00:00:00.000Z",
+      "duration": 6,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "ExxonMobil",
+      "location": "Antwerp, Flemish Region, Belgium",
+      "position": "Antwerp Refinery Site Supply Chain Supervisor",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1689/"
+    },
+    {
+      "startTime": "2019-08-01T00:00:00.000Z",
+      "endTime": "2021-01-01T00:00:00.000Z",
+      "duration": 18,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "KEMYA, a SABIC and ExxonMobil Joint Venture",
+      "location": "Al-Jubial, Eastern Region, Saudi Arabia",
+      "position": "Business Planning Advisor",
+      "description": null,
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2013-01-01T00:00:00.000Z",
+      "endTime": "2021-01-01T00:00:00.000Z",
+      "duration": 97,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "self employed",
+      "location": null,
+      "position": "Private Tutor",
+      "description": "From assisting University students with difficulties in their scientific courses to full coaching and assistance.",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2018-02-01T00:00:00.000Z",
+      "endTime": "2019-09-01T00:00:00.000Z",
+      "duration": 20,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "ExxonMobil",
+      "location": "Brussels Metropolitan Area",
+      "position": "EMEAF Butyl Supply planner",
+      "description": "Long term supply and demand balancing of butyl",
+      "companyHashedUrl": "https://www.linkedin.com/company/1689/"
+    },
+    {
+      "startTime": "2017-10-01T00:00:00.000Z",
+      "endTime": "2018-02-01T00:00:00.000Z",
+      "duration": 5,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "ExxonMobil",
+      "location": "Antwerp Metropolitan Area",
+      "position": "Project Manager Development",
+      "description": "Project manager development for a 3M$ capital project",
+      "companyHashedUrl": "https://www.linkedin.com/company/1689/"
+    },
+    {
+      "startTime": "2017-01-01T00:00:00.000Z",
+      "endTime": "2018-01-01T00:00:00.000Z",
+      "duration": 13,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "ExxonMobil",
+      "location": "Antwerp Metropolitan Area",
+      "position": "Capital projects coordinator",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1689/"
+    },
+    {
+      "startTime": "2015-09-01T00:00:00.000Z",
+      "endTime": "2017-12-01T00:00:00.000Z",
+      "duration": 28,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "ExxonMobil",
+      "location": "Meerhout Polymers Plant",
+      "position": "Instrumentation & Analyzer Engineer",
+      "description": "- OIMS 6.3 Administrator of AMPP\n- HCP Coordinator at MPP",
+      "companyHashedUrl": "https://www.linkedin.com/company/1689/"
+    }
+  ]
+}

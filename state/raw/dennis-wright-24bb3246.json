@@ -1,0 +1,45 @@
+{
+  "name": "Dennis Wright",
+  "headline": "Store Manager at Forever 21",
+  "location": "Atlanta Metropolitan Area",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": "2008-03-01T00:00:00.000Z",
+      "endTime": "2018-06-01T00:00:00.000Z",
+      "duration": 124,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Forever 21",
+      "location": null,
+      "position": "Store Manager",
+      "description": "Leadership oversight for approximately 75 FTEs including four subordinate supervisors.\nResponsible for overseeing several areas in the organization including: merchandising, merchandise flow management, inventory analysis, and payroll management.\nOversees the development and education of all employees.\nDevelops strong communication channels with internal and external clients.\nCreates the content of the job descriptions for staff, with emphasis upon identification and definition of core competencies.  \nPerforms probationary and annual reviews of all staff.\nResponsible for developing and managing annual operating budgets.\nManages and assists with the updating of organizations policies and procedures.",
+      "companyHashedUrl": "https://www.linkedin.com/company/28893/"
+    },
+    {
+      "startTime": "2005-01-01T00:00:00.000Z",
+      "endTime": "2008-02-01T00:00:00.000Z",
+      "duration": 38,
+      "employmentType": "fullTime",
+      "locationType": "onSite",
+      "companyName": "Bond Community Health Center, Inc.",
+      "location": "Tallahassee, Florida, United States",
+      "position": "Case Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/8672236/"
+    },
+    {
+      "startTime": "2004-11-01T00:00:00.000Z",
+      "endTime": "2007-10-01T00:00:00.000Z",
+      "duration": 36,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Bath & Body Works",
+      "location": null,
+      "position": "SALES LEADER",
+      "description": "Provide great customer service, responding quickly and diplomatically to customer concerns to ensure superior service and satisfaction.\nTrain new employees on sales operations and daily systems usage.",
+      "companyHashedUrl": "https://www.linkedin.com/company/2252/"
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/dennis-wright-24bb3246"
+}

@@ -1,0 +1,69 @@
+{
+  "name": "Nathan Armstrong",
+  "headline": "Senior Global Technology & Digital Transformation Leader",
+  "location": "Huntley, Illinois, United States",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": "2026-03-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 3,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Pampered Chef",
+      "location": null,
+      "position": "Sr. Director Enterprise Technology and Operations",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/9141/"
+    },
+    {
+      "startTime": "2020-06-01T00:00:00.000Z",
+      "endTime": "2026-03-01T00:00:00.000Z",
+      "duration": 70,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Pampered Chef",
+      "location": "Addison, Illinois, United States",
+      "position": "Director EU Technology and Global Customer Solutions",
+      "description": "\u2022\tLead initiative to build third-party outsource customer service and technical support contact center to enable global salability and reduced operations costs by ~$1MM annually\n\u2022\tLead initiative to implement chatbot and shipment tracking notification system creating a frictionless customer experience, increasing customer satisfaction score to 92% and deflecting contacts away from contact center agents reducing operational costs\n\u2022\tLead high performing global team of 50+ people, instilling problem solving and continuous improvement mindset to drive Operational excellence and value creation\n\u2022\tHelped build global eCommerce strategy to align tech stack with strategic business goals\n\u2022\tLead eCommerce project and problem solving to increase platform reliability, customer experience, and delivered revenue enabling features\n\u2022\tManaged eCommerce GDPR compliance partnership with Security and legal team",
+      "companyHashedUrl": "https://www.linkedin.com/company/9141/"
+    },
+    {
+      "startTime": "2017-09-01T00:00:00.000Z",
+      "endTime": "2020-06-01T00:00:00.000Z",
+      "duration": 34,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Pampered Chef",
+      "location": "Addison, Illinois",
+      "position": "Manager of Infrastructure",
+      "description": "\u2022\tDrove operational excellence reducing critical system down by 60% achieving 99.9% up time for critical applications and infrastructure.\n\u2022\tEvaluated and negotiated contracts reducing annual infrastructure spend by 40% while still delivering high service levels and keeping technology platforms up to date\n\u2022\tLead Data center modernization initiatives reducing operational costs and system complexities, drove increased availability and performance, and reduced over Data center footprint by 50%\n\u2022\tLead infrastructure initiative to build multi-region and multiple landing zones based on AWS well architected review, enabling development teams to quickly scale micro services application infrastructure and providing faster speed to market deployment\n\u2022\tPartnered with engineering and security department leaders to Develop and drive maturity of cross functional DevOps team.\n\u2022\tDrove adoption of collaboration tools increasing global cross team communication and collaboration, and driving mobility of services.\n\u2022\tLead initiative to increase data protection and recovery capabilities, reducing recovery time from weeks to hours, and eliminating physical DR recovery site migrating to cloud based recovery platform.\n\u2022\tLead initiative to modernize wireless infrastructure, reducing dead zones, slow roaming, and increasing productivity in the distribution center by 20%",
+      "companyHashedUrl": "https://www.linkedin.com/company/9141/"
+    },
+    {
+      "startTime": "2015-06-01T00:00:00.000Z",
+      "endTime": "2017-09-01T00:00:00.000Z",
+      "duration": 28,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "AccuQuote",
+      "location": "Wheaton, Illinois",
+      "position": "Infrastructure Manager",
+      "description": "\u2022\tArchitect, implement, operate, manage, and integrate enterprise IT systems and infrastructure.\n\u2022\tDefine and maintain technology and integration models.\n\u2022\tProvide the expertise and guidance to peers, leadership and associates on the overall infrastructure architecture.\n\u2022\tProvide technical IT expertise to, and assist in, the selection of new hardware and software platforms which assists in attaining the enterprise architecture principles, policies and standards.\n\u2022\tManage day-to-day IT operations for the Infrastructure and Help Desk employees.",
+      "companyHashedUrl": "https://www.linkedin.com/company/66764/"
+    },
+    {
+      "startTime": "2015-02-01T00:00:00.000Z",
+      "endTime": "2015-06-01T00:00:00.000Z",
+      "duration": 5,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Northwest Community Healthcare",
+      "location": null,
+      "position": "Technical Services Manager",
+      "description": "- Leads department functions for improving system reliability, data interchange and system upgrades. Works with the Information Technology Management Team to develop, written procedures for the recovery of all Data Center systems after a failure. Coordinates tests of these procedures for accuracy on a regular basis.\n- Development of short and long term goals, policies and procedures for infrastructure, which support overall IT Management Team and the corporation\u2019s strategic plans. Establishes tactical plans to accomplish these goals. Based upon these goals and in conjunction with the CTO, assists in the development and administration of the departmental budget.\n- Develops and manages the monitoring of system availability including Network traffic studies, Interface performance, down time by system, total downtime for data center, system backup performance and staff productivity. Monitors all standards against service level agreements, develops and carries out, corrective action plans as needed. Communicates with Directors, staff and clients as appropriate. Uses statistics to manage capacity appropriately by forecast appropriate system sizing, and suggest modifications to the systems as necessary.\n- Participates in the development of IT Team notification procedures for infrastructure related downtimes. Educates support staff of duties, according to IT procedures. Works closely with the Service Desk Manager to communicate and enable appropriate downtime procedures. Produces documentation for CMDB and other knowledge repositories as new technology is brought online or changes are made to the environment.",
+      "companyHashedUrl": "https://www.linkedin.com/company/165220/"
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/nathan-armstrong-b9b8a83"
+}

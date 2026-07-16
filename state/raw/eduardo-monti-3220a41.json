@@ -1,0 +1,64 @@
+{
+  "name": "Eduardo Monti",
+  "headline": "Managing Director",
+  "location": "Argentina",
+  "companyName": "MQSet",
+  "followersCount": 428,
+  "companyHashedUrl": "https://www.linkedin.com/company/74400",
+  "companyUrl": null,
+  "position": "Director",
+  "publicUrl": "https://www.linkedin.com/in/eduardo-monti-3220a41",
+  "about": "Focused on the software hospitality software development based on Cloud-based Enterprise applications, Micros-Fidelio Applications[Opera/POS], Software Automated tools [Robatio]. The company counts with skilled resources working actively in 3 different Business Units.\nWe provide our Services in over worldwide companies, our target are mostly located in LATAM within the F500.\n\nSpecialties: 20+ years focus on ERP Automation software for Financials and Resource Planning. Particular focus on Software Professional Services and Development past ten years.\n\u2026 more",
+  "countryCode": "AR",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAAw1soB0d3TlFYQjBoONqZnx4llqciMdtM",
+  "experiences": [
+    {
+      "startTime": "2016-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 126,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "MQSet",
+      "location": null,
+      "position": "Director",
+      "description": null,
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2012-04-01T00:00:00.000Z",
+      "endTime": "2012-10-01T00:00:00.000Z",
+      "duration": 7,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Enratio",
+      "location": null,
+      "position": "Director",
+      "description": "Privately Held; Computer Software Industry\n\nStarted company from scratch with co-founder and built company.",
+      "companyHashedUrl": "https://www.linkedin.com/company/74400/"
+    },
+    {
+      "startTime": "2002-01-01T00:00:00.000Z",
+      "endTime": "2004-01-01T00:00:00.000Z",
+      "duration": 25,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "PeopleSoft Inc",
+      "location": null,
+      "position": "QA Manager [FIN-EPM]",
+      "description": "Responsible for Quality Assurance for PeopleSoft Corp. focused on FMS and EPM Built Maintenance support team. Company has been acquired by Oracle Inc.",
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "1998-01-01T00:00:00.000Z",
+      "endTime": "2001-01-01T00:00:00.000Z",
+      "duration": 37,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "PeopleSoft Argentina",
+      "location": null,
+      "position": "Functional Analyst",
+      "description": "Responsible for Process definition and design of Argentine localization - business process modelling and quality assurance.",
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "name": "Jasmine Pe\u00f1a",
+  "headline": "Sales Team Leader",
+  "location": "Miami-Fort Lauderdale Area",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": "2025-09-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 9,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Louis Vuitton",
+      "location": null,
+      "position": "Team Lead",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/5790/"
+    },
+    {
+      "startTime": "2023-05-01T00:00:00.000Z",
+      "endTime": "2025-09-01T00:00:00.000Z",
+      "duration": 29,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Grace Loves Lace",
+      "location": "Miami, Florida, United States",
+      "position": "Luxury Boutique Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/9401880/"
+    },
+    {
+      "startTime": "2020-12-01T00:00:00.000Z",
+      "endTime": "2023-05-01T00:00:00.000Z",
+      "duration": 30,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Grace Loves Lace",
+      "location": "Wynwood, Miami",
+      "position": "Senior Stylist",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/9401880/"
+    },
+    {
+      "startTime": "2017-09-01T00:00:00.000Z",
+      "endTime": "2020-10-01T00:00:00.000Z",
+      "duration": 38,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Ulta Beauty",
+      "location": null,
+      "position": "Prestige Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/166572/"
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/jasmine-pe%c3%b1a-65b54a17a"
+}

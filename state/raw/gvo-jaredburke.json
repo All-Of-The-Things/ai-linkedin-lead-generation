@@ -1,0 +1,100 @@
+{
+  "name": "Jared Burke",
+  "headline": "CTO | Co-Founder at PracticeERP",
+  "location": "Dodgeville, Wisconsin, United States",
+  "companyName": "GVO, ERP Solution Provider",
+  "followersCount": 268,
+  "companyHashedUrl": "https://www.linkedin.com/company/347172",
+  "companyUrl": null,
+  "position": "GVO, ERP Solution Provider",
+  "publicUrl": "https://www.linkedin.com/in/gvo-jaredburke",
+  "about": "As the CTO and co-founder of PracticeERP, I specialize in building solutions that solve the unique challenges faced by modern CPA firms. My passion lies in creating scalable, cloud-based systems that eliminate inefficiencies, increase visibility, and empower accounting professionals to focus on what matters most\u2014delivering value to their clients.\n\nWith a strong foundation in technology strategy and product development, my goal is to continue making PracticeERP the go-to ERP platform for firms ready to level up their operations.\n\nI also serve as a board member for a leading ERP consultancy GVO where I lend insight on growth, innovation, and product direction.\n\nI\u2019m always open to connecting with others in the accounting tech space\u2014whether you're exploring automation, data integration, or looking to scale with the right systems in place.\n\u2026 more",
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAoYiIQB4cRwpmH4_F-j5FDYDLjapq4PBsg",
+  "experiences": [
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "GVO, ERP Solution Provider",
+      "location": null,
+      "position": "CTO | Co-Founder, PracticeERP",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/347172/"
+    },
+    {
+      "startTime": "2019-06-01T00:00:00.000Z",
+      "endTime": "2025-04-01T00:00:00.000Z",
+      "duration": 71,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "GVO, ERP Solution Provider",
+      "location": "Greater Madison Area",
+      "position": "Managing Partner",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/347172/"
+    },
+    {
+      "startTime": "2011-09-01T00:00:00.000Z",
+      "endTime": "2025-04-01T00:00:00.000Z",
+      "duration": 164,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "GVO, ERP Solution Provider",
+      "location": "madison, wisconsin area",
+      "position": "Director Of Development Services - Partner",
+      "description": "Manage a professional service team and several large and small NetSuite projects. As a working manager, participate in every aspect of the NetSuite development lifecycle including sales engineering, requirements gathering, solution architecture, development, testing and deployment. Also, built a complex integration between NetSuite and M-Files and took to market as goVirtualDOCs.",
+      "companyHashedUrl": "https://www.linkedin.com/company/347172/"
+    },
+    {
+      "startTime": "2008-04-01T00:00:00.000Z",
+      "endTime": "2011-09-01T00:00:00.000Z",
+      "duration": 42,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Wick Buildings",
+      "location": null,
+      "position": "Information Services Manager",
+      "description": "Managed a staff of seventeen IT professionals including network staff, help desk staff, developers and business analysts. I played a key role in the company's reorganization efforts, which required extensive planning and difficult staffing decisions. Responsible for managing all IT projects across three divisions, which involved working with the business analysts, developers, and network team to coordinate timely delivery of all projects.",
+      "companyHashedUrl": "https://www.linkedin.com/company/283080/"
+    },
+    {
+      "startTime": "2005-05-01T00:00:00.000Z",
+      "endTime": "2008-12-01T00:00:00.000Z",
+      "duration": 44,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Wick Buildings",
+      "location": null,
+      "position": "Application Development Manager",
+      "description": "As the leader of the development team, I created development standards, managed the software development life cycle, and worked with lead developers to determine the application architecture for all applications. Redesigned our project process and implemented a time tracking system that increased the amount and accuracy of the communication to project stakeholders.\n\u2026 more",
+      "companyHashedUrl": "https://www.linkedin.com/company/283080/"
+    },
+    {
+      "startTime": "2002-04-01T00:00:00.000Z",
+      "endTime": "2005-05-01T00:00:00.000Z",
+      "duration": 38,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Wick Buildings",
+      "location": null,
+      "position": "IS Supervisor/Application Developer",
+      "description": "Managed a small team of network administrators and developers. Lead developer on the company's sales configurator and order entry system which integrates with several other systems including Microsoft Dynamics GP. I lead the company's adoption of Microsoft's .NET and SQL technologies. I provided numerous training sessions for the other developers across the corporation. Implemented and maintained dozens of new and legacy systems. Projects included a note tracking system, a web service based software updater, a major order entry system, and several conversion utilities for legacy data.\n\u2026 more",
+      "companyHashedUrl": "https://www.linkedin.com/company/283080/"
+    },
+    {
+      "startTime": "1998-10-01T00:00:00.000Z",
+      "endTime": "2002-04-01T00:00:00.000Z",
+      "duration": 43,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "SVA Consulting",
+      "location": "Madison, Wisconsin Area",
+      "position": "Business Application Developer",
+      "description": "Designed, developed, and implemented desktop and web-based business applications for clients. Projects included an ad tracking system, an online software license configuration tool, an insurance premium calculation engine, a complete quoting and order entry system and several other smaller projects. Developed customizations and reports for Microsoft Dynamics GP using Dexterity, VBA and Crystal Reports. Developed and maintained the corporate intranet and company website. Designed, developed and marketed a pre-packaged intranet solution called e-Office. Performed dozens of data conversions that required situation specific tools to be developed.",
+      "companyHashedUrl": "https://www.linkedin.com/company/129857/"
+    }
+  ]
+}

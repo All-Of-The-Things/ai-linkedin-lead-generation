@@ -1,0 +1,100 @@
+{
+  "name": "Faisal Amin",
+  "headline": "Senior Cloud and ERP Technical Consultant",
+  "location": "Stourbridge, England, United Kingdom",
+  "companyName": "Caterpillar Inc.",
+  "followersCount": 365,
+  "companyHashedUrl": "https://www.linkedin.com/company/2622",
+  "companyUrl": null,
+  "position": "Technical Consultant",
+  "publicUrl": "https://www.linkedin.com/in/faisal-amin-it",
+  "about": "As an experienced Cloud and ERP Technical Consultant, I specialize in delivering mission-critical ERP system implementations, development, administration, and support. My expertise spans traditional and cloud-based ERP solutions, technical consulting, and large-scale system integration. With extensive experience in wide range of technologies, I bring technical depth and business alignment to every project.\n\nKey Expertise:\n---------------\nOperating Systems: Linux/Unix major flavours and Windows servers.\nERP Systems: MFG/PRO, QAD On-Premise\nCloud ERP & SaaS: Implementing and optimizing cloud QAD EE / AE ERP systems for scalability and efficiency on .Net UI, WebUI.\nDevelopment: Python, Progress OpenEdge 4GL, Linux Shell Scripting, Agile Methodologies (Scrum, Kanban), GIT, GITHub, QAD CVC.\nDatabase: Progress OpenEdge, MySQL, Oracle on Linux/Unix/Windows.\nFunctional Domains: Working knowledge of Finance and Distribution\nSystem Integrations: Wide range of technologies like Boomi, Snaplogic, QXtend, Shell Scripting\nContainerization: Docker, Docker Swarm, Oracle VBox\nTraining & Leadership: Delivering online and classroom-based training, project management, and team leadership.\nIT Controls, and Security Strategy along with developing and implementing disaster recovery and business continuity strategies.\n---------------\n\nWith a customer-focused approach and a passion for leveraging technology to solve complex business challenges, I am committed to delivering impactful solutions that drive operational excellence.\n\u2026 more",
+  "countryCode": "GB",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAGLHIwBHXRpO4Jwe7D5mGRV6uNz7bMZ9I8",
+  "experiences": [
+    {
+      "startTime": "2018-05-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 98,
+      "employmentType": "contract",
+      "locationType": null,
+      "companyName": "Caterpillar Inc.",
+      "location": "Peterborough, United Kingdom",
+      "position": "Technical Consultant",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/2622/"
+    },
+    {
+      "startTime": "2016-09-01T00:00:00.000Z",
+      "endTime": "2018-05-01T00:00:00.000Z",
+      "duration": 21,
+      "employmentType": "contract",
+      "locationType": "onSite",
+      "companyName": "Sunrise Medical",
+      "location": "Brierley hill, United Kingdom",
+      "position": "Technical Business Consultant",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/166202/"
+    },
+    {
+      "startTime": "2013-09-01T00:00:00.000Z",
+      "endTime": "2016-08-01T00:00:00.000Z",
+      "duration": 36,
+      "employmentType": "contract",
+      "locationType": "onSite",
+      "companyName": "Perkins Engines Company Limited",
+      "location": "City Of Peterborough, England, United Kingdom",
+      "position": "Technical Specialist",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/27467/"
+    },
+    {
+      "startTime": "2009-12-01T00:00:00.000Z",
+      "endTime": "2013-09-01T00:00:00.000Z",
+      "duration": 46,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "QAD",
+      "location": null,
+      "position": "Principal Technical Consultant, Global Customer Services",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/5099/"
+    },
+    {
+      "startTime": "2005-10-01T00:00:00.000Z",
+      "endTime": "2009-12-01T00:00:00.000Z",
+      "duration": 51,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "QAD",
+      "location": null,
+      "position": "Technical Support Consultant",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/5099/"
+    },
+    {
+      "startTime": "2001-09-01T00:00:00.000Z",
+      "endTime": "2005-09-01T00:00:00.000Z",
+      "duration": 49,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Abdulla Fouad Group",
+      "location": null,
+      "position": "System Analyst",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/110852/"
+    },
+    {
+      "startTime": "2000-09-01T00:00:00.000Z",
+      "endTime": "2001-12-01T00:00:00.000Z",
+      "duration": 16,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Abdulla Fouad Group",
+      "location": null,
+      "position": "Web Application Developer / DBA",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/110852/"
+    }
+  ]
+}

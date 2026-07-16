@@ -1,0 +1,64 @@
+{
+  "name": "Martin Bouso",
+  "headline": "Solution Architecture Manager",
+  "location": "Argentina",
+  "companyName": "Oracle",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/1028",
+  "companyUrl": null,
+  "position": "Oracle",
+  "publicUrl": "https://www.linkedin.com/in/martin-bouso",
+  "about": null,
+  "countryCode": "AR",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAB5KkvsByvNL8GvClpHwhVs6bvx-7XvlT6Y",
+  "experiences": [
+    {
+      "startTime": "2025-10-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 9,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": null,
+      "position": "Solution Architecture Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2022-06-01T00:00:00.000Z",
+      "endTime": "2025-10-01T00:00:00.000Z",
+      "duration": 41,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": null,
+      "position": "Cloud Solution Architect",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2020-06-01T00:00:00.000Z",
+      "endTime": "2022-05-01T00:00:00.000Z",
+      "duration": 24,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": null,
+      "position": "Cloud Solution Engineer",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2019-05-01T00:00:00.000Z",
+      "endTime": "2020-05-01T00:00:00.000Z",
+      "duration": 13,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": null,
+      "position": "Generation Oracle",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    }
+  ]
+}
