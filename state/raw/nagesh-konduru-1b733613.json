@@ -1,0 +1,69 @@
+{
+  "name": "Nagesh Konduru",
+  "headline": "Senior Manager PaaS/SRE at Gap Inc.",
+  "location": "Dublin, California, United States",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Gap Inc.",
+      "location": null,
+      "position": "Senior Manager PaaS/SRE",
+      "description": "Hands on technical manager leading/managing the Pivotal Cloud Foundry (PCF) product across Gap Tech.\n\n- More than 15 Pivotal Cloud Foundry foundations in hybrid cloud environment, Azure and on  premises data centers using Concourse pipeline automation for over 1500+ apps services, 16000+ application instances.\n- Availability, reliability of PCF platform, PCF version upgrades , scale up/down and maintenance using concourse pipelines, while maintaining the necessary monitoring dash boards, monitors/alerts using pivotal health watch/grafana/splunk.\n- Leading talented technical engineers spread across the globe while follow the SUN model to cover 24x7.\n- Played key role in delivering flaw less peak season for the last couple of years as SRE and PCF product owner.\n- Gearing up for migrating applications from PCF to Kubernetes/AKS (Azure Kubernetes Service).",
+      "companyHashedUrl": "https://www.linkedin.com/company/1677/"
+    },
+    {
+      "startTime": "2018-08-01T00:00:00.000Z",
+      "endTime": "2020-01-01T00:00:00.000Z",
+      "duration": 18,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Gap Inc.",
+      "location": "United States",
+      "position": "Senior Manager SRE",
+      "description": "-      Service Availability/Reliability for online and stores.\n\n-\tManage team of full stack engineers who maintains and continuously improves the service availability.\n-\tContinuously improve the availability with proactive monitoring, automation and self-healing.\n-\tHire and mentor the resources how we can improve the site reliability while using their engineering/automation skills while the resources follow the sun model 24x7.\n-\tPartner with various internal DevOps/engineering product teams to prevent degradation of performance while adding new features or new products.\n-\tParticipate in the critical architectural/design discussion to ensure that the new features or new products to ensure the maintainability, standards and simplicity.\n-\tContinuously drive the automation and run book documentation to improve the turn around time resolving high severity issues that may occur.",
+      "companyHashedUrl": "https://www.linkedin.com/company/1677/"
+    },
+    {
+      "startTime": "2013-07-01T00:00:00.000Z",
+      "endTime": "2018-08-01T00:00:00.000Z",
+      "duration": 62,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Gap Inc.",
+      "location": "San Francisco Bay Area",
+      "position": "Senior Manager DevOps/Service Availability",
+      "description": "Hands on technical manager managing the Development Operations to manage the Development Operations environments (All Pre production environments Dev, Isolation, Integration and end to end ) while managing the complex continuous integration development pipeline for GAP online retail applications environment (Infrastructure, applications/services, Databases and MQ) which includes the technologies but not limited to VM Ware, RHEL, Hadoop/Hbase, TOMCAT, Oracle/Postgres/Mysql, Shell/Perl, Ruby, JAVA, chef, electric commander/jenkins, Splunk, Nagios/Newrelic monitoring in a pure AGILE and cloud based environment.\n\nBuilt and executed the strategy to streamline Pre Production operations (Introduced ticketing system, change management) in on-shore and off-shore model to support 24x7 development and testing teams spread across globe.",
+      "companyHashedUrl": "https://www.linkedin.com/company/1677/"
+    },
+    {
+      "startTime": "2012-01-01T00:00:00.000Z",
+      "endTime": "2013-01-01T00:00:00.000Z",
+      "duration": 13,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Blueshield CA",
+      "location": "San Francisco Bay Area",
+      "position": "Sr. Development Manager",
+      "description": "-\tManage and implement various initiatives for the IT shared services division, which includes\no\tInvolved in the design, evaluation and Implementation the cloud strategy using VMWare, RHEL and IBM Workload deployer.\no\tInvolved in the implementation of the custom cloud patterns for blueshieldCA to build private cloud for all of the Non Production Environments\no\tInvolved in the complete SDLC of IT web portal development projects to implement health care  initiatives or mandates using J2EE WebSphere Application Server in Solaris and Oracle  in high available environment.\no\tLead both internal and external Vendor technical teams in delivering multiple projects which involves complete SDLC using AGILE/SCRUM methodology where in many members of the teams are new to AGILE/SCRUM methodology.\no\tInvolved in coming up with the IT monitoring requirements, evaluate different monitoring tools and recommending the right monitoring and implementing the same across IT web portal environments",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2009-01-01T00:00:00.000Z",
+      "endTime": "2011-01-01T00:00:00.000Z",
+      "duration": 25,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Yodlee",
+      "location": null,
+      "position": "Director - Operations",
+      "description": "-\tManage 24x7 production support operations, deployment/release management operations and DBA operations to manage production data center operations for a SAAS model using ITIL framework while working closely with engineering, quality engineering and program teams in AGILE environment (LAMP stack and Oracle) to maintain 99.99% SLAs.\n-\tAvailability metrics for the infrastructure/databases/middleware and the application infrastructure have improved by 70%.\n-\tManage the development life cycle of operations monitoring tools, deployment tools, automation and operations metrics while driving/initiating the one stop operations tools framework development, using LAMP stack and AGILE methodology, which manages all the KPIs real time trends and reports for the continuous improvement.\n-\tDevelop and manage IT operations strategy, planning and  road maps  to match business goals while working with various internal business owners.\t-\tResponsible for the people management, team building , mentoring and critical decision making to build, manage and maintain the data center operations.\n-\tResponsible for the budget forecast, resource-planning strategy for the Bangalore operations",
+      "companyHashedUrl": "https://www.linkedin.com/company/6720/"
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/nagesh-konduru-1b733613"
+}

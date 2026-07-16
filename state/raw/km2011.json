@@ -1,0 +1,100 @@
+{
+  "name": "Khalid M.",
+  "headline": "Founder @fastn | Tech Advisor & Investor | Ex-Amazon",
+  "location": "Austin, Texas Metropolitan Area",
+  "companyName": "fastn",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/98307913",
+  "companyUrl": null,
+  "position": "Founder",
+  "publicUrl": "https://www.linkedin.com/in/km2011",
+  "about": null,
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAwS7RUB4VdCDuCoDugn8F7Lz1Dc5oBXr2U",
+  "experiences": [
+    {
+      "startTime": "2023-03-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 38,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "fastn",
+      "location": "Austin, Texas Metropolitan Area",
+      "position": "Founder",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/98307913/"
+    },
+    {
+      "startTime": "2021-01-01T00:00:00.000Z",
+      "endTime": "2023-01-01T00:00:00.000Z",
+      "duration": 25,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "fabric",
+      "location": null,
+      "position": "VP of Engineering",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/18479065/"
+    },
+    {
+      "startTime": "2019-12-01T00:00:00.000Z",
+      "endTime": "2021-06-01T00:00:00.000Z",
+      "duration": 19,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Veeve",
+      "location": "Seattle, Washington, United States",
+      "position": "Founding VP of Engineering",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/19170288/"
+    },
+    {
+      "startTime": "2012-06-01T00:00:00.000Z",
+      "endTime": "2019-12-01T00:00:00.000Z",
+      "duration": 91,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Amazon",
+      "location": "San Francisco, California",
+      "position": "Software Engineering Leader",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1586/"
+    },
+    {
+      "startTime": "2011-04-01T00:00:00.000Z",
+      "endTime": "2012-05-01T00:00:00.000Z",
+      "duration": 14,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Eastern Michigan University",
+      "location": "Michigan",
+      "position": "Technical Administrative Assistant",
+      "description": null,
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2011-01-01T00:00:00.000Z",
+      "endTime": "2012-04-01T00:00:00.000Z",
+      "duration": 16,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Eastern Michigan University",
+      "location": null,
+      "position": "Teacher Assistant",
+      "description": null,
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2010-12-01T00:00:00.000Z",
+      "endTime": "2012-04-01T00:00:00.000Z",
+      "duration": 17,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Eastern Michigan University",
+      "location": null,
+      "position": "Lab Attendant",
+      "description": null,
+      "companyHashedUrl": null
+    }
+  ]
+}

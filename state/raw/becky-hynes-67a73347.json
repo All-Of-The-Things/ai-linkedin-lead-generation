@@ -1,0 +1,64 @@
+{
+  "name": "Becky Hynes",
+  "headline": "Interprofessional Practice Director",
+  "location": "Vancouver, British Columbia, Canada",
+  "companyName": "BC Mental Health and Substance Use Services",
+  "followersCount": 336,
+  "companyHashedUrl": "https://www.linkedin.com/company/1028611",
+  "companyUrl": null,
+  "position": "BC Mental Health and Substance Use Services",
+  "publicUrl": "https://www.linkedin.com/in/becky-hynes-67a73347",
+  "about": null,
+  "countryCode": "CA",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAnljv4B-9F_zTiuirPwbhxIbdFyyQr1NVM",
+  "experiences": [
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "BC Mental Health and Substance Use Services",
+      "location": null,
+      "position": "Interprofessional Practice Director",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028611/"
+    },
+    {
+      "startTime": "2022-01-01T00:00:00.000Z",
+      "endTime": "2023-11-01T00:00:00.000Z",
+      "duration": 23,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "BC Mental Health and Substance Use Services",
+      "location": "Vancouver, British Columbia, Canada",
+      "position": "Clinical Services Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028611/"
+    },
+    {
+      "startTime": "2019-09-01T00:00:00.000Z",
+      "endTime": "2022-01-01T00:00:00.000Z",
+      "duration": 29,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "BC Mental Health and Substance Use Services",
+      "location": null,
+      "position": "Professional Practice Lead Social Work",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028611/"
+    },
+    {
+      "startTime": "2014-10-01T00:00:00.000Z",
+      "endTime": "2019-09-01T00:00:00.000Z",
+      "duration": 60,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Vancouver Coastal Health",
+      "location": "Greater Vancouver Metropolitan Area",
+      "position": "Coordinator of Consumer and Family Involvement, Tertiary Mental Health and Substance Use",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/8150/"
+    }
+  ]
+}

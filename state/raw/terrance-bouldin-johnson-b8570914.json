@@ -1,0 +1,69 @@
+{
+  "name": "Terrance Bouldin-Johnson",
+  "headline": "Lead, Infra Global Supply Chain Operations",
+  "location": "Seattle, Washington, United States",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": "2024-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 29,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Meta",
+      "location": null,
+      "position": "Strategy Lead, Infra Global Supply Chain Operations",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/10667/"
+    },
+    {
+      "startTime": "2025-01-01T00:00:00.000Z",
+      "endTime": "2025-01-01T00:00:00.000Z",
+      "duration": 1,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Meta",
+      "location": null,
+      "position": "Interim Director, Infra Global Supply Chain Operations",
+      "description": "Served as interim director, managing team transitions and organizational changes. Assisted with the search for, and onboarding of, the permanent director of Global Supply Chain Operations.",
+      "companyHashedUrl": "https://www.linkedin.com/company/10667/"
+    },
+    {
+      "startTime": "2021-01-01T00:00:00.000Z",
+      "endTime": "2024-01-01T00:00:00.000Z",
+      "duration": 37,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Meta",
+      "location": null,
+      "position": "Inventory Lead, Infra Global Supply Chain Operations",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/10667/"
+    },
+    {
+      "startTime": "2018-01-01T00:00:00.000Z",
+      "endTime": "2021-01-01T00:00:00.000Z",
+      "duration": 37,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Wing",
+      "location": null,
+      "position": "Head of Australian Operations",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/18720223/"
+    },
+    {
+      "startTime": "2017-01-01T00:00:00.000Z",
+      "endTime": "2018-01-01T00:00:00.000Z",
+      "duration": 13,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Staples",
+      "location": "Greater Seattle Area",
+      "position": "Director, Digital Operations and Analytics",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/3019/"
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/terrance-bouldin-johnson-b8570914"
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Angelina Garwood",
+  "headline": "Business Management Major at Penn State",
+  "location": "Reading, Pennsylvania, United States",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": "2025-05-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 13,
+      "employmentType": "internship",
+      "locationType": null,
+      "companyName": "Enterprise Mobility",
+      "location": "Reading, Pennsylvania, United States",
+      "position": "Intern",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/462318/"
+    },
+    {
+      "startTime": "2021-08-01T00:00:00.000Z",
+      "endTime": "2025-05-01T00:00:00.000Z",
+      "duration": 46,
+      "employmentType": "fullTime",
+      "locationType": "onSite",
+      "companyName": "Mama's Famous Pizza and Grill",
+      "location": "Reading, Pennsylvania, United States",
+      "position": "Front of House Leader",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/43294854/"
+    },
+    {
+      "startTime": "2021-02-01T00:00:00.000Z",
+      "endTime": "2021-10-01T00:00:00.000Z",
+      "duration": 9,
+      "employmentType": "partTime",
+      "locationType": null,
+      "companyName": "Tower Health",
+      "location": null,
+      "position": "PCA",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/26283799/"
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/angelina-garwood-12b739226"
+}

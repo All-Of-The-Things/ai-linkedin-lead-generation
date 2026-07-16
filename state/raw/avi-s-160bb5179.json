@@ -1,0 +1,57 @@
+{
+  "name": "Avi S.",
+  "headline": "Retail sales consultant",
+  "location": "Brooklyn, New York, United States",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": "2020-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 77,
+      "employmentType": "selfEmployed",
+      "locationType": null,
+      "companyName": "Self-employed",
+      "location": "New York, United States",
+      "position": "Retail Sales Consultant",
+      "description": "Helping brands and retailers expand their presence through retail, marketing, and global distribution.",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2019-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 89,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "TAGALIA",
+      "location": "New York, New York, United States",
+      "position": "Co-Founder",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/19161910/"
+    },
+    {
+      "startTime": "2020-01-01T00:00:00.000Z",
+      "endTime": "2022-09-01T00:00:00.000Z",
+      "duration": 33,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Ctrl Alt Delete",
+      "location": "Brooklyn, New York, United States",
+      "position": "Lead Buyer",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/65262117/"
+    },
+    {
+      "startTime": "2015-11-01T00:00:00.000Z",
+      "endTime": "2019-01-01T00:00:00.000Z",
+      "duration": 39,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Amuze",
+      "location": "Owings Mills, Maryland",
+      "position": "Sales Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/11778509/"
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/avi-s-160bb5179"
+}

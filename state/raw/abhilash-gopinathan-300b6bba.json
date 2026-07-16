@@ -1,0 +1,64 @@
+{
+  "name": "Abhilash Gopinathan",
+  "headline": "Director - Technical Consulting at Oracle NetSuite",
+  "location": "Bengaluru, Karnataka, India",
+  "companyName": "Oracle",
+  "followersCount": 112,
+  "companyHashedUrl": "https://www.linkedin.com/company/1028",
+  "companyUrl": null,
+  "position": "Director - Technical Consulting",
+  "publicUrl": "https://www.linkedin.com/in/abhilash-gopinathan-300b6bba",
+  "about": "Experienced Technical Solutions Architect with a demonstrated history of working in the Information Technology & Services industry.",
+  "countryCode": "IN",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAABlx1fABFGIRZgJGGs6X_tJ8tbEXhd36DBk",
+  "experiences": [
+    {
+      "startTime": "2024-09-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 22,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": null,
+      "position": "Director - Technical Consulting",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2019-01-01T00:00:00.000Z",
+      "endTime": "2024-09-01T00:00:00.000Z",
+      "duration": 69,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle NetSuite",
+      "location": null,
+      "position": "Technical Solutions Architect",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/6137/"
+    },
+    {
+      "startTime": "2014-12-01T00:00:00.000Z",
+      "endTime": "2019-01-01T00:00:00.000Z",
+      "duration": 50,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Deloitte Digital",
+      "location": "Bengaluru Area, India",
+      "position": "Manager - NetSuite",
+      "description": "NetSuite technical architect, providing Technical Designs and Solutions for complex NetSuite implementations and leading the NetSuite developers team.",
+      "companyHashedUrl": "https://www.linkedin.com/company/2449847/"
+    },
+    {
+      "startTime": "2008-08-01T00:00:00.000Z",
+      "endTime": "2014-12-01T00:00:00.000Z",
+      "duration": 77,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Accenture in India",
+      "location": "Greater Bengaluru Area",
+      "position": "Technical Team Lead",
+      "description": "Played key role in a 5 member team that set up NetSuite practice at Accenture. Provided technical designs and solutions for all NetSuite implementations at Accenture. Lead the team of NetSuite developers. Served initial 3 years as senior Dot Net developer before switching to NetSuite. As a Dot Net developer, worked on Windows and Web based Dot Net applications.",
+      "companyHashedUrl": "https://www.linkedin.com/company/9215331/"
+    }
+  ]
+}

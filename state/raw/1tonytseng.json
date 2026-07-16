@@ -1,0 +1,69 @@
+{
+  "name": "Tony Rey",
+  "headline": "Founder and CEO",
+  "location": "Los Angeles, California, United States",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": "2026-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 5,
+      "employmentType": "selfEmployed",
+      "locationType": "remote",
+      "companyName": "Creatorhub360",
+      "location": "Los Angeles, California, United States",
+      "position": "Founder and CEO",
+      "description": "Helping creators scale theirs brands to $1M GMV+ in the first year\nSigning 200+ Creators and brands by 2030 with a total GMV of $1B+",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2019-05-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 85,
+      "employmentType": "selfEmployed",
+      "locationType": "onSite",
+      "companyName": "Tote & Carry",
+      "location": "Los Angeles, California, United States",
+      "position": "Founder and CEO",
+      "description": "Founder and CEO of Tote&Carry \n- E Commerce Sales from $0 to over $60M+ in sales in 5 years\n- Wholesale Business development Sales over $25,000,000+ in sales in 6 years\n- Product developer and designer\n- Brand development, Marketing guru , Story Telling, Brand Positioning. \n- Business operation management and talent acquisition \n- Bilingual : Fluent in English and Chinese \n- Self motivated with network of high profiles both in both USA and China",
+      "companyHashedUrl": "https://www.linkedin.com/company/79158694/"
+    },
+    {
+      "startTime": "2015-11-01T00:00:00.000Z",
+      "endTime": "2017-10-01T00:00:00.000Z",
+      "duration": 24,
+      "employmentType": "selfEmployed",
+      "locationType": null,
+      "companyName": "DSM ROOM Inc.",
+      "location": "Los Angeles",
+      "position": "Founder and CEO",
+      "description": "- Direct Manufacturer, Importer, and Distributor of fashion products such as: Hats, Backpacks, Bags, Footwear, and Apparel. \n- Partnerships with over 120 off shore factories.\n- Quick turn capability to deliver high quality products at large capacities\n- One stop production company for fashion brands. \n- Offering cutting edge Private label programs with major retailers, specialty stores, and chains nationwide. \n- Assurance of quality and on time delivery with competitive pricing.",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2013-02-01T00:00:00.000Z",
+      "endTime": "2015-08-01T00:00:00.000Z",
+      "duration": 31,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Snapwize",
+      "location": "Walnut, California",
+      "position": "Founder and CEO",
+      "description": "- Web development solutions\n- Wordpress frame work \n- Day to Day operations\n- Project management\n- Sales \n- Oversee entire business",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2013-02-01T00:00:00.000Z",
+      "endTime": "2014-06-01T00:00:00.000Z",
+      "duration": 17,
+      "employmentType": "selfEmployed",
+      "locationType": null,
+      "companyName": "Public Affair",
+      "location": "Los Angeles",
+      "position": "Public Relations Assistant",
+      "description": "Public Affair offer solutions for your company by creating product awareness through unique branding and effective marketing strategies. We work closely with our clients to ensure successful launch of new products and releases, also in breaking into new foreign markets.  Our team focus is increasing sales, generating followings, and connecting with our sponsors. We are an international company with offices in the Philippines, Taiwan, China, Spain, and US.",
+      "companyHashedUrl": null
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/1tonytseng"
+}

@@ -1,0 +1,69 @@
+{
+  "name": "Tiffany H.",
+  "headline": "Account retention",
+  "location": "Montoursville, Pennsylvania, United States",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": "2024-08-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 22,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "MAJIK Enterprises International, Inc.",
+      "location": null,
+      "position": "Assistant Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1506601/"
+    },
+    {
+      "startTime": "2023-06-01T00:00:00.000Z",
+      "endTime": "2024-08-01T00:00:00.000Z",
+      "duration": 15,
+      "employmentType": null,
+      "locationType": "onSite",
+      "companyName": "MAJIK Enterprises International, Inc.",
+      "location": null,
+      "position": "MIT",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1506601/"
+    },
+    {
+      "startTime": "2021-02-01T00:00:00.000Z",
+      "endTime": "2023-06-01T00:00:00.000Z",
+      "duration": 29,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Nittany Energy",
+      "location": "Williamsport, Pennsylvania, United States",
+      "position": "Commercial Sales",
+      "description": null,
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2009-07-01T00:00:00.000Z",
+      "endTime": "2020-08-01T00:00:00.000Z",
+      "duration": 134,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "The Aaron's Company, Inc.",
+      "location": "Williamsport, Pennsylvania, United States",
+      "position": "Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/13768/"
+    },
+    {
+      "startTime": "2008-05-01T00:00:00.000Z",
+      "endTime": "2009-11-01T00:00:00.000Z",
+      "duration": 19,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Famous Footwear",
+      "location": "Muncy, Pennsylvania, United States",
+      "position": "Assistant Store Man",
+      "description": "Time cards, bank runs,  supervise employees, work sales floor, take returns",
+      "companyHashedUrl": "https://www.linkedin.com/company/10147/"
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/tiffany-h-ba64a555"
+}

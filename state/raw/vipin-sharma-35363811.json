@@ -1,0 +1,76 @@
+{
+  "name": "Vipin Sharma",
+  "headline": "Senior Delivery Manager at Oracle",
+  "location": "Woodbridge, Ontario, Canada",
+  "companyName": "NetSuite",
+  "followersCount": 2,
+  "companyHashedUrl": "https://www.linkedin.com/company/1028",
+  "companyUrl": null,
+  "position": "Senior Delivery Manager",
+  "publicUrl": "https://www.linkedin.com/in/vipin-sharma-35363811",
+  "about": null,
+  "countryCode": "CA",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAJoQu8BqkLEF6shDvtQkV6gDKfiKLtTnsw",
+  "experiences": [
+    {
+      "startTime": "2018-05-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 97,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": "Mississauga, ON",
+      "position": "Senior Delivery Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2012-05-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 169,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "NetSuite",
+      "location": "Mississauga, ON",
+      "position": "IT Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/6137/"
+    },
+    {
+      "startTime": "2012-03-01T00:00:00.000Z",
+      "endTime": "2012-09-01T00:00:00.000Z",
+      "duration": 7,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "IBM Canada Ltd.",
+      "location": null,
+      "position": "Proposal Manager",
+      "description": "\u2022 Review Request for Service (RFS) from the client and Identify the severity of the RFS\n\u2022 Assess the details of the RFS with Solution Architect and determine IBM Towers / team involvement to perform the tasks\n\u2022 Assist Solution Architect in the creation of Architect Design Overview (ADO) document for Solution Charter (SC)\n\u2022 Coordinate IBM towers to identified Subject matter experts (SMEs) and their efforts to complete the charter\n\u2022 Setup solution meetings to identify roles and responsibilities of each tower / team and obtain their respective quotes.\n\u2022 Use various financial tools to obtain price for the charter and perform QA Value analysis\n\u2022 Prepare the Solution Charter (SC) to highlight Scope, assumptions, risks, deliverable, ADO and embed the labor cost, time & material etc.\n\u2022 Request the approval of a Price Release Letter (PRL) in the case of negative billing or retro credit to the client from the Project Executive (PEs) and complete risks.\n\u2022 Complete the RFS Response & Update RFS Tool with proposal documents and approvals \n\u2022 Upon approval from final QA reviewer submit Solution Charter (SC) to RFS Administrator for their further submission to the client",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2010-06-01T00:00:00.000Z",
+      "endTime": "2012-02-01T00:00:00.000Z",
+      "duration": 21,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "SNC Lavalin Group",
+      "location": null,
+      "position": "IT Lead (Projects)",
+      "description": "Manage IT Projects to support multi-disciplines in project management, engineering, procurement, and construction and to enable multi-office project executions in Toronto, Calgary, Edmonton, and Montreal",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2003-02-01T00:00:00.000Z",
+      "endTime": "2010-07-01T00:00:00.000Z",
+      "duration": 90,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Bantrel",
+      "location": null,
+      "position": "IS&T Team Lead",
+      "description": "\u2022\tProvided IS&T related orientation to the new hires.\n\u2022\tPerformed monthly audit for the users\u2019 accounts in Active Directory and their membership.\n\u2022\tCommunicated with the project IT leads to understand client\u2019s requirement and facilitate their need accordingly.\n\u2022\tOrganized lunch and learns within the department to share knowledge and problem resolution.\n\u2022\tArranged and conducted brown bags sessions to educate users in their daily IT business needs.\n\u2022\tLed and Managed a team of 8 people of Helpdesk/ Desktop, Network and Audio Visual to ensure smooth IT operations/ Infrastructure in Toronto, Sarnia and Montreal locations.\n\u2022\tConfigured Nortel switches 450s, 470s to setup VLAN to accommodate business needs.\n\u2022\tUpgraded and Configured old model Nortel Switches to PoE switches (5520) to accommodate i2002 Nortel VoIP phones for Toronto users.\n\u2022\tBrought an extension of Calgary helpdesk services (ACD phones) to Toronto.\n\u2022\tProvided after hours and before hours helpdesk coverage to the Calgary, Edmonton users.\n\u2022\tConfigured the helpdesk ACD phones to ensure 99.9% uptime or warm body response from the helpdesk personnel.\n\u2022\tUpgraded old Dell Power Edge Servers 4600 series to PE 2850 / 2950 after the expiry of their Dell Contract.",
+      "companyHashedUrl": "https://www.linkedin.com/company/14466/"
+    }
+  ]
+}

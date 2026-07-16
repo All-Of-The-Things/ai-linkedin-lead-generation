@@ -1,0 +1,88 @@
+{
+  "name": "Roy Wright",
+  "headline": "ERP Consultant - Dynamics GP / 365 BC (Business Central)",
+  "location": "Daventry, England, United Kingdom",
+  "companyName": "Nolan Business Solutions",
+  "followersCount": 142,
+  "companyHashedUrl": "https://www.linkedin.com/company/1013274",
+  "companyUrl": null,
+  "position": "ERP Consultant - Dynamics GP & 365 BC",
+  "publicUrl": "https://www.linkedin.com/in/roy-wright-44535499",
+  "about": "A Microsoft Dynamics Certified Professional \u2013 Working with Dynamics GP since 2000.\n\nExperience of implementing Dynamics GP into a range of different industries. I have built strong working relationships with customers and gained their trust in supplying them with the right solution for their business process. I have a strong technical background which aids me in designing and specifying solutions around the GP application modules to fulfill the customer\u2019s requirements. \n\nExperience of working with 3rd Party WMS suppliers to integrate Dynamics GP with their WMS solutions.\n\nA specialist in designing and enhancing Dynamics GP functionality using a combination of Dexterity, Extender, Smartlist Builder, VBA, SQL and Excel.\n\nExperience of integrating with Dynamics GP using a range of tools (SSIS, SQL Procedures & EConnect procedures).\n\nMicrosoft Certifications:\nMicrosoft Dynamics GP 2013 Financials (Exam MB3-701)\nMicrosoft Dynamics GP 2010 Financials (Exam MB3-859)\nMicrosoft SQL Server 2008, Business Intelligence Development and Maintenance (Exam 070-448)\nGreat Plains 8.0 Modifier with VBA\n\n\u2026 more",
+  "countryCode": "GB",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAABTf5nUBKPzi5ZieoM_0qd67Avnd1USJMQg",
+  "experiences": [
+    {
+      "startTime": "2021-07-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 60,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Nolan Business Solutions",
+      "location": "Fleet, England, United Kingdom",
+      "position": "ERP Consultant - Dynamics GP & 365 BC",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1013274/"
+    },
+    {
+      "startTime": "2018-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 102,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "RW SOLUTIONS LTD",
+      "location": "Daventry",
+      "position": "Independent Business Analyst / Microsoft Dynamics GP Consultant - Director",
+      "description": "An independent consultant offering Microsoft Dynamics GP services (Consultancy, Development, Integration and Training).",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2016-02-01T00:00:00.000Z",
+      "endTime": "2017-12-01T00:00:00.000Z",
+      "duration": 23,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "m-hance",
+      "location": "Stockport, England, United Kingdom",
+      "position": "Business Analyst - Dynamics GP",
+      "description": "Workflow Analysis Workshops with customers\nConsultancy Implementation of Dynamics GP\nImplementing m-hance Myridas modules\nScoping Requirements for development\nCreation of Development Specifications\nDynamics GP Development using Dexterity, SQL and VBA\nIntegration Work - Integration with Dynamics GP for 3rd Party WMS suppliers\nPre-sale Activities\nCustomer Support",
+      "companyHashedUrl": "https://www.linkedin.com/company/2302724/"
+    },
+    {
+      "startTime": "2003-10-01T00:00:00.000Z",
+      "endTime": "2016-02-01T00:00:00.000Z",
+      "duration": 149,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Microvive Ltd (formerly Three X Business Solutions Ltd)",
+      "location": null,
+      "position": "Dynamics GP Consultant - Implementation and Functional",
+      "description": "Microvive Ltd \t\t\t\t(Jan 2012 \u2013 Jan 2016)\nThree X Business Solutions\t(Apr 2008 \u2013 Jan 2012)\nICM Business Solutions\t\t(Oct 2003 \u2013 Apr 2008)  \n\nContinued employment in this position from Oct 2003 - Jan 2016\nMicrovive formerly known as Three X Business Solutions.\nThree-X Business Solutions was acquired by Masternaut Three-X in April 2008.  It was formerly known as ICM Business Solutions which was part of the ICM Computer Group. The company has been a Microsoft Great Plains partner since 1999. \n\nWorking as an implementation and functional consultant.\n\nMy role involves:\n- Pre-Sale Consultancy\n- Business Process Consultancy & GAP Analysis\n- Model Building for Customer Acceptance\n- Configuration of GP Modules\n- GAP Design and Development\n- Developing Bespoke Modules\n- Creating functional specifications for Developers\n- Integrations with in-house systems, 3rd Party Applications and EDI (using SSIS, T-SQL and eConnect) \n- Knowledge Transfer of GP Modules & Tools to System Administrators, Super Users and End Users\n- Customisation of existing GP Reports using Report Writer\n- Customisation of GP Windows using Modifier and VBA\n- Creation of new Reports using SQL and Microsoft Excel\n- Go-Live Hand Holding\n- Post Go-Live Review Workshops\n- Ongoing Help desk Support and Enhancements",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2000-02-01T00:00:00.000Z",
+      "endTime": "2003-10-01T00:00:00.000Z",
+      "duration": 45,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "ICM Business Solutions Ltd",
+      "location": "Kingston upon Hull, England Metropolitan Area",
+      "position": "Microsoft Great Plains Developer",
+      "description": "In my role I developed additional functionality around the Great Plains application modules using Dexterity. I also developed bespoke modules which integrate with the GP modules including Load Planning, Transport Job Costing System, Credit Control Module and Shipping Agent System.",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "1995-09-01T00:00:00.000Z",
+      "endTime": "2000-02-01T00:00:00.000Z",
+      "duration": 54,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "CCAT Ltd",
+      "location": "Kingston upon Hull, England Metropolitan Area",
+      "position": "VMS Software Analyst Programmer",
+      "description": "In this role I developed integrated business application software for VMS Green Screen systems. These applications included Job costing system, POP and SOP applications.",
+      "companyHashedUrl": null
+    }
+  ]
+}

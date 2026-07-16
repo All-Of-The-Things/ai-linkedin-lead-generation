@@ -1,0 +1,21 @@
+{
+  "name": "John G",
+  "headline": "Owner at Whadafunk",
+  "location": "New York, New York, United States",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": "2006-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 245,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Whadafunk",
+      "location": "New York",
+      "position": "Owner",
+      "description": "WHAT IS WHADAFUNK?\nWhadafunk is a brand that represents the DIY creative culture. Getting inspiration from the artists, the bikers, the skaters, the punks, the graffiti writers, the tattooists, & all around badasses who are creating a culture for you to be a part of. We are heavily influenced by the people who create their own lanes in this world we live in. To appreciate Whadafunk you don't have to be a part of this but you can admire it. The Whadafunk brand was created for people to feel good about what they are wearing and have the confidence to be themselves.\n\n\n\nEVERYTHING WE MAKE IS HANDMADE. \n- We draw & design every single item. \n- We silkscreen print our own clothes. \n- We build the screens to print with by hand. \n- We sew our own labels in the clothes. \n- We sew all the patches on our hats. \n- We do all of our own cut & sew patterns. \n- We make our own buttons from scratch. \n- We hand craft all of our accessories. \n- We do all of our own photography/videography. \n- We built our own website.\n\nDefinition of Whadafunk\n\"Whadafunk\":(n) \n1 An exclamation; an abrupt, verbal ejaculation that describes the pervading sense that life is a celebration of funk whether it be in a pair of gym shoes or the back of a record crate or on the canvas-like walls of the inner city. \n2 A lifestyle brand grounded in the avenues and boroughs of New York City that is dedicated to bringing you gear that supports an innovative and respect-commanding lifestyle.",
+      "companyHashedUrl": null
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/johngdesigns"
+}

@@ -1,0 +1,100 @@
+{
+  "name": "Maiorini Adrian",
+  "headline": "Director, ACS Service Management, Engineering | Argentina at Oracle",
+  "location": "Argentina",
+  "companyName": "Oracle",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/1028",
+  "companyUrl": null,
+  "position": "Oracle",
+  "publicUrl": "https://www.linkedin.com/in/maiorini-adrian-8013a83",
+  "about": "Profesional del \u00e1rea de IT con s\u00f3lida trayectoria desarrollada tanto en el pa\u00eds como en el exterior en empresas de primer nivel.\nAmplia experiencia en administraci\u00f3n de bases de datos, tanto en ingenier\u00eda, operaciones como en integraci\u00f3n de aplicaciones.\nDefinici\u00f3n de est\u00e1ndares y automatizaci\u00f3n de procesos.\nDesarrollo de estrategias de seguridad de datos (Backup&Recovery).\nDefinici\u00f3n de futuras arquitecturas de centros de c\u00f3mputos.\nOptimizaci\u00f3n de infraestructuras.\nParticipaci\u00f3n en diferentes proyectos t\u00e9cnicos.\nCapacitaci\u00f3n de los equipos de trabajo a cargo.\nCapacidad de organizaci\u00f3n y planificaci\u00f3n, orientada al logro de objetivos.\nHabilidad para encontrar soluciones creativas.\n\nSpecialties: Conocimientos t\u00e9cnicos espec\u00edficos:\nOracle: \n- Oracle EXADATA (instalaci\u00f3n y configuraci\u00f3n)\n- RDBMS (8 - 11G)\n- RAC\n- ASM\n- Recovery Manager\n- Grid Control\n- EXADATA\nProgramaci\u00f3n: \n- PL/SQL\n- Java\n- Shell Script\nStorage: \n- EMC\n- HDS\n- NetApp\n- Exadata Storage Cells\nOS:\n- Solaris\n- HP-UX\n- Linux\n- Windows\nCluster: \n- Veritas Cluster\n- HP Serviceguard\n- Oracle Data Guard\nCertificaciones:\n- Oracle Database 9i Administrator Certified Associate (OCA 9i)\n- Oracle Database 11g Administrator Certified Associate (OCA 11g)\n\u2026 more",
+  "countryCode": "AR",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAACXeIEBjgs3ZTbgpCLdJ3L1iMY2NIyg60o",
+  "experiences": [
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": null,
+      "position": "Director, ACS Service Management, Engineering | Argentina",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2019-07-01T00:00:00.000Z",
+      "endTime": "2021-08-01T00:00:00.000Z",
+      "duration": 26,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": "Greater Buenos Aires",
+      "position": "Senior Manager, ACS Service Management, ASE | Argentina",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2015-04-01T00:00:00.000Z",
+      "endTime": "2021-08-01T00:00:00.000Z",
+      "duration": 77,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": "Buenos Aires, Argentina",
+      "position": "Advanced Customer Support Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2011-08-01T00:00:00.000Z",
+      "endTime": "2015-04-01T00:00:00.000Z",
+      "duration": 45,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle",
+      "location": "Buenos Aires",
+      "position": "Systems Analyst 4-Exadata Support",
+      "description": "- Oracle\n- Oracle Exadata Database Machine",
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2010-05-01T00:00:00.000Z",
+      "endTime": "2011-02-01T00:00:00.000Z",
+      "duration": 10,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Hewlett-Packard",
+      "location": "Bern, Berne, Switzerland",
+      "position": "Senior Oracle DBA / Teamleader",
+      "description": "(HP BSC Bern)",
+      "companyHashedUrl": "https://www.linkedin.com/company/1025/"
+    },
+    {
+      "startTime": "2005-04-01T00:00:00.000Z",
+      "endTime": "2010-04-01T00:00:00.000Z",
+      "duration": 61,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Real Time Center",
+      "location": null,
+      "position": "Teamleader Database Management",
+      "description": "RTC (IT Outsourcing & Banking Software)",
+      "companyHashedUrl": "https://www.linkedin.com/company/5804611/"
+    },
+    {
+      "startTime": "1998-01-01T00:00:00.000Z",
+      "endTime": "2005-04-01T00:00:00.000Z",
+      "duration": 88,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Real Time Center",
+      "location": null,
+      "position": "Senior Oracle DBA",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/5804611/"
+    }
+  ]
+}

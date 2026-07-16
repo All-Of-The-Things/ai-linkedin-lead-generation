@@ -1,0 +1,69 @@
+{
+  "name": "Preston P.",
+  "headline": "President of Sourcing and Sales | Hanvit USA",
+  "location": "Brea, California, United States",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": "2024-04-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 26,
+      "employmentType": "fullTime",
+      "locationType": "hybrid",
+      "companyName": "Hanvit USA",
+      "location": "Montebello, California, United States",
+      "position": "President of Sourcing and Sales",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/105610116/"
+    },
+    {
+      "startTime": "2010-09-01T00:00:00.000Z",
+      "endTime": "2024-07-01T00:00:00.000Z",
+      "duration": 167,
+      "employmentType": "contract",
+      "locationType": "remote",
+      "companyName": "Rush Ventures, LLC",
+      "location": "Los Angeles Metropolitan Area",
+      "position": "COO",
+      "description": null,
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2008-11-01T00:00:00.000Z",
+      "endTime": "2024-04-01T00:00:00.000Z",
+      "duration": 186,
+      "employmentType": "fullTime",
+      "locationType": "onSite",
+      "companyName": "Mias Fashion",
+      "location": "United States",
+      "position": "Senior Director of Global Sourcing and Fabric RND",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1987900/"
+    },
+    {
+      "startTime": "2005-11-01T00:00:00.000Z",
+      "endTime": "2008-11-01T00:00:00.000Z",
+      "duration": 37,
+      "employmentType": "fullTime",
+      "locationType": "onSite",
+      "companyName": "Wetseal Inc",
+      "location": "Foothill Ranch, CA",
+      "position": "Product Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/4289276/"
+    },
+    {
+      "startTime": "2003-06-01T00:00:00.000Z",
+      "endTime": "2005-11-01T00:00:00.000Z",
+      "duration": 30,
+      "employmentType": "fullTime",
+      "locationType": "onSite",
+      "companyName": "BCBG Max Azria",
+      "location": "Vernon, CA",
+      "position": "Production Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/8989/"
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/preston-p-6777b33b"
+}

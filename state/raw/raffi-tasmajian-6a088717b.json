@@ -1,0 +1,64 @@
+{
+  "name": "Raffi Tasmajian",
+  "headline": "Lead NetSuite Developer",
+  "location": "Clearwater, Florida, United States",
+  "companyName": null,
+  "followersCount": 268,
+  "companyHashedUrl": "https://www.linkedin.com/company/3628212",
+  "companyUrl": null,
+  "position": "Senior NetSuite Developer",
+  "publicUrl": "https://www.linkedin.com/in/raffi-tasmajian-6a088717b",
+  "about": "Elite NetSuite developer specializing in performance optimization and custom application development for enterprise clients. I help Fortune 500 companies transform their NetSuite environments through data-driven analysis and cutting-edge solutions.\n\nWhat I Do:\n\nPerformance Optimization - Deep-dive script analysis to identify bottlenecks and system inefficiencies, delivering measurable improvements of up to 300%\n\nCustom Development - Full-stack NetSuite applications using advanced SuiteScript, integrated with modern React-based web interfaces\n\nSystem Architecture - End-to-end solutions from NetSuite backend logic to responsive frontend experiences\n\nIntegration Solutions - Creator of an open-source NetSuite integration framework used by developers worldwide\n\nRecent Impact:\n\u2713 Built scalable B2B e-commerce platform for a technology provider\n\u2713 Developed employee self-service portal that reduced HR overhead and increased compliance by over 20%.\n\u2713 Created comprehensive customer payment portals with automated processing capabilities\n\nTechnical Expertise:\nNetSuite SuiteScript (1.0 & 2.x) | React | JavaScript | RESTlets | Workflows | Saved Searches | Custom Records | SuiteCommerce | SuiteTalk | OAuth | Web Services\n\u2026 more",
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAACqqixgBqKDinIfrRY6xl6rdsYH6Eb_EClg",
+  "experiences": [
+    {
+      "startTime": "2020-10-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 68,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "SCS Cloud",
+      "location": null,
+      "position": "Senior NetSuite Developer",
+      "description": "Lead NetSuite development initiatives for enterprise clients, specializing in performance optimization, custom application development, and complex SuiteScript solutions that drive measurable business improvements.\n\nPerformance optimization - Conducted comprehensive script analysis and system audits to identify bottlenecks, delivering optimization strategies that improve system performance by up to 300%\n\nCustom application development - Architect and build enterprise-grade NetSuite applications using advanced SuiteScript 2.0, creating scalable solutions for complex business requirements\n\nSuiteScript expertise - Develop sophisticated automation workflows, custom records, RESTlets, and scheduled scripts that streamline business processes and eliminate manual overhead\n\nIntegration architecture - Design and implement seamless integrations between NetSuite and external systems using SuiteTalk, REST APIs, and custom middleware solutions\n\nSystem performance analysis - Developed proprietary methodologies for identifying and resolving NetSuite performance issues, reducing script execution times and improving user experience\n\nCustom portal development - Built comprehensive customer and employee self-service portals with advanced functionality including payment processing, order management, and real-time data synchronization",
+      "companyHashedUrl": "https://www.linkedin.com/company/3628212/"
+    },
+    {
+      "startTime": "2021-02-01T00:00:00.000Z",
+      "endTime": "2021-07-01T00:00:00.000Z",
+      "duration": 6,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Loop Integration",
+      "location": null,
+      "position": "Software Engineer",
+      "description": "Delivered exceptional Vue.js development as a contract developer, consistently exceeding sprint expectations and setting performance benchmarks for the development team.\n\nSprint leadership - Consistently completed assigned tasks 20-30% ahead of schedule across all sprint cycles, enabling team to take on additional features and meet aggressive deadlines",
+      "companyHashedUrl": "https://www.linkedin.com/company/4992000/"
+    },
+    {
+      "startTime": "2020-03-01T00:00:00.000Z",
+      "endTime": "2020-12-01T00:00:00.000Z",
+      "duration": 10,
+      "employmentType": "contract",
+      "locationType": null,
+      "companyName": "Dropible",
+      "location": null,
+      "position": "Lead Software Engineer",
+      "description": "Built end-to-end Shopify integration - Developed custom Shopify app from concept to deployment, enabling seamless dropshipping workflow automation for e-commerce merchants\n\nReal-time inventory management - Engineered automated inventory tracking system that synchronized product availability across multiple suppliers and Shopify storefronts, eliminating overselling and stockouts\n\nAPI architecture & integrations - Designed robust API connections between Shopify, supplier systems, and internal platform, ensuring reliable data flow and order processing\n\nAutomated order fulfillment - Created intelligent order routing system that automatically processed customer orders, selected optimal suppliers, and triggered fulfillment workflows\n\nPerformance optimization - Implemented efficient background processing and caching strategies to handle high-volume inventory updates without impacting storefront performance",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2015-01-01T00:00:00.000Z",
+      "endTime": "2020-03-01T00:00:00.000Z",
+      "duration": 63,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "The Clean Vape",
+      "location": null,
+      "position": "CEO",
+      "description": "E-Commerce Business Development & Technical Leadership\nBuilt and scaled a successful e-commerce business from concept to profitability in a highly competitive market through strategic niche identification, custom technical solutions, and effective team leadership.\nBusiness Development:\n\nMarket analysis & positioning - Identified underserved niche within saturated market, developing unique value proposition that differentiated from established competitors\nProduct development lifecycle - Led complete R&D process from market research and concept validation to product design, sourcing, and quality control\nStrategic growth - Scaled business to sustainable profitability while maintaining lean operations and competitive pricing in challenging market conditions\n\nTechnical Leadership:\n\nCustom Shopify development - Architected and built optimized e-commerce platform with custom features and user experience enhancements\nConversion optimization - Implemented data-driven A/B testing and UX improvements that increased site conversion rates by 25%, directly impacting revenue growth\nPerformance analytics - Developed comprehensive tracking systems for customer behavior, inventory management, and sales performance to drive business decisions\n\nTeam Management:\n\nOperations leadership - Built and managed cross-functional team including customer service, fulfillment, and marketing personnel\nProcess optimization - Established efficient workflows and standard operating procedures that enabled consistent service delivery as team scaled\nPerformance management - Mentored team members and implemented accountability systems that maintained high service standards during growth phases\n\nBusiness Impact: Successfully operated profitable e-commerce business for 5 years, demonstrating deep understanding of online retail operations, customer acquisition, and the technical infrastructure required to compete in digital marketplaces.",
+      "companyHashedUrl": null
+    }
+  ]
+}

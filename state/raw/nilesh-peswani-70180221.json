@@ -1,0 +1,76 @@
+{
+  "name": "Nilesh Peswani",
+  "headline": "Founder @ Revolve| MBA in Information System",
+  "location": "United States",
+  "companyName": "Revolve",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/31089952",
+  "companyUrl": null,
+  "position": "Founder",
+  "publicUrl": "https://www.linkedin.com/in/nilesh-peswani-70180221",
+  "about": "I lead Revolve Group with a clear mission: to transform business operations through expertly designed and developed solutions. For more than a decade, I have guided our team in delivering customized systems that empower organizations to achieve their strategic goals. My approach combines advanced ERP and BI expertise with our proven capabilities in software development and API integration. This allows us to deliver not just a solution, but a competitive edge, fostering long-term partnerships built on trust, insightful consultation, and tangible results. We are dedicated to enabling businesses to connect their platforms, automate processes, and innovate at scale.\n\u2026 more",
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAASRgXEB5K83UIFZDPfqa8c_ozdEwGsjYPU",
+  "experiences": [
+    {
+      "startTime": "2015-04-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 133,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Revolve",
+      "location": null,
+      "position": "Founder",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/31089952/"
+    },
+    {
+      "startTime": "2016-04-01T00:00:00.000Z",
+      "endTime": "2019-03-01T00:00:00.000Z",
+      "duration": 36,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Exalenze BPO Services LLP",
+      "location": "Mumbai Metropolitan Region",
+      "position": "Partner",
+      "description": null,
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2008-07-01T00:00:00.000Z",
+      "endTime": "2016-04-01T00:00:00.000Z",
+      "duration": 94,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Compass BPO Pvt Ltd ( Now Aditya Birla Minacs world Wide Ltd)",
+      "location": "Mumbai",
+      "position": "Senior Manager Consulting",
+      "description": "o\tPre-sales activities like providing software demo, designing solutions based on client requirements including replying to RFQ/RFP with pricing strategies and efforts estimation\no\tBridging the gap in domain understanding between the client and technical team. Coordinating with the stake holders to translate the business requirements into actual project plan. \no\tPrepare MS project plan/Excel to schedule and track the project progress\no\tFostered customer loyalty by ensuring that our customers fully utilize the value of our solutions and services\no\tProviding consultation to clients on  IBM Cognos/Deltek  implementation.\no\tStrong analytical and documentation skills accompanied by problem solving skills. \no\tManaging transition of client from Solutions Implementation to Client Support. Managing the development and maintenance of implementation portions of project.\no\tMitigate risk by identifying, escalating and resolving issues across multiple delivery groups and/or projects.\no\tCreating and maintaining Change Request Documents. \no\tHad managed and implemented ERP and BI tools with a 100% success rate.\no\tUpgraded the prior versions of Deltek Costpoint to the current version 7.0.1\no      Thorough knowledge of Functional and Technical Costpoint and Time collection\no      Performing upgrade for Deltek Clients on behalf of Deltek\no      Liaising with Deltek Resource coordinator and Project managers for Deltek Costpoint  and                   T&E upgrades\nExecuted the implementation of following modules on different projects:\n\uf0a7\tAccounting(GL, AR, AP,FA)\n\uf0a7\tProjects( Billing , Costing, Revenue)\n\uf0a7\tEmployee, Time management, Leave, Labor, Payroll, Benefits and HR.\n\uf0a7\tMaterials( Purchase and  Receiving)",
+      "companyHashedUrl": "https://www.linkedin.com/company/431175/"
+    },
+    {
+      "startTime": "2007-12-01T00:00:00.000Z",
+      "endTime": "2008-07-01T00:00:00.000Z",
+      "duration": 8,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Marathon Realty Pvt Ltd",
+      "location": null,
+      "position": "Assitant Manager in ERP/IT",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/525219/"
+    },
+    {
+      "startTime": "2006-02-01T00:00:00.000Z",
+      "endTime": "2007-12-01T00:00:00.000Z",
+      "duration": 23,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Base Information Management Pvt Ltd",
+      "location": null,
+      "position": "Implementer",
+      "description": null,
+      "companyHashedUrl": null
+    }
+  ]
+}

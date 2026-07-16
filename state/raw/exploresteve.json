@@ -1,0 +1,76 @@
+{
+  "name": "Steve Jones",
+  "headline": "Real Estate Development & Management",
+  "location": "Renton, Washington, United States",
+  "companyName": "Hermosa Treehouse",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/3743",
+  "companyUrl": null,
+  "position": "Owner",
+  "publicUrl": "https://www.linkedin.com/in/exploresteve",
+  "about": "Following a great 28 year run in technology, I've put down the mouse and keyboard and am currently focused on the development and operations of a unique vacation rental business in Costa Rica, along with several ongoing and new real estate projects here in the Pacific Northwest.\n\nIn Steve's previous professional life, he spent 20 years as a technology consulting executive where he last served as a Principal at RSM US based out of the Bellevue, WA. With more than 25 years supporting ERP systems from SMB to Enterprise and over 20 years of NetSuite sales and consulting experience, Steve has a proven track record of successfully delivering the next generation of business computing.\n\nPrior to joining RSM US, Steve was CEO and Co-Founder of Bellevue, WA based Explore Consulting where he served for more than 17 years.\n\nIn 2011, as CEO of Explore Consulting, Steve was inducted into the Puget Sound region's 40 under 40 list which recognizes young successful business leaders.\n\u2026 more",
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAACxkCoB0qmdx0fHbZWNgbeifQeJp_vJs7Q",
+  "experiences": [
+    {
+      "startTime": "2021-07-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 59,
+      "employmentType": "selfEmployed",
+      "locationType": null,
+      "companyName": "Hermosa Treehouse",
+      "location": "Playa Hermosa, Santa Teresa, Cobano, Puntarenas, Costa Rica",
+      "position": "Owner",
+      "description": "Excited to be open for business in an amazing part of the world - Santa Teresa, Costa Rica, a small surf town on the Pacific side of this beautiful country. The Nicoya Peninsula of Costa Rica is one of the world's only Blue Zones, an area where people are known to live measurably longer lives. With more than 90 restaurants in a 5 mile stretch of beach and an extremely diverse set of cultures that have settled this area, the food alone is worth the visit. But most come for the multitude of surf breaks for all skill levels and the perfect year-round weather.\n\nConceptualized by internationally acclaimed architect Olson Kundig, the thoughtfully designed Hermosa Treehouse offers a touch of luxury while remaining true to an authentic Costa Rican experience. This remarkable private resort, perched in the trees and built of consciously-sourced natural materials, is moments from the white sand beach of Playa Hermosa. We created Hermosa Treehouse with everything you could ever need for a restorative private getaway, including the ocean breeze.",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2018-07-01T00:00:00.000Z",
+      "endTime": "2021-07-01T00:00:00.000Z",
+      "duration": 37,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "RSM US LLP",
+      "location": "Bellevue, WA",
+      "position": "Principal",
+      "description": "RSM is one of Oracle + NetSuite's largest leading North America Partners, recognized annually with the 5-Star award, in addition to being named the 2018 Oracle + NetSuite Worldwide Solution Provider Partner of the Year, for the sixth year in a row. Accounting Today has ranked RSM #1 on the Top 100 VAR list since 2015.",
+      "companyHashedUrl": "https://www.linkedin.com/company/3743/"
+    },
+    {
+      "startTime": "2001-02-01T00:00:00.000Z",
+      "endTime": "2018-06-01T00:00:00.000Z",
+      "duration": 209,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Explore Consulting",
+      "location": "Bellevue, Washington",
+      "position": "Chief Executive Officer & Partner",
+      "description": "Founded in 2001, Explore Consulting is dedicated to providing innovative and cost-effective solutions for cloud business management with a focus on selling, implementing, integrating and extending NetSuite for hundreds of customers around the world. As a member of the SuiteCloud Developer Network, Explore is skilled in building innovative applications and specialized vertical solutions to extend the NetSuite platform. Additionally, Explore has developed industry-leading custom solutions including native mobile applications, Ecommerce webstores and highly specialized business applications written in Microsoft\u2019s .Net and SQL platforms.",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "1999-01-01T00:00:00.000Z",
+      "endTime": "2001-01-01T00:00:00.000Z",
+      "duration": 25,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Homegrocer.com",
+      "location": null,
+      "position": "Sr. Oracle Developer, Enterprise Architecture Group",
+      "description": "Steve's strong development background combined with years of professional education and technical writing gave him the ability to apply both analytical and technical knowledge to any phase of a business system\u2019s development lifecycle.\n\nSteve was heavily involved as a technical lead overseeing the  system conversion from HomeGrocer.com to the Webvan Group, a largely publicized \"dot com\" merger.",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "1995-01-01T00:00:00.000Z",
+      "endTime": "1998-01-01T00:00:00.000Z",
+      "duration": 37,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Aris Corporation",
+      "location": null,
+      "position": "Oracle Developer Analyst",
+      "description": "Steve was recruited out of college to act as a technical consultant primarily to enterprise and government customers. While this role was focused on Oracle technologies, he also provided services with several other platforms from MS Visual Basic to Crystal Reports.\n\nWorking with Aris\u2019 education division, Steve not only delivered a host of Oracle technology courses, but also developed new course offerings for the company including Advanced PL/SQL Development and Oracle Discoverer.\n\nSteve was selected to work with some of the company's largest clients including the Internal Revenue Service, the United States Forest Service, Merrill Lynch and Dell.",
+      "companyHashedUrl": null
+    }
+  ]
+}

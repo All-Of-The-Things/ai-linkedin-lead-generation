@@ -1,0 +1,76 @@
+{
+  "name": "Perla Davini",
+  "headline": "Managing Director",
+  "location": "Argentina",
+  "companyName": "EstiloBeb\u00e9",
+  "followersCount": 1,
+  "companyHashedUrl": "https://www.linkedin.com/company/10126421",
+  "companyUrl": null,
+  "position": "Managing Director",
+  "publicUrl": "https://www.linkedin.com/in/perla-davini-10a836",
+  "about": "Founder & CEO en EstiloBeb\u00e9 S.A, una marca con m\u00e1s de veinte a\u00f1os en el mercado del ecommerce de regalos empresariales de nacimientos y beb\u00e9s. \nLas empresas m\u00e1s prestigiosas de Argentina, conf\u00edan en EstiloBeb\u00e9 para agasajar a sus colaboradores cuando son pap\u00e1s y mam\u00e1s!\n\nEstiloBeb\u00e9 dise\u00f1a, fabrica y comercializa a empresas e individuos distribuyendo sus productos en toda Argentina. \n\nAsimismo, cuento con m\u00e1s de diez a\u00f1os de experiencia en la industria inform\u00e1tica, incluyendo responsabilidades que abarcan las \u00e1reas de Business Consulting y Project Management.\n\u2026 more",
+  "countryCode": "AR",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAAffBoBfJUWVUrh2lsmAeqqxSzVvZp3jAA",
+  "experiences": [
+    {
+      "startTime": "2003-11-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 272,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "EstiloBeb\u00e9",
+      "location": "Argentina",
+      "position": "Managing Director",
+      "description": "ESTILOBEB\u00c9 es una marca argentina que dise\u00f1a, fabrica y comercializa regalos para nacimientos  y accesorios para bebes. Sus dise\u00f1os son cl\u00e1sicos al mismo tiempo que incorporan tendencia.  \n    \nEn la actualidad EstiloBeb\u00e9 es el proveedor de las empresas m\u00e1s prestigiosas de Argentina, en lo que respecta a obsequios por nacimiento; con presencia en el mercado desde hace m\u00e1s de catorce a\u00f1os,",
+      "companyHashedUrl": "https://www.linkedin.com/company/10126421/"
+    },
+    {
+      "startTime": "1998-10-01T00:00:00.000Z",
+      "endTime": "2005-03-01T00:00:00.000Z",
+      "duration": 78,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle Argentina",
+      "location": "Argentina",
+      "position": "Consulting Sales Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "1993-12-01T00:00:00.000Z",
+      "endTime": "1998-10-01T00:00:00.000Z",
+      "duration": 59,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Instituto Nacional de Estad\u00edstica y Censos (INDEC)",
+      "location": "Argentina",
+      "position": "IT Project Manager",
+      "description": null,
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "1992-01-01T00:00:00.000Z",
+      "endTime": "1993-12-01T00:00:00.000Z",
+      "duration": 24,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Conindar San Luis s.a.",
+      "location": "Argentina",
+      "position": "Analista Programador Senior",
+      "description": null,
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "1990-05-01T00:00:00.000Z",
+      "endTime": "1992-01-01T00:00:00.000Z",
+      "duration": 21,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Riadigos Trossero & Asociados",
+      "location": "Argentina",
+      "position": "Analista Programador",
+      "description": null,
+      "companyHashedUrl": null
+    }
+  ]
+}

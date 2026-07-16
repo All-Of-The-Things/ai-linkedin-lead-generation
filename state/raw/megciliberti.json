@@ -1,0 +1,100 @@
+{
+  "name": "Meg Ciliberti",
+  "headline": "Director of Information Technology",
+  "location": "Canada",
+  "companyName": "Shopify",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/784652",
+  "companyUrl": null,
+  "position": "Shopify",
+  "publicUrl": "https://www.linkedin.com/in/megciliberti",
+  "about": null,
+  "countryCode": "CA",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAOPzMQBE6DWsHgSpdW9-pacqiaretp4vVs",
+  "experiences": [
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Shopify",
+      "location": null,
+      "position": "Director Of Information Technology",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/784652/"
+    },
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Shopify",
+      "location": null,
+      "position": "Senior IT Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/784652/"
+    },
+    {
+      "startTime": "2016-12-01T00:00:00.000Z",
+      "endTime": "2020-12-01T00:00:00.000Z",
+      "duration": 49,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Shopify",
+      "location": "Greater Ottawa Metropolitan Area",
+      "position": "IT Manager",
+      "description": "Leading a global team that shapes employee experience with internal technology at Shopify.",
+      "companyHashedUrl": "https://www.linkedin.com/company/784652/"
+    },
+    {
+      "startTime": "2006-05-01T00:00:00.000Z",
+      "endTime": "2016-11-01T00:00:00.000Z",
+      "duration": 127,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Apple",
+      "location": "Toronto, Canada",
+      "position": "Apple Retail (Multiple Positions)",
+      "description": "While working at Apple for over ten years, I held many positions, all of which focused on enriching the customer experience. Please see below:\n\nTrainer (May 2006-April 2011): Creating and delivering training to customers as well as staff. Designing effective learning programs for businesses. \n\nGenius/Lead Genius (April 2011-September 2016): Certified Macintosh and iOS technician, tasked with repairing not only hardware and software, but customers relationships with said devices. Strategizing best practices around repair turnaround and in-store processes. Creating and facilitating on boarding material for employees. \n\nExpert (September 2016-November 2016): Motivating and mentoring a sales team of nearly 100 to create better relationships with customers. Partnering specifically with business customers to find the best solutions for them and their business.",
+      "companyHashedUrl": "https://www.linkedin.com/company/162479/"
+    },
+    {
+      "startTime": "2014-08-01T00:00:00.000Z",
+      "endTime": "2014-10-01T00:00:00.000Z",
+      "duration": 3,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Apple",
+      "location": "Cupertino",
+      "position": "Quality Assurance Career Experience",
+      "description": "Wrote & performed scheduled tests for internal Apple iOS applications used by all retail employees worldwide. Utilized JIRA software and Agile methodologies for testing.",
+      "companyHashedUrl": "https://www.linkedin.com/company/162479/"
+    },
+    {
+      "startTime": "2013-08-01T00:00:00.000Z",
+      "endTime": "2013-10-01T00:00:00.000Z",
+      "duration": 3,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Apple",
+      "location": "Cupertino",
+      "position": "User Acceptance Testing/Quality Assurance Career Experience",
+      "description": "Wrote & performed scheduled tests for internal Apple iOS applications used by all retail employees worldwide.",
+      "companyHashedUrl": "https://www.linkedin.com/company/162479/"
+    },
+    {
+      "startTime": "2004-04-01T00:00:00.000Z",
+      "endTime": "2006-09-01T00:00:00.000Z",
+      "duration": 30,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Vision Design & Advertising",
+      "location": null,
+      "position": "Graphic Design",
+      "description": "Creative effective, eye-catching designs for print and web.",
+      "companyHashedUrl": null
+    }
+  ]
+}

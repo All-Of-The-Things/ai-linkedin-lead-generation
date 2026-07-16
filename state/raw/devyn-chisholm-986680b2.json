@@ -1,0 +1,33 @@
+{
+  "name": "Devyn Chisholm",
+  "headline": "Operations Manger",
+  "location": "Kenner, Louisiana, United States",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": "2023-09-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 33,
+      "employmentType": "fullTime",
+      "locationType": "onSite",
+      "companyName": "Hertz",
+      "location": "New Orleans, Louisiana",
+      "position": "Operations Manager",
+      "description": "The Operations Manager helps to provide overall leadership to non-exempt airport employees. This includes responsibility for overall operating performance, customer satisfaction, positing employee culture, safety, and service, budget, and vendor relations. The Operations Manager oversees fleet availability and revenue generation.",
+      "companyHashedUrl": "https://www.linkedin.com/company/4326/"
+    },
+    {
+      "startTime": "2016-01-01T00:00:00.000Z",
+      "endTime": "2023-12-01T00:00:00.000Z",
+      "duration": 96,
+      "employmentType": "fullTime",
+      "locationType": "onSite",
+      "companyName": "Dollar Thrifty Rental Car",
+      "location": "Kenner, Louisiana, United States",
+      "position": "Lead Sales Representative",
+      "description": "Communicated clear expectations and goals from corporate/management to each team member.\nResolved all customer complaints in a professional manner while prioritizing customer satisfaction.\nWorked with the management team to implement the proper division of responsibilities.\nOversaw the performance of more than five Sales Representatives.\nRanked consistently in the top two of the department in sales since being hired.\nAbility to quickly establish rapport with customers, up-sell products and build a loyal clientele.\nAchieved/surpassed sales goals while providing excellent customer service.",
+      "companyHashedUrl": "https://www.linkedin.com/company/13283581/"
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/devyn-chisholm-986680b2"
+}

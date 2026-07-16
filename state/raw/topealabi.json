@@ -1,0 +1,76 @@
+{
+  "name": "Tope Alabi",
+  "headline": "Founder and CEO at Afriex",
+  "location": "San Francisco, California, United States",
+  "companyName": "Afriex",
+  "followersCount": 10802,
+  "companyHashedUrl": "https://www.linkedin.com/company/20314528",
+  "companyUrl": null,
+  "position": "Co-Founder",
+  "publicUrl": "https://www.linkedin.com/in/topealabi",
+  "about": null,
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAABBmsWIBlbSFpkb6z5nfAweBmFBrijNflr0",
+  "experiences": [
+    {
+      "startTime": "2020-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 76,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Afriex",
+      "location": null,
+      "position": "Co-Founder",
+      "description": "Afriex makes it easy for immigrants to send money home by offering instant no-fee remittances to and from over 25 countries around the world. Our mission is to make sending money as easy as sending a text message.",
+      "companyHashedUrl": "https://www.linkedin.com/company/20314528/"
+    },
+    {
+      "startTime": "2018-01-01T00:00:00.000Z",
+      "endTime": "2018-01-01T00:00:00.000Z",
+      "duration": 1,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Consensys",
+      "location": null,
+      "position": "Software Engineer",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/9373737/"
+    },
+    {
+      "startTime": "2018-01-01T00:00:00.000Z",
+      "endTime": "2018-01-01T00:00:00.000Z",
+      "duration": 1,
+      "employmentType": "partTime",
+      "locationType": null,
+      "companyName": "IDEO",
+      "location": null,
+      "position": "Fellow",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/164291/"
+    },
+    {
+      "startTime": "2016-01-01T00:00:00.000Z",
+      "endTime": "2016-01-01T00:00:00.000Z",
+      "duration": 1,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Techstars",
+      "location": null,
+      "position": "Alumni",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/167750/"
+    },
+    {
+      "startTime": "2011-01-01T00:00:00.000Z",
+      "endTime": "2013-01-01T00:00:00.000Z",
+      "duration": 25,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Wix",
+      "location": null,
+      "position": "Software Engineer",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/97250/"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "name": "Kavita H.",
+  "headline": "Founder | Techsensus",
+  "location": "New York, New York, United States",
+  "companyName": "University of Maryland",
+  "followersCount": 0,
+  "companyHashedUrl": "https://www.linkedin.com/company/101098888",
+  "companyUrl": null,
+  "position": "President",
+  "publicUrl": "https://www.linkedin.com/in/kavita-h-585b46173",
+  "about": "I'm a builder and entrepreneur. \n \nOver the past six years, I've built two businesses from scratch. At Makalu Health, I went from idea to working AI product in months, designing and building AMY, the first-of-its-kind AI recruiting agentic platform that automates physician matching, sourcing and engagement for the notoriously slow locum tenens market. I've worn every hat from product management, operations, sales and design. We achieved a 30% increase in placements, with no added recruiter or sourcing specialist headcount for our mid-sized locum clients. \n\nAt Techsensus, I founded an 8(a)-certified federal staffing firm, won government contracts with Health and Human Services and DoD, managed live clinical placements, learning the hard way how healthcare delivery actually works on the ground. Techsensus is one of the premier and largest clients providing state-of-the-art healthcare services to the Native American population in the most remote parts of the United States, including the Sioux and Navajo population. Since founding, the company has generated over $20M in revenue. \n\nCurrently, open to advisory roles: If you're building something ambitious, let's talk.\n\u2026 more",
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAClII7UBHaFPU-oY2xSO1CGqkRk-837QUX8",
+  "experiences": [
+    {
+      "startTime": "2021-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 64,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Techsensus LLC",
+      "location": "Washington DC-Baltimore Area",
+      "position": "President",
+      "description": "Techsensus LLC is an 8(a) premier recruiting and technology consulting firm, currently serving the  US government including Health and Human Services (Indian Health Services) the VA and DoD. \nPlease contact us at partnerships@techsensus.com with any queries.",
+      "companyHashedUrl": "https://www.linkedin.com/company/101098888/"
+    },
+    {
+      "startTime": "2025-02-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 15,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Makalu Health",
+      "location": "New York City Metropolitan Area",
+      "position": "Founder",
+      "description": "working on making physician sourcing, smarter.",
+      "companyHashedUrl": "https://www.linkedin.com/company/106528456/"
+    },
+    {
+      "startTime": "2021-04-01T00:00:00.000Z",
+      "endTime": "2021-07-01T00:00:00.000Z",
+      "duration": 4,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "On Deck",
+      "location": null,
+      "position": "Fellow",
+      "description": "Founding Fellow, On Deck Health (ODH1)",
+      "companyHashedUrl": "https://www.linkedin.com/company/18776174/"
+    },
+    {
+      "startTime": "2020-03-01T00:00:00.000Z",
+      "endTime": "2020-12-01T00:00:00.000Z",
+      "duration": 10,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Femality Health",
+      "location": null,
+      "position": "Co-Founder",
+      "description": "Digital health clinic for mid-life women's care. Using digitized personalized treatment and telemedicine to provide superior continuous care from menopause and beyond.\n\n- Built clinician network across 6 states, serving hundreds of patients\n- Built advisory board, consisting of successful Series A digital health founders, board-certified gynecologists and HR Employee Benefits Executive.\n- Raised VC funding from institutional investors\n- Led marketing campaigns across paid and unpaid channels \n- Released and built proprietary Femality Health app on Apple App store, providing women with menopause symptom tracking, telemedicine booking, payment system, personalized content, recipes and more.",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2016-02-01T00:00:00.000Z",
+      "endTime": "2019-06-01T00:00:00.000Z",
+      "duration": 41,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Capital One",
+      "location": null,
+      "position": "Conversational AI Engineer",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1419/"
+    }
+  ]
+}

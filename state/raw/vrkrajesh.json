@@ -1,0 +1,69 @@
+{
+  "name": "Rajeshkumar Venkatesan",
+  "headline": "Global Head of Engineering | Deckers Brands",
+  "location": "United States",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": "2026-03-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 3,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Deckers Brands",
+      "location": "United States",
+      "position": "VP of Engineering DTC",
+      "description": "Global Head of Engineering leading Digital, Retail stores, MarTech, Marketplace, Loyalty, and GenAI initiatives across HOKA, UGG, and Teva, driving scalable platforms and innovation worldwide.",
+      "companyHashedUrl": "https://www.linkedin.com/company/37381/"
+    },
+    {
+      "startTime": "2022-08-01T00:00:00.000Z",
+      "endTime": "2026-03-01T00:00:00.000Z",
+      "duration": 44,
+      "employmentType": "fullTime",
+      "locationType": "onSite",
+      "companyName": "SEPHORA",
+      "location": null,
+      "position": "Vice President, eCommerce Enginnering",
+      "description": "A technology executive with deep expertise in digital strategy, GenAI innovation, and large-scale eCommerce engineering. Leads end-to-end digital experiences for Sephora, including Sephora.com and the client-facing iOS and Android mobile apps. Oversees high-performing engineering teams responsible for building mission-critical microservices that power an award-winning commerce ecosystem serving millions of clients.\nDrives complex post-purchase platforms, including order processing, optimized distribution-center sourcing, and omnichannel client service operations across voice, chat, and email. Champions integrated social-commerce experiences across TikTok, Instagram, and other emerging platforms, enabling seamless engagement and conversion.\nManages Sephora\u2019s marketplace technology platform to accelerate partner integrations and deliver frictionless shopping experiences for prestige clients. Leads omni-strategy implementations that empower customers with the ultimate flexibility\u2014whatever they want, however they want, wherever they want, and whenever they want.",
+      "companyHashedUrl": "https://www.linkedin.com/company/6814/"
+    },
+    {
+      "startTime": "2021-06-01T00:00:00.000Z",
+      "endTime": "2022-08-01T00:00:00.000Z",
+      "duration": 15,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "SEPHORA",
+      "location": null,
+      "position": "Senior Director Of Engineering",
+      "description": "eCommerce engineering, APIs, Mobile apps (iOS & Android), Order Management applications & Loyalty apps",
+      "companyHashedUrl": "https://www.linkedin.com/company/6814/"
+    },
+    {
+      "startTime": "2019-03-01T00:00:00.000Z",
+      "endTime": "2021-06-01T00:00:00.000Z",
+      "duration": 28,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "SEPHORA",
+      "location": null,
+      "position": "Director Of Engineering",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/6814/"
+    },
+    {
+      "startTime": "2016-02-01T00:00:00.000Z",
+      "endTime": "2019-03-01T00:00:00.000Z",
+      "duration": 38,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "SEPHORA",
+      "location": null,
+      "position": "Senior Engineering Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/6814/"
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/vrkrajesh"
+}

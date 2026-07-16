@@ -1,0 +1,69 @@
+{
+  "name": "Brayden Martin",
+  "headline": "Logistics @ P&G | Founder Of HomeForm Cleaning",
+  "location": "Cincinnati Metropolitan Area",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": "2026-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 5,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Procter & Gamble",
+      "location": null,
+      "position": "CTPL",
+      "description": "I keep P&G's product moving to my customers, Amazon and Target \u2014 on time, in full, at scale. Managing millions of dollars in outbound freight daily, I own transportation execution, carrier oversight, and shipment risk resolution across some of P&G's highest-priority retail lanes.\n\nCurrently leading a chargeback initiative targeting ~$12M in annual Amazon deductions \u2014 auditing, disputing, and recovering costs that directly impact P&G's bottom line.\n\nI run trend analysis across the supply chain to identify recurring failures and drive systemic fixes \u2014 feeding directly into carrier performance decisions with our NATO team, including PIPs and lane removals that keep the carrier network healthy and accountable.\n\nOn top of execution, I build automation workflows using AutoKnime, Databricks, and PowerBI to cut manual work and sharpen how the team operates day to day.\n\nTMS, SAP, and FourKites to plan, track, and execute shipments, communicate updates, and drive timely issue resolution. Manage the movement of millions of dollars in P&G product, supporting service reliability, carrier performance, and operational excellence across the transportation network.",
+      "companyHashedUrl": "https://www.linkedin.com/company/1116/"
+    },
+    {
+      "startTime": "2023-12-01T00:00:00.000Z",
+      "endTime": "2026-01-01T00:00:00.000Z",
+      "duration": 26,
+      "employmentType": null,
+      "locationType": "onSite",
+      "companyName": "Procter & Gamble",
+      "location": "Ohio, United States",
+      "position": "Researcher",
+      "description": "Executed fit-for-use testing supporting product launches across major brands including Olay, Secret, Old Spice, Native, and Gillette. Worked independently in fast-paced R&D environment, managing lab operations, inventory systems, and technical documentation.\n\nKey accomplishments:\nReceived Gold Award for Project Shuri (Olay's biggest 2024 launch) for business and technical proficiency\nSolved critical packaging challenge for Old Spice Ferrari project, enabling on-time launch of new direct print technology\nSupported Project EAGLE, one of P&G's largest initiatives (whole body deodorant line)\nDeveloped new data templates and custom testing fixtures when standardized methods didn't exist\nTrained team members on Nexus, data management, and FFU testing\nServed on Beauty Lab Council and presented e-commerce expertise to P&G Beauty CEO\n\nResponsibilities included: Testing new and existing packages, managing CISPRO inventory system, documenting all data in Nexus (ELN) for audit compliance, following GMP methodology, working in Enovia spec platform, streamlining processes for future team members, and maintaining all technical training while meeting tight project deadlines.\n\u2026 more",
+      "companyHashedUrl": "https://www.linkedin.com/company/1116/"
+    },
+    {
+      "startTime": "2025-06-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 12,
+      "employmentType": "selfEmployed",
+      "locationType": "hybrid",
+      "companyName": "HomeForm Cleaning LLC",
+      "location": "Cincinnati Metropolitan Area",
+      "position": "Founder | CEO",
+      "description": "HomeForm connects vetted, experienced cleaners with Airbnb hosts, businesses, and homeowners who need reliable, tailored cleaning solutions. Every cleaner on our platform is background checked and professionally experienced \u2014 quality isn't optional, it's the standard.\n\nWe handle Airbnb turnovers, commercial spaces, and residential homes, but we go beyond just cleaning. HomeForm also offers junk removal and watchman services, giving Airbnb hosts a single point of contact to delegate the operational side of their property \u2014 so they can focus on the business, not the logistics.\n\nI oversee daily operations, cleaner quality, and client relationships \u2014 building a service that homeowners and property owners can actually depend on.",
+      "companyHashedUrl": "https://www.linkedin.com/company/112939530/"
+    },
+    {
+      "startTime": "2023-01-01T00:00:00.000Z",
+      "endTime": "2023-11-01T00:00:00.000Z",
+      "duration": 11,
+      "employmentType": "partTime",
+      "locationType": null,
+      "companyName": "The Melting Pot Restaurants",
+      "location": null,
+      "position": "Server",
+      "description": "Started as a server assistant and quickly earned my own section at 17, managing a 3-4 table rotation fully independently \u2014 taking orders, running drinks, and delivering a seamless dining experience from start to finish.\n\nIt was my first real introduction to sales and guest management. Working in a upscale dining environment taught me how to read people, anticipate needs, and turn a good experience into a great one \u2014 skills that still show up in how I operate today.",
+      "companyHashedUrl": "https://www.linkedin.com/company/548358/"
+    },
+    {
+      "startTime": "2022-01-01T00:00:00.000Z",
+      "endTime": "2023-07-01T00:00:00.000Z",
+      "duration": 19,
+      "employmentType": "fullTime",
+      "locationType": "onSite",
+      "companyName": "Northstar Cafe",
+      "location": "Australia",
+      "position": "Server",
+      "description": "Ran food, drinks and attended to all guest needs with friendly & efficient service.",
+      "companyHashedUrl": "https://www.linkedin.com/company/10446923/"
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/brayden-martin-b64969280"
+}

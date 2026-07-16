@@ -1,0 +1,57 @@
+{
+  "name": "Troy Parcels",
+  "headline": "Managing Director",
+  "location": "Cypress, Texas, United States",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": "2025-10-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 8,
+      "employmentType": "fullTime",
+      "locationType": "onSite",
+      "companyName": "CAR\u2022TOYS Texas",
+      "location": "Houston, Texas, United States",
+      "position": "Managing Director",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/110209711/"
+    },
+    {
+      "startTime": "1997-10-01T00:00:00.000Z",
+      "endTime": "2026-02-01T00:00:00.000Z",
+      "duration": 341,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Cartoys",
+      "location": "Portland Area, Oregon",
+      "position": "Regional Manager",
+      "description": null,
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Cartoys",
+      "location": null,
+      "position": "Sales Specialist",
+      "description": null,
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "1997-09-01T00:00:00.000Z",
+      "endTime": "2026-02-01T00:00:00.000Z",
+      "duration": 342,
+      "employmentType": "fullTime",
+      "locationType": "onSite",
+      "companyName": "CTX Operating Company",
+      "location": "United States",
+      "position": "12v installer",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/108465963/"
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/troy-parcels-7852248a"
+}

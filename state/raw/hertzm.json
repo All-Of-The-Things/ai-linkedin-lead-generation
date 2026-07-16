@@ -1,0 +1,28 @@
+{
+  "name": "Matthew Hertz",
+  "headline": "Founder & CEO at Pipl",
+  "location": "United States",
+  "companyName": null,
+  "followersCount": null,
+  "companyHashedUrl": "https://www.linkedin.com/company/1315565",
+  "companyUrl": null,
+  "position": "Founder & CEO",
+  "publicUrl": "https://www.linkedin.com/in/hertzm",
+  "about": null,
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAACZNYBiFum3asA4z295-kzp8QAA-no8Cw",
+  "experiences": [
+    {
+      "startTime": "2005-08-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 249,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Pipl",
+      "location": null,
+      "position": "Founder & CEO",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1315565/"
+    }
+  ]
+}

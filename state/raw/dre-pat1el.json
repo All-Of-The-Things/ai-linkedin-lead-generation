@@ -1,0 +1,64 @@
+{
+  "name": "Drew Patel",
+  "headline": "Co-Founder at Andalusia Labs",
+  "location": "United States",
+  "companyName": "Andalusia Labs",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/72035395",
+  "companyUrl": null,
+  "position": "Co-Founder",
+  "publicUrl": "https://www.linkedin.com/in/dre-pat1el",
+  "about": null,
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAABondocBpfU4zepP_wI3qIEro-dudcGl_VQ",
+  "experiences": [
+    {
+      "startTime": "2021-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 64,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Andalusia Labs",
+      "location": null,
+      "position": "Co-Founder",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/72035395/"
+    },
+    {
+      "startTime": "2021-01-01T00:00:00.000Z",
+      "endTime": "2021-01-01T00:00:00.000Z",
+      "duration": 1,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Coinbase",
+      "location": null,
+      "position": "Software Engineer",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/2857634/"
+    },
+    {
+      "startTime": "2020-04-01T00:00:00.000Z",
+      "endTime": "2020-08-01T00:00:00.000Z",
+      "duration": 5,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "8 Decimal Capital",
+      "location": null,
+      "position": "Portfolio Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/18382140/"
+    },
+    {
+      "startTime": "2017-11-01T00:00:00.000Z",
+      "endTime": "2020-04-01T00:00:00.000Z",
+      "duration": 30,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Stealth",
+      "location": null,
+      "position": "Chief Technology Officer",
+      "description": null,
+      "companyHashedUrl": null
+    }
+  ]
+}

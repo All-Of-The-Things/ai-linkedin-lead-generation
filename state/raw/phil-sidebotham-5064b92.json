@@ -1,0 +1,100 @@
+{
+  "name": "Phil Sidebotham",
+  "headline": "Senior Director Product Management at Oracle Corporation - Customer Success Services",
+  "location": "Greater Manchester, England, United Kingdom",
+  "companyName": "Oracle",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/1028",
+  "companyUrl": null,
+  "position": "Senior Director Product Management - Customer Success Services",
+  "publicUrl": "https://www.linkedin.com/in/phil-sidebotham-5064b92",
+  "about": "Cloud Service focused Product Manager responsible for product strategy, pricing, GTM, business development and sales enablement, and product life-cycle management for Oracle Customer Success Services - focused on Cloud services attach portfolios for Oracle SaaS operational day 2 support and managed security services for IDaaS, database and application security.",
+  "countryCode": "GB",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAABuCpYBgdklO2T8-xkrANvXEIKL4HgYJSc",
+  "experiences": [
+    {
+      "startTime": "2023-09-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 33,
+      "employmentType": "fullTime",
+      "locationType": "hybrid",
+      "companyName": "Oracle",
+      "location": "Manchester, England, United Kingdom",
+      "position": "Senior Director Product Management - Customer Success Services",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2016-06-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 120,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle Corporation - Customer Success Services",
+      "location": "UK",
+      "position": "In this webcast session, Arconic Inc. will provide insight into their transition to SaaS, benefits of working with Oracle Advanced Customer Services, and more.",
+      "description": "Experienced, dynamic and results orientated product manager working in a high paced, matrix team based cloud services environment. Strong track record in services based product management, with strong business acumen, leading a portfolio of $100m+ revenue.\nStrengths include strategic thinking, portfolio analysis, and cloud architectures and services expertise. Responsible for product strategy, pricing, GTM strategy, business development, sales enablement and product life-cycle management for Oracle Customer Success Services' cloud attach services including: applications business life-cycle support services for Oracle SaaS and Applications Unlimited offerings, and Managed Security Service offerings for SaaS, PaaS and IaaS. Services designed to maximise customers' investments and success with Oracle products and services.",
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2014-06-01T00:00:00.000Z",
+      "endTime": "2016-05-01T00:00:00.000Z",
+      "duration": 24,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle Corporation - Managed Cloud Services",
+      "location": "Manchester",
+      "position": "Senior Architect",
+      "description": "Complex private and hybrid cloud architectures based on Oracle's extensive product set (EBS, OBIEE, PSFT, Siebel, Hyperion, Fusion Apps, Primavera, banking apps OFSAA/FAH, Retail, Fusion MW, vertical apps) and Engineered Systems platforms (Exadata, Exalogic, Exalytics, ODA, OVCA etc). Defining high volume and high availability architectures in a global pre-sales team environment supporting sales initiatives. Integration with Oracle Public Cloud and other SaaS models. 3rd party product integration. ITIL and TOGAF 9 certified.",
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2008-11-01T00:00:00.000Z",
+      "endTime": "2014-06-01T00:00:00.000Z",
+      "duration": 68,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle Corporation - Managed Cloud Services",
+      "location": null,
+      "position": "Technical Architect",
+      "description": "Technical Architect for Oracle Cloud Services offerings working in pre-sales and post-sales delivery of complex cloud architecture designs: design capabilities in E-Business Suite, Hyperion, Siebel, PeopleSoft, Agile, OTM, GRC, Primavera, SOA, IDM, Fusion Middleware and DB technologies. TOGAF 9 certified.\n\u2026 more",
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2005-10-01T00:00:00.000Z",
+      "endTime": "2008-11-01T00:00:00.000Z",
+      "duration": 38,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle Corporation - Managed Cloud Services",
+      "location": null,
+      "position": "Principal Technical Lead",
+      "description": "Working with On Demand global customers with E-Business Suite on production operations, technology migrations, performance, capacity planning and security.",
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "2003-04-01T00:00:00.000Z",
+      "endTime": "2005-10-01T00:00:00.000Z",
+      "duration": 31,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle Corporation - Managed Cloud Services",
+      "location": null,
+      "position": "Technical Architect",
+      "description": "Technical Architect for Oracle E-Business Suite. Involved in RFP, conceptual to detailed design and deployment of EBS in major public and private sector projects, with large server deployments including SSO, RAC and multi-tier complex internet/intranet architectures.\n\u2026 more",
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    },
+    {
+      "startTime": "1999-01-01T00:00:00.000Z",
+      "endTime": "2003-03-01T00:00:00.000Z",
+      "duration": 51,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Oracle Corporation - Managed Cloud Services",
+      "location": null,
+      "position": "Oracle Applications DBA",
+      "description": "Working in Oracle UK Consulting as Applications DBA. Performing installations, tuning, upgrade, problem resolution engagements etc around Oracle Apps 11i and associated technology. Working mainly for large UK blue chips and large UK government organisations.\n\u2026 more",
+      "companyHashedUrl": "https://www.linkedin.com/company/1028/"
+    }
+  ]
+}

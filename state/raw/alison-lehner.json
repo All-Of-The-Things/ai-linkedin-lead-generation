@@ -1,0 +1,100 @@
+{
+  "name": "Alison Emery",
+  "headline": "Co-Founder, NetSuite Implementations",
+  "location": "Las Vegas, Nevada, United States",
+  "companyName": "Sunstone Innovations",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/105575286",
+  "companyUrl": null,
+  "position": "Chief Executive Officer",
+  "publicUrl": "https://www.linkedin.com/in/alison-lehner",
+  "about": null,
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAABYWP00BYUyfUCORkBQRRjUUnOHi1dmorGQ",
+  "experiences": [
+    {
+      "startTime": "2025-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 18,
+      "employmentType": "fullTime",
+      "locationType": "onSite",
+      "companyName": "Sunstone Innovations",
+      "location": "Las Vegas, Nevada, United States",
+      "position": "Chief Executive Officer",
+      "description": "After nearly a decade in the NetSuite partner space, I cofounded Sunstone to address the greater need for high-quality, high-trust implementation services designed to take NetSuite from an out-of-the-box solution to a fully optimized system.\n\nAt Sunstone, we understand that you are the experts of your business, and we combine that knowledge with our deep NetSuite expertise to create solutions that integrate seamlessly into your existing processes. Our team brings together industry experience, proven implementation strategies, and technical know-how to guide our customers through every stage of their NetSuite journey\u2014from initial setup to long-term optimization.",
+      "companyHashedUrl": "https://www.linkedin.com/company/105575286/"
+    },
+    {
+      "startTime": "2023-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 42,
+      "employmentType": null,
+      "locationType": "remote",
+      "companyName": "Dlvry Software",
+      "location": "Las Vegas, Nevada, United States",
+      "position": "Partner",
+      "description": "Modernizing last mile deliveries for the world\u2019s distributors, Dlvry (formerly jLAN Mobile) integrates with your ERP to instantly update inventory and payments information. Our core platform, Dlvry DSD, empowers your drivers to be an efficient extension of your sales force. The easy to use app helps manage routing, deliveries, and even on-the-fly creation of POs and Invoices. Whether taking payments in PO, cash, check or card, Dlvry DSD gives you visibility and accountability into your deliveries.",
+      "companyHashedUrl": "https://www.linkedin.com/company/96353956/"
+    },
+    {
+      "startTime": "2022-08-01T00:00:00.000Z",
+      "endTime": "2024-02-01T00:00:00.000Z",
+      "duration": 19,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "ParityFactory",
+      "location": null,
+      "position": "Director of Sales",
+      "description": "ParityFactory is the industry leader in software for food processors and manufacturers. Using a combined solution of modern software, ERP integrations, and factory equipment, food and beverage operations using ParityFactory run more efficiently and safely as a result of real-time inventory, instant lot tracing, and an efficient paperless shop floor.",
+      "companyHashedUrl": "https://www.linkedin.com/company/382637/"
+    },
+    {
+      "startTime": "2022-03-01T00:00:00.000Z",
+      "endTime": "2022-08-01T00:00:00.000Z",
+      "duration": 6,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "ParityFactory",
+      "location": null,
+      "position": "National Sales Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/382637/"
+    },
+    {
+      "startTime": "2020-02-01T00:00:00.000Z",
+      "endTime": "2022-03-01T00:00:00.000Z",
+      "duration": 26,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "ParityFactory",
+      "location": null,
+      "position": "Account Executive",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/382637/"
+    },
+    {
+      "startTime": "2015-11-01T00:00:00.000Z",
+      "endTime": "2020-02-01T00:00:00.000Z",
+      "duration": 52,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Beyondsoft",
+      "location": "Greater Seattle Area",
+      "position": "Sales Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/41887/"
+    },
+    {
+      "startTime": "2014-09-01T00:00:00.000Z",
+      "endTime": "2015-11-01T00:00:00.000Z",
+      "duration": 15,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "PROVAIL",
+      "location": "Greater Seattle Area",
+      "position": "Employment Consultant",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/84331/"
+    }
+  ]
+}

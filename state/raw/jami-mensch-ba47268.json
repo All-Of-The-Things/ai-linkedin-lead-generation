@@ -1,0 +1,57 @@
+{
+  "name": "Jami Mensch",
+  "headline": "Vice President of Operations at Mon Cheri Bridals",
+  "location": "Warminster, Pennsylvania, United States",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Mon Cheri Bridals",
+      "location": null,
+      "position": "Vice President of Operations",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/378005/"
+    },
+    {
+      "startTime": "2010-03-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 195,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Mon Cheri Bridals",
+      "location": null,
+      "position": "Manager of International Operations",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/378005/"
+    },
+    {
+      "startTime": "2005-06-01T00:00:00.000Z",
+      "endTime": "2010-03-01T00:00:00.000Z",
+      "duration": 58,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Mon Cheri Bridals",
+      "location": null,
+      "position": "Sales Assistant",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/378005/"
+    },
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Mon Cheri Bridals",
+      "location": null,
+      "position": "Retail Support",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/378005/"
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/jami-mensch-ba47268"
+}

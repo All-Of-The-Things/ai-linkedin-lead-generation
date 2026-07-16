@@ -1,0 +1,76 @@
+{
+  "name": "Nathan Ashcraft",
+  "headline": "Director Professional Services",
+  "location": "Raleigh-Durham-Chapel Hill Area",
+  "companyName": "Avalara",
+  "followersCount": 500,
+  "companyHashedUrl": "https://www.linkedin.com/company/22026",
+  "companyUrl": null,
+  "position": "Avalara",
+  "publicUrl": "https://www.linkedin.com/in/nashcraft",
+  "about": "Management | Project Management | Professional Services | Technical Consulting",
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAirbiQBS49MI7EGRjMJmjuCqb5Pj7E9z2A",
+  "experiences": [
+    {
+      "startTime": "2022-04-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 50,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Avalara",
+      "location": "Durham, North Carolina, United States",
+      "position": "Director of Professional Services",
+      "description": "Supporting and guiding a team of managers, project managers, and consultants focused on SaaS tax engine implementations and compliance services.\n\nCurrent focus: Registration and business license filing services. Designing the future of the customer experience with AI and automation for license filings. \n\nPast teams: \nReturns backfiling\nExcise Fuel, Excise Tobacco, Communications, and Hospitality/Lodging tax calculation and returns. \nEnterprise sales and use tax, ERP and E-commerce integrations. \n\nBuilding new implementation processes, project management tooling, and standardizing documentation. Streamlining and simplifying existing practices to enable teams to scale efficiently.",
+      "companyHashedUrl": "https://www.linkedin.com/company/22026/"
+    },
+    {
+      "startTime": "2020-01-01T00:00:00.000Z",
+      "endTime": "2022-04-01T00:00:00.000Z",
+      "duration": 28,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Avalara",
+      "location": "Durham, North Carolina",
+      "position": "Senior Manager Professional Services",
+      "description": "Growing an ERP and Ecommerce focused SaaS Implementation Team of Managers, Project Managers and Technical Consultants in the US and India.\n\nThe Professional Services team is focused on providing project management and SaaS technical integration consulting for ERPs (NetSuite, MS Dynamics), Ecommerce (Shopify, Magento) and POS (D365 Commerce) and custom API integrations to meet the ever increasing complexity of domestic and international tax compliance. \n\nSupporting mid-market and enterprise sales teams, SaaS integration project scoping, and contract creation.\n\nRepresenting Customer and Partner driven feedback and guidance to Avalara Product Management to guide new service and feature releases. Writing technical and functional documentation to prepare and train the collective implementation teams.\n\nResponsible for Professional Services' department project portfolio, project manager resource management, implementation team process improvements, optimization, and overall KPI monitoring.\n\u2026 more",
+      "companyHashedUrl": "https://www.linkedin.com/company/22026/"
+    },
+    {
+      "startTime": "2015-12-01T00:00:00.000Z",
+      "endTime": "2020-01-01T00:00:00.000Z",
+      "duration": 50,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Avalara",
+      "location": "Durham, North Carolina, United States",
+      "position": "Project Manager",
+      "description": "Manage Avalara and client implementation teams along with cross department Avalara resources for SaaS software integrations and ongoing managed services. Client facing project management for up to 50 parallel software implementations using REST API based integrations to ERP business systems, Ecommerce platforms, and POS/Retail systems.\n\nContinued project management support through role changes: \nProject Management 2015 - 2018\nPractice Manager 2018 - 2019 \nProfessional Services Manager 2019 - 2020\n\n\n\u2026 more",
+      "companyHashedUrl": "https://www.linkedin.com/company/22026/"
+    },
+    {
+      "startTime": "2015-01-01T00:00:00.000Z",
+      "endTime": "2015-12-01T00:00:00.000Z",
+      "duration": 12,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "NDSL",
+      "location": null,
+      "position": "Technical Support Supervisor",
+      "description": "Manage Technical Support department priorities across email, phone, repair, training, and QA testing. \n\nDesign, contribute and advise customer focused product development. Combining personal field experience and perspective with direct feedback from users. \n\nDrive QA during development sprints, validation, trial testing, and release. \n\nCreate training classes for new hardware and software for reseller partners and end users. Set standards for certification and qualified installers.",
+      "companyHashedUrl": "https://www.linkedin.com/company/2015395/"
+    },
+    {
+      "startTime": "2012-01-01T00:00:00.000Z",
+      "endTime": "2014-12-01T00:00:00.000Z",
+      "duration": 36,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "NDSL",
+      "location": "Raleigh, NC",
+      "position": "Technical Support Engineer",
+      "description": "Provide email and phone support for flagship products to reseller partner companies, contractors, and end users in North America and internationally\n\nTravel to end user sites to resolve outstanding hardware and software integration issues. Train site personnel on battery management and service through data analysis trends.\n\nManage repair return process including performing the repairs on PC hardware.\n\u2026 more",
+      "companyHashedUrl": "https://www.linkedin.com/company/2015395/"
+    }
+  ]
+}

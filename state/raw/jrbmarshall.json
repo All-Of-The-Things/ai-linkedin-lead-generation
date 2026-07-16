@@ -1,0 +1,100 @@
+{
+  "name": "John Marshall",
+  "headline": "Vice President, Professional Services",
+  "location": "Broomfield, Colorado, United States",
+  "companyName": "Salesforce",
+  "followersCount": 1487,
+  "companyHashedUrl": "https://www.linkedin.com/company/3185",
+  "companyUrl": null,
+  "position": "Salesforce",
+  "publicUrl": "https://www.linkedin.com/in/jrbmarshall",
+  "about": "Experienced leader of high performing consulting teams with 20+ years in business technology consulting delivering optimal business value across a diverse array of industries, including: Non-Profit, Higher Education, Healthcare and Life Sciences and Technology.",
+  "countryCode": "US",
+  "hashedUrl": "",
+  "experiences": [
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Salesforce",
+      "location": null,
+      "position": "Vice President Delivery, Public Sector",
+      "description": "Responsible for the professional services delivery team focused on enterprise customers in the Public Sector, NGO and Education space in the US and Canada. I lead an amazing organization of over 500 consulting experts focused on delivering transformational customer impact!",
+      "companyHashedUrl": "https://www.linkedin.com/company/3185/"
+    },
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Salesforce",
+      "location": null,
+      "position": "Regional Vice President, Professional Services - Salesforce.org",
+      "description": "I lead an incredible team of Salesforce experts who help our nonprofit and education customers to connect with their donors, volunteers, clients, students, faculty, staff and other constituents in whole new ways. Our team of business transformation architects, advisors, consultants, fundraisers and support technicians work with our customers and our partners to drive mission-centric success on the Salesforce platform. \n\nhttps://www.salesforce.org/nonprofit/success-services/\nhttps://www.salesforce.org/highered/success-services/\n\u2026 more",
+      "companyHashedUrl": "https://www.linkedin.com/company/3185/"
+    },
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Salesforce",
+      "location": null,
+      "position": "Senior Director, Strategic Services - Salesforce.org",
+      "description": "I am grateful for the opportunity to work with with our Higher Education and Non-Profit customers and partners to drive innovation through our team of Salesforce experts. Our mission is to help our trail-blazing customers achieve their missions. We are building a small, strategic team who are focused solely on driving truly impactful change!\n\u2026 more",
+      "companyHashedUrl": "https://www.linkedin.com/company/3185/"
+    },
+    {
+      "startTime": "2006-05-01T00:00:00.000Z",
+      "endTime": "2017-11-01T00:00:00.000Z",
+      "duration": 139,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Salesforce",
+      "location": null,
+      "position": "Director of Services, Healthcare and Life Sciences",
+      "description": "Salesforce Services: our internal consulting experts who deliver transformational success in the Cloud.",
+      "companyHashedUrl": "https://www.linkedin.com/company/3185/"
+    },
+    {
+      "startTime": "2004-09-01T00:00:00.000Z",
+      "endTime": "2006-05-01T00:00:00.000Z",
+      "duration": 21,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Talisma",
+      "location": null,
+      "position": "Manager, Professional Services",
+      "description": "Managed large CRM deployments: \n> High volume Call Centers in high tech\n> Student Recruitment Higher Education (U of Alabama, Texas A&M, KSU, others)",
+      "companyHashedUrl": "https://www.linkedin.com/company/166248/"
+    },
+    {
+      "startTime": "2003-01-01T00:00:00.000Z",
+      "endTime": "2004-01-01T00:00:00.000Z",
+      "duration": 13,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "eAssist Global Solutions",
+      "location": null,
+      "position": "Manager, Professional Services",
+      "description": "Managed implementation of CRM solutions: large call center deployments, customer interaction solutions (e.g., chat, email), email marketing solutions",
+      "companyHashedUrl": "https://www.linkedin.com/company/163542/"
+    },
+    {
+      "startTime": "1999-06-01T00:00:00.000Z",
+      "endTime": "2002-01-01T00:00:00.000Z",
+      "duration": 32,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Delano Technology",
+      "location": null,
+      "position": "Senior Consultant",
+      "description": "Responsible for implementation projects and business development. Western Region sales coordinator. Managed strategic relationships with Fortune 500 companies in the Entertainment and High Tech verticals.",
+      "companyHashedUrl": "https://www.linkedin.com/company/17588/"
+    }
+  ]
+}

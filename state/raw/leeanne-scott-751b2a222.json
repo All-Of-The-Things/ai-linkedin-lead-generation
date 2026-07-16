@@ -1,0 +1,69 @@
+{
+  "name": "Leeanne Scott",
+  "headline": "General Manager | Operations & Team Leadership",
+  "location": "Springfield, Missouri, United States",
+  "industry": null,
+  "experiences": [
+    {
+      "startTime": "2024-03-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 27,
+      "employmentType": "fullTime",
+      "locationType": "onSite",
+      "companyName": "Avis Budget Group",
+      "location": "United States",
+      "position": "Airport Manager",
+      "description": "Oversee airport operations and 40 + staff, managing fleet, logistics, and processes to ensure efficiency, compliance, and customer satisfaction.",
+      "companyHashedUrl": "https://www.linkedin.com/company/2121/"
+    },
+    {
+      "startTime": "2023-03-01T00:00:00.000Z",
+      "endTime": "2024-03-01T00:00:00.000Z",
+      "duration": 13,
+      "employmentType": "fullTime",
+      "locationType": "onSite",
+      "companyName": "Ballparks of America",
+      "location": "Branson, Missouri, United States",
+      "position": "Director of Marketing And Business Development",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/11309462/"
+    },
+    {
+      "startTime": "2022-12-01T00:00:00.000Z",
+      "endTime": "2023-12-01T00:00:00.000Z",
+      "duration": 13,
+      "employmentType": "selfEmployed",
+      "locationType": "remote",
+      "companyName": "LCA Marketing Digital",
+      "location": "United States",
+      "position": "Business Owner",
+      "description": null,
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2022-09-01T00:00:00.000Z",
+      "endTime": "2023-12-01T00:00:00.000Z",
+      "duration": 16,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Beers Investment Group Incorporated",
+      "location": null,
+      "position": "Property Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/52950027/"
+    },
+    {
+      "startTime": "2020-12-01T00:00:00.000Z",
+      "endTime": "2023-12-01T00:00:00.000Z",
+      "duration": 37,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Beers Investment Group Incorporated",
+      "location": null,
+      "position": "Marketing Director",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/52950027/"
+    }
+  ],
+  "profileUrl": "https://www.linkedin.com/in/leeanne-scott-751b2a222"
+}

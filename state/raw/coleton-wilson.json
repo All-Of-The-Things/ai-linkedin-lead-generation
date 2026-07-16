@@ -1,0 +1,88 @@
+{
+  "name": "Cole Wilson",
+  "headline": "Co-Founder @ Fybra",
+  "location": "Philadelphia, Pennsylvania, United States",
+  "companyName": "Fybra",
+  "followersCount": 455,
+  "companyHashedUrl": "https://www.linkedin.com/company/109984847",
+  "companyUrl": null,
+  "position": "Co-Founder",
+  "publicUrl": "https://www.linkedin.com/in/coleton-wilson",
+  "about": null,
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAACKWJv0BnSNLM_kzZ05UQ0Z1m5LGKy0fs8I",
+  "experiences": [
+    {
+      "startTime": "2026-01-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 6,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Fybra",
+      "location": null,
+      "position": "Co-Founder",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/109984847/"
+    },
+    {
+      "startTime": "2024-11-01T00:00:00.000Z",
+      "endTime": "2025-12-01T00:00:00.000Z",
+      "duration": 14,
+      "employmentType": "fullTime",
+      "locationType": null,
+      "companyName": "Racette Consulting",
+      "location": null,
+      "position": "Engagement Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/96148301/"
+    },
+    {
+      "startTime": "2023-11-01T00:00:00.000Z",
+      "endTime": "2024-11-01T00:00:00.000Z",
+      "duration": 13,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Mott Corporation",
+      "location": null,
+      "position": "Software & Systems Manager",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/145494/"
+    },
+    {
+      "startTime": "2022-09-01T00:00:00.000Z",
+      "endTime": "2023-10-01T00:00:00.000Z",
+      "duration": 14,
+      "employmentType": null,
+      "locationType": "remote",
+      "companyName": "Mott Corporation",
+      "location": null,
+      "position": "Systems Engineer",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/145494/"
+    },
+    {
+      "startTime": "2020-10-01T00:00:00.000Z",
+      "endTime": "2021-11-01T00:00:00.000Z",
+      "duration": 14,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "NetSuite",
+      "location": null,
+      "position": "Staff Technical Consultant",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/6137/"
+    },
+    {
+      "startTime": "2019-07-01T00:00:00.000Z",
+      "endTime": "2020-10-01T00:00:00.000Z",
+      "duration": 16,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "NetSuite",
+      "location": null,
+      "position": "Associate Technical Consultant",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/6137/"
+    }
+  ]
+}

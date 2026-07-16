@@ -1,0 +1,100 @@
+{
+  "name": "Mohammed Joraid",
+  "headline": "Adobe Certified Expert - Adobe Commerce Business Practitioner | Co-Founder & Director of E-commerce | Software Engineer & Web Development Expert",
+  "location": "McKinney, Texas, United States",
+  "companyName": null,
+  "followersCount": 475,
+  "companyHashedUrl": "https://www.linkedin.com/company/91310010",
+  "companyUrl": null,
+  "position": "Co-Founder",
+  "publicUrl": "https://www.linkedin.com/in/mjoraid",
+  "about": "I create, optimize, and scale e-commerce businesses by designing solutions that work\u2014efficiently and effectively.\n\nWith a background in software engineering and over a decade in e-commerce, I bridge the gap between technology and business strategy. As Co-founder & Director of E-commerce at Amir Oud Fragrance, I\u2019ve built a brand from the ground up, mastering everything from digital infrastructure to growth strategy in a competitive market.\n\nBeyond my own ventures, I\u2019ve helped clients on Magento, Shopify, and Salesforce Commerce Cloud, improving system performance, enhancing user experiences, and solving intricate technical challenges. My focus is always on practical, scalable solutions\u2014whether it\u2019s optimizing an online store, streamlining operations, or developing custom web solutions that drive long-term growth.\n\nI enjoy simplifying complexity, turning challenges into structured, sustainable systems. Every project is an opportunity to refine, improve, and build something that lasts.\n\nAlways open to conversations about e-commerce, technology, and business growth. Let\u2019s connect.\n\u2026 more",
+  "countryCode": "US",
+  "hashedUrl": "https://www.linkedin.com/in/ACoAAAewIoEBvXDL5BKD8wr9YM803KjK2qPuziQ",
+  "experiences": [
+    {
+      "startTime": "2017-11-01T00:00:00.000Z",
+      "endTime": null,
+      "duration": 104,
+      "employmentType": "fullTime",
+      "locationType": "hybrid",
+      "companyName": "Amir Oud Fragrance",
+      "location": "Richardson, Texas, United States",
+      "position": "Co-Founder",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/91310010/"
+    },
+    {
+      "startTime": "2022-01-01T00:00:00.000Z",
+      "endTime": "2024-04-01T00:00:00.000Z",
+      "duration": 28,
+      "employmentType": "fullTime",
+      "locationType": "remote",
+      "companyName": "IM Digital",
+      "location": "Boca Raton, Florida, United States",
+      "position": "Ecommerce Solution Specialist",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/10381807/"
+    },
+    {
+      "startTime": "2014-08-01T00:00:00.000Z",
+      "endTime": "2016-05-01T00:00:00.000Z",
+      "duration": 22,
+      "employmentType": "fullTime",
+      "locationType": "onSite",
+      "companyName": "Salik Technology",
+      "location": "Riyadh, Saudi Arabia",
+      "position": "Information Technology Development Manager",
+      "description": null,
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Just Mobile Sdn Bhd",
+      "location": null,
+      "position": "Web Development Specialist",
+      "description": null,
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": null,
+      "endTime": null,
+      "duration": null,
+      "employmentType": null,
+      "locationType": null,
+      "companyName": "Just Mobile Sdn Bhd",
+      "location": null,
+      "position": "Web Development Intern",
+      "description": null,
+      "companyHashedUrl": null
+    },
+    {
+      "startTime": "2004-05-01T00:00:00.000Z",
+      "endTime": "2004-09-01T00:00:00.000Z",
+      "duration": 5,
+      "employmentType": "internship",
+      "locationType": "onSite",
+      "companyName": "Netsoft Group",
+      "location": "Riyadh, Saudi Arabia",
+      "position": "Office Associate",
+      "description": null,
+      "companyHashedUrl": "https://www.linkedin.com/company/379310/"
+    },
+    {
+      "startTime": "2003-05-01T00:00:00.000Z",
+      "endTime": "2003-09-01T00:00:00.000Z",
+      "duration": 5,
+      "employmentType": "internship",
+      "locationType": "onSite",
+      "companyName": "Snap",
+      "location": "Riyadh, Saudi Arabia",
+      "position": "Marketing Associate",
+      "description": null,
+      "companyHashedUrl": null
+    }
+  ]
+}
