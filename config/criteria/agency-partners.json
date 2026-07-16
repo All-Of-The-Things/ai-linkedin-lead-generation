@@ -99,6 +99,22 @@
     "President"
   ],
 
+  "_retail_brand_guidance": "A lead at a retail/DTC/consumer brand (not an agency or SI) qualifies as warm or above ONLY when their company is a confirmed Shopify or NetSuite/SuiteCommerce user. The platform signal must be strong and current — it must appear in their current role description, company About section, or company name with clear specificity (e.g. 'Built our Shopify Plus store', 'our store runs SuiteCommerce', 'Shopify Plus merchant'). A vague career mention like 'has experience with Shopify' or a past role at a Shopify company does NOT count. Any title is eligible (VP Ecommerce, VP Marketing, CTO, CEO, Director) — the platform confirmation alone gates warm/hot classification. Without it, classify as cold regardless of seniority.",
+  "retail_brand_platform_required": true,
+
+  "_excluded_employers_note": "AOTT sells staff augmentation TO the partner ecosystem, never to the platform vendors themselves. Anyone whose CURRENT employer is a platform vendor is not a lead: they have internal delivery orgs and do not buy external agency capacity. Detect from the headline when company fields are null: 'at Oracle', '@ Shopify', 'at NetSuite', 'Oracle Consulting', 'Oracle Cloud Applications', 'Partnerships at Shopify'. Watch for Oracle-internal titles — 'Consulting Practice Director', 'Consulting Project Director', 'Head of Consulting Services' with Oracle context (or no partner-company context at all) are vendor employees, not partner-agency staff. Classify excluded-employer leads as cold and cap score at 25 regardless of seniority — this exclusion overrides company_type_signals and seniority_signals. Do not drop them from output; the operator can still manually approve a rare vendor-side contact from the cold tier. Two adjacent exclusions, also cold: (a) mega-SIs with in-house delivery at scale (Accenture, Deloitte, Capgemini, IBM, Infosys, TCS, Wipro, Cognizant, Coforge) — cap at 40; (b) in-house IT/ERP/digital-transformation leaders at end-user enterprises or unrelated software vendors (banks, insurers, Unit4, BlackLine, etc.) — cap at 30. The buyer must work at an agency, SI, or consultancy whose BUSINESS is delivering NetSuite/Shopify/commerce projects for clients, sized boutique-to-mid-market like the reference_companies.",
+  "excluded_employers": [
+    "Oracle",
+    "NetSuite",
+    "Oracle NetSuite",
+    "Shopify",
+    "Salesforce",
+    "SAP",
+    "Adobe",
+    "Microsoft",
+    "BigCommerce"
+  ],
+
   "anti_patterns": [
     "Recruiter",
     "Recruitment",
@@ -118,19 +134,26 @@
     "Dropshipper"
   ],
 
+  "_search_terms_note": "QUERY-BUILDING RULE for Step 2: never pair a bare platform name with a role. 'Oracle consulting' matches Oracle's own Consulting org, and 'Shopify Plus' + 'Director of Partnerships' matches Shopify's own partnerships team. Every query must include a partner/agency/implementation/reseller qualifier alongside the platform name (e.g. 'NetSuite alliance partner', 'Shopify Plus agency') so results skew toward people whose employer partners with the platform rather than the vendor's own staff.",
   "search_terms": [
     "NetSuite partner CEO",
     "NetSuite SI founder",
     "SuiteCommerce agency managing director",
     "Oracle NetSuite implementation director",
-    "ERP Shopify integration consulting"
+    "ERP Shopify integration consulting",
+    "NetSuite alliance partner CEO",
+    "NetSuite solution provider founder",
+    "SuiteCommerce agency director",
+    "Shopify Plus agency founder",
+    "ERP implementation consultancy managing director",
+    "ecommerce agency head of delivery"
   ],
 
   "scoring_weights": {
-    "role_match": 0.30,
-    "industry_match": 0.30,
+    "role_match": 0.3,
+    "industry_match": 0.3,
     "seniority_match": 0.25,
-    "location_match": 0.10,
+    "location_match": 0.1,
     "company_size_match": 0.05
   },
 
