@@ -19698,34 +19698,6 @@
     "approval_note": null,
     "errors": []
   },
-  "https://www.linkedin.com/in/andres-moreno-3b449b2b/en": {
-    "url": "https://www.linkedin.com/in/andres-moreno-3b449b2b/en",
-    "name": "ANDRES MORENO",
-    "headline": "Senior Project Manager | NetSuite ERP & Localization | LATAM Deployments | Team Leadership | Compliance & Process Excellence | Oracle | NetSuite#opentowork",
-    "location": "Bogota, D.C., Capital District, Colombia",
-    "status": "rejected",
-    "first_seen_run": "2026-06-11-c7e4f091",
-    "last_updated": "2026-06-16T00:00:00.000Z",
-    "industry": null,
-    "current_title": "Project Manager",
-    "current_company": "Tekiio | Partner Oficial Oracle NetSuite",
-    "classification": "hot",
-    "score": 80,
-    "score_rationale": "Project Manager at Tekiio (Oracle NetSuite Partner Oficial) \u2014 domain gate passes strongly. Agency boost applied. Colombia location. Strong industry match with NetSuite ERP and LATAM deployment experience.",
-    "connection_note": null,
-    "connection_requested_at": null,
-    "connection_accepted_at": null,
-    "followup_sequence": null,
-    "followup_eligible_after": null,
-    "followup_draft": null,
-    "followup_approved_at": null,
-    "followup_sent_at": null,
-    "approval_surfaced_at": "2026-06-12T00:00:00Z",
-    "approval_decided_at": "2026-06-16T00:00:00.000Z",
-    "approval_decision": "rejected",
-    "approval_note": null,
-    "errors": []
-  },
   "https://www.linkedin.com/in/marcela-saracay-205176130": {
     "url": "https://www.linkedin.com/in/marcela-saracay-205176130",
     "name": "Marcela Saracay",
@@ -19919,34 +19891,6 @@
     "approval_surfaced_at": "2026-06-12T00:00:00Z",
     "approval_decided_at": "2026-07-10T18:33:34.080500+00:00",
     "approval_decision": "expired",
-    "approval_note": null,
-    "errors": []
-  },
-  "https://www.linkedin.com/in/ricardo-posada-1bb8829": {
-    "url": "https://www.linkedin.com/in/ricardo-posada-1bb8829",
-    "name": "Ricardo Posada",
-    "headline": "LAD Top Distributor of Oracle NetSuite Cloud ERP",
-    "location": "Colombia",
-    "status": "rejected",
-    "first_seen_run": "2026-06-11-c7e4f091",
-    "last_updated": "2026-06-16T00:00:00.000Z",
-    "industry": null,
-    "current_title": "Bienvenido a Netsoft Somos el Partener Numero Uno en Am\u00e9rica Latina de Soluciones en la Nube como Software CRM, ERP y Plataforma E commerce|Oracle Netsuite",
-    "current_company": "Nebula Solutions SAS, now Netsoft Colombia SAS",
-    "classification": "hot",
-    "score": 92,
-    "score_rationale": "Leading Netsoft Colombia SAS, Oracle NetSuite top distributor in LAD \u2014 domain gate passes very strongly. Agency boost applied. Effective CEO/owner with exceptional industry match.",
-    "connection_note": null,
-    "connection_requested_at": null,
-    "connection_accepted_at": null,
-    "followup_sequence": null,
-    "followup_eligible_after": null,
-    "followup_draft": null,
-    "followup_approved_at": null,
-    "followup_sent_at": null,
-    "approval_surfaced_at": "2026-06-12T00:00:00Z",
-    "approval_decided_at": "2026-06-16T00:00:00.000Z",
-    "approval_decision": "rejected",
     "approval_note": null,
     "errors": []
   },
@@ -37705,7 +37649,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/eyal-greifner-907b82a": {
@@ -37734,7 +37677,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/igor-povolotski": {
@@ -37763,7 +37705,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/biswasnair": {
@@ -37792,7 +37733,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/antony-aguilera-aa049187": {
@@ -37821,7 +37761,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/itcom": {
@@ -37850,7 +37789,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/dhiraj-pardeshi-762308150": {
@@ -37879,7 +37817,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/tariqs97": {
@@ -37908,7 +37845,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/victoriopellicano": {
@@ -37937,7 +37873,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/emmaatcloudtamers": {
@@ -37966,7 +37901,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/melissacolesmith": {
@@ -37995,7 +37929,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/gjwayal": {
@@ -38024,7 +37957,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/luis-machado-a2471794": {
@@ -38053,7 +37985,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/ezanolli/en": {
@@ -38082,7 +38013,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/chiara-toscani/en": {
@@ -38111,7 +38041,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/pablo-tedesco": {
@@ -38140,7 +38069,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/danielgoldenberg/en": {
@@ -38169,7 +38097,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/fabrizzio-servetti/en": {
@@ -38198,7 +38125,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/jenswikke": {
@@ -38227,7 +38153,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/nilayshah-catalyst-right": {
@@ -38256,7 +38181,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/carolkraemer": {
@@ -38285,7 +38209,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/msaiz": {
@@ -38314,7 +38237,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/gopi-krishna-serialentrepreneur": {
@@ -38343,7 +38265,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/mimckenzie": {
@@ -38372,7 +38293,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/christiansalas": {
@@ -38401,7 +38321,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/sabrinaboadopereira": {
@@ -38430,7 +38349,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/j-hamblin": {
@@ -38459,7 +38377,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/valentina-vazquez-iceta": {
@@ -38488,7 +38405,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/anthonylong1": {
@@ -38517,7 +38433,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/christopher-schafer-9116905": {
@@ -38546,7 +38461,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/ariovadia": {
@@ -38575,7 +38489,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/jose-m-carranza-casas": {
@@ -38604,7 +38517,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/natalia-orlova-69397080": {
@@ -38633,7 +38545,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/varunprabh": {
@@ -38662,7 +38573,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/mbl-taylor": {
@@ -38691,7 +38601,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/stuart-goggin-954b345": {
@@ -38720,7 +38629,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/sree-anirudhan-kuttiyil-337a4b12": {
@@ -38749,7 +38657,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/martin-sivak": {
@@ -38778,7 +38685,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/nalin-angrish-b89357188": {
@@ -38807,7 +38713,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/vivek-sathasivam-627b3914": {
@@ -38836,7 +38741,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/ryandesmondwarner": {
@@ -38865,7 +38769,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/wei-kai-hou-5311b323": {
@@ -38894,7 +38797,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/jim-martyn-2b243b9": {
@@ -38923,7 +38825,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/vibhu-malik-b01b947b": {
@@ -38952,7 +38853,6 @@
     "approval_decided_at": null,
     "approval_decision": null,
     "approval_note": null,
-    "linkedin_raw": null,
     "errors": []
   },
   "https://www.linkedin.com/in/tara-whatcott-cpa": {
