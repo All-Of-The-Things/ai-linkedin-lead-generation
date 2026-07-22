@@ -9,7 +9,7 @@
     "followup_draft": "Hi Ryan, great to connect. My Team works with NetSuite practices when Shopify or SuiteCommerce scope comes in for clients. We handle that build layer under your banner, so NetSuite Consulting Group can offer the full stack. Keen to explore if it's a fit?",
     "connection_accepted_at": "2026-06-05T14:21:23.695031+00:00",
     "surfaced_at": "2026-06-08T20:56:05.348973+00:00",
-    "decision": null,
+    "decision": "rejected",
     "edited_message": null
   },
   {
@@ -22,7 +22,7 @@
     "followup_draft": "Hey Skyler, glad to connect. When Ambient Ecosystem clients want Shopify or SuiteCommerce built alongside NetSuite, My Team covers that layer. You keep the client, we handle the eComm delivery. Keen to explore a fit?",
     "connection_accepted_at": "2026-06-04T19:11:47.566147+00:00",
     "surfaced_at": "2026-06-08T20:56:05.348973+00:00",
-    "decision": null,
+    "decision": "rejected",
     "edited_message": null
   },
   {
@@ -35,7 +35,7 @@
     "followup_draft": "Hey Felicia, great to connect. When Sky High ERP clients need Shopify or SuiteCommerce built alongside their NetSuite implementation, My Team slots in as that delivery arm. Keen to chat and explore if we can complement your offering?",
     "connection_accepted_at": "2026-06-05T14:21:23.695031+00:00",
     "surfaced_at": "2026-06-08T20:56:05.348973+00:00",
-    "decision": null,
+    "decision": "rejected",
     "edited_message": null
   },
   {
@@ -48,7 +48,7 @@
     "followup_draft": "Hey Emma, glad to connect. CloudTamers' position in the NetSuite ecosystem means clients will eventually need Shopify or SuiteCommerce alongside the ERP build. My Team handles that layer on demand. Keen to chat and explore?",
     "connection_accepted_at": "2026-06-05T16:57:36.555215+00:00",
     "surfaced_at": "2026-06-08T20:56:05.348973+00:00",
-    "decision": null,
+    "decision": "rejected",
     "edited_message": null
   }
 ]

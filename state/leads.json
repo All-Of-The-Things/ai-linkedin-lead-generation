@@ -18088,15 +18088,17 @@
     "industry": null,
     "current_title": null,
     "current_company": null,
-    "status": "classified",
+    "status": "rejected",
     "first_seen_run": "2026-06-09-828a5bcb",
     "first_seen_at": "2026-06-09T00:00:00.000000+00:00",
     "score": 62,
     "classification": "warm",
     "score_rationale": "General Manager at BeApps, a NetSuite Alliance Partner \u2014 domain gate passes (NetSuite Alliance Partner in headline). Strong role match (General Manager) and seniority match. No name available limiting enrichment; non-target location (Argentina) reduces location score.",
     "errors": [],
-    "last_updated": "2026-06-09T00:00:00.000000+00:00",
-    "already_connected": true
+    "last_updated": "2026-07-22T00:00:00.000Z",
+    "already_connected": true,
+    "approval_decision": "operator_rejected",
+    "approval_decided_at": "2026-07-22T00:00:00.000Z"
   },
   "https://www.linkedin.com/in/scott-shelko-22b0204": {
     "url": "https://www.linkedin.com/in/scott-shelko-22b0204",
@@ -18188,15 +18190,17 @@
     "industry": null,
     "current_title": "Partner at Cooper Parry Digital & Head of NetSuite Practice",
     "current_company": "Cooper Parry",
-    "status": "classified",
+    "status": "rejected",
     "first_seen_run": "2026-06-09-828a5bcb",
     "first_seen_at": "2026-06-09T00:00:00.000000+00:00",
     "score": 92,
     "classification": "hot",
     "score_rationale": "Partner at Cooper Parry Digital, Head of NetSuite Practice \u2014 domain gate passes (NetSuite Practice explicitly in title and headline). Full seniority match (Partner + Director-level), role is Practice Head which is a strong target role match, UK location matches target. Agency boost applied for NetSuite + Partner signals.",
     "errors": [],
-    "last_updated": "2026-06-09T00:00:00.000000+00:00",
-    "approval_surfaced_at": "2026-06-10T09:00:00.000000+00:00"
+    "last_updated": "2026-07-22T00:00:00.000Z",
+    "approval_surfaced_at": "2026-06-10T09:00:00.000000+00:00",
+    "approval_decision": "operator_rejected",
+    "approval_decided_at": "2026-07-22T00:00:00.000Z"
   },
   "https://www.linkedin.com/in/lagostino": {
     "url": "https://www.linkedin.com/in/lagostino",
