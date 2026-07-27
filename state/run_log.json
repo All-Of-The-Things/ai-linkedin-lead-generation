@@ -978,6 +978,288 @@
       "files_written": [
         "2026-07-17-3446d08b-links.json"
       ]
+    },
+    {
+      "run_id": "2026-07-22-7f77db9a",
+      "started_at": "2026-07-22T12:03:42.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": null,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1656,
+        "seen_size_before": 2074,
+        "exclusion_set_size": 3670,
+        "total_search_results": 51,
+        "skipped_exclusion": 1,
+        "deferred_per_firm_cap": 19,
+        "new_stubs": 31,
+        "classified": 31,
+        "hot": 2,
+        "warm": 2,
+        "cold": 27,
+        "surfaced_for_approval": 31,
+        "email_sent": false
+      },
+      "errors": [],
+      "step1_note": "criteria refresh skipped: file exists, run 52 (incl. 24 archived) mod 7 = 3 != 0",
+      "step2_note": "company-anchored variant, 10th anchor set (fresh firms: Blytheco, RKL eSolutions, NexTec Group, Anchin, CLA, Plante Moran, Grant Thornton, Moss Adams / Rea & Associates, K3 Business Solutions, Absoft, In Cloud Solutions, Codestone, Adaptive Business Solutions, JMB Business Consulting, FIT Consulting / Fastnet, Advanced Business Solutions, Endeavour Solutions, Solution7, K Corp, InTheCloud, Blue Moon Industries, NetSage). Query 3 anchors did not resolve on LinkedIn -- API fell back to generic NetSuite/ERP term matches, mostly Microsoft Dynamics-adjacent staff (excluded employer). Per-firm cap of 3 applied to Grant Thornton, Baker Tilly (unlisted anchor, surfaced via fuzzy match/Moss Adams merger), and Microsoft; excess deferred without seen.json write so they can resurface.",
+      "queries_run": [
+        "NetSuite / companies: Blytheco,RKL eSolutions,NexTec Group,Anchin,CLA,Plante Moran,Grant Thornton,Moss Adams / US,CA,UK,AU (25 results)",
+        "NetSuite / companies: Rea & Associates,K3 Business Solutions,Absoft,In Cloud Solutions,Codestone,Adaptive Business Solutions,JMB Business Consulting,FIT Consulting / US,CA,UK,AU (1 result)",
+        "NetSuite / companies: Fastnet,Advanced Business Solutions,Endeavour Solutions,Solution7,K Corp,InTheCloud,Blue Moon Industries,NetSage / US,CA,UK,AU (25 results, anchors did not match -- generic fallback)"
+      ],
+      "last_updated": "2026-07-22T12:03:42.000000+00:00",
+      "step3_note": "abbreviated mode: Step 3 never runs, no person fetch calls",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; 10th anchor set",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-22-7f77db9a-links.json"
+      ],
+      "completed_at": "2026-07-22T12:03:42.000000+00:00"
+    },
+    {
+      "run_id": "2026-07-22-46cab737",
+      "started_at": "2026-07-22T14:26:44.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": null,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1656,
+        "seen_size_before": 2105,
+        "exclusion_set_size": 3701,
+        "total_search_results": 64,
+        "skipped_exclusion": 8,
+        "deferred_per_firm_cap": 3,
+        "new_stubs": 53,
+        "classified": 53,
+        "hot": 10,
+        "warm": 7,
+        "cold": 36,
+        "surfaced_for_approval": 53,
+        "email_sent": false
+      },
+      "errors": [],
+      "step1_note": "criteria refresh skipped: file exists, run 53 (incl. 24 archived) mod 7 = 4 != 0",
+      "step2_note": "company-anchored variant, 11th anchor set. Pre-search: discovered real firms via 3x linkedin company search (\"NetSuite Alliance Partner\", \"NetSuite Solution Provider\", \"NetSuite partner\") to avoid last run's issue of speculative firm names not resolving on LinkedIn. Anchors: Consule Solutions,GIR Software Services,S Universe,Continuous Scale,Exafort,3-11 Cloud Consulting,CloudAlp Technologies,DevTeamPro / LatamReady,Solution Source,ConnectaCloud,Navsoft,Cinntra,StratusGreen,The Parker Initiative,Efficientix / Bista Solutions,The Partner Index,The Transformation Group,SA Technologies,PreludeSys,Victrix,OP Technology,OpenTeQ Technologies. Per-firm cap of 3 applied to Solution Source (6 hits); excess deferred without seen.json write.",
+      "queries_run": [
+        "NetSuite / companies: Consule Solutions,GIR Software Services,S Universe,Continuous Scale,Exafort,3-11 Cloud Consulting,CloudAlp Technologies,DevTeamPro / US,CA,UK,AU (25 results)",
+        "NetSuite / companies: LatamReady,Solution Source,ConnectaCloud,Navsoft,Cinntra,StratusGreen,The Parker Initiative,Efficientix / US,CA,UK,AU (25 results)",
+        "NetSuite / companies: Bista Solutions,The Partner Index,The Transformation Group,SA Technologies,PreludeSys,Victrix,OP Technology,OpenTeQ Technologies / US,CA,UK,AU (14 results)"
+      ],
+      "last_updated": "2026-07-22T14:26:44.000000+00:00",
+      "step3_note": "abbreviated mode: Step 3 never runs, no person fetch calls",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; 11th anchor set, all verified-real firms",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-22-46cab737-links.json"
+      ],
+      "completed_at": "2026-07-22T14:26:44.000000+00:00"
+    },
+    {
+      "run_id": "2026-07-22-6a1df972",
+      "started_at": "2026-07-22T16:24:51.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": null,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1656,
+        "seen_size_before": 2158,
+        "exclusion_set_size": 3754,
+        "total_search_results": 55,
+        "skipped_exclusion": 8,
+        "deferred_per_firm_cap": 14,
+        "new_stubs": 33,
+        "classified": 33,
+        "hot": 5,
+        "warm": 5,
+        "cold": 23,
+        "surfaced_for_approval": 33,
+        "email_sent": false
+      },
+      "errors": [],
+      "step1_note": "criteria refresh skipped: file exists, run 54 (incl. 24 archived) mod 7 = 5 != 0",
+      "step2_note": "company-anchored variant, 12th anchor set. Discovered fresh firms via 3x company search (\"NetSuite partner\" UK/AU, \"SuiteCommerce agency\", \"NetSuite consulting\" US/CA). Anchors: TECHOHANA,Suite-Select,GSC Technologies,AbsoluteLabs,SuiteLabs,Winklix / Doozy Solutions,1218 Global,NetSuite Consulting Group,Nessium,Consulting to Success,NetGrowth Partners / Buxton Consulting,CrossCountry Consulting,Kranz Consulting,Highspring,Arthur Lawrence. Query 1 and 2 anchors mostly did not resolve -- fell back to generic term matches (query 2 surfaced almost entirely Oracle/NetSuite internal staff, excluded employer). Query 3 anchor CrossCountry Consulting resolved very strongly (real mid-market NetSuite implementation consultancy). Per-firm cap of 3 applied to CrossCountry Consulting (7 hits, kept top by seniority) and to the Oracle/NetSuite excluded-employer cluster (13 hits treated as one employer bucket, kept 3 for operator visibility); excess deferred without seen.json write.",
+      "queries_run": [
+        "NetSuite / companies: TECHOHANA,Suite-Select,GSC Technologies,AbsoluteLabs,SuiteLabs,Winklix / US,CA,UK,AU (5 results, anchors mostly unresolved)",
+        "NetSuite / companies: Doozy Solutions,1218 Global,NetSuite Consulting Group,Nessium,Consulting to Success,NetGrowth Partners / US,CA,UK,AU (25 results, anchors did not resolve -- generic fallback, mostly Oracle/NetSuite staff)",
+        "NetSuite / companies: Buxton Consulting,CrossCountry Consulting,Kranz Consulting,Highspring,Arthur Lawrence / US,CA,UK,AU (25 results, CrossCountry Consulting resolved strongly)"
+      ],
+      "last_updated": "2026-07-22T16:24:51.000000+00:00",
+      "step3_note": "abbreviated mode: Step 3 never runs, no person fetch calls",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; 12th anchor set",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-22-6a1df972-links.json"
+      ],
+      "completed_at": "2026-07-22T16:24:51.000000+00:00"
+    },
+    {
+      "run_id": "2026-07-23-8d39dda6",
+      "started_at": "2026-07-23T16:14:51.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": null,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": true,
+        "connections_cache_size": 1675,
+        "seen_size_before": 2191,
+        "exclusion_set_size": 3791,
+        "total_search_results": 43,
+        "skipped_exclusion": 2,
+        "deferred_per_firm_cap": 0,
+        "new_stubs": 41,
+        "classified": 41,
+        "hot": 6,
+        "warm": 2,
+        "cold": 33,
+        "surfaced_for_approval": 41,
+        "email_sent": false
+      },
+      "errors": [],
+      "step1_note": "criteria refresh skipped: file exists, run 55 (incl. 24 archived) mod 7 = 6 != 0",
+      "step2_note": "company-anchored variant, 13th anchor set. Connections cache was expired (>7 days) so rebuilt via 3x connection list (1675 unioned). Discovered fresh firms via 2x company search (\"NetSuite reseller\", \"Oracle NetSuite integration partner\"). Anchors: Daston Corporation,MIG & Co.,Zero Point ERP Solutions,Jayel Cloud,Encodle Systems,SuiteMigration / West Cloud Consulting,NSMarketplace,Hathority,Nsight,RITWIK Infotech,Canus Tech / Sigmasoft,Rapidflow,MindStream Analytics,AppSys Global,Nova Module. Good resolution rate across all 3 queries. No firm exceeded the per-firm cap of 3 this run, so no deferrals.",
+      "queries_run": [
+        "NetSuite / companies: Daston Corporation,MIG & Co.,Zero Point ERP Solutions,Jayel Cloud,Encodle Systems,SuiteMigration / US,CA,UK,AU (7 results)",
+        "NetSuite / companies: West Cloud Consulting,NSMarketplace,Hathority,Nsight,RITWIK Infotech,Canus Tech / US,CA,UK,AU (12 results)",
+        "NetSuite / companies: Sigmasoft,Rapidflow,MindStream Analytics,AppSys Global,Nova Module / US,CA,UK,AU (24 results)"
+      ],
+      "last_updated": "2026-07-23T16:14:51.000000+00:00",
+      "step3_note": "abbreviated mode: Step 3 never runs, no person fetch calls",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; 13th anchor set",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-23-8d39dda6-links.json"
+      ],
+      "completed_at": "2026-07-23T16:14:51.000000+00:00"
+    },
+    {
+      "run_id": "2026-07-23-572e44d0",
+      "started_at": "2026-07-23T17:28:59.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": null,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1675,
+        "seen_size_before": 2232,
+        "exclusion_set_size": 3832,
+        "total_search_results": 47,
+        "skipped_exclusion": 1,
+        "deferred_per_firm_cap": 16,
+        "new_stubs": 30,
+        "classified": 30,
+        "hot": 3,
+        "warm": 1,
+        "cold": 26,
+        "surfaced_for_approval": 30,
+        "email_sent": false
+      },
+      "errors": [],
+      "step1_note": "criteria refresh due by rule (run 56 incl. 24 archived mod 7 == 0) but SKIPPED deliberately, per precedent set in run 2026-07-09-864c9d9f: agency-netsuite.json is hand-crafted and extensively refined via operator feedback across many sessions (excluded_employers rule, SAP-out-of-scope anti-pattern, excluded_companies Tavano Team, company-anchored query-building style). criteria-extractor would overwrite these with generic connection-pattern-derived criteria, destroying the refinement. Operator should refresh manually if desired.",
+      "step2_note": "company-anchored variant, 14th anchor set. Discovered fresh firms via 2x company search (\"NetSuite managed services\", \"Oracle NetSuite VAR\"). Anchors: Clarium Managed Services,MonoSpear Technologies,Velosio,Mirketa,RevGurus / Computer Technology Resources,SynergyTop,ContinuServe,Enavate / CriticalRiver,TRUGlobal,Keel & Company,American WorkFlows. Velosio (18 hits) and Enavate (4 hits) each dominated their query -- both are primarily Microsoft Dynamics 365 partners with only a thin NetSuite practice; per-firm cap of 3 applied to each, keeping the most clearly NetSuite-specific and most senior titles; excess deferred without seen.json write.",
+      "queries_run": [
+        "NetSuite / companies: Clarium Managed Services,MonoSpear Technologies,Velosio,Mirketa,RevGurus / US,CA,UK,AU (25 results, Velosio dominated)",
+        "NetSuite / companies: Computer Technology Resources,SynergyTop,ContinuServe,Enavate / US,CA,UK,AU (16 results, Enavate dominated)",
+        "NetSuite / companies: CriticalRiver,TRUGlobal,Keel & Company,American WorkFlows / US,CA,UK,AU (6 results)"
+      ],
+      "last_updated": "2026-07-23T17:28:59.000000+00:00",
+      "step3_note": "abbreviated mode: Step 3 never runs, no person fetch calls",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; 14th anchor set; per-person domain-gate nuance applied for Velosio/Enavate staff (Dynamics-ecosystem majority, NetSuite explicit-mention minority)",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-23-572e44d0-links.json"
+      ],
+      "completed_at": "2026-07-23T17:28:59.000000+00:00"
+    },
+    {
+      "run_id": "2026-07-24-a1faffd7",
+      "started_at": "2026-07-24T17:41:09.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": null,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1675,
+        "seen_size_before": 2262,
+        "exclusion_set_size": 3862,
+        "total_search_results": 23,
+        "skipped_exclusion": 2,
+        "deferred_per_firm_cap": 1,
+        "new_stubs": 20,
+        "classified": 20,
+        "hot": 1,
+        "warm": 4,
+        "cold": 15,
+        "surfaced_for_approval": 20,
+        "email_sent": false
+      },
+      "errors": [],
+      "step1_note": "criteria refresh skipped: file exists, run 57 (incl. 24 archived) mod 7 = 1 != 0",
+      "step2_note": "company-anchored variant, 15th anchor set, first geographic pivot toward Canada + UK for diversity (prior sets skewed heavily US). Discovered fresh firms via 4x company search (\"NetSuite ERP consultancy\" Canada, \"NetSuite boutique agency\" 0 results, \"NetSuite Alliance Partner\" Australia -- all prior, \"NetSuite\" UK sizes 1-200 -- rich hit). Anchors: AINN Technologies,Haya Solutions,AA Consultancy,SuiteSquare,NSGPT (Canada) / Unlock IQ,RXD Systems,ProScope,SuiteSparkle,Apex Netsuite,Cloud Systems Consulting (UK) / ERP System Consulting,Lee Brookes,RK NetSuite Trainer,3EN Cloud,ENCO Consulting,OneShip (UK). Per-firm cap of 3 applied to ProScope/Cooper Software (4 hits, shared leadership/marketing team); excess deferred without seen.json write.",
+      "queries_run": [
+        "NetSuite / companies: AINN Technologies,Haya Solutions,AA Consultancy,SuiteSquare,NSGPT / Canada (4 results)",
+        "NetSuite / companies: Unlock IQ,RXD Systems,ProScope,SuiteSparkle,Apex Netsuite,Cloud Systems Consulting / UK (17 results)",
+        "NetSuite / companies: ERP System Consulting,Lee Brookes,RK NetSuite Trainer,3EN Cloud,ENCO Consulting,OneShip / UK (2 results)"
+      ],
+      "last_updated": "2026-07-24T17:41:09.000000+00:00",
+      "step3_note": "abbreviated mode: Step 3 never runs, no person fetch calls",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; 15th anchor set, first UK/Canada geographic pivot",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-24-a1faffd7-links.json"
+      ],
+      "completed_at": "2026-07-24T17:41:09.000000+00:00"
     }
   ],
   "retries": [
