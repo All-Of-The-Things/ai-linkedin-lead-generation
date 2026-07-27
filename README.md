@@ -45,31 +45,31 @@ Automated LinkedIn outreach pipeline for AOTT. Searches for leads daily, surface
 ## Prerequisites
 
 - [Claude Code CLI](https://claude.ai/code) — runs the pipeline
-- [LinkedAPI account](https://app.linkedapi.io) — LinkedIn automation
+- [ConnectSafely account](https://connectsafely.ai) — LinkedIn automation (default provider)
 - [Resend account](https://resend.com) — email notifications
-- Node.js (for the LinkedAPI CLI)
+
+The pipeline supports two LinkedIn automation providers — see `CLAUDE.md → LinkedIn Provider` for the full abstraction. **ConnectSafely is the default.** LinkedAPI remains available as a manual fallback (see "Using LinkedAPI instead" below).
 
 ---
 
 ## Setup
 
-### 1. Install the LinkedIn CLI
+### 1. Connect ConnectSafely
 
-```bash
-npm install -g @linkedapi/linkedin-cli
-```
+1. Go to [connectsafely.ai](https://connectsafely.ai), sign up or log in, and connect your LinkedIn account.
+2. From the dashboard, grab your **API key** and **account ID**.
+3. Open `.claude/settings.local.json` (gitignored — never committed) and add them:
+   ```json
+   {
+     "env": {
+       "CONNECTSAFELY_API_KEY": "your_api_key",
+       "CONNECTSAFELY_ACCOUNT_ID": "your_account_id"
+     }
+   }
+   ```
+4. This repo's `.mcp.json` (already committed) registers the ConnectSafely MCP server using those two env vars — no further config needed. Restart Claude Code after saving so the MCP server connects.
 
-### 2. Authenticate LinkedIn
-
-Get your tokens from [app.linkedapi.io](https://app.linkedapi.io) → Settings → API Tokens.
-
-```bash
-linkedin setup \
-  --linked-api-token=YOUR_LINKED_API_TOKEN \
-  --identification-token=YOUR_IDENTIFICATION_TOKEN
-```
-
-### 3. Set your Resend API key
+### 2. Set your Resend API key
 
 Get your API key from [resend.com/api-keys](https://resend.com/api-keys).
 
@@ -85,7 +85,7 @@ Open `.claude/settings.local.json` (gitignored — never committed) and paste yo
 
 Restart Claude Code after saving.
 
-### 4. Configure your sending domain
+### 3. Configure your sending domain
 
 Open `config/pipeline.json` and update the `notifications.from` field to a domain you have verified in Resend:
 
@@ -97,7 +97,7 @@ Open `config/pipeline.json` and update the `notifications.from` field to a domai
 }
 ```
 
-### 5. Register the daily search routine
+### 4. Register the daily search routine
 
 In a Claude Code session in this repo, run:
 
@@ -108,6 +108,23 @@ In a Claude Code session in this repo, run:
 Then describe: *"Run the LinkedIn daily search every weekday at 9am."*
 
 > **Note:** Claude Code routines expire after 7 days. Re-register weekly or check the run log for the expiry reminder.
+
+---
+
+## Using LinkedAPI instead
+
+To fall back to LinkedAPI (e.g. ConnectSafely's MCP server or account is unavailable):
+
+1. Install the CLI: `npm install -g @linkedapi/linkedin-cli`
+2. Get tokens from [app.linkedapi.io](https://app.linkedapi.io) → Settings → API Tokens, then run:
+   ```bash
+   linkedin setup \
+     --linked-api-token=YOUR_LINKED_API_TOKEN \
+     --identification-token=YOUR_IDENTIFICATION_TOKEN
+   ```
+3. Set `config/pipeline.json → linkedin_provider.active` to `"linkedapi"`.
+
+**Switching providers** back and forth is just that one config flag — every pipeline step already resolves the active provider at run time (see `CLAUDE.md → LinkedIn Provider`). No other setup changes are needed as long as both providers stay configured.
 
 ---
 
@@ -252,7 +269,8 @@ All pipeline behaviour is controlled by `config/pipeline.json`:
 | Key | Default | Description |
 |-----|---------|-------------|
 | `active_criteria` | `"agency-partners"` | Default criteria file to use |
-| `enrichment.enabled` | `false` | When `false`, skips `linkedin person fetch` calls in Phase 1 — leads are classified from headline only. Set to `true` to enrich before classifying (slower, requires more API calls). |
+| `linkedin_provider.active` | `"connectsafely"` | Active LinkedIn automation provider — `"connectsafely"` or `"linkedapi"` |
+| `enrichment.enabled` | `false` | When `false`, skips `fetch_profile` calls in Phase 1 — leads are classified from headline only. Set to `true` to enrich before classifying (slower, requires more API calls). |
 | `search.max_results_per_run` | `25` | Max leads fetched per search query |
 | `search.max_search_queries_per_run` | `3` | How many search query combinations to run per Phase 1 run |
 | `outreach.max_connection_requests_per_run` | `10` | Max connection requests sent per Phase 3 run |
@@ -264,13 +282,13 @@ All pipeline behaviour is controlled by `config/pipeline.json`:
 | `connections_cache.ttl_days` | `7` | How many days before the connection list cache is rebuilt |
 | `review.split_by_classification` | `true` | Whether approval files are split into separate hot/warm/cold files |
 | `review.email_suppress_cold` | `true` | Whether cold leads are omitted from the notification email |
-| `rate_limit.retry_delay_seconds` | `120` | Seconds to wait after a LinkedIn rate limit (exit code 6) |
+| `rate_limit.retry_delay_seconds` | `120` | Seconds to wait after a LinkedIn rate limit (`rate_limited` — HTTP 429 on connectsafely, exit code 6 on linkedapi) |
 | `rate_limit.max_retries` | `2` | Max retries per operation before skipping |
 
 ---
 
 ## Known constraints
 
-- **LinkedIn rate limits** — operations take 30s–several minutes each. The pipeline degrades gracefully: rate-limited operations are skipped and retried on the next run.
+- **LinkedIn rate limits** — connectsafely enforces per-action daily/weekly caps (e.g. 120 profile fetches/day, 90 connection requests/week); linkedapi operations take 30s–several minutes each (real browser automation). The pipeline degrades gracefully either way: rate-limited operations are skipped and retried on the next run.
 - **Connection detection** — accepted connections are detected by polling (no webhook). Up to 24h lag is expected at daily cadence.
 - **Routine expiry** — Claude Code scheduled routines expire after 7 days. Re-register via `/schedule`.

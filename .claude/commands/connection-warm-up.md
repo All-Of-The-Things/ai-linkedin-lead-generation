@@ -4,18 +4,18 @@
 
 ## What this does
 
-1. Reads `CLAUDE.md`, `.claude/skills/linkedin/SKILL.md`, and `config/pipeline.json`.
+1. Reads `CLAUDE.md`, resolves the active LinkedIn provider (`config/pipeline.json → linkedin_provider.active`) and loads its skill file, and reads `config/pipeline.json`.
 2. **Step 0 — Re-entry check:** reads `state/run_log.json`; resumes in-progress run or creates a new entry.
 3. **Step 1 — Identify target leads:**
    - **Pool A** (`request_sent`): leads whose connection request is pending acceptance and whose `warm_up_at` is either null or older than `warm_up.skip_if_warmed_up_within_days` days.
    - **Pool B** (`classified` + approved): leads with `status: "classified"` that appear in any `state/pending_approvals/*-notes-ready.json` with `note_decision: "approved"`, subject to the same skip window.
    - Merge pools (A first). Cap total at `warm_up.max_leads_per_run` (default: 10).
-4. **Step 2 — Send previously-approved comments:** scans all `state/pending_approvals/*-warmup-comments.json` for entries where `decision: "approved"` and the lead has no matching `comment` action already in `warm_up_actions`. For each: uses `edited_comment` if non-null, else `comment_draft`; runs `linkedin post comment <post_url> '<text>' --json -q`; logs the action to the lead's `warm_up_actions` in `leads.json`.
+4. **Step 2 — Send previously-approved comments:** scans all `state/pending_approvals/*-warmup-comments.json` for entries where `decision: "approved"` and the lead has no matching `comment` action already in `warm_up_actions`. For each: uses `edited_comment` if non-null, else `comment_draft`; calls `comment_on_post`; logs the action to the lead's `warm_up_actions` in `leads.json`.
 5. **Step 3 — Engage each target lead:**
-   - Fetch recent posts: `linkedin person fetch <url> --posts --posts-limit <posts_to_fetch_per_lead> --json -q` (this also signals a profile view to the lead).
+   - Fetch recent posts by calling `fetch_profile` with recent posts included, limited to `posts_to_fetch_per_lead` (this also signals a profile view to the lead).
    - If no posts found: log `{ action: "no_posts" }` and skip reaction and comment.
    - If posts found:
-     - **React** to the most recent post regardless of type — `linkedin post react <post_url> --type <reaction_type> --json -q`.
+     - **React** to the most recent post regardless of type by calling `react_to_post`.
      - **Comment target:** find the most recent post where `type == "original"`. LinkedIn does not allow commenting on reposts — only original posts accept comments. If no original post exists in the fetched set, log `{ action: "no_original_posts" }` and skip comment drafting for this lead.
      - If an original post is found: invoke `agents/warm-up-commenter.md` with the lead record and that post's content to draft a comment.
    - Update `leads.json`: set `warm_up_at` to now, append each action to `warm_up_actions`.
@@ -26,12 +26,12 @@
 ## Before running
 
 - At least one lead must be in `status: "request_sent"` **or** appear in a `*-notes-ready.json` with `note_decision: "approved"`. If neither pool has leads, the command logs a warning and exits cleanly.
-- The LinkedIn CLI must be authenticated.
+- The active LinkedIn provider must be authenticated (`account_status`).
 - `RESEND_API_KEY` must be set for the email notification to send (notification failure does not abort the run).
 
 ## Rate limit handling
 
-Standard pipeline rules apply: exit code 6 → wait `rate_limit.retry_delay_seconds`, retry up to `rate_limit.max_retries`. If still failing after retries, log the error to `run_log.json → errors[]` and continue to the next lead. Never abort the full run on a single rate-limit failure.
+Standard pipeline rules apply: `rate_limited` → wait `rate_limit.retry_delay_seconds`, retry up to `rate_limit.max_retries`. If still failing after retries, log the error to `run_log.json → errors[]` and continue to the next lead. Never abort the full run on a single rate-limit failure.
 
 ## Skip window
 

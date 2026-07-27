@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "connectsafely": {
+      "type": "http",
+      "url": "https://mcp.connectsafely.ai/?apiKey=${CONNECTSAFELY_API_KEY}&accountId=${CONNECTSAFELY_ACCOUNT_ID}"
+    }
+  }
+}
