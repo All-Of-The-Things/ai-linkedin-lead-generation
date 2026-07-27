@@ -1,193 +1,104 @@
 {
   "runs": [
     {
-      "run_id": "2026-05-22-e7f3a1b9",
-      "started_at": "2026-05-22T00:00:00.000000+00:00",
-      "status": "phase2_complete",
+      "run_id": "2026-06-16-wu31903be0",
+      "started_at": "2026-06-16T09:00:00.000000+00:00",
+      "status": "completed",
+      "phase": "warm-up",
+      "criteria_used": "agency-partners",
+      "resume_from_step": null,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "counts": {
+        "leads_targeted": 10,
+        "reactions_sent": 9,
+        "leads_skipped_no_posts": 1,
+        "comment_drafts_surfaced": 4,
+        "comments_sent": 0,
+        "no_original_posts": 3,
+        "no_comment_too_generic_or_sparse": 2
+      },
+      "errors": [],
+      "completed_at": "2026-06-16T16:05:00.000Z",
+      "notifications": [
+        {
+          "email_sent": true,
+          "phase": "warm_up_summary",
+          "to": "martin@allofthethings.dev",
+          "resend_id": "1609cff0-1914-4a82-98ba-d34e46fbb277",
+          "at": "2026-06-16T16:05:30.000Z"
+        }
+      ]
+    },
+    {
+      "run_id": "2026-06-16-a9d3c7f2",
+      "started_at": "2026-06-16T16:30:00.000000+00:00",
+      "status": "phase1_complete",
       "phase": "search-connections",
       "criteria_used": "agency-partners",
       "resume_from_step": "6a",
-      "steps_completed": [0, 1, 2, 3, 4, 5],
-      "counts": {
-        "new_stubs": 75,
-        "enriched": 75,
-        "unenriched_deferred": 0,
-        "classified": 75,
-        "hot_this_run": 3,
-        "warm_this_run": 16,
-        "cold_this_run": 56,
-        "hot_surfaced_total": 26,
-        "warm_surfaced_total": 83,
-        "cold_surfaced_total": 321,
-        "surfaced_for_approval": 430,
-        "exclusion_set_size": 2060,
-        "status_checks_skipped": true,
-        "status_checks_note": "75 candidates x ~30s too slow; false positives caught at send step",
-        "email_sent": true,
-        "notes_drafted": 17,
-        "notes_ready_file": "state/pending_approvals/2026-05-26-notes-ready.json",
-        "phase2_email_sent": true,
-        "phase2_email_id": "654c6999-8c1e-4496-accd-94a8d2bd2b87"
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "search_cursor": {
+        "role_idx": 5,
+        "industry_idx": 3,
+        "location_idx": 3
       },
-      "search_cursor": 16,
       "queries_run": [
-        "Head of Delivery / Information Technology and Services / Australia",
-        "VP of Professional Services / Computer Software / United States",
-        "Director of Partnerships / Management Consulting / Canada"
+        "NetSuite / Co-Founder / IT&S / United States (25 results, 20 new)",
+        "Shopify Plus / Managing Director / Computer Software / Canada (25 results, 24 new)",
+        "ERP consulting / General Manager / Management Consulting / United Kingdom (25 results, 25 new)"
       ],
-      "files_written": [
-        "2026-05-22-e7f3a1b9-hot.json",
-        "2026-05-22-e7f3a1b9-warm-p1.json",
-        "2026-05-22-e7f3a1b9-warm-p2.json",
-        "2026-05-22-e7f3a1b9-warm-p3.json",
-        "2026-05-22-e7f3a1b9-cold-p1.json",
-        "2026-05-22-e7f3a1b9-cold-p2.json",
-        "2026-05-22-e7f3a1b9-cold-p3.json",
-        "2026-05-22-e7f3a1b9-cold-p4.json",
-        "2026-05-22-e7f3a1b9-cold-p5.json",
-        "2026-05-22-e7f3a1b9-cold-p6.json",
-        "2026-05-22-e7f3a1b9-cold-p7.json",
-        "2026-05-22-e7f3a1b9-cold-p8.json",
-        "2026-05-22-e7f3a1b9-cold-p9.json",
-        "2026-05-22-e7f3a1b9-cold-p10.json",
-        "2026-05-22-e7f3a1b9-cold-p11.json"
-      ],
-      "email_sent": {
-        "phase": "search_complete",
-        "at": "2026-05-25T18:31:38.464822+00:00",
-        "to": "martin@allofthethings.dev",
-        "id": "ee250824-4b0e-4cd1-9211-2c9013a07e59"
-      },
-      "phase1_completed_at": "2026-05-25T18:31:38.464822+00:00",
-      "last_updated": "2026-05-25T18:31:38.464822+00:00",
-      "errors": [],
-      "phase2_completed_at": "2026-05-26T00:00:00.000Z"
-    },
-    {
-      "run_id": "2026-05-25-sc3f9d2e",
-      "started_at": "2026-05-25T19:49:22.859852+00:00",
-      "completed_at": "2026-05-25T21:30:00.000Z",
-      "status": "phase3_complete",
-      "phase": "send-connections",
-      "criteria_used": "agency-partners",
-      "resume_from_step": "6b",
-      "steps_completed": ["6b", "7", "8"],
       "counts": {
-        "connections_sent": 0,
-        "connections_skipped_already_sent": 3,
-        "accepted_connections_detected": 6,
-        "followups_drafted": 5,
-        "followup_file": "state/pending_approvals/2026-05-25-followup.json",
-        "email_sent": true,
-        "email_id": "9aa598f7-829c-4f3e-88fe-604b3a428280",
-        "note": "All 3 approved notes already at request_sent from 2026-05-15 run. No new sends. 6 newly accepted connections detected. 5 eligible for follow-up."
+        "connections_cache_used": true,
+        "connections_cache_size": 1601,
+        "total_search_results": 75,
+        "skipped_exclusion": 6,
+        "new_stubs": 69,
+        "enriched": 69,
+        "classified": 69,
+        "hot": 17,
+        "warm": 19,
+        "cold": 33,
+        "surfaced_for_approval": 69,
+        "already_connected_removed": 0,
+        "email_sent": false,
+        "email_skipped_reason": "user denied sandbox override"
       },
+      "files_written": [
+        "2026-06-16-a9d3c7f2-hot.json",
+        "2026-06-16-a9d3c7f2-warm.json",
+        "2026-06-16-a9d3c7f2-cold.json"
+      ],
+      "phase1_completed_at": "2026-06-18T00:00:00.000000+00:00",
+      "last_updated": "2026-06-18T00:00:00.000000+00:00",
       "errors": []
     },
     {
-      "run_id": "2026-05-26-nsc9f7e2",
-      "started_at": "2026-05-26T00:00:00.000000+00:00",
-      "status": "phase3_complete",
-      "phase": "search-connections",
-      "criteria_used": "agency-partners",
-      "resume_from_step": "9",
-      "steps_completed": ["1", "2", "3", "4", "5", "6a", "6b", "7", "8"],
-      "search_cursor": 3,
-      "notes": "NetSuite/SuiteCommerce-focused run \u2014 using --term 'NetSuite'/'SuiteCommerce'/'Oracle NetSuite' to surface ERP agencies rather than Shopify agencies",
-      "queries_run": [
-        "NetSuite SuiteCommerce / CEO / IT&S / United States",
-        "SuiteCommerce / Founder / Computer Software / Canada",
-        "Oracle NetSuite / Managing Director / Management Consulting / United Kingdom"
-      ],
-      "counts": {
-        "exclusion_set_size": 2195,
-        "new_stubs": 43,
-        "q1_results": 25,
-        "q1_new": 12,
-        "q2_results": 15,
-        "q2_new": 14,
-        "q3_results": 25,
-        "q3_new": 17,
-        "new_leads_discovered": 43,
-        "enriched": 98,
-        "classified": 100,
-        "hot": 12,
-        "warm": 19,
-        "cold": 69,
-        "surfaced_for_approval": 100,
-        "approval_files": [
-          "2026-05-26-nsc9f7e2-hot.json",
-          "2026-05-26-nsc9f7e2-warm.json",
-          "2026-05-26-nsc9f7e2-cold-p1.json",
-          "2026-05-26-nsc9f7e2-cold-p2.json",
-          "2026-05-26-nsc9f7e2-cold-p3.json"
-        ],
-        "email_sent": true,
-        "email_id": "653514f1-f6e3-41a6-9218-20e8bd29a064",
-        "email_phase": "search_complete",
-        "notes_drafted": 9,
-        "notes_email_id": "c0d868e9-0a46-468a-9b0c-6cfe22fb3813",
-        "notes_ready_file": "2026-05-28-notes-ready.json",
-        "connections_sent": 6,
-        "connections_failed": 3,
-        "connections_skipped": 1,
-        "connections_failed_timeout": 3,
-        "connections_skipped_over_limit": 1,
-        "accepted_connections_detected": 0,
-        "followups_drafted": 4,
-        "followup_file": "2026-05-29-followup.json",
-        "phase3_email_id": "f084e4c7-6b9e-4c00-b52f-376952e31acf"
-      },
-      "phase1_completed_at": "2026-05-28T17:58:09.832970+00:00",
-      "phase2_completed_at": "2026-05-29T14:03:33.986079+00:00",
-      "errors": [
-        {
-          "step": "6b",
-          "url": "https://www.linkedin.com/in/adambaruh",
-          "error": "timeout",
-          "at": "2026-05-29T16:23:52.861467+00:00"
-        },
-        {
-          "step": "6b",
-          "url": "https://www.linkedin.com/in/skyler-wells",
-          "error": "timeout",
-          "at": "2026-05-29T16:23:52.861467+00:00"
-        },
-        {
-          "step": "6b",
-          "url": "https://www.linkedin.com/in/steveschepp",
-          "error": "timeout",
-          "at": "2026-05-29T16:23:52.861467+00:00"
-        }
-      ],
-      "phase3_completed_at": "2026-05-29T17:41:32.342908+00:00"
-    },
-    {
-      "run_id": "2026-05-26-5cda7be7",
-      "started_at": "2026-05-26T19:01:32.667784+00:00",
-      "status": "abandoned",
-      "phase": "send-connections",
-      "criteria_used": "agency-partners",
-      "resume_from_step": "6b",
-      "steps_completed": ["6b"],
-      "counts": {
-        "connections_sent": 9,
-        "connections_skipped_over_limit": 1,
-        "over_limit_lead": "Ryan Besterwitch (329 chars \u2014 needs note shortened)",
-        "josh_green_note": "sent with draft (not edited_note \u2014 note was edited after send)"
-      },
-      "errors": [],
-      "abandon_note": "Step 6b completed (9 requests sent, see counts); steps 7-8 never ran; marked abandoned during 2026-07-10 maintenance follow-up so Step 0 phase-matching no longer trips on it",
-      "last_updated": "2026-07-10T18:33:34.080500+00:00"
-    },
-    {
-      "run_id": "2026-05-27-a3e82f1b",
-      "started_at": "2026-05-27T00:00:00.000000+00:00",
+      "run_id": "2026-06-18-b5c71d3a",
+      "started_at": "2026-06-18T00:00:00.000000+00:00",
       "status": "cancelled",
       "phase": "search-connections",
       "criteria_used": "agency-partners",
-      "resume_from_step": "6a",
-      "steps_completed": [0, 1, 2, "3", "4", "5"],
+      "resume_from_step": 3,
+      "steps_completed": [
+        0,
+        1,
+        2
+      ],
       "search_cursor": {
         "role_idx": 8,
         "industry_idx": 2,
@@ -199,159 +110,1156 @@
         "Head of Delivery Shopify eCommerce / Canada (25 results, 25 new after exclusions)"
       ],
       "counts": {
-        "exclusion_set_size": 1566,
-        "new_stubs": 68,
-        "enriched": 87,
-        "classified": 87,
-        "hot_this_run": 9,
-        "warm_this_run": 26,
-        "cold_this_run": 52,
-        "hot_surfaced": 9,
-        "warm_surfaced": 26,
-        "cold_surfaced": 52,
-        "surfaced_for_approval": 35
+        "connections_cache_used": true,
+        "connections_cache_age_days": 2,
+        "connections_cache_size": 1601,
+        "seen_size": 985,
+        "total_exclusions": 2552,
+        "total_search_results": 65,
+        "skipped_exclusion": 7,
+        "new_stubs": 58
       },
-      "last_updated": "2026-06-03T16:51:30.706221+00:00",
-      "phase1_completed_at": "2026-06-03T16:51:30.706221+00:00",
-      "files_written": [
-        "2026-05-27-a3e82f1a-hot.json",
-        "2026-05-27-a3e82f1a-warm.json",
-        "2026-05-27-a3e82f1a-cold-p1.json",
-        "2026-05-27-a3e82f1a-cold-p2.json"
-      ],
-      "email_sent": {
-        "phase": "search_complete",
-        "at": "2026-06-03T16:51:30.706221+00:00",
-        "to": "martin@allofthethings.dev",
-        "id": "5e754a11-4369-4b41-a505-a51c7fbb9097"
-      },
-      "cancelled_reason": "Wrong search focus \u2014 Shopify-only agencies, no ERP/NetSuite context. Criteria updated to NetSuite-first; run deleted and restarted."
+      "cancel_reason": "superseded by 2026-07-01-e3a9b4f1 (agency-netsuite run)",
+      "cancelled_at": "2026-07-01T00:00:00.000000+00:00",
+      "errors": []
     },
     {
-      "run_id": "2026-06-03-2312a286",
-      "started_at": "2026-06-03T18:07:53.201159+00:00",
-      "status": "phase3_complete",
-      "phase": "send-connections",
-      "criteria_used": "agency-partners",
-      "resume_from_step": "6b",
-      "steps_completed": [0, 1, 2, 3, 4, 5, "6a", "6b", 7, 8, "7", "8"],
-      "counts": {
-        "exclusion_set_size": 2347,
-        "new_stubs": 55,
-        "enriched_batch1": 10,
-        "hot_batch1": 7,
-        "warm_batch1": 1,
-        "cold_batch1": 2,
-        "notes_drafted": 7,
-        "notes_rejected": 1,
-        "batch2_notes_drafted": 2,
-        "batch2_notes_rejected": 1,
-        "batch2_notes_pending_decision": 1,
-        "connections_sent": 7,
-        "connections_already_pending": 2,
-        "connections_already_accepted": 1,
-        "connections_failed": 1,
-        "newly_accepted": 2,
-        "newly_accepted_names": ["Ryan Mcleod", "Felicia Santoro-Petti"],
-        "followups_drafted": 0,
-        "messages_email_id": "a90e0699-4dd3-4b07-8bd7-abba8151d544",
-        "connections_skipped_over_limit": 2,
-        "over_limit_leads": [
-          "Ryan Besterwitch (329 chars)",
-          "Ross Latta (316 chars)"
-        ],
-        "accepted_connections_detected": 0
-      },
-      "phase3_errors": [
-        {
-          "step": "6b",
-          "url": "https://www.linkedin.com/in/ryanbesterwitch",
-          "error": "note too long (329 chars, LinkedIn hard limit 300) \u2014 send skipped, needs shorter note",
-          "at": "2026-06-05T00:00:00.000000+00:00"
-        }
+      "run_id": "2026-07-01-e3a9b4f1",
+      "started_at": "2026-07-01T00:00:00.000000+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": 9,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
       ],
-      "last_updated": "2026-06-09T14:56:42.112336+00:00",
-      "phase2_completed_at": "2026-06-05T16:10:49.250526+00:00",
-      "phase2_batch2_completed_at": "2026-06-04T23:00:00.000000+00:00",
-      "notes_email_id": "83e9da5f-c0d8-4822-a883-b2af51f911b9",
-      "notes_ready_file_batch2": "2026-06-04-notes-ready-2.json",
-      "notes_email_id_batch2": "9a2e304d-d51a-41ec-aadf-12bc3ec22b48",
-      "search_cursor": 3,
+      "search_cursor": {
+        "role_idx": 0,
+        "industry_idx": 0,
+        "location_idx": 0
+      },
       "queries_run": [
-        "NetSuite partner CEO",
-        "NetSuite SI Founder",
-        "Oracle NetSuite MD"
+        "NetSuite Alliance Partner / CEO / IT&S / United States (25 results, 12 new)",
+        "SuiteCommerce implementation / Founder / Computer Software / UK,Australia (25 results, 18 new)",
+        "Oracle NetSuite consulting / Managing Director / Management Consulting / Canada,UK (25 results, 16 new)"
       ],
-      "notes": "NetSuite/ERP-focused run \u2014 targeting decision-makers at NetSuite Alliance Partners and Oracle NetSuite SIs",
+      "counts": {
+        "connections_cache_rebuilt": true,
+        "connections_cache_size": 1538,
+        "seen_size_before": 1043,
+        "exclusion_set_size": 2540,
+        "total_search_results": 75,
+        "skipped_exclusion": 29,
+        "new_stubs": 46,
+        "classified": 46,
+        "hot": 18,
+        "warm": 14,
+        "cold": 14,
+        "surfaced_for_approval": 46,
+        "email_sent": false,
+        "email_note": "email send permission denied \u2014 skipped (non-blocking)"
+      },
+      "errors": [],
+      "step3_note": "enrichment disabled (pipeline.json enrichment.enabled=false) \u2014 skipped all linkedin person fetch calls",
+      "step4_completed_at": "2026-07-06T15:28:04.497222Z",
+      "phase1_completed_at": "2026-07-06T15:30:23.688641Z",
+      "last_updated": "2026-07-06T15:30:23.688641Z",
+      "step5_note": "connection status checks skipped \u2014 connections_cache was rebuilt this same run (0 days old, 1538 URLs), all 46 leads were verified not-connected by exclusion set in Step 2",
       "files_written": [
-        "2026-06-04-2312a286-batch1-hot.json",
-        "2026-06-04-2312a286-batch1-warm.json",
-        "2026-06-04-2312a286-batch2-hot.json",
-        "2026-06-04-2312a286-batch2-warm.json"
-      ],
-      "email_sent": {
-        "phase": "search_complete_batch1",
-        "at": "2026-06-04T15:17:31.911333+00:00",
-        "to": "martin@allofthethings.dev",
-        "id": "8cafbe81-086a-462c-8570-3f11429b8c3b"
-      },
-      "notes_ready_file": "2026-06-05-notes-ready.json",
-      "email_sent_notes": {
-        "phase": "notes_ready",
-        "at": "2026-06-05T16:10:49.250526+00:00",
-        "to": "martin@allofthethings.dev",
-        "id": "c2e7307f-36ce-4773-bdde-9a9e2ff9fb51"
-      },
-      "phase3_completed_at": "2026-06-09T14:56:42.112336+00:00"
+        "2026-07-01-e3a9b4f1-hot.json",
+        "2026-07-01-e3a9b4f1-warm.json",
+        "2026-07-01-e3a9b4f1-cold.json"
+      ]
     },
     {
-      "run_id": "2026-06-09-828a5bcb",
-      "started_at": "2026-06-09T00:00:00.000000+00:00",
-      "status": "blocked_network_error",
+      "run_id": "2026-07-06-b2ba86e7",
+      "started_at": "2026-07-06T18:55:36.778559+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": 6,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1538,
+        "exclusion_set_size": 1538,
+        "total_search_results": 51,
+        "skipped_exclusion": 12,
+        "new_stubs": 39,
+        "classified": 39,
+        "hot": 6,
+        "warm": 6,
+        "cold": 27,
+        "surfaced_for_approval": 38,
+        "removed_already_connected_or_pending": 1,
+        "email_sent": false
+      },
+      "errors": [],
+      "step1_note": "criteria refresh skipped: file exists, run 38 mod 7 != 0",
+      "last_updated": "2026-07-07T18:48:50.363628+00:00",
+      "queries_run": [
+        "NetSuite partner / CTO / IT&S / United States (25 results, 13 new)",
+        "ERP implementation / Practice Director / Mgmt Consulting,IT&S / US,Canada (25 results, 25 new)",
+        "SuiteCommerce / Co-Founder / Computer Software,Internet / UK,Australia (1 results, 1 new)"
+      ],
+      "search_cursor": {
+        "role_idx": 6,
+        "industry_idx": 3,
+        "location_idx": 3
+      },
+      "step3_note": "enrichment disabled (pipeline.json enrichment.enabled=false) \u2014 skipped all linkedin person fetch calls",
+      "step4_completed_at": "2026-07-06T19:13:50.574471+00:00",
+      "step4_note": "93 stale status=new leads from prior runs (other criteria) intentionally excluded, matching precedent of run 2026-07-01-e3a9b4f1",
+      "files_written": [
+        "2026-07-06-b2ba86e7-hot.json",
+        "2026-07-06-b2ba86e7-warm.json",
+        "2026-07-06-b2ba86e7-cold.json"
+      ],
+      "step5_note": "connection+conversation checks run on 12 hot/warm leads; 1 removed (pending request): [('Donna Corwin', 'pending')]",
+      "phase1_completed_at": "2026-07-07T18:48:50.363628+00:00",
+      "email_note": "email send interrupted by user \u2014 skipped (non-blocking)",
+      "post_run_note": "user reviewed approvals manually on 2026-07-07: 2 approved and sent outside pipeline (Manoj Nair, Dan Goldman), all others rejected"
+    },
+    {
+      "run_id": "2026-07-07-f6e4a11c",
+      "started_at": "2026-07-07T18:51:39.283416+00:00",
+      "status": "phase1_complete",
       "phase": "search-connections",
       "criteria_used": "agency-partners",
-      "resume_from_step": 2,
-      "steps_completed": [0, 1],
-      "counts": {},
-      "errors": [
-        {
-          "step": 2,
-          "error": "httpError — Request error: fetch failed on all LinkedIn API calls (connection list, person search). LinkedAPI service appears to be unavailable.",
-          "at": "2026-06-09T00:00:00.000000+00:00"
-        }
+      "resume_from_step": 5,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "step1_note": "criteria refresh skipped: file exists, run 39 mod 7 != 0",
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1538,
+        "exclusion_set_size": 1538,
+        "total_search_results": 75,
+        "skipped_exclusion": 11,
+        "new_stubs": 64,
+        "classified": 64,
+        "hot": 11,
+        "warm": 31,
+        "cold": 22,
+        "surfaced_for_approval": 64
+      },
+      "errors": [],
+      "queries_run": [
+        "ERP implementation / VP of Professional Services / Mgmt Consulting,IT&S / UK (25 results, 21 new)",
+        "Shopify Plus / Director of Partnerships / Internet,Computer Software / AU,Canada (25 results, 19 new)",
+        "Oracle consulting / Practice Director / IT&S / United States (25 results, 24 new)"
+      ],
+      "search_cursor": {
+        "role_idx": 13,
+        "industry_idx": 1,
+        "location_idx": 1
+      },
+      "step3_note": "enrichment disabled (pipeline.json enrichment.enabled=false) \u2014 skipped all linkedin person fetch calls",
+      "last_updated": "2026-07-15T16:12:40.106763+00:00",
+      "step4_completed_at": "2026-07-07T19:13:30.171922+00:00",
+      "phase1_completed_at": "2026-07-08T14:34:16.706917+00:00",
+      "files_written": [
+        "2026-07-07-f6e4a11c-links.json"
+      ],
+      "step5_note": "session died mid-Step-5 checks; run completed retroactively on 2026-07-08 using the new Abbreviated Mode links-file format (Step 5L) \u2014 no status/conversation checks, no email. Pending-requests audit confirmed none of these 64 leads were contacted.",
+      "post_run_note": "1 approved leads sent manually outside pipeline, synced request_sent 2026-07-13"
+    },
+    {
+      "run_id": "2026-07-08-ce497cef",
+      "started_at": "2026-07-08T16:33:38.626606+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-partners",
+      "resume_from_step": 10,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "step1_note": "criteria refresh skipped: file exists, run 40 mod 7 != 0. Criteria manually refined this session per operator feedback (excluded_employers rule added)",
+      "counts": {
+        "connections_cache_rebuilt": true,
+        "connections_cache_size": 1630,
+        "seen_size_before": 1192,
+        "exclusion_set_size": 2776,
+        "total_search_results": 61,
+        "skipped_exclusion": 15,
+        "new_stubs": 46,
+        "classified": 46,
+        "hot": 3,
+        "warm": 4,
+        "cold": 39,
+        "surfaced_for_approval": 46
+      },
+      "errors": [],
+      "queries_run": [
+        "NetSuite alliance partner / Director of Partnerships / CompSW,IT&S / Canada (25 results, 13 new)",
+        "Shopify Plus agency / VP of Sales / Internet,CompSW / United Kingdom (11 results, 10 new)",
+        "ERP implementation consultancy / Chief Revenue Officer / MgmtCons,IT&S / Australia (25 results, 23 new)"
+      ],
+      "search_cursor": {
+        "role_idx": 16,
+        "industry_idx": 0,
+        "location_idx": 0
+      },
+      "step3_note": "abbreviated mode: Step 3 never runs, no person fetch calls",
+      "last_updated": "2026-07-15T16:12:40.106763+00:00",
+      "step4_note": "classified only this run's leads; score_rationale not persisted (abbreviated mode); classifier + all criteria files refined this session: excluded_employers rule (vendor employees -> cold)",
+      "files_written": [
+        "2026-07-08-ce497cef-links.json"
+      ],
+      "phase1_completed_at": "2026-07-08T17:52:14.030938+00:00",
+      "post_run_note": "3 approved leads sent manually outside pipeline, synced request_sent 2026-07-13"
+    },
+    {
+      "run_id": "2026-07-09-ef198899",
+      "started_at": "2026-07-09T15:41:39.982033+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 6,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1630,
+        "exclusion_set_size": 1630,
+        "total_search_results": 75,
+        "skipped_exclusion": 18,
+        "new_stubs": 57,
+        "classified": 57,
+        "hot": 5,
+        "warm": 10,
+        "cold": 42,
+        "surfaced_for_approval": 57,
+        "email_sent": false
+      },
+      "errors": [],
+      "criteria_used": "agency-netsuite",
+      "step1_note": "criteria refresh skipped: file exists, run 41 mod 7 != 0",
+      "last_updated": "2026-07-09T17:44:38.475980+00:00",
+      "queries_run": [
+        "NetSuite partner / VP of Delivery / Internet,IT&S / Australia,US (25 results, 23 new)",
+        "ERP implementation partner / Head of Delivery / IT&S,Mgmt Consulting / US,Canada (25 results, 19 new)",
+        "NetSuite consultancy / VP of Professional Services / Computer Software,Mgmt Consulting / US,UK (25 results, 15 new)"
+      ],
+      "search_cursor": {
+        "role_idx": 9,
+        "industry_idx": 2,
+        "location_idx": 2
+      },
+      "step3_note": "abbreviated mode: Step 3 never runs",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted",
+      "step4_completed_at": "2026-07-09T16:34:52.118119+00:00",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-09-ef198899-links.json"
+      ],
+      "phase1_completed_at": "2026-07-09T16:34:52.118119+00:00",
+      "post_run_note": "user reviewed links file on 2026-07-09: 6 approved and sent manually outside pipeline; 4 hot URLs were deleted from the file by the user (restored to expired array), all 51 non-approved leads marked rejected per user instruction"
+    },
+    {
+      "run_id": "2026-07-09-864c9d9f",
+      "started_at": "2026-07-09T17:45:12.757033+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 10,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5,
+        10
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1630,
+        "exclusion_set_size": 1630,
+        "total_search_results": 75,
+        "skipped_exclusion": 26,
+        "new_stubs": 49,
+        "classified": 49,
+        "hot": 19,
+        "warm": 7,
+        "cold": 23,
+        "surfaced_for_approval": 49,
+        "email_sent": false,
+        "errors": 0
+      },
+      "errors": [],
+      "criteria_used": "suiteworld-2026",
+      "step1_note": "criteria refresh due by rule (run 42 mod 7 == 0) but SKIPPED deliberately: suiteworld-2026.json is hand-crafted (two-segment design, excluded-employer rules, query-building rules); criteria-extractor would overwrite it with generic connection-pattern criteria. Operator should refresh manually if desired.",
+      "last_updated": "2026-07-09T18:00:50.868145+00:00",
+      "queries_run": [
+        "NetSuite partner / CEO / IT&S,Computer Software / US,Canada (25 results, 2 new)",
+        "NetSuite / IT Director / Retail,Manufacturing / US,UK (25 results, 24 new)",
+        "NetSuite / VP of Operations / Consumer Goods,Wholesale / US,Australia (25 results, 23 new)"
+      ],
+      "search_cursor": {
+        "role_idx": 3,
+        "industry_idx": 3,
+        "location_idx": 3
+      },
+      "step3_note": "abbreviated mode: Step 3 never runs",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; 1 lead (shireen-dehghan) dropped by classifier subagent, scored inline per excluded-employer + anti-pattern rules (18/cold)",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-09-864c9d9f-links.json"
+      ],
+      "phase1_completed_at": "2026-07-09T18:00:50.868145+00:00"
+    },
+    {
+      "run_id": "2026-07-09-cabda126",
+      "started_at": "2026-07-09T18:01:40.675513+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 6,
+      "criteria_used": "agency-netsuite",
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "step1_note": "criteria refresh skipped: file exists, run 43 mod 7 != 0; file updated today with operator SAP exclusion",
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1630,
+        "exclusion_set_size": 1630,
+        "total_search_results": 75,
+        "skipped_exclusion": 26,
+        "new_stubs": 49,
+        "classified": 49,
+        "hot": 0,
+        "warm": 1,
+        "cold": 48,
+        "surfaced_for_approval": 49,
+        "email_sent": false,
+        "errors": 0
+      },
+      "errors": [],
+      "last_updated": "2026-07-10T14:06:42.650346+00:00",
+      "queries_run": [
+        "NetSuite partner / Director of Professional Services / Mgmt Consulting,IT&S / US,UK (25 results, 18 new)",
+        "NetSuite implementation partner / Practice Director / IT&S,Computer Software / US,Canada (25 results, 7 new)",
+        "NetSuite solution provider / Practice Lead / IT&S,Internet / UK,Australia (25 results, 24 new)"
+      ],
+      "search_cursor": {
+        "role_idx": 12,
+        "industry_idx": 1,
+        "location_idx": 1
+      },
+      "step3_note": "abbreviated mode: Step 3 never runs",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; SAP anti-pattern active (criteria updated today)",
+      "step4_completed_at": "2026-07-10T14:06:42.650346+00:00",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-09-cabda126-links.json"
+      ],
+      "phase1_completed_at": "2026-07-10T14:06:42.650346+00:00"
+    },
+    {
+      "run_id": "2026-07-09-ff73fe9c",
+      "started_at": "2026-07-10T14:42:28.146579+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 6,
+      "criteria_used": "agency-netsuite",
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "step1_note": "criteria refresh skipped: file exists, run 44 mod 7 != 0",
+      "step2_note": "company-anchored search variant per operator instruction: queries anchor on known NetSuite partner firms via --current-companies instead of role/industry rotation; search_cursor intentionally not advanced",
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1630,
+        "exclusion_set_size": 1630,
+        "total_search_results": 75,
+        "skipped_exclusion": 3,
+        "new_stubs": 72,
+        "classified": 72,
+        "hot": 10,
+        "warm": 10,
+        "cold": 52,
+        "surfaced_for_approval": 72,
+        "email_sent": false,
+        "errors": 0
+      },
+      "errors": [],
+      "last_updated": "2026-07-15T16:12:40.106763+00:00",
+      "queries_run": [
+        "NetSuite / companies: Plative,Techfino,Esonus,Foretopia,N2Lab / US,CA,UK,AU (25 results, 23 new)",
+        "NetSuite / companies: Myers-Holum,Big Bang,Cumula 3 Group,Bryant Park Consulting,Zanovoy / US,CA,UK,AU (25 results, 24 new)",
+        "NetSuite / companies: Appficiency,ScaleNorth,Kodella,SuiteDynamics,Eureka Solutions / US,CA,UK,AU (25 results, 25 new)"
+      ],
+      "step3_note": "abbreviated mode: Step 3 never runs",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; company-anchored batch \u2014 differentiator was role seniority, ICs sank to cold",
+      "step4_completed_at": "2026-07-10T14:58:50.958929+00:00",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-09-ff73fe9c-links.json"
+      ],
+      "phase1_completed_at": "2026-07-10T14:58:50.958929+00:00",
+      "post_run_note": "3 approved leads sent manually outside pipeline, synced request_sent 2026-07-13"
+    },
+    {
+      "run_id": "2026-07-10-e0b1305d",
+      "started_at": "2026-07-10T19:15:39.114145+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 6,
+      "criteria_used": "agency-partners",
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "step1_note": "criteria refresh skipped: file exists, run 45 (incl. 24 archived) mod 7 != 0",
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1630,
+        "exclusion_set_size": 1630,
+        "total_search_results": 75,
+        "skipped_exclusion": 12,
+        "new_stubs": 63,
+        "classified": 63,
+        "hot": 8,
+        "warm": 8,
+        "cold": 47,
+        "surfaced_for_approval": 63,
+        "email_sent": false,
+        "errors": 0
+      },
+      "errors": [],
+      "last_updated": "2026-07-10T19:29:48.966031+00:00",
+      "queries_run": [
+        "NetSuite partner / Head of Talent / IT&S,Computer Software / US,Canada (25 results, 16 new)",
+        "Shopify Plus agency / Head of Operations / Computer Software,Internet / US,UK (25 results, 23 new)",
+        "ecommerce agency / CEO / IT&S,Internet / UK,Australia (25 results, 24 new)"
+      ],
+      "search_cursor": {
+        "role_idx": 1,
+        "industry_idx": 2,
+        "location_idx": 2
+      },
+      "step3_note": "abbreviated mode: Step 3 never runs",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted",
+      "step4_completed_at": "2026-07-10T19:29:48.966031+00:00",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-10-e0b1305d-links.json"
+      ],
+      "phase1_completed_at": "2026-07-10T19:29:48.966031+00:00"
+    },
+    {
+      "run_id": "2026-07-10-d6ce3ade",
+      "started_at": "2026-07-13T15:43:49.097843+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 6,
+      "criteria_used": "agency-netsuite",
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "step1_note": "criteria refresh skipped: file exists, run 46 (incl. 24 archived) mod 7 != 0",
+      "step2_note": "company-anchored variant (operator-preferred for this criteria): fresh NetSuite partner firms, prior 15 anchors largely harvested; search_cursor not advanced",
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1630,
+        "exclusion_set_size": 1630,
+        "total_search_results": 62,
+        "skipped_exclusion": 2,
+        "new_stubs": 60,
+        "classified": 60,
+        "hot": 12,
+        "warm": 21,
+        "cold": 27,
+        "surfaced_for_approval": 60,
+        "email_sent": false,
+        "errors": 0
+      },
+      "errors": [],
+      "last_updated": "2026-07-13T16:21:15.242998+00:00",
+      "queries_run": [
+        "NetSuite / companies: GURUS Solutions,Anchor Group,Protelo,SuiteCentric,Concentrus / US,CA,UK,AU (25 results, 24 new)",
+        "NetSuite / companies: Netgain,SquareWorks Consulting,CEBA Solutions,Folio3,Digicode / US,CA,UK,AU (12 results, 11 new)",
+        "NetSuite / companies: NoBlue,BlueBridge One,Elevate2,Annexa,Klugo / US,CA,UK,AU (25 results, 25 new)"
+      ],
+      "step3_note": "abbreviated mode: Step 3 never runs",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; company-anchored NetSuite batch",
+      "step4_completed_at": "2026-07-13T15:59:19.773341+00:00",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-10-d6ce3ade-links.json"
+      ],
+      "phase1_completed_at": "2026-07-13T15:59:19.773341+00:00",
+      "post_run_note": "user reviewed hot tier on 2026-07-10: 7 approved and sent manually outside pipeline; 5 hot URLs deleted from file by user (restored to expired array, leads rejected); warm/cold left for normal expiry"
+    },
+    {
+      "run_id": "2026-07-10-89c6bb5b",
+      "started_at": "2026-07-13T16:21:28.790275+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 6,
+      "criteria_used": "agency-netsuite",
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "step1_note": "criteria refresh skipped: file exists, run 47 (incl. 24 archived) mod 7 != 0",
+      "step2_note": "company-anchored variant, third anchor set (prior 30 firms harvested); search_cursor not advanced",
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1630,
+        "exclusion_set_size": 1630,
+        "total_search_results": 75,
+        "skipped_exclusion": 2,
+        "new_stubs": 73,
+        "classified": 73,
+        "hot": 13,
+        "warm": 6,
+        "cold": 54,
+        "surfaced_for_approval": 73,
+        "email_sent": false,
+        "errors": 0
+      },
+      "errors": [],
+      "last_updated": "2026-07-15T16:12:40.106763+00:00",
+      "queries_run": [
+        "NetSuite / companies: Prolecto Resources,SCS Cloud,BTM Global,Circular Edge,MIBAR / US,CA,UK,AU (25 results, 24 new)",
+        "NetSuite / companies: Sikich,Bridgepoint Consulting,Terillium,Kraft Enterprise Systems,Alta Vista Technology / US,CA,UK,AU (25 results, 25 new)",
+        "NetSuite / companies: FHL,OSSM,Nolan Business Solutions,JCurve Solutions,Fusion5 / US,CA,UK,AU (25 results, 24 new)"
+      ],
+      "step3_note": "abbreviated mode: Step 3 never runs",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; company-anchored NetSuite batch (3rd anchor set)",
+      "step4_completed_at": "2026-07-13T16:37:32.597282+00:00",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-10-89c6bb5b-links.json"
+      ],
+      "phase1_completed_at": "2026-07-13T16:37:32.597282+00:00",
+      "post_run_note": "9 approved leads sent manually outside pipeline, synced request_sent 2026-07-13"
+    },
+    {
+      "run_id": "2026-07-13-f234b176",
+      "started_at": "2026-07-15T15:36:47.902089+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 6,
+      "criteria_used": "agency-netsuite",
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "step1_note": "criteria refresh skipped: file exists, run 48 (incl. 24 archived) mod 7 != 0",
+      "step2_note": "company-anchored variant, fourth anchor set; search_cursor not advanced",
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1630,
+        "exclusion_set_size": 1630,
+        "total_search_results": 54,
+        "skipped_exclusion": 1,
+        "new_stubs": 53,
+        "classified": 53,
+        "hot": 7,
+        "warm": 4,
+        "cold": 42,
+        "surfaced_for_approval": 53,
+        "email_sent": false,
+        "errors": 0
+      },
+      "errors": [],
+      "last_updated": "2026-07-15T15:51:07.279202+00:00",
+      "queries_run": [
+        "NetSuite / companies: The Vested Group,eMerge Technologies,Meridian Business,Aminian Business Services,Oasis Solutions / US,CA,UK,AU (25 results, 24 new)",
+        "NetSuite / companies: Trajectory,Kimberlite Partners,Jade Global,Cherry Bekaert,GSI / US,CA,UK,AU (25 results, 25 new)",
+        "NetSuite / companies: Cofficient,BrightBridge Solutions,First Hosted,Liberate IT,DWR / US,CA,UK,AU (4 results, 4 new)"
+      ],
+      "step3_note": "abbreviated mode: Step 3 never runs",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; company-anchored NetSuite batch (4th anchor set)",
+      "step4_completed_at": "2026-07-15T15:51:07.279202+00:00",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-13-f234b176-links.json"
+      ],
+      "phase1_completed_at": "2026-07-15T15:51:07.279202+00:00"
+    },
+    {
+      "run_id": "2026-07-13-f6b905a3",
+      "started_at": "2026-07-15T16:13:20.260347+00:00",
+      "status": "phase1_complete",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 6,
+      "criteria_used": "agency-netsuite",
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "step1_note": "criteria refresh skipped: file exists, run 49 (incl. 24 archived) mod 7 != 0",
+      "step2_note": "company-anchored variant, 5th anchor set, per-operator diversity rule: 8 firms/query, max 3 stubs per firm (excess skipped WITHOUT seen.json write so they can resurface)",
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1630,
+        "exclusion_set_size": 1630,
+        "total_search_results": 75,
+        "skipped_exclusion": 15,
+        "deferred_per_firm_cap": 10,
+        "new_stubs": 50,
+        "classified": 50,
+        "hot": 6,
+        "warm": 3,
+        "cold": 41,
+        "surfaced_for_approval": 50,
+        "email_sent": false,
+        "errors": 0
+      },
+      "errors": [],
+      "last_updated": "2026-07-15T17:37:09.092950+00:00",
+      "queries_run": [
+        "NetSuite / companies: eMerge,Meridian Business,Oasis Solutions,Circular Edge,MIBAR,Kraft,Alta Vista,Terillium / US,CA,UK,AU (25 results, 21 new)",
+        "NetSuite / companies: Trajectory,ERP Buddies,Paapri,CuriousRubik,SCS Cloud,BTM Global,Netgain,SquareWorks / US,CA,UK,AU (25 results, 13 new)",
+        "NetSuite / companies: BrightBridge,Threadgold,First Hosted,OSSM,Nolan,Elevate2,Annexa,JCurve / US,CA,UK,AU (25 results, 16 new)"
+      ],
+      "firm_distribution": {
+        "meridian business": 3,
+        "oasis solutions": 1,
+        "terillium": 3,
+        "curiousrubik": 2,
+        "threadgold": 3,
+        "nolan business": 3
+      },
+      "step3_note": "abbreviated mode: Step 3 never runs",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; 5th anchor set with per-firm cap of 3",
+      "step4_completed_at": "2026-07-15T17:37:09.092950+00:00",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-13-f6b905a3-links.json"
+      ],
+      "phase1_completed_at": "2026-07-15T17:37:09.092950+00:00"
+    },
+    {
+      "run_id": "2026-07-15-fca88444",
+      "started_at": "2026-07-15T18:31:37.934393+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 10,
+      "criteria_used": "agency-netsuite",
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": true,
+        "connections_cache_size": 1656,
+        "exclusion_set_size": 1656,
+        "total_search_results": 75,
+        "skipped_exclusion": 2,
+        "deferred_per_firm_cap": 7,
+        "new_stubs": 66,
+        "classified": 66,
+        "hot": 10,
+        "warm": 19,
+        "cold": 37,
+        "surfaced_for_approval": 66,
+        "email_sent": false,
+        "new_leads": 66,
+        "connections_sent": 0,
+        "connections_detected": 0,
+        "followups_sent": 0,
+        "errors": 0
+      },
+      "errors": [],
+      "step1_note": "criteria refresh skipped: file exists, run 50 (incl. 24 archived) mod 7 = 1 != 0",
+      "last_updated": "2026-07-15T19:18:04.408569+00:00",
+      "step2_note": "company-anchored variant, 6th anchor set: 8 fresh firms/query, max 3 stubs per firm (most-senior kept, excess deferred WITHOUT seen.json write)",
+      "queries_run": [
+        "NetSuite / companies: 360 Cloud,FMT,Business Solution Partners,Softype,Sererra,Tiger Sheep,Keystone,Conexus SG / US,CA,UK,AU (25 results)",
+        "NetSuite / companies: Nuage,ERP Success Partners,ERA Consulting,Upaya,AlphaBOLD,Finlyte,Plumbline,Yantra / US,CA,UK,AU (25 results)",
+        "NetSuite / companies: MacroFin,3RP,Wipfli,Riveron,Seibert,Tavano Team,Absolute Vision,OdeCloud / US,CA,UK,AU (25 results)"
+      ],
+      "firm_distribution": {
+        "keystone business services": 3,
+        "business solution partners": 3,
+        "conexus sg": 3,
+        "360 cloud solutions": 1,
+        "sererra": 1,
+        "erp success partners": 3,
+        "alphabold": 2,
+        "finlyte": 2,
+        "yantra": 1,
+        "riveron": 2,
+        "3rp": 3,
+        "wipfli": 3,
+        "tavano team": 1,
+        "macrofin": 2
+      },
+      "step3_note": "abbreviated mode: Step 3 never runs",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; 6th anchor set",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped; no email",
+      "completed_at": "2026-07-15T19:18:04.408569+00:00"
+    },
+    {
+      "run_id": "2026-07-16-84321eda",
+      "started_at": "2026-07-16T16:22:11.767356+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": null,
+      "criteria_used": "agency-netsuite",
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1656,
+        "exclusion_set_size": 1656,
+        "total_search_results": 75,
+        "skipped_exclusion": 3,
+        "skipped_excluded_company": 0,
+        "deferred_per_firm_cap": 8,
+        "new_stubs": 64,
+        "classified": 64,
+        "hot": 8,
+        "warm": 14,
+        "cold": 42,
+        "surfaced_for_approval": 64,
+        "email_sent": false,
+        "new_leads": 64,
+        "connections_sent": 0,
+        "connections_detected": 0,
+        "followups_sent": 0,
+        "errors": 0
+      },
+      "errors": [],
+      "step1_note": "criteria refresh skipped: file exists, run 51 (incl. 24 archived) mod 7 = 2 != 0",
+      "last_updated": "2026-07-16T16:40:19.426084+00:00",
+      "step2_note": "company-anchored variant, 7th anchor set: 8 fresh firms/query, max 3 stubs/firm (most-senior kept, excess deferred w/o seen.json); excluded_companies filter live (Tavano Team dropped + seen)",
+      "queries_run": [
+        "NetSuite / companies: SuiteRep,Entartes,Bring IT,NewGen,Lightbridge,Tvarana,Vursor,ERP Guru / US,CA,UK,AU (25 results)",
+        "NetSuite / companies: Armanino,RSM,Eide Bailly,BPM,Citrin Cooperman,Withum,Baker Tilly,Marcum / US,CA,UK,AU (25 results)",
+        "NetSuite / companies: TAC Solutions,Aarialife,Beyond Cloud,SuiteTooth,Zallas,CBIZ,MNP Digital,BDO Digital / US,CA,UK,AU (25 results)"
+      ],
+      "firm_distribution": {
+        "newgen business solutions": 3,
+        "vursor": 2,
+        "entartes": 1,
+        "rsm": 3,
+        "citrin cooperman": 2,
+        "eide bailly": 2,
+        "cbiz": 2,
+        "beyond cloud consulting": 2,
+        "aarialife": 1,
+        "bdo digital": 1
+      },
+      "step3_note": "abbreviated mode: Step 3 never runs",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; 7th anchor set",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped; no email",
+      "completed_at": "2026-07-16T16:40:19.426084+00:00"
+    },
+    {
+      "run_id": "2026-07-16-a42df1d0",
+      "started_at": "2026-07-16T18:27:00.649828+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": null,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "criteria_refresh": "skipped (file exists, run 30 mod 7 != 0)",
+        "exclusion_set_size": 3666,
+        "new_stubs": 72,
+        "skipped_already_seen": 3,
+        "skipped_per_firm_cap": 0,
+        "dropped_excluded_company": 0,
+        "classified": 72,
+        "hot": 12,
+        "warm": 6,
+        "cold": 54,
+        "surfaced_for_approval": 72,
+        "links_file": "state/pending_approvals/2026-07-16-a42df1d0-links.json",
+        "email_sent": false
+      },
+      "errors": [],
+      "notes": "Company-anchored abbreviated run. Pre-run: restored state files (seen/leads/run_log) clobbered by PR #9 merge (fc221b1) from commit 98ba778 + merged 44 branch-only leads/seen URLs and 2 run entries.",
+      "last_updated": "2026-07-16T18:55:49.081071+00:00",
+      "queries_run": [
+        "NetSuite / companies: Aprio,Accrete,Pivot2,OneKloudX,LIDD,CohnReznick,Blu Banyan,SANSA / US,CA,UK,AU (25 results, 24 new)",
+        "NetSuite / companies: Net at Work,Elim,Avy Partners,Houseblend,Outpost,Closeloop,BT Partners,Intente / US,CA,UK,AU (25 results, 24 new)",
+        "NetSuite / companies: Catalyst ERP,TrueVantage,Brovanture,Wild Tech,BM Online,TeamBlueSky,COGTEK,TEQSuite / US,CA,UK,AU (25 results)"
+      ],
+      "completed_at": "2026-07-16T18:55:49.081071+00:00",
+      "files_written": [
+        "2026-07-16-a42df1d0-links.json"
       ]
     },
     {
-      "run_id": "2026-06-09-wu4a2b3c1d",
-      "started_at": "2026-06-09T15:00:00.000000+00:00",
-      "status": "blocked_network_error",
-      "phase": "warm-up",
-      "resume_from_step": 3,
-      "steps_completed": [0],
-      "counts": {},
-      "targets": [
-        "https://www.linkedin.com/in/j-hamblin",
-        "https://www.linkedin.com/in/nilayshah-catalyst-right",
-        "https://www.linkedin.com/in/mimckenzie",
-        "https://www.linkedin.com/in/christiansalas",
-        "https://www.linkedin.com/in/ginotieri",
-        "https://www.linkedin.com/in/glayton",
-        "https://www.linkedin.com/in/lpbaillargeon",
-        "https://www.linkedin.com/in/eyal-greifner-907b82a",
-        "https://www.linkedin.com/in/biswasnair",
-        "https://www.linkedin.com/in/antony-aguilera-aa049187"
+      "run_id": "2026-07-17-3446d08b",
+      "started_at": "2026-07-17T18:54:29.918329+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": null,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
       ],
-      "errors": [
-        {
-          "step": 3,
-          "error": "httpError (exit code 7) — LinkedIn API unavailable, fetch failed on all attempts. Same issue as 2026-06-09-828a5bcb. Resumable when API recovers.",
-          "at": "2026-06-09T15:00:00.000000+00:00",
-          "leads_attempted": [
-            "https://www.linkedin.com/in/j-hamblin",
-            "https://www.linkedin.com/in/nilayshah-catalyst-right"
-          ]
-        }
+      "counts": {
+        "criteria_refresh": "skipped (file exists, run 30 mod 7 != 0)",
+        "new_stubs": 64,
+        "skipped_already_seen": 4,
+        "skipped_per_firm_cap": 3,
+        "dropped_excluded_company": 0,
+        "classified": 64,
+        "hot": 9,
+        "warm": 13,
+        "cold": 42,
+        "surfaced_for_approval": 64,
+        "links_file": "state/pending_approvals/2026-07-17-3446d08b-links.json",
+        "email_sent": false
+      },
+      "errors": [],
+      "notes": "Company-anchored abbreviated run. Pre-run reconcile: 7 approved leads from 2026-07-16-a42df1d0 marked request_sent/send_channel=manual (operator sent manually); 11 URLs deleted from links file marked operator_rejected.",
+      "queries_run": [
+        "NetSuite / companies: Rand Group,Connor Group,Centric,Crowe,Forvis Mazars,EisnerAmper,Luxent,GoVirtualOffice / US,CA,UK,AU (25 results, 21 new)",
+        "NetSuite / companies: InnoVergent,BCS ProSoft,NXTurn,TrueCloud,SC&H,BlueCollar,Streams,Anneal / US,CA,UK,AU (25 results, 22 new)",
+        "NetSuite / companies: C&J ERP,Web Control,Cutcher & Neale,Ironborn,Cloud Culture,IBT,PKF Digital,ProjectLine / US,CA,UK,AU (25 results)"
+      ],
+      "last_updated": "2026-07-17T19:33:27.267601+00:00",
+      "completed_at": "2026-07-17T19:33:27.267601+00:00",
+      "files_written": [
+        "2026-07-17-3446d08b-links.json"
       ]
+    },
+    {
+      "run_id": "2026-07-22-7f77db9a",
+      "started_at": "2026-07-22T12:03:42.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": null,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1656,
+        "seen_size_before": 2074,
+        "exclusion_set_size": 3670,
+        "total_search_results": 51,
+        "skipped_exclusion": 1,
+        "deferred_per_firm_cap": 19,
+        "new_stubs": 31,
+        "classified": 31,
+        "hot": 2,
+        "warm": 2,
+        "cold": 27,
+        "surfaced_for_approval": 31,
+        "email_sent": false
+      },
+      "errors": [],
+      "step1_note": "criteria refresh skipped: file exists, run 52 (incl. 24 archived) mod 7 = 3 != 0",
+      "step2_note": "company-anchored variant, 10th anchor set (fresh firms: Blytheco, RKL eSolutions, NexTec Group, Anchin, CLA, Plante Moran, Grant Thornton, Moss Adams / Rea & Associates, K3 Business Solutions, Absoft, In Cloud Solutions, Codestone, Adaptive Business Solutions, JMB Business Consulting, FIT Consulting / Fastnet, Advanced Business Solutions, Endeavour Solutions, Solution7, K Corp, InTheCloud, Blue Moon Industries, NetSage). Query 3 anchors did not resolve on LinkedIn -- API fell back to generic NetSuite/ERP term matches, mostly Microsoft Dynamics-adjacent staff (excluded employer). Per-firm cap of 3 applied to Grant Thornton, Baker Tilly (unlisted anchor, surfaced via fuzzy match/Moss Adams merger), and Microsoft; excess deferred without seen.json write so they can resurface.",
+      "queries_run": [
+        "NetSuite / companies: Blytheco,RKL eSolutions,NexTec Group,Anchin,CLA,Plante Moran,Grant Thornton,Moss Adams / US,CA,UK,AU (25 results)",
+        "NetSuite / companies: Rea & Associates,K3 Business Solutions,Absoft,In Cloud Solutions,Codestone,Adaptive Business Solutions,JMB Business Consulting,FIT Consulting / US,CA,UK,AU (1 result)",
+        "NetSuite / companies: Fastnet,Advanced Business Solutions,Endeavour Solutions,Solution7,K Corp,InTheCloud,Blue Moon Industries,NetSage / US,CA,UK,AU (25 results, anchors did not match -- generic fallback)"
+      ],
+      "last_updated": "2026-07-22T12:03:42.000000+00:00",
+      "step3_note": "abbreviated mode: Step 3 never runs, no person fetch calls",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; 10th anchor set",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-22-7f77db9a-links.json"
+      ],
+      "completed_at": "2026-07-22T12:03:42.000000+00:00"
+    },
+    {
+      "run_id": "2026-07-22-46cab737",
+      "started_at": "2026-07-22T14:26:44.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": null,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1656,
+        "seen_size_before": 2105,
+        "exclusion_set_size": 3701,
+        "total_search_results": 64,
+        "skipped_exclusion": 8,
+        "deferred_per_firm_cap": 3,
+        "new_stubs": 53,
+        "classified": 53,
+        "hot": 10,
+        "warm": 7,
+        "cold": 36,
+        "surfaced_for_approval": 53,
+        "email_sent": false
+      },
+      "errors": [],
+      "step1_note": "criteria refresh skipped: file exists, run 53 (incl. 24 archived) mod 7 = 4 != 0",
+      "step2_note": "company-anchored variant, 11th anchor set. Pre-search: discovered real firms via 3x linkedin company search (\"NetSuite Alliance Partner\", \"NetSuite Solution Provider\", \"NetSuite partner\") to avoid last run's issue of speculative firm names not resolving on LinkedIn. Anchors: Consule Solutions,GIR Software Services,S Universe,Continuous Scale,Exafort,3-11 Cloud Consulting,CloudAlp Technologies,DevTeamPro / LatamReady,Solution Source,ConnectaCloud,Navsoft,Cinntra,StratusGreen,The Parker Initiative,Efficientix / Bista Solutions,The Partner Index,The Transformation Group,SA Technologies,PreludeSys,Victrix,OP Technology,OpenTeQ Technologies. Per-firm cap of 3 applied to Solution Source (6 hits); excess deferred without seen.json write.",
+      "queries_run": [
+        "NetSuite / companies: Consule Solutions,GIR Software Services,S Universe,Continuous Scale,Exafort,3-11 Cloud Consulting,CloudAlp Technologies,DevTeamPro / US,CA,UK,AU (25 results)",
+        "NetSuite / companies: LatamReady,Solution Source,ConnectaCloud,Navsoft,Cinntra,StratusGreen,The Parker Initiative,Efficientix / US,CA,UK,AU (25 results)",
+        "NetSuite / companies: Bista Solutions,The Partner Index,The Transformation Group,SA Technologies,PreludeSys,Victrix,OP Technology,OpenTeQ Technologies / US,CA,UK,AU (14 results)"
+      ],
+      "last_updated": "2026-07-22T14:26:44.000000+00:00",
+      "step3_note": "abbreviated mode: Step 3 never runs, no person fetch calls",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; 11th anchor set, all verified-real firms",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-22-46cab737-links.json"
+      ],
+      "completed_at": "2026-07-22T14:26:44.000000+00:00"
+    },
+    {
+      "run_id": "2026-07-22-6a1df972",
+      "started_at": "2026-07-22T16:24:51.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": null,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1656,
+        "seen_size_before": 2158,
+        "exclusion_set_size": 3754,
+        "total_search_results": 55,
+        "skipped_exclusion": 8,
+        "deferred_per_firm_cap": 14,
+        "new_stubs": 33,
+        "classified": 33,
+        "hot": 5,
+        "warm": 5,
+        "cold": 23,
+        "surfaced_for_approval": 33,
+        "email_sent": false
+      },
+      "errors": [],
+      "step1_note": "criteria refresh skipped: file exists, run 54 (incl. 24 archived) mod 7 = 5 != 0",
+      "step2_note": "company-anchored variant, 12th anchor set. Discovered fresh firms via 3x company search (\"NetSuite partner\" UK/AU, \"SuiteCommerce agency\", \"NetSuite consulting\" US/CA). Anchors: TECHOHANA,Suite-Select,GSC Technologies,AbsoluteLabs,SuiteLabs,Winklix / Doozy Solutions,1218 Global,NetSuite Consulting Group,Nessium,Consulting to Success,NetGrowth Partners / Buxton Consulting,CrossCountry Consulting,Kranz Consulting,Highspring,Arthur Lawrence. Query 1 and 2 anchors mostly did not resolve -- fell back to generic term matches (query 2 surfaced almost entirely Oracle/NetSuite internal staff, excluded employer). Query 3 anchor CrossCountry Consulting resolved very strongly (real mid-market NetSuite implementation consultancy). Per-firm cap of 3 applied to CrossCountry Consulting (7 hits, kept top by seniority) and to the Oracle/NetSuite excluded-employer cluster (13 hits treated as one employer bucket, kept 3 for operator visibility); excess deferred without seen.json write.",
+      "queries_run": [
+        "NetSuite / companies: TECHOHANA,Suite-Select,GSC Technologies,AbsoluteLabs,SuiteLabs,Winklix / US,CA,UK,AU (5 results, anchors mostly unresolved)",
+        "NetSuite / companies: Doozy Solutions,1218 Global,NetSuite Consulting Group,Nessium,Consulting to Success,NetGrowth Partners / US,CA,UK,AU (25 results, anchors did not resolve -- generic fallback, mostly Oracle/NetSuite staff)",
+        "NetSuite / companies: Buxton Consulting,CrossCountry Consulting,Kranz Consulting,Highspring,Arthur Lawrence / US,CA,UK,AU (25 results, CrossCountry Consulting resolved strongly)"
+      ],
+      "last_updated": "2026-07-22T16:24:51.000000+00:00",
+      "step3_note": "abbreviated mode: Step 3 never runs, no person fetch calls",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; 12th anchor set",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-22-6a1df972-links.json"
+      ],
+      "completed_at": "2026-07-22T16:24:51.000000+00:00"
+    },
+    {
+      "run_id": "2026-07-23-8d39dda6",
+      "started_at": "2026-07-23T16:14:51.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": null,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": true,
+        "connections_cache_size": 1675,
+        "seen_size_before": 2191,
+        "exclusion_set_size": 3791,
+        "total_search_results": 43,
+        "skipped_exclusion": 2,
+        "deferred_per_firm_cap": 0,
+        "new_stubs": 41,
+        "classified": 41,
+        "hot": 6,
+        "warm": 2,
+        "cold": 33,
+        "surfaced_for_approval": 41,
+        "email_sent": false
+      },
+      "errors": [],
+      "step1_note": "criteria refresh skipped: file exists, run 55 (incl. 24 archived) mod 7 = 6 != 0",
+      "step2_note": "company-anchored variant, 13th anchor set. Connections cache was expired (>7 days) so rebuilt via 3x connection list (1675 unioned). Discovered fresh firms via 2x company search (\"NetSuite reseller\", \"Oracle NetSuite integration partner\"). Anchors: Daston Corporation,MIG & Co.,Zero Point ERP Solutions,Jayel Cloud,Encodle Systems,SuiteMigration / West Cloud Consulting,NSMarketplace,Hathority,Nsight,RITWIK Infotech,Canus Tech / Sigmasoft,Rapidflow,MindStream Analytics,AppSys Global,Nova Module. Good resolution rate across all 3 queries. No firm exceeded the per-firm cap of 3 this run, so no deferrals.",
+      "queries_run": [
+        "NetSuite / companies: Daston Corporation,MIG & Co.,Zero Point ERP Solutions,Jayel Cloud,Encodle Systems,SuiteMigration / US,CA,UK,AU (7 results)",
+        "NetSuite / companies: West Cloud Consulting,NSMarketplace,Hathority,Nsight,RITWIK Infotech,Canus Tech / US,CA,UK,AU (12 results)",
+        "NetSuite / companies: Sigmasoft,Rapidflow,MindStream Analytics,AppSys Global,Nova Module / US,CA,UK,AU (24 results)"
+      ],
+      "last_updated": "2026-07-23T16:14:51.000000+00:00",
+      "step3_note": "abbreviated mode: Step 3 never runs, no person fetch calls",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; 13th anchor set",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-23-8d39dda6-links.json"
+      ],
+      "completed_at": "2026-07-23T16:14:51.000000+00:00"
+    },
+    {
+      "run_id": "2026-07-23-572e44d0",
+      "started_at": "2026-07-23T17:28:59.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": null,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1675,
+        "seen_size_before": 2232,
+        "exclusion_set_size": 3832,
+        "total_search_results": 47,
+        "skipped_exclusion": 1,
+        "deferred_per_firm_cap": 16,
+        "new_stubs": 30,
+        "classified": 30,
+        "hot": 3,
+        "warm": 1,
+        "cold": 26,
+        "surfaced_for_approval": 30,
+        "email_sent": false
+      },
+      "errors": [],
+      "step1_note": "criteria refresh due by rule (run 56 incl. 24 archived mod 7 == 0) but SKIPPED deliberately, per precedent set in run 2026-07-09-864c9d9f: agency-netsuite.json is hand-crafted and extensively refined via operator feedback across many sessions (excluded_employers rule, SAP-out-of-scope anti-pattern, excluded_companies Tavano Team, company-anchored query-building style). criteria-extractor would overwrite these with generic connection-pattern-derived criteria, destroying the refinement. Operator should refresh manually if desired.",
+      "step2_note": "company-anchored variant, 14th anchor set. Discovered fresh firms via 2x company search (\"NetSuite managed services\", \"Oracle NetSuite VAR\"). Anchors: Clarium Managed Services,MonoSpear Technologies,Velosio,Mirketa,RevGurus / Computer Technology Resources,SynergyTop,ContinuServe,Enavate / CriticalRiver,TRUGlobal,Keel & Company,American WorkFlows. Velosio (18 hits) and Enavate (4 hits) each dominated their query -- both are primarily Microsoft Dynamics 365 partners with only a thin NetSuite practice; per-firm cap of 3 applied to each, keeping the most clearly NetSuite-specific and most senior titles; excess deferred without seen.json write.",
+      "queries_run": [
+        "NetSuite / companies: Clarium Managed Services,MonoSpear Technologies,Velosio,Mirketa,RevGurus / US,CA,UK,AU (25 results, Velosio dominated)",
+        "NetSuite / companies: Computer Technology Resources,SynergyTop,ContinuServe,Enavate / US,CA,UK,AU (16 results, Enavate dominated)",
+        "NetSuite / companies: CriticalRiver,TRUGlobal,Keel & Company,American WorkFlows / US,CA,UK,AU (6 results)"
+      ],
+      "last_updated": "2026-07-23T17:28:59.000000+00:00",
+      "step3_note": "abbreviated mode: Step 3 never runs, no person fetch calls",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; 14th anchor set; per-person domain-gate nuance applied for Velosio/Enavate staff (Dynamics-ecosystem majority, NetSuite explicit-mention minority)",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-23-572e44d0-links.json"
+      ],
+      "completed_at": "2026-07-23T17:28:59.000000+00:00"
+    },
+    {
+      "run_id": "2026-07-24-a1faffd7",
+      "started_at": "2026-07-24T17:41:09.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": null,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1675,
+        "seen_size_before": 2262,
+        "exclusion_set_size": 3862,
+        "total_search_results": 23,
+        "skipped_exclusion": 2,
+        "deferred_per_firm_cap": 1,
+        "new_stubs": 20,
+        "classified": 20,
+        "hot": 1,
+        "warm": 4,
+        "cold": 15,
+        "surfaced_for_approval": 20,
+        "email_sent": false
+      },
+      "errors": [],
+      "step1_note": "criteria refresh skipped: file exists, run 57 (incl. 24 archived) mod 7 = 1 != 0",
+      "step2_note": "company-anchored variant, 15th anchor set, first geographic pivot toward Canada + UK for diversity (prior sets skewed heavily US). Discovered fresh firms via 4x company search (\"NetSuite ERP consultancy\" Canada, \"NetSuite boutique agency\" 0 results, \"NetSuite Alliance Partner\" Australia -- all prior, \"NetSuite\" UK sizes 1-200 -- rich hit). Anchors: AINN Technologies,Haya Solutions,AA Consultancy,SuiteSquare,NSGPT (Canada) / Unlock IQ,RXD Systems,ProScope,SuiteSparkle,Apex Netsuite,Cloud Systems Consulting (UK) / ERP System Consulting,Lee Brookes,RK NetSuite Trainer,3EN Cloud,ENCO Consulting,OneShip (UK). Per-firm cap of 3 applied to ProScope/Cooper Software (4 hits, shared leadership/marketing team); excess deferred without seen.json write.",
+      "queries_run": [
+        "NetSuite / companies: AINN Technologies,Haya Solutions,AA Consultancy,SuiteSquare,NSGPT / Canada (4 results)",
+        "NetSuite / companies: Unlock IQ,RXD Systems,ProScope,SuiteSparkle,Apex Netsuite,Cloud Systems Consulting / UK (17 results)",
+        "NetSuite / companies: ERP System Consulting,Lee Brookes,RK NetSuite Trainer,3EN Cloud,ENCO Consulting,OneShip / UK (2 results)"
+      ],
+      "last_updated": "2026-07-24T17:41:09.000000+00:00",
+      "step3_note": "abbreviated mode: Step 3 never runs, no person fetch calls",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; 15th anchor set, first UK/Canada geographic pivot",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "files_written": [
+        "2026-07-24-a1faffd7-links.json"
+      ],
+      "completed_at": "2026-07-24T17:41:09.000000+00:00"
     }
   ],
   "retries": [
@@ -379,7 +1287,9 @@
       "phase": "search-connections",
       "criteria_used": "netsuite-latam",
       "resume_from_step": 1,
-      "steps_completed": [0],
+      "steps_completed": [
+        0
+      ],
       "errors": [
         {
           "step": 2,
