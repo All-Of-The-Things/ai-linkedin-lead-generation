@@ -4,7 +4,7 @@
 
 This repo is a four-phase LinkedIn lead generation pipeline for AOTT. Each phase is gated by human approval and triggers an email notification via Resend when it completes.
 
-The LinkedIn skill lives at `.claude/skills/linkedin/SKILL.md`. Read it before running any `linkedin` CLI command.
+LinkedIn automation goes through a **provider abstraction** — see **LinkedIn Provider** below. The default provider is ConnectSafely (`.claude/skills/connectsafely/SKILL.md`); LinkedAPI (`.claude/skills/linkedin/SKILL.md`) is the manual fallback. Read the resolved provider's skill file before performing any LinkedIn operation.
 The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sending any email.
 
 ---
@@ -44,12 +44,12 @@ The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sendi
 
 | Path | Purpose |
 |------|---------|
-| `config/pipeline.json` | Operator config: limits, timing, active criteria pointer, notification settings |
+| `config/pipeline.json` | Operator config: limits, timing, active criteria pointer, active LinkedIn provider, notification settings |
 | `config/criteria/` | Named criteria files; each is a self-contained search profile |
 | `state/leads.json` | Master lead ledger, keyed by normalized LinkedIn URL |
 | `state/seen.json` | Dedupe index — append-only, never remove a URL |
 | `state/pending_approvals/` | Human interface: classification-split files per run (`YYYY-MM-DD-<run_id>-hot.json`, `-warm.json`, `-cold.json`), links files from abbreviated runs (`YYYY-MM-DD-<run_id>-links.json`), notes-ready file after Phase 2 (`YYYY-MM-DD-notes-ready.json`), followup files (`YYYY-MM-DD-followup.json`) |
-| `state/raw/` | Raw `linkedin person fetch` payloads, one `<slug>.json` per lead — gitignored, re-derivable |
+| `state/raw/` | Raw `fetch_profile` payloads, one `<slug>.json` per lead — gitignored, re-derivable |
 | `state/archive/` | Maintenance output: `leads-archive.json`, `run_log-archive.json` — written only by `/pipeline-maintenance` |
 | `state/run_log.json` | Audit log of every pipeline run |
 | `templates/` | Message style guides used by `agents/message-composer.md` |
@@ -61,6 +61,52 @@ The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sendi
 | `.claude/commands/deliver-messages.md` | Phase 4 slash command (`/deliver-messages`) |
 | `.claude/commands/search-connections-abbreviated.md` | Phase 1 minimal-footprint variant (`/search-connections-abbreviated`) |
 | `.claude/commands/pipeline-maintenance.md` | Manual state housekeeping (`/pipeline-maintenance`) |
+
+---
+
+## LinkedIn Provider
+
+Every pipeline step that talks to LinkedIn calls one of the **abstract operations** below rather than a hardcoded command. The active provider resolves each run and decides which concrete skill/call handles each operation.
+
+**Resolution** (mirrors Criteria Selection):
+1. `config/pipeline.json → linkedin_provider.active` — `"connectsafely"` or `"linkedapi"`.
+2. **Hardcoded fallback** — if missing or invalid, use `"connectsafely"`.
+
+Record the resolved provider in the current run_log entry as `provider_used: "<name>"` (same run, same field style as `criteria_used`), set in Step 0/1.
+
+### Operations table
+
+| Operation | connectsafely (default) | linkedapi (fallback) |
+|---|---|---|
+| `search_people` | ConnectSafely People Search — see `.claude/skills/connectsafely/SKILL.md` | `linkedin person search --position ... --industries ... --locations ... --limit ... --json -q` |
+| `list_connections` | ConnectSafely `GET /linkedin/connections` | `linkedin connection list --limit 3000 --json -q` |
+| `fetch_profile` | ConnectSafely `POST /linkedin/profile` | `linkedin person fetch <url> --experience --json -q` |
+| `connection_status` | ConnectSafely `GET /linkedin/relationship/<profileId>` | `linkedin connection status <url> --json -q` |
+| `get_messages` | ConnectSafely `GET /linkedin/messaging/conversation-details` | `linkedin message get <url> --json -q` |
+| `send_connection_request` | ConnectSafely `POST /linkedin/connect` (300-char note cap) | `linkedin connection send <url> --note '<note>' --json -q` |
+| `send_message` | ConnectSafely `POST /linkedin/messaging/send` | `linkedin message send <url> '<message>' --json -q` |
+| `react_to_post` | ConnectSafely `POST /linkedin/posts/react` | `linkedin post react <url> --type <reaction> --json -q` |
+| `comment_on_post` | ConnectSafely `POST /linkedin/posts/comment` | `linkedin post comment <url> '<text>' --json -q` |
+| `account_status` | MCP server connected + authenticated (check `ToolSearch`/`claude mcp list`) | `linkedin account list` |
+
+Each operation's exact request/response shape and field-normalization rules (so `leads.json` stays provider-agnostic — `name`, `headline`, `location`, `industry`, `current_title`, `current_company` keyed by normalized URL) live in the resolved provider's skill file.
+
+### Normalized error categories
+
+Pipeline steps and the Rate Limit Handling section below reason about these categories, not raw provider signals:
+
+| Category | connectsafely signal | linkedapi signal |
+|---|---|---|
+| `auth_error` | HTTP 401 | exit code 2 |
+| `rate_limited` | HTTP 429 (+ `X-RateLimit-*` headers) | exit code 6 |
+| `invalid_args` | HTTP 400 | exit code 5 |
+| `network_error` | request timeout / connection failure | exit code 7 |
+| `subscription_required` | *(no equivalent — linkedapi-only)* | exit code 3 |
+| `async_timeout` | *(no equivalent — linkedapi-only; ConnectSafely calls are synchronous)* | exit code 8 (`workflowId` → poll `linkedin workflow status <id> --wait --json -q`) |
+
+### Switching providers
+
+Set `config/pipeline.json → linkedin_provider.active` to `"linkedapi"` to fall back (e.g. if ConnectSafely's MCP server or account is unavailable), or back to `"connectsafely"` to return to the default. No other file needs to change — every step already calls the abstract operation and looks up the concrete provider here.
 
 ---
 
@@ -111,7 +157,7 @@ Resolve the active criteria file using the **Criteria Selection** rules above. S
 **If running:**
 - Invoke `agents/criteria-extractor.md` as a subagent, passing the resolved criteria name.
 - That agent fetches connections, analyzes patterns, and writes to `config/criteria/<criteria_used>.json`.
-- On exit code 6 (rate limit): log, skip this step, continue with the existing criteria file. If no file exists and rate limited, abort run and log.
+- On `rate_limited`: log, skip this step, continue with the existing criteria file. If no file exists and rate limited, abort run and log.
 
 Mark step complete in run_log before moving on.
 
@@ -121,36 +167,30 @@ Mark step complete in run_log before moving on.
 
 1. Check `state/connections_cache.json` (`connections_cache.file` in `pipeline.json`).
    - If the file exists and `cached_at` is within the last `connections_cache.ttl_days` days (default 7): load `urls` from the cache as the exclusion set. No API calls needed.
-   - If the file is missing or expired: run `linkedin connection list --limit 3000 --json -q` **three times in a row**, union all returned `publicUrl` values (normalize: lowercase, strip trailing slash), write to `state/connections_cache.json` as `{ "cached_at": "<now ISO>", "connection_count": N, "urls": [...sorted...] }`, then use that as the exclusion set.
+   - If the file is missing or expired: call `list_connections` **three times in a row**, union all returned URLs (normalize: lowercase, strip trailing slash), write to `state/connections_cache.json` as `{ "cached_at": "<now ISO>", "connection_count": N, "urls": [...sorted...] }`, then use that as the exclusion set.
 2. A search result is skipped if its URL appears in `state/seen.json` OR in this exclusion set. Do NOT write existing connections into `seen.json` — the exclusion set is used in-memory per run only.
 
 1. Load `config/criteria/<criteria_used>.json` (resolved in Step 1) and `config/pipeline.json`.
 2. Build up to `search.max_search_queries_per_run` queries by rotating through combinations of `target_roles`, `target_industries`, and `target_locations`. Track the rotation cursor in the current run_log entry (`search_cursor`).
-3. For each query, run:
-   ```
-   linkedin person search --position "<role>" --industries "<industry>" --locations "<location>" --limit <max_results_per_run> --json -q
-   ```
+3. For each query, call `search_people` with role/industry/location filters and `--limit`/`count` set to `max_results_per_run`. See the resolved provider's skill file for the exact request shape — the connectsafely provider may need to fold a free-text location into `keywords` rather than a strict filter (see `.claude/skills/connectsafely/SKILL.md`).
 4. For each returned person URL:
    - Normalize: lowercase, strip trailing slash, use the canonical `/in/` form.
    - Check `state/seen.json` AND the in-memory exclusion set. If present in either, skip.
    - **Connection status check:** Skipped here for performance (N candidates × ~30s is too slow). False positives are caught in Step 5 for hot/warm leads and at the send step for any that slip through.
    - Add to `seen.json` immediately (write-through).
    - Add a stub record to `leads.json` with `status: "new"`, `first_seen_run: <today>`. **Also write any fields returned by the search API** — at minimum `name`, `headline`, `location` — into the stub. These are available from search results without a separate fetch and are critical when enrichment is disabled.
-5. On exit code 6: wait `rate_limit.retry_delay_seconds`, retry up to `rate_limit.max_retries`. If still failing, log, skip that query, continue to next.
+5. On `rate_limited`: wait `rate_limit.retry_delay_seconds`, retry up to `rate_limit.max_retries`. If still failing, log, skip that query, continue to next.
 
 Mark step complete in run_log.
 
 ### Step 3 — Profile Enrichment (conditional)
 
 1. Read `pipeline.json → enrichment.enabled`.
-2. **If `false` (default):** Log "enrichment disabled by pipeline config". Mark step complete in run_log. Proceed to Step 4 immediately — no `linkedin person fetch` calls are made.
-3. **If `true`:** For each lead in `leads.json` with `status: "new"`:
-   ```
-   linkedin person fetch <url> --experience --json -q
-   ```
+2. **If `false` (default):** Log "enrichment disabled by pipeline config". Mark step complete in run_log. Proceed to Step 4 immediately — no `fetch_profile` calls are made.
+3. **If `true`:** For each lead in `leads.json` with `status: "new"`, call `fetch_profile` (with experience included).
    Populate: `name`, `headline`, `location`, `industry`, `current_title`, `current_company`. Write the raw fetch payload to `state/raw/<slug>.json` (slug = the URL's lowercased `/in/` handle, e.g. `.../in/irmarios` → `irmarios.json`). `leads.json` never stores `linkedin_raw`.
 
-   On exit code 6: leave lead at `"new"` (retry next run — this step is re-entrant). Continue to next lead.
+   On `rate_limited`: leave lead at `"new"` (retry next run — this step is re-entrant). Continue to next lead.
    On other errors: append to lead's `errors` array, leave at `"new"`.
 
 Mark step complete in run_log.
@@ -195,17 +235,9 @@ Mark step complete in run_log.
    Set `enriched` to `false` when `pipeline.json → enrichment.enabled` is false — in that case `current_title` and `current_company` will be null (visible to the user as a signal to validate manually). `already_connected` and `has_conversation` are populated by the checks in step 4 below. Cold entries get `null` for both (checks are skipped for cold).
 4. **Connection status + conversation checks (hot and warm only):** Before writing any files, run two checks on every hot and warm entry. Cold leads are skipped — the API cost is not worth it.
 
-   a. **Connection status check:**
-      ```
-      linkedin connection status <url> --json -q
-      ```
-      If `data.status` is `"connected"` or `"pending"`: add URL to `seen.json`, set `already_connected: true` on the lead in `leads.json`, and **remove the entry from the approval batch** — do not write it to any file. On exit code 6: apply rate-limit retry logic; if still failing, include the entry with `already_connected: null` (unknown, user must verify manually).
+   a. **Connection status check:** call `connection_status`. If the result indicates already connected or a pending invitation (see the resolved provider's skill file for the exact field — e.g. connectsafely's `connected || invitationSent`, linkedapi's `data.status` in `"connected"`/`"pending"`): add URL to `seen.json`, set `already_connected: true` on the lead in `leads.json`, and **remove the entry from the approval batch** — do not write it to any file. On `rate_limited`: apply rate-limit retry logic; if still failing, include the entry with `already_connected: null` (unknown, user must verify manually).
 
-   b. **Conversation check** (only for entries that passed the connection check above):
-      ```
-      linkedin message get <url> --json -q
-      ```
-      If the response contains any messages (`data.messages` is non-empty): set `has_conversation: true` on the entry. Otherwise set `has_conversation: false`. On error or rate-limit: set `has_conversation: null`. The `has_conversation` field is informational only — it does not gate approval.
+   b. **Conversation check** (only for entries that passed the connection check above): call `get_messages`. If the response contains any messages: set `has_conversation: true` on the entry. Otherwise set `has_conversation: false`. On error or rate-limit: set `has_conversation: null`. The `has_conversation` field is informational only — it does not gate approval.
 
 5. **Split entries by classification** (if `review.split_by_classification` is true, which is the default):
    - Group remaining entries (those that passed the connection check) into `hot`, `warm`, and `cold` buckets.
@@ -242,7 +274,7 @@ Runs in **`/generate-messages`** (Phase 2).
    - Classification/legacy entries older than `approval.approval_timeout_days` days (by `surfaced_at`, falling back to filename date) with `decision: null`: stamp `decision: "rejected"` and `note_decision: "rejected"` on the entry. Additionally, in `leads.json` set `status: "rejected"`, `approval_decision: "expired"`, `approval_decided_at` — but only when the lead is still at `status: "classified"` AND the URL is not approved anywhere (no entry with `decision: "approved"`, no links-file `"approved"` array). A URL approved elsewhere still gets the entry stamp (the null entry is a stale duplicate surface) but its lead is never touched. Entries remain in the file — only decision fields are filled in.
    - Links files whose filename date is more than `approval.approval_timeout_days` days old: every URL still in `hot`/`warm`/`cold` is expired — move it to an `"expired"` array in that file (create if absent), and in `leads.json` set `status: "rejected"`, `approval_decision: "expired"`, `approval_decided_at`. Never expire a URL that is approved anywhere (any links `"approved"` array or any entry with `decision: "approved"`), and never touch a lead whose status is not `"classified"`. A URL never leaves a links file — it only moves between arrays.
 4. For each eligible lead:
-   - Fetch the full profile using `linkedin person fetch <url> --experience --json -q` to get position history before drafting.
+   - Fetch the full profile by calling `fetch_profile` (with experience included) to get position history before drafting.
    - **Write back** the fetched `name`, `headline`, `current_title`, `current_company`, `industry`, `location` to the lead in `leads.json` (freshest fetch wins — see State File Contracts), and write the raw payload to `state/raw/<slug>.json`. Never store `linkedin_raw` in `leads.json`.
    - If the fetch fails after retries: fall back to an existing `state/raw/<slug>.json` sidecar if present; otherwise draft from the lead's existing fields.
    - Invoke `agents/message-composer.md` as a subagent with the lead record, passing the raw payload as `linkedin_raw` (from the fresh fetch, else the sidecar), `message_type: "connection_note"`, and `criteria_used`. Receive back the drafted note string.
@@ -287,9 +319,9 @@ Runs in **`/send-connections`** (Phase 3).
 4. From the combined set, find entries where the lead in `leads.json` still has `status: "classified"`.
 3. For each (up to `outreach.max_connection_requests_per_run` per run):
    - Use `edited_note` if non-null, otherwise use `note_draft`. The message must be non-null — do not send without a note.
-   - Run: `linkedin connection send <url> --note '<note>' --json -q`
+   - Call `send_connection_request` with the note. (connectsafely caps `customMessage` at 300 characters — truncate or flag if the drafted note exceeds it before sending.)
    - On success: `status → "request_sent"`, set `connection_requested_at`, set `connection_note`.
-   - On exit code 6: retry per rate_limit config. If still failing: log error, leave at `"classified"` for next run.
+   - On `rate_limited`: retry per rate_limit config. If still failing: log error, leave at `"classified"` for next run.
    - On other failure: `status → "request_failed"`, log error.
 4. For entries with `note_decision: "rejected"`: `status → "rejected"`, set `approval_decided_at`, `approval_decision`.
 5. Update `approval_decided_at` and `approval_decision` on all processed leads.
@@ -303,7 +335,7 @@ Mark step complete in run_log.
 ### Step 7 — Detect Accepted Connections
 
 1. Get the timestamp of the previous run's `completed_at` from `run_log.json`.
-2. Run `linkedin connection list --limit 3000 --json -q` **three times** and union all returned URLs to maximize coverage before matching against `request_sent` leads.
+2. Call `list_connections` **three times** and union all returned URLs to maximize coverage before matching against `request_sent` leads.
 3. Normalize all returned URLs.
 4. For each lead in `leads.json` with `status: "request_sent"`: check if their URL appears in the connection list.
 5. If found:
@@ -356,12 +388,12 @@ Mark step complete in run_log. **Phase 3 ends here.** Do not proceed to Step 9 �
 2. Find entries with `decision: "approved"` where the lead's `status` is still `"followup_queued"`.
 3. For each (up to `followup.max_followups_per_run` per run):
    - Use `edited_message` if non-null, otherwise use `followup_draft`.
-   - Run: `linkedin message send <url> '<message>' --json -q`
+   - Call `send_message`.
    - On success: `status → "followup_sent"`, set `followup_sent_at`, set `followup_approved_at`.
    - Increment `followup_sequence` on the lead.
    - If `followup_sequence < followup.max_sequence`: `status → "connected"`, recompute `followup_eligible_after` for the next follow-up window.
    - If `followup_sequence >= followup.max_sequence`: leave at `"followup_sent"` (sequence complete).
-   - On exit code 6: retry per config. If still failing: log, leave at `"followup_queued"` for next run.
+   - On `rate_limited`: retry per config. If still failing: log, leave at `"followup_queued"` for next run.
    - On other failure: `status → "followup_failed"`, log error.
 
 **Safety check**: `require_approval_before_send` must be `true`. Refuse to send if false.
@@ -390,7 +422,7 @@ A minimal-footprint variant of Phase 1. Same discovery, same classification — 
 Runs Steps 0, 1, 2, and 4 exactly as written above, with these deltas:
 
 - **Step 0**: create the run entry with `phase: "search-connections-abbreviated"`. Resume follows the phase-matching rule in Step 0.
-- **Step 3 never runs** — regardless of `pipeline.json → enrichment.enabled`. No `linkedin person fetch` calls. Enrichment happens later, per approved lead, in Step 6a.
+- **Step 3 never runs** — regardless of `pipeline.json → enrichment.enabled`. No `fetch_profile` calls. Enrichment happens later, per approved lead, in Step 6a.
 - **Step 4 deltas**: classify only leads created by the current run (`run_id` match) — stale `status: "new"` leads from older runs are left untouched. The classifier still returns `score_rationale`; do **not** persist it to `leads.json`. Lead stubs in this mode carry only: `url`, `status`, `classification`, `score`, `name`, `headline`, `location`, `run_id`, `criteria`, `first_seen_run`, `last_updated`. Never `linkedin_raw`.
 - **Step 5 is replaced by Step 5L.** The connection-status and conversation checks are skipped entirely — false positives are caught by Step 6b's `status: "classified"` gate and the send-time safety checks.
 - **No email** — do not invoke `agents/email-notifier.md`. The links file is the review surface.
@@ -415,16 +447,18 @@ Mark step complete in run_log (record as step `5`). **Phase 1 ends here.**
 
 ## Rate Limit Handling
 
-On exit code 6 from any `linkedin` command:
+This section reasons in terms of the normalized error categories defined in **LinkedIn Provider** above — see that section for how each category maps to a concrete signal (HTTP status vs. exit code) per provider.
+
+On `rate_limited` from any operation:
 1. Wait `rate_limit.retry_delay_seconds` seconds.
 2. Retry up to `rate_limit.max_retries` times.
-3. If still exit code 6 after all retries: **log the failure** (step name, URL if applicable, timestamp) to the current run entry's `errors` array in `run_log.json`. Skip the current operation and continue the pipeline.
+3. If still `rate_limited` after all retries: **log the failure** (step name, URL if applicable, timestamp) to the current run entry's `errors` array in `run_log.json`. Skip the current operation and continue the pipeline.
 4. **Never abort the entire run** due to a single rate limit failure.
 
-Other exit codes:
-- `2` (auth): Stop immediately. Log. Tell the user to run `linkedin setup`.
-- `3` (subscription): Log and skip the failing command.
-- `8` (timeout): Check for a `workflowId` in the response, then poll `linkedin workflow status <id> --wait --json -q`.
+Other categories:
+- `auth_error`: Stop immediately. Log. Tell the user to run the resolved provider's setup (connectsafely: confirm the MCP server is connected and `CONNECTSAFELY_API_KEY`/`CONNECTSAFELY_ACCOUNT_ID` are set; linkedapi: run `linkedin setup`).
+- `subscription_required` (linkedapi only): Log and skip the failing command.
+- `async_timeout` (linkedapi only): Check for a `workflowId` in the response, then poll `linkedin workflow status <id> --wait --json -q`.
 - JSON parse failure on output: log raw output to run_log errors, skip that lead.
 
 ---

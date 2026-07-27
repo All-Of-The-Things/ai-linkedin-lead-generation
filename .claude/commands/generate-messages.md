@@ -31,4 +31,4 @@ Then run `/send-connections`.
 
 ## Rate limit handling
 
-One `linkedin person fetch` is made per approved lead before drafting (nothing is ever sent in this phase). Exit code 6 → standard retry rules from `CLAUDE.md`; on persistent failure fall back to the `state/raw/<slug>.json` sidecar or the lead's existing fields — never abort the batch. If the message-composer subagent fails, log and skip that lead — do not abort.
+One `fetch_profile` call is made per approved lead before drafting (nothing is ever sent in this phase). `rate_limited` → standard retry rules from `CLAUDE.md`; on persistent failure fall back to the `state/raw/<slug>.json` sidecar or the lead's existing fields — never abort the batch. If the message-composer subagent fails, log and skip that lead — do not abort.

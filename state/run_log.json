@@ -1260,6 +1260,106 @@
         "2026-07-24-a1faffd7-links.json"
       ],
       "completed_at": "2026-07-24T17:41:09.000000+00:00"
+    },
+    {
+      "run_id": "2026-07-27-e4555d2f",
+      "started_at": "2026-07-27T14:59:23.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": null,
+      "steps_completed": [0, 1, 2, 4, 5],
+      "step1_note": "criteria refresh skipped: agency-netsuite.json is hand-crafted and extensively refined via operator feedback (excluded_employers, SAP anti-pattern, excluded_companies, company-anchored query style) — per precedent set in runs 2026-07-09-864c9d9f and 2026-07-23-572e44d0, auto-refresh is deliberately skipped to avoid the criteria-extractor overwriting these refinements.",
+      "step2_note": "Resumed after auth was fixed (connectsafely reconnected via /mcp). Connections cache from 2026-07-23 still within 7-day TTL, reused as-is (no rebuild). Company-anchored variant, 16th anchor set: discovered fresh firms via 5x company search (\"NetSuite implementation partner\", \"NetSuite Solution Provider Australia\", \"Oracle NetSuite reseller\", \"NetSuite partner UK\", \"NetSuite consulting Canada\", \"NetSuite BPO accounting partner\", \"SuiteCommerce eCommerce agency\") since prior 15 rounds have exhausted most of the easily-discoverable US/UK/CA/AU partner-firm pool. Most newly-discovered firms were either already anchored in a prior run, outside target geography (India, Indonesia, Singapore, Kenya, Ireland), or not genuine NetSuite implementation partners (ISVs, aggregator sites, vendor community pages, unrelated-platform consultancies). Usable fresh anchors: Seibert Consulting Group, NetSuite Professional Services (Amzur), Tiara Consulting Services, GCS Group, SuiteDB, KISFORCE, Excelym LLC, NetCloud USA, Suite Solutions Group, Oloco Ltd (UK). Ran 3 search-people queries via filters.currentCompanyIds (required a non-empty top-level `keywords` field — bare filters-only calls 400'd). GCS Group, KISFORCE, NetCloud USA, Suite Solutions Group, and Oloco Ltd returned zero matching profiles (very small/thin LinkedIn presence). Amzur/NetSuite Professional Services returned zero. One candidate (Fabian De Leon, SuiteDB) was already in the exclusion set and was dropped. Yield was thin (8 new stubs) — flagging for the operator that the company-anchor well for this criteria may be running dry after 16 rounds; a role/industry rotation query or a fresh batch of company-search terms may be needed next run.",
+      "queries_run": [
+        "NetSuite / companies: Seibert Consulting Group,NetSuite Professional Services (Amzur),Tiara Consulting Services,GCS Group (10 results, 3 usable — Seibert)",
+        "NetSuite / companies: SuiteDB,KISFORCE,Excelym LLC,NetCloud USA (25 results, 5 usable — SuiteDB, Excelym)",
+        "NetSuite / companies: Suite Solutions Group,Oloco Ltd (5 results, 0 usable — no genuine company match)"
+      ],
+      "step3_note": "abbreviated mode: Step 3 never runs, no person fetch calls",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted; 16th anchor set",
+      "step4_completed_at": "2026-07-27T15:12:00.000000+00:00",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1675,
+        "seen_size_before": 2282,
+        "exclusion_set_size": 3882,
+        "total_search_results": 40,
+        "skipped_exclusion": 1,
+        "new_stubs": 8,
+        "classified": 8,
+        "hot": 1,
+        "warm": 1,
+        "cold": 2,
+        "surfaced_for_approval": 4,
+        "removed_post_hoc_excluded_company": 4,
+        "email_sent": false
+      },
+      "errors": [
+        {
+          "step": 2,
+          "error": "exit code 7 (network error / httpError fetch failed) on all LinkedIn API calls — company search (2 queries) and person search both failing. account list succeeds (local, does not hit the remote API). Retried 8 times over ~3 minutes, no recovery. Service appears temporarily unavailable, matching the prior 2026-06-11-c7e4f091 outage pattern. Run preserved in_progress for resumption.",
+          "at": "2026-07-27T15:02:00.000000+00:00"
+        },
+        {
+          "step": 2,
+          "error": "auth_error: mcp__connectsafely__get-account-status returned 'Unauthorized - Invalid credentials' (HTTP 401 equivalent) on resume attempt. Per CLAUDE.md Rate Limit Handling, stopping immediately rather than retrying search calls. /mcp reported connectsafely among 2 not-connected servers this session; /mcp reconnect connectsafely could not run (terminal still starting up). Run preserved in_progress for resumption once auth is fixed.",
+          "at": "2026-07-27T15:03:00.000000+00:00"
+        }
+      ],
+      "files_written": [
+        "2026-07-27-e4555d2f-links.json"
+      ],
+      "last_updated": "2026-07-27T15:12:00.000000+00:00",
+      "completed_at": "2026-07-27T15:12:00.000000+00:00",
+      "post_run_note": "Operator instruction 2026-07-27: permanently exclude Seibert Consulting Group (Jay Shepard, Robert Reyes, Debbie Lovato/SCG) and SuiteDB (Paola Ramirez) — added both to excluded_companies in ALL 7 criteria files. SuiteDB should already have been excluded from a 2026-06-09 operator note on Fabian De Leon's rejected approval entry ('exclude any contacts from SuiteDB as I have no interest whatsoever in engaging with that company') but that note was never converted into an excluded_companies entry, which is why Paola Ramirez (SuiteDB) resurfaced this run. Retroactively removed all 4 affected leads from this run's links file and deleted their stub records from leads.json (they should never have been surfaced); all 4 remain in seen.json so they can never resurface. Corrected surfaced_for_approval: 4 (was 8). User reviewed remaining links file and moved Serge Ybanez (hot) and Delvie Tinapay (warm) to approved, then sent connection requests manually outside the pipeline; both leads set to status=request_sent, approval_decision=approved, send_channel=manual."
+    },
+    {
+      "run_id": "2026-07-27-775dfe39",
+      "started_at": "2026-07-27T15:25:00.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": null,
+      "steps_completed": [0, 1, 2, 4, 5],
+      "step1_note": "criteria refresh skipped: agency-netsuite.json is hand-crafted and extensively refined via operator feedback (excluded_employers, SAP anti-pattern, excluded_companies now including SuiteDB + Seibert Consulting Group, company-anchored query style) — per precedent set in runs 2026-07-09-864c9d9f, 2026-07-23-572e44d0, and 2026-07-27-e4555d2f, auto-refresh is deliberately skipped to avoid the criteria-extractor overwriting these refinements.",
+      "step2_note": "Pivoted away from company-anchoring per the prior run's diminishing-returns note — used role/industry/location rotation instead (search_cursor resumed from run 2026-07-09-ef198899's last position: role_idx=9, industry_idx=2, location_idx=2, the last run that actually advanced the cursor before company-anchored variants took over). First attempt (3 queries) omitted the literal word 'NetSuite' from two query strings ('ERP implementation consultancy...') — 2 of 3 returned zero results and the third returned 25 near-entirely SAP/Workday/Oracle-HCM/generic-ERP noise with no NetSuite context, confirming the criteria file's own warning against generic ERP phrasing. Retried with 'NetSuite' explicit in all 3 queries: role_idx=9/'Director of Professional Services'+UK and role_idx=10/'Practice Director'+Australia both still returned 0 results (title filter + NetSuite keyword too narrow for those role/geo combos), but role_idx=11/'Practice Lead'+US returned 42 results (25 fetched), a much higher-quality batch with many genuine NetSuite Practice Leads. 1 of 25 (Jon Leander) was already in seen.json; 24 new stubs written.",
+      "queries_run": [
+        "NetSuite alliance partner United Kingdom / title:Director of Professional Services (0 results)",
+        "NetSuite solution provider Australia / title:Practice Director (0 results)",
+        "NetSuite ERP implementation United States / title:Practice Lead (42 results, 25 fetched, 24 new)"
+      ],
+      "search_cursor": {
+        "role_idx": 12,
+        "industry_idx": 1,
+        "location_idx": 1
+      },
+      "step3_note": "abbreviated mode: Step 3 never runs, no person fetch calls",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted",
+      "step4_completed_at": "2026-07-27T15:45:00.000000+00:00",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1675,
+        "seen_size_before": 2290,
+        "exclusion_set_size": 3890,
+        "total_search_results": 42,
+        "skipped_exclusion": 1,
+        "new_stubs": 24,
+        "classified": 24,
+        "hot": 5,
+        "warm": 1,
+        "cold": 18,
+        "surfaced_for_approval": 24,
+        "email_sent": false
+      },
+      "errors": [],
+      "files_written": [
+        "2026-07-27-775dfe39-links.json"
+      ],
+      "last_updated": "2026-07-27T15:45:00.000000+00:00",
+      "completed_at": "2026-07-27T15:45:00.000000+00:00"
     }
   ],
   "retries": [

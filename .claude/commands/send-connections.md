@@ -4,7 +4,7 @@
 
 ## What this does
 
-1. Reads `CLAUDE.md`, `.claude/skills/linkedin/SKILL.md`, `config/pipeline.json`, and resolves the active criteria.
+1. Reads `CLAUDE.md`, resolves the active LinkedIn provider (`config/pipeline.json → linkedin_provider.active`) and loads its skill file, reads `config/pipeline.json`, and resolves the active criteria.
 2. Executes pipeline **Step 6b** — Send Connection Requests:
    - Scans all `state/pending_approvals/*-connection.json` files for entries where `note_decision: "approved"` and the lead is still at `status: "classified"`: sends the LinkedIn connection request using `edited_note` (if set) or `note_draft`.
    - Updates lead status to `"request_sent"` on success.
@@ -20,7 +20,7 @@
 ## Before running
 
 - At least one entry across all `state/pending_approvals/*-connection.json` files must have `note_decision: "approved"`. If all are still `null`, nothing will be sent and you'll get a warning.
-- The LinkedIn CLI must be authenticated.
+- The active LinkedIn provider must be authenticated (`account_status`).
 - `RESEND_API_KEY` must be set in the environment for the email notification to send.
 
 ## Safety checks
@@ -36,4 +36,4 @@ If no follow-ups are ready yet (connections not accepted): wait for connections 
 
 ## Rate limit handling
 
-Follows the same rules as the main pipeline: exit code 6 → wait and retry (up to `rate_limit.max_retries`); never abort the full phase on a single failure.
+Follows the same rules as the main pipeline: `rate_limited` → wait and retry (up to `rate_limit.max_retries`); never abort the full phase on a single failure.
