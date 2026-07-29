@@ -12,7 +12,7 @@
    - **Step 2** — search: exclusion set (connections cache + `seen.json`), stubs to `leads.json` + `seen.json`.
    - **Step 3** — never runs in this mode, regardless of `enrichment.enabled`.
    - **Step 4** — classification of this run's leads only; `score_rationale` is not persisted.
-   - **Step 5L** — writes ONE file `state/pending_approvals/YYYY-MM-DD-<run_id>-links.json` with an empty `approved` array and score-sorted `hot`/`warm`/`cold` URL arrays.
+   - **Step 5L** — first sweeps every existing links file's `cold` array into the shared `cold-registry.json` (as bare slugs), then writes ONE file `state/pending_approvals/YYYY-MM-DD-<run_id>-links.json` with score-sorted `hot`/`warm`/`cold` URL arrays (no `approved` key).
 4. No email is sent. Step 10 finalizes the run in `state/run_log.json`.
 
 ## Before running
@@ -24,7 +24,7 @@
 
 ## After running
 
-One file is created: `state/pending_approvals/YYYY-MM-DD-<run_id>-links.json`. Review it by **moving (cut, not copy)** URLs from `hot` / `warm` / `cold` into `approved`. URLs are sorted best-first within each tier. Leave everything you don't want — after `approval.approval_timeout_days` days (default 3), URLs still sitting in a tier are expired by the next `/generate-messages` run (moved to an `expired` array, lead marked rejected).
+One file is created: `state/pending_approvals/YYYY-MM-DD-<run_id>-links.json`. Review it by **moving (cut, not copy)** URLs from `hot` / `warm` / `cold` into `state/pending_approvals/approved-queue.json`'s single shared array. URLs are sorted best-first within each tier. Cold URLs you don't act on are automatically swept (as bare slugs) into `state/pending_approvals/cold-registry.json` on the next run of this command — to approve one from there, reconstruct its full URL (`https://www.linkedin.com/in/<slug>`) and paste that into `approved-queue.json`. Leave everything you don't want — after `approval.approval_timeout_days` days (default 3), unhandled URLs are expired by the next `/generate-messages` run (hot/warm moved to that file's `expired` array; cold-registry slugs removed once expired — see `CLAUDE.md`).
 
 Then run `/generate-messages` — approved URLs are enriched there (profile fetch, write-back to `leads.json`, raw sidecar in `state/raw/`) and drafted into a notes-ready file.
 
