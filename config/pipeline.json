@@ -7,7 +7,9 @@
   "search": {
     "max_results_per_run": 25,
     "max_search_queries_per_run": 3,
-    "search_rotation_strategy": "round_robin"
+    "search_rotation_strategy": "round_robin",
+    "min_hot_leads_per_run": 5,
+    "max_search_batches_per_run": 4
   },
 
   "enrichment": {
