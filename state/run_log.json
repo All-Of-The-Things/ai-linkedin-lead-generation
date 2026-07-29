@@ -1359,7 +1359,196 @@
         "2026-07-27-775dfe39-links.json"
       ],
       "last_updated": "2026-07-27T15:45:00.000000+00:00",
-      "completed_at": "2026-07-27T15:45:00.000000+00:00"
+      "completed_at": "2026-07-27T15:45:00.000000+00:00",
+      "post_run_note": "User reviewed links file on 2026-07-27: Faraz Lalani and Catherine Troxell (hot) approved and sent manually outside the pipeline — status=request_sent, approval_decision=approved, send_channel=manual. Taylor Kopnitsky, Sajeev Nair, Erick Truong (hot) and Ryan Kirke (warm) were deleted from the file outright — treated as operator rejections per precedent (status=rejected, approval_decision=operator_rejected). User also added a URL never surfaced by this pipeline (manpreetgrover, pasted with LinkedIn tracking params) directly into the approved array and sent it manually — added as a new operator-sourced lead record (source=operator_manual, status=request_sent, send_channel=manual) and to seen.json; not classified since it never went through Step 4."
+    },
+    {
+      "run_id": "2026-07-27-9b7820c5",
+      "started_at": "2026-07-27T16:10:00.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": null,
+      "steps_completed": [0, 1, 2, 4, 5],
+      "step1_note": "criteria refresh skipped: agency-netsuite.json is hand-crafted and extensively refined via operator feedback — per established precedent, auto-refresh is deliberately skipped to avoid the criteria-extractor overwriting these refinements.",
+      "step2_note": "Continued role/industry/location rotation from run 2026-07-27-775dfe39's cursor (role_idx=12/'VP of Partnerships', industry_idx=1/'Computer Software', location_idx=1/'Canada'), with 'NetSuite' kept explicit in keywords per the lesson from that run. Yield was much thinner than the 'Practice Lead' role that worked well last run — VP/Director of Partnerships and VP of Sales are a much smaller population combined with a NetSuite qualifier (3+2+1=6 raw results across 3 queries, several off-ecosystem). 1 of 6 (Erin Brodie) was already in the exclusion set (also a literal Oracle NetSuite VP — would have been cold anyway). 5 new stubs written.",
+      "queries_run": [
+        "NetSuite alliance partner VP of Partnerships Canada / title:VP of Partnerships (3 results, 2 new)",
+        "NetSuite solution provider Director of Partnerships United Kingdom / title:Director of Partnerships (2 results, 2 new)",
+        "NetSuite alliance partner VP of Sales Australia / title:VP of Sales (1 result, 1 new)"
+      ],
+      "search_cursor": {
+        "role_idx": 15,
+        "industry_idx": 2,
+        "location_idx": 2
+      },
+      "step3_note": "abbreviated mode: Step 3 never runs, no person fetch calls",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted",
+      "step4_completed_at": "2026-07-27T16:25:00.000000+00:00",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1675,
+        "seen_size_before": 2315,
+        "exclusion_set_size": 3915,
+        "total_search_results": 6,
+        "skipped_exclusion": 1,
+        "new_stubs": 5,
+        "classified": 5,
+        "hot": 1,
+        "warm": 0,
+        "cold": 4,
+        "surfaced_for_approval": 5,
+        "email_sent": false
+      },
+      "errors": [],
+      "files_written": [
+        "2026-07-27-9b7820c5-links.json"
+      ],
+      "last_updated": "2026-07-27T16:25:00.000000+00:00",
+      "completed_at": "2026-07-27T16:25:00.000000+00:00",
+      "next_run_recommendation": "VP/Director of Partnerships and VP of Sales titles are a thin population when combined with an explicit NetSuite qualifier. Rotate back to founder/leadership roles (CEO, Founder, Managing Director, Practice Director) next run — these historically produced the best hit rates in both rotation and company-anchored modes."
+    },
+    {
+      "run_id": "2026-07-27-41acc0ba",
+      "started_at": "2026-07-27T16:35:00.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": null,
+      "steps_completed": [0, 1, 2, 4, 5],
+      "step1_note": "criteria refresh skipped: agency-netsuite.json is hand-crafted and extensively refined via operator feedback — per established precedent, auto-refresh is deliberately skipped to avoid the criteria-extractor overwriting these refinements.",
+      "operator_instruction": "2026-07-27: operator asked why hot yield was so low last run and requested a minimum floor of 5 hot leads per run going forward. Added pipeline.json search.min_hot_leads_per_run=5 and search.max_search_batches_per_run=4, documented the batch-retry loop in CLAUDE.md Step 2. This run is the first to apply it.",
+      "step2_note": "Batch 1 (3 queries, explicit 'NetSuite' + CEO/Founder/Managing Director titles, no location filter — deliberately deviated from the previous run's thin VP/Director-of-Partnerships/Sales rotation per its own next_run_recommendation): 75 raw results (25/query) worldwide. This role combination is by far the richest signal found yet for this criteria — but 19 of 38 shortlisted strong candidates were already in the exclusion set (this population has been heavily mined across many prior runs/criteria). 19 new stubs written; classification (Step 4) returned 13 hot on the first batch alone, well past the 5-hot floor, so no batch 2/3 was needed — floor met after 1 batch.",
+      "queries_run": [
+        "NetSuite alliance partner CEO / title:CEO, no location filter (174 total, 25 fetched)",
+        "NetSuite solution provider Founder / title:Founder, no location filter (167 total, 25 fetched)",
+        "NetSuite alliance partner Managing Director / title:Managing Director, no location filter (132 total, 25 fetched)"
+      ],
+      "step3_note": "abbreviated mode: Step 3 never runs, no person fetch calls",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted",
+      "step4_completed_at": "2026-07-27T17:00:00.000000+00:00",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1675,
+        "seen_size_before": 2320,
+        "exclusion_set_size": 3920,
+        "total_search_results": 75,
+        "skipped_exclusion": 19,
+        "batches_run": 1,
+        "new_stubs": 19,
+        "classified": 19,
+        "hot": 13,
+        "warm": 1,
+        "cold": 5,
+        "surfaced_for_approval": 19,
+        "hot_floor_met": true,
+        "email_sent": false
+      },
+      "errors": [],
+      "files_written": [
+        "2026-07-27-41acc0ba-links.json"
+      ],
+      "last_updated": "2026-07-27T17:00:00.000000+00:00",
+      "completed_at": "2026-07-27T17:00:00.000000+00:00"
+    },
+    {
+      "run_id": "2026-07-27-601ccb3e",
+      "started_at": "2026-07-27T17:10:00.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": null,
+      "steps_completed": [0, 1, 2, 4, 5],
+      "step1_note": "criteria refresh skipped: agency-netsuite.json is hand-crafted and extensively refined via operator feedback — per established precedent, auto-refresh is deliberately skipped to avoid the criteria-extractor overwriting these refinements.",
+      "operator_instruction": "2026-07-27: operator confirmed the prior run's CEO/Founder/Managing Director + no-location-filter recipe ('much better run, let's keep it like that') — using it again this run as the default, rotating to the next roles in the priority list (Practice Director, Co-Founder, General Manager) to find fresh candidates.",
+      "step2_note": "Resumed after connectsafely auth was fixed. Batch 1 (3 queries, explicit 'NetSuite alliance partner' + Practice Director/Co-Founder/General Manager titles, no location filter): 15+174+39 total available, 25 fetched per query = 75 raw results. Strong hit rate on genuine NetSuite Alliance Partner firms again (AVC Software Consulting, TechMantra Now, Zanovoy, BeApps, ABJ Cloud Solutions), though several of the best-looking candidates (Stratos ERP Partners' Cory Anderson, Switchback Advisors' Ryan Fast, NetSuite ANZ's Henry Sack) were already in the exclusion set from the prior batch/run — continuing the trend of this pool getting mined out. Shortlisted 19 plausible candidates, 6 were dupes, 13 new stubs written. Classification returned 7 hot on this single batch, comfortably past the 5-hot floor — no batch 2/3 needed.",
+      "queries_run": [
+        "NetSuite alliance partner Practice Director / title:Practice Director, no location filter (15 total, 15 fetched)",
+        "NetSuite alliance partner Co-Founder / title:Co-Founder, no location filter (174 total, 25 fetched)",
+        "NetSuite alliance partner General Manager / title:General Manager, no location filter (39 total, 25 fetched)"
+      ],
+      "step3_note": "abbreviated mode: Step 3 never runs, no person fetch calls",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted",
+      "step4_completed_at": "2026-07-27T20:25:00.000000+00:00",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1675,
+        "seen_size_before": 2339,
+        "exclusion_set_size": 3939,
+        "total_search_results": 75,
+        "skipped_exclusion": 6,
+        "batches_run": 1,
+        "new_stubs": 13,
+        "classified": 13,
+        "hot": 7,
+        "warm": 0,
+        "cold": 6,
+        "surfaced_for_approval": 13,
+        "hot_floor_met": true,
+        "email_sent": false
+      },
+      "errors": [
+        {
+          "step": 2,
+          "error": "auth_error: connectsafely session expired again — 'Practice Director' and 'Co-Founder' queries both timed out, then 'General Manager' and a get-account-status check both returned 'Unauthorized - Invalid credentials'. Per CLAUDE.md Rate Limit Handling, stopped immediately rather than retrying. Run preserved in_progress for resumption and successfully resumed once auth was fixed via /mcp.",
+          "at": "2026-07-27T17:12:00.000000+00:00"
+        }
+      ],
+      "files_written": [
+        "2026-07-27-601ccb3e-links.json"
+      ],
+      "last_updated": "2026-07-27T20:25:00.000000+00:00",
+      "completed_at": "2026-07-27T20:25:00.000000+00:00"
+    },
+    {
+      "run_id": "2026-07-28-b8e5ff61",
+      "started_at": "2026-07-28T17:40:00.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "criteria_used": "agency-netsuite",
+      "resume_from_step": null,
+      "steps_completed": [0, 1, 2, 4, 5],
+      "step1_note": "criteria refresh skipped: agency-netsuite.json is hand-crafted and extensively refined via operator feedback — per established precedent, auto-refresh is deliberately skipped to avoid the criteria-extractor overwriting these refinements.",
+      "step2_note": "Batch 1 (3 queries, explicit 'NetSuite alliance partner' + VP of Delivery/Head of Delivery/VP of Professional Services titles, no location filter): thin population again (10+9+4=23 total available) like the earlier Partnerships/Sales rotation — only 2 new stubs, 1 hot. Below the 5-hot floor, so ran batch 2 per CLAUDE.md's batch-retry loop: rather than trying yet another thin title, paginated (start=25) into the SAME proven CEO/Founder/Managing Director queries from run 41acc0ba, whose totals (174/167/132) had ~150/140/110 unfetched results remaining beyond the first page. This surfaced a fresh page of genuine NetSuite CEOs/Founders/MDs (SuiteStart, Top Step LLC, NetScore Technologies, Vursor, NetSuite Practice, Techliere, Balvirt, SystemsAccountants UK) — 8 new stubs, all 8 classified hot. Combined run total: 9 hot, comfortably past the floor after 2 batches.",
+      "queries_run": [
+        "NetSuite alliance partner VP of Delivery / title:VP of Delivery, no location filter (10 total, 10 fetched) — batch 1",
+        "NetSuite alliance partner Head of Delivery / title:Head of Delivery, no location filter (9 total, 9 fetched) — batch 1",
+        "NetSuite alliance partner VP of Professional Services / title:VP of Professional Services, no location filter (4 total, 4 fetched) — batch 1",
+        "NetSuite alliance partner CEO / title:CEO, no location filter, start=25 (174 total, page 2 of 25 fetched) — batch 2",
+        "NetSuite solution provider Founder / title:Founder, no location filter, start=25 (167 total, page 2 of 25 fetched) — batch 2",
+        "NetSuite alliance partner Managing Director / title:Managing Director, no location filter, start=25 (132 total, page 2 of 25 fetched) — batch 2"
+      ],
+      "step3_note": "abbreviated mode: Step 3 never runs, no person fetch calls",
+      "step4_note": "abbreviated mode: classified only this run's leads; score_rationale not persisted",
+      "step4_completed_at": "2026-07-28T18:15:00.000000+00:00",
+      "step5_note": "abbreviated mode (5L): links file written; connection-status/conversation checks skipped by design; no email",
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1675,
+        "seen_size_before": 2352,
+        "exclusion_set_size": 3952,
+        "total_search_results": 98,
+        "skipped_exclusion": 8,
+        "batches_run": 2,
+        "new_stubs": 10,
+        "classified": 10,
+        "hot": 9,
+        "warm": 0,
+        "cold": 1,
+        "surfaced_for_approval": 10,
+        "hot_floor_met": true,
+        "email_sent": false
+      },
+      "errors": [],
+      "files_written": [
+        "2026-07-28-b8e5ff61-links.json"
+      ],
+      "last_updated": "2026-07-28T18:15:00.000000+00:00",
+      "completed_at": "2026-07-28T18:15:00.000000+00:00",
+      "next_run_recommendation": "Pagination into the already-proven CEO/Founder/Managing Director queries (start=25, start=50, ...) is a strong next move before trying new thin titles — each still has 100+ unfetched results. VP of Delivery/Head of Delivery/VP of Professional Services and the earlier VP/Director of Partnerships/VP of Sales are consistently thin; deprioritize those titles for this criteria."
     }
   ],
   "retries": [

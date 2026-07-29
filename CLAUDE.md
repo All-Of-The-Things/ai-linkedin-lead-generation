@@ -181,6 +181,8 @@ Mark step complete in run_log before moving on.
    - Add a stub record to `leads.json` with `status: "new"`, `first_seen_run: <today>`. **Also write any fields returned by the search API** — at minimum `name`, `headline`, `location` — into the stub. These are available from search results without a separate fetch and are critical when enrichment is disabled.
 5. On `rate_limited`: wait `rate_limit.retry_delay_seconds`, retry up to `rate_limit.max_retries`. If still failing, log, skip that query, continue to next.
 
+**Minimum hot-lead floor (batch retry loop):** After Step 4 classifies a batch, check the running count of `hot` leads surfaced so far this run against `search.min_hot_leads_per_run`. If still below the floor, run another batch: rotate to the next `search.max_search_queries_per_run` queries (advancing `search_cursor` as normal, or deviating deliberately toward higher-performing role/location combinations if recent runs flagged a specific rotation segment as thin) and repeat Steps 2 and 4 for that batch against the same exclusion set. Continue batching until either the hot floor is met, or `search.max_search_batches_per_run` batches have run this run — whichever comes first. If the floor still isn't met after the batch cap, stop and log the shortfall honestly (e.g. `"hot_floor_shortfall": "3/5 hot after 4 batches"`) rather than looping indefinitely chasing a floor the current population can't support.
+
 Mark step complete in run_log.
 
 ### Step 3 — Profile Enrichment (conditional)
