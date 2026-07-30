@@ -1,13 +1,4 @@
 {
-  "approved": [
-    "https://www.linkedin.com/in/danish-ahmed-warsi",
-    "https://www.linkedin.com/in/micah-gierene-roxas",
-    "https://www.linkedin.com/in/vivianari\u00f1o",
-    "https://www.linkedin.com/in/tim-yoder-67b847",
-    "https://www.linkedin.com/in/sandeeppalod",
-    "https://www.linkedin.com/in/khalita",
-    "https://www.linkedin.com/in/law-eraso-a892623a"
-  ],
   "hot": [],
   "warm": [
     "https://www.linkedin.com/in/nickcarline",
@@ -18,42 +9,5 @@
     "https://www.linkedin.com/in/sagar-patel-b7a18336",
     "https://www.linkedin.com/in/pushkar-korade-60008bb7"
   ],
-  "cold": [
-    "https://www.linkedin.com/in/benjamin-martin-639413208",
-    "https://www.linkedin.com/in/cameron-dickinson",
-    "https://www.linkedin.com/in/brice-purcell-395795220",
-    "https://www.linkedin.com/in/joy-castillo-50068226b",
-    "https://www.linkedin.com/in/jamin-dagami-a2285727a",
-    "https://www.linkedin.com/in/raulcabison0808",
-    "https://www.linkedin.com/in/christopher-mullan-39557a190",
-    "https://www.linkedin.com/in/jeremyswheeler",
-    "https://www.linkedin.com/in/josh-boese-8163b410",
-    "https://www.linkedin.com/in/robdenttech",
-    "https://www.linkedin.com/in/louise-elliott-54b069118",
-    "https://www.linkedin.com/in/james-smith-6704a4303",
-    "https://www.linkedin.com/in/claudia-rubalcava-5665408a",
-    "https://www.linkedin.com/in/nicolai-jacinto-154b5420b",
-    "https://www.linkedin.com/in/lakshman-kishore-muppuri-12bb9863",
-    "https://www.linkedin.com/in/mikel-robinson-16571a15",
-    "https://www.linkedin.com/in/arushithakr",
-    "https://www.linkedin.com/in/victoriaemurphy",
-    "https://www.linkedin.com/in/megan-knorr",
-    "https://www.linkedin.com/in/dylan-shaver-23771678",
-    "https://www.linkedin.com/in/alexalanning",
-    "https://www.linkedin.com/in/angcl",
-    "https://www.linkedin.com/in/ryan-britsch-257a911",
-    "https://www.linkedin.com/in/samantha-garlinger-965b495a",
-    "https://www.linkedin.com/in/annie-l-725baa271",
-    "https://www.linkedin.com/in/calvin-elder-mba-71109524",
-    "https://www.linkedin.com/in/lance-p-ba555a3",
-    "https://www.linkedin.com/in/bhatt-jatan",
-    "https://www.linkedin.com/in/abbyhizon",
-    "https://www.linkedin.com/in/ravidgupta",
-    "https://www.linkedin.com/in/syedirfanahmed",
-    "https://www.linkedin.com/in/danacosta16",
-    "https://www.linkedin.com/in/preethi-kondur",
-    "https://www.linkedin.com/in/grant-thompson-6195a0150",
-    "https://www.linkedin.com/in/mgroothedde",
-    "https://www.linkedin.com/in/mdiprospero"
-  ]
+  "cold": []
 }

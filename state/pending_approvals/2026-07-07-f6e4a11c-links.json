@@ -1,5 +1,4 @@
 {
-  "approved": ["https://www.linkedin.com/in/hermannfilho"],
   "hot": [],
   "warm": [
     "https://www.linkedin.com/in/antoniolisbon",
@@ -34,28 +33,5 @@
     "https://www.linkedin.com/in/dougshepherd1",
     "https://www.linkedin.com/in/hipankajgoel"
   ],
-  "cold": [
-    "https://www.linkedin.com/in/carlimoncrieff",
-    "https://www.linkedin.com/in/cassidy-traver-285a30109",
-    "https://www.linkedin.com/in/amit-ach",
-    "https://www.linkedin.com/in/amit-gupta-5193b315",
-    "https://www.linkedin.com/in/inderaj-sehmi-b6703712",
-    "https://www.linkedin.com/in/tristanmiller",
-    "https://www.linkedin.com/in/harigaddipatti",
-    "https://www.linkedin.com/in/aviyer",
-    "https://www.linkedin.com/in/robraman",
-    "https://www.linkedin.com/in/isaiah-nelms",
-    "https://www.linkedin.com/in/shashanksharma01",
-    "https://www.linkedin.com/in/arvindmargasahayam",
-    "https://www.linkedin.com/in/mourad-mahfoudi-pmp-060650",
-    "https://www.linkedin.com/in/jennifer-routledge-0762a51ab",
-    "https://www.linkedin.com/in/lindsaysg",
-    "https://www.linkedin.com/in/robertsinfield",
-    "https://www.linkedin.com/in/mj-moore-06880a53",
-    "https://www.linkedin.com/in/tracymuttu",
-    "https://www.linkedin.com/in/kelly-gartshore-a256452",
-    "https://www.linkedin.com/in/neil-prodger-248a3414",
-    "https://www.linkedin.com/in/david-greenlees-25a56b9",
-    "https://www.linkedin.com/in/deborahwelby"
-  ]
+  "cold": []
 }

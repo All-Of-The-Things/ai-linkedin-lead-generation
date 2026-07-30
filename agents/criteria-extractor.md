@@ -8,13 +8,10 @@ The calling pipeline will pass you the resolved criteria name (e.g. `"agency-par
 
 ## Instructions
 
-1. **Load the LinkedIn skill** from `.claude/skills/linkedin/SKILL.md`.
+1. **Resolve the active LinkedIn provider** (`config/pipeline.json → linkedin_provider.active`) and load its skill file (`.claude/skills/connectsafely/SKILL.md` by default, `.claude/skills/linkedin/SKILL.md` if switched to linkedapi).
 
-2. **Fetch connections** — run:
-   ```
-   linkedin connections list --limit 200 --json -q
-   ```
-   If exit code 6, wait 120 seconds and retry once. If still failing, stop and report.
+2. **Fetch connections** — call `list_connections` with a limit of 200.
+   On `rate_limited`, wait `rate_limit.retry_delay_seconds` (from `config/pipeline.json`) and retry once. If still failing, stop and report.
 
 3. **Analyze the returned profiles.** Look for dominant patterns across all connections in these dimensions:
    - Job titles and seniority levels (VP, Director, Head of, Founder, C-level, etc.)

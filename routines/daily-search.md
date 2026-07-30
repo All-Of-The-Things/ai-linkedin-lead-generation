@@ -11,7 +11,7 @@ You are running Phase 1 of the LinkedIn lead generation pipeline for AOTT.
 ## Before doing anything
 
 1. Read `CLAUDE.md` in full — your authoritative instruction document.
-2. Load the LinkedIn skill from `.claude/skills/linkedin/SKILL.md`.
+2. Resolve the active LinkedIn provider (`config/pipeline.json → linkedin_provider.active`) and load its skill file (`.claude/skills/connectsafely/SKILL.md` by default, `.claude/skills/linkedin/SKILL.md` if switched to linkedapi).
 3. Read `config/pipeline.json` to load all configuration values.
 4. Resolve the active criteria using the **Criteria Selection** rules in CLAUDE.md. If this routine was triggered with a specific criteria name in the instruction (e.g. "run with retail-brands"), use that. Otherwise use `pipeline.json → active_criteria`.
 
@@ -45,5 +45,5 @@ Print a one-paragraph summary of what was found.
 ## Important reminders
 
 - Never send a connection request or message — that happens in Phase 2.
-- If LinkedIn auth fails (exit code 2), stop immediately and surface the error.
+- If the active LinkedIn provider's auth fails (`auth_error`), stop immediately and surface the error.
 - Routine expires after 7 days — log the expiry date in the run summary so you know when to re-register via `/schedule`.
