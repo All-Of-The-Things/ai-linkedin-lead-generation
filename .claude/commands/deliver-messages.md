@@ -4,12 +4,12 @@
 
 ## What this does
 
-1. Reads `CLAUDE.md` and the LinkedIn skill (`.claude/skills/linkedin/SKILL.md`)
+1. Reads `CLAUDE.md`, resolves the active LinkedIn provider (`config/pipeline.json → linkedin_provider.active`) and loads its skill file
 2. Reads `config/pipeline.json`
 3. Executes pipeline **Step 9**:
    - Scans all `state/pending_approvals/*-followup.json` files for entries with `decision: "approved"`
    - Uses `edited_message` if filled in, otherwise uses `followup_draft`
-   - Sends each approved message via `linkedin message send`
+   - Sends each approved message via `send_message`
    - Updates `leads.json`: status → `"followup_sent"`, increments `followup_sequence`, resets `followup_eligible_after` if another follow-up in the sequence is due
    - Respects `followup.max_followups_per_run` limit from `config/pipeline.json`
 4. Invokes `agents/email-notifier.md` with `phase: "delivery_summary"` to send a confirmation email

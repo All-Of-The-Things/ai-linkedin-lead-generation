@@ -1,13 +1,4 @@
 {
-  "approved": [
-    "https://www.linkedin.com/in/tyler-david-decker",
-    "https://www.linkedin.com/in/rbreen",
-    "https://www.linkedin.com/in/safahmed",
-    "https://www.linkedin.com/in/danstackhouse",
-    "https://www.linkedin.com/in/hayden-winwright",
-    "https://www.linkedin.com/in/ianirwin",
-    "https://www.linkedin.com/in/maggy-pereira-5b7381b3"
-  ],
   "hot": [],
   "warm": [
     "https://www.linkedin.com/in/rogerrolf",
@@ -32,35 +23,7 @@
     "https://www.linkedin.com/in/jeremy-travis-30011412",
     "https://www.linkedin.com/in/junior-hewitt-941b0a21"
   ],
-  "cold": [
-    "https://www.linkedin.com/in/michael-bowden-2a92b6b7",
-    "https://www.linkedin.com/in/riahisonia",
-    "https://www.linkedin.com/in/rneill1",
-    "https://www.linkedin.com/in/jean-luc-simard-b8573445",
-    "https://www.linkedin.com/in/christopher-gacek",
-    "https://www.linkedin.com/in/mitchell-klar-a02285225",
-    "https://www.linkedin.com/in/mathieu-krog-7831aa41",
-    "https://www.linkedin.com/in/bilal-zah",
-    "https://www.linkedin.com/in/lai-yi-cheung-74985392",
-    "https://www.linkedin.com/in/pan-florentzos-4b18425",
-    "https://www.linkedin.com/in/bernadeta-winter-acma-667ba422",
-    "https://www.linkedin.com/in/christopher-walton-8254ba1b",
-    "https://www.linkedin.com/in/conor-boswell",
-    "https://www.linkedin.com/in/cedric-griffiths-15ab761a",
-    "https://www.linkedin.com/in/sebastian-parysz-44b90041",
-    "https://www.linkedin.com/in/craig-beak-38a633b",
-    "https://www.linkedin.com/in/ashleyizundu",
-    "https://www.linkedin.com/in/bakhtiarshah",
-    "https://www.linkedin.com/in/mfalzankhan",
-    "https://www.linkedin.com/in/mel-podd",
-    "https://www.linkedin.com/in/dylan-whaley-53429923",
-    "https://www.linkedin.com/in/hanimamdani",
-    "https://www.linkedin.com/in/francis-rocido-21585b76",
-    "https://www.linkedin.com/in/brianstisser",
-    "https://www.linkedin.com/in/mahuta",
-    "https://www.linkedin.com/in/ehteshamxa",
-    "https://www.linkedin.com/in/snasir"
-  ],
+  "cold": [],
   "expired": [
     "https://www.linkedin.com/in/robertjamesterry",
     "https://www.linkedin.com/in/juliethayward",

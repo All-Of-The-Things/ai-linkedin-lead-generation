@@ -5,7 +5,7 @@
 ## Arguments
 
 - `days=30` — age threshold for sweeps (a) and (b). Default: 30.
-- `sweeps=approvals,leads,runlog,raw` — which sweeps to run. Default: all four (the `raw` migration is idempotent — a no-op after its first run).
+- `sweeps=approvals,leads,runlog,raw,linksconsolidate` — which sweeps to run. Default: all five (`raw` and `linksconsolidate` are idempotent — a no-op after their first run).
 - `keep_runs=20` — how many recent runs stay in `run_log.json`. Default: 20.
 - `dry_run=true` — report what WOULD move, write nothing. Default: false.
 
@@ -20,12 +20,15 @@
    | notes-ready | every `note_decision` non-null, and no approved entry's lead is still at `"classified"` |
    | followup | every `decision` non-null, and no approved entry's lead is still at `"followup_queued"` |
    | warmup-comments | every `decision` non-null, and approved comments already sent |
-   | links | `hot`/`warm`/`cold` all empty, and every URL in `approved` appears in some notes-ready file |
+   | links | `hot`/`warm`/`cold` all empty (there is no `approved` key anymore — approvals live in `approved-queue.json`) |
+
+   `approved-queue.json` and `cold-registry.json` are single persistent files, not one per run — this sweep never touches them; they self-prune via Step 6a instead (see CLAUDE.md → State File Contracts).
 
 2. **(b) Archive terminal leads** — move leads from `state/leads.json` to `state/archive/leads-archive.json` (same keyed shape; on key collision the newer entry wins) when `last_updated` is older than `days` AND status is exactly `"rejected"`, or `"followup_sent"` with `followup_sequence >= followup.max_sequence`. No other status is ever archived. `seen.json` is untouched — that is the dedupe guarantee.
 3. **(c) Rotate run_log** — keep the most recent `keep_runs` entries in `state/run_log.json → runs`; append the older ones, in order, to `state/archive/run_log-archive.json`. Never rotate the most recent run or any `in_progress` entry. Preserve all other top-level keys.
 4. **(d) linkedin_raw migration (one-time, idempotent)** — for every lead in `leads.json` with a `linkedin_raw` key: if the value is populated and `state/raw/<slug>.json` does not exist, write the sidecar; then remove the `linkedin_raw` key from the lead (populated or null). Slug rule per the `state/raw/` contract in CLAUDE.md: first path segment after `/in/` only, non-`[a-z0-9._-]` characters replaced with `_`. Re-running is a no-op.
-5. **Report** — per sweep: items moved vs. eligible, and before/after byte sizes of `leads.json` and `run_log.json`. In dry-run, the same report with nothing written. (After a large sweep you may also want to run `git gc` yourself — this command never does.)
+5. **(e) Links-file consolidation (one-time, idempotent)** — for every `*-links.json` file in `state/pending_approvals/` (not `archive/`): move every URL in its `approved` array into `state/pending_approvals/approved-queue.json` (normalize, dedupe); move every URL in its `cold` array into `state/pending_approvals/cold-registry.json` as a bare slug (same derivation rule as `state/raw/<slug>.json`; dedupe); rewrite the file with the `approved` key removed and `cold` set to `[]` — `hot`/`warm`/`expired` untouched. Create `approved-queue.json` / `cold-registry.json` as `[]` first if they don't exist. Re-running is a no-op once every links file's `approved` key is gone and `cold` is empty. This is the exact same move Step 5L's Cold Sweep performs for `cold` on every ongoing run — this sweep just catches up every pre-existing file, once, plus a one-time sweep of leftover `approved` arrays (new links files never write an `approved` key going forward).
+6. **Report** — per sweep: items moved vs. eligible, and before/after byte sizes of `leads.json` and `run_log.json`. In dry-run, the same report with nothing written. (After a large sweep you may also want to run `git gc` yourself — this command never does.)
 
 ## Before running
 

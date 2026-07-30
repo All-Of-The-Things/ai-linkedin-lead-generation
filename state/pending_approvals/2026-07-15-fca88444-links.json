@@ -1,17 +1,4 @@
 {
-  "approved": [
-    "https://www.linkedin.com/in/markrhyman",
-    "https://www.linkedin.com/in/rufuslohmueller",
-    "https://www.linkedin.com/in/aprilholman",
-    "https://www.linkedin.com/in/john-schaffer-0861a626",
-    "https://www.linkedin.com/in/roberto-a-irizarry-ortiz-671370b1",
-    "https://www.linkedin.com/in/tjosheajr",
-    "https://www.linkedin.com/in/stephen-campbell-77020024",
-    "https://www.linkedin.com/in/vijaysaha",
-    "https://www.linkedin.com/in/cassie-reveile",
-    "https://www.linkedin.com/in/bruce-do-85a12b181",
-    "https://www.linkedin.com/in/viksit-m-399180245"
-  ],
   "hot": [],
   "warm": [
     "https://www.linkedin.com/in/morganlin",
@@ -30,43 +17,5 @@
     "https://www.linkedin.com/in/emma-gospel-838772201",
     "https://www.linkedin.com/in/ed-proctor-865542149"
   ],
-  "cold": [
-    "https://www.linkedin.com/in/steven-yurkas-69852334",
-    "https://www.linkedin.com/in/avery-leon-78911a158",
-    "https://www.linkedin.com/in/brendan-smith-cap66",
-    "https://www.linkedin.com/in/jaykiefer",
-    "https://www.linkedin.com/in/shannon-achter-a600964b",
-    "https://www.linkedin.com/in/patience-mulumba-06525345",
-    "https://www.linkedin.com/in/sapna-ankenagare-8b255751",
-    "https://www.linkedin.com/in/anthonymeshnick",
-    "https://www.linkedin.com/in/joe-harmer",
-    "https://www.linkedin.com/in/judd-halenza-47103059",
-    "https://www.linkedin.com/in/martin-navarro-17785b8a",
-    "https://www.linkedin.com/in/daisydan",
-    "https://www.linkedin.com/in/meenakshi-mehta-68a49161",
-    "https://www.linkedin.com/in/narendra-85071434b",
-    "https://www.linkedin.com/in/trevor-o-claire-1365a4b2",
-    "https://www.linkedin.com/in/rlnarodowg",
-    "https://www.linkedin.com/in/vanessa-young-dede-414b14144",
-    "https://www.linkedin.com/in/benjaminnorton2",
-    "https://www.linkedin.com/in/lindsey-rootkie",
-    "https://www.linkedin.com/in/alydewji",
-    "https://www.linkedin.com/in/rafe-goldbach-1a9ab911",
-    "https://www.linkedin.com/in/jay-ramchurn-678846229",
-    "https://www.linkedin.com/in/justin-breithaupt-96b3a422b",
-    "https://www.linkedin.com/in/patty-stepp-94664810",
-    "https://www.linkedin.com/in/anusha-challa-250605151",
-    "https://www.linkedin.com/in/wendy-speers-06469938",
-    "https://www.linkedin.com/in/stuti-parichha-9b7a983",
-    "https://www.linkedin.com/in/henry-neils-65216a14b",
-    "https://www.linkedin.com/in/florianroyer/en",
-    "https://www.linkedin.com/in/pmbainla",
-    "https://www.linkedin.com/in/blaine-horrocks-4694246",
-    "https://www.linkedin.com/in/pmhawkins",
-    "https://www.linkedin.com/in/deliadavis133",
-    "https://www.linkedin.com/in/casey-shinn",
-    "https://www.linkedin.com/in/pedrito-kanda-8570a4393",
-    "https://www.linkedin.com/in/mikehikel",
-    "https://www.linkedin.com/in/melanie-srivastava-2720ba7"
-  ]
+  "cold": []
 }
