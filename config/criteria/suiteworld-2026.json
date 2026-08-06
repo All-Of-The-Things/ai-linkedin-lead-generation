@@ -196,10 +196,11 @@
     "BigCommerce"
   ],
 
-  "_excluded_companies_note": "Operator feedback 2026-06-09 (SuiteDB) and 2026-07-27 (Seibert Consulting Group): absolutely no interest in engaging with these agencies under any circumstances — never surface anyone from these firms in any tier, in any criteria. Unlike excluded_employers (surfaced cold), these are dropped entirely at Step 2 — skip the result AND write it to seen.json so it never resurfaces. Detect from headline naming the firm; Seibert Consulting Group's staff may abbreviate as 'SCG' in headlines (e.g. 'at SCG') — treat that alongside any Seibert/NetSuite/Shopify Plus context as the same exclusion.",
+  "_excluded_companies_note": "Operator feedback 2026-06-09 (SuiteDB), 2026-07-27 (Seibert Consulting Group), and 2026-08-06 (AnagramDev): absolutely no interest in engaging with these agencies under any circumstances — never surface anyone from these firms in any tier, in any criteria. Unlike excluded_employers (surfaced cold), these are dropped entirely at Step 2 — skip the result AND write it to seen.json so it never resurfaces. Detect from headline naming the firm; Seibert Consulting Group's staff may abbreviate as 'SCG' in headlines (e.g. 'at SCG') — treat that alongside any Seibert/NetSuite/Shopify Plus context as the same exclusion.",
   "excluded_companies": [
     "SuiteDB",
-    "Seibert Consulting Group"
+    "Seibert Consulting Group",
+    "AnagramDev"
   ],
 
   "anti_patterns": [
