@@ -2,20 +2,15 @@
   "name": "agency-netsuite",
   "label": "NetSuite & ERP Agency Partners",
   "description": "Targets decision-makers at NetSuite SIs, Oracle partners, and ERP implementation agencies whose clients need eCommerce built alongside their NetSuite deployment. AOTT's primary criteria for staff augmentation with ERP consultancies.",
-
   "generated_at": "2026-07-01T00:00:00.000Z",
   "generated_from_connections": 200,
-
   "_note": "AOTT's sweet spot is staff augmentation with ERP consulting/implementation agencies. The pitch: ERP agencies don't carry eCommerce expertise in-house — we fill that layer. Target: decision-makers at NetSuite SIs, Oracle partners, and ERP implementation consultancies who serve clients that need Shopify or SuiteCommerce built alongside their NetSuite deployment.",
-
   "reference_companies": [
     "Plative",
     "Esonus",
     "Foretopia",
-    "N2Lab",
     "Techfino"
   ],
-
   "_company_type_signals_note": "These signals must be platform-specific to count toward agency boost. Generic words like 'Solutions', 'Services', 'Digital', 'Advisory' alone are not sufficient — they must appear alongside a platform keyword.",
   "company_type_signals": [
     "NetSuite",
@@ -28,7 +23,6 @@
     "Alliance Partner",
     "Systems Integrator"
   ],
-
   "target_roles": [
     "CEO",
     "Founder",
@@ -49,7 +43,6 @@
     "Head of Talent",
     "Head of Operations"
   ],
-
   "_target_industries_note": "LinkedIn industry field alone is not sufficient — must be combined with platform-specific domain signals.",
   "target_industries": [
     "Information Technology and Services",
@@ -57,14 +50,12 @@
     "Management Consulting",
     "Internet"
   ],
-
   "target_locations": [
     "United States",
     "Canada",
     "United Kingdom",
     "Australia"
   ],
-
   "seniority_signals": [
     "CEO",
     "Founder",
@@ -85,10 +76,8 @@
     "Practice Lead",
     "President"
   ],
-
   "_retail_brand_guidance": "A lead at a retail/DTC/consumer brand (not an agency or SI) qualifies as warm or above ONLY when their company is a confirmed Shopify or NetSuite/SuiteCommerce user. The platform signal must be strong and current. Without it, classify as cold regardless of seniority.",
   "retail_brand_platform_required": true,
-
   "_excluded_employers_note": "AOTT sells staff augmentation TO the partner ecosystem, never to the platform vendors themselves. Anyone whose CURRENT employer is a platform vendor is not a lead: they have internal delivery orgs and do not buy external agency capacity. Detect from the headline when company fields are null: 'at Oracle', 'at NetSuite', '@ Shopify', 'Oracle Consulting', 'Oracle Cloud Applications'. Watch for Oracle-internal titles — 'Consulting Practice Director', 'Consulting Project Director', 'Head of Consulting Services' with Oracle context (or no partner-company context at all) are vendor employees, not partner-agency staff. Classify excluded-employer leads as cold and cap score at 25 regardless of seniority — this exclusion overrides company_type_signals and seniority_signals. Do not drop them from output; the operator can still manually approve a rare vendor-side contact from the cold tier. Two adjacent exclusions, also cold: (a) mega-SIs with in-house delivery at scale (Accenture, Deloitte, Capgemini, IBM, Infosys, TCS, Wipro, Cognizant, Coforge) — cap at 40; (b) in-house IT/ERP/digital-transformation leaders at end-user enterprises or unrelated software vendors (banks, insurers, Unit4, BlackLine, etc.) — cap at 30. The buyer must work at an agency, SI, or consultancy whose BUSINESS is delivering NetSuite/ERP projects for clients, sized boutique-to-mid-market like the reference_companies.",
   "excluded_employers": [
     "Oracle",
@@ -101,15 +90,15 @@
     "Microsoft",
     "BigCommerce"
   ],
-
-  "_excluded_companies_note": "Operator feedback 2026-07-16: never surface anyone from these firms in any tier. Unlike excluded_employers (surfaced cold), these are dropped entirely at Step 2 — skip the result AND write it to seen.json so it never resurfaces. Detect from headline naming the firm. Operator feedback 2026-06-09 (SuiteDB), 2026-07-27 (Seibert Consulting Group), and 2026-08-06 (AnagramDev): absolutely no interest in engaging with these agencies under any circumstances — treat as a hard block, not a scoring signal.",
+  "_excluded_companies_note": "Operator feedback 2026-07-16: never surface anyone from these firms in any tier. Unlike excluded_employers (surfaced cold), these are dropped entirely at Step 2 — skip the result AND write it to seen.json so it never resurfaces. Detect from headline naming the firm. Operator feedback 2026-06-09 (SuiteDB), 2026-07-27 (Seibert Consulting Group), 2026-08-06 (AnagramDev), and 2026-08-06 (FullClarity — no fit for AOTT despite being a genuine NetSuite partner): absolutely no interest in engaging with these agencies under any circumstances — treat as a hard block, not a scoring signal. Operator feedback 2026-08-12: N2Lab is now an active AOTT client relationship — exclude from all criteria and never surface as a new lead, regardless of fit.",
   "excluded_companies": [
     "Tavano Team",
     "SuiteDB",
     "Seibert Consulting Group",
-    "AnagramDev"
+    "AnagramDev",
+    "FullClarity",
+    "N2Lab"
   ],
-
   "_sap_note": "Operator feedback 2026-07-09: SAP-related leads are out of scope entirely — no business there. This is broader than excluded_employers: SAP partner consultancies, SAP implementation practices, and in-house SAP program leaders are all non-buyers. A generic ERP signal that resolves to SAP does not pass the domain gate.",
   "anti_patterns": [
     "SAP",
@@ -127,7 +116,6 @@
     "Demand Generation",
     "Bachelor of Science"
   ],
-
   "_search_terms_note": "QUERY-BUILDING RULE for Step 2: never pair a bare platform name with a role. 'Oracle consulting' matches Oracle's own Consulting org. Every query must include a partner/agency/implementation/reseller qualifier alongside the platform name (e.g. 'NetSuite alliance partner', 'SuiteCommerce agency') so results skew toward people whose employer partners with the platform rather than the vendor's own staff.",
   "search_terms": [
     "NetSuite alliance partner CEO",
@@ -136,15 +124,13 @@
     "SuiteCommerce agency founder",
     "NetSuite SI managing director"
   ],
-
   "scoring_weights": {
-    "role_match": 0.30,
-    "industry_match": 0.30,
+    "role_match": 0.3,
+    "industry_match": 0.3,
     "seniority_match": 0.25,
-    "location_match": 0.10,
+    "location_match": 0.1,
     "company_size_match": 0.05
   },
-
   "classification_thresholds": {
     "hot": 75,
     "warm": 45
