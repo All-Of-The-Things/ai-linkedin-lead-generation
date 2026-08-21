@@ -8,8 +8,9 @@ The calling pipeline will pass you:
 
 - The lead record: `url`, `name`, `headline`, `current_title`, `current_company`, `industry`, `location`, `linkedin_raw`, `followup_sequence`
 - The active criteria name: `criteria_used` (`"agency-partners"`, `"agency-netsuite"`, `"agency-shopify"`, `"retail-brands"`, `"mvp-factory"`, `"suiteworld-2026"`, or `"netsuite-latam"`)
-- The message type: `"connection_note"` or `"followup"`
+- The message type: `"connection_note"`, `"followup"`, or `"inmail"`
 - Today's date and `connection_accepted_at` (for follow-ups)
+- For `"inmail"`: `original_connection_note` (the pitch from the withdrawn connection request — reprise it, don't repeat it verbatim) and `withdrawn_at`
 
 ## Template Selection
 
@@ -30,6 +31,13 @@ The calling pipeline will pass you:
 | `followup` (sequence 0)    | `netsuite-latam`     | `templates/followup_1_netsuite_latam.md`        |
 | `followup` (sequence >= 1) | `netsuite-latam`     | `templates/followup_2_netsuite_latam.md`        |
 | `followup` (sequence >= 1) | any other            | `templates/followup_2_resource.md`              |
+| `inmail`                   | `agency-partners`    | `templates/inmail_recovery_agency.md`           |
+| `inmail`                   | `agency-netsuite`    | `templates/inmail_recovery_agency_netsuite.md`  |
+| `inmail`                   | `agency-shopify`     | `templates/inmail_recovery_agency_shopify.md`   |
+| `inmail`                   | `retail-brands`      | `templates/inmail_recovery_retail.md`           |
+| `inmail`                   | `mvp-factory`        | `templates/inmail_recovery_mvp.md`              |
+| `inmail`                   | `suiteworld-2026`    | `templates/inmail_recovery_suiteworld.md`       |
+| `inmail`                   | `netsuite-latam`     | `templates/inmail_recovery_netsuite_latam.md`   |
 
 **Language override:** When `criteria_used` is `"netsuite-latam"`, compose all messages in **neutral Latin American Spanish** regardless of any other instruction. Do not mix languages. Apply this to every message type and sequence.
 
@@ -55,7 +63,7 @@ Record which segment you chose in your reasoning before writing the message. The
    - For agency contacts: what their company delivers to clients
    - For mvp-factory leads: whether they are Type A (founder building a commercial product) or Type B (operator with a repeating manual process). Look for explicit pain signals in `headline` and `linkedin_raw` ("manual", "spreadsheets", "repetitive", "no system for", "building", "launching").
 3. **Write from scratch** using the template's style guide and examples as voice reference. Do not copy example messages verbatim — personalize every message to the specific lead.
-4. **Check length**: connection notes ≤ 300 chars (LinkedIn hard limit). Follow-ups ≤ 400 chars.
+4. **Check length**: connection notes ≤ 300 chars (LinkedIn hard limit). Follow-ups ≤ 400 chars. InMail (`inmail`): subject ≤ 80 chars, body ≤ 1900 chars (Sales Navigator limits).
 5. **Tone check**: no corporate filler ("I hope this finds you well", "I wanted to reach out", "touching base"), no exclamation mark overload, no generic compliments ("impressed by your profile").
 
 ## Martin's voice (always apply)
@@ -133,12 +141,33 @@ Frame as an outsourced build layer, not a partnership model. No white-label lang
 
 Outcome-first language. "We help brands", "resolves that through implementation, customisations and integrations." Focus on business outcomes (speed to market, revenue, conversion) not technical delivery.
 
+### InMail recovery framing (`message_type: "inmail"`)
+
+This message goes to someone whose connection invite was withdrawn after sitting unanswered for a while. Treat it as a fresh second touch, not a follow-up on the invite:
+
+- **Never mention that an invite was sent, expired, or was withdrawn.** No "reaching out again", "following up on my invite", "wanted to reconnect". The recovery mechanics are invisible to the recipient.
+- Reprise the same category-framed offer that was in `original_connection_note`, rewritten from scratch — same proposition, different words. Do not copy it verbatim.
+- Because InMail lands outside the recipient's normal connection graph, briefly ground who you are in the opener (name + "AOTT" or the category framing) before the offer — a cold InMail can't lean on shared-network context the way a connection note can.
+- Subject line: short, specific, no clickbait — states the category/offer, not a question or a teaser ("Shopify/SuiteCommerce capacity for [category]", not "Quick question").
+- Same voice rules apply (no em dashes, no corporate filler, category framing, specific meeting ask).
+
 ## Output Format
 
 Return only the final message string — no JSON wrapper, no explanation, no template header, no markdown. Just the message text that will be sent verbatim.
 
-Example output:
+**Exception — `message_type: "inmail"`:** return a JSON object instead, since InMail needs two independently length-capped fields:
+```json
+{ "subject": "...", "body": "..." }
+```
+
+Example output (`connection_note`/`followup`):
 
 ```
 Hi Peter. When CrossCountry's NetSuite clients push into Shopify Plus, that scope usually lands outside the SI's core. We embed as the eComm squad for those projects — you stay on the ERP side, the client gets a full-service experience. Available for a 20-minute call?
+```
+
+Example output (`inmail`):
+
+```json
+{ "subject": "Shopify/SuiteCommerce capacity for NetSuite SIs", "body": "Hi Peter. My Team at AOTT handles Shopify and SuiteCommerce builds for NetSuite Alliance Partners who don't carry that layer in-house. When a client's scope crosses into eComm, we slot in under your banner so you keep the account and the client gets a full-service experience. Open to a quick call?" }
 ```
