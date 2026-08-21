@@ -2,12 +2,9 @@
   "name": "netsuite-latam",
   "label": "NetSuite Latam Agencies",
   "description": "Targets decision-makers at NetSuite implementation agencies and Oracle partners in Latin America. Same staff augmentation proposition as agency-partners, with outreach composed in Spanish.",
-
   "generated_at": "2026-06-11T00:00:00.000Z",
   "generated_from_connections": 0,
-
   "_note": "Latin American counterpart to agency-partners. Focus on consultancies implementing NetSuite and SuiteCommerce for clients in Latam. All messages must be written in neutral Latin American Spanish.",
-
   "_company_type_signals_note": "Must be platform-specific to count toward agency boost. 'Consultora', 'Tecnología', 'Soluciones', 'Digital' alone are not sufficient — they must appear alongside a platform keyword like NetSuite, Oracle, SuiteCommerce, or Shopify.",
   "company_type_signals": [
     "NetSuite",
@@ -29,7 +26,6 @@
     "eCommerce Agency",
     "Digital Commerce"
   ],
-
   "target_roles": [
     "CEO",
     "Founder",
@@ -55,7 +51,6 @@
     "VP of Sales",
     "Chief Revenue Officer"
   ],
-
   "_target_industries_note": "Same as agency-partners. LinkedIn industry field must be combined with platform-specific domain signals — industry alone is not sufficient.",
   "target_industries": [
     "Information Technology and Services",
@@ -63,7 +58,6 @@
     "Management Consulting",
     "Internet"
   ],
-
   "target_locations": [
     "Mexico",
     "Colombia",
@@ -72,7 +66,6 @@
     "Peru",
     "Brazil"
   ],
-
   "seniority_signals": [
     "CEO",
     "Founder",
@@ -99,7 +92,6 @@
     "President",
     "Presidente"
   ],
-
   "_excluded_employers_note": "AOTT sells staff augmentation TO the partner ecosystem, never to the platform vendors themselves. Anyone whose CURRENT employer is a platform vendor is not a lead: they have internal delivery orgs and do not buy external agency capacity. Detect from the headline when company fields are null: 'at Oracle', 'en Oracle', 'at NetSuite', '@ Shopify', 'Oracle Consulting'. Oracle-internal titles like 'Consulting Practice Director' / 'Director de Consultoría en Oracle' are vendor employees, not partner-agency staff. Classify excluded-employer leads as cold and cap score at 25 regardless of seniority — this exclusion overrides company_type_signals and seniority_signals. Do not drop them from output; the operator can rescue from cold. Also cold: mega-SIs (Accenture, Deloitte, Capgemini, IBM, Infosys, TCS, Wipro, Cognizant, Globant) — cap at 40; and in-house IT/ERP leaders at end-user enterprises — cap at 30. The buyer must work at a consultora/agency whose BUSINESS is delivering NetSuite/SuiteCommerce projects for clients.",
   "excluded_employers": [
     "Oracle",
@@ -112,14 +104,15 @@
     "Microsoft",
     "BigCommerce"
   ],
-
-  "_excluded_companies_note": "Operator feedback 2026-06-09 (SuiteDB), 2026-07-27 (Seibert Consulting Group), and 2026-08-06 (AnagramDev): absolutely no interest in engaging with these agencies under any circumstances — never surface anyone from these firms in any tier, in any criteria. Unlike excluded_employers (surfaced cold), these are dropped entirely at Step 2 — skip the result AND write it to seen.json so it never resurfaces. Detect from headline naming the firm; Seibert Consulting Group's staff may abbreviate as 'SCG' in headlines (e.g. 'at SCG') — treat that alongside any Seibert/NetSuite/Shopify Plus context as the same exclusion.",
+  "_excluded_companies_note": "Operator feedback 2026-06-09 (SuiteDB), 2026-07-27 (Seibert Consulting Group), 2026-08-06 (AnagramDev), and 2026-08-06 (FullClarity — no fit for AOTT despite being a genuine NetSuite partner): absolutely no interest in engaging with these agencies under any circumstances — never surface anyone from these firms in any tier, in any criteria. Unlike excluded_employers (surfaced cold), these are dropped entirely at Step 2 — skip the result AND write it to seen.json so it never resurfaces. Detect from headline naming the firm; Seibert Consulting Group's staff may abbreviate as 'SCG' in headlines (e.g. 'at SCG') — treat that alongside any Seibert/NetSuite/Shopify Plus context as the same exclusion. Operator feedback 2026-08-12: N2Lab is now an active AOTT client relationship — exclude from all criteria and never surface as a new lead, regardless of fit.",
   "excluded_companies": [
+    "Tavano Team",
     "SuiteDB",
     "Seibert Consulting Group",
-    "AnagramDev"
+    "AnagramDev",
+    "FullClarity",
+    "N2Lab"
   ],
-
   "anti_patterns": [
     "Recruiter",
     "Recruitment",
@@ -135,7 +128,6 @@
     "Demand Generation",
     "Bachelor of Science"
   ],
-
   "_search_terms_note": "QUERY-BUILDING RULE for Step 2: never pair a bare platform name with a role — 'Oracle consulting' matches Oracle's own Consulting org. Every query must include a partner/implementador/consultora/agency qualifier alongside the platform name so results skew toward people whose employer partners with the platform rather than the vendor's own staff.",
   "search_terms": [
     "NetSuite partner CEO Mexico",
@@ -144,19 +136,16 @@
     "NetSuite implementador fundador",
     "Shopify Plus agency Latam"
   ],
-
   "scoring_weights": {
-    "role_match": 0.30,
-    "industry_match": 0.30,
+    "role_match": 0.3,
+    "industry_match": 0.3,
     "seniority_match": 0.25,
-    "location_match": 0.10,
+    "location_match": 0.1,
     "company_size_match": 0.05
   },
-
   "classification_thresholds": {
     "hot": 75,
     "warm": 45
   },
-
   "language": "es"
 }

@@ -60,6 +60,16 @@
     "ttl_days": 7
   },
 
+  "invite_recovery": {
+    "csv_import_dir": "state/imports",
+    "stale_after_days": 7,
+    "match_date_tolerance_days": 3,
+    "require_approval_before_withdraw": false,
+    "require_approval_before_inmail": true,
+    "max_withdrawals_per_run": 15,
+    "max_inmails_per_run": 15
+  },
+
   "notifications": {
     "from": "AOTT Pipeline <hello@allofthethings.dev>",
     "to": "martin@allofthethings.dev",
