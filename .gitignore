@@ -9,6 +9,10 @@
 # Not needed for dedupe (seen.json is); remote agents re-fetch on demand.
 state/raw/
 
+# CSV exports for invite recovery — bulky, contain PII, re-derivable by
+# re-exporting from LinkedIn. Never used for dedupe (seen.json is).
+state/imports/
+
 # Local secrets — never commit
 .claude/settings.local.json
 .env
