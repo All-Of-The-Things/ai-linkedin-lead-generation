@@ -23,23 +23,30 @@
     "Alliance Partner",
     "Systems Integrator"
   ],
+  "_target_roles_note": "Operator feedback 2026-08-18: after ~40 abbreviated runs, the US/UK/CA/AU pool of unmined decision-makers at NetSuite partner firms was showing sub-6% hot rates across two consecutive runs, with the clearest exec-level candidate at each freshly-discovered firm repeatedly turning out to be already-seen. Broadened target_roles and target_locations below to widen the addressable pool rather than keep re-mining the same narrow set of titles/geos. Added roles reflect titles that scored hot/warm this session via seniority_match + agency boost despite not being an exact target_roles hit (Managing Partner, President, COO, Chief Growth Officer, Director of ERP, Business Development Director) — making them exact role matches should lift borderline-warm cases into hot where seniority and platform fit are already strong.",
   "target_roles": [
     "CEO",
     "Founder",
     "Co-Founder",
     "Managing Director",
+    "Managing Partner",
+    "President",
+    "Chief Operating Officer",
     "General Manager",
     "CTO",
     "VP of Delivery",
     "Head of Delivery",
     "VP of Professional Services",
     "Director of Professional Services",
+    "Director of ERP",
     "Practice Director",
     "Practice Lead",
     "VP of Partnerships",
     "Director of Partnerships",
+    "Business Development Director",
     "VP of Sales",
     "Chief Revenue Officer",
+    "Chief Growth Officer",
     "Head of Talent",
     "Head of Operations"
   ],
@@ -50,11 +57,17 @@
     "Management Consulting",
     "Internet"
   ],
+  "_target_locations_note": "Operator feedback 2026-08-18: broadened beyond the original US/UK/CA/AU set to other high-income, English-business-fluent markets where this session repeatedly found genuine (not yet AOTT-competing offshore-delivery) NetSuite Alliance Partners with real decision-makers: Ireland (Redfaire, Eaton Square), Netherlands (Bring IT), Germany (Primus Delphi — German-speaking Oracle/NetSuite partner), Singapore (PointStar, JPS-iQ, HAND Global), New Zealand (Fusion5). Deliberately did not add India/Philippines/LATAM — those markets are where the same partner firms' offshore delivery ICs sit, and per this session's evidence those individuals already correctly classify cold on role/seniority grounds regardless of location, so adding them as target locations would mostly just relax a filter that isn't the actual bottleneck there.",
   "target_locations": [
     "United States",
     "Canada",
     "United Kingdom",
-    "Australia"
+    "Australia",
+    "Ireland",
+    "Netherlands",
+    "Germany",
+    "Singapore",
+    "New Zealand"
   ],
   "seniority_signals": [
     "CEO",
