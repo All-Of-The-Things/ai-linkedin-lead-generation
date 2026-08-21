@@ -48,8 +48,9 @@ The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sendi
 | `config/criteria/` | Named criteria files; each is a self-contained search profile |
 | `state/leads.json` | Master lead ledger, keyed by normalized LinkedIn URL |
 | `state/seen.json` | Dedupe index — append-only, never remove a URL |
-| `state/pending_approvals/` | Human interface: classification-split files per run (`YYYY-MM-DD-<run_id>-hot.json`, `-warm.json`, `-cold.json`), links files from abbreviated runs (`YYYY-MM-DD-<run_id>-links.json`, holding only `hot`/`warm`/`cold`), the consolidated `approved-queue.json` and `cold-registry.json` (single persistent files, not one per run — see State File Contracts), notes-ready file after Phase 2 (`YYYY-MM-DD-notes-ready.json`), followup files (`YYYY-MM-DD-followup.json`) |
+| `state/pending_approvals/` | Human interface: classification-split files per run (`YYYY-MM-DD-<run_id>-hot.json`, `-warm.json`, `-cold.json`), links files from abbreviated runs (`YYYY-MM-DD-<run_id>-links.json`, holding only `hot`/`warm`/`cold`), the consolidated `approved-queue.json` and `cold-registry.json` (single persistent files, not one per run — see State File Contracts), notes-ready file after Phase 2 (`YYYY-MM-DD-notes-ready.json`), followup files (`YYYY-MM-DD-followup.json`), InMail-ready files from Invite Recovery (`YYYY-MM-DD-inmail-ready.json`) |
 | `state/raw/` | Raw `fetch_profile` payloads, one `<slug>.json` per lead — gitignored, re-derivable |
+| `state/imports/` | CSV drop zone for Invite Recovery (`/recover-stale-invites`) — gitignored, optional (falls back to a live API call when empty); `state/imports/processed/` holds fully-resolved CSVs |
 | `state/archive/` | Maintenance output: `leads-archive.json`, `run_log-archive.json` — written only by `/pipeline-maintenance` |
 | `state/run_log.json` | Audit log of every pipeline run |
 | `templates/` | Message style guides used by `agents/message-composer.md` |
@@ -61,6 +62,8 @@ The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sendi
 | `.claude/commands/deliver-messages.md` | Phase 4 slash command (`/deliver-messages`) |
 | `.claude/commands/search-connections-abbreviated.md` | Phase 1 minimal-footprint variant (`/search-connections-abbreviated`) |
 | `.claude/commands/pipeline-maintenance.md` | Manual state housekeeping (`/pipeline-maintenance`) |
+| `.claude/commands/recover-stale-invites.md` | Invite Recovery, standalone phase — withdraw + draft (`/recover-stale-invites`) |
+| `.claude/commands/send-recovery-inmail.md` | Invite Recovery, standalone phase — send approved InMail (`/send-recovery-inmail`) |
 
 ---
 
@@ -88,8 +91,14 @@ Record the resolved provider in the current run_log entry as `provider_used: "<n
 | `react_to_post` | ConnectSafely `POST /linkedin/posts/react` | `linkedin post react <url> --type <reaction> --json -q` |
 | `comment_on_post` | ConnectSafely `POST /linkedin/posts/comment` | `linkedin post comment <url> '<text>' --json -q` |
 | `account_status` | MCP server connected + authenticated (check `ToolSearch`/`claude mcp list`) | `linkedin account list` |
+| `get_sent_invitations` | ConnectSafely `get-sent-invitations` (paginated via `startIndex`) | `linkedin connection pending --json -q` *(closest analog — shape/date coverage not confirmed equivalent; verify before relying on it)* |
+| `withdraw_invitation` | ConnectSafely `withdraw-invitation` (`profileId` required; `invitationId`/`profileUrn`/`firstName`/`lastName` auto-fetched if omitted) | `linkedin connection withdraw <url> [--no-unfollow] --json -q` |
+| `get_inmail_credits` | ConnectSafely `get-inmail-credits` — non-premium accounts return `0` | *(no equivalent found in `.claude/skills/linkedin/SKILL.md` — treat the absence itself as a blocker signal on this fallback)* |
+| `send_inmail` | ConnectSafely `sales-nav-send-message` (`body`, `recipients` as profile URNs — **no `subject` parameter**; requires Sales Navigator/Business Premium/Recruiter credits) | `linkedin navigator message send <url> '<text>' --subject '<subject>' --json -q` (requires Sales Navigator subscription; async — see `async_timeout`) |
 
 Each operation's exact request/response shape and field-normalization rules (so `leads.json` stays provider-agnostic — `name`, `headline`, `location`, `industry`, `current_title`, `current_company` keyed by normalized URL) live in the resolved provider's skill file.
+
+**InMail subject gap:** ConnectSafely's `sales-nav-send-message` has no subject-line parameter, unlike LinkedAPI's `--subject` flag. `agents/message-composer.md` still drafts a subject for `message_type: "inmail"` (used by the linkedapi fallback and shown for review), but it is silently unused when sending via ConnectSafely — the InMail lands as a subject-less message. This is an open gap, not a bug to fix here.
 
 ### Normalized error categories
 
@@ -103,6 +112,8 @@ Pipeline steps and the Rate Limit Handling section below reason about these cate
 | `network_error` | request timeout / connection failure | exit code 7 |
 | `subscription_required` | *(no equivalent — linkedapi-only)* | exit code 3 |
 | `async_timeout` | *(no equivalent — linkedapi-only; ConnectSafely calls are synchronous)* | exit code 8 (`workflowId` → poll `linkedin workflow status <id> --wait --json -q`) |
+
+No new category is needed for InMail: on linkedapi, "no Sales Navigator" maps to the existing `subscription_required` (exit 3). On connectsafely, `get_inmail_credits` returning `0` is a **soft** blocker — the call itself succeeds — so Invite Recovery checks it explicitly (see below) rather than treating it as an error category.
 
 ### Switching providers
 
@@ -449,6 +460,27 @@ Mark step complete in run_log (record as step `5`). **Phase 1 ends here.**
 
 ---
 
+## Invite Recovery (Standalone Phase)
+
+A standalone phase — like `/connection-warm-up` — that is never scheduled and stands outside the core Steps 0–10 numbering (nothing above is renumbered). It withdraws connection invites that have sat pending too long and gives each recovered contact a second touch via InMail, with withdrawal automatic and InMail gated behind explicit per-contact approval. Config lives at `config/pipeline.json → invite_recovery` (`csv_import_dir`, `stale_after_days`, `match_date_tolerance_days`, `require_approval_before_withdraw`, `require_approval_before_inmail`, `max_withdrawals_per_run`, `max_inmails_per_run`).
+
+Full step-by-step behavior lives in the two command files — this section is the durable spec they implement:
+
+**`/recover-stale-invites`** — own Step 0–6 numbering:
+- Step 0: re-entry check, `phase: "recover-stale-invites"`.
+- Step 1: resolve the candidate source. **CSV is the default** — read every `*.csv` in `state/imports/` (a LinkedIn "Sent Invitations" export). **If no CSV is present, fall back to the live provider** — call `get_sent_invitations` directly and treat its pending items as the candidate list. Record `invite_source: "csv"` or `"live_api"` on the run.
+- Step 2: live cross-reference (CSV path only) — match each CSV row against the paginated `get_sent_invitations` list by profile URL, then name + date proximity (`match_date_tolerance_days`), then unique name. Unmatched rows are treated as already-resolved (reconcile against `leads.json`/`connection_status` if a lead exists); ambiguous rows (2+ candidates) are logged, never acted on.
+- Step 3: **auto-withdraw** every remaining candidate sent ≥ `stale_after_days` ago, via `withdraw_invitation` — no per-contact approval (see Approval Contract below). Upserts the lead in `leads.json` with `status: "withdrawn"`, `withdrawn_at`, `retry_eligible_after` (+14 days), `withdrawal_note`, `source: "csv_recovery"`.
+- Step 4: check `get_inmail_credits` — `0` (or insufficient) hard-blocks drafting with a clear warning rather than attempting sends that can't work. Otherwise drafts an InMail (`agents/message-composer.md`, `message_type: "inmail"`) for every newly-withdrawn lead, reprising `connection_note` as `original_connection_note`.
+- Step 5: writes `state/pending_approvals/<date>-inmail-ready.json` (entries never removed, only decision fields filled in — same invariant as `notes-ready.json`); emails `phase: "inmail_ready"`.
+- Step 6: moves fully-resolved CSVs to `state/imports/processed/` (move, never delete); finalizes the run.
+
+**`/send-recovery-inmail`** — Step 7 in this phase's numbering: re-checks `get_inmail_credits`, scans `*-inmail-ready.json` for `decision: "approved"` entries whose lead is still `status: "inmail_queued"` with `inmail_sent_at` null, sends via `send_inmail` (connectsafely: no subject support — see the operations table note above; linkedapi: subject supported), sets `status → "inmail_sent"`, emails `phase: "inmail_delivery_summary"`.
+
+**Approval Contract addition:** withdrawal never requires per-contact approval (the command asserts `invite_recovery.require_approval_before_withdraw === false` before running Step 3 and refuses if it's ever set `true`, since no approval-gated withdrawal path exists). InMail sending follows the same shape as every other outbound send in this pipeline: `decision: "approved"` in an `*-inmail-ready.json` entry, a non-null `inmail_body_draft`/`edited_inmail_body`, lead at `status: "inmail_queued"`, and `invite_recovery.require_approval_before_inmail === true` — all independent, all must pass.
+
+---
+
 ## Rate Limit Handling
 
 This section reasons in terms of the normalized error categories defined in **LinkedIn Provider** above — see that section for how each category maps to a concrete signal (HTTP status vs. exit code) per provider.
@@ -487,8 +519,9 @@ Both checks must pass.
 ## State File Contracts
 
 - **`seen.json`**: append-only. Never remove a URL once written — not by any pipeline step and not by `/pipeline-maintenance`. A URL added here means "this person has been discovered and will never be re-proposed." Archiving a lead never touches `seen.json`; dedupe survives archiving by design.
-- **`leads.json`**: keyed by normalized URL. Each pipeline step only writes to its own fields. Do not overwrite fields owned by other steps. **One shared exception:** the profile fields (`name`, `headline`, `location`, `industry`, `current_title`, `current_company`) are enrichment-owned and may be written by Step 3 or the Step 6a approval fetch — freshest fetch wins. `leads.json` never contains `linkedin_raw`; raw payloads live in `state/raw/`. `/pipeline-maintenance` may *move* terminal leads to `state/archive/leads-archive.json`.
-- **`pending_approvals/`**: one timestamped file is created per run — never deleted, and the file itself is never merged into another file. `/pipeline-maintenance` may *move* fully-decided files to `pending_approvals/archive/`; nothing else relocates them. In entry-style files (`-hot/-warm/-cold/-connection/-notes-ready/-followup/-warmup-comments`) entries are never removed — only decision fields are filled in. Entries older than `approval_timeout_days` with null decisions are expired by Step 6a — it stamps `decision: "rejected"` on them (they remain in the file), so fully-decided files can eventually be archived by `/pipeline-maintenance`.
+- **`leads.json`**: keyed by normalized URL. Each pipeline step only writes to its own fields. Do not overwrite fields owned by other steps. **One shared exception:** the profile fields (`name`, `headline`, `location`, `industry`, `current_title`, `current_company`) are enrichment-owned and may be written by Step 3 or the Step 6a approval fetch — freshest fetch wins. `leads.json` never contains `linkedin_raw`; raw payloads live in `state/raw/`. `/pipeline-maintenance` may *move* terminal leads to `state/archive/leads-archive.json`. **Invite Recovery fields**, owned by `/recover-stale-invites` and `/send-recovery-inmail`: `inmail_subject_draft`, `inmail_body_draft`, `inmail_sent_at`; two additional `status` values, `"inmail_queued"` and `"inmail_sent"`. Reuses (does not redefine) `withdrawn_at`, `retry_eligible_after`, `withdrawal_note`, `connection_note`, `source`, `approval_decision`, `approval_decided_at`.
+- **`state/imports/`**: gitignored CSV drop zone for `/recover-stale-invites`. Optional — an empty directory means that run falls back to the live provider instead. `state/imports/processed/` holds CSVs whose every row is fully resolved (moved, never deleted, same convention as `/pipeline-maintenance`'s archiving elsewhere); a CSV with unresolved rows stays in `state/imports/` for the next run.
+- **`pending_approvals/`**: one timestamped file is created per run — never deleted, and the file itself is never merged into another file. `/pipeline-maintenance` may *move* fully-decided files to `pending_approvals/archive/`; nothing else relocates them. In entry-style files (`-hot/-warm/-cold/-connection/-notes-ready/-followup/-warmup-comments/-inmail-ready`) entries are never removed — only decision fields are filled in. Entries older than `approval_timeout_days` with null decisions are expired by Step 6a — it stamps `decision: "rejected"` on them (they remain in the file), so fully-decided files can eventually be archived by `/pipeline-maintenance`.
 
   In `*-links.json` files the invariant is **narrower than it used to be**: the file itself is still never merged or deleted, and hot/warm/expired bookkeeping still never leaves the file (tier → `expired` by Step 6a remains a pure in-file move). But **`approved` and `cold` are the two deliberate exceptions**: a URL cut into `approved` moves out of the links file entirely into the single shared `approved-queue.json` (a flat array of full URLs); a URL still sitting in `cold` past the current run moves out into the single shared `cold-registry.json` (a flat array of bare slugs) via the Cold Sweep at the start of the next abbreviated run. Links files are therefore written with only `hot`, `warm`, and `cold` keys — no `approved` key — and `cold` is expected to end each run cycle empty.
 
@@ -525,5 +558,12 @@ Templates live in `templates/` and are selected by `agents/message-composer.md` 
 | `followup_1_agency.md` | First follow-up, agency-partners criteria |
 | `followup_1_retail.md` | First follow-up, retail-brands criteria |
 | `followup_2_resource.md` | Second follow-up, both criteria |
+| `inmail_recovery_agency.md` | InMail recovery, agency-partners criteria |
+| `inmail_recovery_agency_netsuite.md` | InMail recovery, agency-netsuite criteria |
+| `inmail_recovery_agency_shopify.md` | InMail recovery, agency-shopify criteria |
+| `inmail_recovery_retail.md` | InMail recovery, retail-brands criteria |
+| `inmail_recovery_mvp.md` | InMail recovery, mvp-factory criteria |
+| `inmail_recovery_suiteworld.md` | InMail recovery, suiteworld-2026 criteria |
+| `inmail_recovery_netsuite_latam.md` | InMail recovery, netsuite-latam criteria |
 
 Common tokens the composer uses as placeholders: `{{first_name}}`, `{{current_title}}`, `{{current_company}}`. All other personalization is derived from the lead's `headline` and the raw profile payload the caller passes as `linkedin_raw` (fresh Step 6a fetch, else `state/raw/<slug>.json`).

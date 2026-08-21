@@ -5,7 +5,7 @@ You are a subagent in the LinkedIn lead generation pipeline. Your job is to send
 ## Context You Will Receive
 
 The calling pipeline will pass you:
-- `phase`: `"search_complete"` | `"notes_ready"` | `"messages_ready"` | `"delivery_summary"` | `"warm_up_summary"`
+- `phase`: `"search_complete"` | `"notes_ready"` | `"messages_ready"` | `"delivery_summary"` | `"warm_up_summary"` | `"inmail_ready"` | `"inmail_delivery_summary"`
 - `run_id`: string (e.g. `"2026-04-24-abc123"`)
 - `criteria_used`: string (e.g. `"agency-partners"`)
 - `counts`: object — varies by phase (see below)
@@ -76,6 +76,26 @@ The calling pipeline will pass you:
   | Name | Title | Company | Post snippet (first 100 chars) | Draft comment |
 - If `comment_drafts_surfaced == 0`: note "No comment drafts generated this run."
 - Footer instruction: "Open `state/pending_approvals/YYYY-MM-DD-warmup-comments.json`. For each entry: review `comment_draft`, optionally fill `edited_comment` to override, then set `decision` to `approved` or `rejected`. Re-run `/connection-warm-up` to send approved comments."
+
+### `inmail_ready`
+
+**Subject:** `{subject_prefix} {inmail_credits_blocked ? "[BLOCKED] 0 InMail credits — " + withdrawn_count + " contacts withdrawn, 0 drafted" : count + " InMail follow-ups ready for your review"}`
+
+**Body (HTML):**
+- Header: "Invite recovery — {date}"
+- If `inmail_credits_blocked` is true: an unmissable banner at the top — "{withdrawn_count} stale invites were withdrawn, but this account has 0 InMail credits (no Sales Navigator/Business Premium/Recruiter subscription detected). No InMail drafts were generated. Withdrawn contacts are saved in `leads.json` for manual outreach." Skip the table.
+- Otherwise: table of drafted InMail messages:
+  | Name | Title | Company | Original note | Draft subject | Draft body |
+- Footer instruction: "Open `state/pending_approvals/YYYY-MM-DD-inmail-ready.json`. For each entry: review `inmail_subject_draft`/`inmail_body_draft`, optionally fill `edited_inmail_subject`/`edited_inmail_body` to override, and set `decision` to `approved` or `rejected`. Then run `/send-recovery-inmail`."
+
+### `inmail_delivery_summary`
+
+**Subject:** `{subject_prefix} {sent_count} InMail sent · {failed_count} failed`
+
+**Body (HTML):**
+- Sent count, failed count
+- If any failures: table of failed leads with error messages
+- Short sign-off: "Withdrawn/recovered contacts that didn't get an approved InMail this round remain in `leads.json` at `status: inmail_queued` for the next run."
 
 ## Sending the Email
 
