@@ -2,12 +2,9 @@
   "name": "retail-brands",
   "label": "Retail & eCommerce Brands",
   "description": "Targets VP/Director/Head of eCommerce, Digital, and Merchandising leaders at retail and consumer brand companies. Secondary criteria — useful for expanding into direct client relationships.",
-
   "generated_at": "2026-04-24T00:00:00.000Z",
   "generated_from_connections": 200,
-
   "_retail_brand_guidance": "Score retail/DTC/consumer brand leads on two axes — platform signal and seniority — rather than a single confirmation gate:\n\n**Platform confirmed (strong, current):** Company explicitly uses Shopify Plus or NetSuite/SuiteCommerce — signal in their current role, company About, or tech stack ('Built our Shopify Plus store', 'our store runs SuiteCommerce'). Any qualifying title becomes eligible for warm-to-hot. Past-role mentions ('has worked with Shopify') do NOT count.\n\n**Platform implied (ecommerce-native brand, no explicit mention):** DTC-first company in apparel, beauty, sportswear, or consumer electronics with evident digital-first positioning. Indirect signals: Shopify ecosystem tools (Klaviyo, Gorgias, Loop Returns), multi-currency/warehouse NetSuite use case, Series B+ funding as DTC brand. Only qualifies at C-suite or VP level (CEO, CTO, CPO, VP Ecommerce, VP Digital) — score as low warm (45–55).\n\n**No signal:** Generic retail with brick-and-mortar focus, vague 'omnichannel' without specific platform, or below Director-level seniority — classify cold regardless of title.",
-
   "target_roles": [
     "VP of eCommerce",
     "Vice President eCommerce",
@@ -23,7 +20,6 @@
     "CIO",
     "CTO"
   ],
-
   "target_industries": [
     "Retail",
     "Consumer Goods",
@@ -33,14 +29,12 @@
     "Internet",
     "Information Technology and Services"
   ],
-
   "target_locations": [
     "United States",
     "Canada",
     "United Kingdom",
     "Australia"
   ],
-
   "seniority_signals": [
     "VP",
     "Vice President",
@@ -60,7 +54,6 @@
     "Partner",
     "Global"
   ],
-
   "_excluded_employers_note": "This criteria targets people at retail and consumer BRANDS. Employees of the commerce platform vendors themselves (Shopify, Oracle/NetSuite, Salesforce, Adobe, BigCommerce) are not brands and not leads — classify cold, cap score at 25, regardless of seniority. Detect from the headline when company fields are null: 'at Shopify', '@ Shopify', 'at Oracle', 'at NetSuite'.",
   "excluded_employers": [
     "Shopify",
@@ -72,14 +65,15 @@
     "Microsoft",
     "BigCommerce"
   ],
-
-  "_excluded_companies_note": "Operator feedback 2026-06-09 (SuiteDB), 2026-07-27 (Seibert Consulting Group), and 2026-08-06 (AnagramDev): absolutely no interest in engaging with these agencies under any circumstances — never surface anyone from these firms in any tier, in any criteria. Unlike excluded_employers (surfaced cold), these are dropped entirely at Step 2 — skip the result AND write it to seen.json so it never resurfaces. Detect from headline naming the firm; Seibert Consulting Group's staff may abbreviate as 'SCG' in headlines (e.g. 'at SCG') — treat that alongside any Seibert/NetSuite/Shopify Plus context as the same exclusion.",
+  "_excluded_companies_note": "Operator feedback 2026-06-09 (SuiteDB), 2026-07-27 (Seibert Consulting Group), 2026-08-06 (AnagramDev), and 2026-08-06 (FullClarity — no fit for AOTT despite being a genuine NetSuite partner): absolutely no interest in engaging with these agencies under any circumstances — never surface anyone from these firms in any tier, in any criteria. Unlike excluded_employers (surfaced cold), these are dropped entirely at Step 2 — skip the result AND write it to seen.json so it never resurfaces. Detect from headline naming the firm; Seibert Consulting Group's staff may abbreviate as 'SCG' in headlines (e.g. 'at SCG') — treat that alongside any Seibert/NetSuite/Shopify Plus context as the same exclusion. Operator feedback 2026-08-12: N2Lab is now an active AOTT client relationship — exclude from all criteria and never surface as a new lead, regardless of fit.",
   "excluded_companies": [
+    "Tavano Team",
     "SuiteDB",
     "Seibert Consulting Group",
-    "AnagramDev"
+    "AnagramDev",
+    "FullClarity",
+    "N2Lab"
   ],
-
   "anti_patterns": [
     "Recruiter",
     "Recruitment",
@@ -94,22 +88,19 @@
     "Partner",
     "Implementation"
   ],
-
   "search_terms": [
     "VP ecommerce retail",
     "Head of digital commerce",
     "ecommerce director DTC",
     "omnichannel digital leader"
   ],
-
   "scoring_weights": {
     "role_match": 0.35,
     "industry_match": 0.25,
     "location_match": 0.15,
-    "seniority_match": 0.20,
+    "seniority_match": 0.2,
     "company_size_match": 0.05
   },
-
   "classification_thresholds": {
     "hot": 75,
     "warm": 45
