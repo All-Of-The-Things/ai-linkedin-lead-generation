@@ -57,17 +57,8 @@ The pipeline supports two LinkedIn automation providers — see `CLAUDE.md → L
 ### 1. Connect ConnectSafely
 
 1. Go to [connectsafely.ai](https://connectsafely.ai), sign up or log in, and connect your LinkedIn account.
-2. From the dashboard, grab your **API key** and **account ID**.
-3. Open `.claude/settings.local.json` (gitignored — never committed) and add them:
-   ```json
-   {
-     "env": {
-       "CONNECTSAFELY_API_KEY": "your_api_key",
-       "CONNECTSAFELY_ACCOUNT_ID": "your_account_id"
-     }
-   }
-   ```
-4. This repo's `.mcp.json` (already committed) registers the ConnectSafely MCP server using those two env vars — no further config needed. Restart Claude Code after saving so the MCP server connects.
+2. Connect the **ConnectSafely.AI** connector to your claude.ai account (via claude.ai's own Connector settings — this is account-level, not a project file). This gives Claude Code access to `mcp__claude_ai_ConnectSafely_AI__*` tools whenever you're signed in.
+3. No project-level API key or `.mcp.json` config is needed — the pipeline talks to ConnectSafely exclusively through that connector. (A prior version of this repo wired up a project-level `.mcp.json` server with a raw API key instead; that path was removed after its credentials went stale — see `.claude/skills/connectsafely/SKILL.md`.)
 
 ### 2. Set your Resend API key
 

@@ -9,16 +9,9 @@ ConnectSafely automates LinkedIn on behalf of a single connected LinkedIn accoun
 
 ## Calling convention
 
-1. **Prefer the MCP server** — this repo's `.mcp.json` registers a `connectsafely` MCP server (`https://mcp.connectsafely.ai`, authenticated via `CONNECTSAFELY_API_KEY` + `CONNECTSAFELY_ACCOUNT_ID`). If its tools are loaded (check `ToolSearch` for `connectsafely`), call the tool that matches the operation you need — tool names come from the live server, do not assume names not seen in a real tool listing.
-2. **Curl fallback** — if the MCP tools aren't available/loaded, call the REST API directly:
-   ```bash
-   curl -s -X POST https://api.connectsafely.ai/linkedin/<path> \
-     -H "Authorization: Bearer $CONNECTSAFELY_API_KEY" \
-     -H "Content-Type: application/json" \
-     -d '<json body>'
-   ```
-   `CONNECTSAFELY_API_KEY` lives in `.claude/settings.local.json` (gitignored). This mirrors the existing pattern in `.claude/commands/analyze-my-posts.md`.
-3. Every request may include `accountId` (`$CONNECTSAFELY_ACCOUNT_ID`) explicitly; if omitted, the API uses the account's default.
+1. **Use the claude.ai ConnectSafely.AI connector** — an account-level MCP connector (tool prefix `mcp__claude_ai_ConnectSafely_AI__*`), connected via claude.ai's own connector settings, not any file in this repo. Check `ToolSearch` for `claude_ai_ConnectSafely_AI` to confirm it's loaded, then call the tool that matches the operation you need — tool names come from the live server, do not assume names not seen in a real tool listing.
+   - This repo previously also registered a project-level `connectsafely` MCP server in `.mcp.json` (authenticated via `CONNECTSAFELY_API_KEY`/`CONNECTSAFELY_ACCOUNT_ID`). That registration was removed 2026-08-27 after its credentials went stale and stayed unauthorized for weeks (`401 Unauthorized - Invalid credentials`) while the claude.ai connector kept working — see `state/run_log.json` history around 2026-08-11 onward. Do not re-add a `mcp__connectsafely__*`-prefixed tool call; if you see one offered, it's not this skill's intended path.
+2. Every request may include `accountId` explicitly (see each tool's schema); if omitted, the connector uses the most recently used account.
 
 ## Operations
 
