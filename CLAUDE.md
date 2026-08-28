@@ -492,7 +492,7 @@ On `rate_limited` from any operation:
 4. **Never abort the entire run** due to a single rate limit failure.
 
 Other categories:
-- `auth_error`: Stop immediately. Log. Tell the user to run the resolved provider's setup (connectsafely: confirm the MCP server is connected and `CONNECTSAFELY_API_KEY`/`CONNECTSAFELY_ACCOUNT_ID` are set; linkedapi: run `linkedin setup`).
+- `auth_error`: Stop immediately. Log. Tell the user to run the resolved provider's setup (connectsafely: confirm the claude.ai ConnectSafely.AI connector is connected — check `ToolSearch` for `mcp__claude_ai_ConnectSafely_AI__*` tools, or claude.ai's connector settings; linkedapi: run `linkedin setup`).
 - `subscription_required` (linkedapi only): Log and skip the failing command.
 - `async_timeout` (linkedapi only): Check for a `workflowId` in the response, then poll `linkedin workflow status <id> --wait --json -q`.
 - JSON parse failure on output: log raw output to run_log errors, skip that lead.
