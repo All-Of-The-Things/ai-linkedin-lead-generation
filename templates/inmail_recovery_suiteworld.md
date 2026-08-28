@@ -8,8 +8,9 @@
 ## Style guide (both variants)
 
 - Subject: keep the SuiteWorld hook here too — "SuiteWorld — eComm build capacity for NetSuite SIs", "SuiteWorld — closing the ERP-to-storefront gap"
-- Body opens "Hi {{first_name}}." then a brief AOTT grounding line, then use SuiteWorld as the meeting hook — same as the connection note, naturally woven in, not a cold invite
+- Body opens "Hi {{first_name}}." then leads directly into the offer, using SuiteWorld as the meeting hook — fold AOTT into the offer clause rather than a separate self-intro (Variant B's reference already does this correctly). Never open with "I'm with AOTT".
 - Rotate the event phrase and meeting close, same banks as `connection_note_suiteworld.md`
+- Target 180-230 chars for the body — the 1900-char cap is not a target.
 - Em dash allowed once
 - No exclamation marks
 
@@ -19,7 +20,7 @@ Same pitch as `connection_note_suiteworld.md`: delivery capacity, AOTT handles S
 
 **Reference:**
 Subject: "SuiteWorld — eComm build capacity for NetSuite SIs"
-Body: "Hi {{first_name}}. I'm with AOTT — SuiteCommerce and Shopify Plus builds are the overflow most NetSuite SIs don't want to staff for permanently. We embed as the eComm squad, you keep the relationship, we handle the build. Heading to SuiteWorld? Would love to meet up in Vegas."
+Body: "Hi {{first_name}}. SuiteCommerce and Shopify Plus builds are the overflow most NetSuite SIs don't staff for permanently. We embed as the eComm squad, you keep the relationship. Heading to SuiteWorld? Would love to meet up in Vegas."
 
 ## Variant B — End-User Brand
 

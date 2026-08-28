@@ -9,9 +9,10 @@
 ## Guía de estilo
 
 - Subject (en español): corto, directo al punto — "Capacidad de desarrollo Shopify/SuiteCommerce", "Equipo de entrega eComm para partners NetSuite"
-- Body abre con "Hola {{first_name}}." seguido de una línea breve situando a AOTT — el InMail no tiene el contexto de red compartida que sí tiene una nota de conexión
+- Body abre con "Hola {{first_name}}." y entra directo a la oferta de categoría — integrar a AOTT dentro de esa misma frase ("Ayudamos a...", "Mi equipo en AOTT ayuda a...") en vez de una frase de auto-presentación aparte. Nunca abrir con "Soy de AOTT".
 - Mismo enfoque que la nota de conexión: comenzar con lo que ofrecemos o una observación de categoría, nunca con un problema específico de su empresa
 - **"Nosotros" y "Mi equipo"** — variar
+- Meta: 180-230 caracteres para el body — el límite de 1900 es el tope de Sales Navigator, no una meta a llenar.
 - Guión corto permitido una vez como separador estructural
 - Cerrar con una invitación concreta y de baja fricción, misma rotación que la nota de conexión
 
@@ -22,7 +23,7 @@ Las mismas de `connection_note_netsuite_latam.md`, más: ninguna referencia a la
 ## Mensajes de referencia (referencia de voz — no copiar textualmente)
 
 Subject: "Capacidad de desarrollo Shopify/SuiteCommerce"
-Body: "Hola {{first_name}}. Soy de AOTT — ayudamos a Partners de NetSuite a ampliar su capacidad para clientes que necesitan un storefront como parte de su implementación NS. Experiencia Shopify/SuiteCommerce bajo demanda, tu equipo se mantiene en el lado ERP. ¿Podemos explorar un fit?"
+Body: "Hola {{first_name}}. Ayudamos a Partners de NetSuite a ampliar su capacidad para clientes que necesitan un storefront como parte de su implementación NS. Tu equipo se mantiene en el lado ERP. ¿Podemos explorar un fit?"
 
 Subject: "Equipo de entrega eComm bajo tu marca"
 Body: "Hola {{first_name}}. Mi equipo habilita a consultoras enfocadas en ERP para ofrecer Shopify/SuiteCommerce bajo tu marca, mientras tu equipo se queda en el lado ERP. ¿Disponible para explorar?"

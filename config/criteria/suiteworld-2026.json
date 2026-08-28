@@ -135,7 +135,6 @@
   "reference_companies": [
     "Plative",
     "Esonus",
-    "Foretopia",
     "Techfino",
     "Aztech Digital",
     "RSM",
@@ -189,7 +188,8 @@
     "Seibert Consulting Group",
     "AnagramDev",
     "FullClarity",
-    "N2Lab"
+    "N2Lab",
+    "Foretopia"
   ],
   "anti_patterns": [
     "Recruiter",

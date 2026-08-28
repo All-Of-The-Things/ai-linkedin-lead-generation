@@ -63,7 +63,7 @@ Record which segment you chose in your reasoning before writing the message. The
    - For agency contacts: what their company delivers to clients
    - For mvp-factory leads: whether they are Type A (founder building a commercial product) or Type B (operator with a repeating manual process). Look for explicit pain signals in `headline` and `linkedin_raw` ("manual", "spreadsheets", "repetitive", "no system for", "building", "launching").
 3. **Write from scratch** using the template's style guide and examples as voice reference. Do not copy example messages verbatim — personalize every message to the specific lead.
-4. **Check length**: connection notes ≤ 300 chars (LinkedIn hard limit). Follow-ups ≤ 400 chars. InMail (`inmail`): subject ≤ 80 chars, body ≤ 1900 chars (Sales Navigator limits).
+4. **Check length**: connection notes ≤ 300 chars (LinkedIn hard limit). Follow-ups ≤ 400 chars. InMail (`inmail`): subject ≤ 80 chars; body target 180-230 chars, hard cap 1900 chars (Sales Navigator limit) — the cap is not the target, see "InMail recovery framing" below.
 5. **Tone check**: no corporate filler ("I hope this finds you well", "I wanted to reach out", "touching base"), no exclamation mark overload, no generic compliments ("impressed by your profile").
 
 ## Martin's voice (always apply)
@@ -147,9 +147,14 @@ This message goes to someone whose connection invite was withdrawn after sitting
 
 - **Never mention that an invite was sent, expired, or was withdrawn.** No "reaching out again", "following up on my invite", "wanted to reconnect". The recovery mechanics are invisible to the recipient.
 - Reprise the same category-framed offer that was in `original_connection_note`, rewritten from scratch — same proposition, different words. Do not copy it verbatim.
-- Because InMail lands outside the recipient's normal connection graph, briefly ground who you are in the opener (name + "AOTT" or the category framing) before the offer — a cold InMail can't lean on shared-network context the way a connection note can.
+- **Target length: 180-230 chars for the body.** The 1900-char figure is the Sales Navigator hard cap, not a target — it exists so token substitution (long names/companies) never truncates, not as room to fill. Write the tightest version of the offer first. Only add a second clause if it names a concrete detail (a stack, a role, a specific outcome) the reader couldn't infer from the category label. A trailing reasoning or justification clause ("...when project pipelines get tight", "...so partners can say yes without adding headcount") is almost always padding on top of a sentence that already states the offer and the ask — cut it. When in doubt, cut.
+- **Grounding the sender, without the "I'm with AOTT" formula.** A cold InMail still needs the reader to know who's writing, but never build that as a bolted-on clause using "I'm with AOTT, we..." or "I'm with AOTT — we...". Fold identity into the offer sentence instead:
+  - Preferred: open directly with the category offer and let AOTT ride inside that first clause — "We help [category]...", "My Team at AOTT helps [category]...".
+  - If a standalone grounding clause is genuinely needed, use "At AOTT, we..." — never "I'm with AOTT".
+  - Dropping the company name entirely and using "We" / "My Team" is also acceptable when the category framing alone carries the credibility — this is the most common resolution seen in edited drafts.
 - Subject line: short, specific, no clickbait — states the category/offer, not a question or a teaser ("Shopify/SuiteCommerce capacity for [category]", not "Quick question").
 - Same voice rules apply (no em dashes, no corporate filler, category framing, specific meeting ask).
+- **Watch, not a rule yet:** "empower(s)" has shown up as a substitute verb for "enable/help" in some edited drafts. Treat it as one more valid synonym in rotation, not a required or default verb — it is not yet corroborated enough to mandate.
 
 ## Output Format
 

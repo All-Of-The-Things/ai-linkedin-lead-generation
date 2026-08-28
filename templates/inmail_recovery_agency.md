@@ -8,12 +8,12 @@
 ## Style guide
 
 - Subject: short, states the category/offer directly — no question, no teaser. Rotate: "Shopify/SuiteCommerce capacity for [category]", "eComm build layer for NetSuite partners", "On-demand Shopify/SuiteCommerce delivery"
-- Body opens with "Hi {{first_name}}." then a one-line grounding of who's writing (AOTT / category framing) — InMail has no shared-network context to lean on the way a connection note does
+- Body opens with "Hi {{first_name}}." then leads directly into the category offer — fold the AOTT identity into that first clause ("We help...", "My Team at AOTT...") rather than a separate self-intro clause. Never open with "I'm with AOTT".
 - **Lead with what we offer or a category observation** — same rule as the connection note: never open with a problem or gap specific to their company, never a metric as an opener
 - **Category framing over company name-dropping**: "ERP agencies", "Alliance Partners", "Premier NetSuite partners", "NetSuite SIs"
 - **No em dashes. Ever.**
 - **"We" and "My Team"** — vary
-- Slightly more room than a connection note (up to 1900 chars) but don't pad — 2-4 sentences is usually enough. More room means more specificity, not more words.
+- Target 180-230 chars for the body — 1900 is the Sales Navigator hard cap, not something to fill. One sentence states the offer; a second is optional and only earns its place if it adds a concrete detail. Cut any clause that just restates or justifies the first sentence.
 - End with a **specific, low-friction meeting ask**, same rotation as connection notes: "Available to chat this week?", "Open to a quick call?", "Worth a quick call?", "Can we explore a fit?"
 
 ## Banned phrasings
@@ -25,10 +25,10 @@ Same bans as the connection note, plus:
 ## Reference messages (voice reference — do not copy verbatim)
 
 Subject: "Shopify/SuiteCommerce capacity for ERP agencies"
-Body: "Hi Tony. I'm with AOTT — we enable ERP dedicated agencies to offer Shopify/SuiteCommerce services on a white-label basis. My Team handles that build layer under your banner, so your clients get the full stack from a single vendor. Available to chat this week?"
+Body: "Hi Tony. We enable ERP dedicated agencies to offer Shopify/SuiteCommerce on a white-label basis. My Team handles the build under your banner, you keep the client. Available to chat this week?"
 
 Subject: "On-demand eComm build layer for Alliance Partners"
-Body: "Hi Ross. My Team at AOTT works with Alliance Partners to expand their ERP capabilities into Shopify and SuiteCommerce delivery. We handle the build, you keep the account and the client relationship. Open to a quick call?"
+Body: "Hi Ross. At AOTT, we help Alliance Partners expand into Shopify and SuiteCommerce delivery for clients mid NS rollout. We handle the build, you keep the account. Open to a quick call?"
 
 ## What to personalise
 
