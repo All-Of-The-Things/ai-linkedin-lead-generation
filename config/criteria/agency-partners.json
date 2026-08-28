@@ -2,14 +2,15 @@
   "name": "agency-partners",
   "label": "Agency & SI Partners",
   "description": "Targets decision-makers at NetSuite Alliance Partners, Oracle NetSuite SIs, and ERP consulting firms that do commerce integrations. AOTT's Shopify capability fills the gap these agencies have when their enterprise clients need NetSuite ↔ Shopify storefronts connected. Pure Shopify agencies with no ERP context are out of scope.",
-  "generated_at": "2026-08-19T00:00:00.000Z",
-  "generated_from_connections": 204,
+  "generated_at": "2026-08-21T17:10:00.000Z",
+  "generated_from_connections": 185,
   "_note": "AOTT's value is staff augmentation for NetSuite SIs and ERP agencies: their clients run NetSuite ERP and need Shopify (or other commerce) integrations. AOTT supplies the Shopify dev capacity the SI lacks. Target: CEOs, founders, and practice leads at NetSuite Alliance Partners, Oracle consulting firms, and ERP integration shops — not pure Shopify or DTC agencies.",
   "_refresh_note": "Operator feedback 2026-08-19: 7-run refresh trigger hit after this criteria's 7th use. Ran criteria-extractor against 204 current connections but merged its output on top of this file rather than doing a raw overwrite, at the operator's explicit request, to preserve the hand-tuned domain gate, excluded_companies/excluded_employers, reference_companies, and retail_brand_guidance sections built up through prior operator feedback. The extractor's analysis validated target_roles/target_industries as already accurate (added 'Accounting' as a genuinely new industry signal from CPA/NetSuite-finance-tagged connections) and added 'Head of Channel & Alliances' as a role pattern not previously covered. target_locations was deliberately left unchanged: although India/South Asia and Latin America showed high connection volume, the extractor's own analysis flagged those clusters as offshore technical consultants/developers (SuiteScript/Celigo ICs), not decision-makers — consistent with agency-netsuite's 2026-08-18 refresh, which reached the identical conclusion and explicitly excluded those same geographies for the same reason. get-connections also does not return a location field, so any location signal here would be inferred/low-confidence regardless.",
+  "_role_expansion_note": "Operator feedback 2026-08-21: after 4 consecutive runs (2026-08-18 to 2026-08-19) hit the min_hot_leads_per_run floor short or at zero, confirming session-wide NetSuite-partner search-index exhaustion under the prior 19-role target_roles set, operator approved adding President, Chief Delivery Officer, Regional Director, Head of Business Development, VP of Client Services, and Head of Growth as additional senior-title search angles. target_locations was deliberately left unchanged (Ireland/Singapore/New Zealand/South Africa/Netherlands are being tried as this run's ad-hoc search keywords, not as a persistent criteria change, pending results).",
+  "_refresh_note_2026_08_21": "Criteria-extractor refresh, 2026-08-21: get-connections caps limit at 12/call (not the 200 the agent doc assumes), so this run paginated 16 calls across three sort orders (recentlyAdded startIndex 0-144, plus firstName and lastName spot-checks at higher offsets to cross-section older connections outside the recency window) for 185 distinct connections analyzed — merged on top of this file, not a raw overwrite, per established operator practice. Findings: (1) target_roles — added 'Associate Director', 'Sales Director', 'Engagement Manager', 'Client Partner', and 'Chief Growth Officer' as genuinely new recurring title patterns not covered by the existing 24-role set (e.g. 'Chief Growth & Operations Officer' @ SuiteMatrix, 'Client Partner' @ Saberpoint, 'Engagement Manager' x2 @ Bryant Park Consulting). (2) Notable but NOT acted on unilaterally: 'Associate Director' recurred specifically at large accounting/advisory firms running NetSuite practices — RSM US LLP (x2), Crowe Advisory LLC, Riveron. These are real NetSuite Alliance Partners/resellers whose business model (sell + implement NetSuite for clients) matches the reference_companies pattern, just at bigger scale — they are NOT generalist mega-SIs like the excluded_employers note (a) list (Accenture/Deloitte/etc.), so I did not add them there. But they're also bigger and more corporate than the boutique-to-mid-market reference_companies bar this file otherwise sets. Flagging for operator judgment: treat as in-scope (add as reference_companies-style targets) or as an adjacent exclusion tier — left untouched pending a decision either way. (3) target_industries: unchanged. get-connections returns no `industry` field (same gap as location, confirmed again this run) so industry signal stays headline-inferred only; the accounting-firm cluster above further reinforces the 'Accounting' entry added in the 2026-08-19 refresh, no new industry warranted. (4) target_locations: unchanged, and the same offshore-technical conclusion from the 2026-08-19 refresh and agency-netsuite's 2026-08-18 refresh holds — India/South Asia and LatAm (this run's alphabetical sort passes surfaced a dense Argentina/Uruguay/Peru cluster) still read overwhelmingly as SuiteScript/Celigo ICs and technical consultants, not decision-makers. get-connections still returns no `location` field either, so this remains headline-inferred and low-confidence by construction. (5) search_terms: appended 4 new free-text angles reflecting the above — 'NetSuite Alliance Partner associate director', 'NetSuite accounting firm advisory practice director', 'Boomi NetSuite integration partner' (Boomi Platinum Partner + NetSuite pairing seen at Hathority LLC — a new iPaaS signal alongside the existing Celigo pattern, not yet added to company_type_signals — flagging, not adding, since that list is hand-tuned), and 'NetSuite sales director partner'. scoring_weights and classification_thresholds left untouched (hand-tuned, no data-driven reason to change).",
   "reference_companies": [
     "Plative",
     "Esonus",
-    "Foretopia",
     "Techfino",
     "Aztech Digital"
   ],
@@ -57,7 +58,18 @@
     "Chief Revenue Officer",
     "Head of Talent",
     "Head of Operations",
-    "Head of Channel & Alliances"
+    "Head of Channel & Alliances",
+    "President",
+    "Chief Delivery Officer",
+    "Regional Director",
+    "Head of Business Development",
+    "VP of Client Services",
+    "Head of Growth",
+    "Associate Director",
+    "Sales Director",
+    "Engagement Manager",
+    "Client Partner",
+    "Chief Growth Officer"
   ],
   "_target_industries_note": "LinkedIn industry field alone is not sufficient — must be combined with platform-specific domain signals. Focus on companies in IT consulting and ERP/commerce implementation space.",
   "target_industries": [
@@ -114,7 +126,8 @@
     "Seibert Consulting Group",
     "AnagramDev",
     "FullClarity",
-    "N2Lab"
+    "N2Lab",
+    "Foretopia"
   ],
   "anti_patterns": [
     "Recruiter",
@@ -147,7 +160,11 @@
     "Shopify Plus agency founder",
     "ERP implementation consultancy managing director",
     "ecommerce agency head of delivery",
-    "NetSuite Celigo integration partner"
+    "NetSuite Celigo integration partner",
+    "NetSuite Alliance Partner associate director",
+    "NetSuite accounting firm advisory practice director",
+    "Boomi NetSuite integration partner",
+    "NetSuite sales director partner"
   ],
   "scoring_weights": {
     "role_match": 0.3,
