@@ -88,7 +88,7 @@
     "Microsoft",
     "BigCommerce"
   ],
-  "_excluded_companies_note": "Operator feedback 2026-06-09 (SuiteDB), 2026-07-27 (Seibert Consulting Group), 2026-08-06 (AnagramDev), and 2026-08-06 (FullClarity — no fit for AOTT despite being a genuine NetSuite partner): absolutely no interest in engaging with these agencies under any circumstances — never surface anyone from these firms in any tier, in any criteria. Unlike excluded_employers (surfaced cold), these are dropped entirely at Step 2 — skip the result AND write it to seen.json so it never resurfaces. Detect from headline naming the firm; Seibert Consulting Group's staff may abbreviate as 'SCG' in headlines (e.g. 'at SCG') — treat that alongside any Seibert/NetSuite/Shopify Plus context as the same exclusion. Operator feedback 2026-08-12: N2Lab is now an active AOTT client relationship — exclude from all criteria and never surface as a new lead, regardless of fit.",
+  "_excluded_companies_note": "Operator feedback 2026-06-09 (SuiteDB), 2026-07-27 (Seibert Consulting Group), 2026-08-06 (AnagramDev), and 2026-08-06 (FullClarity — no fit for AOTT despite being a genuine NetSuite partner), and 2026-09-10 (Techfino — same 'no fit despite scoring well' pattern, also removed from any reference_companies list it appeared in): absolutely no interest in engaging with these agencies under any circumstances — never surface anyone from these firms in any tier, in any criteria. Unlike excluded_employers (surfaced cold), these are dropped entirely at Step 2 — skip the result AND write it to seen.json so it never resurfaces. Detect from headline naming the firm; Seibert Consulting Group's staff may abbreviate as 'SCG' in headlines (e.g. 'at SCG') — treat that alongside any Seibert/NetSuite/Shopify Plus context as the same exclusion. Operator feedback 2026-08-12: N2Lab is now an active AOTT client relationship — exclude from all criteria and never surface as a new lead, regardless of fit.",
   "excluded_companies": [
     "Tavano Team",
     "SuiteDB",
@@ -96,7 +96,8 @@
     "AnagramDev",
     "FullClarity",
     "N2Lab",
-    "Foretopia"
+    "Foretopia",
+    "Techfino"
   ],
   "anti_patterns": [
     "Recruiter",
