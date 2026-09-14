@@ -1,6 +1,6 @@
 # /recover-stale-invites
 
-**Standalone phase.** Finds LinkedIn connection invites you sent that are still pending after a week, withdraws them automatically, and drafts an InMail second-touch for each recovered contact for your review. Pairs with `/send-recovery-inmail`, which sends only the InMail messages you approve.
+**Standalone phase.** Finds LinkedIn connection invites you sent that are still pending after a week, withdraws them automatically, and drafts an InMail second-touch for each recovered contact for your review. Pairs with `/send-recovery-inmail`, which sends only the InMail messages you approve. No email notification — review the approval file directly.
 
 ## What this does
 
@@ -25,7 +25,7 @@
    - Populate `connection_note` from the CSV `Message` column if present and the lead didn't already have one.
    - On failure: log the error, leave the candidate for next run.
 6. **Step 4 — InMail credit gate + draft:** call `get_inmail_credits`.
-   - If `0`, or fewer than the number of leads just moved to `status: "withdrawn"` with no draft yet: **hard-block** — log an unmissable warning that N contacts were withdrawn but will get no InMail (no InMail capability on this account), skip drafting entirely, and flag the blocker for Step 5's email.
+   - If `0`, or fewer than the number of leads just moved to `status: "withdrawn"` with no draft yet: **hard-block** — log an unmissable warning that N contacts were withdrawn but will get no InMail (no InMail capability on this account), skip drafting entirely, and surface the blocker in the run summary.
    - Otherwise, for each `status: "withdrawn"` lead with `inmail_body_draft` still null: resolve `criteria_used` via the standard Criteria Selection rules (CSV-originated leads have no run-specific criteria of their own); invoke `agents/message-composer.md` with `message_type: "inmail"`, passing `original_connection_note` (from `connection_note`) and `withdrawn_at`; enforce the subject ≤ 80 char / body ≤ 1900 char caps; write `inmail_subject_draft`, `inmail_body_draft`, `status → "inmail_queued"`.
 7. **Step 5 — Write the approval file:** collect every lead that just received an InMail draft (or, if Step 4 hit the credit gate, none) into `state/pending_approvals/<YYYY-MM-DD>-inmail-ready.json` (append `-2`, `-3` if today's file exists). Entry shape:
    ```json
@@ -47,14 +47,12 @@
      "source_file": "<csv basename, or \"live_api\">"
    }
    ```
-   Invoke `agents/email-notifier.md` with `phase: "inmail_ready"` (the blocked-credit variant fires automatically when Step 4's gate tripped).
 8. **Step 6 — Housekeeping:** for the CSV path, move any CSV file whose every row is now resolved (withdrawn, already-connected, or logged as ambiguous) from `state/imports/` to `state/imports/processed/` — move, never delete. A CSV with unresolved rows (too-recent matches) stays in place for the next run. Finalize the run in `run_log.json`.
 
 ## Before running
 
 - Optional: drop a LinkedIn "Sent Invitations" CSV export into `state/imports/`. If you skip this, the command pulls the pending-invitations list live from the active provider instead.
 - The active LinkedIn provider must be authenticated (`account_status`).
-- `RESEND_API_KEY` must be set for the email notification to send (a missing key does not abort the run).
 
 ## Safety checks
 
@@ -68,9 +66,9 @@ Standard pipeline rules: `rate_limited` → wait `rate_limit.retry_delay_seconds
 
 ## After running
 
-Check your email (or open the newly written `state/pending_approvals/<date>-inmail-ready.json` directly). For each entry:
+Open the newly written `state/pending_approvals/<date>-inmail-ready.json` directly. For each entry:
 - Review `inmail_subject_draft` / `inmail_body_draft`.
 - Optionally fill `edited_inmail_subject` / `edited_inmail_body` to override.
 - Set `decision` to `"approved"` or `"rejected"`.
 
-Then run `/send-recovery-inmail` to send the approved ones. If the email flagged a credit-blocker instead, no draft file needs review — the withdrawn contacts are saved in `leads.json` for manual outreach.
+Then run `/send-recovery-inmail` to send the approved ones. If the run summary flagged a credit-blocker instead, no draft file needs review — the withdrawn contacts are saved in `leads.json` for manual outreach.
