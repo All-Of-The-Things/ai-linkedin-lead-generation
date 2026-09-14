@@ -1,6 +1,6 @@
 # /send-recovery-inmail
 
-**Standalone phase.** Run this after you have reviewed `state/pending_approvals/<date>-inmail-ready.json` (written by `/recover-stale-invites`) and set `decision` to `"approved"` or `"rejected"` for each entry. Sends only the InMail messages you approved.
+**Standalone phase.** Run this after you have reviewed `state/pending_approvals/<date>-inmail-ready.json` (written by `/recover-stale-invites`) and set `decision` to `"approved"` or `"rejected"` for each entry. Sends only the InMail messages you approved. No email notification — check `run_log.json` or the leads for the delivery outcome.
 
 ## What this does
 
@@ -15,8 +15,7 @@
    - On success: `status → "inmail_sent"`, set `inmail_sent_at`, `approval_decision`, `approval_decided_at`.
    - On `rate_limited`: retry per `rate_limit.*`. If still failing: log, leave at `"inmail_queued"` for next run.
    - On other failure: log the error, leave at `"inmail_queued"`.
-6. **Step 4 — Email notification:** invoke `agents/email-notifier.md` with `phase: "inmail_delivery_summary"`, `counts: { sent: N, failed: N }`, `leads_snapshot` of everything processed.
-7. **Step 5 — Finalize:** set run `status: "completed"`, write counts to `run_log.json`.
+6. **Step 4 — Finalize:** set run `status: "completed"`, write `counts: { sent: N, failed: N }` to `run_log.json`.
 
 ## Safety checks (all must pass before any message is sent)
 
@@ -30,7 +29,6 @@
 
 - Review `state/pending_approvals/*-inmail-ready.json`. For each entry you want sent: set `decision: "approved"` (optionally filling `edited_inmail_subject`/`edited_inmail_body` first). Set `decision: "rejected"` to skip.
 - The active LinkedIn provider must be authenticated (`account_status`), and — for InMail specifically — must actually have InMail credits (`get_inmail_credits` is re-checked in Step 1; a 0 balance blocks the run rather than silently failing per-send).
-- `RESEND_API_KEY` must be set for the delivery summary email.
 
 ## Rate limit handling
 
@@ -38,4 +36,4 @@ Standard pipeline rules: `rate_limited` → wait `rate_limit.retry_delay_seconds
 
 ## After running
 
-Check your email for the delivery summary. Entries left at `status: "inmail_queued"` (rejected, or send failed) stay in `leads.json` — re-approve or fix and re-run `/send-recovery-inmail` to retry.
+Check `run_log.json` for the delivery summary counts. Entries left at `status: "inmail_queued"` (rejected, or send failed) stay in `leads.json` — re-approve or fix and re-run `/send-recovery-inmail` to retry.

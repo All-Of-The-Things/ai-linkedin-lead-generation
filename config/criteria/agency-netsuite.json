@@ -7,8 +7,7 @@
   "_note": "AOTT's sweet spot is staff augmentation with ERP consulting/implementation agencies. The pitch: ERP agencies don't carry eCommerce expertise in-house — we fill that layer. Target: decision-makers at NetSuite SIs, Oracle partners, and ERP implementation consultancies who serve clients that need Shopify or SuiteCommerce built alongside their NetSuite deployment.",
   "reference_companies": [
     "Plative",
-    "Esonus",
-    "Techfino"
+    "Esonus"
   ],
   "_company_type_signals_note": "These signals must be platform-specific to count toward agency boost. Generic words like 'Solutions', 'Services', 'Digital', 'Advisory' alone are not sufficient — they must appear alongside a platform keyword.",
   "company_type_signals": [
@@ -102,7 +101,7 @@
     "Microsoft",
     "BigCommerce"
   ],
-  "_excluded_companies_note": "Operator feedback 2026-07-16: never surface anyone from these firms in any tier. Unlike excluded_employers (surfaced cold), these are dropped entirely at Step 2 — skip the result AND write it to seen.json so it never resurfaces. Detect from headline naming the firm. Operator feedback 2026-06-09 (SuiteDB), 2026-07-27 (Seibert Consulting Group), 2026-08-06 (AnagramDev), and 2026-08-06 (FullClarity — no fit for AOTT despite being a genuine NetSuite partner): absolutely no interest in engaging with these agencies under any circumstances — treat as a hard block, not a scoring signal. Operator feedback 2026-08-12: N2Lab is now an active AOTT client relationship — exclude from all criteria and never surface as a new lead, regardless of fit.",
+  "_excluded_companies_note": "Operator feedback 2026-07-16: never surface anyone from these firms in any tier. Unlike excluded_employers (surfaced cold), these are dropped entirely at Step 2 — skip the result AND write it to seen.json so it never resurfaces. Detect from headline naming the firm. Operator feedback 2026-06-09 (SuiteDB), 2026-07-27 (Seibert Consulting Group), 2026-08-06 (AnagramDev), and 2026-08-06 (FullClarity — no fit for AOTT despite being a genuine NetSuite partner): absolutely no interest in engaging with these agencies under any circumstances — treat as a hard block, not a scoring signal. Operator feedback 2026-08-12: N2Lab is now an active AOTT client relationship — exclude from all criteria and never surface as a new lead, regardless of fit. Operator feedback 2026-09-10: Techfino excluded — was a reference_companies pick for several criteria (agency-partners, agency-netsuite, suiteworld-2026), removed from those lists and dropped entirely per a pure business-fit call after its staff kept surfacing as hot/warm leads, same 'no fit despite scoring well' pattern as FullClarity.",
   "excluded_companies": [
     "Tavano Team",
     "SuiteDB",
@@ -110,7 +109,8 @@
     "AnagramDev",
     "FullClarity",
     "N2Lab",
-    "Foretopia"
+    "Foretopia",
+    "Techfino"
   ],
   "_sap_note": "Operator feedback 2026-07-09: SAP-related leads are out of scope entirely — no business there. This is broader than excluded_employers: SAP partner consultancies, SAP implementation practices, and in-house SAP program leaders are all non-buyers. A generic ERP signal that resolves to SAP does not pass the domain gate.",
   "anti_patterns": [
