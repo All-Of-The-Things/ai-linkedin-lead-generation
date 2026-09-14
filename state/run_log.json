@@ -2677,13 +2677,33 @@
     {
       "run_id": "2026-08-21-c4d5e39c",
       "started_at": "2026-08-21T21:50:00.000000+00:00",
-      "status": "in_progress",
+      "status": "completed",
       "phase": "search-connections-abbreviated",
-      "resume_from_step": 2,
+      "resume_from_step": null,
       "steps_completed": [
-        1
+        1,
+        2,
+        4,
+        5
       ],
-      "counts": {},
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1776,
+        "exclusion_set_size": 1776,
+        "total_search_results": 150,
+        "new_stubs": 112,
+        "classified": 112,
+        "hot": 5,
+        "warm": 10,
+        "cold": 97,
+        "surfaced_for_approval": 112,
+        "email_sent": false,
+        "new_leads": 112,
+        "connections_sent": 0,
+        "connections_detected": 0,
+        "followups_sent": 0,
+        "errors": 0
+      },
       "criteria_used": "agency-partners",
       "provider_used": "connectsafely",
       "errors": [
@@ -2716,12 +2736,998 @@
           "category": "other",
           "message": "search-people still 100% preview-gated 6 days after first detected (2026-08-21). Confirmed via a known 1st-degree connection -- not query- or geo-specific. Likely LinkedIn Commercial Use Limit (CSL), resets next calendar month. No new leads found this run; Step 2 not completed.",
           "at": "2026-08-27T00:00:00.000000+00:00"
+        },
+        {
+          "step": "search_people (Step 2, 2026-08-28 resume attempt)",
+          "category": "other",
+          "message": "Re-confirmed via /search-connections-abbreviated criteria=agency-partner. get-account-status: AVAILABLE (BUSINESS_PREMIUM, no Sales Nav). Single probe query (\"NetSuite alliance partner CEO\", 5 results) still 100% preview-gated -- headline literally \"Profile preview for <Name>\" or bare connection-degree marker, currentCompany empty -- including 1st-degree connections. Same signature as 2026-08-21 and 2026-08-27 attempts, 7 days running. Confirms LinkedIn Commercial Use Limit has not reset yet (expected reset: start of next calendar month, 2026-09-01). Stopped after 1 probe query rather than burning further calls against a confirmed-unresolved blocker. Run left in_progress at Step 2 for retry once the CSL window rolls over.",
+          "at": "2026-08-28T00:00:00.000000+00:00"
         }
       ],
       "step1_note": "criteria refresh skipped: file exists, run 46 (incl. 5 archived) mod 7 = 4 != 0",
       "connections_cache_note": "state/connections_cache.json on disk was corrupted (30 URLs vs 1731 committed at HEAD, dated 2026-08-11). Rebuilt 2026-08-27 by merging the pre-corruption committed cache with connections added 2026-08-11..2026-08-27 fetched fresh via paginated get-connections (MCP tool caps at limit=12/call, not the ~200-3000 a full rebuild would assume) -- 1776 URLs total.",
-      "step2_note": "BLOCKED: search-people is systemically gated -- every result across 3 fresh geo-filtered queries (Ireland/Netherlands/Singapore, senior titles + NetSuite alliance partner/solution provider keywords) came back as headline literally \"Profile preview for <Name>\", currentCompany empty, no usable domain-gate signal. Confirmed NOT query-specific: re-ran search-people against a known 1st-degree connection (Sabir Mohamed, real headline \"CEO at Seeroo IT Solutions...\" per get-connections) and it too came back gated (\"Profile preview for Sabir Mohamed\"). This is the same failure the stalled run first hit on 2026-08-21, now confirmed still active 6 days later with zero recovery on retry. Pattern (search results gated behind a preview state while every other endpoint -- get-connections, get-account-status -- works fine) matches LinkedIn Commercial Use Limit (CSL), a monthly search-usage cap that resets at the start of the next calendar month. Stopped after 3 queries + 1 confirmation probe rather than burning further batches against a blocker that has not cleared in a week -- per CLAUDE.md, log the shortfall honestly rather than loop indefinitely. | Re-checked 2026-08-27 (later same day, after fixing the connectsafely MCP config -- removed the broken project-level .mcp.json server, standardized on the working claude.ai ConnectSafely.AI connector). Auth confirmed clean (get-account-status: AVAILABLE) but search-people is STILL 100% preview-gated on a fresh probe query (\"NetSuite alliance partner CEO\", 5 results, all \"Profile preview for <Name>\"), including 1st-degree connections. Confirms this is LinkedIn-side (Commercial Use Limit, account-level), not an MCP config/auth problem -- fixing the MCP connection did not unblock it. Criteria override this attempt was agency-partners (was agency-netsuite last attempt); not pursued further since the blocker is provider-wide, not criteria-specific. Stopped without running a full batch.",
-      "last_updated": "2026-08-27T00:00:01.000000+00:00"
+      "step2_note": "BLOCKED: search-people is systemically gated -- every result across 3 fresh geo-filtered queries (Ireland/Netherlands/Singapore, senior titles + NetSuite alliance partner/solution provider keywords) came back as headline literally \"Profile preview for <Name>\", currentCompany empty, no usable domain-gate signal. Confirmed NOT query-specific: re-ran search-people against a known 1st-degree connection (Sabir Mohamed, real headline \"CEO at Seeroo IT Solutions...\" per get-connections) and it too came back gated (\"Profile preview for Sabir Mohamed\"). This is the same failure the stalled run first hit on 2026-08-21, now confirmed still active 6 days later with zero recovery on retry. Pattern (search results gated behind a preview state while every other endpoint -- get-connections, get-account-status -- works fine) matches LinkedIn Commercial Use Limit (CSL), a monthly search-usage cap that resets at the start of the next calendar month. Stopped after 3 queries + 1 confirmation probe rather than burning further batches against a blocker that has not cleared in a week -- per CLAUDE.md, log the shortfall honestly rather than loop indefinitely. | Re-checked 2026-08-27 (later same day, after fixing the connectsafely MCP config -- removed the broken project-level .mcp.json server, standardized on the working claude.ai ConnectSafely.AI connector). Auth confirmed clean (get-account-status: AVAILABLE) but search-people is STILL 100% preview-gated on a fresh probe query (\"NetSuite alliance partner CEO\", 5 results, all \"Profile preview for <Name>\"), including 1st-degree connections. Confirms this is LinkedIn-side (Commercial Use Limit, account-level), not an MCP config/auth problem -- fixing the MCP connection did not unblock it. Criteria override this attempt was agency-partners (was agency-netsuite last attempt); not pursued further since the blocker is provider-wide, not criteria-specific. Stopped without running a full batch. | RESUMED 2026-08-28: Commercial Use Limit confirmed lifted via probe query (\"NetSuite alliance partner CEO\", real headlines/companies returned, no more preview-gating). Ran 2 batches of 3 direct-keyword geo-qualified people-search queries (batch 1: Ireland/Netherlands/Singapore; batch 2: New Zealand/South Africa/UAE -- both heavily Oracle/NetSuite-employee-saturated in NL/SG/UAE, weaker than UK/company-anchor techniques from prior runs). 150 total search results, 112 new after seen.json + connections-cache exclusion (38 dupes, mostly against connections and leads surfaced by other agency-partners/agency-netsuite runs targeting the same NetSuite-partner population).",
+      "last_updated": "2026-08-28T15:50:00.000000+00:00",
+      "step4_note": "abbreviated mode: classified only this run's leads (112, across both batches); score_rationale not persisted. Batch 1 (50 leads): 4 hot, 2 warm, 44 cold -- below min_hot_leads_per_run=5 floor, triggered batch 2 per retry rule. Batch 2 (62 leads): 1 hot, 8 warm, 53 cold. Cumulative: 5 hot, 10 warm, 97 cold -- floor met after 2 of max 4 batches; stopped.",
+      "step5_note": "abbreviated mode (5L): Cold Sweep ran first (0 cold entries pending sweep -- all prior links files already emptied). Links file written; connection-status/conversation checks skipped by design; no email.",
+      "files_written": [
+        "2026-08-21-c4d5e39c-links.json"
+      ],
+      "completed_at": "2026-08-28T15:50:00.000000+00:00"
+    },
+    {
+      "run_id": "2026-08-31-fbd6410e",
+      "started_at": "2026-08-31T00:00:00.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": null,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1776,
+        "exclusion_set_size": 1776,
+        "total_search_results": 300,
+        "new_stubs": 145,
+        "classified": 145,
+        "hot": 4,
+        "warm": 11,
+        "cold": 130,
+        "surfaced_for_approval": 145,
+        "hot_floor_shortfall": "4/5 hot after 4 batches (max_search_batches_per_run reached)",
+        "email_sent": false,
+        "new_leads": 145,
+        "connections_sent": 0,
+        "connections_detected": 0,
+        "followups_sent": 0,
+        "errors": 0
+      },
+      "criteria_used": "agency-partners",
+      "provider_used": "connectsafely",
+      "errors": [],
+      "step1_note": "criteria refresh skipped: file exists; counting runs since the last confirmed refresh (2026-08-21-2ce39f21, explicitly the '7th run' trigger) rather than the inconsistent lifetime-incl-archived counter used in some earlier notes -- this is the 4th run since that refresh (c241ee41, 7676d3d7, c4d5e39c, this run), 4 mod 7 != 0.",
+      "step2_note": "4 batches (12 queries) run, hitting max_search_batches_per_run. Batch 1: Celigo integration partner / ecommerce agency head of delivery / ERP Shopify integration consulting managing director -- 4 hot, 2 warm of 50. Batch 2: NetSuite implementation boutique owner US / NetSuite reseller founder Canada / NetSuite VAR Managing Director Australia -- 1 hot, 3 warm of 31. Batch 3: SuiteCommerce agency managing director / NetSuite Alliance Partner President / NetSuite Alliance Partner Managing Director Ireland -- 0 hot, 1 warm of 29. Batch 4: NetSuite boutique consultancy founder / NetSuite Alliance Partner CEO Founder Germany / Oracle NetSuite Solution Provider CEO Netherlands -- 2 hot, 2 warm of 37 (Paul Shea/Gap Consulting Solutions, Angela Ma both hot). Consistent pattern across all 4 batches: the strongest real candidates (e.g. James Heselden/Web Control NetSuite Alliance Partner of the Year, TJ Cornelius/SuiteRep, Sam Hornstein/eXtendTech, Ben VanderBeek/LIDD, Ken Tyborski/Code of the North, Zia Ali Butt/Elim Solutions, Marinka Penaflorida-Rohlffs) kept surfacing as already-seen/already-connection -- this criteria's reachable NetSuite-partner population via keyword search is heavily saturated after 57 prior runs sharing the same seen.json. Netherlands/Germany geo batches were dominated by Oracle NetSuite vendor staff (excluded employer). hot_floor_shortfall: 4/5 hot after 4 batches -- stopped per CLAUDE.md rather than looping indefinitely against a population that keyword search can no longer reach fresh candidates in.",
+      "step4_note": "abbreviated mode: classified only this run's leads (145, across 4 batches); score_rationale not persisted. Cumulative: 4 hot, 11 warm, 130 cold.",
+      "step5_note": "abbreviated mode (5L): Cold Sweep ran first -- found 97 stale cold URLs still sitting in the prior run's (2026-08-21-c4d5e39c) links file cold array (never touched since 2026-08-28), swept into cold-registry.json as slugs, emptied that file's cold array. Links file written for this run; connection-status/conversation checks skipped by design; no email.",
+      "files_written": [
+        "2026-08-31-fbd6410e-links.json"
+      ],
+      "last_updated": "2026-08-31T18:05:00.000000+00:00",
+      "completed_at": "2026-08-31T18:05:00.000000+00:00"
+    },
+    {
+      "run_id": "2026-08-31-bb147ebc",
+      "started_at": "2026-08-31T12:00:00+00:00",
+      "status": "completed",
+      "completed_at": "2026-08-31T12:35:00+00:00",
+      "phase": "recover-stale-invites",
+      "resume_from_step": 6,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "invite_source": "csv",
+      "criteria_used": "agency-partners",
+      "provider_used": "connectsafely",
+      "counts": {
+        "csv_rows_total": 1415,
+        "csv_rows_outgoing": 1318,
+        "csv_rows_with_url": 1305,
+        "live_pending_pages_fetched": 11,
+        "live_pending_items_collected": 108,
+        "url_matches_found": 27,
+        "stale_matches_found": 27,
+        "withdrawal_candidates_selected": 15,
+        "withdrawn": 15,
+        "withdrawal_failures": 0,
+        "ambiguous": 0,
+        "credit_blocked": false,
+        "inmail_credits_available": 45,
+        "inmail_drafted": 14,
+        "inmail_skipped_conflict": 1
+      },
+      "errors": [
+        {
+          "category": "data_integrity_conflict",
+          "url": "https://www.linkedin.com/in/renalakiss",
+          "note": "Live get-sent-invitations still showed this profile's invite (sent 2026-08-06, invitationId 7491214100275036160) as pending, even though leads.json already recorded withdrawn_at=2026-08-21 from a prior /recover-stale-invites run with a matching withdrawal_note referencing the same 2026-08-06 send date. The prior withdrawal API call likely did not actually take effect on LinkedIn despite being logged as success. Withdrew it for real this run (API call succeeded). Left leads.json status at 'inmail_queued' and did NOT re-draft or duplicate her existing InMail entry, since she already has a human-edited draft (edited_inmail_body set) awaiting decision in 2026-08-21-inmail-ready.json. Flagged for manual review -- recommend checking whether other 2026-08-21-run withdrawals also silently failed."
+        },
+        {
+          "category": "run_log_phase_conflict",
+          "note": "At Step 0, the latest run_log entry (2026-08-31-fbd6410e) was status:in_progress under phase:search-connections-abbreviated, resume_from_step:2 -- a different phase than this command. Per CLAUDE.md Step 0 phase-matching rule, did not resume or touch it (recover-stale-invites is a standalone phase with disjoint state). Appended this run as a new, independent entry instead. That in-progress search run still needs manual resolution (finish via /search-connections-abbreviated or mark abandoned) -- left untouched pending human decision."
+        },
+        {
+          "category": "email_notification_failed",
+          "phase": "inmail_ready",
+          "note": "RESEND_API_KEY was present, but the Bash tool call to api.resend.com was denied by the harness's permission system in this non-interactive background session (no human available to approve external network egress). Email was not sent. Per email-notifier.md, this does not block the pipeline -- InMail drafts are still written to state/pending_approvals/2026-08-31-inmail-ready.json for manual review. Recommend either re-running the email send interactively, or reviewing the file directly."
+        }
+      ],
+      "notes": "CSV 'Invitations - 20260814.csv' has 1291 unresolved OUTGOING rows remaining after this run (1305 with URL - 14 withdrawn this run, excluding renalakiss who was already resolved in a prior run) -- left in state/imports/ (not moved to processed/) since the vast majority of rows are still unresolved. Only ~11 of ~50 max live-pagination pages were fetched since 27 stale matches (well above the 15/run withdrawal cap) were found early -- did not exhaustively paginate the full live pending list this run.",
+      "email_sent": false
+    },
+    {
+      "run_id": "2026-08-31-ad2fee88",
+      "started_at": "2026-08-31T19:00:00.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": null,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1776,
+        "exclusion_set_size": 1776,
+        "companies_discovered_via_search": 24,
+        "search_batches_run": 2,
+        "search_batches_allowed": 4,
+        "total_search_results": 145,
+        "new_stubs": 52,
+        "classified": 52,
+        "hot": 7,
+        "warm": 2,
+        "cold": 43,
+        "surfaced_for_approval": 52,
+        "email_sent": false,
+        "new_leads": 52,
+        "connections_sent": 0,
+        "connections_detected": 0,
+        "followups_sent": 0,
+        "errors": 0
+      },
+      "criteria_used": "agency-netsuite",
+      "provider_used": "connectsafely",
+      "errors": [],
+      "step1_note": "criteria refresh skipped: agency-netsuite.json is hand-crafted and extensively refined (excluded_companies, anti_patterns, dual ERP+SAP-exclusion domain gate, broadened target_roles/target_locations from 2026-08-18 operator feedback) -- established precedent since 2026-07-09/2026-07-23 (run 56 mod 7==0 was due but deliberately skipped) has been to never let criteria-extractor overwrite this file. Continuing that precedent; not recomputing the mod-7 counter.",
+      "step2_note": "Batch 1: company-discovery-then-anchor (per established agency-netsuite strategy). search-companies for 'NetSuite Alliance Partner' / 'NetSuite Solution Provider Partner' / 'NetSuite implementation partner' surfaced 24 companies, but nearly all (S Universe, Consule Solutions, 3RP, Elim Solutions, Exafort, TeamBlueSky, CloudAlp, DevTeamPro, The Vested Group, LatamReady, Navsoft, etc.) were already anchored in prior sessions. Anchored people-search on the 2 freshest hits (Jobin & Jismi -- India, dual NetSuite+Celigo+Shopify+Magento signal; a generic 'Continuity ERP CEO Founder' query that returned unrelated ERP founders instead) -- both the real CEO (Jismi A I) and Co-Founder/MD (Jobin Jose Perikilamala) of Jobin & Jismi were already-seen; remaining 15 new candidates were unrelated generic-ERP founders (SAP B1/Odoo/Zoho/Infor -- wrong ecosystem or explicitly SAP-excluded) or people coincidentally also named 'Jobin' with no ERP connection at all (search matched the literal first name, not the company). 0 hot, 0 warm of 15. Batch 2: switched to the criteria file's own exact search_terms verbatim ('NetSuite solution provider managing director', 'ERP implementation consultancy director', 'NetSuite SI managing director') -- much more productive. As usual the clearest known-good candidates (Karl Threadgold/Threadgold Consulting, Joe Rovirosa/ScaleNorth, Robert Jurcec/OneKloudX, John Davidson/We Are ERP, Todd Kimpton) were already-seen, but this batch still surfaced 7 fresh hot leads across genuine NetSuite consultancies not gated by excluded-employer: Balaji Ramanujam (Global NetSuite Practice Leader, SF Bay Area, 95), Saahir Kapasi (Director NetSuite Practice at CrossCountry Consulting, Canada, 92), Lisa Kaaha (Senior Director NetSuite Consulting, San Jose, 92), Nehal Galal (MD, Oracle NetSuite Solution Provider partner, 90), Rajesh Kumar (MD at SuitePark InfoTech, India, 88), Jesse Anderson (NetSuite ERP Tech Consulting Director, Denver, 85), Kevin Ernette (Sr Principal Consultant NetSuite Oracle, Charlotte, 85). Hot floor (5) met after 2 batches -- stopped rather than running the full 4-batch allowance.",
+      "step4_note": "abbreviated mode: classified only this run's leads (52, across 2 batches); score_rationale not persisted. Cumulative: 7 hot, 2 warm, 43 cold -- floor met after batch 2, stopped.",
+      "step5_note": "abbreviated mode (5L): Cold Sweep ran first -- swept 126 stale cold URLs from the prior agency-partners run's (2026-08-31-fbd6410e) links file into cold-registry.json, emptied that file's cold array. Links file written for this run; connection-status/conversation checks skipped by design; no email.",
+      "files_written": [
+        "2026-08-31-ad2fee88-links.json"
+      ],
+      "last_updated": "2026-08-31T20:05:00.000000+00:00",
+      "completed_at": "2026-08-31T20:05:00.000000+00:00"
+    },
+    {
+      "run_id": "2026-08-31-f5c5f13c",
+      "started_at": "2026-08-31T21:00:00.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": null,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1776,
+        "exclusion_set_size": 1776,
+        "search_batches_run": 4,
+        "search_batches_allowed": 4,
+        "total_search_results": 213,
+        "new_stubs": 69,
+        "classified": 69,
+        "hot": 3,
+        "warm": 6,
+        "cold": 60,
+        "surfaced_for_approval": 69,
+        "hot_floor_shortfall": "3/5 hot after 4 batches (max_search_batches_per_run reached)",
+        "email_sent": false,
+        "new_leads": 69,
+        "connections_sent": 0,
+        "connections_detected": 0,
+        "followups_sent": 0,
+        "errors": 1
+      },
+      "criteria_used": "agency-netsuite",
+      "provider_used": "connectsafely",
+      "errors": [
+        {
+          "step": "search_people (batch 4, query 3)",
+          "category": "network_error",
+          "message": "'Esonus NetSuite CEO Founder' query timed out after 359s with no response (MCP idle timeout). Skipped rather than retrying indefinitely -- per rate-limit handling rules, logged and continued.",
+          "at": "2026-08-31T23:05:00.000000+00:00"
+        }
+      ],
+      "step1_note": "criteria refresh skipped: agency-netsuite.json is hand-crafted and extensively refined -- continuing established precedent (never let criteria-extractor overwrite this file).",
+      "step2_note": "4 batches (12 queries) run this session, hitting max_search_batches_per_run for the second consecutive run of this criteria today. Batch 1: 'NetSuite alliance partner CEO' / 'SuiteCommerce agency founder' / 'NetSuite Alliance Partner Managing Director Singapore' -- 1 hot, 1 warm of 15. Batch 2: 'NetSuite alliance partner CEO Ireland' / 'NetSuite solution provider managing director New Zealand' / 'ERP implementation consultancy director Netherlands' -- 1 hot (Lewis German/ANZ NetSuite Delivery Lead), 4 warm of 42; Netherlands geo batch was almost entirely SAP/generic-ERP noise (hard SAP exclusion applies heavily to this criteria). Batch 3: 'NetSuite Alliance Growth Partner award' / 'NetSuite Solution Provider President' / 'NetSuite BPO provider CEO' -- 1 hot (Krishan Gopal Sharma/NetSuite Practice Lead), 1 warm of 11; nearly every strong candidate (Henry Sack, Alejandro Alvarez/Crowe, Jon Kozell, Sean Murphy, Lou Balla, Krishan Arora) was already-seen. Batch 4: 'NetSuite Practice Lead Director' (25 results, only 1 not already-known -- Karishma Anand, Stephen Saunders/Catalyst ERP, Erin Martin/SaaS Consulting Group, Luke Lowrey/TechMantra Now all already-seen) / 'Plative NetSuite CEO Founder Managing Director' (0 results) / 'Esonus NetSuite CEO Founder' (timed out, network_error, skipped) -- 0 hot, 0 warm of 1. hot_floor_shortfall: 3/5 hot after 4 batches -- stopped per CLAUDE.md. This criteria's reachable population via keyword search is now heavily exhausted after 62 prior runs; company-anchored discovery (Step 2 of this run) also returned mostly already-mined firms. Worth considering a criteria refresh or a genuinely new discovery technique (e.g. Sales Navigator search terms, different role/geo combinations, or accepting a lower per-run hot count) in future runs.",
+      "step4_note": "abbreviated mode: classified only this run's leads (69, across 4 batches); score_rationale not persisted. Cumulative: 3 hot, 6 warm, 60 cold -- floor not met after the full batch allowance, stopped honestly per CLAUDE.md rather than looping further.",
+      "step5_note": "abbreviated mode (5L): Cold Sweep ran first -- swept 43 stale cold URLs from the prior run's (2026-08-31-ad2fee88) links file into cold-registry.json, emptied that file's cold array. Links file written for this run; connection-status/conversation checks skipped by design; no email.",
+      "files_written": [
+        "2026-08-31-f5c5f13c-links.json"
+      ],
+      "last_updated": "2026-08-31T23:05:00.000000+00:00",
+      "completed_at": "2026-08-31T23:05:00.000000+00:00"
+    },
+    {
+      "run_id": "2026-09-01-39eb25da",
+      "started_at": "2026-09-01T17:00:00.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": null,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 118,
+        "classified": 118,
+        "hot": 3,
+        "warm": 6,
+        "cold": 109,
+        "hot_floor_shortfall": "3/5 hot after 4 batches (batch cap reached, search population saturation continues)",
+        "search_batches_run": 4,
+        "errors": 0
+      },
+      "criteria_used": "agency-netsuite",
+      "provider_used": "connectsafely",
+      "errors": [],
+      "step1_note": "criteria refresh skipped: agency-netsuite.json is hand-crafted and extensively refined -- continuing established precedent (never let criteria-extractor overwrite this file).",
+      "completed_at": "2026-09-01T19:30:00.000000+00:00",
+      "step2_note": "4 search batches run (batch cap reached). Batch1: Top Step company-discovery + targeted people-search (found Tres Churchill/Top Step, hot). Batch2: broad NetSuite-role keyword sweep, mostly saturated/off-domain. Batch3: 'NetSuite Practice Lead Director' + reference_companies exact-phrase technique (most productive: Michael Walker/67 Solutions hot, 4 warm). Batch4: continued exact senior-title+geo phrasing ('NetSuite Delivery Leader Principal', 'NetSuite Alliance Partner CEO United Kingdom', 'Oracle NetSuite Alliance Partner Managing Director Germany') \u2014 heavily saturated with Oracle/NetSuite vendor-employee results (excluded_employers) and two known best UK candidates (Tony Fidler/SANSA, Piers Reid/SystemsAccountants) already-seen from prior runs; only 1 net-new hot found (Fabio Dermitzel/Kynergy, Switzerland).",
+      "step4_note": "Domain gate + excluded_employers rule correctly filtered the heavy Oracle/NetSuite-internal-staff noise in batch 4 (Delivery Managers, Solution Consultants, Alliance Managers 'at Oracle NetSuite' all capped cold at 25). score_rationale computed per lead but not persisted to leads.json (abbreviated-mode rule).",
+      "step5_note": "Cold Sweep: swept 60 stale cold URLs from 2026-08-31-f5c5f13c-links.json into cold-registry.json (registry now 1961 slugs). Wrote state/pending_approvals/2026-09-01-39eb25da-links.json with 3 hot / 6 warm / 109 cold, sorted by score descending within tier. No email (abbreviated mode).",
+      "files_written": [
+        "state/pending_approvals/2026-09-01-39eb25da-links.json"
+      ]
+    },
+    {
+      "run_id": "2026-09-02-c644bccd",
+      "started_at": "2026-09-02T00:00:00.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": null,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 44,
+        "classified": 44,
+        "hot": 0,
+        "warm": 1,
+        "cold": 43,
+        "hot_floor_shortfall": "0/5 hot after 4 batches (batch cap reached) \u2014 worst-yet saturation: three distinct search techniques (broadened-geo keyword sweep, broad search_terms phrasing, company-discovery via search-companies) each rediscovered already-known hot leads as duplicates rather than surfacing new ones; net-new candidates were uniformly junior/consultant tier",
+        "search_batches_run": 4,
+        "errors": 0
+      },
+      "criteria_used": "agency-netsuite",
+      "provider_used": "connectsafely",
+      "errors": [],
+      "step1_note": "criteria refresh skipped: agency-netsuite.json is hand-crafted and extensively refined -- continuing established precedent (never let criteria-extractor overwrite this file).",
+      "completed_at": "2026-09-02T02:30:00.000000+00:00",
+      "step2_note": "4 search batches run (batch cap reached, floor not met). Batch1: broadened-geo keyword sweep (Ireland/New Zealand/Singapore) \u2014 65/75 results already-seen, 10 new, all cold. Batch2: Netherlands geo + broad search_terms phrasing ('ERP implementation consultancy director', 'SuiteCommerce agency founder') \u2014 69/71 already-seen (near-total saturation), only 2 new, both cold. Batch3: pivoted to company-discovery via search-companies (boutique NetSuite Alliance Partner firms, company size B/C/D) then targeted people-search at 3RP/Exafort/TeamBlueSky \u2014 rediscovered two already-known hot leads (Stephen Nankervis and Henry Sack, both Team Blue Sky, already request_sent from a prior run) as duplicates; 18 net-new candidates were all consultant/developer/finance-support tier, yielding 1 warm (Naomi Pathak, NetSuite PM at Forterro). Batch4: same company-discovery technique against 3 more boutique firms (Elim Solutions, Consule Solutions, 311 Cloud Consulting) \u2014 again rediscovered 3 already-known hot leads as duplicates (Zia Ali Butt, Josh Puckett, Matthew Zepeda, all already hot/request_sent or classified from prior runs); 14 net-new candidates all cold.",
+      "step4_note": "Domain gate + excluded_employers + anti_patterns (Developer/Analyst/Engineer/Student) correctly filtered noise across all 4 batches. score_rationale computed per lead but not persisted to leads.json (abbreviated-mode rule).",
+      "step5_note": "Cold Sweep: swept 109 stale cold URLs from 2026-09-01-39eb25da-links.json into cold-registry.json (registry now 2070 slugs). Wrote state/pending_approvals/2026-09-02-c644bccd-links.json with 0 hot / 1 warm / 43 cold. No email (abbreviated mode).",
+      "files_written": [
+        "state/pending_approvals/2026-09-02-c644bccd-links.json"
+      ]
+    },
+    {
+      "run_id": "2026-09-02-e9d3bbfa",
+      "started_at": "2026-09-02T15:00:00.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": null,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 47,
+        "classified": 47,
+        "hot": 1,
+        "warm": 1,
+        "cold": 45,
+        "hot_floor_shortfall": "1/5 hot after 4 batches (batch cap reached) -- company-discovery technique found one new hot lead (Liam Hammett/Annexa) but otherwise mostly rediscovered already-known hot leads at the same boutique firms found in prior runs (Mark Hennessy, Richard Le, SuiteDynamics/Eureka execs, all 3 Power Cloud Managing Partners) as duplicates",
+        "search_batches_run": 4,
+        "errors": 0
+      },
+      "criteria_used": "agency-netsuite",
+      "provider_used": "connectsafely",
+      "errors": [],
+      "step1_note": "criteria refresh skipped: agency-netsuite.json is hand-crafted and extensively refined -- continuing established precedent (never let criteria-extractor overwrite this file).",
+      "completed_at": "2026-09-02T18:00:00.000000+00:00",
+      "step2_note": "4 search batches run (batch cap reached, floor not met). All 4 batches used company-discovery via search-companies (boutique NetSuite Alliance Partner/Solution Provider/Consulting Partner/Reseller firms, company size B/C/D) followed by targeted people-search at each company -- a deliberate shift from the prior run's keyword-only approach, continued because it was the only technique that found anything net-new last time. Batch1: Annexa (AU) -- found 1 hot (Liam Hammett, Head of Services, 93) among 9 net-new; two other Annexa execs (Jarred Spriggs, Paula S.) failed the domain gate since their own headlines name only the company with no platform keyword. Batch2: Nolan Business Solutions (UK), AVT (AU), Zero Point ERP (US) -- 18/22 already-seen (Mark Hennessy and Richard Le rediscovered as already-classified hot from prior runs); 4 net-new all cold, including the same company-name-only gate-failure pattern for Nolan's other execs (Tim Nolan, Brian Jones, Andrew Hall). Batch3: Eureka Solutions (UK), SuiteDynamics (US), RXD Systems (US) -- 13/30 already-seen (their best candidates, including SuiteDynamics' two Directors and Eureka's CEO/Commercial Director, already known from prior runs); 17 net-new yielded 1 warm (Matthew Sullivan, RXD Systems). Batch4: SuiteLabs (Uruguay), ABACI (US), Power Cloud Consulting (US) -- 12/29 already-seen (including all 3 Power Cloud Managing Partners, already known); 17 net-new all cold (mostly developers/students/unrelated-industry execs).",
+      "step4_note": "Domain gate + excluded_employers + anti_patterns filtered noise as expected. Notable recurring pattern this run: several company-discovery candidates' own headlines name only their employer (e.g. 'Director at Annexa', 'Chairman at Nolan Business Solutions', 'Managing Partner at Power Cloud') with no NetSuite/ERP keyword in their personal headline text -- per the strict headline-only domain-gate rule these fail the gate despite working at genuine, externally-verified NetSuite partner firms; only colleagues whose own headline also states a platform keyword (e.g. 'ERP and Integration Solutions', 'NetSuite Consultant') pass. score_rationale computed per lead but not persisted to leads.json (abbreviated-mode rule).",
+      "step5_note": "Cold Sweep: swept 43 stale cold URLs from 2026-09-02-c644bccd-links.json into cold-registry.json (registry now 2113 slugs). Wrote state/pending_approvals/2026-09-02-e9d3bbfa-links.json with 1 hot / 1 warm / 45 cold. No email (abbreviated mode).",
+      "files_written": [
+        "state/pending_approvals/2026-09-02-e9d3bbfa-links.json"
+      ]
+    },
+    {
+      "run_id": "2026-09-02-0c995850",
+      "started_at": "2026-09-02T20:00:00.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": null,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 80,
+        "classified": 80,
+        "hot": 2,
+        "warm": 8,
+        "cold": 70,
+        "hot_floor_shortfall": "2/5 hot after 4 batches (batch cap reached) -- best yield of the recent shortfall streak (2 hot + 8 warm vs. 0-1 hot in the prior three runs); company-discovery with fresh keyword variants each batch (BPO Partner, Value Added Reseller, Managed Services Provider phrasings) found genuinely new boutique firms (GURUS Solutions, Bring IT, Circular Edge) rather than only rediscovering the same firms as before",
+        "search_batches_run": 4,
+        "errors": 0
+      },
+      "criteria_used": "agency-netsuite",
+      "provider_used": "connectsafely",
+      "errors": [],
+      "step1_note": "criteria refresh skipped: agency-netsuite.json is hand-crafted and extensively refined -- continuing established precedent (never let criteria-extractor overwrite this file).",
+      "abandoned_at": "2026-09-03T00:00:00.000000+00:00",
+      "abandoned_reason": "superseded by recover-stale-invites run; user chose to abandon rather than finish",
+      "completed_at": "2026-09-02T21:00:00.000000+00:00",
+      "step2_note": "4 search batches run (batch cap reached; strongest yield of the recent shortfall streak). Continued the company-discovery technique (search-companies for boutique NetSuite Alliance/Solution Provider/BPO firms, then targeted people-search per company) with fresh keyword variants each batch to surface companies not yet mined. Batch1: Bring IT (US) and ScaleNorth (US) -- found 1 hot (Rodrigo Cabanas, COO @ Bring IT, explicit NetSuite mention in his own headline) among 12 net-new; Bring IT's Founder/CEO and ScaleNorth's Managing Director were both already-known from prior runs. Batch2: LatamReady (Peru), Victrix (India), Klugo Group + GURUS Solutions (Canada) -- 8/35 already-seen; GURUS Solutions was unusually productive, yielding 3 warm (Rosemary Zeng, Abdul Sattar, Manny May) plus 2 more warm from elsewhere (Filipe Kayser/Brazil, Ramzi Amroune/Canada) -- the first batch this run to clear multiple warms from one company. Batch3: Nexio (Ireland -- no exec-level staff found, all junior/trainee), Concentrus + Suite Solutions Group (US, company-filter search returned mostly unrelated generic keyword matches rather than genuine company staff) -- but found 1 hot anyway (John Martinez, Director/NetSuite Digital Services) plus 2 more warm (Muhammad Ahsan Raza, Angelica Castro). Batch4: Circular Edge (US, JDE/EPM/HCM-focused Oracle ERP consultancy -- not NetSuite-specific, scored as a weak generic-ERP signal per classifier guidance) and Meridian Business (US) -- Meridian's NetSuite ERP Director (Kayla VerMulm) was already known/hot from a prior run; found 1 more warm (Sachin Choudhari, Circular Edge Co-Founder). N2 Lab appeared in one company search result and was correctly skipped -- it is on excluded_companies (active AOTT client relationship, permanent exclusion).",
+      "step4_note": "Same recurring gap flagged in the prior run continued: several colleagues at genuine NetSuite/ERP partner firms whose own headline names only the company (no platform keyword in their personal text) correctly fail the domain gate per the established rule, even when a sibling role at the same firm (one that does state 'NetSuite' or 'ERP' explicitly) passes -- e.g. at Meridian Business, the NetSuite ERP Director passed while the CEO/Chairman/plain-Director titles did not. score_rationale computed per lead but not persisted to leads.json (abbreviated-mode rule).",
+      "step5_note": "Cold Sweep: swept 45 stale cold URLs from 2026-09-02-e9d3bbfa-links.json into cold-registry.json (registry now 2158 slugs). Wrote state/pending_approvals/2026-09-02-0c995850-links.json with 2 hot / 8 warm / 70 cold. No email (abbreviated mode).",
+      "files_written": [
+        "state/pending_approvals/2026-09-02-0c995850-links.json"
+      ]
+    },
+    {
+      "run_id": "2026-09-03-ec915d64",
+      "started_at": "2026-09-03T00:00:00.000000+00:00",
+      "status": "completed",
+      "phase": "recover-stale-invites",
+      "resume_from_step": null,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "counts": {
+        "invite_source": "csv",
+        "csv_rows_outgoing_unique": 1305,
+        "live_pending_pages_fetched": 21,
+        "live_pending_items_collected": 206,
+        "stale_csv_matches_found": 96,
+        "vendor_excluded": 2,
+        "withdrawal_candidates_selected": 15,
+        "withdrawn": 15,
+        "withdrawn_new": 13,
+        "withdrawn_data_integrity_rescue": 2,
+        "withdrawal_failures": 0,
+        "ambiguous": 0,
+        "inmail_credits_available": 45,
+        "credit_blocked": false,
+        "inmail_drafted": 13,
+        "inmail_skipped_existing_draft": 2,
+        "email_sent": false
+      },
+      "completed_at": "2026-09-03T01:00:00.000000+00:00",
+      "invite_source": "csv",
+      "criteria_used": "agency-netsuite",
+      "provider_used": "connectsafely",
+      "errors": [
+        {
+          "category": "data_integrity_conflict",
+          "url": "https://www.linkedin.com/in/rudenko-alex",
+          "note": "Live get-sent-invitations still showed this invite as pending (sent ~2026-08-13, 3 weeks old) even though leads.json already recorded withdrawn_at=2026-08-21 from a prior /recover-stale-invites run. The 2026-08-21 withdrawal API call apparently did not take effect on LinkedIn despite logging success -- same failure mode documented for renalakiss in the 2026-08-31 run. Withdrew it for real this run (API call succeeded, message: Successfully withdrew invitation to Oleksandr Rudenko). Left leads.json status at inmail_queued and did NOT re-draft -- an InMail draft for him already exists pending decision in an earlier inmail-ready file."
+        },
+        {
+          "category": "data_integrity_conflict",
+          "url": "https://www.linkedin.com/in/tim-yoder-67b847",
+          "note": "Same pattern as rudenko-alex: leads.json shows withdrawn_at=2026-08-14 (oldest recorded withdrawal of any lead touched by this pipeline) but the live invite was still pending (sent ~1 month ago). Re-withdrew for real this run (API call succeeded). Left leads.json status at inmail_queued -- an InMail draft for him already exists (surfaced in 2026-08-14-inmail-ready.json, held undecided per the 2026-08-17 send-recovery-inmail run notes). Recommend auditing all withdrawn_at timestamps older than a few days against live get-sent-invitations at some point -- this is the second and third instance of this failure mode found across three runs."
+        }
+      ],
+      "notes": "CSV 'Invitations - 20260814.csv' (1305 unique outgoing rows) still the candidate source; only 13 new + 2 data-integrity rescues withdrawn this run out of 96 live CSV-matched stale candidates found within the first ~206 paginated items (paginated to startIndex 200, i.e. ~21 pages of ~10, well within the ~50-page cap) -- capped by max_withdrawals_per_run=15, not by candidate scarcity. Prioritized the 13 new withdrawals by classifier score/classification (all hot, score 88-100, all agency-netsuite criteria, all legitimate ERP/NetSuite partner-firm leaders -- no vendor employees, no banned companies, no solo-freelance/marketing-only roles) over two known lower-quality cold candidates (kyleprescod score 20, jsouthworthcpa score 25) left for a future run, consistent with the 2026-08-21 run's precedent. Two current NetSuite/Oracle employees (franciscoromanfrutos, raoulbras) matched as stale but were skipped entirely (not withdrawn) per the permanent vendor-vs-partner exclusion rule, same precedent as 2026-08-21. Notably: at 9/3 the live pending-invitations list is dominated (>100 items within the most recent 2 weeks) by invitations NOT in the 8/14 CSV export -- these are presumably manual sends outside pipeline tracking (leads.json shows zero automated connection_requested_at since 2026-08-31); CSV-matched (i.e. pre-8/14) stale invites only start appearing around live-list index ~110+. CSV left in state/imports/ (not moved to processed/) -- 1290 of 1305 unique outgoing rows remain unresolved. Sandbox blocked standalone/looped sleep this session, so the 30-90s human-pacing guidance for withdraw_invitation calls could not be literally honored -- withdrawals were issued sequentially, one call per turn, rather than batched in parallel, as the closest available approximation.",
+      "abandoned_run_note": "Superseded run 2026-09-02-0c995850 (search-connections-abbreviated, in_progress, phase mismatch) was marked abandoned at user instruction before this run started -- see that run entry."
+    },
+    {
+      "run_id": "2026-09-07-05d46767",
+      "started_at": "2026-09-07T00:00:00.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 1,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_note": "cache is 11 days stale (cached_at 2026-08-27, ttl_days=7); rebuild skipped per established precedent (run 2026-08-18-21eabab8 and every agency-partners/agency-netsuite run since) \u2014 get-connections tool caps at 12 results/call, making a 3x-full-list rebuild of ~1776 connections cost hundreds of paginated calls. Used existing cache as-is.",
+        "connections_cache_size": 1776,
+        "total_search_results_raw": 170,
+        "new_stubs": 45,
+        "classified": 45,
+        "hot": 6,
+        "warm": 0,
+        "cold": 39,
+        "surfaced_for_approval": 45,
+        "hot_floor_met": true,
+        "cold_sweep": "swept 70 cold URLs from 2026-09-02-0c995850-links.json into cold-registry.json (2158 -> 2228) before this run's own links file was written",
+        "email_sent": false
+      },
+      "completed_at": "2026-09-07T18:07:59.641803+00:00",
+      "criteria_used": "agency-partners",
+      "provider_used": "connectsafely",
+      "search_cursor": {
+        "batches_run": 3,
+        "max_batches": 4,
+        "technique": "company-anchored keyword search (batches 1-2) + company-discovery via search-companies + targeted currentCompanyIds people search (batch 3)",
+        "batch1_queries": [
+          "NetSuite Value Added Reseller (title=CEO)",
+          "NetSuite Managed Services Provider founder",
+          "NetSuite BPO Partner Managing Director"
+        ],
+        "batch2_queries": [
+          "NetSuite Accounting Advisory Practice Director",
+          "NetSuite Solution Provider President",
+          "SuiteCommerce agency Managing Partner"
+        ],
+        "batch3": "search-companies keywords='NetSuite Solution Provider' companySize=[C,D] -> found GCS Group (Sarasota FL) and Jcurve (Sydney AU) not yet in leads.json; targeted currentCompanyIds people-search on each surfaced Israel Vicente (President/CEO, GCS Group) and Chris King (CEO, Jcurve) as new hot leads. UK/Canada company-discovery follow-up queries returned empty (search-companies pagination/keyword gaps)."
+      },
+      "notes": "Criteria resolved to agency-partners via explicit command arg 'agency-partner' (singular, case-insensitive match against the file's name field). Last agency-partners run was 2026-08-31-fbd6410e (4 hot/11 warm/130 cold) -- agency-netsuite sibling runs since then (2026-09-01 through 2026-09-02) showed worsening saturation (0-3 hot per run) using company-anchored NetSuite keyword phrasing. This run's batches 1-2 (6 queries: Value Added Reseller/Managed Services/BPO Partner, Accounting Advisory/Solution Provider President/SuiteCommerce Managing Partner) pulled 150 raw results but only 43 were not already in seen.json/connections_cache -- nearly every strong NetSuite-partner CEO/founder candidate surfaced by these phrasings was already known from prior runs, confirming continued keyword-level saturation for this criteria. Of the 43 net-new, most failed the domain gate (Shopify-only agencies with no ERP context: David Stober, Jason Braun, Marcus Ohanesian; unrelated industries: 3PL logistics, fintech, apparel workforce dev, research commercialization) or were vendor employees (Oracle NetSuite account/practice/product roles: Sophie Burton, David Bedell, Hafid Irbaiyne, Rebeca Bichachi, Nishant Bhandula) or individual-contributor/developer-tier (anti_patterns cap: Keith Fetterman, Raj Dinesh, Luchelle Punzalan) or mega-SI-adjacent (Rebecca Bayles/Deloitte, capped 40). Only 2 hot survived from batches 1-2: Surendra Dhakal (Principal Consultant, NetSuite Implementation, Canada) and Janice Lazo (Associate Director, CrossCountry Consulting ERP practice, Canada) -- plus Steve Larsen (Managing Partner, Centricity Systems) and Sean P (Founder, TheSenseLabs). Batch 3 pivoted to company-discovery (search-companies keyword='NetSuite Solution Provider', companySize C/D to target boutique-to-midmarket firms) which surfaced two genuinely new firms not yet in leads.json -- GCS Group (Sarasota, FL) and Jcurve (Sydney, AU, ASX:JCS, described as 'APAC's Most Experienced NetSuite Partner') -- and direct currentCompanyIds people-search found their CEOs (Israel Vicente, Chris King), both scored 100/hot. This lifted the run to 6 hot, clearing the 5-hot floor after batch 3 without needing all 4 allowed batches. UK-focused and paginated company-discovery follow-up queries returned empty results (likely a search-companies keyword/pagination limitation, not true zero-population). No email sent per abbreviated-mode spec -- links file is the review surface."
+    },
+    {
+      "run_id": "2026-09-08-f71f4439",
+      "started_at": "2026-09-08T00:00:00.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 1,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_note": "cache is 12 days stale (cached_at 2026-08-27, ttl_days=7); rebuild skipped per established precedent (get-connections caps at 12 results/call, ~1776 connections -> hundreds of paginated calls for a 3x rebuild)",
+        "connections_cache_size": 1776,
+        "total_search_results_raw": 190,
+        "new_stubs": 50,
+        "classified": 50,
+        "hot": 6,
+        "warm": 2,
+        "cold": 42,
+        "surfaced_for_approval": 50,
+        "hot_floor_met": true,
+        "cold_sweep": "swept 39 leftover cold URLs from 2026-09-07-05d46767-links.json (missed at the start of this run, corrected retroactively before finalizing) into cold-registry.json (2228 -> 2267)",
+        "email_sent": false
+      },
+      "completed_at": "2026-09-08T16:16:56.453754+00:00",
+      "criteria_used": "agency-partners",
+      "provider_used": "connectsafely",
+      "search_cursor": {
+        "batches_run": 2,
+        "max_batches": 4,
+        "technique": "company-anchored keyword search, fresh phrasings not tried in the 2026-09-07 run",
+        "batch1_queries": [
+          "NetSuite Systems Integrator CEO",
+          "NetSuite Reseller Managing Director",
+          "NetSuite Celigo integration partner founder"
+        ],
+        "batch2_queries": [
+          "Oracle NetSuite reseller CEO",
+          "NetSuite implementation firm owner United Kingdom",
+          "search-companies keywords='Oracle NetSuite Alliance Partner' companySize=[C,D] (all 6 results already known in leads.json -- no new companies)"
+        ]
+      },
+      "notes": "Criteria resolved to agency-partners via explicit command arg 'agency-partner'. Pre-run reconcile: confirmed all 6 hot leads from 2026-09-07-05d46767-links.json were cut into approved-queue.json (185->191) per operator's own report ('sent connections manually and moved the approved ones to approved') -- no leads.json entries needed a manual-send status update since none of those 6 show connection_requested_at/status changes yet; the operator's manual sends appear to be separate from this run's tracked pipeline leads. Flagged to the operator in the summary rather than guessing which URLs to mark. Ran 2 batches (6 people-search queries + 1 company-discovery search) using keyword phrasings not tried in the prior run (Systems Integrator, Reseller MD, Celigo integration, Oracle NetSuite reseller CEO, UK implementation-firm-owner) to avoid re-mining the same combinations. 190 raw results, 86 net-new after seen.json/cache dedupe across both batches, 50 after removing internal duplicates. Batch 1 was heavily saturated with NetSuite's own regional/account sales staff (Austin TX and Boston clusters) and individual-contributor consultants/developers (anti_patterns cap). Batch 2's UK-focused query was the highest-yield of the run: found 4 of the 6 hot leads (Julian Griffiths, Davin Fowler/Fowlers Consulting, Michael Lewis/ERP Gurus Ltd [warm], Mariola Izyk/MI Suite) among genuine UK boutique NetSuite consultancy owners not seen in prior runs' UK-focused searches. Company-discovery via search-companies (keyword='Oracle NetSuite Alliance Partner', companySize C/D) returned 6 companies but all were already represented in leads.json from prior runs (3RP Group, Elim Solutions, Exafort, GIR Software Services, Nufocus, Cloud Suite) -- no new company-anchored leads from that angle this run, unlike 2026-09-07 which found 2 new companies this way. Hot floor (5) cleared after 2 batches without needing the full 4-batch allowance."
+    },
+    {
+      "run_id": "2026-09-08-ea1441df",
+      "started_at": "2026-09-08T12:00:00.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 1,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_note": "cache is 12 days stale; rebuild skipped per established precedent (get-connections caps at 12/call)",
+        "connections_cache_size": 1776,
+        "total_search_results_raw": 251,
+        "new_stubs": 30,
+        "classified": 30,
+        "hot": 4,
+        "warm": 2,
+        "cold": 24,
+        "surfaced_for_approval": 30,
+        "hot_floor_met": false,
+        "hot_floor_shortfall": "4/5 hot after 2 batches -- stopped deliberately rather than forcing batches 3-4. Evidence across both batches: batch1's dupe rate was 63% (32/51) and batch2's was 68% (23/34), with essentially every previously-strong NetSuite Alliance Partner CEO/Founder candidate surfaced by these keyword angles already known from prior runs (this run + the two preceding runs this week collectively tried company-anchored phrasing across US/UK/Canada/Australia geographies and 3 separate company-discovery searches). A third company-discovery pass (companySize D/E, broader net) returned 20 companies, all already represented in leads.json -- zero new companies found. This is the weakest yield of the week's four agency-partners runs on this specific floor-chasing dimension, and the trend (6 hot -> 6 hot -> 4 hot day-over-day, with today's second batch cratering to 0 hot/11 cold) indicates the addressable population under current target_roles/target_locations is close to exhausted for this criteria. Recommend either broadening target_locations further (fresh untried geos) or pausing this criteria for a few days per the same precedent used earlier this session (2026-08-19).",
+        "cold_sweep": "swept 39+42 leftover cold URLs from the two preceding runs' links files (missed at those runs' own start, corrected retroactively both times before finalizing) into cold-registry.json (2267 -> 2309)",
+        "email_sent": false
+      },
+      "reconcile_note": "Pre-run: operator reported 'sent connections manually and moved the approved ones to approved' for the prior run's (2026-09-08-f71f4439) 6 hot + 2 warm leads. Verified against approved-queue.json: 5 (rickmaack, anupnomaana, davinfowler, mariola-izyk, michaelalanlewis) were cut into approved-queue.json (191->196); the other 3 (julian-griffiths-5736aa6, bsjdeakin, basem-mohamed-120a46b9) were absent from both the links file (hot/warm now empty) and approved-queue.json -- consistent with the established manual-send pattern (feedback_manual_sends). Marked those 3 in leads.json: status->request_sent, send_channel:'manual', approval_decision:'approved'.",
+      "completed_at": "2026-09-08T17:52:18.290463+00:00",
+      "criteria_used": "agency-partners",
+      "provider_used": "connectsafely",
+      "search_cursor": {
+        "batches_run": 2,
+        "max_batches": 4,
+        "technique": "batch1: boutique owner/founder framing replicated for Canada + Australia + general Alliance-Partner-Founder-US (worked well yesterday for UK); batch2: more US-focused Alliance Partner/consulting-firm/implementation-partner phrasings + company-discovery size D/E",
+        "batch1_queries": [
+          "NetSuite implementation firm owner Canada",
+          "NetSuite implementation firm owner Australia",
+          "Oracle NetSuite Alliance Partner Founder"
+        ],
+        "batch2_queries": [
+          "NetSuite Alliance Partner Founder United States",
+          "NetSuite consulting firm Managing Director",
+          "Oracle NetSuite implementation partner President",
+          "search-companies keywords='NetSuite Solution Provider' companySize=[D,E] -- all 20 results already known in leads.json, zero new companies"
+        ]
+      },
+      "notes": "Criteria resolved to agency-partners via explicit command arg. Pre-run reconcile: operator reported 'sent connections manually and moved the approved ones to approved' for the prior run's (2026-09-08-f71f4439) 6 hot + 2 warm; verified 5 were cut into approved-queue.json (191->196), the other 3 (julian-griffiths-5736aa6, bsjdeakin, basem-mohamed-120a46b9) were absent from both the links file and approved-queue.json -- marked as manual sends in leads.json (status->request_sent, send_channel:'manual'). This run replicated the prior run's highest-yield technique (boutique NetSuite consultancy owner/founder framing, which found 4 UK hot leads yesterday) for Canada and Australia -- worked well initially (Toronto/GTA and Melbourne/Sydney clusters surfaced many real boutique-firm owners) but nearly all turned out to already be known from much earlier runs via different search paths, netting only 4 hot (Farhana Damji/Cloud Consultancy Inc, Adam Johnson/Associate Partner-Netsuite, Paul Jeffrey/Analogy Solutions, Kuljeet Nagra/Calibre Consulting) + 2 warm (Stephen Leung, Gary A. Johnson) from 19 net-new candidates. Batch 2 pivoted to broader US-focused Alliance-Partner/consulting-firm/implementation-partner phrasing plus a fresh company-discovery pass (companySize D/E) -- this was the weakest search of the week: 68% dupe rate, 0 hot/0 warm from 11 net-new (all solo IC consultants, no-domain-signal profiles, or vendor/channel-manager employees), and the company-discovery search found zero new companies (20/20 already known). Stopped at 2 batches (of 4 allowed) given the clear and worsening exhaustion signal rather than forcing batches 3-4 for likely-negligible additional yield."
+    },
+    {
+      "run_id": "2026-09-08-f34c4c4c",
+      "started_at": "2026-09-08T18:00:00.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 1,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1776,
+        "total_search_results_raw": 75,
+        "new_stubs": 39,
+        "classified": 39,
+        "hot": 1,
+        "warm": 0,
+        "cold": 38,
+        "surfaced_for_approval": 39,
+        "hot_floor_met": false,
+        "hot_floor_shortfall": "1/5 hot after 1 batch (of 4 allowed) -- stopped deliberately rather than running batches 2-4. Unlike the prior two runs today, this batch had a very LOW dupe rate (3/42, 7%) because Ireland/Malaysia/New Zealand are genuinely fresh territory for this criteria -- but the population found there skews overwhelmingly toward off-platform ERP consultants (Sage 300/X3, Business Central, Acumatica, MYOB), solo/IC-level NetSuite consultants with no named employer, or businesses with no ERP/commerce signal at all (restaurant POS, home building, financial advisory, generic 'Solutions' consultancies). Only one candidate (Ray Ryan, CEO @ Noledge Group, Dublin) combined an explicit NetSuite signal with a real named firm and a decision-maker title. None of these three geographies are in target_locations (US/Canada/UK/Australia) -- this was an ad-hoc geographic experiment, same category as the 2026-08-21 precedent.",
+        "cold_sweep": "proactively swept 23 leftover cold URLs from 2026-09-08-ea1441df-links.json into cold-registry.json (2309 -> 2332) at the START of this run's Step 5L, per the Cold Sweep instruction -- corrected the process gap from the prior two runs this week where the sweep was performed reactively/retroactively after the fact",
+        "email_sent": false
+      },
+      "reconcile_note": "Pre-run: operator reported 'sent connections manually and moved the approved ones to approved' for run 2026-09-08-ea1441df's 4 hot + 2 warm. Verified: farhanadamji and garyajohnsonpmp cut into approved-queue.json; businnovatech (a COLD-tier lead, Dan Mason/Business Innovation Technologies) was also manually pulled from the cold array and approved into approved-queue.json (196->199, +3 total). The other 4 (adamtjohnson, analogysolutions, kuljeetnagra, scwleung) were absent from both the links file and approved-queue.json -- marked in leads.json as manual sends (status->request_sent, send_channel:'manual').",
+      "completed_at": "2026-09-08T18:28:34.326720+00:00",
+      "criteria_used": "agency-partners",
+      "provider_used": "connectsafely",
+      "search_cursor": {
+        "batches_run": 1,
+        "max_batches": 4,
+        "technique": "deviated to fresh, previously-untried geographies (Ireland, Malaysia, New Zealand) with the boutique-owner/founder framing that worked well for UK on 2026-09-08 morning",
+        "batch1_queries": [
+          "NetSuite implementation firm owner Ireland",
+          "NetSuite Alliance Partner Founder Malaysia",
+          "NetSuite implementation firm owner New Zealand"
+        ]
+      },
+      "notes": "Criteria resolved to agency-partners via explicit command arg. Pre-run reconcile: operator reported 'sent connections manually and moved the approved ones to approved' for run 2026-09-08-ea1441df's 4 hot + 2 warm; verified farhanadamji and garyajohnsonpmp were cut into approved-queue.json, and businnovatech (a COLD-tier lead) was also manually pulled from the cold array and approved (196->199, +3 total, confirming operators can rescue cold leads directly per the review contract); the other 4 (adamtjohnson, analogysolutions, kuljeetnagra, scwleung) were marked as manual sends in leads.json. STRONG RECOMMENDATION FOR NEXT RUN: this is the second consecutive agency-partners run to fall short of the hot floor (6 -> 6 -> 4 -> 1 hot across today's four abbreviated runs), and the exhaustion signal is now unambiguous across every technique tried this week: company-anchored keyword search (multiple angles), company-discovery via search-companies (3 separate attempts, the last finding zero new companies out of 20), and geographic broadening into fresh territory (Ireland/Malaysia/NZ) that, while genuinely low-dupe, surfaced almost no qualifying decision-makers because the addressable population in those markets skews toward off-platform ERP consultants and non-agency businesses. Recommend the operator either: (a) pause agency-partners for several days to let new LinkedIn profiles/connections accumulate before re-running (same precedent as 2026-08-19's multi-day pause recommendation), (b) switch to a different criteria (agency-netsuite, mvp-factory, retail-brands) for upcoming runs, or (c) have a human review whether target_roles/target_locations should be deliberately broadened as a permanent criteria change rather than an ad-hoc per-run experiment. Stopped at 1 of 4 allowed batches given the clarity of this signal -- further batches under the current criteria are very unlikely to lift the count meaningfully."
+    },
+    {
+      "run_id": "2026-09-08-7b40984c",
+      "started_at": "2026-09-08T21:00:00.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 1,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "connections_cache_rebuilt": false,
+        "connections_cache_size": 1776,
+        "total_search_results_raw": 129,
+        "new_stubs": 55,
+        "classified": 55,
+        "hot": 2,
+        "warm": 0,
+        "cold": 53,
+        "surfaced_for_approval": 55,
+        "hot_floor_met": false,
+        "hot_floor_shortfall": "2/5 hot after 2 batches (of 4 allowed) -- stopped deliberately. Key lesson for future runs: seen.json is shared across ALL criteria (dedupe is global, not per-criteria), so a query already run today under agency-partners (e.g. 'NetSuite implementation firm owner Ireland') returns zero new candidates when re-run under agency-netsuite even though it's a different criteria file -- always check whether a query/geography was already mined earlier THE SAME SESSION under a sibling criteria before re-running it. The SAP anti-pattern in this criteria's own file capped two otherwise-strong JPS-iQ Solutions Group leads (Joerg Schaefer, Sebastian Bennecke -- Founder/CEO and Managing Director respectively, both with explicit NetSuite signals) at 20/cold purely because their headlines also listed SAP among supported platforms, per the operator's explicit 'SAP is out of scope entirely' instruction in the criteria file.",
+        "cold_sweep": "proactively swept 38 leftover cold URLs from 2026-09-08-f34c4c4c-links.json (the agency-partners run immediately prior) into cold-registry.json (2332 -> 2370) at the start of this run's Step 5L",
+        "email_sent": false
+      },
+      "reconcile_note": "Pre-run: operator's standard 'sent connections manually and moved the approved ones to approved' message this time -- checked 2026-09-08-f34c4c4c-links.json and approved-queue.json: no change from last observed state (hot still contains rayryanossm unmodified, queue still at 199). Nothing to reconcile for this specific file/run; the operator's manual-send activity this round appears unrelated to this run's single surfaced lead. Criteria switched to agency-netsuite per the prior run's saturation recommendation for agency-partners.",
+      "completed_at": "2026-09-08T18:50:41.594656+00:00",
+      "criteria_used": "agency-netsuite",
+      "provider_used": "connectsafely",
+      "search_cursor": {
+        "batches_run": 2,
+        "max_batches": 4,
+        "technique": "batch1: boutique owner/founder framing for Netherlands, Germany, Singapore (all official target_locations for this criteria, unlike agency-partners); batch2: NetSuite implementation firm owner Ireland (100% wasted -- identical query already exhausted today under agency-partners, all results already in seen.json) + NetSuite alliance partner COO (near-total vendor-employee saturation)",
+        "batch1_queries": [
+          "NetSuite implementation firm owner Netherlands",
+          "NetSuite implementation firm owner Germany",
+          "NetSuite implementation firm owner Singapore"
+        ],
+        "batch2_queries": [
+          "NetSuite implementation firm owner Ireland (0 new -- fully deduped against today's agency-partners run)",
+          "NetSuite alliance partner Chief Operating Officer (9 new, all NetSuite/Oracle vendor Alliance/Partnerships staff or no-domain-signal profiles)"
+        ]
+      },
+      "notes": "Criteria switched from agency-partners to agency-netsuite per the prior run's saturation recommendation. Pre-run reconcile: operator's standard manual-send message this round did not correspond to any observable change in 2026-09-08-f34c4c4c-links.json or approved-queue.json (both unchanged) -- nothing to reconcile for that specific run's single hot lead (rayryanossm), which remains unprocessed in that file. Netherlands/Germany/Singapore (batch 1) yielded a genuinely fresh population (only 8/54 dupes) since agency-netsuite's own target_locations officially include these markets (unlike agency-partners, where they're only ad-hoc experiments) -- but the vast majority of that fresh population turned out to be off-platform ERP consultants (Exact Online, Uniconta, Visma, Odoo), solo/IC-level NetSuite consultants with no real firm, or in-house end-user IT leaders, not agency decision-makers. Only 2 hot survived: John Schrijvers (CEO, Rsult Group, Netherlands) and Julian Schneider (Managing Director/Head of NetSuite Consulting, Germany). Batch 2 confirmed agency-netsuite is ALSO approaching saturation on the well-mined US/CA angles (Alliance Partner/COO query returned almost entirely NetSuite's own vendor Alliance & Partnerships staff, an easy excluded_employers cold call, not new leads). Given both criteria (agency-partners and agency-netsuite) have now shown clear saturation signals in the same session, recommend a broader step back: either target a genuinely untried geography combo for both criteria (Malaysia/Hong Kong/UAE at the CEO/Founder level rather than generic search terms), commission a criteria-extractor refresh to mine the current connections graph for new target_roles/company_type_signals patterns, or shift to mvp-factory/retail-brands for the next few runs to let the NetSuite-partner search index refresh with new profiles."
+    },
+    {
+      "run_id": "2026-09-09-724fdfba",
+      "started_at": "2026-09-09T00:00:00.000000+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 11,
+      "steps_completed": [
+        0,
+        1,
+        5
+      ],
+      "counts": {
+        "new_leads": 77,
+        "classified": 77,
+        "hot_floor_shortfall": null,
+        "hot": 5,
+        "warm": 11,
+        "cold": 61,
+        "surfaced_for_approval": 77
+      },
+      "reconcile_note": "Pre-run: operator's standard 'sent connections manually and moved the approved ones to approved' message this round. Verified against 2026-09-08-7b40984c-links.json and approved-queue.json: both hot leads (johnschrijvers, julian-schneider-1991) were already cut into approved-queue.json (199->201). Nothing outstanding to reconcile.",
+      "errors": [
+        {
+          "step": 1,
+          "category": "auth_error",
+          "error": "claude.ai ConnectSafely.AI MCP connector disconnected this session (all mcp__claude_ai_ConnectSafely_AI__* tools unavailable, confirmed via ToolSearch returning no matches for get-account-status/search-people/etc). Cannot verify account_status or make any LinkedIn calls. Run blocked before Step 2.",
+          "at": "2026-09-09T00:00:00.000000+00:00"
+        }
+      ],
+      "notes": "ConnectSafely MCP connector reconnected (verified via get-account-status: AVAILABLE). Resumed from Step 1. Criteria refresh skipped: 20th agency-partners search run (19 prior completed search-phase runs + this one), 20 mod 7 = 6, not a refresh trigger. | Completed: connections_cache refreshed (1776->1827 via targeted pagination since MCP get-connections caps at 12/call and ignores sortBy -- paged by recentlyAdded back past the prior cached_at to bridge the gap, merged with existing cache rather than discarding it). Wrote state/pending_approvals/2026-09-09-724fdfba-links.json (hot:5 warm:11 cold:61). Cold Sweep also processed one stale non-empty links file (2026-09-08-7b40984c, 53 cold URLs -> cold-registry.json).",
+      "provider_used": "connectsafely",
+      "criteria_used": "agency-partners",
+      "search_cursor": {
+        "batches_run": 3,
+        "max_batches": 4,
+        "technique": "batch1: repeated old company-anchored no-location query (NetSuite alliance partner CEO/Founder/Managing Director) -- fully exhausted, 0/70 new (all already seen/connections). batch2: pivoted to untried role angles (Client Partner, Head of Channel & Alliances) + untried search_terms entry (Boomi NetSuite integration partner) -- 39 new, 2 hot (both Plative). batch3: company-anchored on Plative (source of both batch2 hot leads) + NetSuite Solution Provider Partner (Partner title) + Engagement Manager role angle -- 38 new, 3 more hot (Plative VP, Oracle NetSuite Practice Lead/Partner, NetSuite Practice Manager). Hot floor (5) met after batch3; batch4 skipped.",
+        "batch1_queries": [
+          "NetSuite alliance partner CEO (title=CEO)",
+          "NetSuite alliance partner Founder (title=Founder)",
+          "NetSuite alliance partner Managing Director (title=Managing Director) -- 0/70 new across all three, fully exhausted"
+        ],
+        "batch2_queries": [
+          "NetSuite Alliance Partner Client Partner (title=Client Partner)",
+          "Boomi NetSuite integration partner",
+          "NetSuite Alliance Partner Head of Channel & Alliances (title=Head of Channel & Alliances) -- 1 result, already known"
+        ],
+        "batch3_queries": [
+          "NetSuite Plative (company=Plative)",
+          "NetSuite Solution Provider Partner (title=Partner)",
+          "NetSuite Alliance Partner Engagement Manager (title=Engagement Manager)"
+        ]
+      },
+      "completed_at": "2026-09-09T15:36:34.648747+00:00"
+    },
+    {
+      "run_id": "2026-09-09-e25fd559",
+      "started_at": "2026-09-09T18:15:08.620939+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 11,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 49,
+        "classified": 49,
+        "hot": 5,
+        "warm": 3,
+        "cold": 41,
+        "surfaced_for_approval": 49
+      },
+      "provider_used": "connectsafely",
+      "criteria_used": "agency-partners",
+      "notes": "Criteria refresh triggered (21st agency-partners search run, 21 mod 7 = 0). criteria-extractor subagent analyzed 150 connections (15 paginated calls, startIndex 0-140) and merged findings onto existing file: added Managing Partner to target_roles, Boomi to company_type_signals, 2 new search_terms. Hand-tuned exclusion lists/reference_companies/scoring untouched per established merge-not-overwrite practice. | Completed: wrote state/pending_approvals/2026-09-09-e25fd559-links.json (hot:5 warm:3 cold:41). Cold Sweep processed the immediately-prior run's links file (2026-09-09-724fdfba, 61 cold URLs -> cold-registry.json, now 2484 total).",
+      "search_cursor": {
+        "batches_run": 2,
+        "max_batches": 4,
+        "technique": "batch1: role angles from todays criteria refresh (Managing Partner, new Boomi signal) + untried Sales Director role -- 29 new, 3 hot (Debi Wise/Managing Partner, Kelley Starr/CFO Suite Partners Managing Partner, Chad Back/Digital Transformation Principal). Sales Director angle was heavily saturated with NetSuite-vendor-employee sales reps (excluded_employer), as expected. batch2: President title + Esonus company-anchor (yielded unrelated results, company filter apparently not precise) + generic Head of Business Development sweep -- 20 new, 2 more hot (Dean Mitchell/Founder President at Zastro, Ross Stevens/Area VP NetSuite at Bridgepoint Consulting). Hot floor (5) met after batch2; batch3-4 skipped. Note: search-people endpoint returned transient 502s for ~4 consecutive calls mid-batch2 before recovering on its own -- no account/auth issue (confirmed via get-account-status AVAILABLE throughout), treated as network_error per rate limit handling, retried without abandoning the run.",
+        "batch1_queries": [
+          "NetSuite alliance partner managing partner (title=Managing Partner)",
+          "NetSuite Boomi certified partner",
+          "NetSuite Alliance Partner Sales Director (title=Sales Director) -- heavy NetSuite-vendor-employee saturation"
+        ],
+        "batch2_queries": [
+          "NetSuite alliance partner President (title=President)",
+          "Esonus NetSuite (company=Esonus) -- company filter did not return Esonus-specific results",
+          "NetSuite Alliance Partner Head of Business Development (title=Head of Business Development)"
+        ]
+      },
+      "completed_at": "2026-09-09T18:32:05.266015+00:00"
+    },
+    {
+      "run_id": "2026-09-09-39a6ae9e",
+      "phase": "send-recovery-inmail",
+      "status": "completed",
+      "started_at": "2026-09-09T19:18:17.494079+00:00",
+      "resume_from_step": 1,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "counts": {
+        "approved_and_eligible": 21,
+        "attempted_this_run": 15,
+        "sent_api": 0,
+        "sent_manual": 0,
+        "held_pending_operator_decision": 15,
+        "not_attempted_over_cap": 6,
+        "inmail_credits_at_send_time": 45
+      },
+      "completed_at": "2026-09-09T19:21:14.852105+00:00",
+      "errors": [
+        {
+          "step": "Step 3 (send)",
+          "category": "subscription_required_soft",
+          "detail": "sales-nav-send-message failed for Maher Chamma (first of 15) with identical error to the 2026-08-17 run: \"Sales Navigator authentication failed - could not obtain enterprise identity\". get-account-status confirms hasSalesNavigator: false despite BUSINESS_PREMIUM + 45 inMailCredits. Stopped after 1 attempt rather than repeating a call known to fail identically for the remaining 14 -- same reasoning as the 2026-08-17 run. Did not fall back to conversations-send-message (linkedin_inbox channel) since that already 403d on non-connection profiles in the 2026-08-17 run and is not the documented send_inmail operation mapping in CLAUDE.md. All 15 entries left at status=inmail_queued, decision=approved, inmail_sent_at=null for manual send or retry once Sales Navigator access is restored on the account.",
+          "timestamp": "2026-09-09T19:21:14.852315+00:00"
+        }
+      ]
+    },
+    {
+      "run_id": "2026-09-10-806f1860",
+      "started_at": "2026-09-10T18:46:07.663365+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 11,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 97,
+        "classified": 97,
+        "hot": 1,
+        "warm": 5,
+        "cold": 91,
+        "surfaced_for_approval": 97
+      },
+      "reconcile_note": "Pre-run: operator sent connections manually and moved approved ones. Verified via git diff: approved-queue.json gained ~60 new URLs including all 5 hot + 3 warm from 2026-09-09-e25fd559-links.json and all 5 hot + 11 warm from 2026-09-09-724fdfba-links.json (both now show empty hot/warm arrays). No further reconciliation needed -- consistent with established practice of not marking individual leads request_sent without explicit per-URL confirmation of which were sent vs merely queued.",
+      "provider_used": "connectsafely",
+      "criteria_used": "agency-partners",
+      "notes": "22nd agency-partners search run, 22 mod 7 = 1, not a refresh trigger. Criteria file unchanged. | Completed: wrote state/pending_approvals/2026-09-10-806f1860-links.json (hot:1 warm:5 cold:91). Hot floor shortfall logged (1/5) after exhausting 4 batches -- see search_cursor. One transient search-people 502 outage mid-run self-resolved after retries (confirmed account healthy via get-account-status throughout). Cold Sweep processed 2026-09-09-e25fd559 (41 cold URLs -> cold-registry.json, now 2525 total).",
+      "search_cursor": {
+        "batches_run": 4,
+        "max_batches": 4,
+        "hot_floor_shortfall": "1/5 hot after 4 batches",
+        "technique": "Extensive angle rotation after 3 prior sessions exhausted the obvious NetSuite-partner search space: VP of Partnerships, VP/Director of Professional Services, Regional Director, Chief Growth Officer, generic ERP-implementation-consultancy Managing Director, broad alliance-partner pagination offset (start=50), and a South Africa geography deviation -- plus company anchors on the two remaining untried reference_companies (Techfino: some warm hits; Aztech Digital: zero results, likely too small/no LinkedIn presence). Only 1 hot (Dylan Coetzee, Practice Lead at a NetSuite+Odoo shop in South Africa) and 5 warm surfaced across 98 new leads and ~250 search results reviewed. This reads as genuine near-term exhaustion of the fresh-decision-maker population for this criteria after 22 runs, not a technique failure -- logging the shortfall honestly per CLAUDE.md rather than continuing to batch.",
+        "batch1_queries": [
+          "NetSuite alliance partner VP of Partnerships (title=VP of Partnerships)",
+          "Techfino NetSuite (company=Techfino)",
+          "NetSuite Alliance Partner Regional Director (title=Regional Director) -- mostly irrelevant non-NetSuite results"
+        ],
+        "batch2_queries": [
+          "Aztech Digital NetSuite (company=Aztech Digital) -- 0 results",
+          "NetSuite alliance partner VP of Professional Services (title=VP of Professional Services)",
+          "NetSuite accounting firm advisory practice director -- heavy NetSuite/Oracle vendor-employee saturation"
+        ],
+        "batch3_queries": [
+          "NetSuite alliance partner (no title filter, start=50 pagination offset to skip over-fished top results)",
+          "NetSuite Alliance Partner Chief Growth Officer (title=Chief Growth Officer)",
+          "ERP implementation consultancy managing director -- mostly generic non-NetSuite ERP (Odoo/SAP/Dynamics), failed domain gate"
+        ],
+        "batch4_queries": [
+          "NetSuite implementation firm owner South Africa (fresh untried geography)",
+          "NetSuite Alliance Partner Founder Australia (title=Founder)",
+          "NetSuite alliance partner CFO (title=CFO) -- mostly fractional-CFO end-client profiles, not agency-side"
+        ]
+      },
+      "completed_at": "2026-09-10T19:08:07.926162+00:00"
+    },
+    {
+      "run_id": "2026-09-11-eb4e3a75",
+      "started_at": "2026-09-11T13:36:55.940022+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 11,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 84,
+        "classified": 84,
+        "hot": 2,
+        "warm": 6,
+        "cold": 76,
+        "surfaced_for_approval": 84
+      },
+      "reconcile_note": "Pre-run: operator excluded Techfino across all 7 criteria files (added to excluded_companies, removed from reference_companies in agency-partners/agency-netsuite/suiteworld-2026) after its staff kept surfacing as hot/warm leads he did not want. The 5 already-surfaced Techfino leads from the prior run (2026-09-10-806f1860) were purged from leads.json (already absent from the links file and approved-queue.json -- operator had already cut them) but kept in seen.json per the append-only exclusion protocol. The one hot lead from that run (Dylan Coetzee, non-Techfino) was also missing from the links file and approved-queue.json with no other explanation, so marked status=rejected/approval_decision=operator_rejected per the standard deleted-from-file convention.",
+      "provider_used": "connectsafely",
+      "criteria_used": "agency-netsuite",
+      "notes": "47th agency-netsuite search run, 47 mod 7 = 5, not a refresh trigger. Criteria file unchanged (aside from the pre-run Techfino exclusion edit). | Completed: wrote state/pending_approvals/2026-09-11-eb4e3a75-links.json (hot:2 warm:6 cold:76). Hot floor shortfall logged (2/5) after exhausting 4 batches. Cold Sweep processed 2026-09-10-806f1860 (91 cold URLs -> cold-registry.json, now 2616 total).",
+      "search_cursor": {
+        "batches_run": 4,
+        "max_batches": 4,
+        "hot_floor_shortfall": "2/5 hot after 4 batches",
+        "technique": "New Zealand geography (untried target_location) + SuiteCommerce/Head of Talent angles yielded 1 hot (Maxime Lothe/Novutech) + 2 warm. Company-anchor on Companial (source of a hot lead) + Director of ERP/Business Development Director roles yielded 1 more hot (Pamela Taff/Companial) + 2 warm, but heavy Oracle/NetSuite vendor-employee and mega-SI (RSM/EY/Accenture-style) saturation on generic Director searches. CRO + Ireland geo batch: 0 hot, 0 warm -- CRO angle pulled almost entirely unrelated-industry executives; Ireland is clearly fully exhausted (mostly technical ICs already known). Final batch: Netherlands/Germany/Singapore Head of Operations + geography sweeps -- 0 hot, 3 more warm (Novutech-adjacent CEO, two NetSuite PM/optimization ICs in Singapore), but most of the strongest-looking candidates (Joerg Schaefer/JPS-iQ, Kilian Leibundgut/Novutech Germany, Todd Kimpton, Yu-Ching Aldous) were already known from prior sessions. Floor not met after all 4 batches -- logging shortfall honestly per CLAUDE.md.",
+        "batch1_queries": [
+          "NetSuite alliance partner Head of Talent (0 useful results)",
+          "NetSuite implementation firm owner New Zealand",
+          "SuiteCommerce agency founder (title=Founder)"
+        ],
+        "batch2_queries": [
+          "NetSuite alliance partner Director of ERP (title=Director of ERP)",
+          "ERP implementation consultancy director (title=Director) -- heavy Oracle/NetSuite/mega-SI vendor-employee saturation",
+          "NetSuite alliance partner Business Development Director"
+        ],
+        "batch3_queries": [
+          "Companial NetSuite (company=Companial) -- only 1 result, already known",
+          "NetSuite alliance partner Chief Revenue Officer (title=Chief Revenue Officer) -- almost entirely unrelated-industry CROs",
+          "NetSuite SI managing director Ireland -- fully exhausted, mostly technical ICs already known"
+        ],
+        "batch4_queries": [
+          "NetSuite alliance partner Head of Operations Netherlands (title=Head of Operations)",
+          "NetSuite implementation firm owner Germany",
+          "NetSuite solution provider managing director Singapore"
+        ]
+      },
+      "completed_at": "2026-09-11T13:54:30.476145+00:00"
+    },
+    {
+      "run_id": "2026-09-11-cc632de2",
+      "started_at": "2026-09-11T16:40:51.662472+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 11,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 64,
+        "classified": 64,
+        "hot": 0,
+        "warm": 4,
+        "cold": 60,
+        "surfaced_for_approval": 64
+      },
+      "reconcile_note": "Pre-run: operator sent connections manually and moved approved ones. Verified via approved-queue.json diff against 2026-09-11-eb4e3a75-links.json (agency-netsuite): 3 of 8 hot/warm entries were approved (maxime-lothe-412a1530, riku-martikainen, sani-kassim-a9345749); the other 5 (pamela-taff-218a1528, dr-juergen-nuetzel, leanne-kane-50284360, syeowpin, alpha-leung-7ab26540) were deleted from the file without a corresponding approved-queue entry -- marked status=rejected/approval_decision=operator_rejected per the standard deleted-from-file convention.",
+      "provider_used": "connectsafely",
+      "criteria_used": "agency-partners",
+      "notes": "23rd agency-partners search run, 23 mod 7 = 2, not a refresh trigger. Severe search-space exhaustion continues for agency-partners: 0 hot across all 4 batches this run (4 warm, 60 cold from 64 classified leads). Batch 1-2 rotated fresh role/title angles (VP Delivery, Chief Delivery Officer, Associate Director, Client Services, Head of Growth) \u2014 all generic titles at unrelated companies, 0 hot/warm. Batch 3 used company anchors (Esonus, Plative) plus UK/Managing Partner geo \u2014 mostly already-known hires. Batch 4 used a new company anchor (Web Control, a genuine NetSuite Alliance Partner of the Year 2024/2025) plus broad Founder/CEO searches in AU/Canada \u2014 Web Control results were almost entirely IC-level consultants (cold), except Kat Cosker (Head of Customer Success, warm). Broad CEO/Founder searches surfaced mostly irrelevant executives with no NetSuite/agency signal. This is the second consecutive agency-partners run to badly miss the hot floor (prior run 2026-09-10-806f1860 also logged a shortfall at 1/5). Recommend resting this criteria or triggering an early criteria refresh next run \u2014 the current reference_companies/search_terms combination appears substantially mined out.",
+      "completed_at": "2026-09-11T16:54:11.055476+00:00",
+      "search_cursor": {
+        "batches_run": 4,
+        "max_batches": 4,
+        "hot_floor_shortfall": "0/5 hot after 4 batches",
+        "batch4_queries": [
+          "Web Control NetSuite (company anchor)",
+          "NetSuite alliance partner Founder Australia",
+          "NetSuite Alliance Partner CEO Canada"
+        ]
+      }
+    },
+    {
+      "run_id": "2026-09-11-c300bd10",
+      "phase": "send-recovery-inmail",
+      "status": "completed",
+      "started_at": "2026-09-11T16:46:57.739842+00:00",
+      "completed_at": "2026-09-11T16:46:57.739842+00:00",
+      "resume_from_step": 4,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "counts": {
+        "approved_and_eligible": 21,
+        "attempted_this_run": 1,
+        "sent_api": 0,
+        "sent_manual": 0,
+        "held_pending_operator_decision": 21,
+        "inmail_credits_at_send_time": 45
+      },
+      "errors": [
+        {
+          "step": "Step 3 (send)",
+          "category": "subscription_required_soft",
+          "detail": "Confirmation attempt for Maher Chamma via sales-nav-send-message failed with the identical error as the 2026-09-09 run (2026-09-09-39a6ae9e) and the original 2026-08-17 run: \"Sales Navigator authentication failed - could not obtain enterprise identity\". get-account-status confirms hasSalesNavigator: false, BUSINESS_PREMIUM, 45 inMailCredits -- unchanged from two days ago (0 credits consumed since then confirms nothing sent in between). This is an account-entitlement gap, not a transient rate limit, so did not attempt the remaining 20 approved entries. All 21 left at status=inmail_queued, decision=approved, inmail_sent_at=null.",
+          "timestamp": "2026-09-11T16:46:57.739842+00:00"
+        }
+      ]
+    },
+    {
+      "run_id": "2026-09-14-db349ebd",
+      "started_at": "2026-09-14T14:10:16.706725+00:00",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 11,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 41,
+        "classified": 41,
+        "hot": 14,
+        "warm": 5,
+        "cold": 22,
+        "surfaced_for_approval": 41
+      },
+      "provider_used": "connectsafely",
+      "criteria_used": "agency-partners",
+      "search_cursor": {
+        "batches_run": 3,
+        "max_batches": 4,
+        "hot_floor_met": "14/5 hot after 3 batches \u2014 stopped early, floor exceeded",
+        "batch1_queries": [
+          "Zanovoy NetSuite (company anchor)",
+          "NetSuite alliance partner Chief Growth Officer",
+          "NetSuite alliance partner Regional Director"
+        ],
+        "batch2_queries": [
+          "NetSuite alliance partner Client Partner",
+          "NetSuite alliance partner Engagement Manager",
+          "Saberpoint NetSuite (company anchor)"
+        ],
+        "batch3_queries": [
+          "Saberpoint CEO founder managing director",
+          "Plative VP Director partnerships delivery (company anchor)",
+          "Bryant Park Consulting director VP NetSuite"
+        ]
+      },
+      "completed_at": "2026-09-14T14:17:58.619045+00:00",
+      "notes": "Severe search-space exhaustion from the prior two agency-partners runs (2026-09-10, 2026-09-11) reversed sharply this run by pivoting off pure role/title rotation onto fresh company anchors surfaced in this criteria file's own refresh notes (Zanovoy, Saberpoint) plus deeper drill-down on Plative (the top reference_company, previously under-mined for its full Client Partner/Director bench). Batch 1 (Zanovoy anchor + 2 untried roles) found 2 hot (Leon Saunders, Blake Dyer \u2014 both senior Partner-titled at Zanovoy) plus a large cluster of offshore Philippines-based NetSuite consultants that classified cold per this criteria's established offshore-IC judgment. Batch 2 (broad Client Partner + Engagement Manager searches, plus a Saberpoint anchor) found 2 more hot (Quinnlan Watson, Anuj Upadhyay \u2014 both senior at Saberpoint, a confirmed NetSuite ERP consultancy) \u2014 floor at 4/5. Batch 3 (Saberpoint exec search + a targeted Plative company-anchor search + Bryant Park Consulting anchor) struck a vein of previously-unmined Plative staff: Miftah Khan (CEO @ Plative) plus 9 more Client Partners/Directors, pushing the run to 14 hot against the 5-hot floor. Stopped after 3 of 4 allowed batches since the floor was massively exceeded \u2014 no need for a 4th. Key lesson for future runs: company-anchored searches against reference_companies (Plative, Esonus, Aztech Digital) and newly-discovered adjacent firms (Zanovoy, Saberpoint, Bryant Park Consulting) outperform pure role/title rotation by a wide margin once the role-rotation well runs dry \u2014 worth defaulting to this pattern earlier in future exhausted runs rather than exhausting all 4 batches on title variations first."
     }
   ],
   "retries": [
