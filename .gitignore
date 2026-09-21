@@ -16,6 +16,8 @@ state/imports/
 # Local secrets — never commit
 .claude/settings.local.json
 .env
+standalone/.env.local
+standalone/node_modules/
 
 # OS / editor noise
 .DS_Store
