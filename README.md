@@ -153,6 +153,43 @@ Or specify a criteria:
 
 ---
 
+## Standalone commands
+
+These run outside the four-phase flow — never scheduled, run them whenever useful.
+
+**Connection warm-up** — react to and comment on a target lead's recent posts before/while a connection request is pending, to build a little familiarity first:
+
+```
+/connection-warm-up
+```
+
+Reactions send automatically. Comment drafts are written to `state/pending_approvals/<date>-warmup-comments.json` — review `comment_draft`, optionally fill `edited_comment`, set `decision`, then re-run `/connection-warm-up` to send approved comments.
+
+**Content generation** — analyze your own LinkedIn posts and draft new ones:
+
+```
+/analyze-my-posts
+```
+
+Ranks your recent posts by engagement (and impressions, if you paste in Creator Analytics data), then proposes new post ideas into `content/post-ideas/<date>.md`.
+
+```
+/generate-posts
+```
+
+Writes full post drafts from the latest `content/post-ideas/*.md` file into `content/post-drafts/<date>.md`. Optionally scope to specific ideas: `/generate-posts A,C,E`.
+
+**Invite recovery** — withdraw stale pending invitations and follow up via InMail:
+
+```
+/recover-stale-invites
+/send-recovery-inmail
+```
+
+See `CLAUDE.md → Invite Recovery` and `CLAUDE.md → Connection Warm-Up` for the full spec of each.
+
+---
+
 ## Criteria
 
 Search criteria live in `config/criteria/`. Each file is a self-contained search profile.
