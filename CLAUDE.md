@@ -62,6 +62,8 @@ The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sendi
 | `.claude/commands/deliver-messages.md` | Phase 4 slash command (`/deliver-messages`) |
 | `.claude/commands/search-connections-abbreviated.md` | Phase 1 minimal-footprint variant (`/search-connections-abbreviated`) |
 | `.claude/commands/pipeline-maintenance.md` | Manual state housekeeping (`/pipeline-maintenance`) |
+| `.claude/commands/refresh-criteria.md` | Standalone criteria refresh — runs `agents/criteria-extractor.md` without a search (`/refresh-criteria`) |
+| `standalone/` | Non-AI CLI equivalent of `/search-connections-abbreviated` (search + deterministic classification, no Claude required) — see `standalone/README.md` |
 | `.claude/commands/recover-stale-invites.md` | Invite Recovery, standalone phase — withdraw + draft (`/recover-stale-invites`) |
 | `.claude/commands/send-recovery-inmail.md` | Invite Recovery, standalone phase — send approved InMail (`/send-recovery-inmail`) |
 
@@ -137,6 +139,10 @@ Each run uses exactly one criteria file from `config/criteria/`. The file to use
 3. **Hardcoded fallback** — if `active_criteria` is missing or the file doesn't exist, use `agency-partners`.
 
 **Before Step 2, record the resolved criteria name** in the current run_log entry as `criteria_used: "<name>"`. Every run is auditable.
+
+### Refreshing criteria without a search
+
+`/refresh-criteria [criteria=<name>]` runs the `agents/criteria-extractor.md` step standalone — no search, no classification, no email — for cases where you want to update a criteria file's patterns without waiting for Step 1's conditional auto-refresh inside a full pipeline run. This is also the only way to refresh criteria used by `standalone/`, the non-AI CLI: that tool can only warn when a refresh is due (see `standalone/README.md`), never perform one itself, since pattern extraction requires LLM judgment.
 
 ### Adding a new criteria
 
