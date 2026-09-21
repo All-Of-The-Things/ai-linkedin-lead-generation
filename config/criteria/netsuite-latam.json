@@ -2,9 +2,13 @@
   "name": "netsuite-latam",
   "label": "NetSuite Latam Agencies",
   "description": "Targets decision-makers at NetSuite implementation agencies and Oracle partners in Latin America. Same staff augmentation proposition as agency-partners, with outreach composed in Spanish.",
-  "generated_at": "2026-06-11T00:00:00.000Z",
-  "generated_from_connections": 0,
+  "generated_at": "2026-09-15T19:03:41.000Z",
+  "generated_from_connections": 192,
   "_note": "Latin American counterpart to agency-partners. Focus on consultancies implementing NetSuite and SuiteCommerce for clients in Latam. All messages must be written in neutral Latin American Spanish.",
+  "_refresh_note_2026_09_15": "Criteria-extractor refresh (via /refresh-criteria, first real extraction pass for this file — generated_from_connections was 0 and generated_at was a hand-authored 2026-06-11 stub before this run, never previously refreshed): reused the same 192-connection pull (get-connections, 16 pages, startIndex 0-180, limit 12, sortBy recentlyAdded, connectedDate 2026-07-16 through 2026-09-15) gathered for the same-day agency-partners refresh, since both files draw from the same LinkedIn account's connections and the extractor's job is to re-read that population through this file's Latam-specific lens. Headline finding: this account's organic connections are overwhelmingly a global/US NetSuite-ecosystem network, not a Latam-dense one — only a handful of connections carry a clear Latam signal (Spanish-language headline, Latam country, or explicit 'en Perú'/'en Latinoamérica' framing), which is expected since Latam density for this criteria is meant to come from this criteria's own targeted searches (Step 2), not from organic connection growth. Findings: (1) reference_companies — added: none existed before (unlike agency-partners, this file had no reference_companies key at all). Added 'Nufocus' on real evidence: two independent connections at the same Peru-based firm both surfaced with explicit platform+partner branding — José Luis Calderón Diaz ('Co-Founder | Director Comercial Nufocus | Oracle NetSuite Alliance Partner – Perú, Latinoamérica y USA') and Omar Magallanes Valdivia ('Delivery Manager en Nufocus | Alliance Partner #1 de Oracle+NetSuite en Perú'). (2) company_type_signals — added 'Alliance Partner' and 'NetSuite Alliance Partner': both Nufocus headlines above use this exact English phrase even inside otherwise-Spanish text (code-switching is common in this professional register), and the existing Spanish-only signals ('Socio NetSuite', 'Partner Oracle') would have missed both. (3) target_roles — no addition. 'Director Comercial' (José Luis Calderón Diaz) and 'Delivery Manager' (Omar Magallanes Valdivia) each appeared once — flagging, not adding, consistent with agency-partners' no-single-instance-evidence practice. Also flagging: Khalita Hicks ('Sales Director | Helping Multinational Companies Expand into LATAM with Oracle NetSuite | NetSuite Localization Expert') is a near-perfect fit for this criteria's proposition despite not being Latam-based herself — 'Sales Director' is already in agency-partners' target_roles (added 2026-08-21) but was never backported here; one instance isn't enough to add unilaterally, but a second independent sighting anywhere should trigger adding it to both files for consistency. (4) target_industries / target_locations: unchanged — no industry/location field returned by get-connections (same gap as agency-partners), and Peru is already covered by the existing target_locations list. (5) search_terms, anti_patterns, excluded_employers, excluded_companies, scoring_weights, classification_thresholds, language: left untouched — no data-driven reason to change any of them this run.",
+  "reference_companies": [
+    "Nufocus"
+  ],
   "_company_type_signals_note": "Must be platform-specific to count toward agency boost. 'Consultora', 'Tecnología', 'Soluciones', 'Digital' alone are not sufficient — they must appear alongside a platform keyword like NetSuite, Oracle, SuiteCommerce, or Shopify.",
   "company_type_signals": [
     "NetSuite",
@@ -21,6 +25,8 @@
     "Socio NetSuite",
     "Partner Oracle",
     "Implementador NetSuite",
+    "Alliance Partner",
+    "NetSuite Alliance Partner",
     "Systems Integrator",
     "Integraciones ERP",
     "eCommerce Agency",
