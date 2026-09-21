@@ -54,7 +54,9 @@ The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sendi
 | `state/archive/` | Maintenance output: `leads-archive.json`, `run_log-archive.json` — written only by `/pipeline-maintenance` |
 | `state/run_log.json` | Audit log of every pipeline run |
 | `templates/` | Message style guides used by `agents/message-composer.md` |
+| `content/` | Content-generation working files: `post-ideas/`, `post-drafts/`, `seo-drafts/` — written by `/analyze-my-posts` and `/generate-posts` |
 | `agents/` | Subagent prompt files for focused subtasks |
+| `agents/warm-up-commenter.md` | Drafts a comment for `/connection-warm-up`'s Step 3, given a lead record and a target post |
 | `routines/daily-search.md` | Phase 1 scheduled routine (weekdays 9am) |
 | `.claude/commands/search-connections.md` | Phase 1 slash command (`/search-connections`) |
 | `.claude/commands/generate-messages.md` | Phase 2 slash command (`/generate-messages`) |
@@ -66,6 +68,9 @@ The Resend skill lives at `.agents/skills/resend/SKILL.md`. Read it before sendi
 | `standalone/` | Non-AI CLI equivalent of `/search-connections-abbreviated` (search + deterministic classification, no Claude required) — see `standalone/README.md` |
 | `.claude/commands/recover-stale-invites.md` | Invite Recovery, standalone phase — withdraw + draft (`/recover-stale-invites`) |
 | `.claude/commands/send-recovery-inmail.md` | Invite Recovery, standalone phase — send approved InMail (`/send-recovery-inmail`) |
+| `.claude/commands/connection-warm-up.md` | Connection Warm-Up, standalone phase — react + draft comments on target leads' posts (`/connection-warm-up`) |
+| `.claude/commands/analyze-my-posts.md` | Content, standalone — ranks the account owner's own LinkedIn posts by engagement, generates new post ideas (`/analyze-my-posts`) |
+| `.claude/commands/generate-posts.md` | Content, standalone — writes full post drafts from a post-ideas file (`/generate-posts`) |
 
 ---
 
@@ -487,6 +492,33 @@ Full step-by-step behavior lives in the two command files — this section is th
 
 ---
 
+## Connection Warm-Up (Standalone Phase)
+
+**`/connection-warm-up`** — a standalone phase, never scheduled, outside the core Steps 0–10 numbering. Run it before sending a connection request (after `/generate-messages`) or while a request is pending acceptance (after `/send-connections`). It builds light pre-connection/pending-acceptance signal by reacting to a target lead's most recent post and drafting a comment for review; reactions send automatically, comments are approval-gated. Config lives at `config/pipeline.json → warm_up` (`max_leads_per_run`, `posts_to_fetch_per_lead`, `reaction_type`, `require_approval_before_comment`, `skip_if_warmed_up_within_days`).
+
+Full step-by-step behavior lives in the command file — this section is the durable spec it implements:
+- Step 0: re-entry check, `phase: "connection-warm-up"`.
+- Step 1: target pool = leads at `status: "request_sent"` (pending acceptance) plus `status: "classified"` leads approved in some `*-notes-ready.json` (`note_decision: "approved"`), minus any lead warmed within `warm_up.skip_if_warmed_up_within_days` days, capped at `warm_up.max_leads_per_run`.
+- Step 2: sends previously-drafted comments whose `decision: "approved"` in a `*-warmup-comments.json` file and not yet logged to the lead's `warm_up_actions`.
+- Step 3: for each target lead, `fetch_profile` (recent posts included) — react to the most recent post via `react_to_post` regardless of type; draft a comment (`agents/warm-up-commenter.md`) only for the most recent post of `type == "original"` (LinkedIn does not accept comments on reposts). Logs each action to `leads.json → warm_up_actions`, sets `warm_up_at`.
+- Step 4: writes any new comment drafts to `state/pending_approvals/<date>-warmup-comments.json`.
+- Step 5: email notification, `phase: "warm_up_summary"`.
+
+**Approval Contract addition:** reactions never require approval (automatic, per lead, in Step 3). A comment sends only when: an entry in some `*-warmup-comments.json` has `decision: "approved"`, `comment_draft` (or `edited_comment`) is non-null, and `warm_up.require_approval_before_comment === true`.
+
+---
+
+## Content Generation (Standalone)
+
+Two standalone commands, unrelated to lead pipeline state (`leads.json`, `seen.json`, approval files) — they read and write only `content/`. Neither is scheduled.
+
+- **`/analyze-my-posts`** — fetches the account owner's own recent LinkedIn posts (ConnectSafely `posts/latest`, profile slug hardcoded in the command file), ranks them by engagement (and by impressions when the user supplies Creator Analytics data pasted into their message — impressions are not available via any API), extracts what topics/hook styles perform, and proposes 5–7 new post ideas. Writes `content/post-ideas/<YYYY-MM-DD>.md`.
+- **`/generate-posts`** — reads the latest (or a specified) `content/post-ideas/*.md` file and writes full post drafts, one per idea, following the voice/structure/accuracy rules in the command file (AOTT methodology framing, platform-accuracy checks, anti-AI-tell phrasing, length targets). Writes `content/post-drafts/<YYYY-MM-DD>.md`.
+
+Typical flow: `/analyze-my-posts` → review `content/post-ideas/<date>.md` → `/generate-posts` (optionally scoped to specific idea letters) → review `content/post-drafts/<date>.md` before posting manually to LinkedIn.
+
+---
+
 ## Rate Limit Handling
 
 This section reasons in terms of the normalized error categories defined in **LinkedIn Provider** above — see that section for how each category maps to a concrete signal (HTTP status vs. exit code) per provider.
@@ -525,7 +557,7 @@ Both checks must pass.
 ## State File Contracts
 
 - **`seen.json`**: append-only. Never remove a URL once written — not by any pipeline step and not by `/pipeline-maintenance`. A URL added here means "this person has been discovered and will never be re-proposed." Archiving a lead never touches `seen.json`; dedupe survives archiving by design.
-- **`leads.json`**: keyed by normalized URL. Each pipeline step only writes to its own fields. Do not overwrite fields owned by other steps. **One shared exception:** the profile fields (`name`, `headline`, `location`, `industry`, `current_title`, `current_company`) are enrichment-owned and may be written by Step 3 or the Step 6a approval fetch — freshest fetch wins. `leads.json` never contains `linkedin_raw`; raw payloads live in `state/raw/`. `/pipeline-maintenance` may *move* terminal leads to `state/archive/leads-archive.json`. **Invite Recovery fields**, owned by `/recover-stale-invites` and `/send-recovery-inmail`: `inmail_subject_draft`, `inmail_body_draft`, `inmail_sent_at`; two additional `status` values, `"inmail_queued"` and `"inmail_sent"`. Reuses (does not redefine) `withdrawn_at`, `retry_eligible_after`, `withdrawal_note`, `connection_note`, `source`, `approval_decision`, `approval_decided_at`.
+- **`leads.json`**: keyed by normalized URL. Each pipeline step only writes to its own fields. Do not overwrite fields owned by other steps. **One shared exception:** the profile fields (`name`, `headline`, `location`, `industry`, `current_title`, `current_company`) are enrichment-owned and may be written by Step 3 or the Step 6a approval fetch — freshest fetch wins. `leads.json` never contains `linkedin_raw`; raw payloads live in `state/raw/`. `/pipeline-maintenance` may *move* terminal leads to `state/archive/leads-archive.json`. **Invite Recovery fields**, owned by `/recover-stale-invites` and `/send-recovery-inmail`: `inmail_subject_draft`, `inmail_body_draft`, `inmail_sent_at`; two additional `status` values, `"inmail_queued"` and `"inmail_sent"`. Reuses (does not redefine) `withdrawn_at`, `retry_eligible_after`, `withdrawal_note`, `connection_note`, `source`, `approval_decision`, `approval_decided_at`. **Connection Warm-Up fields**, owned by `/connection-warm-up`: `warm_up_at` (last warm-up timestamp, gates the skip window), `warm_up_actions` (append-only array of `{ action, post_url?, at }` — `reaction` / `comment` / `no_posts` / `no_original_posts`). Never changes `status`.
 - **`state/imports/`**: gitignored CSV drop zone for `/recover-stale-invites`. Optional — an empty directory means that run falls back to the live provider instead. `state/imports/processed/` holds CSVs whose every row is fully resolved (moved, never deleted, same convention as `/pipeline-maintenance`'s archiving elsewhere); a CSV with unresolved rows stays in `state/imports/` for the next run.
 - **`pending_approvals/`**: one timestamped file is created per run — never deleted, and the file itself is never merged into another file. `/pipeline-maintenance` may *move* fully-decided files to `pending_approvals/archive/`; nothing else relocates them. In entry-style files (`-hot/-warm/-cold/-connection/-notes-ready/-followup/-warmup-comments/-inmail-ready`) entries are never removed — only decision fields are filled in. Entries older than `approval_timeout_days` with null decisions are expired by Step 6a — it stamps `decision: "rejected"` on them (they remain in the file), so fully-decided files can eventually be archived by `/pipeline-maintenance`.
 
