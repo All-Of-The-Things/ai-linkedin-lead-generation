@@ -884,6 +884,58 @@
       },
       "completed_at": "2026-09-21T16:40:00.000Z",
       "cold_sweep_note": "Swept 85 cold URLs from 2026-09-17-ead6a09f-links.json into cold-registry.json (now 3295 entries) before writing this run's own links file."
+    },
+    {
+      "run_id": "2026-09-21-33e5c2ff",
+      "started_at": "2026-09-21T19:04:55.000Z",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 11,
+      "steps_completed": [0, 1, 2, 4, 5],
+      "counts": {
+        "new_leads": 76,
+        "classified": 76,
+        "hot": 3,
+        "warm": 7,
+        "cold": 66,
+        "surfaced_for_approval": 76
+      },
+      "criteria_used": "agency-netsuite",
+      "provider_used": "connectsafely",
+      "step1_note": "criteria refresh skipped: agency-netsuite.json is hand-crafted and extensively refined via operator feedback -- per established precedent (see every agency-netsuite run since 2026-07-23-572e44d0, including this morning's 2026-09-21-ed13fa33), auto-refresh is deliberately skipped.",
+      "connections_cache_note": "cached_at 2026-09-09 remains ~12 days past the 7-day TTL. Per the operator decision on the two prior runs (get-connections caps at 12/call via the MCP tool, so a true rebuild needs ~150+ calls), kept the existing 1827-URL cache as-is again rather than rebuild.",
+      "cold_sweep_note": "No sweep needed -- every existing *-links.json file's cold array was already empty (verified before writing this run's file); cold-registry.json unchanged at 3295 entries.",
+      "search_cursor": {
+        "batches_run": 4,
+        "max_batches": 4,
+        "hot_floor_shortfall": "3/5 hot after 4 batches -- stopping per CLAUDE.md rather than continuing to batch against a criteria this heavily mined (50+ prior agency-netsuite runs). New hot: Dani Sandler (VP Professional Services, ScaleNorth -- NetSuite Solution Provider, US), Felipe Porras (Director of Sales Ops, Oracle NetSuite 2025 Emerging Alliance Partner Of The Year, US), Ross Goolsby (Principal at Bridgepoint Consulting, US). Seven warm, mostly Founder/CEO or Principal-level contacts at genuine NetSuite shops sitting outside the explicit target_locations list (India: Arctic Turns, ND Stack; Mexico) or in ambiguous ISV/ICs roles (SuiteAdvanced, Bridgepoint principal consultants).",
+        "batch1_queries": [
+          "keywords=\"NetSuite alliance partner\" title=\"VP of Professional Services\"",
+          "keywords=\"NetSuite Solution Provider\" title=\"Director of Professional Services\"",
+          "keywords=\"NetSuite alliance partner\" title=\"Practice Lead\""
+        ],
+        "batch1_note": "32 fetched, 8 new -- heavy overlap with prior sessions (24 of 32 already known). 1 hot: Dani Sandler/ScaleNorth. Rest cold (off-platform Coveo/Adobe/Dynamics, or no domain signal).",
+        "batch2_queries": [
+          "company=\"ScaleNorth\" (no title filter)",
+          "keywords=\"NetSuite alliance partner\" title=\"Vice President\"",
+          "keywords=\"Oracle NetSuite Solution Provider\" title=\"Chief Executive Officer\""
+        ],
+        "batch2_note": "75 fetched, 42 new -- ScaleNorth company anchor surfaced mostly offshore Philippines-based functional/technical consultants and accountants (classified cold per established offshore-IC judgment), except Dean Carazza (Director of Sales, US -- warm). VP title query mostly Oracle NetSuite vendor staff and recruiting-firm (Tenth Revolution Group) VPs -- anti-pattern/excluded-employer, all cold. CEO query surfaced several genuine Founder/CEO NetSuite-partner contacts outside target_locations (Arctic Turns/India, Armando Delgadillo/Mexico) plus SuiteAdvanced (NetSuite tooling ISV, US) -- all scored warm given location or business-model ambiguity rather than hot.",
+        "batch3_queries": [
+          "company=\"Bridgepoint Consulting\" (no title filter)",
+          "keywords=\"NetSuite alliance partner\" title=\"Managing Director\" start=50",
+          "keywords=\"Oracle NetSuite Alliance Partner\" title=\"Founder\""
+        ],
+        "batch3_note": "74 fetched, 18 new -- most of the strongest Bridgepoint Consulting principals/execs (Jeff Hiddemen, Eric Downs, Ross Stevens) and Founder-query hits (Diego Porro/Hood River, Zia Ali Butt/Elim Solutions, Jermaine Jackson/Zanovoy) were already known from prior sessions, confirming continued heavy mining. New: Ross Goolsby (Principal at Bridgepoint Consulting, US -- hot), Himani Sethi and David Conrad (Bridgepoint principal/managing consultants, US/CA -- warm). Managing Director deep-pagination (start=50) surfaced no new hot/warm -- mostly unrelated-industry MDs.",
+        "batch4_queries": [
+          "keywords=\"NetSuite Solution Provider\" title=\"Partner\"",
+          "keywords=\"SuiteCommerce\" title=\"CEO\"",
+          "keywords=\"NetSuite alliance partner\" title=\"Director of Operations\""
+        ],
+        "batch4_note": "39 fetched, 8 new -- both queries' strongest hits (Matt Kraemer/SixLakes, Derek Hitchman, Reuben Cook/SQUIRE, Joaquin Varela/UnlockCommerce, Jacob Terneus/Anchor Group, Diego Terra) were already known. New: Felipe Porras (Director of Sales Ops, Oracle NetSuite 2025 Emerging Alliance Partner Of The Year, Denver -- hot), Divyesh Raj (Founder & Director, ND Stack, India -- warm, SuiteScript dev shop outside target_locations). Rest cold (offshore ICs, ambiguous independent consultants, or no clear agency affiliation)."
+      },
+      "completed_at": "2026-09-21T19:35:00.000Z",
+      "notes": "50th+ agency-netsuite search run (exact count untracked past archive rotation). Wrote state/pending_approvals/2026-09-21-33e5c2ff-links.json (hot:3 warm:7 cold:66). Hot floor (5) not met after all 4 allowed batches -- 3/5, logged honestly per CLAUDE.md rather than looping further against a criteria this thoroughly mined across 50+ prior runs. This is the second agency-netsuite run today (after 2026-09-21-ed13fa33, which also fell short at 1/5) -- both runs point to the same conclusion: the current agency-netsuite reference_companies/search_terms combination is substantially exhausted for fresh exec-level contacts; consider an early criteria refresh or broadening target_locations/target_roles further on the next run."
     }
   ],
   "retries": [
