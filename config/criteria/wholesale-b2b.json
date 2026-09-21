@@ -1,0 +1,123 @@
+{
+  "name": "wholesale-b2b",
+  "label": "Wholesale & B2B Business Leaders",
+  "description": "Targets VP/Director/C-suite leaders at wholesale, distribution, and B2B businesses who could buy NetSuite ERP, eCommerce (SuiteCommerce, Shopify), and integration services. Secondary criteria — useful for expanding AOTT's client base beyond agency partners and retail brands.",
+  "generated_at": "2026-09-15T00:00:00.000Z",
+  "generated_from_connections": 0,
+  "_wholesale_b2b_guidance": "Score wholesale/distribution/B2B leads on two axes — platform signal and seniority — rather than a single confirmation gate:\n\n**Platform confirmed (strong, current):** Company explicitly uses NetSuite/SuiteCommerce, or Shopify Plus for B2B/wholesale ordering — signal in their current role, company About, or tech stack ('we run on NetSuite', 'migrated our B2B portal to SuiteCommerce'). Any qualifying title becomes eligible for warm-to-hot. Past-role mentions do NOT count.\n\n**Platform implied (B2B-native or modernizing, no explicit mention):** Wholesale/distribution/manufacturing company with evident digital-transformation or B2B eCommerce signals: customer/dealer portals, EDI or API integration projects, ERP modernization, multi-warehouse or multi-currency operations. Only qualifies at C-suite or VP level (CEO, COO, CFO, CTO, CIO, VP Operations, VP eCommerce) — score as low warm (45-55).\n\n**No signal:** Generic wholesale/distribution company with no digital or ERP signal, or below Director-level seniority — classify cold regardless of title.",
+  "target_roles": [
+    "VP of Operations",
+    "VP of eCommerce",
+    "Vice President eCommerce",
+    "Director of eCommerce",
+    "Director of B2B eCommerce",
+    "Head of eCommerce",
+    "Head of Digital Commerce",
+    "VP Digital Commerce",
+    "VP of IT",
+    "Director of IT",
+    "VP Supply Chain",
+    "VP of Distribution",
+    "Head of Digital Transformation",
+    "Chief Operating Officer",
+    "Chief Information Officer",
+    "Chief Technology Officer",
+    "Chief Financial Officer",
+    "CIO",
+    "CTO",
+    "CFO",
+    "COO"
+  ],
+  "target_industries": [
+    "Wholesale",
+    "Distribution",
+    "Manufacturing",
+    "Industrial Automation",
+    "Import and Export",
+    "Building Materials",
+    "Machinery",
+    "Chemicals",
+    "Consumer Electronics",
+    "Logistics and Supply Chain"
+  ],
+  "target_locations": [
+    "United States",
+    "Canada",
+    "United Kingdom",
+    "Australia"
+  ],
+  "seniority_signals": [
+    "VP",
+    "Vice President",
+    "SVP",
+    "Senior Vice President",
+    "Head of",
+    "Director",
+    "Chief",
+    "CTO",
+    "CIO",
+    "CFO",
+    "COO",
+    "CEO",
+    "Founder",
+    "President",
+    "Managing Director",
+    "Global"
+  ],
+  "_excluded_employers_note": "This criteria targets people at wholesale, distribution, and B2B businesses. Employees of ERP/eCommerce platform vendors themselves (Shopify, Oracle/NetSuite, Salesforce, SAP, Adobe, Microsoft, BigCommerce, Infor, Epicor, Acumatica) are not wholesale/B2B businesses and not leads — classify cold, cap score at 25, regardless of seniority. Detect from the headline when company fields are null: 'at Shopify', '@ NetSuite', 'at Infor'.",
+  "excluded_employers": [
+    "Shopify",
+    "Oracle",
+    "NetSuite",
+    "Salesforce",
+    "SAP",
+    "Adobe",
+    "Microsoft",
+    "BigCommerce",
+    "Infor",
+    "Epicor",
+    "Acumatica"
+  ],
+  "_excluded_companies_note": "Operator feedback 2026-06-09 (SuiteDB), 2026-07-27 (Seibert Consulting Group), 2026-08-06 (AnagramDev), and 2026-08-06 (FullClarity - no fit for AOTT despite being a genuine NetSuite partner), and 2026-09-10 (Techfino - same 'no fit despite scoring well' pattern, also removed from any reference_companies list it appeared in): absolutely no interest in engaging with these agencies under any circumstances - never surface anyone from these firms in any tier, in any criteria. Unlike excluded_employers (surfaced cold), these are dropped entirely at Step 2 - skip the result AND write it to seen.json so it never resurfaces. Detect from headline naming the firm; Seibert Consulting Group's staff may abbreviate as 'SCG' in headlines (e.g. 'at SCG') - treat that alongside any Seibert/NetSuite/Shopify Plus context as the same exclusion. Operator feedback 2026-08-12: N2Lab is now an active AOTT client relationship - exclude from all criteria and never surface as a new lead, regardless of fit.",
+  "excluded_companies": [
+    "Tavano Team",
+    "SuiteDB",
+    "Seibert Consulting Group",
+    "AnagramDev",
+    "FullClarity",
+    "N2Lab",
+    "Foretopia",
+    "Techfino"
+  ],
+  "anti_patterns": [
+    "Recruiter",
+    "Recruitment",
+    "Staffing",
+    "Student",
+    "Intern",
+    "QA Analyst",
+    "Junior",
+    "Demand Generation",
+    "Bachelor of Science",
+    "Consultant",
+    "Partner",
+    "Implementation"
+  ],
+  "search_terms": [
+    "VP operations wholesale distribution",
+    "Director eCommerce B2B",
+    "wholesale distribution digital transformation",
+    "B2B commerce director NetSuite"
+  ],
+  "scoring_weights": {
+    "role_match": 0.35,
+    "industry_match": 0.25,
+    "location_match": 0.15,
+    "seniority_match": 0.2,
+    "company_size_match": 0.05
+  },
+  "classification_thresholds": {
+    "hot": 75,
+    "warm": 45
+  }
+}

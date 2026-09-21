@@ -3728,6 +3728,641 @@
       },
       "completed_at": "2026-09-14T14:17:58.619045+00:00",
       "notes": "Severe search-space exhaustion from the prior two agency-partners runs (2026-09-10, 2026-09-11) reversed sharply this run by pivoting off pure role/title rotation onto fresh company anchors surfaced in this criteria file's own refresh notes (Zanovoy, Saberpoint) plus deeper drill-down on Plative (the top reference_company, previously under-mined for its full Client Partner/Director bench). Batch 1 (Zanovoy anchor + 2 untried roles) found 2 hot (Leon Saunders, Blake Dyer \u2014 both senior Partner-titled at Zanovoy) plus a large cluster of offshore Philippines-based NetSuite consultants that classified cold per this criteria's established offshore-IC judgment. Batch 2 (broad Client Partner + Engagement Manager searches, plus a Saberpoint anchor) found 2 more hot (Quinnlan Watson, Anuj Upadhyay \u2014 both senior at Saberpoint, a confirmed NetSuite ERP consultancy) \u2014 floor at 4/5. Batch 3 (Saberpoint exec search + a targeted Plative company-anchor search + Bryant Park Consulting anchor) struck a vein of previously-unmined Plative staff: Miftah Khan (CEO @ Plative) plus 9 more Client Partners/Directors, pushing the run to 14 hot against the 5-hot floor. Stopped after 3 of 4 allowed batches since the floor was massively exceeded \u2014 no need for a 4th. Key lesson for future runs: company-anchored searches against reference_companies (Plative, Esonus, Aztech Digital) and newly-discovered adjacent firms (Zanovoy, Saberpoint, Bryant Park Consulting) outperform pure role/title rotation by a wide margin once the role-rotation well runs dry \u2014 worth defaulting to this pattern earlier in future exhausted runs rather than exhausting all 4 batches on title variations first."
+    },
+    {
+      "run_id": "2026-09-14-d62e61b2",
+      "started_at": "2026-09-14T16:36:03.516Z",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "engine": "standalone-cli",
+      "resume_from_step": 6,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 1,
+        "classified": 1,
+        "hot": 1,
+        "warm": 0,
+        "cold": 0,
+        "surfaced_for_approval": 1
+      },
+      "criteria_used": "netsuite-latam",
+      "provider_used": "connectsafely",
+      "search_cursor": {
+        "batches_run": 4,
+        "max_batches": 4,
+        "batch1_queries": [
+          "NetSuite partner CEO Mexico",
+          "Oracle partner consultora director Colombia",
+          "ERP implementation consultancy director Argentina"
+        ],
+        "next_index": 12,
+        "batch2_queries": [
+          "NetSuite implementador fundador",
+          "Shopify Plus agency Latam",
+          "NetSuite partner CEO Mexico"
+        ],
+        "batch3_queries": [
+          "Oracle partner consultora director Colombia",
+          "ERP implementation consultancy director Argentina",
+          "NetSuite implementador fundador"
+        ],
+        "batch4_queries": [
+          "Shopify Plus agency Latam",
+          "NetSuite partner CEO Mexico",
+          "Oracle partner consultora director Colombia"
+        ],
+        "hot_floor_shortfall": "1/5 hot after 4 batches"
+      },
+      "completed_at": "2026-09-14T16:39:06.417Z",
+      "bug_note": "standalone CLI bug: connectsafely-client.mjs searchPeople() assumed a profileId field that this account's live API response doesn't return, producing url=\".../in/undefined\" for every result. All distinct people across this run's 12 queries collapsed into a single leads.json key, so counts (new_leads=1, hot=1) undercount the true result set. Fixed in lib/connectsafely-client.mjs (derivePersonUrl: prefers profileUrl, skips undeliverable entries instead of writing a broken URL). The one bogus lead (Christian Salas Schroeder / Efficientix) was removed from leads.json and seen.json on 2026-09-14 so a re-run can pick him up correctly."
+    },
+    {
+      "run_id": "2026-09-14-5de1bce8",
+      "started_at": "2026-09-14T18:01:05.278Z",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "engine": "standalone-cli",
+      "resume_from_step": 6,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 94,
+        "classified": 94,
+        "hot": 3,
+        "warm": 4,
+        "cold": 87,
+        "surfaced_for_approval": 94
+      },
+      "criteria_used": "netsuite-latam",
+      "provider_used": "connectsafely",
+      "search_cursor": {
+        "batches_run": 4,
+        "max_batches": 4,
+        "batch1_queries": [
+          "ERP implementation consultancy director Argentina",
+          "NetSuite implementador fundador",
+          "Shopify Plus agency Latam"
+        ],
+        "next_index": 14,
+        "batch2_queries": [
+          "NetSuite partner CEO Mexico",
+          "Oracle partner consultora director Colombia",
+          "ERP implementation consultancy director Argentina"
+        ],
+        "batch3_queries": [
+          "NetSuite implementador fundador",
+          "Shopify Plus agency Latam",
+          "NetSuite partner CEO Mexico"
+        ],
+        "batch4_queries": [
+          "Oracle partner consultora director Colombia",
+          "ERP implementation consultancy director Argentina",
+          "NetSuite implementador fundador"
+        ],
+        "hot_floor_shortfall": "3/5 hot after 4 batches"
+      },
+      "completed_at": "2026-09-14T18:03:36.012Z"
+    },
+    {
+      "run_id": "2026-09-15-31cfbfb4",
+      "started_at": "2026-09-15T18:04:53.254Z",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "engine": "standalone-cli",
+      "resume_from_step": 6,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 7,
+        "classified": 7,
+        "hot": 0,
+        "warm": 0,
+        "cold": 7,
+        "surfaced_for_approval": 7
+      },
+      "criteria_used": "netsuite-latam",
+      "provider_used": "connectsafely",
+      "search_cursor": {
+        "batches_run": 4,
+        "max_batches": 4,
+        "batch1_queries": [
+          "Shopify Plus agency Latam",
+          "NetSuite partner CEO Mexico",
+          "Oracle partner consultora director Colombia"
+        ],
+        "next_index": 16,
+        "batch2_queries": [
+          "ERP implementation consultancy director Argentina",
+          "NetSuite implementador fundador",
+          "Shopify Plus agency Latam"
+        ],
+        "batch3_queries": [
+          "NetSuite partner CEO Mexico",
+          "Oracle partner consultora director Colombia",
+          "ERP implementation consultancy director Argentina"
+        ],
+        "batch4_queries": [
+          "NetSuite implementador fundador",
+          "Shopify Plus agency Latam",
+          "NetSuite partner CEO Mexico"
+        ],
+        "hot_floor_shortfall": "0/5 hot after 4 batches"
+      },
+      "completed_at": "2026-09-15T18:07:50.232Z"
+    },
+    {
+      "run_id": "2026-09-15-9deb3f50",
+      "started_at": "2026-09-15T18:24:24.149Z",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "engine": "standalone-cli",
+      "resume_from_step": 6,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 82,
+        "classified": 82,
+        "hot": 0,
+        "warm": 0,
+        "cold": 82,
+        "surfaced_for_approval": 82
+      },
+      "criteria_used": "wholesale-b2b",
+      "provider_used": "connectsafely",
+      "search_cursor": {
+        "batches_run": 4,
+        "max_batches": 4,
+        "batch1_queries": [
+          "VP operations wholesale distribution",
+          "Director eCommerce B2B",
+          "wholesale distribution digital transformation"
+        ],
+        "next_index": 12,
+        "batch2_queries": [
+          "B2B commerce director NetSuite",
+          "VP operations wholesale distribution",
+          "Director eCommerce B2B"
+        ],
+        "batch3_queries": [
+          "wholesale distribution digital transformation",
+          "B2B commerce director NetSuite",
+          "VP operations wholesale distribution"
+        ],
+        "batch4_queries": [
+          "Director eCommerce B2B",
+          "wholesale distribution digital transformation",
+          "B2B commerce director NetSuite"
+        ],
+        "hot_floor_shortfall": "0/5 hot after 4 batches"
+      },
+      "completed_at": "2026-09-15T18:27:16.326Z"
+    },
+    {
+      "run_id": "2026-09-15-d2ced581",
+      "started_at": "2026-09-15T18:31:02.520Z",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "engine": "standalone-cli",
+      "resume_from_step": 6,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 1,
+        "classified": 1,
+        "hot": 0,
+        "warm": 0,
+        "cold": 1,
+        "surfaced_for_approval": 1
+      },
+      "criteria_used": "netsuite-latam",
+      "provider_used": "connectsafely",
+      "search_cursor": {
+        "batches_run": 4,
+        "max_batches": 4,
+        "batch1_queries": [
+          "ERP implementation consultancy director Argentina",
+          "NetSuite implementador fundador",
+          "Shopify Plus agency Latam"
+        ],
+        "next_index": 14,
+        "batch2_queries": [
+          "NetSuite partner CEO Mexico",
+          "Oracle partner consultora director Colombia",
+          "ERP implementation consultancy director Argentina"
+        ],
+        "batch3_queries": [
+          "NetSuite implementador fundador",
+          "Shopify Plus agency Latam",
+          "NetSuite partner CEO Mexico"
+        ],
+        "batch4_queries": [
+          "Oracle partner consultora director Colombia",
+          "ERP implementation consultancy director Argentina",
+          "NetSuite implementador fundador"
+        ],
+        "hot_floor_shortfall": "0/5 hot after 4 batches"
+      },
+      "completed_at": "2026-09-15T18:33:46.363Z"
+    },
+    {
+      "run_id": "2026-09-15-66ec78d8",
+      "started_at": "2026-09-15T18:57:12.646Z",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "engine": "standalone-cli",
+      "resume_from_step": 6,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 0,
+        "classified": 0,
+        "hot": 0,
+        "warm": 0,
+        "cold": 0,
+        "surfaced_for_approval": 0
+      },
+      "criteria_used": "netsuite-latam",
+      "provider_used": "connectsafely",
+      "search_cursor": {
+        "batches_run": 4,
+        "max_batches": 4,
+        "batch1_queries": [
+          "Shopify Plus agency Latam",
+          "NetSuite partner CEO Mexico",
+          "Oracle partner consultora director Colombia"
+        ],
+        "next_index": 16,
+        "batch2_queries": [
+          "ERP implementation consultancy director Argentina",
+          "NetSuite implementador fundador",
+          "Shopify Plus agency Latam"
+        ],
+        "batch3_queries": [
+          "NetSuite partner CEO Mexico",
+          "Oracle partner consultora director Colombia",
+          "ERP implementation consultancy director Argentina"
+        ],
+        "batch4_queries": [
+          "NetSuite implementador fundador",
+          "Shopify Plus agency Latam",
+          "NetSuite partner CEO Mexico"
+        ],
+        "hot_floor_shortfall": "0/5 hot after 4 batches"
+      },
+      "completed_at": "2026-09-15T18:59:40.514Z"
+    },
+    {
+      "run_id": "2026-09-15-6f4e1e26",
+      "started_at": "2026-09-15T19:03:41.000Z",
+      "status": "completed",
+      "phase": "refresh-criteria",
+      "criteria_used": "agency-partners",
+      "provider_used": "connectsafely",
+      "completed_at": "2026-09-15T19:04:24.000Z"
+    },
+    {
+      "run_id": "2026-09-15-869b10fc",
+      "started_at": "2026-09-15T19:05:20.075Z",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "engine": "standalone-cli",
+      "resume_from_step": 6,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 0,
+        "classified": 0,
+        "hot": 0,
+        "warm": 0,
+        "cold": 0,
+        "surfaced_for_approval": 0
+      },
+      "criteria_used": "netsuite-latam",
+      "provider_used": "connectsafely",
+      "search_cursor": {
+        "batches_run": 4,
+        "max_batches": 4,
+        "batch1_queries": [
+          "Oracle partner consultora director Colombia",
+          "ERP implementation consultancy director Argentina",
+          "NetSuite implementador fundador"
+        ],
+        "next_index": 13,
+        "batch2_queries": [
+          "Shopify Plus agency Latam",
+          "NetSuite partner CEO Mexico",
+          "Oracle partner consultora director Colombia"
+        ],
+        "batch3_queries": [
+          "ERP implementation consultancy director Argentina",
+          "NetSuite implementador fundador",
+          "Shopify Plus agency Latam"
+        ],
+        "batch4_queries": [
+          "NetSuite partner CEO Mexico",
+          "Oracle partner consultora director Colombia",
+          "ERP implementation consultancy director Argentina"
+        ],
+        "hot_floor_shortfall": "0/5 hot after 4 batches"
+      },
+      "completed_at": "2026-09-15T19:07:42.930Z"
+    },
+    {
+      "run_id": "2026-09-15-9e662193",
+      "started_at": "2026-09-15T19:08:52.000Z",
+      "status": "completed",
+      "phase": "refresh-criteria",
+      "criteria_used": "netsuite-latam",
+      "provider_used": "connectsafely",
+      "completed_at": "2026-09-15T19:08:52.000Z"
+    },
+    {
+      "run_id": "2026-09-15-9125e9a3",
+      "started_at": "2026-09-15T19:09:30.325Z",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "engine": "standalone-cli",
+      "resume_from_step": 6,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 0,
+        "classified": 0,
+        "hot": 0,
+        "warm": 0,
+        "cold": 0,
+        "surfaced_for_approval": 0
+      },
+      "criteria_used": "netsuite-latam",
+      "provider_used": "connectsafely",
+      "search_cursor": {
+        "batches_run": 4,
+        "max_batches": 4,
+        "batch1_queries": [
+          "NetSuite implementador fundador",
+          "Shopify Plus agency Latam",
+          "NetSuite partner CEO Mexico"
+        ],
+        "next_index": 15,
+        "batch2_queries": [
+          "Oracle partner consultora director Colombia",
+          "ERP implementation consultancy director Argentina",
+          "NetSuite implementador fundador"
+        ],
+        "batch3_queries": [
+          "Shopify Plus agency Latam",
+          "NetSuite partner CEO Mexico",
+          "Oracle partner consultora director Colombia"
+        ],
+        "batch4_queries": [
+          "ERP implementation consultancy director Argentina",
+          "NetSuite implementador fundador",
+          "Shopify Plus agency Latam"
+        ],
+        "hot_floor_shortfall": "0/5 hot after 4 batches"
+      },
+      "completed_at": "2026-09-15T19:12:55.482Z"
+    },
+    {
+      "run_id": "2026-09-15-ec2966c3",
+      "started_at": "2026-09-15T19:31:58.000Z",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 6,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 201,
+        "classified": 201,
+        "hot": 0,
+        "warm": 0,
+        "cold": 201,
+        "surfaced_for_approval": 201
+      },
+      "criteria_used": "netsuite-latam",
+      "provider_used": "connectsafely",
+      "search_cursor": {
+        "batches_run": 4,
+        "max_batches": 4,
+        "batch1_queries": [
+          "NetSuite partner CEO Mexico",
+          "Oracle partner consultora director Colombia",
+          "ERP implementation consultancy director Argentina"
+        ],
+        "batch1_note": "start=0 for all three \u2014 all 75 results already in seen.json/connections_cache (identical terms just run by the standalone-cli engine moments earlier); 0 new leads",
+        "batch2_queries": [
+          "NetSuite implementador fundador",
+          "Shopify Plus agency Latam",
+          "NetSuite partner CEO Mexico"
+        ],
+        "batch2_note": "start=25 (deeper page, since start=0 was already exhausted for every term in this 5-term rotation) \u2014 63 new leads, all cold",
+        "batch3_queries": [
+          "Oracle partner consultora director Colombia",
+          "ERP implementation consultancy director Argentina",
+          "NetSuite partner CEO Mexico"
+        ],
+        "batch3_note": "start=50/25/50 respectively \u2014 67 new leads, all cold",
+        "batch4_queries": [
+          "Oracle partner consultora director Colombia",
+          "ERP implementation consultancy director Argentina",
+          "Shopify Plus agency Latam"
+        ],
+        "batch4_note": "start=25/50/50 respectively \u2014 71 new leads, all cold",
+        "next_index": 15,
+        "hot_floor_shortfall": "0/5 hot after 4 batches \u2014 201 leads surfaced across 4 batches (deeper-paginated since page-1 results for every search_term were already exhausted by a standalone-cli run of this same criteria moments before this run started), none passed the domain gate at hot/warm: overwhelmingly current Oracle/Salesforce/SAP employees (excluded_employers), generic ERP/Shopify-only headlines without a NetSuite/Oracle-partner qualifier, and DTC end-client roles."
+      },
+      "completed_at": "2026-09-15T20:17:00.000Z"
+    },
+    {
+      "run_id": "2026-09-16-b5b7aa2f",
+      "started_at": "2026-09-16T17:18:34.000Z",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 11,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 67,
+        "classified": 67,
+        "hot": 5,
+        "warm": 0,
+        "cold": 62,
+        "surfaced_for_approval": 67
+      },
+      "criteria_used": "agency-netsuite",
+      "provider_used": "connectsafely",
+      "step1_note": "criteria refresh skipped: agency-netsuite.json is hand-crafted and extensively refined via operator feedback (excluded_employers, SAP anti-pattern, excluded_companies, company-anchored query style, firm-size gating) -- per established precedent (see run 2026-07-23-572e44d0 and every agency-netsuite run since), auto-refresh is deliberately skipped to avoid the generic criteria-extractor overwriting curated fields it does not preserve (excluded_companies, company_type_signals, reference_companies, notes).",
+      "connections_cache_note": "cached_at 2026-09-09 was ~2 hours past the 7-day TTL. Per operator decision this run (get-connections caps at ~10-12/call, so a true 3-call or full rebuild is either inaccurate or ~150+ calls), kept the existing 1827-URL cache as-is for this run rather than rebuild.",
+      "search_cursor": {
+        "batches_run": 4,
+        "max_batches": 4,
+        "technique": "Company-anchored keywords=\"NetSuite alliance partner\"/\"Oracle NetSuite reseller\"/\"SuiteCommerce agency\"/\"NetSuite implementation partner\" (no location filter) rotated across untried title filters (VP of Partnerships, Practice Director, General Manager, CEO/Founder/Managing Director at start=25 deep-page, VP of Delivery, Head of Delivery, Director of Partnerships, then CEO/Founder/Managing Director on fresh keyword phrasing).",
+        "batch1_queries": [
+          "NetSuite alliance partner title=VP of Partnerships",
+          "NetSuite alliance partner title=Practice Director",
+          "NetSuite solution provider title=General Manager"
+        ],
+        "batch1_note": "56 unique, 20 new -- mostly generic-title false positives (GM/Director roles with no NetSuite context); only Terry Gibson/Rob Kuderka (NetSuite employees, excluded_employer) had real platform signal.",
+        "batch2_queries": [
+          "NetSuite alliance partner title=CEO start=25",
+          "NetSuite alliance partner title=Founder start=25",
+          "NetSuite alliance partner title=Managing Director start=25"
+        ],
+        "batch2_note": "73 unique, only 12 new -- confirms this exact combo (proven historically best) is heavily exhausted at both start=0 and start=25 after 48 prior runs; nearly every strong CEO/Founder NetSuite-partner candidate (Vish Annam/Hathority, Mark Rhyman/ERP Success Partners, Ronn Breaux/Top Step, Cory Anderson/Stratos ERP, George Panaritis/Vursor, Subburaj Paulraj/Nija, Piers Reid+Dean Turner/SystemsAccountants, Warwick Smith/Steltix, Joerg Schaefer/JPS-iQ) already known from prior sessions.",
+        "batch3_queries": [
+          "NetSuite alliance partner title=VP of Delivery",
+          "NetSuite alliance partner title=Head of Delivery",
+          "NetSuite alliance partner title=Director of Partnerships"
+        ],
+        "batch3_note": "47 unique, 27 new -- Delivery/Partnerships titles pulled mostly unrelated-industry partnerships execs (SaaS, logistics, insurance) with only incidental NetSuite keyword matches; Patricia Barkolova (Director @ Beyond Cloud Consulting, same firm as Mustafa Ahmed CEO from batch2) is the one clean secondary contact.",
+        "batch4_queries": [
+          "Oracle NetSuite reseller title=CEO",
+          "SuiteCommerce agency title=Founder",
+          "NetSuite implementation partner title=Managing Director"
+        ],
+        "batch4_note": "28 unique (2 hard-excluded: Fabian De Leon/CEO of SuiteDB -- excluded_companies hard block, added to seen.json; Martin Martinez -- the operator himself, skipped), 8 new. Surfaced two strong hits not yet in leads.json: Karl Threadgold (Founder, Threadgold Consulting, Oracle NetSuite ERP Partner, UK) and James Heselden (Managing Director, Web Control, NetSuite Alliance Growth Partner of the Year 2024/2025) -- both already existing leads from prior runs per exclusion-set match, so not newly added; net-new adds this batch were mostly mid-market accounting-firm MDs (Eide Bailly, Accordion, Sikich-adjacent) of uncertain fit.",
+        "next_index": null
+      },
+      "completed_at": "2026-09-16T18:45:00.000Z",
+      "notes": "Cold Sweep processed 2026-09-15-ec2966c3-links.json (201 cold URLs -> cold-registry.json, now 3150 total). Wrote state/pending_approvals/2026-09-16-b5b7aa2f-links.json (hot:5 warm:0 cold:62). Hot floor (5) met in a single classification pass across 4 search batches -- no shortfall."
+    },
+    {
+      "run_id": "2026-09-17-ead6a09f",
+      "started_at": "2026-09-17T09:05:00.000Z",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 11,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 96,
+        "classified": 96,
+        "hot": 7,
+        "warm": 4,
+        "cold": 85,
+        "surfaced_for_approval": 96
+      },
+      "pre_run_reconcile_note": "Operator sent 7 connection requests manually via LinkedIn UI for leads approved from run 2026-09-16-b5b7aa2f (5 hot: patricia-barkol, edwinvankersbergen, shayleeolson, rezamahdlou, meyercgrp; 2 rescued cold: servicetradeandrew, sara-adkins-0a0150134). Marked all 7 status=request_sent, send_channel=manual, connection_requested_at=2026-09-17T09:00:00.000Z in leads.json, and removed them from approved-queue.json (outcome now durably captured).",
+      "criteria_used": "agency-netsuite",
+      "provider_used": "connectsafely",
+      "step1_note": "criteria refresh skipped: agency-netsuite.json is hand-crafted and extensively refined via operator feedback -- per established precedent (see run 2026-07-23-572e44d0 and every agency-netsuite run since, including 2026-09-16-b5b7aa2f), auto-refresh is deliberately skipped.",
+      "connections_cache_note": "cached_at 2026-09-09 is now ~8.1 days past the 7-day TTL (unchanged constraint from run 2026-09-16-b5b7aa2f: get-connections caps at ~10-12/call, so a full rebuild needs ~150+ calls). Per the operator decision on the prior run, kept the existing 1827-URL cache as-is again rather than rebuild.",
+      "search_cursor": {
+        "batches_run": 3,
+        "max_batches": 4,
+        "batch1_queries": [
+          "company=Beyond Cloud Consulting (no title filter)",
+          "keywords=\"NetSuite Alliance Partner of the Year\" (no title filter)",
+          "keywords=\"NetSuite alliance partner\" title=VP of Sales"
+        ],
+        "batch1_note": "71 unique, 38 new (mostly junior NetSuite consultants/developers and unrelated-vendor VP of Sales titles) -- 1 hot (Candice Carden-Chambers/Mythics), 1 warm (Jaime Simpson/Beyond Cloud AE). Below the 5-hot floor after batch 1.",
+        "batch2_queries": [
+          "company=Mythics (no title filter)",
+          "company=Myers-Holum (no title filter)",
+          "keywords=\"NetSuite alliance partner\" title=COO"
+        ],
+        "batch2_note": "43 unique, 34 new -- 1 hot (Paul Seifert/CEO Mythics), 3 warm (Vikas Kohli, Michael Bottone, Raghavendra Kulkarni, all Myers-Holum ICs). Running total: 2 hot, 4 warm after 2 batches -- still below the 5-hot floor.",
+        "batch3_queries": [
+          "company=Bridgepoint Consulting (no title filter)",
+          "keywords=\"NetSuite implementation partner\" title=President",
+          "keywords=\"Oracle NetSuite Solution Provider\" title=CEO"
+        ],
+        "batch3_note": "63 unique, only 24 new -- most of the strongest-looking company-anchored/CEO hits (Palak Choksi, Gayle Nelson, Dean Mitchell, Ivan Zannese, Jismi A I, Carlos Zumaeta, Milind Guggilla, Gustavo Mora, etc.) were already known from prior sessions, confirming this exact search space is heavily mined. New: Rob Harrison + Jeff Hiddemen (Bridgepoint MD/Principal), Patrick Skinner, Sudheer Reddy Allampati, Steve Prongay, Eric Downs.",
+        "hot_floor_met": "7/5 hot after 3 batches -- floor met, 4th batch not needed"
+      },
+      "completed_at": "2026-09-17T10:45:00.000Z",
+      "notes": "Cold Sweep processed 2026-09-16-b5b7aa2f-links.json (60 cold URLs -> cold-registry.json, now 3210 total). Wrote state/pending_approvals/2026-09-17-ead6a09f-links.json (hot:7 warm:4 cold:85). Hot floor (5) exceeded after 3 batches -- 4th batch skipped. Best-performing technique this run: company-anchored searches on known NetSuite partner firms (Beyond Cloud Consulting, Mythics, Myers-Holum, Bridgepoint Consulting) each surfaced exactly one hot exec (CEO/MD/Principal) plus a long tail of already-known or junior-IC staff -- confirms the partner-ecosystem is now thin enough that fresh hot leads mostly come from finding the top exec at a firm already identified via some other lead, not from broad title/keyword search."
+    },
+    {
+      "run_id": "2026-09-21-ed13fa33",
+      "started_at": "2026-09-21T15:51:10.000Z",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 11,
+      "steps_completed": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 39,
+        "classified": 39,
+        "hot": 1,
+        "warm": 0,
+        "cold": 38,
+        "surfaced_for_approval": 39
+      },
+      "criteria_used": "agency-netsuite",
+      "provider_used": "connectsafely",
+      "step1_note": "criteria refresh skipped: agency-netsuite.json is hand-crafted and extensively refined via operator feedback -- per established precedent (see every agency-netsuite run since 2026-07-23-572e44d0), auto-refresh is deliberately skipped.",
+      "search_cursor": {
+        "batches_run": 3,
+        "max_batches": 4,
+        "batch1_queries": [
+          "company=SWK Technologies (no title filter) -- turned out to be a Sage/Acumatica reseller, not NetSuite; no platform signal",
+          "company=ArcherPoint (no title filter) -- turned out to be a Microsoft Business Central reseller, not NetSuite; no platform signal",
+          "keywords=\"NetSuite alliance partner\" title=President",
+          "keywords=\"NetSuite alliance partner\" title=Managing Partner",
+          "keywords=\"NetSuite alliance partner\" title=Co-Founder",
+          "keywords=\"NetSuite alliance partner\" title=General Manager"
+        ],
+        "batch1_note": "109 fetched across 6 queries, only 22 new (87 already known -- confirms this keyword+title space is heavily mined, consistent with prior run notes). First 2 company anchors (SWK, ArcherPoint) were bad picks -- off-platform VARs, folded in as exploratory. President/Managing Partner/Co-Founder title queries mostly surfaced people already seen from prior sessions. General Manager title broke new ground: Henry Sack (GM, NetSuite ANZ Alliance Partner, Melbourne AU), Pablo Lopez (GM, BeApps NetSuite Alliance Partner, Argentina -- outside target_locations), Valeria A. (SVP, NetSuite Alliance Partner, Miami FL) look like strong candidates pending classification.",
+        "batch2_queries": [
+          "keywords=\"NetSuite alliance partner\" title=Managing Partner start=25 (pagination)",
+          "keywords=\"NetSuite Solution Provider\" title=Managing Director",
+          "keywords=\"NetSuite alliance partner\" title=CTO"
+        ],
+        "batch2_note": "75 fetched, only 17 new (58 already known -- most of the strongest hits from the 'NetSuite Solution Provider'+Managing Director query, e.g. Georg Walther/Berlin, Karl Threadgold/UK, Joe Rovirosa/ScaleNorth, Ray Ryan/Noledge Ireland, Sarthak Varma/SoftArt, were already discovered in prior runs). Remaining new candidates were uniformly weak: generic 'Managing Partner' with no platform signal, off-platform (Oracle EBS, Salesforce, generic finance/IT advisory), or too-junior (NetSuite ISV developer). No hot or warm from this batch.",
+        "hot_floor_shortfall": "1/5 hot after 3 batches (8 total search-people calls, 39 new leads classified) -- stopping rather than continuing to chase a floor this heavily-mined criteria (50+ prior agency-netsuite runs) can't currently support. Only new hot: Kurt Vanclooster (Managing Partner, Oracle Fusion/NetSuite/EBS consulting, Belgium). Two exploratory company anchors (SWK Technologies, ArcherPoint) turned out to be off-platform (Sage/Acumatica and Microsoft Business Central respectively, not NetSuite) and yielded nothing. Several previously-strong keyword+title combos ('NetSuite alliance partner' + Managing Partner/Co-Founder/President; 'NetSuite Solution Provider' + Managing Director) surfaced mostly already-known contacts, confirming the space remains thoroughly mined."
+      },
+      "completed_at": "2026-09-21T16:40:00.000Z",
+      "cold_sweep_note": "Swept 85 cold URLs from 2026-09-17-ead6a09f-links.json into cold-registry.json (now 3295 entries) before writing this run's own links file."
     }
   ],
   "retries": [
