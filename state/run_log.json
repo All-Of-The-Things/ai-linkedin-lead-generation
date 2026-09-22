@@ -936,6 +936,58 @@
       },
       "completed_at": "2026-09-21T19:35:00.000Z",
       "notes": "50th+ agency-netsuite search run (exact count untracked past archive rotation). Wrote state/pending_approvals/2026-09-21-33e5c2ff-links.json (hot:3 warm:7 cold:66). Hot floor (5) not met after all 4 allowed batches -- 3/5, logged honestly per CLAUDE.md rather than looping further against a criteria this thoroughly mined across 50+ prior runs. This is the second agency-netsuite run today (after 2026-09-21-ed13fa33, which also fell short at 1/5) -- both runs point to the same conclusion: the current agency-netsuite reference_companies/search_terms combination is substantially exhausted for fresh exec-level contacts; consider an early criteria refresh or broadening target_locations/target_roles further on the next run."
+    },
+    {
+      "run_id": "2026-09-22-60ec615c",
+      "started_at": "2026-09-22T17:37:35.000Z",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 11,
+      "steps_completed": [0, 1, 2, 4, 5],
+      "counts": {
+        "new_leads": 111,
+        "classified": 111,
+        "hot": 3,
+        "warm": 2,
+        "cold": 106,
+        "surfaced_for_approval": 111
+      },
+      "criteria_used": "agency-netsuite",
+      "provider_used": "connectsafely",
+      "step1_note": "criteria refresh skipped: agency-netsuite.json is hand-crafted and extensively refined via operator feedback -- per established precedent, auto-refresh is deliberately skipped.",
+      "connections_cache_note": "cached_at 2026-09-09 remains stale (~13 days past 7-day TTL). Kept the existing 1827-URL cache as-is again -- same rebuild-cost reasoning as the prior two runs (get-connections MCP tool caps at 12/call).",
+      "cold_sweep_note": "Swept 66 cold URLs from 2026-09-21-33e5c2ff-links.json into cold-registry.json (66 new, now 3399 total) before writing this run's own links file. No other links file had a non-empty cold array.",
+      "search_cursor": {
+        "batches_run": 4,
+        "max_batches": 4,
+        "hot_floor_shortfall": "3/5 hot after 4 batches -- stopping per CLAUDE.md; this criteria remains heavily mined (50+ prior runs, third run in two days). New hot: Sheldon Ju (Partner @ SixLakes Consulting, Canada), Blair Janis (Director at Squire Technology, Utah US -- same NetSuite/integrations firm as previously-known Reuben Cook/SQUIRE), Grant Ludema (Partner at Crowe, Chicago US). Two warm: Glenn Convents (Managing Partner, Oracle NetSuite Solution Architect, Belgium -- outside target_locations) and Lucas Petricone-Berg (Director, NetSuite Digital Services, presumed Citrin Cooperman, NY US -- company field blank in search result). One classifier near-miss caught before writing: Yianni Karanasios (Nimbus ERP) was mistakenly drafted as new/warm during manual scoring before the exclusion check flagged him as already surfaced 2026-07-30 (still cold) -- corrected before this run's leads.json/seen.json write.",
+        "batch1_queries": [
+          "company=\"SixLakes Consulting\" (no title filter)",
+          "company=\"Squire Technology\" (no title filter)",
+          "company=\"Hood River Consulting\" (no title filter)"
+        ],
+        "batch1_note": "37 unique, all new (heavy overlap check ran clean -- these three firms were previously mined only for one exec each). SixLakes: 1 hot (Sheldon Ju, Partner). Squire Technology: 1 hot (Blair Janis, Director) plus an unrelated same-name company (Squire Technologies, Bournemouth UK -- no NetSuite signal, cold) and generic Squire-named noise. Hood River Consulting: entirely Uruguay/Argentina/Brazil/Colombia offshore technical/functional consultants and sales staff -- all cold per established offshore-IC judgment.",
+        "batch2_queries": [
+          "company=\"Citrin Cooperman\" keywords=\"NetSuite\"",
+          "company=\"Crowe\" keywords=\"NetSuite\"",
+          "keywords=\"NetSuite alliance partner\" title=\"Senior Vice President\""
+        ],
+        "batch2_note": "110 fetched, 35 new (75 already known -- both firms' top execs Fara Panah/Citrin Cooperman and Alejandro Alvarez/Crowe were already surfaced in earlier sessions). Citrin Cooperman's NetSuite Digital Services practice is almost entirely Manager-level-or-below staff (cold) except one Director-level contact with a blank company field (Lucas Petricone-Berg -- warm). Crowe: 1 hot (Grant Ludema, Partner) among a similarly large Manager/Consultant-level bench (mostly India-based, cold). SVP query returned entirely duplicate profiles from yesterday's run (0 new).",
+        "batch3_queries": [
+          "keywords=\"NetSuite alliance partner\" title=\"Executive Vice President\"",
+          "keywords=\"Oracle NetSuite\" title=\"Managing Partner\"",
+          "keywords=\"SuiteCommerce\" title=\"Founder\""
+        ],
+        "batch3_note": "66 fetched, 10 new -- EVP query was almost entirely off-domain noise (0 new hot/warm). Managing Partner and SuiteCommerce Founder queries' strongest hits (Ken Phu/Techliere, Marinka Penaflorida-Rohlffs, Nathan Garing, Felicia Santoro-Petti, Facundo Brum, Sebastián González, Vinod Mahale, Kurt Vanclooster) were all already known; also hard-skipped N2Lab (Vabhav Pant, excluded_companies -- active AOTT client) and the operator's own profile. Only new signal: Glenn Convents (Managing Partner, Oracle NetSuite Solution Architect, Belgium) -- warm, outside target_locations.",
+        "batch4_queries": [
+          "keywords=\"Oracle NetSuite reseller\" title=\"Managing Director\"",
+          "keywords=\"NetSuite alliance partner\" title=\"Owner\"",
+          "company=\"Nimbus ERP\""
+        ],
+        "batch4_note": "76 fetched, 30 new -- 0 hot/warm. Owner query's few Owner/Principal-level hits with genuine ERP-consultancy fit (Shannan Lamorre/StrideWise, Gerald Hines/8QUANTA, Jorryt Nijholt/Drydock ERP) were already known from prior sessions; remaining new candidates were uniformly off-domain (no NetSuite/ERP signal) or generic ICs. Nimbus ERP company search returned only 3 results, its one exec (Yianni Karanasios) already known."
+      },
+      "completed_at": "2026-09-22T18:50:00.000Z",
+      "notes": "Third agency-netsuite run in two days (after 2026-09-21-ed13fa33 and 2026-09-21-33e5c2ff, both also short of the hot floor). Cold Sweep processed 2026-09-21-33e5c2ff-links.json (66 cold URLs -> cold-registry.json, now 3399 total). Wrote state/pending_approvals/2026-09-22-60ec615c-links.json (hot:3 warm:2 cold:106). Hot floor (5) not met after 4 batches -- 3/5. Pattern across this run: fresh company-anchor searches on newly-discovered firms (SixLakes, Squire Technology, Hood River, Citrin Cooperman, Crowe) reliably surface exactly one hot exec each (the firm's top Partner/Director) plus a large bench of already-known or offshore-IC staff -- confirms CLAUDE.md's general company-anchor-over-role-rotation lesson from prior runs, but also shows this specific criteria's addressable pool of undiscovered exec-level NetSuite partner-firm contacts is now genuinely thin. Recommend either an early criteria refresh (broaden target_roles/target_locations further) or resting agency-netsuite for a few days in favor of other criteria files."
     }
   ],
   "retries": [
