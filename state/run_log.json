@@ -891,7 +891,13 @@
       "status": "completed",
       "phase": "search-connections-abbreviated",
       "resume_from_step": 11,
-      "steps_completed": [0, 1, 2, 4, 5],
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
       "counts": {
         "new_leads": 76,
         "classified": 76,
@@ -943,7 +949,13 @@
       "status": "completed",
       "phase": "search-connections-abbreviated",
       "resume_from_step": 11,
-      "steps_completed": [0, 1, 2, 4, 5],
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
       "counts": {
         "new_leads": 111,
         "classified": 111,
@@ -988,6 +1000,51 @@
       },
       "completed_at": "2026-09-22T18:50:00.000Z",
       "notes": "Third agency-netsuite run in two days (after 2026-09-21-ed13fa33 and 2026-09-21-33e5c2ff, both also short of the hot floor). Cold Sweep processed 2026-09-21-33e5c2ff-links.json (66 cold URLs -> cold-registry.json, now 3399 total). Wrote state/pending_approvals/2026-09-22-60ec615c-links.json (hot:3 warm:2 cold:106). Hot floor (5) not met after 4 batches -- 3/5. Pattern across this run: fresh company-anchor searches on newly-discovered firms (SixLakes, Squire Technology, Hood River, Citrin Cooperman, Crowe) reliably surface exactly one hot exec each (the firm's top Partner/Director) plus a large bench of already-known or offshore-IC staff -- confirms CLAUDE.md's general company-anchor-over-role-rotation lesson from prior runs, but also shows this specific criteria's addressable pool of undiscovered exec-level NetSuite partner-firm contacts is now genuinely thin. Recommend either an early criteria refresh (broaden target_roles/target_locations further) or resting agency-netsuite for a few days in favor of other criteria files."
+    },
+    {
+      "run_id": "2026-09-22-f2c143b3",
+      "started_at": "2026-09-22T18:54:52.000Z",
+      "status": "completed",
+      "phase": "search-connections-abbreviated",
+      "resume_from_step": 11,
+      "steps_completed": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "counts": {
+        "new_leads": 60,
+        "classified": 60,
+        "hot": 6,
+        "warm": 5,
+        "cold": 49,
+        "surfaced_for_approval": 60
+      },
+      "criteria_used": "agency-netsuite",
+      "provider_used": "connectsafely",
+      "step1_note": "criteria refresh skipped: agency-netsuite.json is hand-crafted and extensively refined via operator feedback -- per established precedent, auto-refresh is deliberately skipped.",
+      "connections_cache_note": "cached_at 2026-09-09 remains stale. Kept the existing 1827-URL cache as-is again -- same rebuild-cost reasoning as prior runs.",
+      "cold_sweep_note": "Swept 106 cold URLs from 2026-09-22-60ec615c-links.json into cold-registry.json (106 new, now 3505 total) before writing this run's own links file.",
+      "search_cursor": {
+        "batches_run": 2,
+        "max_batches": 4,
+        "hot_floor_met": "6/5 hot after 2 batches -- stopped early, floor exceeded. Reversed the prior three runs' shortfall pattern by pivoting to a fresh technique: mid-size accounting/advisory firms with dedicated NetSuite practices (BDO, RSM, Baker Tilly) plus two untried target_location geo searches (Ireland, Singapore). Each accounting-firm anchor reliably surfaced 1-2 Partner/Principal/Director-level hot contacts (same pattern noted in the prior run for Crowe/Citrin Cooperman) atop a much larger Manager-or-below bench (cold). RSM alone yielded 3 hot (Darren Birt/Partner UK, Chris Goguen/Principal Boston, Heidi Megna/Principal MA) plus 1 more warm/near-hot (Peter D./Commercial Director UK, counted hot) -- confirms this firm-type (Big 4-adjacent accounting/advisory firms running a NetSuite practice) is a productive vein this criteria had not yet mined.",
+        "batch1_queries": [
+          "keywords=\"NetSuite alliance partner\" title=\"Managing Director\" locationId=Ireland (104738515) -- 0 results",
+          "keywords=\"NetSuite alliance partner\" title=\"CEO\" locationId=Singapore (102454443)",
+          "company=\"BDO\" keywords=\"NetSuite\""
+        ],
+        "batch1_note": "Ireland: 0 results for this exact title+keyword combo (first empty result set seen for this criteria in recent runs -- Ireland may need a broader query next time, not necessarily exhausted). Singapore: 5 results, all cold (generic tech/board execs, no NetSuite-agency signal, or excluded-employer Oracle). BDO: 30 fetched, 24 new -- 2 hot (Kevin Beckers/Partner BDO Digital Belgium, Silvio Rodriguez/Senior Tech Executive BDO US) plus 3 warm (Karlijn Colson/Lead Belgium, Daniel Murillo/Director Spain, Deep Banerjee/ambiguous-location Practice Director); rest a large India/Philippines/Belgium offshore-or-IC consultant bench, cold.",
+        "batch2_queries": [
+          "company=\"RSM\" keywords=\"NetSuite\"",
+          "company=\"Baker Tilly\" keywords=\"NetSuite\""
+        ],
+        "batch2_note": "75 fetched, 37 new (38 already known -- RSM's most senior execs Deanna Vaughan/MD, Rufus Lohmueller/MD, Ryan Brown/Director, Eric Straddeck/Head of Delivery, Michael Parker/Managing Principal were already surfaced in earlier sessions, confirming RSM had been partially touched before even though not called out by name). New: 4 hot (Darren Birt/Partner RSM UK, Chris Goguen/Principal RSM US, Heidi Megna/Principal RSM US, Peter D./Commercial Director RSM UK) and 2 warm (Elvíra Zajícová/Head of NetSuite RSM Czech Republic -- outside target_locations, Spence Decker/Senior Director Customer Success Baker Tilly -- Director-level but a less natural buyer function). Baker Tilly's own senior bench (Products Director, Head of Delivery, Managing Principal) all already known; remaining new Baker Tilly contacts were uniformly Manager-level-or-below. Stopped after 2 batches -- hot floor (5) exceeded at 6, no need for batches 3-4."
+      },
+      "completed_at": "2026-09-22T19:45:00.000Z",
+      "notes": "Fourth agency-netsuite run in two days, first to clear the hot floor (6/5) after three consecutive shortfalls (1/5, 3/5, 3/5). Cold Sweep processed 2026-09-22-60ec615c-links.json (106 cold URLs -> cold-registry.json, now 3505 total). Wrote state/pending_approvals/2026-09-22-f2c143b3-links.json (hot:6 warm:5 cold:49). Key finding: mid-size accounting/advisory firms running a dedicated NetSuite practice (BDO, RSM, Baker Tilly, and Crowe/Citrin Cooperman from the prior run) are a reliably productive company-anchor category for this criteria that hadn't been systematically worked before -- each one yields 1-4 senior (Partner/Principal/Director) hot contacts. Worth trying the remaining major accounting networks (Grant Thornton, PwC, KPMG -- though the latter three lean mega-SI-scale, watch the excluded_employers cap) on a future run before resorting to broader role-rotation."
     }
   ],
   "retries": [
