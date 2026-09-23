@@ -74,15 +74,32 @@ git push --force --mirror origin
 
 ### 5. Bring your working directory up to date
 
-Do **not** re-clone — that risks losing local-only, gitignored files (e.g. any CSV sitting in `state/imports/`). Instead, fetch the rewritten history and reset tracked files only:
+Do **not** re-clone — that risks losing local-only, gitignored files (e.g. any CSV sitting in `state/imports/`). Instead, fetch the rewritten history and sync branch refs directly.
+
+**First check whether your currently checked-out branch is even pushed to the remote:**
 
 ```bash
-cd /Users/martinmartinez/Desktop/projects/ai-linkedin-lead-generation
-git fetch origin --prune
-git reset --hard origin/$(git branch --show-current)
+git fetch github --prune
+git branch -vv | grep '^\*'
 ```
 
-Repeat the `reset --hard origin/<branch>` for any other local branches you have checked out elsewhere — `--hard` only touches tracked files/the index, never untracked or gitignored files, so `state/raw/*.json`, `state/imports/*.csv`, etc. are safe.
+- If it shows a `[github/<branch>: ...]` tracking marker, it's pushed — reset it to match the rewrite:
+  ```bash
+  git reset --hard github/$(git branch --show-current)
+  ```
+- If it shows **no** tracking marker at all, this branch was never pushed and the rewrite never touched it — there's nothing to reset against, and any local-only commits on it are completely safe as-is. Don't run `reset --hard` in this case; it'll just fail with "unknown revision" (harmless), not silently discard anything, since the branch pointer never moves without a valid target.
+
+(This repo's remote is named `github`, not `origin` — check with `git remote -v` if unsure.)
+
+**For every *other* local branch** (not checked out, so no working-tree risk either way), force-update its ref to match the remote directly — no checkout needed:
+
+```bash
+for b in $(git branch --format='%(refname:short)' | grep -v "^$(git branch --show-current)$"); do
+  git rev-parse --verify --quiet "refs/remotes/github/$b" >/dev/null && git branch -f "$b" "github/$b"
+done
+```
+
+This silently skips any other local-only branches (no `github/<branch>` to compare against) and force-updates the rest to the rewritten commits — safe because it's a metadata-only ref move, not a working-tree operation, and only touches branches you don't currently have checked out.
 
 ### 6. Reclaim the space
 
@@ -93,12 +110,12 @@ git gc --prune=now --aggressive
 
 ### 7. Tell anyone else with a clone
 
-They should either re-clone fresh, or run the same `git fetch origin --prune` + `git reset --hard origin/<branch>` per branch. Otherwise their local history permanently diverges from the rewritten remote.
+They should either re-clone fresh, or run the same `git fetch <remote> --prune` + `git reset --hard <remote>/<branch>` per branch (check their remote's name with `git remote -v` — it may not be `origin`). Otherwise their local history permanently diverges from the rewritten remote.
 
 ## Verify
 
-- `du -sh .git` and `git count-objects -vH` before/after — `.git` should shrink from ~18 MB toward roughly just the `leads.json` snapshot chain.
-- `git log --all --oneline -- state/raw` should return nothing after the rewrite.
+- `du -sh .git` and `git count-objects -vH` before/after — `.git` should shrink substantially (in practice this dropped it from 18 MB to ~3.7 MB).
+- `git log --all --oneline -- state/raw` should return nothing **from any branch that exists on the remote**. It may still show a couple of old commits if you have local-only, never-pushed branches (like `feat/local-run` or a WIP branch) — those were never part of the rewrite, which is expected and harmless (their history is small and doesn't affect the shared remote or the space savings above).
 - Commit count on your branch should be unchanged (only commit *content* changed, not the number/order of commits).
 - `git status` should be clean after step 5, and `state/raw/*.json` / `state/imports/*.csv` should still be present on disk.
 
