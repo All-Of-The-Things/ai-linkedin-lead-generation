@@ -57,6 +57,8 @@ python3 /tmp/git-filter-repo --path state/raw --invert-paths --force
 
 This rewrites every commit on every branch (the mirror clone carries all remote branches) to strip `state/raw/**` from history entirely. `state/leads.json` and everything else is untouched.
 
+**Note:** `git filter-repo` removes the `origin` remote after it runs, on purpose — it's a safety measure so the rewritten history can't be pushed back before you've had a chance to review it. You'll need to re-add it before step 4 (below), which does that explicitly.
+
 ### 4. STOP — confirm before pushing
 
 This is the one truly irreversible, shared-impact step: it rewrites commit hashes on every branch of the shared remote. Before running the next command:
@@ -66,7 +68,8 @@ This is the one truly irreversible, shared-impact step: it rewrites commit hashe
 
 ```bash
 cd /tmp/algen-mirror-rewrite.git
-git push --force --mirror
+git remote add origin https://github.com/All-Of-The-Things/ai-linkedin-lead-generation.git
+git push --force --mirror origin
 ```
 
 ### 5. Bring your working directory up to date
