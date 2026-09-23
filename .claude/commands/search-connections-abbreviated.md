@@ -9,9 +9,9 @@
 3. Executes pipeline **Steps 0, 1, 2, and 4** as written, then **Step 5L**, per **CLAUDE.md → Abbreviated Mode**:
    - **Step 0** — re-entry check with phase matching (`phase: "search-connections-abbreviated"`).
    - **Step 1** — criteria refresh (conditional).
-   - **Step 2** — search: exclusion set (connections cache + `seen.json`), stubs to `leads.json` + `seen.json`.
+   - **Step 2** — search: exclusion set (connections cache + `seen.json`), `seen.json` per URL, new-lead stubs batched into `leads.json` once per batch via `node standalone/bin/merge-leads.mjs` (never per lead — see `CLAUDE.md → Step 2`).
    - **Step 3** — never runs in this mode, regardless of `enrichment.enabled`.
-   - **Step 4** — classification of this run's leads only; `score_rationale` is not persisted.
+   - **Step 4** — classification of this run's leads only, batched into `leads.json` in one `merge-leads.mjs` call per classifier invocation; `score_rationale` is not persisted.
    - **Step 5L** — first sweeps every existing links file's `cold` array into the shared `cold-registry.json` (as bare slugs), then writes ONE file `state/pending_approvals/YYYY-MM-DD-<run_id>-links.json` with score-sorted `hot`/`warm`/`cold` URL arrays (no `approved` key).
 4. No email is sent. Step 10 finalizes the run in `state/run_log.json`.
 

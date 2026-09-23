@@ -1,0 +1,104 @@
+# Git history cleanup — follow-up runbook
+
+**Status: not yet run.** This is the one-time git history rewrite from the disk-hygiene cleanup (see `CLAUDE.md` for the pipeline this repo runs). It couldn't be completed in the session that wrote this file — outbound `curl` from that session's sandbox kept getting denied — so it's documented here to run from a shell with normal network/filesystem access.
+
+## Why
+
+`.git` is ~18 MB versus a ~7 MB working tree (72% of the repo). Two historical, already-gitignored data sources are baked into git objects forever:
+
+- **`state/raw/*.json`** (raw LinkedIn profile payloads) — 637 historical file-adds across commit history, even though the working tree today only has a handful of files there. CLAUDE.md already documents these as gitignored and re-derivable, so their old git-history copies are pure dead weight.
+- **`state/leads.json`** snapshots — 43 historical full-file versions (~86 MB uncompressed before delta compression). This one is **intentionally left alone** (see decision below) — it's the master lead ledger and the team wants full git history preserved for it.
+
+Purging just the `state/raw` history should shrink `.git` meaningfully without losing any data that's actually meaningful — `state/raw` is declared re-derivable, so nothing durable is lost.
+
+## Decisions already made
+
+1. Scope: this repo only.
+2. Rewrite git history to purge historical `state/raw` blobs — approved.
+3. `state/leads.json` commit cadence: **keep as-is**, full history preserved, not touched by this rewrite.
+
+## Before you run this
+
+- Repo has a shared GitHub remote (`All-Of-The-Things/ai-linkedin-lead-generation`) with ~12 branches and **no tags**. This rewrite touches every branch's commit hashes and ends in a force-push.
+- **Check for open PRs on GitHub first.** An open PR against a rewritten branch will need to be rebased or re-opened after this runs.
+- Anyone else with a local clone (or any other machine you use) will need to re-sync afterward — see the last section.
+- Run this from a normal terminal, not a sandboxed/restricted session — it needs outbound network access to `github.com` and `raw.githubusercontent.com`, and to write to `/tmp`.
+
+## Steps
+
+### 1. Get `git-filter-repo`
+
+Not installed, and `brew`/`pip3` weren't reliable in the environment this was drafted in — use the dependency-free official script (pure Python 3, no deps beyond git + python3):
+
+```bash
+curl -o /tmp/git-filter-repo https://raw.githubusercontent.com/newren/git-filter-repo/main/git-filter-repo
+```
+
+### 2. Safety-net backup first
+
+A full-history bundle that survives even after the remote is force-pushed:
+
+```bash
+git bundle create ~/ai-linkedin-lead-generation-full-backup-$(date +%Y%m%d).bundle --all
+git bundle verify ~/ai-linkedin-lead-generation-full-backup-$(date +%Y%m%d).bundle
+```
+
+Keep this bundle somewhere safe until you're confident the rewrite worked.
+
+### 3. Rewrite in an isolated mirror clone
+
+Never run `git filter-repo` directly against your working directory — it's destructive to whatever repo it's pointed at.
+
+```bash
+git clone --mirror https://github.com/All-Of-The-Things/ai-linkedin-lead-generation.git /tmp/algen-mirror-rewrite.git
+cd /tmp/algen-mirror-rewrite.git
+python3 /tmp/git-filter-repo --path state/raw --invert-paths --force
+```
+
+This rewrites every commit on every branch (the mirror clone carries all remote branches) to strip `state/raw/**` from history entirely. `state/leads.json` and everything else is untouched.
+
+### 4. STOP — confirm before pushing
+
+This is the one truly irreversible, shared-impact step: it rewrites commit hashes on every branch of the shared remote. Before running the next command:
+
+- Double-check you (or whoever's driving) have looked at open PRs on GitHub.
+- Make sure the backup bundle from step 2 completed and verified successfully.
+
+```bash
+cd /tmp/algen-mirror-rewrite.git
+git push --force --mirror
+```
+
+### 5. Bring your working directory up to date
+
+Do **not** re-clone — that risks losing local-only, gitignored files (e.g. any CSV sitting in `state/imports/`). Instead, fetch the rewritten history and reset tracked files only:
+
+```bash
+cd /Users/martinmartinez/Desktop/projects/ai-linkedin-lead-generation
+git fetch origin --prune
+git reset --hard origin/$(git branch --show-current)
+```
+
+Repeat the `reset --hard origin/<branch>` for any other local branches you have checked out elsewhere — `--hard` only touches tracked files/the index, never untracked or gitignored files, so `state/raw/*.json`, `state/imports/*.csv`, etc. are safe.
+
+### 6. Reclaim the space
+
+```bash
+git reflog expire --expire=now --all
+git gc --prune=now --aggressive
+```
+
+### 7. Tell anyone else with a clone
+
+They should either re-clone fresh, or run the same `git fetch origin --prune` + `git reset --hard origin/<branch>` per branch. Otherwise their local history permanently diverges from the rewritten remote.
+
+## Verify
+
+- `du -sh .git` and `git count-objects -vH` before/after — `.git` should shrink from ~18 MB toward roughly just the `leads.json` snapshot chain.
+- `git log --all --oneline -- state/raw` should return nothing after the rewrite.
+- Commit count on your branch should be unchanged (only commit *content* changed, not the number/order of commits).
+- `git status` should be clean after step 5, and `state/raw/*.json` / `state/imports/*.csv` should still be present on disk.
+
+## After this runs
+
+Delete this file (or leave it as a record — your call) once you've confirmed the rewrite worked and `.git` has shrunk.

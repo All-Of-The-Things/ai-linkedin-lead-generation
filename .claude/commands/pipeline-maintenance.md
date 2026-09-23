@@ -1,6 +1,6 @@
 # /pipeline-maintenance
 
-**Manual state housekeeping. Never scheduled, never auto-run.** Moves fully-decided approval files, terminal leads, and old run_log entries into archives, and migrates legacy `linkedin_raw` blobs out of `leads.json` into `state/raw/` sidecars. Everything is a move — nothing is ever deleted. `seen.json` is never touched.
+**Manual state housekeeping. Never scheduled, never auto-run.** Moves fully-decided approval files, terminal leads, and old run_log entries into archives, and migrates legacy `linkedin_raw` blobs out of `leads.json` into `state/raw/` sidecars. Almost everything is a move — nothing meaningful is ever deleted. The one exception: fully-drained `*-links.json` files (`hot`/`warm`/`cold` all empty) are deleted outright rather than archived, since an all-empty links file carries no data that isn't already durable in `leads.json` — see sweep (a) below. `seen.json` is never touched.
 
 ## Arguments
 
@@ -20,7 +20,8 @@
    | notes-ready | every `note_decision` non-null, and no approved entry's lead is still at `"classified"` |
    | followup | every `decision` non-null, and no approved entry's lead is still at `"followup_queued"` |
    | warmup-comments | every `decision` non-null, and approved comments already sent |
-   | links | `hot`/`warm`/`cold` all empty (there is no `approved` key anymore — approvals live in `approved-queue.json`) |
+
+   **Links files are handled differently — deleted, not archived.** When a `*-links.json` file's `hot`, `warm`, and `cold` are all empty (there is no `approved` key anymore — approvals live in `approved-queue.json`) and the file is older than `days`, **delete it outright** instead of moving it to `archive/`. Every URL it ever listed has its outcome durably recorded in `leads.json` (`approval_surfaced_at`/`approval_decision`/`status`), so an empty links file is pure file-count noise, not data worth preserving — archiving it would just relocate the husk forever instead of actually shrinking anything. A links file that still has *any* URL in `hot`/`warm`/`cold` is left alone regardless of age (it's not fully decided).
 
    `approved-queue.json` and `cold-registry.json` are single persistent files, not one per run — this sweep never touches them; they self-prune via Step 6a instead (see CLAUDE.md → State File Contracts).
 
@@ -28,7 +29,7 @@
 3. **(c) Rotate run_log** — keep the most recent `keep_runs` entries in `state/run_log.json → runs`; append the older ones, in order, to `state/archive/run_log-archive.json`. Never rotate the most recent run or any `in_progress` entry. Preserve all other top-level keys.
 4. **(d) linkedin_raw migration (one-time, idempotent)** — for every lead in `leads.json` with a `linkedin_raw` key: if the value is populated and `state/raw/<slug>.json` does not exist, write the sidecar; then remove the `linkedin_raw` key from the lead (populated or null). Slug rule per the `state/raw/` contract in CLAUDE.md: first path segment after `/in/` only, non-`[a-z0-9._-]` characters replaced with `_`. Re-running is a no-op.
 5. **(e) Links-file consolidation (one-time, idempotent)** — for every `*-links.json` file in `state/pending_approvals/` (not `archive/`): move every URL in its `approved` array into `state/pending_approvals/approved-queue.json` (normalize, dedupe); move every URL in its `cold` array into `state/pending_approvals/cold-registry.json` as a bare slug (same derivation rule as `state/raw/<slug>.json`; dedupe); rewrite the file with the `approved` key removed and `cold` set to `[]` — `hot`/`warm`/`expired` untouched. Create `approved-queue.json` / `cold-registry.json` as `[]` first if they don't exist. Re-running is a no-op once every links file's `approved` key is gone and `cold` is empty. This is the exact same move Step 5L's Cold Sweep performs for `cold` on every ongoing run — this sweep just catches up every pre-existing file, once, plus a one-time sweep of leftover `approved` arrays (new links files never write an `approved` key going forward).
-6. **Report** — per sweep: items moved vs. eligible, and before/after byte sizes of `leads.json` and `run_log.json`. In dry-run, the same report with nothing written. (After a large sweep you may also want to run `git gc` yourself — this command never does.)
+6. **Report** — per sweep: items moved vs. eligible, **items deleted vs. eligible (empty links files, reported separately from "archived")**, and before/after byte sizes of `leads.json` and `run_log.json`. In dry-run, the same report with nothing written. (After a large sweep you may also want to run `git gc` yourself — this command never does.)
 
 ## Before running
 
@@ -38,7 +39,7 @@
 
 ## After running
 
-Review `git status` / `git diff --stat`: expect renames into the two archive locations, a smaller `leads.json` and `run_log.json`, and (first run only) new gitignored files under `state/raw/`. `seen.json` must show no diff. Commit the sweep as one commit.
+Review `git status` / `git diff --stat`: expect renames into the two archive locations, outright deletions for any empty `*-links.json` files, a smaller `leads.json` and `run_log.json`, and (first run only) new gitignored files under `state/raw/`. `seen.json` must show no diff. Commit the sweep as one commit.
 
 ## Rate limit handling
 
